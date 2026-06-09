@@ -2,23 +2,6 @@
    script.js — Alexander Caro Portfolio
 ═══════════════════════════════════════════════════════════════ */
 
-// ─── 1. NAV MÓVIL ──────────────────────────────────────────────
-const navBurger = document.getElementById('navBurger');
-const navDrawer = document.getElementById('navDrawer');
-const nav       = document.getElementById('nav');
-
-navBurger?.addEventListener('click', () => {
-  const isOpen = navDrawer.classList.toggle('open');
-  navBurger.setAttribute('aria-expanded', isOpen);
-});
-navDrawer?.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navDrawer.classList.remove('open'));
-});
-window.addEventListener('scroll', () => {
-  nav.style.boxShadow = window.scrollY > 20 ? '0 1px 32px rgba(0,0,0,0.7)' : 'none';
-}, { passive: true });
-
-
 // ─── 2. WHATSAPP ────────────────────────────────────────────────
 document.getElementById('whatsappBtn')?.addEventListener('click', () => {
   const phone   = '573024457653';
