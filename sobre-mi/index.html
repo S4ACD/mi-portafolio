@@ -3,260 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexander Caro — Designer & Developer</title>
-  <meta name="description" content="Diseño marcas que conectan y construyo webs que convierten. Bogotá, Colombia." />
+  <title>Sobre mí — Alexander Caro</title>
+  <meta name="description" content="Diseñador, desarrollador y estratega visual. Conoce la historia detrás del trabajo." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ═══ NAV ═══ -->
+  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo">AC.</a>
+      <a href="../" class="nav__logo">AC.</a>
       <ul class="nav__links">
-        <li><a href="#trabajo">Trabajo</a></li>
-        <li><a href="servicios/">Servicios</a></li>
-        <li><a href="sobre-mi/">Sobre mí</a></li>
+        <li><a href="../#trabajo">Trabajo</a></li>
+        <li><a href="../servicios">Servicios</a></li>
+        <li><a href="./" class="nav__link--active">Sobre mí</a></li>
       </ul>
-      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+      <a href="../#contacto" class="btn btn--cyan">Hablemos</a>
       <button class="nav__burger" id="navBurger" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="nav__drawer" id="navDrawer">
-      <a href="#trabajo" class="nav__drawer-link">Trabajo</a>
-      <a href="servicios/" class="nav__drawer-link">Servicios</a>
-      <a href="sobre-mi/" class="nav__drawer-link">Sobre mí</a>
-      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+      <a href="../#trabajo" class="nav__drawer-link">Trabajo</a>
+      <a href="../#servicios" class="nav__drawer-link">Servicios</a>
+      <a href="./" class="nav__drawer-link">Sobre mí</a>
+      <a href="../#contacto" class="btn btn--cyan">Hablemos</a>
     </div>
   </nav>
 
-  <!-- ═══ HERO ═══ -->
-  <section class="hero" id="inicio">
-    <!-- Canvas para partículas -->
+  <!-- HERO -->
+  <section class="about-hero">
     <canvas id="heroCanvas" class="hero__canvas"></canvas>
-
-    <div class="hero__inner container">
-      <span class="hero__badge">
-        <span class="hero__badge-dot"></span>
-        Disponible para proyectos
-      </span>
-
-      <h1 class="hero__title reveal-up">
-        <span id="typeTarget"></span><br />
-        <span class="hero__sub"><span id="typeTarget2"></span><span class="type-cursor">|</span></span>
+    <div class="container about-hero__inner">
+      <a href="../" class="back-link reveal-up">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Volver al inicio
+      </a>
+      <p class="eyebrow reveal-up" style="--delay:.1s">SOBRE MÍ</p>
+      <h1 class="about-hero__title reveal-up" style="--delay:.18s">
+        La persona<br/>detrás del<span class="hero__dot">.</span><br/>
+        <span class="about-hero__accent">trabajo</span><span class="hero__dot">.</span>
       </h1>
-
-      <p class="hero__desc reveal-up" style="--delay: 0.12s">
-        Diseño marcas que conectan y construyo webs que convierten.<br class="br-desktop" />
-        Bogotá, Colombia — trabajo remoto con clientes en toda Latinoamérica.
+      <p class="about-hero__sub reveal-up" style="--delay:.28s">
+        Diseñador, desarrollador y estratega visual.<br class="br-desktop"/> Todo en uno.
       </p>
-
-      <div class="hero__actions reveal-up" style="--delay: 0.24s">
-        <a href="#trabajo" class="btn btn--cyan">Ver mi trabajo</a>
-        <a href="#" class="btn btn--ghost" id="downloadCV">Descargar CV</a>
-      </div>
-
-      <div class="hero__stats reveal-up" style="--delay: 0.36s">
-        <div class="stat">
-          <span class="stat__num cyan">2+</span>
-          <span class="stat__label">Años de experiencia</span>
-        </div>
-        <div class="stat__divider"></div>
-        <div class="stat">
-          <span class="stat__num cyan">3K+</span>
-          <span class="stat__label">Fotos de producto</span>
-        </div>
-        <div class="stat__divider"></div>
-        <div class="stat">
-          <span class="stat__num cyan">95</span>
-          <span class="stat__label">PageSpeed score</span>
-        </div>
-        <div class="stat__divider"></div>
-        <div class="stat">
-          <span class="stat__num cyan">∞</span>
-          <span class="stat__label">Café consumido</span>
-        </div>
-      </div>
     </div>
-
-    <!-- Scroll indicator -->
-    <div class="hero__scroll-hint">
+    <div class="about-hero__scroll">
       <span>scroll</span>
       <div class="hero__scroll-line"></div>
     </div>
   </section>
 
-  <!-- ═══ SERVICIOS ═══ -->
-  <section class="section" id="servicios">
-    <div class="container">
-      <p class="eyebrow">SERVICIOS</p>
-      <h2 class="section__title">Qué puedo hacer por ti</h2>
-      <div class="services__grid">
+  <!-- BLOQUES DE CONTENIDO -->
+  <div class="about-content">
 
-        <article class="card card--service scroll-reveal">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <path d="M3 9h18M9 21V9"/>
-            </svg>
-          </div>
-          <h3 class="card__title">Diseño web</h3>
-          <p class="card__text">Sitios rápidos, bonitos y que venden. Construidos con HTML, CSS y WordPress.</p>
-        </article>
-
-        <article class="card card--service scroll-reveal" style="--reveal-delay: 0.1s">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="5" y="2" width="14" height="20" rx="2"/>
-              <circle cx="12" cy="17" r="1"/>
-            </svg>
-          </div>
-          <h3 class="card__title">Social media design</h3>
-          <p class="card__text">Contenido visual para redes que para el scroll y genera conversación.</p>
-        </article>
-
-        <article class="card card--service scroll-reveal" style="--reveal-delay: 0.2s">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-              <circle cx="12" cy="13" r="4"/>
-            </svg>
-          </div>
-          <h3 class="card__title">Fotografía de producto</h3>
-          <p class="card__text">Imágenes que muestran el valor real de lo que vendes.</p>
-        </article>
-
+    <!-- ORIGEN -->
+    <section class="about-block container">
+      <div class="about-block__label scroll-reveal">
+        <span class="eyebrow">01</span>
       </div>
-    </div>
-  </section>
-
-  <!-- ═══ PROYECTOS ═══ -->
-  <section class="section" id="trabajo">
-    <div class="container">
-      <p class="eyebrow">TRABAJO SELECCIONADO</p>
-      <h2 class="section__title">Proyectos</h2>
-      <div class="projects__grid">
-
-        <article class="card card--project scroll-reveal">
-          <div class="card__thumb">
-            <div class="card__thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
-            <div class="card__overlay"></div>
-          </div>
-          <div class="card__meta">
-            <h3 class="card__project-title">Rediseño web — Orbidental</h3>
-            <div class="card__tags">
-              <span class="tag tag--cyan">Web</span>
-              <span class="tag">SEO técnico</span>
-              <span class="tag">PageSpeed 95</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card--project scroll-reveal" style="--reveal-delay: 0.1s">
-          <div class="card__thumb">
-            <div class="card__thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
-            <div class="card__overlay"></div>
-          </div>
-          <div class="card__meta">
-            <h3 class="card__project-title">Catálogo fotográfico — 3.000 productos</h3>
-            <div class="card__tags">
-              <span class="tag tag--cyan">Fotografía</span>
-              <span class="tag">E-commerce</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card--project scroll-reveal" style="--reveal-delay: 0.2s">
-          <div class="card__thumb">
-            <div class="card__thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
-            <div class="card__overlay"></div>
-          </div>
-          <div class="card__meta">
-            <h3 class="card__project-title">Identidad visual para redes</h3>
-            <div class="card__tags">
-              <span class="tag tag--cyan">Branding</span>
-              <span class="tag">Social media</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card--project card--next scroll-reveal" style="--reveal-delay: 0.3s">
-          <div class="card__thumb card__thumb--empty">
-            <p class="card__next-label">Tu próximo proyecto</p>
-          </div>
-        </article>
-
+      <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
+        <h2 class="about-block__title">Origen</h2>
+        <p>Todo empezó con Photoshop y mucha curiosidad. Aprendí solo, sin cursos ni títulos — experimentando hasta que las cosas funcionaban. En el colegio descubrí el desarrollo web y fue inmediato: entendí que diseño y código son la misma cosa vista desde dos ángulos.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══ SOBRE MÍ ═══ -->
-  <section class="section" id="sobre-mi">
+    <div class="about-divider"></div>
+
+    <!-- LO QUE HAGO -->
+    <section class="about-block container">
+      <div class="about-block__label scroll-reveal">
+        <span class="eyebrow">02</span>
+      </div>
+      <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
+        <h2 class="about-block__title">Lo que hago</h2>
+        <p>Llevo 2 años en Orbidental donde manejo todo lo visual: pauta en Meta y Google Ads, diseño para redes, material impreso y fotografía de producto. Actualmente construyo su e-commerce de +3.000 productos — migré el sitio a código limpio y llevé el PageSpeed de 40 a 97.</p>
+      </div>
+    </section>
+
+    <!-- STAT CARDS -->
     <div class="container">
-      <p class="eyebrow">SOBRE MÍ</p>
-      <h2 class="section__title">La persona detrás del trabajo</h2>
-      <div class="about__grid">
-        <div class="about__bio scroll-reveal">
-          <p>Soy Alexander, diseñador y desarrollador con sede en Bogotá. Desde los 13 años aprendí haciendo — antes de que hubiera un título para lo que hacía.</p>
-          <p>Hoy entrego lo que la mayoría de agencias reparte entre tres personas: diseño, código y estrategia visual. Sin intermediarios, sin teléfono roto.</p>
+      <div class="about-stats scroll-reveal">
+        <div class="about-stat">
+          <span class="about-stat__num">40<span class="about-stat__arrow">→</span>97</span>
+          <span class="about-stat__label">PageSpeed score</span>
         </div>
-        <div class="about__skills scroll-reveal" style="--reveal-delay: 0.15s">
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">Diseño UI/UX</span><span class="skill-item__pct">90%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">HTML / CSS</span><span class="skill-item__pct">95%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="95"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">WordPress / PHP</span><span class="skill-item__pct">80%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">SEO técnico</span><span class="skill-item__pct">85%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">Fotografía</span><span class="skill-item__pct">88%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">Photoshop</span><span class="skill-item__pct">82%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="82"></div></div>
-          </div>
+        <div class="about-stat">
+          <span class="about-stat__num">3K+</span>
+          <span class="about-stat__label">Fotos de producto</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat__num">2+</span>
+          <span class="about-stat__label">Años de experiencia</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ═══ CTA ═══ -->
+    <div class="about-divider"></div>
+
+    <!-- CÓMO TRABAJO -->
+    <section class="about-block container">
+      <div class="about-block__label scroll-reveal">
+        <span class="eyebrow">03</span>
+      </div>
+      <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
+        <h2 class="about-block__title">Cómo trabajo</h2>
+        <p>Remoto, directo con el cliente, sin intermediarios. Me enfoco en web, social media y branding — y prefiero trabajar con personas que quieren resultados reales, no propuestas bonitas que nadie ejecuta.</p>
+      </div>
+    </section>
+
+    <div class="about-divider"></div>
+
+    <!-- DATO RANDOM -->
+    <section class="about-block container">
+      <div class="about-block__label scroll-reveal">
+        <span class="eyebrow">∞</span>
+      </div>
+      <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
+        <h2 class="about-block__title">Fuera de la pantalla</h2>
+        <p>Me encuentras en la moto. El motociclismo es mi otra pasión — la misma mentalidad que aplico al trabajo: velocidad, precisión y siempre hacia adelante.</p>
+        <div class="moto-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/>
+            <path d="M15 6h-3l-2 5H5.5M15 6l3 5h-4.5M15 6l1-3h3"/>
+          </svg>
+          Motociclista
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <div class="container">
+      <div class="about-skills-grid scroll-reveal">
+        <div class="skill-chip">Diseño UI/UX</div>
+        <div class="skill-chip">HTML / CSS</div>
+        <div class="skill-chip">WordPress</div>
+        <div class="skill-chip">JavaScript</div>
+        <div class="skill-chip">SEO técnico</div>
+        <div class="skill-chip">Meta Ads</div>
+        <div class="skill-chip">Google Ads</div>
+        <div class="skill-chip">Fotografía</div>
+        <div class="skill-chip">Photoshop</div>
+        <div class="skill-chip">Branding</div>
+        <div class="skill-chip">Social Media</div>
+        <div class="skill-chip skill-chip--muted">+ café ∞</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
   <section class="cta-section" id="contacto">
     <div class="container">
       <h2 class="cta-section__title">
-        ¿Tienes un proyecto en mente<span class="hero__dot">?</span>
+        ¿Arrancamos un proyecto<span class="hero__dot">?</span>
       </h2>
       <p class="cta-section__sub">Cuéntame qué necesitas. Respondo en menos de 24 horas.</p>
       <div class="cta-section__actions">
@@ -266,12 +172,12 @@
           </svg>
           Escríbeme por WhatsApp
         </button>
-        <a href="#trabajo" class="btn btn--ghost">Ver todos los proyectos</a>
+        <a href="../#trabajo" class="btn btn--ghost">Ver proyectos</a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ FOOTER ═══ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <span class="footer__copy">© 2026 Alexander Caro</span>
@@ -283,7 +189,6 @@
     </div>
   </footer>
 
-  <script src="nav.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
