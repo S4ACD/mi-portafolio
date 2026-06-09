@@ -10,6 +10,7 @@
     var inRoot      = path.indexOf('/sobre-mi') === -1 && path.indexOf('/servicios') === -1;
     var root        = inRoot ? './' : '../';
     var isServicios = path.indexOf('/servicios') !== -1;
+    var isTrabajo   = path.indexOf('/trabajo') !== -1;
     var isSobreMi   = path.indexOf('/sobre-mi') !== -1;
 
     // Si ya hay nav en el HTML, solo agregar el toggle y el listener
@@ -22,7 +23,7 @@
     var homeUrl     = inRoot ? '/' : '../';
     var serviciosUrl = '/servicios/';
     var sobremiUrl   = '/sobre-mi/';
-    var trabajoUrl   = inRoot ? '#trabajo' : '/#trabajo';
+    var trabajoUrl   = '/trabajo/';
     var contactoUrl  = inRoot ? '#contacto' : '/#contacto';
 
     document.body.insertAdjacentHTML('afterbegin',
@@ -30,7 +31,7 @@
         '<div class="nav__inner">' +
           '<a href="' + homeUrl + '" class="nav__logo">AC.</a>' +
           '<ul class="nav__links">' +
-            '<li><a href="' + trabajoUrl + '">Trabajo</a></li>' +
+            '<li><a href="' + trabajoUrl + '"' + ("' + (isTrabajo ? ' class=\"nav__link--active\"' : '') + '") + '>Trabajo</a></li>' +
             '<li><a href="' + serviciosUrl + '"' + (isServicios ? ' class="nav__link--active"' : '') + '>Servicios</a></li>' +
             '<li><a href="' + sobremiUrl + '"' + (isSobreMi ? ' class="nav__link--active"' : '') + '>Sobre m\u00ed</a></li>' +
           '</ul>' +
