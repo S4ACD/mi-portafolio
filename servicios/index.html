@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — Alexander Caro</title>
+  <meta name="description" content="Diseño web, branding, social media y pauta digital. Servicios creativos y técnicos para tu marca." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../" class="nav__logo">AC.</a>
+      <ul class="nav__links">
+        <li><a href="../#trabajo">Trabajo</a></li>
+        <li><a href="./" class="nav__link--active">Servicios</a></li>
+        <li><a href="../sobre-mi/">Sobre mí</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+      <button class="nav__burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__drawer" id="navDrawer">
+      <a href="../#trabajo" class="nav__drawer-link">Trabajo</a>
+      <a href="./" class="nav__drawer-link">Servicios</a>
+      <a href="../sobre-mi/" class="nav__drawer-link">Sobre mí</a>
+      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="srv-hero">
+    <canvas id="heroCanvas" class="hero__canvas"></canvas>
+    <div class="container srv-hero__inner">
+      <a href="../" class="back-link reveal-up">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Volver al inicio
+      </a>
+      <p class="eyebrow reveal-up" style="--delay:.1s">SERVICIOS</p>
+      <h1 class="srv-hero__title reveal-up" style="--delay:.18s">
+        Lo que puedo<br/>
+        <span class="srv-hero__accent">hacer</span> por
+        <span id="typeTarget"></span><span class="type-cursor">|</span><span class="hero__dot">.</span>
+      </h1>
+      <p class="srv-hero__sub reveal-up" style="--delay:.28s">
+        Diseño, código y estrategia visual.<br class="br-desktop"/> Sin intermediarios.
+      </p>
+    </div>
+    <div class="srv-hero__scroll">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <p class="eyebrow">QUÉ OFREZCO</p>
+      <h2 class="section__title">Servicios</h2>
+
+      <div class="srv-grid">
+
+        <article class="srv-card scroll-reveal">
+          <div class="srv-card__num">01</div>
+          <div class="srv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <h3 class="srv-card__title">Diseño y desarrollo web</h3>
+          <p class="srv-card__text">Construyo sitios desde cero — rápidos, bonitos y optimizados. HTML/CSS/JS o WordPress, siempre responsive y con SEO técnico incluido.</p>
+          <ul class="srv-card__list">
+            <li>Landing pages y sitios corporativos</li>
+            <li>E-commerce y catálogos</li>
+            <li>Optimización PageSpeed</li>
+            <li>SEO técnico</li>
+          </ul>
+        </article>
+
+        <article class="srv-card scroll-reveal" style="--reveal-delay:.08s">
+          <div class="srv-card__num">02</div>
+          <div class="srv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="5" y="2" width="14" height="20" rx="2"/>
+              <circle cx="12" cy="17" r="1"/>
+            </svg>
+          </div>
+          <h3 class="srv-card__title">Social media design</h3>
+          <p class="srv-card__text">Piezas visuales que paran el scroll. Posts, stories, carruseles y más, con identidad consistente en todas las redes.</p>
+          <ul class="srv-card__list">
+            <li>Posts y carruseles</li>
+            <li>Stories y highlights</li>
+            <li>Identidad visual consistente</li>
+            <li>Piezas para campañas</li>
+          </ul>
+        </article>
+
+        <article class="srv-card scroll-reveal" style="--reveal-delay:.16s">
+          <div class="srv-card__num">03</div>
+          <div class="srv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+          </div>
+          <h3 class="srv-card__title">Branding</h3>
+          <p class="srv-card__text">Tu marca desde cero. Paleta, tipografías, logo y manual básico para que tu negocio tenga una identidad que se recuerde.</p>
+          <ul class="srv-card__list">
+            <li>Diseño de logo</li>
+            <li>Paleta y tipografías</li>
+            <li>Manual de marca básico</li>
+            <li>Aplicaciones digitales</li>
+          </ul>
+        </article>
+
+        <article class="srv-card scroll-reveal" style="--reveal-delay:.24s">
+          <div class="srv-card__num">04</div>
+          <div class="srv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="srv-card__title">Pauta digital</h3>
+          <p class="srv-card__text">Campañas en Meta Ads y Google Ads configuradas para convertir, no solo para verse bonitas.</p>
+          <ul class="srv-card__list">
+            <li>Meta Ads (Facebook e Instagram)</li>
+            <li>Google Ads</li>
+            <li>Segmentación y estrategia</li>
+            <li>Seguimiento de resultados</li>
+          </ul>
+        </article>
+
+        <article class="srv-card scroll-reveal" style="--reveal-delay:.32s">
+          <div class="srv-card__num">05</div>
+          <div class="srv-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="srv-card__title">Diseño gráfico impreso</h3>
+          <p class="srv-card__text">Lo que necesitas para comunicar fuera de la pantalla. Folletos, flyers, stands y piezas internas.</p>
+          <ul class="srv-card__list">
+            <li>Folletos y flyers</li>
+            <li>Diseño de stands</li>
+            <li>Piezas internas corporativas</li>
+            <li>Material publicitario</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMBOS -->
+  <section class="section combos-section" id="combos">
+    <div class="container">
+      <p class="eyebrow">PAQUETES</p>
+      <h2 class="section__title">Combos</h2>
+
+      <div class="combos-grid">
+
+        <article class="combo-card scroll-reveal">
+          <div class="combo-card__badge">Popular</div>
+          <div class="combo-card__icon">🔥</div>
+          <h3 class="combo-card__title">Web + Branding</h3>
+          <p class="combo-card__text">Para negocios que arrancan desde cero con todo listo. Tu identidad visual y tu sitio web en un solo proyecto.</p>
+          <ul class="combo-card__includes">
+            <li>✓ Diseño de logo y manual de marca</li>
+            <li>✓ Sitio web completo y responsive</li>
+            <li>✓ SEO técnico incluido</li>
+            <li>✓ Optimización PageSpeed</li>
+          </ul>
+          <button class="btn btn--cyan combo-card__btn" data-combo="Web + Branding">Cotizar este combo</button>
+        </article>
+
+        <article class="combo-card scroll-reveal" style="--reveal-delay:.1s">
+          <div class="combo-card__icon">📱</div>
+          <h3 class="combo-card__title">Social Media + Pauta</h3>
+          <p class="combo-card__text">Presencia activa y alcance que crece. Diseño de contenido y campañas que convierten.</p>
+          <ul class="combo-card__includes">
+            <li>✓ Piezas visuales para redes</li>
+            <li>✓ Identidad visual consistente</li>
+            <li>✓ Campaña en Meta o Google Ads</li>
+            <li>✓ Seguimiento de resultados</li>
+          </ul>
+          <button class="btn btn--cyan combo-card__btn" data-combo="Social Media + Pauta">Cotizar este combo</button>
+        </article>
+
+        <article class="combo-card combo-card--highlight scroll-reveal" style="--reveal-delay:.2s">
+          <div class="combo-card__icon">💼</div>
+          <h3 class="combo-card__title">Integral</h3>
+          <p class="combo-card__text">Web, branding y social media en un solo proyecto. La solución completa para marcas que quieren presencia total.</p>
+          <ul class="combo-card__includes">
+            <li>✓ Todo lo de Web + Branding</li>
+            <li>✓ Todo lo de Social Media + Pauta</li>
+            <li>✓ Estrategia visual unificada</li>
+            <li>✓ Acompañamiento personalizado</li>
+          </ul>
+          <button class="btn btn--cyan combo-card__btn" data-combo="Integral">Cotizar este combo</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contacto">
+    <div class="container">
+      <h2 class="cta-section__title">
+        ¿Arrancamos<span class="hero__dot">?</span>
+      </h2>
+      <p class="cta-section__sub">Cuéntame qué necesitas. Te doy una propuesta en menos de 24 horas.</p>
+      <div class="cta-section__actions">
+        <button class="btn btn--cyan btn--lg" id="whatsappBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Escríbeme por WhatsApp
+        </button>
+        <a href="../#trabajo" class="btn btn--ghost">Ver proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">© 2026 Alexander Caro</span>
+      <div class="footer__links">
+        <a href="https://www.behance.net/alexandercaro" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/alexander_caro7/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

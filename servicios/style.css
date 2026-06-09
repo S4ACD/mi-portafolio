@@ -1,0 +1,218 @@
+/* ═══════════════════════════════════════════════════════════════
+   servicios/style.css
+═══════════════════════════════════════════════════════════════ */
+
+.nav__link--active { color: var(--cyan) !important; }
+
+/* ── BACK LINK ── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  transition: color var(--transition), gap var(--transition);
+}
+.back-link:hover { color: var(--cyan); gap: 12px; }
+
+/* ── HERO ── */
+.srv-hero {
+  min-height: 88svh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.srv-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,229,229,0.04) 0%, transparent 70%),
+    linear-gradient(to bottom, transparent 70%, var(--bg) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.srv-hero__inner { position: relative; z-index: 2; }
+
+.srv-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.srv-hero__accent {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0,229,229,0.5);
+}
+.srv-hero__sub {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 440px;
+}
+.srv-hero__scroll {
+  position: absolute;
+  bottom: 32px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column;
+  align-items: center; gap: 8px; z-index: 2;
+  animation: fadeInUp 1s 1s both;
+}
+.srv-hero__scroll span {
+  font-size: 10px; letter-spacing: 0.2em;
+  color: var(--text-muted); text-transform: uppercase;
+}
+
+/* ── SERVICIOS GRID ── */
+.srv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.srv-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-color var(--transition), background var(--transition);
+}
+.srv-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.srv-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: var(--cyan-glow);
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+.srv-card:hover::before { opacity: 1; }
+
+.srv-card__num {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--cyan);
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+.srv-card__icon {
+  width: 44px; height: 44px;
+  background: var(--cyan-dim);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+.srv-card:hover .srv-card__icon {
+  background: rgba(0,229,229,0.18);
+  box-shadow: 0 0 16px rgba(0,229,229,0.25);
+}
+.srv-card__icon svg { width: 22px; height: 22px; color: var(--cyan); }
+.srv-card__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 600;
+  color: #fff; margin-bottom: 10px;
+}
+.srv-card__text {
+  font-size: 0.88rem; color: var(--text-muted);
+  line-height: 1.65; margin-bottom: 20px;
+}
+.srv-card__list {
+  list-style: none; display: flex;
+  flex-direction: column; gap: 7px;
+}
+.srv-card__list li {
+  font-size: 12px; color: var(--text-muted);
+  padding-left: 16px; position: relative;
+}
+.srv-card__list li::before {
+  content: '→';
+  position: absolute; left: 0;
+  color: var(--cyan); font-size: 11px;
+}
+
+/* ── COMBOS ── */
+.combos-section { background: rgba(0,229,229,0.015); }
+
+.combos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.combo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  position: relative;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-color var(--transition);
+}
+.combo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--cyan-glow);
+  border-color: var(--border-hover);
+}
+.combo-card--highlight {
+  border-color: rgba(0,229,229,0.25);
+  background: rgba(0,229,229,0.04);
+}
+.combo-card__badge {
+  position: absolute;
+  top: -1px; right: 20px;
+  background: var(--cyan);
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 0 0 8px 8px;
+  text-transform: uppercase;
+}
+.combo-card__icon { font-size: 2rem; line-height: 1; }
+.combo-card__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 700;
+  color: #fff; line-height: 1.2;
+}
+.combo-card__text {
+  font-size: 0.88rem; color: var(--text-muted); line-height: 1.65;
+}
+.combo-card__includes {
+  list-style: none; display: flex;
+  flex-direction: column; gap: 8px;
+  flex: 1;
+}
+.combo-card__includes li {
+  font-size: 12px; color: var(--text-muted);
+}
+.combo-card__includes li::first-letter { color: var(--cyan); }
+.combo-card__btn { margin-top: 8px; width: 100%; justify-content: center; }
+
+@keyframes fadeInUp {
+  from { opacity:0; transform: translateX(-50%) translateY(12px); }
+  to   { opacity:1; transform: translateX(-50%) translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .srv-hero__scroll { display: none; }
+}
