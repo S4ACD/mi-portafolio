@@ -1,4 +1,4 @@
-/* nav.js — Navegación global */
+/* nav.js — Navegación global con checkbox hack para móvil */
 
 (function() {
 
@@ -21,9 +21,10 @@
             '<li><a href="' + root + 'sobre-mi/"' + (isSobreMi ? ' class="nav__link--active"' : '') + '>Sobre m\u00ed</a></li>' +
           '</ul>' +
           '<a href="' + root + '#contacto" class="btn btn--cyan nav__cta">Hablemos</a>' +
-          '<button id="navBurger" class="nav__burger" aria-label="Menu">' +
+          '<input type="checkbox" id="navToggle" class="nav__toggle" aria-hidden="true"/>' +
+          '<label for="navToggle" class="nav__burger" aria-label="Menu">' +
             '<span></span><span></span><span></span>' +
-          '</button>' +
+          '</label>' +
         '</div>' +
         '<div id="navDrawer" class="nav__drawer">' +
           '<a href="' + root + '#trabajo" class="nav__drawer-link">Trabajo</a>' +
@@ -34,25 +35,17 @@
       '</nav>'
     );
 
-    var burger = document.getElementById('navBurger');
-    var drawer = document.getElementById('navDrawer');
-    var nav    = document.getElementById('nav');
-
-    burger.addEventListener('click', function() {
-      drawer.classList.toggle('open');
-      burger.classList.toggle('open');
-    });
-
-    var links = drawer.querySelectorAll('a');
+    // Cerrar drawer al hacer click en links
+    var links = document.querySelectorAll('.nav__drawer-link, .nav__drawer .btn');
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', function() {
-        drawer.classList.remove('open');
-        burger.classList.remove('open');
+        document.getElementById('navToggle').checked = false;
       });
     }
 
     window.addEventListener('scroll', function() {
-      nav.style.boxShadow = window.scrollY > 20
+      var nav = document.getElementById('nav');
+      if (nav) nav.style.boxShadow = window.scrollY > 20
         ? '0 1px 32px rgba(0,0,0,0.7)'
         : 'none';
     }, { passive: true });
