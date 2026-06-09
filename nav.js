@@ -110,13 +110,12 @@
         langDropdown.classList.remove('open');
 
         if (lang === 'es') {
-          // Volver al original
-          var frame = document.querySelector('.goog-te-banner-frame');
-          if (frame) {
-            var restore = frame.contentDocument.getElementById(':0.restore');
-            if (restore) restore.click();
-          }
           localStorage.setItem('ac_lang', 'es');
+          // Recargar sin traducción es lo más confiable
+          var url = window.location.href;
+          // Quitar hash de Google Translate si existe
+          url = url.replace(/#googtrans\([^)]*\)/g, '');
+          window.location.href = url;
         } else {
           setLang(lang);
         }
