@@ -232,3 +232,39 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   // Arrancar tras el reveal-up (0.9s de animación)
   setTimeout(typeLine1, 980);
 })();
+
+
+// ─── TESTIMONIOS CARRUSEL ────────────────────────────────────────
+(function initTestimonials() {
+  const track  = document.getElementById('testimonialsTrack');
+  const nextBtn = document.getElementById('testimonialsNext');
+  const dots   = document.querySelectorAll('.testimonials__dot');
+  if (!track || !nextBtn) return;
+
+  let current = 0;
+  const total = dots.length;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(calc(-' + current + ' * (100% + 24px)))';
+    dots.forEach((d, i) => d.classList.toggle('testimonials__dot--active', i === current));
+  }
+
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  // Auto-play cada 5 segundos
+  let timer = setInterval(() => goTo(current + 1), 5000);
+  track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+  track.parentElement.addEventListener('mouseleave', () => {
+    timer = setInterval(() => goTo(current + 1), 5000);
+  });
+
+  // Touch swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+  }, { passive: true });
+})();
