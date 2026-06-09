@@ -12,6 +12,27 @@
 </head>
 <body>
 
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">AC.</a>
+      <ul class="nav__links">
+        <li><a href="#trabajo">Trabajo</a></li>
+        <li><a href="servicios/">Servicios</a></li>
+        <li><a href="sobre-mi/">Sobre mí</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+      <button class="nav__burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__drawer" id="navDrawer">
+      <a href="#trabajo" class="nav__drawer-link">Trabajo</a>
+      <a href="servicios/" class="nav__drawer-link">Servicios</a>
+      <a href="sobre-mi/" class="nav__drawer-link">Sobre mí</a>
+      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+    </div>
+  </nav>
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="inicio">
@@ -216,6 +237,73 @@
             <div class="skill-item__header"><span class="skill-item__name">Photoshop</span><span class="skill-item__pct">82%</span></div>
             <div class="skill-bar"><div class="skill-bar__fill" data-width="82"></div></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TESTIMONIOS ═══ -->
+  <section class="section testimonials" id="testimonios">
+    <div class="container">
+      <p class="eyebrow">CLIENTES</p>
+      <h2 class="section__title">Lo que dicen<span class="hero__dot">.</span></h2>
+
+      <div class="testimonials__track-wrapper">
+        <div class="testimonials__track" id="testimonialsTrack">
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">Alexander logró darnos una identidad visual mucho más potente de lo que esperábamos. Capturó exactamente la esencia del fuego y nos diferenció completamente de otras marcas de comida. Hoy nos reconocen fácilmente — el diseño es único y habla solo.</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar">F</div>
+              <div>
+                <span class="testimonial-card__name">Fueggo</span>
+                <span class="testimonial-card__role">Comidas rápidas a la brasa</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">El resultado superó nuestras expectativas. Alexander entendió perfectamente lo que queríamos: que se sintiera la jungla, pero que quedara claro que es una discoteca. Cada pieza refleja el nombre y la energía de la marca.</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar">J</div>
+              <div>
+                <span class="testimonial-card__name">La Jungla Club</span>
+                <span class="testimonial-card__role">Discoteca · Entretenimiento</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <p class="testimonial-card__text">Quedamos más que satisfechos. Queríamos algo urbano, con ese estilo grafitero pero aplicado a ropa streetwear — y Alexander lo entendió desde el primer momento. La identidad quedó exactamente como la imaginábamos.</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar">R</div>
+              <div>
+                <span class="testimonial-card__name">Rebel Street</span>
+                <span class="testimonial-card__role">Moda · Streetwear urbano</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Controles -->
+        <div class="testimonials__controls">
+          <button class="testimonials__btn" id="testimonialsNext" aria-label="Siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Dots -->
+        <div class="testimonials__dots" id="testimonialsDots">
+          <button class="testimonials__dot testimonials__dot--active" data-index="0"></button>
+          <button class="testimonials__dot" data-index="1"></button>
+          <button class="testimonials__dot" data-index="2"></button>
         </div>
       </div>
     </div>
