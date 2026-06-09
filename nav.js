@@ -4,68 +4,69 @@
 
 (function initNav() {
 
-  // Si ya existe el nav no hacer nada
   if (document.getElementById('nav')) return;
 
-  const path        = window.location.pathname;
-  const inRoot      = !path.includes('/sobre-mi') && !path.includes('/servicios');
-  const root        = inRoot ? './' : '../';
-  const isServicios = path.includes('/servicios');
-  const isSobreMi   = path.includes('/sobre-mi');
+  var path        = window.location.pathname;
+  var inRoot      = path.indexOf('/sobre-mi') === -1 && path.indexOf('/servicios') === -1;
+  var root        = inRoot ? './' : '../';
+  var isServicios = path.indexOf('/servicios') !== -1;
+  var isSobreMi   = path.indexOf('/sobre-mi') !== -1;
 
-  function active(condition) {
-    return condition ? ' class="nav__link--active"' : '';
-  }
-  function activeDrawer(condition) {
-    return condition
-      ? ' class="nav__drawer-link nav__link--active"'
-      : ' class="nav__drawer-link"';
-  }
+  document.body.insertAdjacentHTML('afterbegin',
+    '<nav class="nav" id="nav">' +
+      '<div class="nav__inner">' +
+        '<a href="' + root + '" class="nav__logo">AC.</a>' +
+        '<ul class="nav__links">' +
+          '<li><a href="' + root + '#trabajo">Trabajo</a></li>' +
+          '<li><a href="' + root + 'servicios/"' + (isServicios ? ' class="nav__link--active"' : '') + '>Servicios</a></li>' +
+          '<li><a href="' + root + 'sobre-mi/"' + (isSobreMi ? ' class="nav__link--active"' : '') + '>Sobre m\u00ed</a></li>' +
+        '</ul>' +
+        '<a href="' + root + '#contacto" class="btn btn--cyan nav__cta">Hablemos</a>' +
+        '<button id="navBurger" class="nav__burger" aria-label="Menu">' +
+          '<span></span><span></span><span></span>' +
+        '</button>' +
+      '</div>' +
+      '<div id="navDrawer" class="nav__drawer">' +
+        '<a href="' + root + '#trabajo" class="nav__drawer-link">Trabajo</a>' +
+        '<a href="' + root + 'servicios/" class="nav__drawer-link' + (isServicios ? ' nav__link--active' : '') + '">Servicios</a>' +
+        '<a href="' + root + 'sobre-mi/" class="nav__drawer-link' + (isSobreMi ? ' nav__link--active' : '') + '">Sobre m\u00ed</a>' +
+        '<a href="' + root + '#contacto" class="btn btn--cyan">Hablemos</a>' +
+      '</div>' +
+    '</nav>'
+  );
 
-  // Inyectar nav
-  document.body.insertAdjacentHTML('afterbegin', `
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="${root}" class="nav__logo">AC.</a>
-      <ul class="nav__links">
-        <li><a href="${root}#trabajo">Trabajo</a></li>
-        <li><a href="${root}servicios/"${active(isServicios)}>Servicios</a></li>
-        <li><a href="${root}sobre-mi/"${active(isSobreMi)}>Sobre mí</a></li>
-      </ul>
-      <a href="${root}#contacto" class="btn btn--cyan nav__cta">Hablemos</a>
-      <button class="nav__burger" id="navBurger" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav__drawer" id="navDrawer">
-      <a href="${root}#trabajo"${activeDrawer(false)}>Trabajo</a>
-      <a href="${root}servicios/"${activeDrawer(isServicios)}>Servicios</a>
-      <a href="${root}sobre-mi/"${activeDrawer(isSobreMi)}>Sobre mí</a>
-      <a href="${root}#contacto" class="btn btn--cyan">Hablemos</a>
-    </div>
-  </nav>`);
+  var burger  = document.getElementById('navBurger');
+  var drawer  = document.getElementById('navDrawer');
+  var nav     = document.getElementById('nav');
+  var isOpen  = false;
+  var lastTap = 0;
 
-  var burger = document.getElementById('navBurger');
-  var drawer = document.getElementById('navDrawer');
-  var nav    = document.getElementById('nav');
+  burger.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    var now = Date.now();
+    if (now - lastTap < 300) return; // evitar doble disparo
+    lastTap = now;
+    isOpen = !isOpen;
+    drawer.classList.toggle('open', isOpen);
+    burger.classList.toggle('open', isOpen);
+  }, { passive: false });
 
-  burger.onclick = function() {
-    var isOpen = drawer.classList.contains('open');
-    if (isOpen) {
-      drawer.classList.remove('open');
-      burger.classList.remove('open');
-    } else {
-      drawer.classList.add('open');
-      burger.classList.add('open');
-    }
-  };
+  // Fallback para PC
+  burger.addEventListener('click', function(e) {
+    // Solo ejecutar si no fue un touch (touchstart ya lo manejó)
+    if (Date.now() - lastTap < 500) return;
+    isOpen = !isOpen;
+    drawer.classList.toggle('open', isOpen);
+    burger.classList.toggle('open', isOpen);
+  });
 
   var links = drawer.querySelectorAll('a');
   for (var i = 0; i < links.length; i++) {
-    links[i].onclick = function() {
+    links[i].addEventListener('click', function() {
+      isOpen = false;
       drawer.classList.remove('open');
       burger.classList.remove('open');
-    };
+    });
   }
 
   window.addEventListener('scroll', function() {
