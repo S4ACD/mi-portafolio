@@ -12,6 +12,27 @@
 </head>
 <body>
 
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">AC.</a>
+      <ul class="nav__links">
+        <li><a href="#trabajo">Trabajo</a></li>
+        <li><a href="servicios/">Servicios</a></li>
+        <li><a href="sobre-mi/">Sobre mí</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+      <button class="nav__burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__drawer" id="navDrawer">
+      <a href="#trabajo" class="nav__drawer-link">Trabajo</a>
+      <a href="servicios/" class="nav__drawer-link">Servicios</a>
+      <a href="sobre-mi/" class="nav__drawer-link">Sobre mí</a>
+      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+    </div>
+  </nav>
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="inicio">
@@ -120,15 +141,9 @@
       <h2 class="section__title">Proyectos</h2>
       <div class="projects__grid">
 
-        <article class="card card--project scroll-reveal">
+        <a href="/trabajo/orbidental/" class="card card--project scroll-reveal">
           <div class="card__thumb">
-            <div class="card__thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
+            <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental" loading="lazy" />
             <div class="card__overlay"></div>
           </div>
           <div class="card__meta">
@@ -136,56 +151,52 @@
             <div class="card__tags">
               <span class="tag tag--cyan">Web</span>
               <span class="tag">SEO técnico</span>
-              <span class="tag">PageSpeed 95</span>
+              <span class="tag">PageSpeed 97</span>
             </div>
           </div>
-        </article>
+        </a>
 
-        <article class="card card--project scroll-reveal" style="--reveal-delay: 0.1s">
+        <a href="/trabajo/fueggo/" class="card card--project scroll-reveal" style="--reveal-delay: 0.1s">
           <div class="card__thumb">
-            <div class="card__thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
+            <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781033141/Fachada_hkwn2i.png" alt="Fueggo" loading="lazy" />
             <div class="card__overlay"></div>
           </div>
           <div class="card__meta">
-            <h3 class="card__project-title">Catálogo fotográfico — 3.000 productos</h3>
-            <div class="card__tags">
-              <span class="tag tag--cyan">Fotografía</span>
-              <span class="tag">E-commerce</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card--project scroll-reveal" style="--reveal-delay: 0.2s">
-          <div class="card__thumb">
-            <div class="card__thumb-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
-            <div class="card__overlay"></div>
-          </div>
-          <div class="card__meta">
-            <h3 class="card__project-title">Identidad visual para redes</h3>
+            <h3 class="card__project-title">Fueggo — Identidad visual</h3>
             <div class="card__tags">
               <span class="tag tag--cyan">Branding</span>
-              <span class="tag">Social media</span>
+              <span class="tag">Restaurante</span>
             </div>
           </div>
-        </article>
+        </a>
 
-        <article class="card card--project card--next scroll-reveal" style="--reveal-delay: 0.3s">
-          <div class="card__thumb card__thumb--empty">
-            <p class="card__next-label">Tu próximo proyecto</p>
+        <a href="/trabajo/la-jungla-club/" class="card card--project scroll-reveal" style="--reveal-delay: 0.2s">
+          <div class="card__thumb">
+            <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034073/Fachada_msspsi.png" alt="La Jungla Club" loading="lazy" />
+            <div class="card__overlay"></div>
           </div>
-        </article>
+          <div class="card__meta">
+            <h3 class="card__project-title">La Jungla Club — Identidad visual</h3>
+            <div class="card__tags">
+              <span class="tag tag--cyan">Branding</span>
+              <span class="tag">Discoteca</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="/trabajo/rebel-street/" class="card card--project scroll-reveal" style="--reveal-delay: 0.3s">
+          <div class="card__thumb">
+            <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034468/Fachada_w69uxq.png" alt="Rebel Street" loading="lazy" />
+            <div class="card__overlay"></div>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__project-title">Rebel Street — Identidad visual</h3>
+            <div class="card__tags">
+              <span class="tag tag--cyan">Branding</span>
+              <span class="tag">Streetwear</span>
+            </div>
+          </div>
+        </a>
 
       </div>
     </div>
