@@ -1,15 +1,23 @@
-/* nav.js — Navegación global con checkbox hack para móvil */
+/* nav.js — Navegación global */
 
 (function() {
 
   function buildNav() {
-    if (document.getElementById('nav')) return;
+    // Si ya tiene el checkbox, no volver a inyectar
+    if (document.getElementById('navToggle')) return;
 
     var path        = window.location.pathname;
     var inRoot      = path.indexOf('/sobre-mi') === -1 && path.indexOf('/servicios') === -1;
     var root        = inRoot ? './' : '../';
     var isServicios = path.indexOf('/servicios') !== -1;
     var isSobreMi   = path.indexOf('/sobre-mi') !== -1;
+
+    // Si ya hay nav en el HTML, solo agregar el toggle y el listener
+    var existingNav = document.getElementById('nav');
+    if (existingNav) {
+      setupToggle();
+      return;
+    }
 
     document.body.insertAdjacentHTML('afterbegin',
       '<nav class="nav" id="nav">' +
@@ -21,10 +29,9 @@
             '<li><a href="' + root + 'sobre-mi/"' + (isSobreMi ? ' class="nav__link--active"' : '') + '>Sobre m\u00ed</a></li>' +
           '</ul>' +
           '<a href="' + root + '#contacto" class="btn btn--cyan nav__cta">Hablemos</a>' +
-          '<input type="checkbox" id="navToggle" class="nav__toggle" aria-hidden="true"/>' +
-          '<label for="navToggle" class="nav__burger" aria-label="Menu">' +
+          '<button id="navBurger" class="nav__burger" aria-label="Menu">' +
             '<span></span><span></span><span></span>' +
-          '</label>' +
+          '</button>' +
         '</div>' +
         '<div id="navDrawer" class="nav__drawer">' +
           '<a href="' + root + '#trabajo" class="nav__drawer-link">Trabajo</a>' +
@@ -35,16 +42,52 @@
       '</nav>'
     );
 
-    // Cerrar drawer al hacer click en links
-    var links = document.querySelectorAll('.nav__drawer-link, .nav__drawer .btn');
+    setupToggle();
+  }
+
+  function setupToggle() {
+    var burger = document.getElementById('navBurger');
+    var drawer = document.getElementById('navDrawer');
+    var nav    = document.getElementById('nav');
+    if (!burger || !drawer) return;
+
+    var open = false;
+
+    function toggle() {
+      open = !open;
+      if (open) {
+        drawer.style.display = 'flex';
+        burger.classList.add('open');
+      } else {
+        drawer.style.display = 'none';
+        burger.classList.remove('open');
+      }
+    }
+
+    // Usar tanto click como touchend con flag para evitar doble disparo
+    var touched = false;
+    burger.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      touched = true;
+      toggle();
+      setTimeout(function() { touched = false; }, 500);
+    }, { passive: false });
+
+    burger.addEventListener('click', function() {
+      if (touched) return;
+      toggle();
+    });
+
+    var links = drawer.querySelectorAll('a');
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', function() {
-        document.getElementById('navToggle').checked = false;
+        open = false;
+        drawer.style.display = 'none';
+        burger.classList.remove('open');
       });
     }
 
     window.addEventListener('scroll', function() {
-      var nav = document.getElementById('nav');
       if (nav) nav.style.boxShadow = window.scrollY > 20
         ? '0 1px 32px rgba(0,0,0,0.7)'
         : 'none';
