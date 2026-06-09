@@ -1,12 +1,15 @@
 /* ═══════════════════════════════════════════════════════════════
-   nav.js — Navegación global reutilizable
+   nav.js — Navegación global
 ═══════════════════════════════════════════════════════════════ */
 
 (function initNav() {
 
-  const path       = window.location.pathname;
-  const inRoot     = !path.includes('/sobre-mi') && !path.includes('/servicios');
-  const root       = inRoot ? './' : '../';
+  // Si ya existe el nav no hacer nada
+  if (document.getElementById('nav')) return;
+
+  const path        = window.location.pathname;
+  const inRoot      = !path.includes('/sobre-mi') && !path.includes('/servicios');
+  const root        = inRoot ? './' : '../';
   const isServicios = path.includes('/servicios');
   const isSobreMi   = path.includes('/sobre-mi');
 
@@ -19,7 +22,7 @@
       : ' class="nav__drawer-link"';
   }
 
-  // ── Inyectar nav ──
+  // Inyectar nav
   document.body.insertAdjacentHTML('afterbegin', `
   <nav class="nav" id="nav">
     <div class="nav__inner">
@@ -30,7 +33,7 @@
         <li><a href="${root}sobre-mi/"${active(isSobreMi)}>Sobre mí</a></li>
       </ul>
       <a href="${root}#contacto" class="btn btn--cyan nav__cta">Hablemos</a>
-      <button class="nav__burger" id="navBurger" aria-label="Menú" aria-expanded="false">
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -42,30 +45,31 @@
     </div>
   </nav>`);
 
-  // ── Burger ──
-  const burger = document.getElementById('navBurger');
-  const drawer = document.getElementById('navDrawer');
-  const nav    = document.getElementById('nav');
+  var burger = document.getElementById('navBurger');
+  var drawer = document.getElementById('navDrawer');
+  var nav    = document.getElementById('nav');
 
-  if (burger && drawer) {
-    burger.addEventListener('click', function() {
-      const isOpen = drawer.classList.toggle('open');
-      burger.classList.toggle('open', isOpen);
-      burger.setAttribute('aria-expanded', String(isOpen));
-    });
+  burger.onclick = function() {
+    var isOpen = drawer.classList.contains('open');
+    if (isOpen) {
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+    } else {
+      drawer.classList.add('open');
+      burger.classList.add('open');
+    }
+  };
 
-    drawer.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        drawer.classList.remove('open');
-        burger.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-      });
-    });
+  var links = drawer.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].onclick = function() {
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+    };
   }
 
-  // ── Sombra al scroll ──
   window.addEventListener('scroll', function() {
-    if (nav) nav.style.boxShadow = window.scrollY > 20
+    nav.style.boxShadow = window.scrollY > 20
       ? '0 1px 32px rgba(0,0,0,0.7)'
       : 'none';
   }, { passive: true });
