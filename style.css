@@ -168,6 +168,10 @@ img { display: block; max-width: 100%; }
   justify-content: center;
   user-select: none;
   -webkit-user-select: none;
+  background: transparent;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 .nav__burger span {
   display: block; width: 22px; height: 2px;
@@ -183,15 +187,28 @@ img { display: block; max-width: 100%; }
 .nav__toggle:checked + .nav__inner .nav__burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .nav__drawer {
-  display: none; flex-direction: column; gap: 4px;
-  padding: 16px 24px 24px; border-top: 1px solid var(--border);
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 24px 24px;
+  border-top: 1px solid var(--border);
+  background: rgba(8,8,8,0.98);
 }
 .nav__drawer-link {
-  padding: 12px 0; font-size: 16px; color: var(--text-muted);
-  border-bottom: 1px solid var(--border); transition: color var(--transition);
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  transition: color var(--transition);
+  background: transparent;
 }
 .nav__drawer-link:hover { color: #fff; }
-.nav__drawer .btn { margin-top: 12px; width: fit-content; }
+.nav__drawer .btn {
+  margin-top: 12px;
+  width: fit-content;
+  background: var(--cyan);
+  color: #000;
+}
 
 /* Link activo */
 .nav__links a.nav__link--active { color: var(--cyan) !important; }
