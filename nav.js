@@ -35,35 +35,19 @@
     '</nav>'
   );
 
-  var burger  = document.getElementById('navBurger');
-  var drawer  = document.getElementById('navDrawer');
-  var nav     = document.getElementById('nav');
-  var isOpen  = false;
-  var lastTap = 0;
+  var burger = document.getElementById('navBurger');
+  var drawer = document.getElementById('navDrawer');
+  var nav    = document.getElementById('nav');
 
-  burger.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-    var now = Date.now();
-    if (now - lastTap < 300) return; // evitar doble disparo
-    lastTap = now;
-    isOpen = !isOpen;
-    drawer.classList.toggle('open', isOpen);
-    burger.classList.toggle('open', isOpen);
-  }, { passive: false });
-
-  // Fallback para PC
-  burger.addEventListener('click', function(e) {
-    // Solo ejecutar si no fue un touch (touchstart ya lo manejó)
-    if (Date.now() - lastTap < 500) return;
-    isOpen = !isOpen;
-    drawer.classList.toggle('open', isOpen);
-    burger.classList.toggle('open', isOpen);
+  // Solo click — sin touchstart ni touchend para evitar doble disparo
+  burger.addEventListener('click', function() {
+    drawer.classList.toggle('open');
+    burger.classList.toggle('open');
   });
 
   var links = drawer.querySelectorAll('a');
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener('click', function() {
-      isOpen = false;
       drawer.classList.remove('open');
       burger.classList.remove('open');
     });
