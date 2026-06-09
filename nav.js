@@ -111,12 +111,15 @@
 
         if (lang === 'es') {
           localStorage.setItem('ac_lang', 'es');
-          // Recargar sin traducción es lo más confiable
-          var url = window.location.href;
-          // Quitar hash de Google Translate si existe
-          url = url.replace(/#googtrans\([^)]*\)/g, '');
-          window.location.href = url;
+          // Limpiar cookie de Google Translate
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname;
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + window.location.hostname;
+          window.location.reload();
         } else {
+          // Setear cookie de Google Translate directamente
+          document.cookie = 'googtrans=/es/' + lang + '; path=/';
+          document.cookie = 'googtrans=/es/' + lang + '; path=/; domain=' + window.location.hostname;
           setLang(lang);
         }
       });
