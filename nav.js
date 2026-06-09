@@ -19,25 +19,31 @@
       return;
     }
 
+    var homeUrl     = inRoot ? '/' : '../';
+    var serviciosUrl = '/servicios/';
+    var sobremiUrl   = '/sobre-mi/';
+    var trabajoUrl   = inRoot ? '#trabajo' : '/#trabajo';
+    var contactoUrl  = inRoot ? '#contacto' : '/#contacto';
+
     document.body.insertAdjacentHTML('afterbegin',
       '<nav class="nav" id="nav">' +
         '<div class="nav__inner">' +
-          '<a href="' + root + '" class="nav__logo">AC.</a>' +
+          '<a href="' + homeUrl + '" class="nav__logo">AC.</a>' +
           '<ul class="nav__links">' +
-            '<li><a href="' + root + '#trabajo">Trabajo</a></li>' +
-            '<li><a href="' + root + 'servicios/"' + (isServicios ? ' class="nav__link--active"' : '') + '>Servicios</a></li>' +
-            '<li><a href="' + root + 'sobre-mi/"' + (isSobreMi ? ' class="nav__link--active"' : '') + '>Sobre m\u00ed</a></li>' +
+            '<li><a href="' + trabajoUrl + '">Trabajo</a></li>' +
+            '<li><a href="' + serviciosUrl + '"' + (isServicios ? ' class="nav__link--active"' : '') + '>Servicios</a></li>' +
+            '<li><a href="' + sobremiUrl + '"' + (isSobreMi ? ' class="nav__link--active"' : '') + '>Sobre m\u00ed</a></li>' +
           '</ul>' +
-          '<a href="' + root + '#contacto" class="btn btn--cyan nav__cta">Hablemos</a>' +
+          '<a href="' + contactoUrl + '" class="btn btn--cyan nav__cta">Hablemos</a>' +
           '<button id="navBurger" class="nav__burger" aria-label="Menu">' +
             '<span></span><span></span><span></span>' +
           '</button>' +
         '</div>' +
         '<div id="navDrawer" class="nav__drawer">' +
-          '<a href="' + root + '#trabajo" class="nav__drawer-link">Trabajo</a>' +
-          '<a href="' + root + 'servicios/" class="nav__drawer-link' + (isServicios ? ' nav__link--active' : '') + '">Servicios</a>' +
-          '<a href="' + root + 'sobre-mi/" class="nav__drawer-link' + (isSobreMi ? ' nav__link--active' : '') + '">Sobre m\u00ed</a>' +
-          '<a href="' + root + '#contacto" class="btn btn--cyan">Hablemos</a>' +
+          '<a href="' + trabajoUrl + '" class="nav__drawer-link">Trabajo</a>' +
+          '<a href="' + serviciosUrl + '" class="nav__drawer-link' + (isServicios ? ' nav__link--active' : '') + '">Servicios</a>' +
+          '<a href="' + sobremiUrl + '" class="nav__drawer-link' + (isSobreMi ? ' nav__link--active' : '') + '">Sobre m\u00ed</a>' +
+          '<a href="' + contactoUrl + '" class="btn btn--cyan">Hablemos</a>' +
         '</div>' +
       '</nav>'
     );
