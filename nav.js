@@ -4,12 +4,9 @@
 
 (function initNav() {
 
-  // ── Detectar si estamos en la raíz o en una subcarpeta ──
-  const path    = window.location.pathname;
-  const inRoot  = !path.includes('/sobre-mi') && !path.includes('/servicios');
-  const root    = inRoot ? './' : '../';
-
-  // ── Detectar página activa ──
+  const path       = window.location.pathname;
+  const inRoot     = !path.includes('/sobre-mi') && !path.includes('/servicios');
+  const root       = inRoot ? './' : '../';
   const isServicios = path.includes('/servicios');
   const isSobreMi   = path.includes('/sobre-mi');
 
@@ -50,23 +47,25 @@
   const drawer = document.getElementById('navDrawer');
   const nav    = document.getElementById('nav');
 
-  burger?.addEventListener('click', () => {
-    const isOpen = drawer.classList.toggle('open');
-    burger.classList.toggle('open', isOpen);
-    burger.setAttribute('aria-expanded', isOpen);
-  });
-
-  drawer?.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      drawer.classList.remove('open');
-      burger.classList.remove('open');
-      burger.setAttribute('aria-expanded', false);
+  if (burger && drawer) {
+    burger.addEventListener('click', function() {
+      const isOpen = drawer.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', String(isOpen));
     });
-  });
+
+    drawer.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        drawer.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   // ── Sombra al scroll ──
-  window.addEventListener('scroll', () => {
-    nav.style.boxShadow = window.scrollY > 20
+  window.addEventListener('scroll', function() {
+    if (nav) nav.style.boxShadow = window.scrollY > 20
       ? '0 1px 32px rgba(0,0,0,0.7)'
       : 'none';
   }, { passive: true });
