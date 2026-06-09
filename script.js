@@ -236,9 +236,9 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
 // ─── TESTIMONIOS CARRUSEL ────────────────────────────────────────
 (function initTestimonials() {
-  const track  = document.getElementById('testimonialsTrack');
+  const track   = document.getElementById('testimonialsTrack');
   const nextBtn = document.getElementById('testimonialsNext');
-  const dots   = document.querySelectorAll('.testimonials__dot');
+  const dots    = document.querySelectorAll('.testimonials__dot');
   if (!track || !nextBtn) return;
 
   let current = 0;
@@ -246,12 +246,18 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
   function goTo(index) {
     current = (index + total) % total;
-    track.style.transform = 'translateX(calc(-' + current + ' * (100% + 24px)))';
+    // Calcular offset real basado en el ancho de la tarjeta
+    const card = track.children[0];
+    const cardWidth = card.offsetWidth + 24; // 24 = gap
+    track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
     dots.forEach((d, i) => d.classList.toggle('testimonials__dot--active', i === current));
   }
 
   nextBtn.addEventListener('click', () => goTo(current + 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  // Recalcular al resize
+  window.addEventListener('resize', () => goTo(current), { passive: true });
 
   // Auto-play cada 5 segundos
   let timer = setInterval(() => goTo(current + 1), 5000);
