@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexander Caro — Designer & Developer</title>
+  <meta name="description" content="Diseño marcas que conectan y construyo webs que convierten. Bogotá, Colombia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">AC.</a>
+      <ul class="nav__links">
+        <li><a href="#trabajo">Trabajo</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+      <button class="nav__burger" id="navBurger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__drawer" id="navDrawer">
+      <a href="#trabajo" class="nav__drawer-link">Trabajo</a>
+      <a href="#servicios" class="nav__drawer-link">Servicios</a>
+      <a href="#sobre-mi" class="nav__drawer-link">Sobre mí</a>
+      <a href="#contacto" class="btn btn--cyan">Hablemos</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="inicio">
+    <!-- Canvas para partículas -->
+    <canvas id="heroCanvas" class="hero__canvas"></canvas>
+
+    <div class="hero__inner container">
+      <span class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Disponible para proyectos
+      </span>
+
+      <h1 class="hero__title reveal-up">
+        <span id="typeTarget"></span><br />
+        <span class="hero__sub"><span id="typeTarget2"></span><span class="type-cursor">|</span></span>
+      </h1>
+
+      <p class="hero__desc reveal-up" style="--delay: 0.12s">
+        Diseño marcas que conectan y construyo webs que convierten.<br class="br-desktop" />
+        Bogotá, Colombia — trabajo remoto con clientes en toda Latinoamérica.
+      </p>
+
+      <div class="hero__actions reveal-up" style="--delay: 0.24s">
+        <a href="#trabajo" class="btn btn--cyan">Ver mi trabajo</a>
+        <a href="#" class="btn btn--ghost" id="downloadCV">Descargar CV</a>
+      </div>
+
+      <div class="hero__stats reveal-up" style="--delay: 0.36s">
+        <div class="stat">
+          <span class="stat__num cyan">2+</span>
+          <span class="stat__label">Años de experiencia</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num cyan">3K+</span>
+          <span class="stat__label">Fotos de producto</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num cyan">95</span>
+          <span class="stat__label">PageSpeed score</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num cyan">∞</span>
+          <span class="stat__label">Café consumido</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll-hint">
+      <span>scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICIOS ═══ -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <p class="eyebrow">SERVICIOS</p>
+      <h2 class="section__title">Qué puedo hacer por ti</h2>
+      <div class="services__grid">
+
+        <article class="card card--service scroll-reveal">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Diseño web</h3>
+          <p class="card__text">Sitios rápidos, bonitos y que venden. Construidos con HTML, CSS y WordPress.</p>
+        </article>
+
+        <article class="card card--service scroll-reveal" style="--reveal-delay: 0.1s">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="5" y="2" width="14" height="20" rx="2"/>
+              <circle cx="12" cy="17" r="1"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Social media design</h3>
+          <p class="card__text">Contenido visual para redes que para el scroll y genera conversación.</p>
+        </article>
+
+        <article class="card card--service scroll-reveal" style="--reveal-delay: 0.2s">
+          <div class="card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Fotografía de producto</h3>
+          <p class="card__text">Imágenes que muestran el valor real de lo que vendes.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROYECTOS ═══ -->
+  <section class="section" id="trabajo">
+    <div class="container">
+      <p class="eyebrow">TRABAJO SELECCIONADO</p>
+      <h2 class="section__title">Proyectos</h2>
+      <div class="projects__grid">
+
+        <article class="card card--project scroll-reveal">
+          <div class="card__thumb">
+            <div class="card__thumb-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <div class="card__overlay"></div>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__project-title">Rediseño web — Orbidental</h3>
+            <div class="card__tags">
+              <span class="tag tag--cyan">Web</span>
+              <span class="tag">SEO técnico</span>
+              <span class="tag">PageSpeed 95</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--project scroll-reveal" style="--reveal-delay: 0.1s">
+          <div class="card__thumb">
+            <div class="card__thumb-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <div class="card__overlay"></div>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__project-title">Catálogo fotográfico — 3.000 productos</h3>
+            <div class="card__tags">
+              <span class="tag tag--cyan">Fotografía</span>
+              <span class="tag">E-commerce</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--project scroll-reveal" style="--reveal-delay: 0.2s">
+          <div class="card__thumb">
+            <div class="card__thumb-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+            </div>
+            <div class="card__overlay"></div>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__project-title">Identidad visual para redes</h3>
+            <div class="card__tags">
+              <span class="tag tag--cyan">Branding</span>
+              <span class="tag">Social media</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--project card--next scroll-reveal" style="--reveal-delay: 0.3s">
+          <div class="card__thumb card__thumb--empty">
+            <p class="card__next-label">Tu próximo proyecto</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SOBRE MÍ ═══ -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <p class="eyebrow">SOBRE MÍ</p>
+      <h2 class="section__title">La persona detrás del trabajo</h2>
+      <div class="about__grid">
+        <div class="about__bio scroll-reveal">
+          <p>Soy Alexander, diseñador y desarrollador con sede en Bogotá. Desde los 13 años aprendí haciendo — antes de que hubiera un título para lo que hacía.</p>
+          <p>Hoy entrego lo que la mayoría de agencias reparte entre tres personas: diseño, código y estrategia visual. Sin intermediarios, sin teléfono roto.</p>
+        </div>
+        <div class="about__skills scroll-reveal" style="--reveal-delay: 0.15s">
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Diseño UI/UX</span><span class="skill-item__pct">90%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">HTML / CSS</span><span class="skill-item__pct">95%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">WordPress / PHP</span><span class="skill-item__pct">80%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">SEO técnico</span><span class="skill-item__pct">85%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Fotografía</span><span class="skill-item__pct">88%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header"><span class="skill-item__name">Photoshop</span><span class="skill-item__pct">82%</span></div>
+            <div class="skill-bar"><div class="skill-bar__fill" data-width="82"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="cta-section" id="contacto">
+    <div class="container">
+      <h2 class="cta-section__title">
+        ¿Tienes un proyecto en mente<span class="hero__dot">?</span>
+      </h2>
+      <p class="cta-section__sub">Cuéntame qué necesitas. Respondo en menos de 24 horas.</p>
+      <div class="cta-section__actions">
+        <button class="btn btn--cyan btn--lg" id="whatsappBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Escríbeme por WhatsApp
+        </button>
+        <a href="#trabajo" class="btn btn--ghost">Ver todos los proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__copy">© 2026 Alexander Caro</span>
+      <div class="footer__links">
+        <a href="https://www.behance.net/alexandercaro" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/alexander_caro7/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
