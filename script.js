@@ -274,3 +274,114 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
   }, { passive: true });
 })();
+
+
+// ─── CURSOR PERSONALIZADO ────────────────────────────────────────
+(function initCursor() {
+  const cursor   = document.getElementById('cursor');
+  const follower = document.getElementById('cursorFollower');
+  if (!cursor || !follower) return;
+  // Solo en desktop
+  if (!window.matchMedia('(pointer: fine)').matches) {
+    cursor.style.display = 'none';
+    follower.style.display = 'none';
+    return;
+  }
+
+  let mouseX = 0, mouseY = 0;
+  let followerX = 0, followerY = 0;
+
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top  = mouseY + 'px';
+  });
+
+  // Follower con lag suave
+  function animateFollower() {
+    followerX += (mouseX - followerX) * 0.12;
+    followerY += (mouseY - followerY) * 0.12;
+    follower.style.left = followerX + 'px';
+    follower.style.top  = followerY + 'px';
+    requestAnimationFrame(animateFollower);
+  }
+  animateFollower();
+
+  // Hover en elementos interactivos
+  const hoverEls = document.querySelectorAll('a, button, .card, .trabajo-card, .testimonial-card');
+  hoverEls.forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+  });
+
+  // Ocultar al salir de la ventana
+  document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; follower.style.opacity = '0'; });
+  document.addEventListener('mouseenter', () => { cursor.style.opacity = '1'; follower.style.opacity = '1'; });
+})();
+
+
+// ─── CONTADOR DE NÚMEROS ─────────────────────────────────────────
+(function initCounters() {
+  const stats = document.querySelectorAll('.stat__num');
+  if (!stats.length) return;
+
+  const targets = { '2+': 2, '3K+': 3000, '95': 95, '∞': null };
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const text = el.textContent.trim();
+
+      if (text === '∞') { obs.unobserve(el); return; }
+
+      const isK    = text.includes('K');
+      const hasPlus = text.includes('+');
+      const target  = isK ? 3000 : parseInt(text);
+      const duration = 1500;
+      const start    = performance.now();
+
+      function update(now) {
+        const elapsed  = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease     = 1 - Math.pow(1 - progress, 3);
+        const current  = Math.round(target * ease);
+
+        if (isK) {
+          el.textContent = (current >= 1000 ? Math.floor(current/1000) + 'K' : current) + (hasPlus ? '+' : '');
+        } else {
+          el.textContent = current + (hasPlus ? '+' : '');
+        }
+
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  stats.forEach(el => obs.observe(el));
+})();
+
+
+// ─── TRANSICIÓN ENTRE PÁGINAS ────────────────────────────────────
+(function initPageTransition() {
+  const overlay = document.createElement('div');
+  overlay.className = 'page-transition';
+  document.body.appendChild(overlay);
+
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    // Solo links internos que no sean anclas
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto')) return;
+
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      overlay.classList.add('active');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 280);
+    });
+  });
+})();
