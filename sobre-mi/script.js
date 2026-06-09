@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════════════════════
+   sobre-mi/script.js
+═══════════════════════════════════════════════════════════════ */
+
+// ─── NAV MÓVIL ──────────────────────────────────────────────────
+const navBurger = document.getElementById('navBurger');
+const navDrawer = document.getElementById('navDrawer');
+const nav       = document.getElementById('nav');
+
+navBurger?.addEventListener('click', () => {
+  const isOpen = navDrawer.classList.toggle('open');
+  navBurger.setAttribute('aria-expanded', isOpen);
+});
+navDrawer?.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navDrawer.classList.remove('open'));
+});
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = window.scrollY > 20 ? '0 1px 32px rgba(0,0,0,0.7)' : 'none';
+}, { passive: true });
+
+// ─── WHATSAPP ────────────────────────────────────────────────────
+document.getElementById('whatsappBtn')?.addEventListener('click', () => {
+  const phone   = '573024457653';
+  const message = encodeURIComponent(
+    '¡Hola Alexander! Vi tu portafolio y me interesa cotizar un proyecto contigo. ¿Podemos hablar?'
+  );
+  window.open(`https://wa.me/${phone}?text=${message}`, '_blank', 'noopener,noreferrer');
+});
+
+// ─── SCROLL REVEAL ───────────────────────────────────────────────
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.scroll-reveal').forEach(el => revealObs.observe(el));
+
+// ─── PARTÍCULAS ──────────────────────────────────────────────────
+(function initParticles() {
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    canvas.style.display = 'none'; return;
+  }
+  const ctx = canvas.getContext('2d');
+  let W, H, particles, mouse = { x: -9999, y: -9999 };
+  const CONFIG = { count: 90, maxRadius: 1.6, speed: 0.3, connectionDist: 120, mouseRadius: 130, color: '0,229,229' };
+
+  function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+  function createParticle() {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = (0.4 + Math.random() * 0.6) * CONFIG.speed;
+    return { x: Math.random()*W, y: Math.random()*H, vx: Math.cos(angle)*speed, vy: Math.sin(angle)*speed, r: 0.4+Math.random()*CONFIG.maxRadius, alpha: 0.3+Math.random()*0.5 };
+  }
+  function init() { resize(); particles = Array.from({ length: CONFIG.count }, createParticle); }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      const dx = p.x - mouse.x, dy = p.y - mouse.y;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      if (dist < CONFIG.mouseRadius) { const f = (CONFIG.mouseRadius-dist)/CONFIG.mouseRadius; p.x += (dx/dist)*f*1.8; p.y += (dy/dist)*f*1.8; }
+    });
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i+1; j < particles.length; j++) {
+        const a = particles[i], b = particles[j];
+        const dx = a.x-b.x, dy = a.y-b.y, d = Math.sqrt(dx*dx+dy*dy);
+        if (d < CONFIG.connectionDist) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(${CONFIG.color},${(1-d/CONFIG.connectionDist)*0.16})`;
+          ctx.lineWidth = 0.6;
+          ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+    }
+    particles.forEach(p => { ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle=`rgba(${CONFIG.color},${p.alpha})`; ctx.fill(); });
+    requestAnimationFrame(draw);
+  }
+  const hero = document.querySelector('.about-hero');
+  hero?.addEventListener('mousemove', e => { const r=canvas.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top; }, { passive:true });
+  hero?.addEventListener('mouseleave', () => { mouse.x=-9999; mouse.y=-9999; });
+  let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt=setTimeout(resize,150); });
+  init(); draw();
+})();

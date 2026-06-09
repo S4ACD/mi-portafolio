@@ -1,0 +1,213 @@
+/* ═══════════════════════════════════════════════════════════════
+   sobre-mi/style.css — estilos exclusivos de la página Sobre mí
+   (hereda design tokens y base de ../style.css)
+═══════════════════════════════════════════════════════════════ */
+
+/* Nav link activo */
+.nav__link--active { color: var(--cyan) !important; }
+
+/* ── BACK LINK ── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  transition: color var(--transition), gap var(--transition);
+}
+.back-link:hover { color: var(--cyan); gap: 12px; }
+
+/* ── HERO ── */
+.about-hero {
+  min-height: 92svh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.about-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,229,229,0.04) 0%, transparent 70%),
+    linear-gradient(to bottom, transparent 70%, var(--bg) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.about-hero__inner { position: relative; z-index: 2; }
+
+.about-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.about-hero__accent {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(0,229,229,0.5);
+}
+.about-hero__sub {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 480px;
+}
+.about-hero__scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  animation: fadeInUp 1s 1s both;
+}
+.about-hero__scroll span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ── BLOQUES DE CONTENIDO ── */
+.about-content { padding: 80px 0 40px; }
+
+.about-block {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  padding: 56px 0;
+  align-items: start;
+}
+@media (max-width: 600px) {
+  .about-block { grid-template-columns: 1fr; gap: 12px; padding: 40px 0; }
+}
+
+.about-block__label .eyebrow {
+  font-size: 13px;
+  padding-top: 6px;
+}
+
+.about-block__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.about-block__body p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.about-divider {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 1px;
+  background: var(--border);
+  padding: 0 24px;
+}
+
+/* ── MOTO BADGE ── */
+.moto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  background: rgba(0,229,229,0.07);
+  border: 1px solid rgba(0,229,229,0.18);
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 100px;
+}
+
+/* ── STAT CARDS ── */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 8px 0 56px;
+}
+@media (max-width: 600px) {
+  .about-stats { grid-template-columns: 1fr; }
+}
+.about-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.about-stat:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--cyan-glow);
+}
+.about-stat__num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.about-stat__arrow {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+.about-stat__label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── SKILL CHIPS ── */
+.about-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 40px 0 80px;
+}
+.skill-chip {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  cursor: default;
+}
+.skill-chip:hover {
+  border-color: var(--border-hover);
+  color: var(--cyan);
+  background: var(--cyan-dim);
+}
+.skill-chip--muted {
+  color: var(--text-muted);
+  border-style: dashed;
+}
+
+@keyframes fadeInUp {
+  from { opacity:0; transform: translateX(-50%) translateY(12px); }
+  to   { opacity:1; transform: translateX(-50%) translateY(0); }
+}
