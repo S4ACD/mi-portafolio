@@ -343,3 +343,30 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     });
   });
 })();
+
+
+// ─── BARRA DE PROGRESO DE SCROLL ────────────────────────────────
+(function initScrollProgress() {
+  const bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const scrollTop  = window.scrollY;
+    const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+    const progress   = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width  = progress + '%';
+  }, { passive: true });
+})();
+
+
+// ─── EASTER EGG EN CONSOLA ──────────────────────────────────────
+(function consoleEasterEgg() {
+  const styles = [
+    'color: #00e5e5; font-size: 18px; font-weight: bold; font-family: monospace;',
+    'color: #888; font-size: 12px; font-family: monospace;',
+    'color: #00e5e5; font-size: 13px; font-family: monospace;',
+  ];
+  console.log('%c¡Hola, dev curioso! 👋', styles[0]);
+  console.log('%cSi estás leyendo esto, probablemente sabes lo que haces.', styles[1]);
+  console.log('%c→ alexandercaro.com | @alexander_caro7', styles[2]);
+  console.log('%cEste portafolio fue construido con HTML, CSS y JS vanilla — sin frameworks, sin magia negra.', styles[1]);
+})();
