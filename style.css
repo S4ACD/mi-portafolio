@@ -653,3 +653,145 @@ a.card--project {
   border-radius: 3px;
   box-shadow: 0 0 8px rgba(0,229,229,0.5);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   CURSOR PERSONALIZADO
+═══════════════════════════════════════════════════════════════ */
+* { cursor: none !important; }
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+}
+.cursor__dot {
+  position: fixed;
+  width: 8px; height: 8px;
+  background: var(--cyan);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, opacity 0.2s;
+  pointer-events: none;
+  z-index: 99999;
+}
+.cursor__ring {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 1.5px solid rgba(0,229,229,0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease-out, width 0.3s, height 0.3s, border-color 0.3s;
+  pointer-events: none;
+  z-index: 99998;
+}
+.cursor__dot.hovering {
+  width: 12px; height: 12px;
+  background: #fff;
+}
+.cursor__ring.hovering {
+  width: 52px; height: 52px;
+  border-color: rgba(0,229,229,0.8);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TRANSICIÓN ENTRE PÁGINAS
+═══════════════════════════════════════════════════════════════ */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.page-transition.out { opacity: 1; pointer-events: all; }
+
+/* ═══════════════════════════════════════════════════════════════
+   TEXTO GRADIENTE ANIMADO
+═══════════════════════════════════════════════════════════════ */
+.gradient-text {
+  background: linear-gradient(90deg, var(--cyan) 0%, #fff 40%, var(--cyan) 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s linear infinite;
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor__dot, .cursor__ring { display: none; }
+  * { cursor: auto !important; }
+  .gradient-text { animation: none; }
+  .page-transition { display: none; }
+}
+@media (hover: none) {
+  /* En móvil no hay cursor */
+  .cursor__dot, .cursor__ring { display: none; }
+  * { cursor: auto !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CURSOR PERSONALIZADO
+═══════════════════════════════════════════════════════════════ */
+@media (pointer: fine) {
+  * { cursor: none !important; }
+
+  .cursor {
+    width: 8px; height: 8px;
+    background: var(--cyan);
+    border-radius: 50%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+    box-shadow: 0 0 10px rgba(0,229,229,0.6);
+  }
+  .cursor.hover {
+    width: 40px; height: 40px;
+    background: transparent;
+    border: 1.5px solid var(--cyan);
+    box-shadow: 0 0 20px rgba(0,229,229,0.3);
+  }
+  .cursor-follower {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(0,229,229,0.3);
+    border-radius: 50%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, opacity 0.2s ease;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TRANSICIÓN ENTRE PÁGINAS
+═══════════════════════════════════════════════════════════════ */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 9990;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.page-transition.active { opacity: 1; }
+
+/* Fade in al cargar */
+body {
+  animation: pageFadeIn 0.4s ease both;
+}
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
