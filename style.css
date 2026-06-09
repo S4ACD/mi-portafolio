@@ -148,26 +148,39 @@ img { display: block; max-width: 100%; }
 .nav__links { display: flex; gap: 32px; }
 .nav__links a { font-size: 14px; color: var(--text-muted); transition: color var(--transition); }
 .nav__links a:hover { color: #fff; }
+/* Checkbox oculto — controla el menú móvil sin JS */
+.nav__toggle {
+  display: none;
+}
+
 .nav__burger {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer;
-  padding: 12px; margin-left: auto;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 12px;
+  margin-left: auto;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
-  min-width: 44px; min-height: 44px;
-  align-items: center; justify-content: center;
-  /* Eliminar delay de 300ms en móvil */
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
   user-select: none;
   -webkit-user-select: none;
 }
 .nav__burger span {
   display: block; width: 22px; height: 2px;
   background: var(--text); border-radius: 2px; transition: var(--transition);
+  pointer-events: none;
 }
-/* Burger → X cuando está abierto */
-.nav__burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav__burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+/* Burger → X cuando checkbox está marcado */
+.nav__toggle:checked ~ .nav__inner .nav__burger span:nth-child(1),
+.nav__toggle:checked + .nav__inner .nav__burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle:checked ~ .nav__inner .nav__burger span:nth-child(2),
+.nav__toggle:checked + .nav__inner .nav__burger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav__toggle:checked ~ .nav__inner .nav__burger span:nth-child(3),
+.nav__toggle:checked + .nav__inner .nav__burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .nav__drawer {
   display: none; flex-direction: column; gap: 4px;
@@ -180,15 +193,15 @@ img { display: block; max-width: 100%; }
 .nav__drawer-link:hover { color: #fff; }
 .nav__drawer .btn { margin-top: 12px; width: fit-content; }
 
-/* Link activo en desktop */
+/* Link activo */
 .nav__links a.nav__link--active { color: var(--cyan) !important; }
 .nav__drawer-link.nav__link--active { color: var(--cyan) !important; }
 
-/* Ocultar btn de nav__inner en móvil — lo maneja el drawer */
 @media (max-width: 767px) {
   .nav__links, .nav__inner > .nav__cta { display: none; }
   .nav__burger { display: flex; }
-  .nav__drawer.open { display: flex; }
+  /* Drawer se abre cuando el checkbox está marcado */
+  .nav__toggle:checked ~ .nav__drawer { display: flex; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
