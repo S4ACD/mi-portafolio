@@ -156,6 +156,11 @@ img { display: block; max-width: 100%; }
   display: block; width: 22px; height: 2px;
   background: var(--text); border-radius: 2px; transition: var(--transition);
 }
+/* Burger → X cuando está abierto */
+.nav__burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 .nav__drawer {
   display: none; flex-direction: column; gap: 4px;
   padding: 16px 24px 24px; border-top: 1px solid var(--border);
@@ -166,8 +171,14 @@ img { display: block; max-width: 100%; }
 }
 .nav__drawer-link:hover { color: #fff; }
 .nav__drawer .btn { margin-top: 12px; width: fit-content; }
+
+/* Link activo en desktop */
+.nav__links a.nav__link--active { color: var(--cyan) !important; }
+.nav__drawer-link.nav__link--active { color: var(--cyan) !important; }
+
+/* Ocultar btn de nav__inner en móvil — lo maneja el drawer */
 @media (max-width: 767px) {
-  .nav__links, .nav__inner > .btn { display: none; }
+  .nav__links, .nav__inner > .nav__cta { display: none; }
   .nav__burger { display: flex; }
   .nav__drawer.open { display: flex; }
 }
