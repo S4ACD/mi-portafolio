@@ -733,3 +733,45 @@ a, button, [role="button"], label, select, .filter-btn,
 input, textarea {
   cursor: text !important;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   BARRA DE PROGRESO DE SCROLL
+═══════════════════════════════════════════════════════════════ */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--cyan), rgba(0,229,229,0.4));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(0,229,229,0.6);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GRADIENTE ANIMADO EN SUBTÍTULO HERO
+═══════════════════════════════════════════════════════════════ */
+.hero__sub .hero__amp {
+  background: linear-gradient(90deg, #888, var(--cyan), #888);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s linear infinite;
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GLASSMORPHISM EN CARDS — hover
+═══════════════════════════════════════════════════════════════ */
+.card--service:hover,
+.card--project:hover,
+.trabajo-card:hover,
+.testimonial-card:hover {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(20, 20, 20, 0.85) !important;
+}
