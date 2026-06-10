@@ -103,8 +103,23 @@
       box-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,229,229,0.05);
     }
     .mobile-notch { width: 80px; height: 20px; background: #111; border-radius: 10px; margin: 0 auto 10px; }
-    .mobile-screen { width: 100%; aspect-ratio: 9/18; border-radius: 20px; overflow: hidden; border: 1px solid #222; }
-    .mobile-screen iframe { width: 375px; height: 100%; border: none; transform-origin: top left; display: block; }
+    .mobile-screen {
+      width: 100%; aspect-ratio: 9/18; border-radius: 20px;
+      overflow: hidden; border: 1px solid #222;
+      cursor: grab; position: relative;
+    }
+    .mobile-screen:active { cursor: grabbing; }
+    .mobile-screen iframe {
+      width: 375px; height: 100%; border: none;
+      transform-origin: top left; display: block;
+      pointer-events: none; /* evita que el iframe capture eventos */
+    }
+    /* Overlay para capturar scroll/drag */
+    .mobile-screen-overlay {
+      position: absolute; inset: 0; z-index: 2;
+      cursor: grab;
+    }
+    .mobile-screen-overlay:active { cursor: grabbing; }
     .mobile-btn { width: 36px; height: 4px; background: #333; border-radius: 2px; margin: 10px auto 0; }
 
     .devices-grid { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: start; }
@@ -120,6 +135,9 @@
     }
     .live-btn:hover { box-shadow: var(--cyan-glow); transform: translateY(-2px); }
   </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
 </head>
 <body>
 
@@ -207,8 +225,9 @@
           <div class="mobile-wrap">
             <div class="mobile-frame">
               <div class="mobile-notch"></div>
-              <div class="mobile-screen">
-                <iframe src="/trabajo/pulse-digital/site/" title="Pulse Digital — Mobile preview" loading="lazy" scrolling="yes" style="transform:scale(0.747);transform-origin:top left;width:375px;height:134%"></iframe>
+              <div class="mobile-screen" id="mobileScreen">
+                <div class="mobile-screen-overlay" id="mobileOverlay"></div>
+                <iframe src="/trabajo/pulse-digital/site/" title="Pulse Digital — Mobile preview" loading="lazy" id="mobileIframe" style="transform:scale(0.747);transform-origin:top left;width:375px;height:134%;position:absolute;top:0;left:0;border:none"></iframe>
               </div>
               <div class="mobile-btn"></div>
             </div>
@@ -244,6 +263,63 @@
     </div>
   </footer>
 
+  <script>
+    // Drag scroll en mockup móvil
+    (function() {
+      var overlay, iframe, startY, startScroll, isDragging = false;
+
+      window.addEventListener('DOMContentLoaded', function() {
+        overlay = document.getElementById('mobileOverlay');
+        iframe  = document.getElementById('mobileIframe');
+        if (!overlay || !iframe) return;
+
+        overlay.addEventListener('mousedown', function(e) {
+          isDragging = true;
+          startY = e.clientY;
+          // Habilitar pointer events en iframe para leer su scroll
+          iframe.style.pointerEvents = 'auto';
+          try { startScroll = iframe.contentWindow.scrollY || 0; } catch(e){ startScroll = 0; }
+          iframe.style.pointerEvents = 'none';
+          overlay.style.cursor = 'grabbing';
+          e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', function(e) {
+          if (!isDragging) return;
+          var dy = (startY - e.clientY) / 0.747;
+          try {
+            iframe.contentWindow.scrollTo(0, startScroll + dy);
+          } catch(e){}
+        });
+
+        document.addEventListener('mouseup', function() {
+          if (!isDragging) return;
+          isDragging = false;
+          overlay.style.cursor = 'grab';
+          try { startScroll = iframe.contentWindow.scrollY || 0; } catch(e){}
+        });
+
+        // Touch
+        overlay.addEventListener('touchstart', function(e) {
+          startY = e.touches[0].clientY;
+          try { startScroll = iframe.contentWindow.scrollY || 0; } catch(e){ startScroll = 0; }
+        }, { passive: true });
+
+        overlay.addEventListener('touchmove', function(e) {
+          var dy = (startY - e.touches[0].clientY) / 0.747;
+          try { iframe.contentWindow.scrollTo(0, startScroll + dy); } catch(e){}
+        }, { passive: true });
+
+        // Click en overlay — pasar al iframe si no hubo drag
+        overlay.addEventListener('click', function(e) {
+          if (Math.abs(e.clientY - startY) < 5) {
+            iframe.style.pointerEvents = 'auto';
+            setTimeout(function() { iframe.style.pointerEvents = 'none'; }, 500);
+          }
+        });
+      });
+    })();
+  </script>
   <script src="/nav.js" defer></script>
   <script defer>
     document.getElementById('whatsappBtn').addEventListener('click', function(){
