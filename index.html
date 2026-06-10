@@ -3,29 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexander Caro — Designer & Developer</title>
-  <meta name="description" content="Diseño marcas que conectan y construyo webs que convierten. Bogotá, Colombia." />
+
+  <!-- SEO principal -->
+  <title>Alexander Caro | Diseñador Web Freelance Bogotá — Sitios Web Profesionales</title>
+  <meta name="description" content="Diseñador web freelance en Bogotá. Creo sitios web profesionales, rápidos y optimizados para empresas en Colombia y Latinoamérica. PageSpeed 97. Consulta gratis." />
+  <meta name="keywords" content="diseñador web bogotá, desarrollo web colombia, freelance diseño web, sitios web profesionales, rediseño web colombia, diseño web empresas" />
+  <meta name="author" content="Alexander Caro" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://alexandercaro.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alexandercaro.com/" />
+  <meta property="og:title" content="Alexander Caro | Diseñador Web Freelance Bogotá" />
+  <meta property="og:description" content="Sitios web profesionales para empresas. Rápidos, optimizados y con resultados reales. PageSpeed 97. Bogotá, Colombia." />
+  <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:site_name" content="Alexander Caro" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alexander Caro | Diseñador Web Freelance Bogotá" />
+  <meta name="twitter:description" content="Sitios web profesionales para empresas. Rápidos, optimizados y con resultados reales." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
+
+  <!-- Schema JSON-LD Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alexander Caro",
+    "jobTitle": "Diseñador Web Freelance",
+    "url": "https://alexandercaro.com",
+    "image": "https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_400/v1781035692/P%C3%A1gina_de_inicio_hucq78.png",
+    "description": "Diseñador web freelance en Bogotá especializado en sitios web profesionales, rediseño web y optimización SEO para empresas en Colombia y Latinoamérica.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Cundinamarca",
+      "addressCountry": "CO"
+    },
+    "knowsAbout": [
+      "Diseño web profesional",
+      "Desarrollo frontend",
+      "WordPress",
+      "SEO técnico",
+      "Optimización PageSpeed",
+      "Branding e identidad visual",
+      "Meta Ads",
+      "Google Ads",
+      "Fotografía de producto",
+      "HTML CSS JavaScript"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Diseño y desarrollo web",
+        "description": "Sitios web profesionales desde cero o rediseño completo. Responsive, rápidos y optimizados para SEO."
+      },
+      {
+        "@type": "Offer",
+        "name": "Identidad visual y branding",
+        "description": "Logo, manual de marca y aplicaciones visuales para empresas y emprendimientos."
+      },
+      {
+        "@type": "Offer",
+        "name": "Pauta digital",
+        "description": "Campañas en Meta Ads y Google Ads configuradas para convertir."
+      }
+    ],
+    "sameAs": [
+      "https://www.behance.net/alexandercaro",
+      "https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/",
+      "https://www.instagram.com/alexander_caro7/"
+    ]
+  }
+  </script>
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Meta tags Open Graph -->
-  <meta property="og:title" content="Alexander Caro — Designer & Developer" />
-  <meta property="og:description" content="Diseño marcas que conectan y construyo webs que convierten. Bogotá, Colombia." />
-  <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
-  <meta property="og:url" content="https://alexandercaro.com" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Alexander Caro — Designer & Developer" />
-  <meta name="twitter:description" content="Diseño marcas que conectan y construyo webs que convierten." />
-  <meta name="twitter:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress"></div>
-
-
-  <!-- ═══ HERO ═══ -->
+<!-- ═══ HERO ═══ -->
   <section class="hero" id="inicio">
     <!-- Canvas para partículas -->
     <canvas id="heroCanvas" class="hero__canvas"></canvas>
@@ -204,29 +267,58 @@
           <p>Hoy entrego lo que la mayoría de agencias reparte entre tres personas: diseño, código y estrategia visual. Sin intermediarios, sin teléfono roto.</p>
         </div>
         <div class="about__skills scroll-reveal" style="--reveal-delay: 0.15s">
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">Diseño UI/UX</span><span class="skill-item__pct">90%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">HTML / CSS</span><span class="skill-item__pct">95%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="95"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">WordPress / PHP</span><span class="skill-item__pct">80%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="80"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">SEO técnico</span><span class="skill-item__pct">85%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">Fotografía</span><span class="skill-item__pct">88%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="88"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-item__header"><span class="skill-item__name">Photoshop</span><span class="skill-item__pct">82%</span></div>
-            <div class="skill-bar"><div class="skill-bar__fill" data-width="82"></div></div>
+          <div class="tech-grid">
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>HTML / CSS</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <span>WordPress</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <span>SEO técnico</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Meta Ads</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <span>Google Ads</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Fotografía</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span>Photoshop</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              <span>Illustrator</span>
+            </div>
+
+            <div class="tech-chip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              <span>UI / UX</span>
+            </div>
+
           </div>
         </div>
       </div>
