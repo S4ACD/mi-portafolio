@@ -25,7 +25,6 @@
             '<li><a href="/servicios/"' + (isServicios ? ' class="nav__link--active"' : '') + '>Servicios</a></li>' +
             '<li><a href="/sobre-mi/"' + (isSobreMi ? ' class="nav__link--active"' : '') + '>Sobre m\u00ed</a></li>' +
           '</ul>' +
-          '</div>' +
           '<a href="/#contacto" class="btn btn--cyan nav__cta">Hablemos</a>' +
           '<button id="navBurger" class="nav__burger" aria-label="Menu">' +
             '<span></span><span></span><span></span>' +
