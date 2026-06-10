@@ -643,9 +643,27 @@ a.card--project {
   width: 6px; height: 6px;
   border-radius: 50%;
   background: var(--border);
-  border: none; cursor: pointer;
+  border: none; cursor: pointer !important;
   transition: var(--transition);
   padding: 0;
+  /* Área táctil mínima 44px recomendada por WCAG */
+  position: relative;
+  min-width: 44px; min-height: 44px;
+  display: flex; align-items: center; justify-content: center;
+}
+.testimonials__dot::after {
+  content: '';
+  position: absolute;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: var(--transition);
+}
+.testimonials__dot--active::after {
+  width: 20px; height: 6px;
+  border-radius: 3px;
+  background: var(--cyan);
+  box-shadow: 0 0 8px rgba(0,229,229,0.5);
 }
 .testimonials__dot--active {
   background: var(--cyan);
