@@ -80,10 +80,12 @@
   }
   </script>
 
-  <!-- Fuentes -->
+  <!-- Fuentes — no bloqueantes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Fuentes con media print trick para no bloquear render -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -99,8 +101,8 @@
         Disponible para proyectos
       </span>
 
-      <h1 class="hero__title reveal-up">
-        <span id="typeTarget"></span><br />
+      <h1 class="hero__title reveal-up" style="min-height:2.2em">
+        <span id="typeTarget">&nbsp;</span><br />
         <span class="hero__sub"><span id="typeTarget2"></span><span class="type-cursor">|</span></span>
       </h1>
 
