@@ -4,18 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pulse Digital — Web Design | Alexander Caro</title>
-  <meta name="description" content="Diseño y desarrollo web para Pulse Digital, agencia de marketing. Landing page en inglés, responsive, con animaciones y alto rendimiento." />
+  <meta name="description" content="Diseño y desarrollo web para Pulse Digital, agencia de marketing. Landing page responsive con animaciones y alto rendimiento." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://alexandercaro.com/trabajo/pulse-digital/" />
-
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alexandercaro.com/trabajo/pulse-digital/" />
   <meta property="og:title" content="Pulse Digital — Web Design | Alexander Caro" />
-  <meta property="og:description" content="Landing page en inglés para agencia de marketing. Diseño premium, animaciones CSS, 100% responsive y sin dependencias externas." />
+  <meta property="og:description" content="Landing page en inglés para agencia de marketing. Diseño premium, 100% responsive y sin dependencias externas." />
   <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Alexander Caro" />
-
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pulse Digital — Web Design | Alexander Caro" />
   <meta name="twitter:description" content="Landing page en inglés para agencia de marketing. Diseño premium y alto rendimiento." />
@@ -32,7 +30,6 @@
     }
     .back-link:hover { color: var(--cyan); gap: 12px; }
 
-    /* Hero */
     .proj-hero {
       min-height: 75svh; display: flex; align-items: center;
       padding: 120px 0 60px; position: relative; overflow: hidden;
@@ -53,7 +50,6 @@
     .proj-hero__accent { color: transparent; -webkit-text-stroke: 1.5px rgba(0,229,229,0.5); }
     .proj-hero__sub { font-size: clamp(1rem,2vw,1.1rem); color: var(--text-muted); line-height: 1.7; max-width: 540px; margin-bottom: 32px; }
 
-    /* Info cards */
     .proj-overview { padding: 60px 0; }
     .proj-overview__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
     @media(max-width:767px){ .proj-overview__grid { grid-template-columns:1fr; gap:40px; } }
@@ -64,82 +60,51 @@
     .proj-info-card__label { font-size: 10px; font-weight: 600; letter-spacing: .15em; color: var(--cyan); text-transform: uppercase; }
     .proj-info-card__value { font-size: 14px; color: var(--text); font-weight: 500; }
 
-    /* Mockup monitor */
     .mockup-section { padding: 40px 0 80px; }
     .mockup-title { font-family: var(--font-display); font-size: clamp(1.4rem,3vw,2rem); font-weight: 700; color: #fff; margin-bottom: 8px; }
     .mockup-sub { font-size: .9rem; color: var(--text-muted); margin-bottom: 36px; }
 
+    /* Monitor */
     .monitor-wrap { position: relative; max-width: 900px; margin: 0 auto 60px; }
-    .monitor-frame {
-      background: #1a1a1a;
-      border: 2px solid #333;
-      border-radius: 12px 12px 0 0;
-      padding: 10px 10px 0;
-      box-shadow: 0 0 60px rgba(0,0,0,0.6), 0 0 30px rgba(0,229,229,0.05);
-    }
-    .monitor-bar {
-      display: flex; align-items: center; gap: 8px;
-      padding: 8px 12px; margin-bottom: 8px;
-    }
+    .monitor-frame { background: #1a1a1a; border: 2px solid #333; border-radius: 12px 12px 0 0; padding: 10px 10px 0; box-shadow: 0 0 60px rgba(0,0,0,0.6), 0 0 30px rgba(0,229,229,0.05); }
+    .monitor-bar { display: flex; align-items: center; gap: 8px; padding: 8px 12px; margin-bottom: 8px; }
     .monitor-dot { width: 10px; height: 10px; border-radius: 50%; }
     .monitor-dot:nth-child(1){ background: #ff5f57; }
     .monitor-dot:nth-child(2){ background: #ffbd2e; }
     .monitor-dot:nth-child(3){ background: #28c840; }
-    .monitor-url {
-      flex: 1; background: #2a2a2a; border-radius: 4px;
-      padding: 4px 12px; font-size: 11px; color: #666;
-      font-family: monospace;
-    }
-    .monitor-screen {
-      width: 100%; aspect-ratio: 16/10;
-      border-radius: 4px; overflow: hidden;
-      border: 1px solid #222;
-    }
-    .monitor-screen iframe {
-      width: 100%; height: 100%; border: none;
-      display: block;
-    }
-    .monitor-stand {
-      width: 160px; height: 20px; background: #1a1a1a;
-      border: 2px solid #333; border-top: none;
-      margin: 0 auto; border-radius: 0 0 8px 8px;
-    }
-    .monitor-base {
-      width: 220px; height: 10px; background: #222;
-      border-radius: 4px; margin: 0 auto;
-    }
+    .monitor-url { flex: 1; background: #2a2a2a; border-radius: 4px; padding: 4px 12px; font-size: 11px; color: #666; font-family: monospace; }
+    .monitor-screen { width: 100%; aspect-ratio: 16/10; border-radius: 4px; overflow: hidden; border: 1px solid #222; }
+    .monitor-screen iframe { width: 100%; height: 100%; border: none; display: block; }
+    .monitor-stand { width: 160px; height: 20px; background: #1a1a1a; border: 2px solid #333; border-top: none; margin: 0 auto; border-radius: 0 0 8px 8px; }
+    .monitor-base { width: 220px; height: 10px; background: #222; border-radius: 4px; margin: 0 auto; }
 
-    /* Mobile mockup */
-    .mobile-wrap { position: relative; max-width: 280px; margin: 0 auto; }
-    .mobile-frame {
-      background: #1a1a1a; border: 3px solid #333;
-      border-radius: 36px; padding: 14px 10px;
-      box-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,229,229,0.05);
-    }
-    .mobile-notch { width: 80px; height: 20px; background: #111; border-radius: 10px; margin: 0 auto 10px; }
-    .mobile-screen {
-      width: 100%; aspect-ratio: 9/18; border-radius: 20px;
-      overflow: hidden; border: 1px solid #222;
-      cursor: grab; position: relative;
-    }
-    .mobile-screen:active { cursor: grabbing; }
-    .mobile-screen iframe {
-      width: 375px; height: 100%; border: none;
-      transform-origin: top left; display: block;
-      pointer-events: none; /* evita que el iframe capture eventos */
-    }
-    /* Overlay para capturar scroll/drag */
-    .mobile-screen-overlay {
-      position: absolute; inset: 0; z-index: 2;
-      cursor: grab;
-    }
-    .mobile-screen-overlay:active { cursor: grabbing; }
-    .mobile-btn { width: 36px; height: 4px; background: #333; border-radius: 2px; margin: 10px auto 0; }
-
+    /* Mobile — fix completo */
     .devices-grid { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: start; }
-    @media(max-width:767px){ .devices-grid { grid-template-columns:1fr; } .mobile-wrap { max-width: 220px; } }
+    @media(max-width:767px){ .devices-grid { grid-template-columns:1fr; } .mobile-wrap { max-width: 200px !important; } }
 
-    /* Live btn */
+    .mobile-wrap { position: relative; max-width: 260px; margin: 0 auto; }
+    .mobile-frame { background: #1a1a1a; border: 3px solid #2a2a2a; border-radius: 40px; padding: 16px 10px; box-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,229,229,0.05); }
+    .mobile-notch { width: 72px; height: 18px; background: #111; border-radius: 9px; margin: 0 auto 12px; }
+    .mobile-screen {
+      width: 100%;
+      aspect-ratio: 9/19.5;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid #222;
+      position: relative;
+      background: #fff;
+    }
+    .mobile-screen iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 390px;
+      height: 844px;
+      border: none;
+      transform-origin: top left;
+      pointer-events: none;
+    }
+    .mobile-btn { width: 32px; height: 4px; background: #2a2a2a; border-radius: 2px; margin: 12px auto 0; }
+
     .live-btn {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--cyan); color: #000;
@@ -149,7 +114,6 @@
     }
     .live-btn:hover { box-shadow: var(--cyan-glow); transform: translateY(-2px); }
   </style>
-  <!-- Favicon -->
   <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
 </head>
@@ -191,8 +155,8 @@
         <div class="scroll-reveal">
           <p class="eyebrow">EL PROYECTO</p>
           <h2 class="proj-section__title">Una landing que<br/>convierte desde el primer scroll<span class="hero__dot">.</span></h2>
-          <p class="proj-text">Pulse Digital necesitaba una presencia web que proyectara autoridad y confianza ante clientes internacionales. El resultado es una landing page en inglés, rápida, visualmente premium y optimizada para conversión.</p>
-          <p class="proj-text">Construida con HTML, CSS y JavaScript puro — sin frameworks, carga instantánea y 100% responsive.</p>
+          <p class="proj-text">Pulse Digital necesitaba una presencia web que proyectara autoridad y confianza ante clientes internacionales. El resultado es una landing page en inglés, rápida, visualmente premium y con un diseño completamente diferente al estándar.</p>
+          <p class="proj-text">Construida con HTML, CSS y JavaScript puro — modo claro, tipografía Syne, paleta naranja y layout bento asimétrico. Sin frameworks, carga instantánea y 100% responsive.</p>
         </div>
         <div class="scroll-reveal" style="--reveal-delay:.1s">
           <div class="proj-info-card"><span class="proj-info-card__label">Cliente</span><span class="proj-info-card__value">Pulse Digital (concepto)</span></div>
@@ -210,7 +174,7 @@
     <div class="container">
       <p class="eyebrow scroll-reveal">VISTA EN VIVO</p>
       <h2 class="mockup-title scroll-reveal">Navégalo tú mismo<span class="hero__dot">.</span></h2>
-      <p class="mockup-sub scroll-reveal">El sitio está embebido abajo — puedes hacer scroll, hacer clic y ver cómo responde en desktop y móvil.</p>
+      <p class="mockup-sub scroll-reveal">El sitio está embebido abajo — puedes hacer scroll y ver cómo responde en desktop y móvil.</p>
 
       <div class="devices-grid scroll-reveal">
         <!-- Monitor -->
@@ -233,15 +197,19 @@
           </div>
         </div>
 
-        <!-- Mobile -->
+        <!-- Mobile corregido -->
         <div>
           <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;letter-spacing:.05em">MOBILE</p>
-          <div class="mobile-wrap">
+          <div class="mobile-wrap" id="mobileWrap">
             <div class="mobile-frame">
               <div class="mobile-notch"></div>
               <div class="mobile-screen" id="mobileScreen">
-                <div class="mobile-screen-overlay" id="mobileOverlay"></div>
-                <iframe src="/trabajo/pulse-digital/site/" title="Pulse Digital — Mobile preview" loading="lazy" id="mobileIframe" style="transform:scale(0.747);transform-origin:top left;width:375px;height:134%;position:absolute;top:0;left:0;border:none"></iframe>
+                <iframe
+                  src="/trabajo/pulse-digital/site/"
+                  title="Pulse Digital — Mobile preview"
+                  loading="lazy"
+                  id="mobileIframe"
+                ></iframe>
               </div>
               <div class="mobile-btn"></div>
             </div>
@@ -277,74 +245,56 @@
     </div>
   </footer>
 
-  <script>
-    // Drag scroll en mockup móvil
-    (function() {
-      var overlay, iframe, startY, startScroll, isDragging = false;
-
-      window.addEventListener('DOMContentLoaded', function() {
-        overlay = document.getElementById('mobileOverlay');
-        iframe  = document.getElementById('mobileIframe');
-        if (!overlay || !iframe) return;
-
-        overlay.addEventListener('mousedown', function(e) {
-          isDragging = true;
-          startY = e.clientY;
-          // Habilitar pointer events en iframe para leer su scroll
-          iframe.style.pointerEvents = 'auto';
-          try { startScroll = iframe.contentWindow.scrollY || 0; } catch(e){ startScroll = 0; }
-          iframe.style.pointerEvents = 'none';
-          overlay.style.cursor = 'grabbing';
-          e.preventDefault();
-        });
-
-        document.addEventListener('mousemove', function(e) {
-          if (!isDragging) return;
-          var dy = (startY - e.clientY) / 0.747;
-          try {
-            iframe.contentWindow.scrollTo(0, startScroll + dy);
-          } catch(e){}
-        });
-
-        document.addEventListener('mouseup', function() {
-          if (!isDragging) return;
-          isDragging = false;
-          overlay.style.cursor = 'grab';
-          try { startScroll = iframe.contentWindow.scrollY || 0; } catch(e){}
-        });
-
-        // Touch
-        overlay.addEventListener('touchstart', function(e) {
-          startY = e.touches[0].clientY;
-          try { startScroll = iframe.contentWindow.scrollY || 0; } catch(e){ startScroll = 0; }
-        }, { passive: true });
-
-        overlay.addEventListener('touchmove', function(e) {
-          var dy = (startY - e.touches[0].clientY) / 0.747;
-          try { iframe.contentWindow.scrollTo(0, startScroll + dy); } catch(e){}
-        }, { passive: true });
-
-        // Click en overlay — pasar al iframe si no hubo drag
-        overlay.addEventListener('click', function(e) {
-          if (Math.abs(e.clientY - startY) < 5) {
-            iframe.style.pointerEvents = 'auto';
-            setTimeout(function() { iframe.style.pointerEvents = 'none'; }, 500);
-          }
-        });
-      });
-    })();
-  </script>
   <script src="/nav.js" defer></script>
-  <script defer>
-    document.getElementById('whatsappBtn').addEventListener('click', function(){
-      var m = encodeURIComponent('¡Hola Alexander! Vi tu proyecto de Pulse Digital y me interesa algo similar. ¿Podemos hablar?');
-      window.open('https://wa.me/573024457653?text='+m,'_blank','noopener,noreferrer');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // WhatsApp
+      document.getElementById('whatsappBtn').addEventListener('click', function(){
+        var m = encodeURIComponent('¡Hola Alexander! Vi tu proyecto de Pulse Digital y me interesa algo similar. ¿Podemos hablar?');
+        window.open('https://wa.me/573024457653?text='+m,'_blank','noopener,noreferrer');
+      });
+
+      // Scroll reveal
+      var obs = new IntersectionObserver(function(e){
+        e.forEach(function(x){ if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} });
+      },{threshold:0.1});
+      document.querySelectorAll('.scroll-reveal').forEach(function(el){obs.observe(el);});
+
+      // Scroll progress bar
+      var bar = document.getElementById('scrollProgress');
+      window.addEventListener('scroll',function(){
+        if(bar) bar.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
+      },{passive:true});
+
+      // Partículas canvas
+      (function(){
+        var c=document.getElementById('heroCanvas');
+        if(!c)return;
+        var ctx=c.getContext('2d'),W,H,P=[];
+        function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
+        function mk(){var a=Math.random()*Math.PI*2,s=.3*(0.4+Math.random()*0.6);return{x:Math.random()*W,y:Math.random()*H,vx:Math.cos(a)*s,vy:Math.sin(a)*s,r:.4+Math.random()*1.6,alpha:.3+Math.random()*.5};}
+        function draw(){ctx.clearRect(0,0,W,H);P.forEach(function(p){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(0,229,229,'+p.alpha+')';ctx.fill();});requestAnimationFrame(draw);}
+        resize();P=Array.from({length:60},mk);draw();
+        window.addEventListener('resize',function(){setTimeout(resize,150);});
+      })();
+
+      // Mobile iframe — scale dinámico
+      (function() {
+        var screen = document.getElementById('mobileScreen');
+        var iframe = document.getElementById('mobileIframe');
+        if (!screen || !iframe) return;
+        function scaleMobile() {
+          var w = screen.offsetWidth;
+          var scale = w / 390;
+          iframe.style.transform = 'scale(' + scale + ')';
+          iframe.style.height = (screen.offsetHeight / scale) + 'px';
+        }
+        scaleMobile();
+        window.addEventListener('resize', scaleMobile, { passive: true });
+      })();
+
     });
-    var obs = new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} }); },{threshold:0.1});
-    document.querySelectorAll('.scroll-reveal').forEach(function(el){obs.observe(el);});
-    var bar = document.getElementById('scrollProgress');
-    window.addEventListener('scroll',function(){if(bar)bar.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';},{passive:true});
-    (function(){var c=document.getElementById('heroCanvas');if(!c)return;var ctx=c.getContext('2d'),W,H,P=[];function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}function mk(){var a=Math.random()*Math.PI*2,s=.3*(0.4+Math.random()*0.6);return{x:Math.random()*W,y:Math.random()*H,vx:Math.cos(a)*s,vy:Math.sin(a)*s,r:.4+Math.random()*1.6,alpha:.3+Math.random()*.5};}function draw(){ctx.clearRect(0,0,W,H);P.forEach(function(p){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(0,229,229,'+p.alpha+')';ctx.fill();});requestAnimationFrame(draw);}resize();P=Array.from({length:60},mk);draw();window.addEventListener('resize',function(){setTimeout(resize,150);});})();
   </script>
 </body>
 </html>
