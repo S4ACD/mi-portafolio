@@ -1023,3 +1023,22 @@ input, textarea {
 }
 .contact-aside__note a:hover { color: var(--cyan); }
 
+/* ── TESTIMONIOS MEJORADOS ── */
+.testimonial-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.testimonial-card__cargo {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  margin-top: 1px;
+}
+.testimonial-card__empresa {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.testimonial-card__empresa:hover { opacity: 0.75; }
