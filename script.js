@@ -332,7 +332,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
     // Solo links internos que no sean anclas
-    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto')) return;
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.getAttribute('target') === '_blank') return;
 
     link.addEventListener('click', function(e) {
       e.preventDefault();
