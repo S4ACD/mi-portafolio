@@ -583,19 +583,21 @@ a.card--project {
   gap: 14px;
 }
 .testimonial-card__avatar {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: var(--cyan-dim);
-  border: 1px solid rgba(0,229,229,0.25);
+  background: linear-gradient(135deg, rgba(0,229,229,0.15) 0%, rgba(0,229,229,0.05) 100%);
+  border: 1.5px solid rgba(0,229,229,0.35);
   color: var(--cyan);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 0 18px rgba(0,229,229,0.12);
+  letter-spacing: -0.01em;
 }
 .testimonial-card__name {
   display: block;
