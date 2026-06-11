@@ -4,52 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pulse Digital — Web Design | Alexander Caro</title>
-  <meta name="description" content="Diseño y desarrollo web para Pulse Digital, agencia de marketing. Landing page responsive con animaciones y alto rendimiento." />
+  <meta name="description" content="Diseño y desarrollo web para Pulse Digital, agencia de marketing. Landing page en inglés, modo claro, tipografía Syne y layout bento." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://alexandercaro.com/trabajo/pulse-digital/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alexandercaro.com/trabajo/pulse-digital/" />
   <meta property="og:title" content="Pulse Digital — Web Design | Alexander Caro" />
-  <meta property="og:description" content="Landing page en inglés para agencia de marketing. Diseño premium, 100% responsive y sin dependencias externas." />
+  <meta property="og:description" content="Landing page en inglés para agencia de marketing. Modo claro, tipografía Syne, paleta naranja y layout bento asimétrico." />
   <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Alexander Caro" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Pulse Digital — Web Design | Alexander Caro" />
-  <meta name="twitter:description" content="Landing page en inglés para agencia de marketing. Diseño premium y alto rendimiento." />
+  <meta name="twitter:description" content="Landing page en inglés para agencia de marketing. Modo claro, tipografía Syne y layout bento." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="/style.css" />
   <style>
-    .back-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 13px; color: var(--text-muted); margin-bottom: 28px;
-      transition: color var(--transition), gap var(--transition);
-    }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 28px; transition: color var(--transition), gap var(--transition); }
     .back-link:hover { color: var(--cyan); gap: 12px; }
-
-    .proj-hero {
-      min-height: 75svh; display: flex; align-items: center;
-      padding: 120px 0 60px; position: relative; overflow: hidden;
-    }
-    .proj-hero::after {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,229,229,0.04) 0%, transparent 70%),
-        linear-gradient(to bottom, transparent 70%, var(--bg) 100%);
-      pointer-events: none; z-index: 1;
-    }
+    .proj-hero { min-height: 75svh; display: flex; align-items: center; padding: 120px 0 60px; position: relative; overflow: hidden; }
+    .proj-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,229,229,0.04) 0%, transparent 70%), linear-gradient(to bottom, transparent 70%, var(--bg) 100%); pointer-events: none; z-index: 1; }
     .proj-hero__inner { position: relative; z-index: 2; }
-    .proj-hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(3rem, 8vw, 6rem);
-      font-weight: 700; line-height: 1.0;
-      letter-spacing: -0.04em; color: #fff; margin-bottom: 20px;
-    }
+    .proj-hero__title { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; line-height: 1.0; letter-spacing: -0.04em; color: #fff; margin-bottom: 20px; }
     .proj-hero__accent { color: transparent; -webkit-text-stroke: 1.5px rgba(0,229,229,0.5); }
     .proj-hero__sub { font-size: clamp(1rem,2vw,1.1rem); color: var(--text-muted); line-height: 1.7; max-width: 540px; margin-bottom: 32px; }
-
     .proj-overview { padding: 60px 0; }
     .proj-overview__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
     @media(max-width:767px){ .proj-overview__grid { grid-template-columns:1fr; gap:40px; } }
@@ -59,60 +40,47 @@
     .proj-info-card:hover { border-color: var(--border-hover); }
     .proj-info-card__label { font-size: 10px; font-weight: 600; letter-spacing: .15em; color: var(--cyan); text-transform: uppercase; }
     .proj-info-card__value { font-size: 14px; color: var(--text); font-weight: 500; }
-
-    .mockup-section { padding: 40px 0 80px; }
-    .mockup-title { font-family: var(--font-display); font-size: clamp(1.4rem,3vw,2rem); font-weight: 700; color: #fff; margin-bottom: 8px; }
-    .mockup-sub { font-size: .9rem; color: var(--text-muted); margin-bottom: 36px; }
-
-    /* Monitor */
-    .monitor-wrap { position: relative; max-width: 900px; margin: 0 auto 60px; }
-    .monitor-frame { background: #1a1a1a; border: 2px solid #333; border-radius: 12px 12px 0 0; padding: 10px 10px 0; box-shadow: 0 0 60px rgba(0,0,0,0.6), 0 0 30px rgba(0,229,229,0.05); }
-    .monitor-bar { display: flex; align-items: center; gap: 8px; padding: 8px 12px; margin-bottom: 8px; }
-    .monitor-dot { width: 10px; height: 10px; border-radius: 50%; }
-    .monitor-dot:nth-child(1){ background: #ff5f57; }
-    .monitor-dot:nth-child(2){ background: #ffbd2e; }
-    .monitor-dot:nth-child(3){ background: #28c840; }
-    .monitor-url { flex: 1; background: #2a2a2a; border-radius: 4px; padding: 4px 12px; font-size: 11px; color: #666; font-family: monospace; }
-    .monitor-screen { width: 100%; aspect-ratio: 16/10; border-radius: 4px; overflow: hidden; border: 1px solid #222; }
-    .monitor-screen iframe { width: 100%; height: 100%; border: none; display: block; }
-    .monitor-stand { width: 160px; height: 20px; background: #1a1a1a; border: 2px solid #333; border-top: none; margin: 0 auto; border-radius: 0 0 8px 8px; }
-    .monitor-base { width: 220px; height: 10px; background: #222; border-radius: 4px; margin: 0 auto; }
-
-    /* Mobile — fix completo */
-    .devices-grid { display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: start; }
-    @media(max-width:767px){ .devices-grid { grid-template-columns:1fr; } .mobile-wrap { max-width: 200px !important; } }
-
-    .mobile-wrap { position: relative; max-width: 260px; margin: 0 auto; }
-    .mobile-frame { background: #1a1a1a; border: 3px solid #2a2a2a; border-radius: 40px; padding: 16px 10px; box-shadow: 0 0 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,229,229,0.05); }
-    .mobile-notch { width: 72px; height: 18px; background: #111; border-radius: 9px; margin: 0 auto 12px; }
-    .mobile-screen {
-      width: 100%;
-      aspect-ratio: 9/19.5;
-      border-radius: 22px;
-      overflow: hidden;
-      border: 1px solid #222;
-      position: relative;
-      background: #fff;
-    }
-    .mobile-screen iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 390px;
-      height: 844px;
-      border: none;
-      transform-origin: top left;
-      pointer-events: none;
-    }
-    .mobile-btn { width: 32px; height: 4px; background: #2a2a2a; border-radius: 2px; margin: 12px auto 0; }
-
-    .live-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--cyan); color: #000;
-      font-size: 13px; font-weight: 600;
-      padding: 10px 20px; border-radius: var(--radius-sm);
-      margin-bottom: 40px; transition: box-shadow var(--transition), transform var(--transition);
-    }
+    .live-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--cyan); color: #000; font-size: 13px; font-weight: 600; padding: 10px 20px; border-radius: var(--radius-sm); margin-bottom: 40px; transition: box-shadow var(--transition), transform var(--transition); }
     .live-btn:hover { box-shadow: var(--cyan-glow); transform: translateY(-2px); }
+
+    /* ── SECCIÓN DECISIONES DE DISEÑO ── */
+    .design-section { padding: 80px 0; }
+    .design-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 48px; }
+    @media(max-width:767px){ .design-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* Tokens visuales */
+    .design-tokens { display: flex; flex-direction: column; gap: 12px; }
+    .token-row-label { font-size: 10px; font-weight: 700; letter-spacing: .15em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; }
+    .token-colors { display: flex; gap: 10px; align-items: center; }
+    .token-swatch { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; }
+    .token-swatch-info { display: flex; flex-direction: column; gap: 2px; }
+    .token-swatch-name { font-size: 12px; font-weight: 600; color: var(--text); }
+    .token-swatch-val { font-size: 11px; color: var(--text-muted); font-family: monospace; }
+    .token-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+
+    .font-preview { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; }
+    .font-name-big { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; line-height: 1; margin-bottom: 4px; }
+    .font-meta { font-size: 11px; color: var(--text-muted); }
+
+    .mode-badge { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #0f0f1a; font-size: 12px; font-weight: 700; padding: 8px 16px; border-radius: 100px; border: 1px solid #e5e7eb; }
+    .mode-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #f97316; }
+
+    /* Lo que resolvimos */
+    .challenges-list { display: flex; flex-direction: column; gap: 0; }
+    .challenge-item { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .challenge-item:last-child { border-bottom: none; }
+    .challenge-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: rgba(0,229,229,0.2); line-height: 1; flex-shrink: 0; width: 36px; padding-top: 2px; transition: color .25s; }
+    .challenge-item:hover .challenge-num { color: var(--cyan); }
+    .challenge-body {}
+    .challenge-title { font-family: var(--font-display); font-size: .95rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .challenge-desc { font-size: .83rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* Stack técnico */
+    .tech-showcase { display: flex; flex-direction: column; gap: 8px; margin-top: 32px; }
+    .tech-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tech-pill { background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 8px 16px; font-size: 12px; font-weight: 600; color: var(--text-muted); transition: border-color .2s, color .2s; }
+    .tech-pill:hover { border-color: var(--cyan); color: var(--cyan); }
+    .tech-pill--cyan { border-color: rgba(0,229,229,0.3); color: var(--cyan); background: rgba(0,229,229,0.06); }
   </style>
   <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
@@ -121,6 +89,7 @@
 
   <div class="scroll-progress" id="scrollProgress"></div>
 
+  <!-- HERO -->
   <section class="proj-hero">
     <canvas id="heroCanvas" class="hero__canvas"></canvas>
     <div class="container proj-hero__inner">
@@ -133,13 +102,14 @@
         <span class="tag">Landing page</span>
         <span class="tag">Responsive</span>
         <span class="tag">English</span>
+        <span class="tag">Light mode</span>
       </div>
       <h1 class="proj-hero__title reveal-up" style="--delay:.18s">
         Pulse<br/><span class="proj-hero__accent">Digital</span><span class="hero__dot">.</span>
       </h1>
       <p class="proj-hero__sub reveal-up" style="--delay:.26s">
-        Landing page completa para una agencia de marketing digital.<br class="br-desktop"/>
-        Diseñada en inglés para el mercado internacional.
+        Landing page completa para una agencia de marketing digital en inglés.<br class="br-desktop"/>
+        Diseño en modo claro — completamente diferente a este portafolio.
       </p>
       <a href="/trabajo/pulse-digital/site/" target="_blank" class="live-btn reveal-up" style="--delay:.34s">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
@@ -154,9 +124,9 @@
       <div class="proj-overview__grid">
         <div class="scroll-reveal">
           <p class="eyebrow">EL PROYECTO</p>
-          <h2 class="proj-section__title">Una landing que<br/>convierte desde el primer scroll<span class="hero__dot">.</span></h2>
-          <p class="proj-text">Pulse Digital necesitaba una presencia web que proyectara autoridad y confianza ante clientes internacionales. El resultado es una landing page en inglés, rápida, visualmente premium y con un diseño completamente diferente al estándar.</p>
-          <p class="proj-text">Construida con HTML, CSS y JavaScript puro — modo claro, tipografía Syne, paleta naranja y layout bento asimétrico. Sin frameworks, carga instantánea y 100% responsive.</p>
+          <h2 class="proj-section__title">Un diseño que no se<br/>parece a ningún otro<span class="hero__dot">.</span></h2>
+          <p class="proj-text">El reto no era solo construir una landing — era demostrar versatilidad. Pulse Digital tenía que verse completamente diferente a este portafolio: otro modo, otra tipografía, otra paleta, otro layout.</p>
+          <p class="proj-text">El resultado es una web en inglés con modo claro, tipografía Syne, naranja como acento y un hero split asimétrico con métricas apiladas. Sin frameworks, sin dependencias, carga instantánea.</p>
         </div>
         <div class="scroll-reveal" style="--reveal-delay:.1s">
           <div class="proj-info-card"><span class="proj-info-card__label">Cliente</span><span class="proj-info-card__value">Pulse Digital (concepto)</span></div>
@@ -169,52 +139,106 @@
     </div>
   </section>
 
-  <!-- MOCKUPS -->
-  <section class="mockup-section">
+  <!-- DECISIONES DE DISEÑO + LO QUE RESOLVIMOS -->
+  <section class="design-section">
     <div class="container">
-      <p class="eyebrow scroll-reveal">VISTA EN VIVO</p>
-      <h2 class="mockup-title scroll-reveal">Navégalo tú mismo<span class="hero__dot">.</span></h2>
-      <p class="mockup-sub scroll-reveal">El sitio está embebido abajo — puedes hacer scroll y ver cómo responde en desktop y móvil.</p>
+      <p class="eyebrow scroll-reveal">PROCESO Y DECISIONES</p>
+      <h2 class="proj-section__title scroll-reveal" style="margin-bottom:0">Qué se construyó<br/>y por qué<span class="hero__dot">.</span></h2>
 
-      <div class="devices-grid scroll-reveal">
-        <!-- Monitor -->
-        <div>
-          <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;letter-spacing:.05em">DESKTOP</p>
-          <div class="monitor-wrap">
-            <div class="monitor-frame">
-              <div class="monitor-bar">
-                <div class="monitor-dot"></div>
-                <div class="monitor-dot"></div>
-                <div class="monitor-dot"></div>
-                <div class="monitor-url">pulsedigital.co — Marketing That Moves</div>
-              </div>
-              <div class="monitor-screen">
-                <iframe src="/trabajo/pulse-digital/site/" title="Pulse Digital — Desktop preview" loading="lazy" scrolling="yes"></iframe>
+      <div class="design-grid">
+
+        <!-- Izquierda: tokens visuales -->
+        <div class="scroll-reveal">
+          <p class="token-row-label" style="margin-top:0">Paleta de color</p>
+          <div class="token-block" style="margin-bottom:12px">
+            <div class="token-colors">
+              <div class="token-swatch" style="background:#f97316"></div>
+              <div class="token-swatch-info">
+                <span class="token-swatch-name">Orange</span>
+                <span class="token-swatch-val">#f97316</span>
               </div>
             </div>
-            <div class="monitor-stand"></div>
-            <div class="monitor-base"></div>
+          </div>
+          <div class="token-block" style="margin-bottom:12px">
+            <div class="token-colors">
+              <div class="token-swatch" style="background:#7c3aed"></div>
+              <div class="token-swatch-info">
+                <span class="token-swatch-name">Violet</span>
+                <span class="token-swatch-val">#7c3aed</span>
+              </div>
+            </div>
+          </div>
+          <div class="token-block" style="margin-bottom:24px">
+            <div class="token-colors">
+              <div class="token-swatch" style="background:#ffffff;border:1px solid #e5e7eb"></div>
+              <div class="token-swatch-info">
+                <span class="token-swatch-name">Background</span>
+                <span class="token-swatch-val">#ffffff — light mode</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="token-row-label">Tipografía display</p>
+          <div class="font-preview" style="margin-bottom:24px">
+            <div class="font-name-big" style="font-family:'Space Grotesk',sans-serif">Syne 800</div>
+            <div class="font-meta">Geométrica — diferente a Space Grotesk del portafolio</div>
+          </div>
+
+          <p class="token-row-label">Modo visual</p>
+          <div class="mode-badge">
+            <span class="mode-badge-dot"></span>
+            Light Mode — fondo blanco, texto oscuro
+          </div>
+
+          <div class="tech-showcase" style="margin-top:24px">
+            <p class="token-row-label">Stack técnico</p>
+            <div class="tech-row">
+              <span class="tech-pill tech-pill--cyan">HTML5</span>
+              <span class="tech-pill tech-pill--cyan">CSS3 vanilla</span>
+              <span class="tech-pill tech-pill--cyan">JS vanilla</span>
+            </div>
+            <div class="tech-row">
+              <span class="tech-pill">Sin frameworks</span>
+              <span class="tech-pill">Sin dependencias</span>
+            </div>
           </div>
         </div>
 
-        <!-- Mobile corregido -->
-        <div>
-          <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px;letter-spacing:.05em">MOBILE</p>
-          <div class="mobile-wrap" id="mobileWrap">
-            <div class="mobile-frame">
-              <div class="mobile-notch"></div>
-              <div class="mobile-screen" id="mobileScreen">
-                <iframe
-                  src="/trabajo/pulse-digital/site/"
-                  title="Pulse Digital — Mobile preview"
-                  loading="lazy"
-                  id="mobileIframe"
-                ></iframe>
+        <!-- Derecha: lo que resolvimos -->
+        <div class="scroll-reveal" style="--reveal-delay:.12s">
+          <p class="token-row-label" style="margin-top:0">Lo que resolvimos</p>
+          <div class="challenges-list">
+            <div class="challenge-item">
+              <span class="challenge-num">01</span>
+              <div class="challenge-body">
+                <div class="challenge-title">Diferenciación visual total</div>
+                <div class="challenge-desc">El proyecto tenía que demostrar que sé salir del modo oscuro/cyan. Resultado: modo claro, naranja como acento, tipografía Syne — ningún elemento compartido con el portafolio.</div>
               </div>
-              <div class="mobile-btn"></div>
+            </div>
+            <div class="challenge-item">
+              <span class="challenge-num">02</span>
+              <div class="challenge-body">
+                <div class="challenge-title">Autoridad para mercado internacional</div>
+                <div class="challenge-desc">Diseñado en inglés para clientes en EEUU y Europa. Estructura, copy y jerarquía pensados para generar confianza inmediata en audiencias internacionales.</div>
+              </div>
+            </div>
+            <div class="challenge-item">
+              <span class="challenge-num">03</span>
+              <div class="challenge-body">
+                <div class="challenge-title">Conversión desde el primer scroll</div>
+                <div class="challenge-desc">Hero split asimétrico con métricas reales a la derecha — el visitante ve los números antes de leer el copy. Las cards de proceso y resultados refuerzan la credibilidad sin scroll infinito.</div>
+              </div>
+            </div>
+            <div class="challenge-item">
+              <span class="challenge-num">04</span>
+              <div class="challenge-body">
+                <div class="challenge-title">Performance sin sacrificar diseño</div>
+                <div class="challenge-desc">Sin imágenes pesadas, sin librerías externas, sin iframes. Carga instantánea en cualquier dispositivo. El bento grid y las animaciones CSS no añaden ningún peso al bundle.</div>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -248,26 +272,14 @@
   <script src="/nav.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-
-      // WhatsApp
       document.getElementById('whatsappBtn').addEventListener('click', function(){
         var m = encodeURIComponent('¡Hola Alexander! Vi tu proyecto de Pulse Digital y me interesa algo similar. ¿Podemos hablar?');
         window.open('https://wa.me/573024457653?text='+m,'_blank','noopener,noreferrer');
       });
-
-      // Scroll reveal
-      var obs = new IntersectionObserver(function(e){
-        e.forEach(function(x){ if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} });
-      },{threshold:0.1});
+      var obs = new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} }); },{threshold:0.1});
       document.querySelectorAll('.scroll-reveal').forEach(function(el){obs.observe(el);});
-
-      // Scroll progress bar
       var bar = document.getElementById('scrollProgress');
-      window.addEventListener('scroll',function(){
-        if(bar) bar.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
-      },{passive:true});
-
-      // Partículas canvas
+      window.addEventListener('scroll',function(){ if(bar) bar.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%'; },{passive:true});
       (function(){
         var c=document.getElementById('heroCanvas');
         if(!c)return;
@@ -278,22 +290,6 @@
         resize();P=Array.from({length:60},mk);draw();
         window.addEventListener('resize',function(){setTimeout(resize,150);});
       })();
-
-      // Mobile iframe — scale dinámico
-      (function() {
-        var screen = document.getElementById('mobileScreen');
-        var iframe = document.getElementById('mobileIframe');
-        if (!screen || !iframe) return;
-        function scaleMobile() {
-          var w = screen.offsetWidth;
-          var scale = w / 390;
-          iframe.style.transform = 'scale(' + scale + ')';
-          iframe.style.height = (screen.offsetHeight / scale) + 'px';
-        }
-        scaleMobile();
-        window.addEventListener('resize', scaleMobile, { passive: true });
-      })();
-
     });
   </script>
 </body>
