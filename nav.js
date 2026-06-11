@@ -84,10 +84,37 @@
     }, { passive: true });
   }
 
+function buildFooter() {
+    if (document.getElementById('site-footer')) return;
+    document.body.insertAdjacentHTML('beforeend',
+      '<footer class="footer" id="site-footer">' +
+        '<div class="container">' +
+          '<div class="footer__top">' +
+            '<div class="footer__meta">' +
+              '<span class="footer__meta-item">\uD83D\uDCCD Bogot\u00e1, Colombia \u2014 UTC\u22125</span>' +
+              '<span class="footer__meta-item">\uD83C\uDF10 Espa\u00f1ol \u00B7 English</span>' +
+              '<span class="footer__meta-item">\uD83D\uDCBB 100% remoto \u2014 Disponible globalmente</span>' +
+            '</div>' +
+            '<div class="footer__links">' +
+              '<a href="https://www.behance.net/alexandercaro" target="_blank" rel="noopener">Behance</a>' +
+              '<a href="https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/" target="_blank" rel="noopener">LinkedIn</a>' +
+              '<a href="https://www.instagram.com/alexander_caro7/" target="_blank" rel="noopener">Instagram</a>' +
+            '</div>' +
+          '</div>' +
+          '<div class="footer__bottom">' +
+            '<span class="footer__copy">\u00A9 2026 Alexander Caro</span>' +
+            '<a href="/privacidad/" class="footer__privacy">Pol\u00EDtica de privacidad</a>' +
+          '</div>' +
+        '</div>' +
+      '</footer>'
+    );
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', buildNav);
+    document.addEventListener('DOMContentLoaded', function() { buildNav(); buildFooter(); });
   } else {
     buildNav();
+    buildFooter();
   }
 
 })();
