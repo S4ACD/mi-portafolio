@@ -191,7 +191,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 // ─── 8. TYPEWRITER ──────────────────────────────────────────────
 (function typewriter() {
   const line1  = 'Alexander Caro';
-  const line2  = 'Tu marca. Tu web. En las mismas manos.';
+  const line2  = 'Diseño. Código. Estrategia.';
   const t1     = document.getElementById('typeTarget');
   const t2     = document.getElementById('typeTarget2');
   if (!t1 || !t2) return;
