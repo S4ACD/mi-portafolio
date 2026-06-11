@@ -832,3 +832,21 @@ input, textarea {
   background: var(--cyan-dim);
   box-shadow: 0 0 12px rgba(0,229,229,0.15);
 }
+
+/* ── EMAIL DRAWER NAV ── */
+.nav__drawer-email {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+}
+.nav__drawer-email:hover {
+  color: var(--cyan);
+}
