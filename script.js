@@ -211,7 +211,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     }
   }
 
-  // Línea 2 — con punto azul al llegar al "." y cursor al final
+// Línea 2 — puntos en cyan, palabras clave en blanco
   let j = 0;
   function typeLine2() {
     if (j < line2.length) {
@@ -226,7 +226,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
       j++;
       setTimeout(typeLine2, SPEED);
     }
-    // cursor ya está en el HTML, sigue parpadeando solo
   }
 
   // Arrancar tras el reveal-up (0.9s de animación)
