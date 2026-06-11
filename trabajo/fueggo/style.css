@@ -185,3 +185,54 @@
   letter-spacing: 0.05em;
   border-top: 1px solid var(--border);
 }
+
+/* ── MÉTRICAS DE IMPACTO ── */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0 1.5rem;
+}
+@media (max-width: 768px) {
+  .impact-grid { grid-template-columns: 1fr; }
+}
+.impact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--cyan);
+  border-radius: 4px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: box-shadow 0.3s ease;
+}
+.impact-card:hover {
+  box-shadow: var(--cyan-glow);
+}
+.impact-card__num {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+}
+.impact-card__label {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+}
+.impact-card__desc {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-top: 0.25rem;
+}
+.impact-note {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.2);
+  font-style: italic;
+}
