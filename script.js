@@ -283,7 +283,8 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   const stats = document.querySelectorAll('.stat__num');
   if (!stats.length) return;
 
-  const targets = { '2+': 2, '3K+': 3000, '95': 95, '∞': null };
+   const targets = { '2+': 2, '3K+': 3000, '97': 97, '∞': null };
+
 
   const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
