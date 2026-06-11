@@ -83,11 +83,19 @@
     <priority>0.6</priority>
   </url>
 
+<!-- PULSE DIGITAL -->
+  <url>
+    <loc>https://alexandercaro.com/trabajo/pulse-digital/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- PÁGINAS FUTURAS — descomentar cuando estén listas -->
   <!--
   <url>
     <loc>https://alexandercaro.com/trabajo/social-media/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
