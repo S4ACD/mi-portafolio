@@ -371,59 +371,92 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   console.log('%cEste portafolio fue construido con HTML, CSS y JS vanilla — sin frameworks, sin magia negra.', styles[1]);
 })();
 
-// ─── FORMULARIO CONTACTO → WHATSAPP ─────────────────────────────
+// ─── FORMULARIO CONTACTO → WEB3FORMS ────────────────────────────
 (function initContactForm() {
-  const form = document.getElementById('contactForm');
+  const form       = document.getElementById('contactForm');
   if (!form) return;
+
+  const submitBtn  = document.getElementById('contactSubmitBtn');
+  const btnText    = submitBtn?.querySelector('.btn-text');
+  const btnIcon    = submitBtn?.querySelector('.btn-icon');
+  const feedback   = document.getElementById('form-feedback');
+
+  function setFeedback(type, msg) {
+    if (!feedback) return;
+    feedback.className = 'form-feedback form-feedback--' + type;
+    feedback.innerHTML = msg;
+  }
+
+  function setLoading(on) {
+    if (!submitBtn) return;
+    submitBtn.disabled = on;
+    if (on) {
+      btnIcon && (btnIcon.style.display = 'none');
+      btnText && (btnText.textContent = 'Enviando…');
+    } else {
+      btnIcon && (btnIcon.style.display = '');
+      btnText && (btnText.textContent = 'Enviar mensaje');
+    }
+  }
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const nombre      = document.getElementById('cf-nombre')?.value.trim();
-    const empresa     = document.getElementById('cf-empresa')?.value.trim();
-    const servicio    = document.getElementById('cf-servicio')?.value;
-    const presupuesto = document.getElementById('cf-presupuesto')?.value;
-    const mensaje     = document.getElementById('cf-mensaje')?.value.trim();
-
-    // Validación básica
-    if (!nombre || !servicio || !presupuesto || !mensaje) {
-      const campos = form.querySelectorAll('[required]');
-      campos.forEach(function(c) {
-        if (!c.value.trim()) c.classList.add('form-input--error');
-        else c.classList.remove('form-input--error');
-      });
+    // Validación
+    let valid = true;
+    form.querySelectorAll('[required]').forEach(function(c) {
+      if (!c.value.trim()) {
+        c.classList.add('form-input--error');
+        valid = false;
+      } else {
+        c.classList.remove('form-input--error');
+      }
+    });
+    if (!valid) {
+      setFeedback('error', '⚠️ Por favor completa todos los campos obligatorios.');
       return;
     }
 
-    // Limpiar errores
-    form.querySelectorAll('.form-input--error').forEach(function(c) {
-      c.classList.remove('form-input--error');
+    // Limpiar feedback anterior
+    setFeedback('', '');
+    setLoading(true);
+
+    const data = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        setFeedback('success',
+          '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
+          ' Mensaje enviado. Te respondo en menos de 24 horas.'
+        );
+        form.reset();
+      } else {
+        throw new Error(json.message || 'Error desconocido');
+      }
+    })
+    .catch(function(err) {
+      console.error('Web3Forms error:', err);
+      setFeedback('error',
+        '⚠️ No se pudo enviar el mensaje. Intenta de nuevo o escríbeme directamente por WhatsApp.'
+      );
+    })
+    .finally(function() {
+      setLoading(false);
     });
-
-    const lines = [
-      '¡Hola Alexander! Te contacto desde tu portafolio web.',
-      '',
-      '👤 Nombre: ' + nombre,
-      empresa ? '🏢 Empresa: ' + empresa : null,
-      '🎯 Servicio: ' + servicio,
-      '💰 Presupuesto: ' + presupuesto,
-      '',
-      '💬 Mensaje:',
-      mensaje
-    ].filter(function(l) { return l !== null; }).join('\n');
-
-    const phone = '573024457653';
-    window.open(
-      'https://wa.me/' + phone + '?text=' + encodeURIComponent(lines),
-      '_blank',
-      'noopener,noreferrer'
-    );
   });
 
   // Limpiar error al escribir
   form.querySelectorAll('.form-input').forEach(function(input) {
     input.addEventListener('input', function() {
       this.classList.remove('form-input--error');
+      if (feedback && feedback.classList.contains('form-feedback--error')) {
+        setFeedback('', '');
+      }
     });
   });
 })();
