@@ -850,3 +850,51 @@ input, textarea {
 .nav__drawer-email:hover {
   color: var(--cyan);
 }
+
+/* ── LOGROS GRID ── */
+.logros-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.875rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 480px) {
+  .logros-grid { grid-template-columns: 1fr; }
+}
+.logro-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cyan);
+  padding: 1.1rem 1.25rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.logro-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--cyan-glow);
+}
+.logro-numero {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--cyan);
+  line-height: 1;
+}
+.logro-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.45);
+}
+.logro-desc {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+  margin-top: 0.2rem;
+}
