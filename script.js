@@ -19,6 +19,7 @@ const revealObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.scroll-reveal').forEach(el => revealObs.observe(el));
 
 
