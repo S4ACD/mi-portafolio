@@ -1042,3 +1042,55 @@ input, textarea {
   transition: opacity 0.2s ease;
 }
 .testimonial-card__empresa:hover { opacity: 0.75; }
+
+/* ── PROCESO DE TRABAJO ── */
+.proceso-section { background: var(--bg); }
+.proceso-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+@media (max-width: 640px) {
+  .proceso-grid { grid-template-columns: 1fr; }
+}
+.proceso-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.proceso-step:hover {
+  border-color: rgba(0,229,229,0.2);
+  box-shadow: 0 0 24px rgba(0,229,229,0.05);
+}
+.proceso-step__num {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--cyan);
+  opacity: 0.25;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 3rem;
+  transition: opacity 0.3s ease;
+}
+.proceso-step:hover .proceso-step__num { opacity: 0.6; }
+.proceso-step__body { flex: 1; }
+.proceso-step__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.proceso-step__text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
