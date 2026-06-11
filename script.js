@@ -17,8 +17,6 @@ const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
   });
-}, { threshold: 0.12 });
-
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.scroll-reveal').forEach(el => revealObs.observe(el));
 
@@ -75,12 +73,12 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
   // ── Configuración ──
   const CONFIG = {
-    count:        110,        // cantidad de partículas
-    maxRadius:    1.8,        // tamaño máximo
-    speed:        0.35,       // velocidad base
-    connectionDist: 130,      // distancia para trazar líneas
-    mouseRadius:  140,        // radio de repulsión del mouse
-    color:        '0,229,229' // RGB del cyan
+    count:        110,
+    maxRadius:    1.8,
+    speed:        0.35,
+    connectionDist: 130,
+    mouseRadius:  140,
+    color:        '0,229,229'
   };
 
   function resize() {
@@ -97,7 +95,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
       vx: Math.cos(angle) * speed,
       vy: Math.sin(angle) * speed,
       r:  0.4 + Math.random() * CONFIG.maxRadius,
-      // opacidad base aleatoria para variedad
       alpha: 0.3 + Math.random() * 0.5
     };
   }
@@ -110,16 +107,13 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   function draw() {
     ctx.clearRect(0, 0, W, H);
 
-    // ── Actualizar posiciones ──
     particles.forEach(p => {
       p.x += p.vx;
       p.y += p.vy;
 
-      // Rebotar en bordes
       if (p.x < 0 || p.x > W) p.vx *= -1;
       if (p.y < 0 || p.y > H) p.vy *= -1;
 
-      // Repulsión suave del mouse
       const dx = p.x - mouse.x;
       const dy = p.y - mouse.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
@@ -130,7 +124,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
       }
     });
 
-    // ── Dibujar conexiones ──
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const a = particles[i], b = particles[j];
@@ -148,7 +141,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
       }
     }
 
-    // ── Dibujar puntos ──
     particles.forEach(p => {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -159,7 +151,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     requestAnimationFrame(draw);
   }
 
-  // ── Seguimiento del mouse ──
   const heroSection = document.getElementById('inicio');
   heroSection?.addEventListener('mousemove', e => {
     const rect = canvas.getBoundingClientRect();
@@ -170,14 +161,12 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     mouse.x = -9999; mouse.y = -9999;
   });
 
-  // ── Touch ──
   heroSection?.addEventListener('touchmove', e => {
     const rect = canvas.getBoundingClientRect();
     mouse.x = e.touches[0].clientX - rect.left;
     mouse.y = e.touches[0].clientY - rect.top;
   }, { passive: true });
 
-  // ── Resize ──
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
@@ -197,10 +186,9 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   const t2     = document.getElementById('typeTarget2');
   if (!t1 || !t2) return;
 
-  const SPEED  = 68;   // ms por letra
-  const PAUSE  = 340;  // pausa entre línea 1 y línea 2
+  const SPEED  = 68;
+  const PAUSE  = 340;
 
-  // Línea 1 — texto plano, sin cursor visible
   let i = 0;
   function typeLine1() {
     if (i < line1.length) {
@@ -212,7 +200,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     }
   }
 
-// Línea 2 — puntos en cyan, palabras clave en blanco
   let j = 0;
   function typeLine2() {
     if (j < line2.length) {
@@ -229,7 +216,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     }
   }
 
-  // Arrancar tras el reveal-up (0.9s de animación)
   setTimeout(typeLine1, 980);
 })();
 
@@ -246,9 +232,8 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
   function goTo(index) {
     current = (index + total) % total;
-    // Calcular offset real basado en el ancho de la tarjeta
     const card = track.children[0];
-    const cardWidth = card.offsetWidth + 24; // 24 = gap
+    const cardWidth = card.offsetWidth + 24;
     track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
     dots.forEach((d, i) => d.classList.toggle('testimonials__dot--active', i === current));
   }
@@ -256,17 +241,14 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   nextBtn.addEventListener('click', () => goTo(current + 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 
-  // Recalcular al resize
   window.addEventListener('resize', () => goTo(current), { passive: true });
 
-  // Auto-play cada 5 segundos
   let timer = setInterval(() => goTo(current + 1), 5000);
   track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
   track.parentElement.addEventListener('mouseleave', () => {
     timer = setInterval(() => goTo(current + 1), 5000);
   });
 
-  // Touch swipe
   let startX = 0;
   track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', e => {
@@ -276,16 +258,10 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 })();
 
 
-
-
-
 // ─── CONTADOR DE NÚMEROS ─────────────────────────────────────────
 (function initCounters() {
   const stats = document.querySelectorAll('.stat__num');
   if (!stats.length) return;
-
-   const targets = { '2+': 2, '3K+': 3000, '97': 97, '∞': null };
-
 
   const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -295,7 +271,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
       if (text === '∞') { obs.unobserve(el); return; }
 
-      const isK    = text.includes('K');
+      const isK     = text.includes('K');
       const hasPlus = text.includes('+');
       const target  = isK ? 3000 : parseInt(text);
       const duration = 1500;
@@ -332,7 +308,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
-    // Solo links internos que no sean anclas
     if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.getAttribute('target') === '_blank') return;
 
     link.addEventListener('click', function(e) {
@@ -372,15 +347,16 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   console.log('%cEste portafolio fue construido con HTML, CSS y JS vanilla — sin frameworks, sin magia negra.', styles[1]);
 })();
 
+
 // ─── FORMULARIO CONTACTO → WEB3FORMS ────────────────────────────
 (function initContactForm() {
-  const form       = document.getElementById('contactForm');
+  const form = document.getElementById('contactForm');
   if (!form) return;
 
-  const submitBtn  = document.getElementById('contactSubmitBtn');
-  const btnText    = submitBtn?.querySelector('.btn-text');
-  const btnIcon    = submitBtn?.querySelector('.btn-icon');
-  const feedback   = document.getElementById('form-feedback');
+  const submitBtn = document.getElementById('contactSubmitBtn');
+  const btnText   = submitBtn?.querySelector('.btn-text');
+  const btnIcon   = submitBtn?.querySelector('.btn-icon');
+  const feedback  = document.getElementById('form-feedback');
 
   function setFeedback(type, msg) {
     if (!feedback) return;
@@ -403,7 +379,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Validación
     let valid = true;
     form.querySelectorAll('[required]').forEach(function(c) {
       if (!c.value.trim()) {
@@ -418,7 +393,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
       return;
     }
 
-    // Limpiar feedback anterior
     setFeedback('', '');
     setLoading(true);
 
@@ -451,7 +425,6 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     });
   });
 
-  // Limpiar error al escribir
   form.querySelectorAll('.form-input').forEach(function(input) {
     input.addEventListener('input', function() {
       this.classList.remove('form-input--error');
