@@ -370,3 +370,60 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   console.log('%c→ alexandercaro.com | @alexander_caro7', styles[2]);
   console.log('%cEste portafolio fue construido con HTML, CSS y JS vanilla — sin frameworks, sin magia negra.', styles[1]);
 })();
+
+// ─── FORMULARIO CONTACTO → WHATSAPP ─────────────────────────────
+(function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nombre      = document.getElementById('cf-nombre')?.value.trim();
+    const empresa     = document.getElementById('cf-empresa')?.value.trim();
+    const servicio    = document.getElementById('cf-servicio')?.value;
+    const presupuesto = document.getElementById('cf-presupuesto')?.value;
+    const mensaje     = document.getElementById('cf-mensaje')?.value.trim();
+
+    // Validación básica
+    if (!nombre || !servicio || !presupuesto || !mensaje) {
+      const campos = form.querySelectorAll('[required]');
+      campos.forEach(function(c) {
+        if (!c.value.trim()) c.classList.add('form-input--error');
+        else c.classList.remove('form-input--error');
+      });
+      return;
+    }
+
+    // Limpiar errores
+    form.querySelectorAll('.form-input--error').forEach(function(c) {
+      c.classList.remove('form-input--error');
+    });
+
+    const lines = [
+      '¡Hola Alexander! Te contacto desde tu portafolio web.',
+      '',
+      '👤 Nombre: ' + nombre,
+      empresa ? '🏢 Empresa: ' + empresa : null,
+      '🎯 Servicio: ' + servicio,
+      '💰 Presupuesto: ' + presupuesto,
+      '',
+      '💬 Mensaje:',
+      mensaje
+    ].filter(function(l) { return l !== null; }).join('\n');
+
+    const phone = '573024457653';
+    window.open(
+      'https://wa.me/' + phone + '?text=' + encodeURIComponent(lines),
+      '_blank',
+      'noopener,noreferrer'
+    );
+  });
+
+  // Limpiar error al escribir
+  form.querySelectorAll('.form-input').forEach(function(input) {
+    input.addEventListener('input', function() {
+      this.classList.remove('form-input--error');
+    });
+  });
+})();
