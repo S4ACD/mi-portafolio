@@ -112,29 +112,27 @@
     <section class="hero" id="inicio">
       <canvas id="heroCanvas" class="hero__canvas"></canvas>
 
+      <!-- Luces de ambiente detrás del avatar -->
+      <div class="hero__glow hero__glow--cyan" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--purple" aria-hidden="true"></div>
+
       <div class="hero__inner container">
 
         <!-- Badge -->
-        <span class="hero__badge">
+        <span class="hero__badge reveal-up">
           <span class="hero__badge-dot"></span>
           Disponible para proyectos
         </span>
 
-        <!-- Avatar + floating stats -->
-        <div class="hero__avatar-row" id="heroAvatarRow">
-
-          <!-- Stat left -->
-          <div class="hero__float-stat hero__float-stat--left reveal-up" style="--delay:0.2s">
-            <span class="hero__float-num cyan">15+</span>
-            <span class="hero__float-label">Proyectos</span>
-          </div>
-
-          <!-- Avatar frame -->
+        <!-- Marco del avatar (stats posicionados dentro, absolutos) -->
+        <div class="hero__stage" id="heroAvatarRow">
           <div class="hero__frame-wrap" id="heroTiltTarget">
-            <!-- Neon rings -->
-            <div class="hero__ring hero__ring--1"></div>
-            <div class="hero__ring hero__ring--2"></div>
-            <!-- Glassmorphism card -->
+
+            <!-- Anillos de neón -->
+            <div class="hero__ring hero__ring--cyan" aria-hidden="true"></div>
+            <div class="hero__ring hero__ring--purple" aria-hidden="true"></div>
+
+            <!-- Tarjeta glassmorphism -->
             <div class="hero__glass">
               <img
                 class="hero__avatar"
@@ -144,39 +142,60 @@
                 fetchpriority="high"
                 draggable="false"
               />
-              <!-- Scan line overlay -->
+              <!-- Gradiente inferior que funde foto con fondo -->
+              <div class="hero__avatar-fade" aria-hidden="true"></div>
+              <!-- Scanline sutil -->
               <div class="hero__scanline" aria-hidden="true"></div>
             </div>
-            <!-- Corner accents -->
+
+            <!-- Esquinas HUD -->
             <div class="hero__corner hero__corner--tl" aria-hidden="true"></div>
             <div class="hero__corner hero__corner--tr" aria-hidden="true"></div>
             <div class="hero__corner hero__corner--bl" aria-hidden="true"></div>
             <div class="hero__corner hero__corner--br" aria-hidden="true"></div>
-          </div>
 
-          <!-- Stat right -->
-          <div class="hero__float-stat hero__float-stat--right reveal-up" style="--delay:0.2s">
-            <span class="hero__float-num cyan">100%</span>
-            <span class="hero__float-label">Entregados<br>a tiempo</span>
-          </div>
+            <!-- Stats anclados al marco, posición absoluta (desktop) -->
+            <div class="hero__stat hero__stat--left reveal-up" style="--delay:0.3s" aria-hidden="true">
+              <span class="hero__stat-num">15+</span>
+              <span class="hero__stat-label">Proyectos</span>
+            </div>
 
+            <div class="hero__stat hero__stat--right reveal-up" style="--delay:0.4s" aria-hidden="true">
+              <span class="hero__stat-num">100%</span>
+              <span class="hero__stat-label">Entregados</span>
+            </div>
+
+          </div>
         </div>
-        <!-- /avatar-row -->
 
-        <!-- Text block below avatar -->
+        <!-- Stats para mobile (fuera del frame, en flujo normal) -->
+        <div class="hero__stats-mobile reveal-up" style="--delay:0.3s" aria-hidden="true">
+          <div class="hero__stat-mob">
+            <span class="hero__stat-num">15+</span>
+            <span class="hero__stat-label">Proyectos</span>
+          </div>
+          <div class="hero__stats-mobile-divider"></div>
+          <div class="hero__stat-mob">
+            <span class="hero__stat-num">100%</span>
+            <span class="hero__stat-label">Entregados</span>
+          </div>
+        </div>
+
+        <!-- Texto debajo -->
         <div class="hero__text-block">
-          <h1 class="hero__title reveal-up">
+          <h1 class="hero__title reveal-up" style="--delay:0.1s">
             Alexander Caro<span class="hero__dot">.</span>
           </h1>
-          <p class="hero__sub-title reveal-up" style="--delay:0.08s">
+          <p class="hero__sub-title reveal-up" style="--delay:0.18s">
             Designer &amp; Developer
           </p>
-          <p class="hero__desc reveal-up" style="--delay: 0.16s">
-            El diseñador que también programa. El desarrollador que también diseña.<br class="br-desktop" />
-            Design Engineer · Web · Visual Identity · Global Remote
+          <p class="hero__desc reveal-up" style="--delay:0.26s">
+            El diseñador que también programa.<br class="br-desktop">
+            El desarrollador que también diseña.
           </p>
-          <div class="hero__actions reveal-up" style="--delay: 0.24s">
+          <div class="hero__actions reveal-up" style="--delay:0.34s">
             <a href="#trabajo" class="btn btn--cyan">Ver mi trabajo</a>
+            <a href="#contacto-form" class="btn btn--ghost">Hablemos</a>
           </div>
         </div>
 
