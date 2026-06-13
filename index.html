@@ -112,94 +112,153 @@
     <section class="hero" id="inicio">
       <canvas id="heroCanvas" class="hero__canvas"></canvas>
 
-      <!-- Luces de ambiente detrás del avatar -->
-      <div class="hero__glow hero__glow--cyan" aria-hidden="true"></div>
-      <div class="hero__glow hero__glow--purple" aria-hidden="true"></div>
+      <!-- Ambiente: orbes de luz difusa -->
+      <div class="hero__orb hero__orb--cyan" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--purple" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--mid" aria-hidden="true"></div>
+
+      <!-- Rejilla de fondo decorativa -->
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <!-- Líneas decorativas laterales -->
+      <div class="hero__side-deco hero__side-deco--left" aria-hidden="true">
+        <span class="hero__side-line"></span>
+        <span class="hero__side-tag">UX — UI — DEV</span>
+        <span class="hero__side-line"></span>
+      </div>
+      <div class="hero__side-deco hero__side-deco--right" aria-hidden="true">
+        <span class="hero__side-line"></span>
+        <span class="hero__side-tag">BOGOTÁ — 2025</span>
+        <span class="hero__side-line"></span>
+      </div>
 
       <div class="hero__inner container">
 
-        <!-- Badge -->
-        <span class="hero__badge reveal-up">
-          <span class="hero__badge-dot"></span>
-          Disponible para proyectos
-        </span>
-
-        <!-- Marco del avatar (stats posicionados dentro, absolutos) -->
-        <div class="hero__stage" id="heroAvatarRow">
-          <div class="hero__frame-wrap" id="heroTiltTarget">
-
-            <!-- Anillos de neón -->
-            <div class="hero__ring hero__ring--cyan" aria-hidden="true"></div>
-            <div class="hero__ring hero__ring--purple" aria-hidden="true"></div>
-
-            <!-- Tarjeta glassmorphism -->
-            <div class="hero__glass">
-              <img
-                class="hero__avatar"
-                src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781371543/ChatGPT_Image_13_jun_2026__12_22_42_p.m.-removebg-preview_wb5jtf.png"
-                alt="Alexander Caro — Designer & Developer"
-                width="420" height="520"
-                fetchpriority="high"
-                draggable="false"
-              />
-              <!-- Gradiente inferior que funde foto con fondo -->
-              <div class="hero__avatar-fade" aria-hidden="true"></div>
-              <!-- Scanline sutil -->
-              <div class="hero__scanline" aria-hidden="true"></div>
-            </div>
-
-            <!-- Esquinas HUD -->
-            <div class="hero__corner hero__corner--tl" aria-hidden="true"></div>
-            <div class="hero__corner hero__corner--tr" aria-hidden="true"></div>
-            <div class="hero__corner hero__corner--bl" aria-hidden="true"></div>
-            <div class="hero__corner hero__corner--br" aria-hidden="true"></div>
-
-            <!-- Stats anclados al marco, posición absoluta (desktop) -->
-            <div class="hero__stat hero__stat--left reveal-up" style="--delay:0.3s" aria-hidden="true">
-              <span class="hero__stat-num">15+</span>
-              <span class="hero__stat-label">Proyectos</span>
-            </div>
-
-            <div class="hero__stat hero__stat--right reveal-up" style="--delay:0.4s" aria-hidden="true">
-              <span class="hero__stat-num">100%</span>
-              <span class="hero__stat-label">Entregados</span>
-            </div>
-
-          </div>
+        <!-- Badge de disponibilidad -->
+        <div class="hero__top-row">
+          <span class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Disponible para proyectos
+          </span>
+          <span class="hero__counter" aria-hidden="true">
+            <span class="hero__counter-num">03</span>
+            <span class="hero__counter-slash">/</span>
+            <span class="hero__counter-total">06</span>
+          </span>
         </div>
 
-        <!-- Stats para mobile (fuera del frame, en flujo normal) -->
-        <div class="hero__stats-mobile reveal-up" style="--delay:0.3s" aria-hidden="true">
-          <div class="hero__stat-mob">
-            <span class="hero__stat-num">15+</span>
-            <span class="hero__stat-label">Proyectos</span>
-          </div>
-          <div class="hero__stats-mobile-divider"></div>
-          <div class="hero__stat-mob">
-            <span class="hero__stat-num">100%</span>
-            <span class="hero__stat-label">Entregados</span>
-          </div>
-        </div>
+        <!-- Bloque central: avatar + columnas de texto -->
+        <div class="hero__center">
 
-        <!-- Texto debajo -->
-        <div class="hero__text-block">
-          <h1 class="hero__title reveal-up" style="--delay:0.1s">
-            Alexander Caro<span class="hero__dot">.</span>
-          </h1>
-          <p class="hero__sub-title reveal-up" style="--delay:0.18s">
-            Designer &amp; Developer
-          </p>
-          <p class="hero__desc reveal-up" style="--delay:0.26s">
-            El diseñador que también programa.<br class="br-desktop">
-            El desarrollador que también diseña.
-          </p>
-          <div class="hero__actions reveal-up" style="--delay:0.34s">
-            <a href="#trabajo" class="btn btn--cyan">Ver mi trabajo</a>
-            <a href="#contacto-form" class="btn btn--ghost">Hablemos</a>
-          </div>
-        </div>
+          <!-- Columna izquierda: texto principal -->
+          <div class="hero__col hero__col--left">
+            <p class="hero__eyebrow">
+              <span class="hero__eyebrow-line"></span>
+              Designer &amp; Developer
+            </p>
+            <h1 class="hero__title">
+              <span class="hero__title-name">Alexander</span>
+              <span class="hero__title-last">Caro<span class="hero__dot">.</span></span>
+            </h1>
+            <p class="hero__desc">
+              El diseñador que también programa.<br>
+              El desarrollador que también diseña.
+            </p>
+            <div class="hero__actions">
+              <a href="#trabajo" class="btn btn--cyan">Ver mi trabajo</a>
+              <a href="#contacto-form" class="btn btn--ghost">Hablemos</a>
+            </div>
 
-      </div>
+            <!-- Stats integrados en la columna izquierda -->
+            <div class="hero__stats-row">
+              <div class="hero__stat-item">
+                <span class="hero__stat-num">15<span class="hero__stat-plus">+</span></span>
+                <span class="hero__stat-label">Proyectos<br>completados</span>
+              </div>
+              <div class="hero__stat-divider" aria-hidden="true"></div>
+              <div class="hero__stat-item">
+                <span class="hero__stat-num">100<span class="hero__stat-plus">%</span></span>
+                <span class="hero__stat-label">Clientes<br>satisfechos</span>
+              </div>
+              <div class="hero__stat-divider" aria-hidden="true"></div>
+              <div class="hero__stat-item">
+                <span class="hero__stat-num">3<span class="hero__stat-plus">+</span></span>
+                <span class="hero__stat-label">Años de<br>experiencia</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna central: avatar -->
+          <div class="hero__col hero__col--center">
+            <div class="hero__stage" id="heroAvatarRow">
+              <div class="hero__frame-wrap" id="heroTiltTarget">
+
+                <!-- Anillos de neón pulsantes -->
+                <div class="hero__ring hero__ring--cyan" aria-hidden="true"></div>
+                <div class="hero__ring hero__ring--purple" aria-hidden="true"></div>
+
+                <!-- Tarjeta glassmorphism -->
+                <div class="hero__glass">
+                  <img
+                    class="hero__avatar"
+                    src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781371543/ChatGPT_Image_13_jun_2026__12_22_42_p.m.-removebg-preview_wb5jtf.png"
+                    alt="Alexander Caro — Designer & Developer"
+                    width="420" height="520"
+                    fetchpriority="high"
+                    draggable="false"
+                  />
+                  <div class="hero__avatar-fade" aria-hidden="true"></div>
+                  <div class="hero__scanline" aria-hidden="true"></div>
+                  <!-- Circuito decorativo overlay -->
+                  <div class="hero__circuit" aria-hidden="true"></div>
+                </div>
+
+                <!-- Esquinas HUD -->
+                <div class="hero__corner hero__corner--tl" aria-hidden="true"></div>
+                <div class="hero__corner hero__corner--tr" aria-hidden="true"></div>
+                <div class="hero__corner hero__corner--bl" aria-hidden="true"></div>
+                <div class="hero__corner hero__corner--br" aria-hidden="true"></div>
+
+                <!-- Etiqueta HUD inferior -->
+                <div class="hero__hud-tag" aria-hidden="true">
+                  <span class="hero__hud-dot"></span>
+                  <span>ID_001 — CARO.AC</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: info lateral -->
+          <div class="hero__col hero__col--right">
+            <div class="hero__right-block">
+              <p class="hero__right-label">Stack principal</p>
+              <ul class="hero__tech-list">
+                <li><span class="hero__tech-dot hero__tech-dot--cyan"></span>HTML / CSS</li>
+                <li><span class="hero__tech-dot hero__tech-dot--cyan"></span>JavaScript</li>
+                <li><span class="hero__tech-dot hero__tech-dot--purple"></span>UI / UX Design</li>
+                <li><span class="hero__tech-dot hero__tech-dot--purple"></span>Identidad Visual</li>
+              </ul>
+            </div>
+
+            <div class="hero__right-block">
+              <p class="hero__right-label">Disponibilidad</p>
+              <div class="hero__availability">
+                <span class="hero__avail-dot"></span>
+                <span>Freelance activo</span>
+              </div>
+              <p class="hero__avail-note">Respuesta en &lt; 24h</p>
+            </div>
+
+            <div class="hero__right-block hero__right-block--code">
+              <p class="hero__right-label">Filosofía</p>
+              <p class="hero__quote">"Diseño que convierte.<br>Código que vuela."</p>
+            </div>
+          </div>
+
+        </div><!-- /.hero__center -->
+
+      </div><!-- /.hero__inner -->
 
       <div class="hero__scroll-hint">
         <span>scroll</span>
