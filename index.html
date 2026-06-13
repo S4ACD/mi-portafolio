@@ -111,52 +111,75 @@
     <!-- ═══ HERO ═══ -->
     <section class="hero" id="inicio">
       <canvas id="heroCanvas" class="hero__canvas"></canvas>
+
       <div class="hero__inner container">
+
+        <!-- Badge -->
         <span class="hero__badge">
           <span class="hero__badge-dot"></span>
           Disponible para proyectos
         </span>
 
-        <h1 class="hero__title reveal-up" style="min-height:2.2em">
-          <span id="typeTarget">&nbsp;</span><br />
-          <span class="hero__sub"><span id="typeTarget2"></span><span class="type-cursor">|</span></span>
-        </h1>
+        <!-- Avatar + floating stats -->
+        <div class="hero__avatar-row" id="heroAvatarRow">
 
-        <p class="hero__desc reveal-up" style="--delay: 0.12s">
-          El diseñador que también programa. El desarrollador que también diseña.<br class="br-desktop" />
-          Design Engineer | Web Programming & Visual Identity | Global Remote
-        </p>
+          <!-- Stat left -->
+          <div class="hero__float-stat hero__float-stat--left reveal-up" style="--delay:0.2s">
+            <span class="hero__float-num cyan">15+</span>
+            <span class="hero__float-label">Proyectos</span>
+          </div>
 
-        <div class="hero__actions reveal-up" style="--delay: 0.24s">
-          <a href="#trabajo" class="btn btn--cyan">Ver mi trabajo</a>
-          <!--<a href="#" class="btn btn--ghost" id="downloadCV">Descargar CV</a>-->
+          <!-- Avatar frame -->
+          <div class="hero__frame-wrap" id="heroTiltTarget">
+            <!-- Neon rings -->
+            <div class="hero__ring hero__ring--1"></div>
+            <div class="hero__ring hero__ring--2"></div>
+            <!-- Glassmorphism card -->
+            <div class="hero__glass">
+              <img
+                class="hero__avatar"
+                src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781371543/ChatGPT_Image_13_jun_2026__12_22_42_p.m.-removebg-preview_wb5jtf.png"
+                alt="Alexander Caro — Designer & Developer"
+                width="420" height="520"
+                fetchpriority="high"
+                draggable="false"
+              />
+              <!-- Scan line overlay -->
+              <div class="hero__scanline" aria-hidden="true"></div>
+            </div>
+            <!-- Corner accents -->
+            <div class="hero__corner hero__corner--tl" aria-hidden="true"></div>
+            <div class="hero__corner hero__corner--tr" aria-hidden="true"></div>
+            <div class="hero__corner hero__corner--bl" aria-hidden="true"></div>
+            <div class="hero__corner hero__corner--br" aria-hidden="true"></div>
+          </div>
+
+          <!-- Stat right -->
+          <div class="hero__float-stat hero__float-stat--right reveal-up" style="--delay:0.2s">
+            <span class="hero__float-num cyan">100%</span>
+            <span class="hero__float-label">Entregados<br>a tiempo</span>
+          </div>
+
+        </div>
+        <!-- /avatar-row -->
+
+        <!-- Text block below avatar -->
+        <div class="hero__text-block">
+          <h1 class="hero__title reveal-up">
+            Alexander Caro<span class="hero__dot">.</span>
+          </h1>
+          <p class="hero__sub-title reveal-up" style="--delay:0.08s">
+            Designer &amp; Developer
+          </p>
+          <p class="hero__desc reveal-up" style="--delay: 0.16s">
+            El diseñador que también programa. El desarrollador que también diseña.<br class="br-desktop" />
+            Design Engineer · Web · Visual Identity · Global Remote
+          </p>
+          <div class="hero__actions reveal-up" style="--delay: 0.24s">
+            <a href="#trabajo" class="btn btn--cyan">Ver mi trabajo</a>
+          </div>
         </div>
 
-        <div class="hero__stats reveal-up" style="--delay: 0.36s">
-          <div class="stat">
-            <span class="stat__num cyan">2+</span>
-            <span class="stat__label">Años de experiencia</span>
-            <span class="stat__context">Orbidental SAS · 2024–hoy</span>
-          </div>
-          <div class="stat__divider"></div>
-          <div class="stat">
-            <span class="stat__num cyan">3K+</span>
-            <span class="stat__label">Fotos de producto</span>
-            <span class="stat__context">Catálogo Orbidental · productos dentales</span>
-          </div>
-          <div class="stat__divider"></div>
-          <div class="stat">
-            <span class="stat__num cyan">97</span>
-            <span class="stat__label">PageSpeed score</span>
-            <span class="stat__context">orbidental.com · desktop · jun 2026</span>
-          </div>
-          <div class="stat__divider"></div>
-          <div class="stat">
-            <span class="stat__num cyan">100%</span>
-            <span class="stat__label">Proyectos entregados a tiempo</span>
-            <span class="stat__context">5 proyectos · sin retrasos</span>
-          </div>
-        </div>
       </div>
 
       <div class="hero__scroll-hint">
