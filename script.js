@@ -445,7 +445,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   if (reducedMotion) return;
 
   const MAX_TILT    = 12;
-  const PERSPECTIVE = 1000;
+  const PERSPECTIVE = 900;
   let   currentX = 0, currentY = 0;
   let   targetX  = 0, targetY  = 0;
   let   rafId    = null;
