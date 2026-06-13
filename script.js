@@ -434,3 +434,82 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     });
   });
 })();
+
+// ─── HERO: TILT 3D + PARALLAX ───────────────────────────────────
+(function heroInteractivity() {
+  const tiltTarget  = document.getElementById('heroTiltTarget');
+  const avatarRow   = document.getElementById('heroAvatarRow');
+  if (!tiltTarget) return;
+
+  // Respect reduced motion
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reducedMotion) return;
+
+  const MAX_TILT    = 15;   // degrees max rotation
+  const PERSPECTIVE = 900;  // px
+  let   currentX    = 0;
+  let   currentY    = 0;
+  let   targetX     = 0;
+  let   targetY     = 0;
+  let   rafId       = null;
+  let   isHovering  = false;
+
+  // Smooth lerp animation loop
+  function tick() {
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+
+    tiltTarget.style.transform =
+      `perspective(${PERSPECTIVE}px) rotateX(${currentY}deg) rotateY(${currentX}deg)`;
+
+    if (Math.abs(targetX - currentX) > 0.01 || Math.abs(targetY - currentY) > 0.01 || isHovering) {
+      rafId = requestAnimationFrame(tick);
+    } else {
+      // Snap to rest
+      tiltTarget.style.transform = `perspective(${PERSPECTIVE}px) rotateX(0deg) rotateY(0deg)`;
+      rafId = null;
+    }
+  }
+
+  function startTick() {
+    if (!rafId) rafId = requestAnimationFrame(tick);
+  }
+
+  // Mouse move on the frame wrap
+  tiltTarget.addEventListener('mousemove', function(e) {
+    isHovering = true;
+    const rect   = tiltTarget.getBoundingClientRect();
+    const cx     = rect.left + rect.width  / 2;
+    const cy     = rect.top  + rect.height / 2;
+    const dx     = (e.clientX - cx) / (rect.width  / 2);  // -1 to 1
+    const dy     = (e.clientY - cy) / (rect.height / 2);  // -1 to 1
+    targetX      =  dx * MAX_TILT;
+    targetY      = -dy * MAX_TILT;
+    startTick();
+  }, { passive: true });
+
+  tiltTarget.addEventListener('mouseleave', function() {
+    isHovering = false;
+    targetX = 0;
+    targetY = 0;
+    startTick();
+  });
+
+  // Parallax on scroll — avatar floats up slightly
+  const heroSection = document.getElementById('inicio');
+  let   scrollRafId = null;
+
+  function handleScroll() {
+    if (scrollRafId) return;
+    scrollRafId = requestAnimationFrame(function() {
+      const scrollY = window.scrollY;
+      const heroH   = heroSection ? heroSection.offsetHeight : window.innerHeight;
+      const progress = Math.min(scrollY / heroH, 1);
+      const liftPx  = progress * -60; // float up 60px max
+      avatarRow.style.transform = `translateY(${liftPx}px)`;
+      scrollRafId = null;
+    });
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+})();
