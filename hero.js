@@ -2,15 +2,22 @@
    ALEXANDER CARO — HERO v3 — hero.js
    Loaded only on the homepage (see index.html).
 
+   DESIGN PRINCIPLE: everything is visible/correct in CSS by default.
+   JS only ever ANIMATES from a hidden/offset state INTO that default
+   (via gsap.from), never the other way around. If GSAP, ScrollTrigger
+   or Lenis fail to load for any reason, the hero still renders fully —
+   just without the motion layer.
+
+     0. Dust + star particles      (pure DOM/CSS — runs even without GSAP)
      1. Lenis smooth-scroll        (skipped: touch, reduced-motion)
      2. Intro reveal timeline      (skipped: reduced-motion → instant)
      3. Idle "zero-gravity" float  (skipped: reduced-motion)
      4. Scroll "rise" parallax     (skipped: reduced-motion)
-     5. Dust + star particles      (skipped: reduced-motion, see CSS)
+     5. Cursor-follow on portrait  (skipped: touch, reduced-motion)
      6. Magnetic CTAs               (skipped: touch, reduced-motion)
 
-   Everything animates `transform` / `opacity` only — compositor-only,
-   no layout thrash.
+   Everything animates `transform` / `opacity` / `filter` only —
+   compositor-friendly, no layout thrash.
    ════════════════════════════════════════════════════════════════════ */
 
 (function () {
@@ -22,26 +29,67 @@
   var reduceMotion  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarsePointer = window.matchMedia('(pointer: coarse)').matches;
 
-  /* ── Graceful degradation ──────────────────────────────────────────
-     If GSAP/ScrollTrigger didn't load, undo the clip-reveal starting
-     position so the headline is simply visible, then stop. Every other
-     element already defaults to opacity:1 in CSS. */
-  if (!window.gsap || !window.ScrollTrigger) {
-    document.querySelectorAll('.hv2__title-line > span').forEach(function (span) {
-      span.style.transform = 'translateY(0)';
-    });
-    return;
-  }
+  /* ════════════════════════════════════════════════════════════════
+     0. PARTICLES — dust + starlight
+     Fills `.hv2__particles` with small divs: ~60% soft "ash" motes
+     that drift slowly upward and fade (CSS var(--rise)/var(--peak)),
+     ~28% white "stars" that twinkle in place, and ~12% cyan stars —
+     the only other place this hero uses var(--cyan) besides the
+     orbital glint. Positions skew toward the right two-thirds of the
+     hero (the space around/behind the portrait), with a lighter
+     scatter on the left/text side too.
+
+     This runs FIRST and does not depend on GSAP at all — the elements
+     animate purely via CSS keyframes once they exist in the DOM.
+     ════════════════════════════════════════════════════════════════ */
+  (function setupParticles() {
+    var container = document.getElementById('hv2Particles');
+    if (!container || reduceMotion) return;
+
+    var count = window.innerWidth < 768 ? 22 : 50;
+    var frag = document.createDocumentFragment();
+
+    for (var i = 0; i < count; i++) {
+      var roll = Math.random();
+      var type = roll < 0.6 ? 'dust' : (roll < 0.88 ? 'star' : 'star-cyan');
+      var el = document.createElement('div');
+      el.className = 'hv2__particle hv2__particle--' + type;
+
+      // Bias toward the right two-thirds; a lighter scatter on the left.
+      var x = Math.random() < 0.3 ? Math.random() * 40 : 35 + Math.random() * 65;
+      var y = Math.random() * 100;
+      el.style.setProperty('--x', x.toFixed(2) + '%');
+      el.style.setProperty('--y', y.toFixed(2) + '%');
+
+      if (type === 'dust') {
+        var dDur = 9 + Math.random() * 8;
+        el.style.setProperty('--size', (3 + Math.random() * 4).toFixed(1) + 'px');
+        el.style.setProperty('--dur', dDur.toFixed(1) + 's');
+        el.style.setProperty('--delay', (-Math.random() * dDur).toFixed(1) + 's');
+        el.style.setProperty('--rise', '-' + (40 + Math.random() * 80).toFixed(0) + 'px');
+        el.style.setProperty('--peak', (0.25 + Math.random() * 0.3).toFixed(2));
+      } else {
+        var sDur = 2.4 + Math.random() * 3.2;
+        el.style.setProperty('--size', (1 + Math.random() * 1.6).toFixed(1) + 'px');
+        el.style.setProperty('--dur', sDur.toFixed(1) + 's');
+        el.style.setProperty('--delay', (-Math.random() * sDur).toFixed(1) + 's');
+      }
+
+      frag.appendChild(el);
+    }
+
+    container.appendChild(frag);
+  })();
+
+  /* ── Everything below this line is motion polish. If GSAP or
+     ScrollTrigger aren't available, the hero is already fully visible
+     and correctly laid out via CSS — just stop here. ──────────────── */
+  if (!window.gsap || !window.ScrollTrigger) return;
 
   gsap.registerPlugin(ScrollTrigger);
 
   /* ════════════════════════════════════════════════════════════════
      1. LENIS — SMOOTH SCROLL
-     Turns scroll input into one continuous eased value that both the
-     page scroll AND ScrollTrigger read from — without it the "rise"
-     parallax below still works, but reads as jittery rather than
-     cinematic. Skipped on touch (native momentum scroll is already
-     excellent there) and for reduced-motion users.
      ════════════════════════════════════════════════════════════════ */
   var lenis = null;
   if (!reduceMotion && !coarsePointer && window.Lenis) {
@@ -57,40 +105,27 @@
   }
 
   /* ════════════════════════════════════════════════════════════════
-     2. INTRO REVEAL
-     One orchestrated entrance: status pill + topbar context settle,
-     headline lines rise out of their clip boxes, the stage (rocks +
-     portrait) scales in from 0.94, rings/fog/particles fade up, then
-     body copy, CTAs and side decorations settle in last.
+     2. INTRO REVEAL — gsap.from()
+     Every group below is fully visible/normal in CSS already.
+     gsap.from() captures that as the "to" state and animates FROM an
+     offset/hidden state INTO it — so if this timeline never runs (or
+     errors halfway through), the hero simply shows its resting state
+     instead of staying hidden.
      ════════════════════════════════════════════════════════════════ */
-  var titleLines = document.querySelectorAll('.hv2__title-line > span');
-  var reveals    = document.querySelectorAll('[data-reveal]');
-  var stageEls   = document.querySelectorAll('.hv2__rock, .hv2__portrait');
-
-  if (reduceMotion) {
-    gsap.set(titleLines, { y: '0%' });
-    gsap.set(reveals, { opacity: 1, y: 0 });
-    gsap.set(stageEls, { opacity: 1, scale: 1 });
-    gsap.set('.hv2__rings, .hv2__fog', { opacity: 1 });
-  } else {
-    gsap.set(reveals, { opacity: 0, y: 22 });
-    gsap.set(stageEls, { opacity: 0, scale: 0.94, transformOrigin: '50% 50%' });
-    gsap.set('.hv2__rings, .hv2__fog, .hv2__particles', { opacity: 0 });
+  if (!reduceMotion) {
+    var titleLines = document.querySelectorAll('.hv2__title-line > span');
+    var stageEls   = document.querySelectorAll('.hv2__rock, .hv2__portrait');
+    var reveals    = document.querySelectorAll('[data-reveal]');
 
     gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.2 })
-      .to(titleLines, { y: '0%', duration: 1.1, stagger: 0.12 }, 0)
-      .to(stageEls, { opacity: 1, scale: 1, duration: 1.4, stagger: 0.06, ease: 'power2.out' }, 0.1)
-      .to('.hv2__rings, .hv2__fog, .hv2__particles', { opacity: 1, duration: 1.8 }, 0.25)
-      .to(reveals, { opacity: 1, y: 0, duration: 0.9, stagger: 0.05 }, 0.35);
+      .from(titleLines, { y: '110%', duration: 1.1, stagger: 0.12 }, 0)
+      .from(stageEls, { opacity: 0, scale: 0.94, transformOrigin: '50% 50%', duration: 1.4, stagger: 0.06, ease: 'power2.out' }, 0.1)
+      .from('.hv2__rings, .hv2__fog, .hv2__particles', { opacity: 0, duration: 1.8 }, 0.25)
+      .from(reveals, { opacity: 0, y: 22, duration: 0.9, stagger: 0.05 }, 0.35);
   }
 
   /* ════════════════════════════════════════════════════════════════
      3. IDLE FLOAT — "suspended in zero gravity"
-     Every `.hv2__*-float` gets its own gsap.to(... yoyo, repeat:-1 ...)
-     loop, reading amplitude/duration from data-float-y / data-float-rot
-     / data-duration. The portrait additionally drifts rotateX/rotateY
-     (real 3D tilt, thanks to `perspective` on .hv2__stage). A random
-     per-rock delay keeps the field from breathing in unison.
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion) {
     var mobile = window.innerWidth < 768;
@@ -127,93 +162,70 @@
   }
 
   /* ════════════════════════════════════════════════════════════════
-     4. SCROLL "RISE" PARALLAX
-     Every `.hv2__rock` / `.hv2__portrait` carries `data-rise` (px).
-     Its `*-parallax` child rises by that amount — translates to
-     y:-rise — over the hero's own scroll range (top hits top → bottom
-     hits top). The portrait carries the smallest value (18px: it
-     should barely seem to move — the page moves past it), far rocks a
-     little more, and the near/bottom rocks the most (up to 90px),
-     so the rocks concentrated along the lower edge visibly drift
-     upward and off-frame as you scroll — exactly the "more rocks at
-     the bottom, rising on scroll" effect.
+     4. SCROLL "RISE" PARALLAX + DEPTH-OF-FIELD BLUR
+     Each `.hv2__rock` / `.hv2__portrait` carries `data-rise` (px). Its
+     `*-parallax` child rises by that amount over the hero's own scroll
+     range — fully reversible via `scrub: true`. Rocks also pick up a
+     soft blur proportional to their rise (foreground/bottom rocks
+     blur the most); the portrait never blurs.
+
+     Note the selector: for `.hv2__portrait` the parallax wrapper now
+     sits one level deeper, inside `.hv2__portrait-tilt` (added so the
+     cursor-follow effect in section 5 has its own transform layer that
+     never fights this one).
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion) {
     hero.querySelectorAll('.hv2__rock, .hv2__portrait').forEach(function (el) {
-  var parallaxEl = el.querySelector(':scope > .hv2__rock-parallax, :scope > .hv2__portrait-parallax');
-  if (!parallaxEl) return;
+      var parallaxEl = el.querySelector(
+        ':scope > .hv2__rock-parallax, :scope > .hv2__portrait-tilt > .hv2__portrait-parallax'
+      );
+      if (!parallaxEl) return;
 
-  var rise   = parseFloat(el.dataset.rise) || 40;
-  var isRock = el.classList.contains('hv2__rock');
-  var blur   = isRock ? Math.min(5, rise / 18) : 0;
+      var rise   = parseFloat(el.dataset.rise) || 40;
+      var isRock = el.classList.contains('hv2__rock');
+      var blur   = isRock ? Math.min(5, rise / 18) : 0;
 
-  gsap.fromTo(parallaxEl,
-    { y: 0, filter: 'blur(0px)' },
-    {
-      y: -rise,
-      filter: blur ? 'blur(' + blur.toFixed(1) + 'px)' : 'blur(0px)',
-      ease: 'none',
-      scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true }
-    }
-  );
-});
+      gsap.fromTo(parallaxEl,
+        { y: 0, filter: 'blur(0px)' },
+        {
+          y: -rise,
+          filter: blur ? 'blur(' + blur.toFixed(1) + 'px)' : 'blur(0px)',
+          ease: 'none',
+          scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true }
+        }
+      );
+    });
+  }
 
   /* ════════════════════════════════════════════════════════════════
-     5. PARTICLES — dust + starlight
-     Fills `.hv2__particles` with small divs: ~60% soft "ash" motes
-     that drift slowly upward and fade (CSS var(--rise)/var(--peak)),
-     ~28% white "stars" that twinkle in place, and ~12% cyan stars —
-     the only other place this hero uses var(--cyan) besides the
-     orbital glint. Positions skew toward the right two-thirds of the
-     hero (the space around/behind the portrait that read as empty),
-     with a lighter scatter across the left/text side too.
-
-     Pure CSS animation from here — this function just sets custom
-     properties once and appends the nodes.
+     5. CURSOR-FOLLOW — portrait drifts very slightly toward the cursor
+     A separate transform layer (`.hv2__portrait-tilt`) so it never
+     fights the idle float (section 3) or the scroll-rise (section 4),
+     which live on the nested `-float` / `-parallax` children. Reads
+     cursor position across the whole viewport (not just the portrait's
+     box) for a calm, ambient "watching you" feel — intentionally tiny:
+     ~10px of drift and ~1.5° of tilt at the screen edges.
      ════════════════════════════════════════════════════════════════ */
-  (function setupParticles() {
-    var container = document.getElementById('hv2Particles');
-    if (!container || reduceMotion) return;
-
-    var count = window.innerWidth < 768 ? 22 : 50;
-    var frag = document.createDocumentFragment();
-
-    for (var i = 0; i < count; i++) {
-      var roll  = Math.random();
-      var type  = roll < 0.6 ? 'dust' : (roll < 0.88 ? 'star' : 'star-cyan');
-      var el    = document.createElement('div');
-      el.className = 'hv2__particle hv2__particle--' + type;
-
-      // Bias toward the right two-thirds; a lighter scatter on the left.
-      var x = Math.random() < 0.3 ? Math.random() * 40 : 35 + Math.random() * 65;
-      var y = Math.random() * 100;
-      el.style.setProperty('--x', x.toFixed(2) + '%');
-      el.style.setProperty('--y', y.toFixed(2) + '%');
-
-      if (type === 'dust') {
-        var dDur = 9 + Math.random() * 8;
-        el.style.setProperty('--size', (3 + Math.random() * 4).toFixed(1) + 'px');
-        el.style.setProperty('--dur', dDur.toFixed(1) + 's');
-        el.style.setProperty('--delay', (-Math.random() * dDur).toFixed(1) + 's');
-        el.style.setProperty('--rise', '-' + (40 + Math.random() * 80).toFixed(0) + 'px');
-        el.style.setProperty('--peak', (0.25 + Math.random() * 0.3).toFixed(2));
-      } else {
-        var sDur = 2.4 + Math.random() * 3.2;
-        el.style.setProperty('--size', (1 + Math.random() * 1.6).toFixed(1) + 'px');
-        el.style.setProperty('--dur', sDur.toFixed(1) + 's');
-        el.style.setProperty('--delay', (-Math.random() * sDur).toFixed(1) + 's');
-      }
-
-      frag.appendChild(el);
+  if (!reduceMotion && !coarsePointer) {
+    var tiltEl = document.querySelector('.hv2__portrait-tilt');
+    if (tiltEl) {
+      window.addEventListener('mousemove', function (e) {
+        var nx = (e.clientX / window.innerWidth - 0.5) * 2;  // -1 → 1
+        var ny = (e.clientY / window.innerHeight - 0.5) * 2; // -1 → 1
+        gsap.to(tiltEl, {
+          x: nx * 10,
+          y: ny * 8,
+          rotateY: nx * 1.6,
+          rotateX: -ny * 1.2,
+          duration: 1.1,
+          ease: 'power2.out'
+        });
+      });
     }
-
-    container.appendChild(frag);
-  })();
+  }
 
   /* ════════════════════════════════════════════════════════════════
      6. MAGNETIC CTAs
-     The two CTAs pull slightly toward the pointer within their own
-     bounding box and spring back with an elastic ease on leave.
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion && !coarsePointer) {
     hero.querySelectorAll('[data-magnetic]').forEach(function (el) {
