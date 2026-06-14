@@ -727,16 +727,51 @@
 
     <!-- ═══ TESTIMONIOS ═══ -->
     <section class="section testimonials" id="testimonios">
+      <svg class="testimonials-section__orbit" viewBox="0 0 320 320" aria-hidden="true">
+        <circle class="testimonials-section__orbit-ring" cx="160" cy="160" r="155"/>
+        <circle class="testimonials-section__orbit-ring testimonials-section__orbit-ring--dashed" cx="160" cy="160" r="106"/>
+        <circle class="testimonials-section__orbit-glow" cx="160" cy="160" r="4"/>
+        <circle class="testimonials-section__orbit-dot" cx="42" cy="56" r="2"/>
+        <circle class="testimonials-section__orbit-dot" cx="292" cy="46" r="1.5"/>
+        <circle class="testimonials-section__orbit-dot" cx="70" cy="284" r="1.5"/>
+      </svg>
       <div class="container">
-        <p class="eyebrow">CLIENTES</p>
-        <h2 class="section__title">Lo que dicen<span class="hero__dot">.</span></h2>
+        <div class="testimonials-header">
+          <div class="testimonials-header__text">
+            <p class="eyebrow">CLIENTES</p>
+            <h2 class="testimonials-header__title">Lo que dicen<br><em>sobre</em> mi trabajo<span class="hero__dot">.</span></h2>
+          </div>
+          <div class="testimonials-header__note">
+            <span class="testimonials-header__note-line" aria-hidden="true"></span>
+            <p>Colaboraciones que se convierten en relaciones a largo plazo.</p>
+          </div>
+        </div>
 
-        <div class="testimonials__track-wrapper">
+        <div class="testimonials__row">
+          <button class="testimonials__btn testimonials__btn--prev" id="testimonialsPrev" aria-label="Anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 5l-7 7 7 7"/>
+            </svg>
+          </button>
+
+          <div class="testimonials__track-wrapper">
           <div class="testimonials__track" id="testimonialsTrack">
 
             <article class="testimonial-card">
+              <div class="testimonial-card__visual" aria-hidden="true">
+                <img src="/assets/rocks/enfoque-rock.webp" alt="" loading="lazy" decoding="async" />
+                <div class="testimonial-card__sparks">
+                  <span class="spark" style="--x:65%; --y:18%; --dur:3s; --delay:0s;"></span>
+                  <span class="spark" style="--x:80%; --y:35%; --dur:3.6s; --delay:0.8s;"></span>
+                  <span class="spark" style="--x:55%; --y:55%; --dur:2.8s; --delay:1.4s;"></span>
+                  <span class="spark" style="--x:88%; --y:60%; --dur:4s; --delay:0.3s;"></span>
+                  <span class="spark" style="--x:70%; --y:78%; --dur:3.2s; --delay:1.8s;"></span>
+                  <span class="spark" style="--x:45%; --y:30%; --dur:3.8s; --delay:2.2s;"></span>
+                </div>
+              </div>
               <div class="testimonial-card__quote">"</div>
               <p class="testimonial-card__text">Alexander logró darnos una identidad visual mucho más potente de lo que esperábamos. Capturó exactamente la esencia del fuego y nos diferenció completamente de otras marcas de comida. Hoy nos reconocen fácilmente — el diseño es único y habla solo.</p>
+              <div class="testimonial-card__divider"></div>
               <div class="testimonial-card__footer">
                 <div class="testimonial-card__avatar">F</div>
                 <div class="testimonial-card__info">
@@ -748,8 +783,20 @@
             </article>
 
             <article class="testimonial-card">
+              <div class="testimonial-card__visual" aria-hidden="true">
+                <img src="/assets/rocks/enfoque-rock.webp" alt="" loading="lazy" decoding="async" />
+                <div class="testimonial-card__sparks">
+                  <span class="spark" style="--x:60%; --y:22%; --dur:3.4s; --delay:0.4s;"></span>
+                  <span class="spark" style="--x:82%; --y:40%; --dur:3s; --delay:1.2s;"></span>
+                  <span class="spark" style="--x:50%; --y:60%; --dur:3.8s; --delay:0s;"></span>
+                  <span class="spark" style="--x:90%; --y:65%; --dur:2.8s; --delay:1.6s;"></span>
+                  <span class="spark" style="--x:72%; --y:80%; --dur:3.6s; --delay:0.9s;"></span>
+                  <span class="spark" style="--x:42%; --y:35%; --dur:4s; --delay:2s;"></span>
+                </div>
+              </div>
               <div class="testimonial-card__quote">"</div>
               <p class="testimonial-card__text">El resultado superó nuestras expectativas. Alexander entendió perfectamente lo que queríamos: que se sintiera la jungla, pero que quedara claro que es una discoteca. Cada pieza refleja el nombre y la energía de la marca.</p>
+              <div class="testimonial-card__divider"></div>
               <div class="testimonial-card__footer">
                 <div class="testimonial-card__avatar">J</div>
                 <div class="testimonial-card__info">
@@ -761,8 +808,20 @@
             </article>
 
             <article class="testimonial-card">
+              <div class="testimonial-card__visual" aria-hidden="true">
+                <img src="/assets/rocks/enfoque-rock.webp" alt="" loading="lazy" decoding="async" />
+                <div class="testimonial-card__sparks">
+                  <span class="spark" style="--x:58%; --y:20%; --dur:3.2s; --delay:1s;"></span>
+                  <span class="spark" style="--x:85%; --y:38%; --dur:3.8s; --delay:0.2s;"></span>
+                  <span class="spark" style="--x:48%; --y:58%; --dur:3s; --delay:1.6s;"></span>
+                  <span class="spark" style="--x:92%; --y:62%; --dur:3.6s; --delay:0.6s;"></span>
+                  <span class="spark" style="--x:68%; --y:82%; --dur:2.8s; --delay:2.2s;"></span>
+                  <span class="spark" style="--x:40%; --y:32%; --dur:4s; --delay:1.4s;"></span>
+                </div>
+              </div>
               <div class="testimonial-card__quote">"</div>
               <p class="testimonial-card__text">Quedamos más que satisfechos. Queríamos algo urbano, con ese estilo grafitero pero aplicado a ropa streetwear — y Alexander lo entendió desde el primer momento. La identidad quedó exactamente como la imaginábamos.</p>
+              <div class="testimonial-card__divider"></div>
               <div class="testimonial-card__footer">
                 <div class="testimonial-card__avatar">R</div>
                 <div class="testimonial-card__info">
@@ -774,21 +833,34 @@
             </article>
 
           </div>
-
-          <!-- Controles -->
-          <div class="testimonials__controls">
-            <button class="testimonials__btn" id="testimonialsNext" aria-label="Siguiente">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </button>
           </div>
 
-          <!-- Dots -->
-          <div class="testimonials__dots" id="testimonialsDots">
-            <button class="testimonials__dot testimonials__dot--active" data-index="0" aria-label="Testimonio 1"></button>
-            <button class="testimonials__dot" data-index="1" aria-label="Testimonio 2"></button>
-            <button class="testimonials__dot" data-index="2" aria-label="Testimonio 3"></button>
+          <button class="testimonials__btn testimonials__btn--next" id="testimonialsNext" aria-label="Siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Paginación numerada -->
+        <div class="testimonials__dots" id="testimonialsDots">
+          <button class="testimonials__dot testimonials__dot--active" data-index="0" aria-label="Testimonio 1">01</button>
+          <span class="testimonials__dot-sep" aria-hidden="true"></span>
+          <button class="testimonials__dot" data-index="1" aria-label="Testimonio 2">02</button>
+          <span class="testimonials__dot-sep" aria-hidden="true"></span>
+          <button class="testimonials__dot" data-index="2" aria-label="Testimonio 3">03</button>
+        </div>
+
+        <!-- Marcas que han confiado -->
+        <div class="trusted-by">
+          <p class="trusted-by__label">Marcas que<br>han confiado</p>
+          <div class="trusted-by__logos">
+            <!-- TODO: reemplazar por <img> cuando Alexander suba los logos restantes -->
+            <img class="trusted-by__logo-img" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781033539/LOGO-FUEGGO_gozt0l.png" alt="Fueggo" loading="lazy" decoding="async" />
+            <span class="trusted-by__logo">La Jungla Club</span>
+            <img class="trusted-by__logo-img" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781445720/Orbidental_jy5cgn.png" alt="Orbidental" loading="lazy" decoding="async" />
+            <span class="trusted-by__logo">Rebel Street</span>
+            <span class="trusted-by__logo">Pulse.Digital</span>
           </div>
         </div>
       </div>
