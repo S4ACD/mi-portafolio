@@ -16,65 +16,6 @@
 </head>
 <body>
 
-  <!-- DEFINICIONES SVG — planeta con anillos + rocas con vetas doradas -->
-  <svg class="about-hero-defs" aria-hidden="true" focusable="false">
-    <defs>
-      <symbol id="aboutPlanet" viewBox="0 0 400 400">
-        <radialGradient id="aboutPlanetGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#f6e7c4" stop-opacity="0.35"/>
-          <stop offset="100%" stop-color="#f6e7c4" stop-opacity="0"/>
-        </radialGradient>
-        <radialGradient id="aboutPlanetBody" cx="30%" cy="26%" r="80%">
-          <stop offset="0%" stop-color="#fdf3dc"/>
-          <stop offset="16%" stop-color="#f3e0b0"/>
-          <stop offset="40%" stop-color="#cdab78"/>
-          <stop offset="66%" stop-color="#8a6336"/>
-          <stop offset="86%" stop-color="#432c14"/>
-          <stop offset="100%" stop-color="#140d05"/>
-        </radialGradient>
-        <linearGradient id="aboutPlanetRing" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#cdb78e" stop-opacity="0"/>
-          <stop offset="50%" stop-color="#f6e7c4" stop-opacity="0.95"/>
-          <stop offset="100%" stop-color="#cdb78e" stop-opacity="0"/>
-        </linearGradient>
-        <clipPath id="aboutPlanetClip"><circle cx="200" cy="200" r="100"/></clipPath>
-        <clipPath id="aboutPlanetRingFront">
-          <rect x="-100" y="205" width="600" height="300" transform="rotate(-14 200 205)"/>
-        </clipPath>
-
-        <circle cx="200" cy="200" r="155" fill="url(#aboutPlanetGlow)"/>
-
-        <g transform="rotate(-14 200 205)">
-          <ellipse cx="200" cy="205" rx="190" ry="44" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="9" opacity="0.55"/>
-          <ellipse cx="200" cy="205" rx="190" ry="44" fill="none" stroke="#1c1208" stroke-width="1.5" opacity="0.5"/>
-          <ellipse cx="200" cy="205" rx="156" ry="32" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="4" opacity="0.4"/>
-          <ellipse cx="200" cy="205" rx="128" ry="26" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="2" opacity="0.5"/>
-        </g>
-
-        <circle cx="200" cy="200" r="100" fill="url(#aboutPlanetBody)"/>
-        <g clip-path="url(#aboutPlanetClip)">
-          <g opacity="0.22">
-            <ellipse cx="195" cy="160" rx="100" ry="12" fill="#140d05"/>
-            <ellipse cx="205" cy="222" rx="100" ry="18" fill="#140d05"/>
-            <ellipse cx="195" cy="258" rx="100" ry="9" fill="#140d05"/>
-          </g>
-          <ellipse cx="168" cy="166" rx="34" ry="22" fill="#fff8e8" opacity="0.22"/>
-        </g>
-        <circle cx="200" cy="200" r="100" fill="none" stroke="#f6e7c4" stroke-width="0.75" opacity="0.35"/>
-
-        <g clip-path="url(#aboutPlanetRingFront)" transform="rotate(-14 200 205)">
-          <ellipse cx="200" cy="205" rx="190" ry="44" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="9" opacity="0.9"/>
-          <ellipse cx="200" cy="205" rx="190" ry="44" fill="none" stroke="#1c1208" stroke-width="1.5" opacity="0.6"/>
-          <ellipse cx="200" cy="205" rx="156" ry="32" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="4" opacity="0.7"/>
-          <ellipse cx="200" cy="205" rx="128" ry="26" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="2" opacity="0.8"/>
-        </g>
-
-        <circle cx="56" cy="86" r="3" fill="#f6e7c4"/>
-        <circle cx="340" cy="244" r="2" fill="#cdb78e"/>
-      </symbol>
-    </defs>
-  </svg>
-
   <!-- HERO -->
   <section class="about-hero hv2" id="aboutHero">
 
@@ -144,7 +85,7 @@
       <div class="hv2__portrait about-hero__planet" id="hv2Portrait"
            data-rise="18" data-float-y="16" data-float-rot="2" data-duration="9">
         <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
-          <svg class="about-hero__planet-svg" viewBox="0 0 400 400" aria-hidden="true"><use href="#aboutPlanet"/></svg>
+          <img class="about-hero__planet-img" src="../assets/planet/saturn-gold.jpg" alt="" loading="lazy">
         </div></div></div>
       </div>
 
