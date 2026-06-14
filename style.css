@@ -2083,7 +2083,12 @@ input, textarea {
   text-transform: uppercase;
   color: var(--hv2-ink);
 }
-.hv2__title-line { display: block; overflow: hidden; }
+.hv2__title-line {
+  display: block;
+  overflow: hidden;
+  padding-top: 0.12em;
+  margin-top: -0.12em;
+}
 .hv2__title-line > span { display: inline-block; }
 .hv2__title-script {
   display: block;
