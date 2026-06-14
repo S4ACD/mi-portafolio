@@ -23,8 +23,8 @@
 (function () {
   'use strict';
 
-  var hero = document.getElementById('inicio');
-  if (!hero || !hero.classList.contains('hv2')) return;
+  var hero = document.querySelector('.hv2');
+  if (!hero) return;
 
   var reduceMotion  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var coarsePointer = window.matchMedia('(pointer: coarse)').matches;
