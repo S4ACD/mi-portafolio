@@ -868,72 +868,137 @@
 
     <!-- ═══ FAQ ═══ -->
     <section class="section faq-section" id="faq">
+      <svg class="faq-defs" aria-hidden="true" focusable="false">
+        <defs>
+          <symbol id="goldPlanet" viewBox="0 0 200 200">
+            <radialGradient id="goldPlanetBody" cx="35%" cy="32%" r="75%">
+              <stop offset="0%" stop-color="#6b5128"/>
+              <stop offset="55%" stop-color="#2a1f10"/>
+              <stop offset="100%" stop-color="#120e08"/>
+            </radialGradient>
+            <clipPath id="goldPlanetClip"><circle cx="100" cy="100" r="85"/></clipPath>
+            <circle cx="100" cy="100" r="85" fill="url(#goldPlanetBody)"/>
+            <g clip-path="url(#goldPlanetClip)" stroke="#cdb78e" stroke-width="0.6" fill="none" opacity="0.4">
+              <ellipse cx="100" cy="100" rx="85" ry="55" stroke-dasharray="1 3"/>
+              <ellipse cx="100" cy="100" rx="85" ry="25" stroke-dasharray="1 3"/>
+              <ellipse cx="100" cy="100" rx="55" ry="85" stroke-dasharray="1 3"/>
+              <ellipse cx="100" cy="100" rx="25" ry="85" stroke-dasharray="1 3"/>
+              <ellipse cx="100" cy="100" rx="85" ry="42" stroke-dasharray="1 3" transform="rotate(35 100 100)"/>
+            </g>
+            <circle cx="100" cy="100" r="85" fill="none" stroke="#cdb78e" stroke-width="0.75" opacity="0.5"/>
+            <circle cx="64" cy="74" r="2" fill="#f4efe6"/>
+            <circle cx="135" cy="112" r="1.5" fill="#cdb78e"/>
+            <circle cx="102" cy="152" r="1.5" fill="#f4efe6"/>
+            <circle cx="80" cy="44" r="7" fill="#cdb78e" opacity="0.45"/>
+            <circle cx="80" cy="44" r="3" fill="#f4efe6"/>
+          </symbol>
+        </defs>
+      </svg>
       <div class="container">
-        <p class="eyebrow">PREGUNTAS FRECUENTES</p>
-        <h2 class="section__title">Lo que siempre preguntan<span class="hero__dot">.</span></h2>
+        <div class="faq-grid">
+          <div class="faq-aside">
+            <p class="eyebrow">PREGUNTAS FRECUENTES</p>
+            <h2 class="about-header__title">Lo que siempre<br><em>preguntan</em><span class="hero__dot">.</span></h2>
+            <div class="about-header__line" aria-hidden="true"><span class="about-header__line-dot"></span></div>
+            <p class="faq-aside__lede">Respuestas claras para que tomes decisiones seguras y trabajemos con total transparencia.</p>
 
-        <div class="faq-list">
+            <svg class="faq-section__orbit" viewBox="0 0 400 400" aria-hidden="true">
+              <circle class="faq-section__orbit-ring" cx="200" cy="200" r="195"/>
+              <circle class="faq-section__orbit-ring" cx="200" cy="200" r="140"/>
+              <circle class="faq-section__orbit-ring faq-section__orbit-ring--dashed" cx="200" cy="200" r="85"/>
+              <circle class="faq-section__orbit-glow" cx="200" cy="200" r="40"/>
+              <circle class="faq-section__orbit-sun" cx="200" cy="200" r="13"/>
+              <circle class="faq-section__orbit-dot" cx="200" cy="6" r="3"/>
+              <circle class="faq-section__orbit-dot" cx="348" cy="118" r="2"/>
+              <circle class="faq-section__orbit-dot" cx="80" cy="348" r="2"/>
+              <circle class="faq-section__orbit-dot" cx="322" cy="348" r="2"/>
+            </svg>
+            <div class="faq-section__rock" aria-hidden="true">
+              <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <div class="faq-list">
 
           <details class="faq-item scroll-reveal">
             <summary class="faq-item__question">
-              ¿Trabajas con clientes fuera de Colombia?
+              <span class="faq-item__num">01</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text">¿Trabajas con clientes fuera de Colombia?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-item__answer">
               <p>Sí, trabajo 100% remoto y tengo clientes en varios países. Nos coordinamos por WhatsApp, Zoom o el canal que prefieras. El huso horario no ha sido un problema — estoy en Bogotá (UTC-5) y me adapto a los horarios de mis clientes.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
             </div>
           </details>
 
           <details class="faq-item scroll-reveal" style="--reveal-delay: 0.05s">
             <summary class="faq-item__question">
-              ¿Cómo es el proceso de pago?
+              <span class="faq-item__num">02</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text">¿Cómo es el proceso de pago?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-item__answer">
               <p>Trabajo con un anticipo del 50% para arrancar y el 50% restante contra entrega. Para proyectos grandes lo dividimos en hitos. Acepto transferencia bancaria, Nequi, y para clientes internacionales, PayPal o Wise.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
             </div>
           </details>
 
           <details class="faq-item scroll-reveal" style="--reveal-delay: 0.1s">
             <summary class="faq-item__question">
-              ¿Cuántas revisiones incluye cada proyecto?
+              <span class="faq-item__num">03</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text">¿Cuántas revisiones incluye cada proyecto?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-item__answer">
               <p>Depende del servicio, pero en general incluyo dos rondas de revisión dentro del alcance acordado. Si necesitas más ajustes después de eso, los cotizamos aparte — sin sorpresas. Lo importante es que el resultado final sea el correcto.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
             </div>
           </details>
 
           <details class="faq-item scroll-reveal" style="--reveal-delay: 0.15s">
             <summary class="faq-item__question">
-              ¿En qué zona horaria trabajas?
+              <span class="faq-item__num">04</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text">¿En qué zona horaria trabajas?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-item__answer">
               <p>Estoy en Bogotá, Colombia — UTC-5, sin horario de verano. Normalmente respondo entre 8am y 8pm hora colombiana, pero me adapto si estás en otra zona horaria y necesitamos cuadrar una llamada.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
             </div>
           </details>
 
           <details class="faq-item scroll-reveal" style="--reveal-delay: 0.2s">
             <summary class="faq-item__question">
-              ¿Usas contratos?
+              <span class="faq-item__num">05</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text">¿Usas contratos?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-item__answer">
               <p>Sí, siempre. Antes de arrancar cualquier proyecto firmamos un acuerdo que define el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
             </div>
           </details>
 
           <details class="faq-item scroll-reveal" style="--reveal-delay: 0.25s">
             <summary class="faq-item__question">
-              ¿Qué pasa si necesito cambios después de la entrega?
+              <span class="faq-item__num">06</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text">¿Qué pasa si necesito cambios después de la entrega?</span>
               <span class="faq-item__icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-item__answer">
               <p>Los cambios menores dentro del alcance original no tienen costo adicional si los pides dentro de los primeros 7 días. Después de eso, o si son cambios de dirección grandes, los cotizamos por separado. Siempre con precio claro antes de hacer cualquier cosa.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
             </div>
           </details>
 
+        </div>
         </div>
       </div>
     </section>
