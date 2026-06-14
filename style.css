@@ -128,27 +128,36 @@ img { display: block; max-width: 100%; }
 .btn--lg { font-size: 15px; padding: 16px 32px; }
 
 /* ═══════════════════════════════════════════════════════════════
-   NAV
+   NAV — v2: editorial mark + gold accent (cyan stays in the hero's
+   orbital glint / particles only — see HERO v3 below)
 ═══════════════════════════════════════════════════════════════ */
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(8,8,8,0.85);
+  background: rgba(8,8,7,0.78);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(244,239,230,0.08);
   transition: box-shadow var(--transition);
 }
 .nav__inner {
-  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  max-width: 1240px; margin: 0 auto; padding: 0 24px;
   height: 64px; display: flex; align-items: center; gap: 40px;
 }
 .nav__logo {
-  font-family: var(--font-display); font-size: 22px; font-weight: 700;
-  color: #fff; margin-right: auto; letter-spacing: -0.02em;
+  font-family: 'Space Grotesk', var(--font-display);
+  font-size: 18px; font-weight: 600;
+  color: #f4efe6; margin-right: auto; letter-spacing: 0.12em;
 }
-.nav__links { display: flex; gap: 32px; }
-.nav__links a { font-size: 14px; color: var(--text-muted); transition: color var(--transition); }
-.nav__links a:hover { color: #fff; }
+.nav__links { display: flex; gap: clamp(24px, 3vw, 40px); }
+.nav__links a {
+  font-family: 'Space Grotesk', var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.nav__links a:hover { color: #f4efe6; }
 /* Checkbox oculto — controla el menú móvil sin JS */
 .nav__toggle {
   display: none;
@@ -192,28 +201,42 @@ img { display: block; max-width: 100%; }
   flex-direction: column;
   gap: 4px;
   padding: 16px 24px 24px;
-  border-top: 1px solid var(--border);
-  background: rgba(8,8,8,0.98);
+  border-top: 1px solid rgba(244,239,230,0.08);
+  background: rgba(8,8,7,0.98);
 }
 .nav__drawer-link {
   padding: 12px 0;
-  font-size: 16px;
+  font-family: 'Space Grotesk', var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--text-muted);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(244,239,230,0.08);
   transition: color var(--transition);
   background: transparent;
 }
-.nav__drawer-link:hover { color: #fff; }
-.nav__drawer .btn {
-  margin-top: 12px;
-  width: fit-content;
-  background: var(--cyan);
-  color: #000;
+.nav__drawer-link:hover { color: #f4efe6; }
+
+/* CTA — the one gold pill in the nav, on every page */
+.nav__cta {
+  font-family: 'Space Grotesk', var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: #cdb78e;
+  color: #1a1611;
+  padding: 11px 22px;
+  border-radius: 999px;
+  transition: background var(--transition);
+  white-space: nowrap;
 }
+.nav__cta:hover { background: #e3d2b3; }
+.nav__drawer .nav__cta { margin-top: 12px; width: fit-content; }
 
 /* Link activo */
-.nav__links a.nav__link--active { color: var(--cyan) !important; }
-.nav__drawer-link.nav__link--active { color: var(--cyan) !important; }
+.nav__links a.nav__link--active { color: #cdb78e !important; }
+.nav__drawer-link.nav__link--active { color: #cdb78e !important; }
 
 @media (max-width: 767px) {
   .nav__links, .nav__inner > .nav__cta { display: none; }
@@ -1730,4 +1753,525 @@ input, textarea {
   color: var(--text-muted);
   line-height: 1.75;
   margin-top: 16px;
+}
+
+
+/* ════════════════════════════════════════════════════════════════════
+   HERO v3 — "Suspended Sculpture"
+   Portrait floating in zero gravity inside a dark editorial void, rock
+   fragments rising past it on scroll, dust + starlight drifting through
+   the empty space, a comet of light orbiting behind everything.
+
+   Palette: warm black + bone white + one muted gold (the hero's voice).
+   Cyan (var(--cyan), already defined above) is used in exactly two
+   places — the orbital glint and a minority of the particles — as the
+   single thread tying this hero back to the rest of the site.
+
+   NAMING: `.hv2__` / `--hv2-*`, zero collisions with the rest of
+   style.css (the old `.hero__*` rules above are now dead and can be
+   deleted in a future pass once every page is on this system).
+   ════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --hv2-void:        #050504;
+  --hv2-void-soft:   #0e0d0b;
+  --hv2-ink:         #f4efe6;
+  --hv2-ink-dim:     rgba(244,239,230,0.56);
+  --hv2-ink-faint:   rgba(244,239,230,0.30);
+  --hv2-line:        rgba(244,239,230,0.10);
+  --hv2-gold:        #cdb78e;
+  --hv2-gold-dim:    rgba(205,183,142,0.35);
+
+  --hv2-font-display: 'Fraunces', 'Georgia', serif;
+  --hv2-font-ui:      'Space Grotesk', system-ui, sans-serif;
+  --hv2-font-body:    'Inter', system-ui, sans-serif;
+
+  --hv2-ease:      cubic-bezier(0.16, 1, 0.3, 1);
+  --hv2-pad:       clamp(20px, 4vw, 56px);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   SECTION SHELL
+   ────────────────────────────────────────────────────────────────── */
+.hv2 {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--hv2-void);
+  color: var(--hv2-ink);
+  font-family: var(--hv2-font-body);
+  isolation: isolate; /* contains the `mix-blend-mode: lighten` layers
+                          to this section, so they never blend with the
+                          fixed nav or sections below */
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   LAYER 01 — DEEP BACKGROUND + GRAIN
+   Off-centre radial gradient, warmer toward the portrait's position so
+   its pure-#000 background sits on a slightly lighter value — that gap
+   is what `mix-blend-mode: lighten` uses to melt the photo's black into
+   the page with no hard cut-out edge.
+   ────────────────────────────────────────────────────────────────── */
+.hv2__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(120% 90% at 72% 42%, var(--hv2-void-soft) 0%, var(--hv2-void) 62%);
+}
+.hv2__grain {
+  position: absolute;
+  inset: -50%;
+  z-index: 9;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   LAYER 02 — FOG
+   ────────────────────────────────────────────────────────────────── */
+.hv2__fog {
+  position: absolute;
+  z-index: 2;
+  top: 8%;
+  right: 4%;
+  width: min(60vw, 760px);
+  height: min(60vw, 760px);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--hv2-gold-dim) 0%, transparent 68%);
+  filter: blur(60px);
+  opacity: 0.5;
+  animation: hv2Breathe 14s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes hv2Breathe {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%      { opacity: 0.55; transform: scale(1.08); }
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   LAYER 02.5 — PARTICLES (dust + starlight)
+   Generated in hero.js: a mix of soft drifting "ash" motes and small
+   twinkling "stars", scattered mostly across the right side of the
+   scene (the dark space around the portrait that read as empty). Most
+   particles are warm/neutral; a minority are tinted with var(--cyan) —
+   the one place outside the orbital glint this hero borrows the site's
+   accent colour.
+   ────────────────────────────────────────────────────────────────── */
+.hv2__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hv2__particle {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  will-change: transform, opacity;
+}
+.hv2__particle--dust {
+  background: radial-gradient(circle, var(--hv2-ink-faint) 0%, transparent 75%);
+  filter: blur(1px);
+  animation: hv2Drift var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+.hv2__particle--star {
+  background: var(--hv2-ink);
+  box-shadow: 0 0 6px rgba(244,239,230,0.55);
+  animation: hv2Twinkle var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+.hv2__particle--star-cyan {
+  background: var(--cyan);
+  box-shadow: 0 0 7px rgba(0,229,229,0.65);
+  animation: hv2Twinkle var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+@keyframes hv2Drift {
+  0%   { transform: translateY(0) scale(1);   opacity: 0; }
+  15%  { opacity: var(--peak, 0.45); }
+  85%  { opacity: var(--peak, 0.45); }
+  100% { transform: translateY(var(--rise, -60px)) scale(0.85); opacity: 0; }
+}
+@keyframes hv2Twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.75); }
+  50%      { opacity: 1;    transform: scale(1.2); }
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   LAYER 03 — GEOMETRIC RINGS + ORBITAL GLINT
+   Three hairline circles centred on the portrait's head. The dashed
+   ring slowly rotates (90s/rev — alive, never a spinner). A small
+   cyan "comet" — bright core + two trailing glows, gently offset along
+   the same path — travels the dashed ring continuously. This is the
+   ONE deliberate cyan accent besides the particles: a satellite of
+   light, not a neon glow.
+   ────────────────────────────────────────────────────────────────── */
+.hv2__rings {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 6%;
+  width: min(70vw, 920px);
+  height: min(70vw, 920px);
+  transform: translateY(-50%);
+  overflow: visible;
+  pointer-events: none;
+}
+.hv2__rings circle {
+  fill: none;
+  stroke: var(--hv2-line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.hv2__rings .hv2__rings-dashed {
+  stroke: var(--hv2-gold-dim);
+  stroke-dasharray: 2 14;
+  transform-origin: 50% 50%;
+  animation: hv2Spin 90s linear infinite;
+}
+@keyframes hv2Spin { to { transform: rotate(360deg); } }
+
+.hv2__glint-tail  { fill: rgba(0,229,229,0.10); filter: blur(4px); }
+.hv2__glint-mid   { fill: rgba(0,229,229,0.35); filter: blur(1.5px); }
+.hv2__glint-core  {
+  fill: var(--cyan);
+  filter: drop-shadow(0 0 4px rgba(0,229,229,0.9)) drop-shadow(0 0 12px rgba(0,229,229,0.5));
+}
+@media (prefers-reduced-motion: reduce) {
+  .hv2__glint-tail, .hv2__glint-mid, .hv2__glint-core { display: none; }
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   STAGE — rocks + portrait
+   ────────────────────────────────────────────────────────────────── */
+.hv2__stage {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  perspective: 1600px;
+  pointer-events: none;
+}
+
+/* Each rock/portrait is THREE nested wrappers — see hero.js for why:
+     .hv2__rock            → static CSS position, untouched by JS
+       .hv2__rock-parallax  → scroll-driven "rise" (GSAP `y`, scrub)
+         .hv2__rock-float   → idle zero-gravity loop (GSAP `y`+rotation)
+           img              → mix-blend-mode: lighten                  */
+.hv2__rock { position: absolute; will-change: transform; }
+.hv2__rock-parallax,
+.hv2__rock-float { will-change: transform; }
+.hv2__rock img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: lighten;
+  filter: contrast(1.05);
+}
+.hv2__rock--flip img { transform: scaleX(-1); }
+
+/* Far layer — dim, blurred (depth-of-field), small rise */
+.hv2__rock--far img { opacity: 0.5; filter: contrast(1.05) blur(1.5px); }
+.hv2__rock--far1 { top: 4%;    left: 0%;   width: clamp(160px, 18vw, 300px); z-index: 1; }
+.hv2__rock--far2 { bottom: 32%; left: 3%;  width: clamp(170px, 19vw, 310px); z-index: 1; }
+.hv2__rock--far3 { bottom: -6%; left: 20%; width: clamp(220px, 26vw, 420px); z-index: 1; }
+
+/* Near layer — crisp, larger rise. Bottom-heavy on purpose: this is
+   where "more rocks at the bottom" lives — three of the five near
+   rocks sit below the 60% line, overlapping the lower edge of frame. */
+.hv2__rock--near img { opacity: 0.92; }
+.hv2__rock--near1 { top: 36%;   right: -4%; width: clamp(120px, 14vw, 210px); z-index: 5; }
+.hv2__rock--near2 { bottom: 0%;  right: 9%;  width: clamp(100px, 12vw, 180px); z-index: 5; }
+.hv2__rock--near3 { bottom: -8%; right: 13%; width: clamp(240px, 30vw, 460px); z-index: 5; }
+.hv2__rock--near4 { bottom: 2%;  left: 27%;  width: clamp(90px, 11vw, 160px);  z-index: 5; }
+.hv2__rock--near5 { bottom: 6%;  left: -3%;  width: clamp(110px, 13vw, 190px); z-index: 5; }
+
+/* Portrait */
+.hv2__portrait {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  right: 8%;
+  width: clamp(300px, 34vw, 560px);
+  transform: translateY(-50%);
+  will-change: transform;
+}
+.hv2__portrait-parallax,
+.hv2__portrait-float { will-change: transform; }
+.hv2__portrait-float { transform-style: preserve-3d; }
+.hv2__portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: lighten;
+  filter: contrast(1.04) saturate(0.96);
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   CONTENT
+   ────────────────────────────────────────────────────────────────── */
+.hv2__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+  max-width: 640px;
+  padding: var(--hv2-pad);
+  padding-top: clamp(120px, 16vh, 180px); /* clears the fixed global nav */
+}
+
+/* "Disponible para proyectos" — lives in the hero content now (the
+   global nav carries no status pill, keeping it lean on every page). */
+.hv2__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+  margin-bottom: 24px;
+}
+.hv2__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hv2-gold);
+  animation: hv2Pulse 2.6s ease-out infinite;
+}
+@keyframes hv2Pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(205,183,142,0.45); }
+  70%  { box-shadow: 0 0 0 8px rgba(205,183,142,0); }
+  100% { box-shadow: 0 0 0 0 rgba(205,183,142,0); }
+}
+
+.hv2__kicker {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+  margin-bottom: 28px;
+}
+
+/* Headline. Two caps lines in Fraunces, then one italic accent line —
+   sized down slightly from the English version (clamp max 5.6rem vs
+   6.4rem) because "EXPERIENCIAS" runs longer than "DIGITAL" did. */
+.hv2__title {
+  font-family: var(--hv2-font-display);
+  font-weight: 340;
+  font-size: clamp(2.6rem, 7.4vw, 5.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--hv2-ink);
+}
+.hv2__title-line { display: block; overflow: hidden; }
+.hv2__title-line > span { display: inline-block; transform: translateY(110%); }
+.hv2__title-script {
+  display: block;
+  font-style: italic;
+  font-weight: 380;
+  text-transform: none;
+  font-size: clamp(3rem, 8.8vw, 6.6rem);
+  color: var(--hv2-gold);
+  margin-top: -0.06em;
+}
+
+.hv2__desc {
+  max-width: 42ch;
+  margin-top: 28px;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--hv2-ink-dim);
+}
+
+.hv2__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(16px, 2vw, 28px);
+  margin-top: 44px;
+}
+
+/* Buttons — gold is the only fill colour in the hero, by design. */
+.hv2-btn {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+.hv2-btn--primary {
+  background: var(--hv2-gold);
+  color: #1a1611;
+  padding: 17px 30px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.4s var(--hv2-ease), transform 0.4s var(--hv2-ease);
+}
+.hv2-btn--primary:hover { background: #e3d2b3; }
+.hv2-btn--primary svg { transition: transform 0.4s var(--hv2-ease); }
+.hv2-btn--primary:hover svg { transform: translateX(4px); }
+
+.hv2-btn--ghost {
+  color: var(--hv2-ink);
+  padding: 17px 4px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--hv2-line);
+  transition: border-color 0.4s var(--hv2-ease), color 0.4s var(--hv2-ease);
+}
+.hv2-btn--ghost:hover { border-color: var(--hv2-ink-faint); color: var(--hv2-gold); }
+
+/* ──────────────────────────────────────────────────────────────────
+   SIDE DECORATIONS + ORIGIN BADGE
+   ────────────────────────────────────────────────────────────────── */
+.hv2__side {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-faint);
+}
+@media (min-width: 1024px) { .hv2__side { display: flex; } }
+
+.hv2__side--scroll {
+  left: 28px;
+  bottom: 56px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  align-items: center;
+  gap: 14px;
+}
+.hv2__side--scroll::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(to bottom, var(--hv2-ink-faint), transparent);
+}
+.hv2__side--tags {
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.hv2__badge {
+  position: absolute;
+  z-index: 10;
+  bottom: clamp(20px, 4vh, 48px);
+  right: clamp(20px, 4vw, 56px);
+  width: 116px;
+  height: 116px;
+}
+.hv2__badge svg { width: 100%; height: 100%; animation: hv2Spin 36s linear infinite; }
+.hv2__badge text {
+  font-family: var(--hv2-font-ui);
+  font-size: 8.4px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  fill: var(--hv2-ink-faint);
+}
+.hv2__badge-dot {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 8px; height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: var(--hv2-gold);
+}
+@media (max-width: 768px) { .hv2__badge { width: 84px; height: 84px; } }
+
+/* ──────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ────────────────────────────────────────────────────────────────── */
+@media (max-width: 1023px) {
+  .hv2__content { max-width: 100%; text-align: left; }
+  .hv2__portrait {
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: clamp(260px, 56vw, 420px);
+  }
+  .hv2__rock--near1 { right: 2%; }
+  .hv2__rock--near2,
+  .hv2__rock--near4 { display: none; }
+}
+
+@media (max-width: 767px) {
+  .hv2__content {
+    min-height: auto;
+    padding-top: clamp(100px, 22vh, 140px);
+    padding-bottom: 50vh; /* room for the portrait beneath */
+  }
+  .hv2__title        { font-size: clamp(2.2rem, 13vw, 3.2rem); }
+  .hv2__title-script { font-size: clamp(2.6rem, 15vw, 3.8rem); }
+  .hv2__desc { max-width: 100%; }
+
+  .hv2__rock--far1,
+  .hv2__rock--far2,
+  .hv2__rock--near5 { display: none; } /* far layer + one near dropped */
+
+  .hv2__portrait {
+    top: auto;
+    bottom: 4%;
+    right: 50%;
+    transform: translate(50%, 0);
+    width: clamp(220px, 64vw, 340px);
+  }
+  .hv2__rock--far3 {
+    bottom: -2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(240px, 80vw, 380px);
+  }
+  .hv2__rock--near1 {
+    top: auto;
+    bottom: 32%;
+    right: 4%;
+    width: clamp(90px, 24vw, 150px);
+  }
+  .hv2__rock--near3 {
+    right: -6%;
+    width: clamp(180px, 56vw, 320px);
+  }
+
+  .hv2__fog { width: 90vw; height: 90vw; top: 4%; right: -10%; }
+}
+
+/* ──────────────────────────────────────────────────────────────────
+   MOTION PREFERENCES
+   ────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hv2__fog,
+  .hv2__rings-dashed,
+  .hv2__badge svg,
+  .hv2__status-dot,
+  .hv2__particle {
+    animation: none !important;
+  }
+  .hv2__particles { display: none; }
+  .hv2__title-line > span { transform: none; }
 }
