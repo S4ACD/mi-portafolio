@@ -2077,7 +2077,7 @@ input, textarea {
 .hv2__title {
   font-family: var(--hv2-font-display);
   font-weight: 340;
-  font-size: clamp(2.6rem, 7.4vw, 5.6rem);
+  font-size: clamp(2.4rem, 6.4vw, 4.8rem);
   line-height: 1.05;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -2235,7 +2235,7 @@ input, textarea {
     padding-top: clamp(100px, 22vh, 140px);
     padding-bottom: 50vh; /* room for the portrait beneath */
   }
-  .hv2__title        { font-size: clamp(2.2rem, 13vw, 3.2rem); }
+  .hv2__title        { font-size: clamp(2rem, 11.5vw, 2.8rem); }
   .hv2__title-script { font-size: clamp(2.6rem, 15vw, 3.8rem); }
   .hv2__desc { max-width: 100%; }
 
