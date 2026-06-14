@@ -66,11 +66,8 @@
 }
 .about-hero__discover:hover .about-hero__discover-line { background: var(--hv2-gold); }
 
-/* Planeta dorado con anillos — reemplaza al retrato */
-.about-hero__planet-svg {
-  display: block;
-  width: 100%;
-  height: auto;
+/* Planeta dorado con anillos — foto real de Saturno (NASA/JPL, dominio público) */
+.about-hero__planet-img {
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
   animation: aboutPlanetGlow 6s ease-in-out infinite;
 }
@@ -113,7 +110,7 @@
   50%      { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .about-hero__planet-svg { animation: none; }
+  .about-hero__planet-img { animation: none; }
   .about-hero__sunburst { animation: none; opacity: 0.8; }
 }
 @media (max-width: 900px) {
