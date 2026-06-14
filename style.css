@@ -1922,7 +1922,7 @@ input, textarea {
 .hv2__rings {
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: calc(50% + 50px);
   right: 4%;
   width: min(74vw, 980px);
   height: min(74vw, 980px);
@@ -2002,7 +2002,7 @@ input, textarea {
 .hv2__portrait {
   position: absolute;
   z-index: 4;
-  top: 50%;
+  top: calc(50% + 50px);
   right: 11%;
   width: clamp(340px, 38vw, 620px);
   transform: translateY(-50%);
@@ -2895,10 +2895,8 @@ input, textarea {
   color: var(--text-muted);
 }
 .trabajo-filter--active {
-  padding: 8px 20px;
-  border: 1px solid var(--hv2-line);
-  border-radius: 100px;
   color: var(--hv2-ink);
+  font-weight: 600;
 }
 @media (max-width: 700px) {
   .trabajo-filters { display: none; }
