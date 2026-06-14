@@ -190,21 +190,20 @@
      box) for a calm, ambient "watching you" feel — intentionally tiny:
      ~10px of drift and ~1.5° of tilt at the screen edges.
      ════════════════════════════════════════════════════════════════ */
-  if (!coarsePointer) {
-    if (tiltEl) {
-      window.addEventListener('mousemove', function (e) {
-        var nx = (e.clientX / window.innerWidth - 0.5) * 2;  // -1 → 1
-        var ny = (e.clientY / window.innerHeight - 0.5) * 2; // -1 → 1
-        gsap.to(tiltEl, {
-          x: nx * 10,
-          y: ny * 8,
-          rotateY: nx * 1.6,
-          rotateX: -ny * 1.2,
-          duration: 1.1,
-          ease: 'power2.out'
-        });
+  var tiltEl = document.querySelector('.hv2__portrait-tilt');
+  if (tiltEl) {
+    window.addEventListener('mousemove', function (e) {
+      var nx = (e.clientX / window.innerWidth - 0.5) * 2;  // -1 → 1
+      var ny = (e.clientY / window.innerHeight - 0.5) * 2; // -1 → 1
+      gsap.to(tiltEl, {
+        x: nx * 10,
+        y: ny * 8,
+        rotateY: nx * 1.6,
+        rotateX: -ny * 1.2,
+        duration: 1.1,
+        ease: 'power2.out'
       });
-    }
+    });
   }
 
   /* ════════════════════════════════════════════════════════════════
