@@ -16,25 +16,178 @@
 </head>
 <body>
 
+  <!-- DEFINICIONES SVG — planeta con anillos + rocas con vetas doradas -->
+  <svg class="about-hero-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="aboutPlanet" viewBox="0 0 400 400">
+        <radialGradient id="aboutPlanetBody" cx="32%" cy="28%" r="78%">
+          <stop offset="0%" stop-color="#f6e7c4"/>
+          <stop offset="30%" stop-color="#d8bd8c"/>
+          <stop offset="62%" stop-color="#8a6336"/>
+          <stop offset="100%" stop-color="#1c1208"/>
+        </radialGradient>
+        <linearGradient id="aboutPlanetRing" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#cdb78e" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#f6e7c4" stop-opacity="0.95"/>
+          <stop offset="100%" stop-color="#cdb78e" stop-opacity="0"/>
+        </linearGradient>
+        <clipPath id="aboutPlanetClip"><circle cx="200" cy="200" r="100"/></clipPath>
+        <clipPath id="aboutPlanetRingFront">
+          <rect x="-100" y="205" width="600" height="300" transform="rotate(-14 200 205)"/>
+        </clipPath>
+
+        <g transform="rotate(-14 200 205)">
+          <ellipse cx="200" cy="205" rx="190" ry="44" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="9" opacity="0.55"/>
+          <ellipse cx="200" cy="205" rx="156" ry="32" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="4" opacity="0.4"/>
+        </g>
+
+        <circle cx="200" cy="200" r="100" fill="url(#aboutPlanetBody)"/>
+        <g clip-path="url(#aboutPlanetClip)" opacity="0.22">
+          <ellipse cx="195" cy="160" rx="100" ry="12" fill="#140d05"/>
+          <ellipse cx="205" cy="222" rx="100" ry="18" fill="#140d05"/>
+          <ellipse cx="195" cy="258" rx="100" ry="9" fill="#140d05"/>
+        </g>
+        <circle cx="200" cy="200" r="100" fill="none" stroke="#f6e7c4" stroke-width="0.75" opacity="0.35"/>
+
+        <g clip-path="url(#aboutPlanetRingFront)" transform="rotate(-14 200 205)">
+          <ellipse cx="200" cy="205" rx="190" ry="44" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="9" opacity="0.9"/>
+          <ellipse cx="200" cy="205" rx="156" ry="32" fill="none" stroke="url(#aboutPlanetRing)" stroke-width="4" opacity="0.7"/>
+        </g>
+
+        <circle cx="56" cy="86" r="3" fill="#f6e7c4"/>
+        <circle cx="340" cy="244" r="2" fill="#cdb78e"/>
+      </symbol>
+
+      <symbol id="aboutRockGoldA" viewBox="0 0 320 320">
+        <linearGradient id="aboutRockBodyA" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#2c2216"/>
+          <stop offset="55%" stop-color="#120d07"/>
+          <stop offset="100%" stop-color="#050403"/>
+        </linearGradient>
+        <path d="M60,300 L20,200 L40,100 L130,20 L240,10 L300,80 L290,180 L310,260 L220,310 Z" fill="url(#aboutRockBodyA)"/>
+        <path d="M40,100 L110,150 L90,230 L160,270" fill="none" stroke="#cdb78e" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+        <path d="M240,10 L210,90 L260,160 L225,250" fill="none" stroke="#f6e7c4" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+        <path d="M110,150 L60,175" fill="none" stroke="#cdb78e" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
+        <circle cx="110" cy="150" r="3" fill="#f6e7c4"/>
+        <circle cx="160" cy="270" r="2.5" fill="#cdb78e"/>
+        <circle cx="260" cy="160" r="2" fill="#f6e7c4"/>
+      </symbol>
+
+      <symbol id="aboutRockGoldB" viewBox="0 0 420 240">
+        <linearGradient id="aboutRockBodyB" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#251c11"/>
+          <stop offset="55%" stop-color="#100b06"/>
+          <stop offset="100%" stop-color="#050403"/>
+        </linearGradient>
+        <path d="M0,170 L50,90 L140,40 L240,15 L340,40 L420,100 L420,240 L0,240 Z" fill="url(#aboutRockBodyB)"/>
+        <path d="M50,90 L110,130 L170,100 L230,150 L310,118" fill="none" stroke="#cdb78e" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+        <path d="M240,15 L275,80 L245,140" fill="none" stroke="#f6e7c4" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+        <path d="M110,130 L75,168" fill="none" stroke="#cdb78e" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+        <circle cx="110" cy="130" r="3" fill="#f6e7c4"/>
+        <circle cx="230" cy="150" r="2.5" fill="#cdb78e"/>
+        <circle cx="275" cy="80" r="2" fill="#f6e7c4"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- HERO -->
-  <section class="about-hero">
-    <canvas id="heroCanvas" class="hero__canvas"></canvas>
-    <div class="container about-hero__inner">
-      <a href="../" class="back-link reveal-up">
+  <section class="about-hero hv2" id="aboutHero">
+
+    <!-- LAYER 01 — fondo -->
+    <div class="hv2__bg" aria-hidden="true"></div>
+    <div class="hv2__grain" aria-hidden="true"></div>
+
+    <!-- LAYER 02 — niebla -->
+    <div class="hv2__fog" aria-hidden="true"></div>
+
+    <!-- LAYER 02.5 — partículas (estrellas doradas + cyan), generadas en hero.js -->
+    <div class="hv2__particles" id="hv2Particles" aria-hidden="true"></div>
+
+    <!-- LAYER 03 — anillos + destello orbital -->
+    <svg class="hv2__rings" viewBox="0 0 200 200" aria-hidden="true">
+      <defs>
+        <path id="hv2GlintPath" d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" />
+      </defs>
+      <circle cx="100" cy="100" r="99" />
+      <circle cx="100" cy="100" r="78" />
+      <circle class="hv2__rings-dashed" cx="100" cy="100" r="60" />
+      <circle class="hv2__glint-tail" r="9">
+        <animateMotion dur="15s" begin="-0.6s" repeatCount="indefinite">
+          <mpath href="#hv2GlintPath" />
+        </animateMotion>
+      </circle>
+      <circle class="hv2__glint-mid" r="4.5">
+        <animateMotion dur="15s" begin="-0.3s" repeatCount="indefinite">
+          <mpath href="#hv2GlintPath" />
+        </animateMotion>
+      </circle>
+      <circle class="hv2__glint-core" r="2.2">
+        <animateMotion dur="15s" repeatCount="indefinite">
+          <mpath href="#hv2GlintPath" />
+        </animateMotion>
+      </circle>
+    </svg>
+
+    <!-- destello tipo "sol" -->
+    <div class="about-hero__sunburst" aria-hidden="true"></div>
+
+    <!-- LAYERS 04–06 — rocas doradas + planeta -->
+    <div class="hv2__stage" id="hv2Stage" aria-hidden="true">
+
+      <div class="hv2__rock hv2__rock--far hv2__rock--far1"
+           data-rise="22" data-float-y="10" data-float-rot="3" data-duration="11">
+        <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+          <svg class="about-hero__rock-svg" viewBox="0 0 320 320" aria-hidden="true"><use href="#aboutRockGoldA"/></svg>
+        </div></div>
+      </div>
+
+      <div class="hv2__rock hv2__rock--near hv2__rock--near3"
+           data-rise="90" data-float-y="16" data-float-rot="3" data-duration="10">
+        <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+          <svg class="about-hero__rock-svg" viewBox="0 0 420 240" aria-hidden="true"><use href="#aboutRockGoldB"/></svg>
+        </div></div>
+      </div>
+
+      <div class="hv2__rock hv2__rock--near hv2__rock--near5 hv2__rock--flip"
+           data-rise="48" data-float-y="14" data-float-rot="-4" data-duration="9">
+        <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+          <svg class="about-hero__rock-svg" viewBox="0 0 320 320" aria-hidden="true"><use href="#aboutRockGoldA"/></svg>
+        </div></div>
+      </div>
+
+      <!-- planeta dorado con anillos -->
+      <div class="hv2__portrait about-hero__planet" id="hv2Portrait"
+           data-rise="18" data-float-y="16" data-float-rot="2" data-duration="9">
+        <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
+          <svg class="about-hero__planet-svg" viewBox="0 0 400 400" aria-hidden="true"><use href="#aboutPlanet"/></svg>
+        </div></div></div>
+      </div>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="hv2__content">
+      <a href="../" class="back-link" data-reveal>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M19 12H5M12 5l-7 7 7 7"/>
         </svg>
         Volver al inicio
       </a>
-      <p class="eyebrow reveal-up" style="--delay:.1s">SOBRE MÍ</p>
-      <h1 class="about-hero__title reveal-up" style="--delay:.18s">
-        La persona<br/>detrás del<span class="hero__dot">.</span><br/>
-        <span class="about-hero__accent">trabajo</span><span class="hero__dot">.</span>
+      <p class="eyebrow" data-reveal>SOBRE MÍ</p>
+      <h1 class="about-hero__title">
+        <span class="hv2__title-line"><span>La persona</span></span>
+        <span class="hv2__title-line"><span><em>detrás</em> del trabajo<span class="hero__dot">.</span></span></span>
       </h1>
-      <p class="about-hero__sub reveal-up" style="--delay:.28s">
-        Diseñador, desarrollador y estratega visual.<br class="br-desktop"/> Todo en uno.
+      <p class="about-hero__sub" data-reveal>
+        Diseñador, desarrollador y estratega visual.<br class="br-desktop"/>
+        <span class="about-hero__sub-accent">Todo en uno.</span>
       </p>
+      <a href="#aboutContent" class="about-hero__discover" data-reveal data-magnetic>
+        Descubrir mi universo
+        <span class="about-hero__discover-line" aria-hidden="true"></span>
+      </a>
     </div>
+
     <div class="about-hero__scroll">
       <span>scroll</span>
       <div class="hero__scroll-line"></div>
@@ -42,7 +195,7 @@
   </section>
 
   <!-- BLOQUES DE CONTENIDO -->
-  <div class="about-content">
+  <div class="about-content" id="aboutContent">
 
     <!-- ORIGEN -->
     <section class="about-block container">
@@ -159,6 +312,9 @@
   </section>
 
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="../hero.js"></script>
   <script src="../nav.js"></script>
   <script src="script.js"></script>
 </body>
