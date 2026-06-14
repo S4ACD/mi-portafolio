@@ -1921,9 +1921,9 @@ input, textarea {
   position: absolute;
   z-index: 2;
   top: 50%;
-  right: 6%;
-  width: min(70vw, 920px);
-  height: min(70vw, 920px);
+  right: 4%;
+  width: min(74vw, 980px);
+  height: min(74vw, 980px);
   transform: translateY(-50%);
   overflow: visible;
   pointer-events: none;
@@ -2001,11 +2001,14 @@ input, textarea {
   position: absolute;
   z-index: 4;
   top: 50%;
-  right: 8%;
-  width: clamp(300px, 34vw, 560px);
+  right: 11%;
+  width: clamp(340px, 38vw, 620px);
   transform: translateY(-50%);
   will-change: transform;
 }
+/* New: subtle cursor-follow layer, sits between the static position and
+   the scroll-rise/idle-float layers so it never fights their transforms */
+.hv2__portrait-tilt { will-change: transform; }
 .hv2__portrait-parallax,
 .hv2__portrait-float { will-change: transform; }
 .hv2__portrait-float { transform-style: preserve-3d; }
@@ -2080,7 +2083,7 @@ input, textarea {
   color: var(--hv2-ink);
 }
 .hv2__title-line { display: block; overflow: hidden; }
-.hv2__title-line > span { display: inline-block; transform: translateY(110%); }
+.hv2__title-line > span { display: inline-block; }
 .hv2__title-script {
   display: block;
   font-style: italic;
@@ -2275,3 +2278,191 @@ input, textarea {
   .hv2__particles { display: none; }
   .hv2__title-line > span { transform: none; }
 }
+
+
+/* ════════════════════════════════════════════════════════════════════
+   SITE v3 — extending the hero's editorial language to the rest of
+   the homepage (Servicios → Footer).
+
+   STRATEGY: redefine the base tokens (--bg, --bg-card, --border,
+   --border-hover, --text, --text-muted, --cyan-dim, --cyan-glow) to
+   the hero's warm void/ink/gold values. Every shared component below
+   — cards, chips, testimonials, FAQ, forms, the proceso steps —
+   already reads from these tokens, so they inherit the new look for
+   free. var(--cyan) ITSELF is left untouched (#00e5e5) — the hero's
+   orbital glint + particles still depend on it. What follows after
+   the token block is the short list of places that used var(--cyan)
+   directly as a UI accent (not via the tokens above); those switch to
+   var(--hv2-gold) individually, plus Fraunces for display numerals,
+   quote marks and headings.
+   ════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            var(--hv2-void);
+  --bg-card:       var(--hv2-void-soft);
+  --bg-card-hover: #181410;
+  --border:        var(--hv2-line);
+  --border-hover:  rgba(205,183,142,0.4);
+
+  --text:          var(--hv2-ink);
+  --text-muted:    var(--hv2-ink-dim);
+  --text-faint:    rgba(244,239,230,0.16);
+
+  --cyan-dim:      rgba(205,183,142,0.10);
+  --cyan-glow:     0 0 32px rgba(205,183,142,0.35), 0 0 70px rgba(205,183,142,0.10);
+}
+
+/* Eyebrows — Space Grotesk, wide gold tracking, matches .hv2__kicker */
+.eyebrow {
+  font-family: var(--hv2-font-ui);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  color: var(--hv2-gold);
+}
+
+/* Section titles — Fraunces, same weight as the hero headline */
+.section__title,
+.cta-section__title {
+  font-family: var(--hv2-font-display);
+  font-weight: 380;
+  letter-spacing: -0.01em;
+}
+
+/* The pulsing "." at the end of several titles — gold instead of cyan */
+.hero__dot { color: var(--hv2-gold); }
+@keyframes dotPulse {
+  0%,100% { text-shadow: 0 0 6px rgba(205,183,142,0.6), 0 0 20px rgba(205,183,142,0.3); transform: scale(1); opacity: 1; }
+  45%  { text-shadow: 0 0 18px rgba(205,183,142,1), 0 0 40px rgba(205,183,142,0.6), 0 0 80px rgba(205,183,142,0.2); transform: scale(1.15); opacity: 1; }
+  50%  { text-shadow: 0 0 4px rgba(205,183,142,0.3); transform: scale(0.9); opacity: 0.6; }
+  55%  { text-shadow: 0 0 18px rgba(205,183,142,1), 0 0 40px rgba(205,183,142,0.6); transform: scale(1.1); opacity: 1; }
+}
+
+/* ── Buttons — pill shape, tracked uppercase Space Grotesk, gold primary */
+.btn {
+  font-family: var(--hv2-font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  border-radius: 999px;
+}
+.btn--cyan { background: var(--hv2-gold); color: #1a1611; }
+.btn--cyan:hover { background: #e3d2b3; box-shadow: var(--cyan-glow); transform: translateY(-2px); }
+.btn--ghost:hover { color: var(--hv2-gold); }
+
+/* ── Display headings — Fraunces across cards, projects, testimonials,
+   contact info and FAQ questions */
+.card__title,
+.card__project-title,
+.proceso-step__title,
+.testimonial-card__name,
+.contact-info-card__value,
+.faq-item__question {
+  font-family: var(--hv2-font-display);
+  font-weight: 500;
+}
+
+/* ── Service cards */
+.card__icon svg { color: var(--hv2-gold); }
+.card--service:hover .card__icon {
+  background: rgba(205,183,142,0.18);
+  box-shadow: 0 0 16px rgba(205,183,142,0.25);
+}
+
+/* ── Project cards */
+.card__overlay { background: var(--hv2-gold); }
+.tag--cyan { border-color: rgba(205,183,142,0.25); color: var(--hv2-gold); }
+.card__thumb::before {
+  font-family: var(--hv2-font-ui);
+  letter-spacing: 0.14em;
+  background: rgba(5,5,4,0.75);
+  border-color: rgba(205,183,142,0.35);
+  color: var(--hv2-ink);
+}
+
+/* ── Proceso — numerals become italic Fraunces in gold */
+.proceso-section { background: var(--hv2-void-soft); }
+.proceso-step:hover {
+  border-color: rgba(205,183,142,0.2);
+  box-shadow: 0 0 24px rgba(205,183,142,0.06);
+}
+.proceso-step__num {
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  font-weight: 380;
+  color: var(--hv2-gold);
+  opacity: 0.45;
+}
+.proceso-step:hover .proceso-step__num { opacity: 0.85; }
+
+/* ── About — logros + tech chips */
+.logro-card { border-left-color: var(--hv2-gold); }
+.logro-numero {
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  font-weight: 380;
+  color: var(--hv2-gold);
+}
+.tech-chip svg { color: var(--hv2-gold); }
+.tech-chip:hover {
+  color: var(--hv2-gold);
+  box-shadow: 0 0 12px rgba(205,183,142,0.15);
+}
+
+/* ── Testimonials */
+.testimonial-card__quote {
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  font-weight: 380;
+  color: var(--hv2-gold);
+  opacity: 0.55;
+}
+.testimonial-card__avatar {
+  background: linear-gradient(135deg, rgba(205,183,142,0.18) 0%, rgba(205,183,142,0.05) 100%);
+  border-color: rgba(205,183,142,0.35);
+  color: var(--hv2-gold);
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  box-shadow: 0 0 18px rgba(205,183,142,0.12);
+}
+.testimonial-card__empresa { color: var(--hv2-gold); }
+.testimonials__btn:hover { color: var(--hv2-gold); }
+.testimonials__dot--active,
+.testimonials__dot--active::after {
+  background: var(--hv2-gold);
+  box-shadow: 0 0 8px rgba(205,183,142,0.5);
+}
+
+/* ── FAQ */
+.faq-item[open] { border-color: rgba(205,183,142,0.25); }
+.faq-item[open] .faq-item__question { color: var(--hv2-gold); }
+.faq-item[open] .faq-item__icon { border-color: var(--hv2-gold); }
+.faq-item[open] .faq-item__icon::before,
+.faq-item[open] .faq-item__icon::after { background: var(--hv2-gold); }
+
+/* ── Contact form + aside */
+.contact-section { background: var(--hv2-void-soft); }
+.form-input:focus {
+  border-color: rgba(205,183,142,0.4);
+  box-shadow: 0 0 0 3px rgba(205,183,142,0.08);
+}
+.form-feedback--success {
+  color: var(--hv2-gold);
+  background: rgba(205,183,142,0.08);
+  border-color: rgba(205,183,142,0.25);
+}
+.calendly-link { border-color: rgba(205,183,142,0.3); color: var(--hv2-gold); }
+.calendly-link:hover { background: rgba(205,183,142,0.06); border-color: var(--hv2-gold); }
+.contact-aside__note a { color: rgba(205,183,142,0.7); }
+.contact-aside__note a:hover { color: var(--hv2-gold); }
+
+/* ── Final CTA glow */
+.cta-section::before { background: radial-gradient(ellipse, rgba(205,183,142,0.06) 0%, transparent 65%); }
+
+/* ── Footer + drawer email link */
+.footer__privacy:hover,
+.footer__links a:hover,
+.nav__drawer-email:hover { color: var(--hv2-gold); }
+
+/* ── Top scroll-progress bar */
+.scroll-progress { background: linear-gradient(90deg, var(--hv2-gold), rgba(205,183,142,0.4)); }
