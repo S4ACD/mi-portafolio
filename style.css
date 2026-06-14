@@ -3404,7 +3404,8 @@ input, textarea {
   gap: 60px;
   align-items: start;
 }
-.faq-aside { position: relative; }
+.faq-section { position: relative; overflow: hidden; }
+.faq-aside { position: relative; min-height: 640px; }
 .faq-aside__lede {
   font-size: 1rem;
   color: var(--text-muted);
@@ -3482,9 +3483,9 @@ input, textarea {
 /* Bottom-right corner rock, clear of the orbit */
 .faq-section__rock {
   position: absolute;
-  right: -30px;
-  top: 660px;
-  width: 220px;
+  right: -20px;
+  top: 480px;
+  width: 160px;
   z-index: 0;
   pointer-events: none;
 }
