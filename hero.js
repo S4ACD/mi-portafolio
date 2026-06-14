@@ -44,7 +44,7 @@
      ════════════════════════════════════════════════════════════════ */
   (function setupParticles() {
     var container = document.getElementById('hv2Particles');
-    if (!container || reduceMotion) return;
+    if (!container) return;
 
     var count = window.innerWidth < 768 ? 22 : 50;
     var frag = document.createDocumentFragment();
@@ -206,8 +206,7 @@
      box) for a calm, ambient "watching you" feel — intentionally tiny:
      ~10px of drift and ~1.5° of tilt at the screen edges.
      ════════════════════════════════════════════════════════════════ */
-  if (!reduceMotion && !coarsePointer) {
-    var tiltEl = document.querySelector('.hv2__portrait-tilt');
+  if (!coarsePointer) {
     if (tiltEl) {
       window.addEventListener('mousemove', function (e) {
         var nx = (e.clientX / window.innerWidth - 0.5) * 2;  // -1 → 1
