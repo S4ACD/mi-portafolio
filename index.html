@@ -444,23 +444,50 @@
     </section>
 
     <!-- ═══ PROYECTOS ═══ -->
-    <section class="section" id="trabajo">
+    <!-- ═══ TRABAJO ═══ -->
+    <section class="section trabajo-section" id="trabajo">
+      <svg class="trabajo-section__orbit-tl" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="trabajo-section__orbit-ring" cx="100" cy="100" r="92"/>
+        <circle class="trabajo-section__orbit-ring trabajo-section__orbit-ring--dashed" cx="100" cy="100" r="68"/>
+        <circle class="trabajo-section__orbit-dot" cx="100" cy="8" r="3"/>
+        <circle class="trabajo-section__orbit-dot trabajo-section__orbit-dot--sm" cx="16" cy="116" r="2"/>
+      </svg>
+      <div class="trabajo-section__rock" aria-hidden="true">
+        <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
+      </div>
       <div class="container">
-        <p class="eyebrow">TRABAJO SELECCIONADO</p>
-        <h2 class="section__title">Proyectos</h2>
+        <div class="trabajo-header">
+          <div class="trabajo-header__text">
+            <p class="eyebrow">TRABAJO SELECCIONADO</p>
+            <h2 class="trabajo-header__title">Proyectos que <em>hablan</em> por sí solos.</h2>
+            <p class="trabajo-header__lede">Diseño, estrategia y ejecución visual para marcas que quieren destacar.</p>
+          </div>
+          <div class="trabajo-filters" aria-hidden="true">
+            <span class="trabajo-filters__label">Áreas</span>
+            <span class="trabajo-filter trabajo-filter--active">Todos</span>
+            <span class="trabajo-filter">Branding</span>
+            <span class="trabajo-filter">Sitios Web</span>
+            <span class="trabajo-filter">Identidad Visual</span>
+            <span class="trabajo-filter">Estrategia</span>
+          </div>
+        </div>
         <div class="projects__grid">
 
           <a href="/trabajo/orbidental/" class="card card--project scroll-reveal">
             <div class="card__thumb">
               <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental" loading="lazy" />
               <div class="card__overlay"></div>
+              <span class="card__num">01</span>
             </div>
             <div class="card__meta">
               <h3 class="card__project-title">Rediseño web — Orbidental</h3>
-              <div class="card__tags">
-                <span class="tag tag--cyan">Web</span>
-                <span class="tag">SEO técnico</span>
-                <span class="tag">PageSpeed 97</span>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--cyan">Web</span>
+                  <span class="tag">SEO técnico</span>
+                  <span class="tag">PageSpeed 97</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
               </div>
             </div>
           </a>
@@ -469,12 +496,16 @@
             <div class="card__thumb">
               <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781033141/Fachada_hkwn2i.png" alt="Fueggo" loading="lazy" />
               <div class="card__overlay"></div>
+              <span class="card__num">02</span>
             </div>
             <div class="card__meta">
               <h3 class="card__project-title">Fueggo — Identidad visual</h3>
-              <div class="card__tags">
-                <span class="tag tag--cyan">Branding</span>
-                <span class="tag">Restaurante</span>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--cyan">Branding</span>
+                  <span class="tag">Restaurante</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
               </div>
             </div>
           </a>
@@ -483,12 +514,16 @@
             <div class="card__thumb">
               <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034073/Fachada_msspsi.png" alt="La Jungla Club" loading="lazy" />
               <div class="card__overlay"></div>
+              <span class="card__num">03</span>
             </div>
             <div class="card__meta">
               <h3 class="card__project-title">La Jungla Club — Identidad visual</h3>
-              <div class="card__tags">
-                <span class="tag tag--cyan">Branding</span>
-                <span class="tag">Discoteca</span>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--cyan">Branding</span>
+                  <span class="tag">Discoteca</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
               </div>
             </div>
           </a>
@@ -497,12 +532,16 @@
             <div class="card__thumb">
               <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034468/Fachada_w69uxq.png" alt="Rebel Street" loading="lazy" />
               <div class="card__overlay"></div>
+              <span class="card__num">04</span>
             </div>
             <div class="card__meta">
               <h3 class="card__project-title">Rebel Street — Identidad visual</h3>
-              <div class="card__tags">
-                <span class="tag tag--cyan">Branding</span>
-                <span class="tag">Streetwear</span>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--cyan">Branding</span>
+                  <span class="tag">Streetwear</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
               </div>
             </div>
           </a>
@@ -514,16 +553,33 @@
                 <div style="font-size:10px;color:var(--text-muted);margin-top:4px;letter-spacing:.1em">MARKETING AGENCY</div>
               </div>
               <div class="card__overlay"></div>
+              <span class="card__num">05</span>
             </div>
             <div class="card__meta">
               <h3 class="card__project-title">Pulse Digital — Landing page</h3>
-              <div class="card__tags">
-                <span class="tag tag--cyan">Web</span>
-                <span class="tag">English</span>
-                <span class="tag">Live site</span>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--cyan">Web</span>
+                  <span class="tag">English</span>
+                  <span class="tag">Live site</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
               </div>
             </div>
           </a>
+
+          <div class="card card--cta scroll-reveal" style="--reveal-delay: 0.5s">
+            <svg class="card--cta__orbit" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="card--cta__orbit-ring" cx="50" cy="50" r="44"/>
+              <circle class="card--cta__orbit-dot" cx="50" cy="6" r="2.5"/>
+            </svg>
+            <p class="card--cta__text">Cada proyecto es único,<br>pero el objetivo es el mismo:</p>
+            <p class="card--cta__highlight">Impactar. Conectar. Convertir.</p>
+            <a href="/trabajo/" class="card--cta__link">
+              Ver todos los proyectos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
 
         </div>
       </div>
