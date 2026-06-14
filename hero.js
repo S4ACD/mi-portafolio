@@ -4,17 +4,17 @@
 
    DESIGN PRINCIPLE: everything is visible/correct in CSS by default.
    JS only ever ANIMATES from a hidden/offset state INTO that default
-   (via gsap.from), never the other way around. If GSAP, ScrollTrigger
-   or Lenis fail to load for any reason, the hero still renders fully —
-   just without the motion layer.
+   (via gsap.from), never the other way around. If GSAP or ScrollTrigger
+   fail to load for any reason, the hero still renders fully — just
+   without the motion layer. Scrolling itself is native (no smooth-
+   scroll library) — ScrollTrigger reads it directly.
 
      0. Dust + star particles      (pure DOM/CSS — runs even without GSAP)
-     1. Lenis smooth-scroll        (skipped: touch, reduced-motion)
-     2. Intro reveal timeline      (skipped: reduced-motion → instant)
-     3. Idle "zero-gravity" float  (skipped: reduced-motion)
-     4. Scroll "rise" parallax     (skipped: reduced-motion)
-     5. Cursor-follow on portrait  (skipped: touch, reduced-motion)
-     6. Magnetic CTAs               (skipped: touch, reduced-motion)
+     1. Intro reveal timeline      (skipped: reduced-motion → instant)
+     2. Idle "zero-gravity" float  (skipped: reduced-motion)
+     3. Scroll "rise" parallax     (skipped: reduced-motion)
+     4. Cursor-follow on portrait  (skipped: touch)
+     5. Magnetic CTAs               (skipped: touch, reduced-motion)
 
    Everything animates `transform` / `opacity` / `filter` only —
    compositor-friendly, no layout thrash.
@@ -89,23 +89,7 @@
   gsap.registerPlugin(ScrollTrigger);
 
   /* ════════════════════════════════════════════════════════════════
-     1. LENIS — SMOOTH SCROLL
-     ════════════════════════════════════════════════════════════════ */
-  var lenis = null;
-  if (!reduceMotion && !coarsePointer && window.Lenis) {
-    lenis = new Lenis({
-      duration: 0.45,
-      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
-      smoothWheel: true,
-      smoothTouch: false
-    });
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
-    gsap.ticker.lagSmoothing(0);
-  }
-
-  /* ════════════════════════════════════════════════════════════════
-     2. INTRO REVEAL — gsap.from()
+     1. INTRO REVEAL — gsap.from()
      Every group below is fully visible/normal in CSS already.
      gsap.from() captures that as the "to" state and animates FROM an
      offset/hidden state INTO it — so if this timeline never runs (or
@@ -125,7 +109,7 @@
   }
 
   /* ════════════════════════════════════════════════════════════════
-     3. IDLE FLOAT — "suspended in zero gravity"
+     2. IDLE FLOAT — "suspended in zero gravity"
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion) {
     var mobile = window.innerWidth < 768;
@@ -162,7 +146,7 @@
   }
 
   /* ════════════════════════════════════════════════════════════════
-     4. SCROLL "RISE" PARALLAX + DEPTH-OF-FIELD BLUR
+     3. SCROLL "RISE" PARALLAX + DEPTH-OF-FIELD BLUR
      Each `.hv2__rock` / `.hv2__portrait` carries `data-rise` (px). Its
      `*-parallax` child rises by that amount over the hero's own scroll
      range — fully reversible via `scrub: true`. Rocks also pick up a
@@ -198,7 +182,7 @@
   }
 
   /* ════════════════════════════════════════════════════════════════
-     5. CURSOR-FOLLOW — portrait drifts very slightly toward the cursor
+     4. CURSOR-FOLLOW — portrait drifts very slightly toward the cursor
      A separate transform layer (`.hv2__portrait-tilt`) so it never
      fights the idle float (section 3) or the scroll-rise (section 4),
      which live on the nested `-float` / `-parallax` children. Reads
@@ -224,7 +208,7 @@
   }
 
   /* ════════════════════════════════════════════════════════════════
-     6. MAGNETIC CTAs
+     5. MAGNETIC CTAs
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion && !coarsePointer) {
     hero.querySelectorAll('[data-magnetic]').forEach(function (el) {
