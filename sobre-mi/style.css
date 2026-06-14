@@ -66,10 +66,13 @@
 }
 .about-hero__discover:hover .about-hero__discover-line { background: var(--hv2-gold); }
 
-/* Planeta dorado con anillos — foto real de Saturno (NASA/JPL, dominio público) */
+/* Planeta dorado con anillos — foto real de Saturno (NASA/JPL, dominio público).
+   mask-image disuelve el rectángulo de la foto hacia los bordes. */
 .about-hero__planet-img {
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
   animation: aboutPlanetGlow 6s ease-in-out infinite;
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, #000 55%, transparent 100%);
+          mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, #000 55%, transparent 100%);
 }
 @keyframes aboutPlanetGlow {
   0%, 100% { filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15)); }
@@ -77,14 +80,18 @@
 }
 
 /* Rocas con brillo dorado (fotos: .hv2__rock img ya trae mix-blend-mode, flip, dim/blur).
-   Rotamos el tono naranja de la lava hacia dorado/ámbar para que combine con la paleta. */
+   Rotamos el tono naranja de la lava hacia dorado/ámbar, y un mask radial las convierte
+   en "manchas de brillo" sin rectángulo visible. */
 .hv2__rock .about-hero__rock-img {
   filter: contrast(1.1) saturate(0.85) hue-rotate(-18deg) brightness(1.05);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 75%);
 }
 .hv2__rock--far .about-hero__rock-img {
   filter: contrast(1.1) saturate(0.85) hue-rotate(-18deg) brightness(1.05) blur(1px);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 75%);
 }
- */
 
 /* Destello tipo "sol" con rayos */
 .about-hero__sunburst {
