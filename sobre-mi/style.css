@@ -67,31 +67,61 @@
 .about-hero__discover:hover .about-hero__discover-line { background: var(--hv2-gold); }
 
 /* Planeta dorado con anillos — foto real de Saturno (NASA/JPL, dominio público).
-   mask-image disuelve el rectángulo de la foto hacia los bordes. */
-.about-hero__planet-img {
+   El "viñeteado" pinta los bordes del mismo color que el fondo de la página,
+   eliminando el rectángulo sin depender de mask-image. */
+.about-hero__planet-frame {
+  position: relative;
+  display: block;
+}
+.hv2__portrait .about-hero__planet-img {
+  display: block;
+  width: 100%;
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
   animation: aboutPlanetGlow 6s ease-in-out infinite;
-  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, #000 55%, transparent 100%);
-          mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, #000 55%, transparent 100%);
+}
+.about-hero__planet-vignette {
+  position: absolute;
+  inset: -2px;
+  pointer-events: none;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, transparent 42%, var(--hv2-void) 100%);
 }
 @keyframes aboutPlanetGlow {
   0%, 100% { filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15)); }
   50%      { filter: drop-shadow(0 0 70px rgba(205,183,142,0.5)) drop-shadow(0 0 130px rgba(205,183,142,0.22)); }
 }
 
-/* Rocas con brillo dorado (fotos: .hv2__rock img ya trae mix-blend-mode, flip, dim/blur).
-   Rotamos el tono naranja de la lava hacia dorado/ámbar, y un mask radial las convierte
-   en "manchas de brillo" sin rectángulo visible. */
-.hv2__rock .about-hero__rock-img {
-  filter: contrast(1.1) saturate(0.85) hue-rotate(-18deg) brightness(1.05);
-  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 75%);
-          mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 75%);
+/* Rocas → esferas de brillo dorado/ámbar 100% CSS (sin fotos, sin rectángulos).
+   Mismo slot, mismo parallax/flotación; chispas que titilan con hv2Twinkle. */
+.about-hero__glow-orb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
 }
-.hv2__rock--far .about-hero__rock-img {
-  filter: contrast(1.1) saturate(0.85) hue-rotate(-18deg) brightness(1.05) blur(1px);
-  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 75%);
-          mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 30%, transparent 75%);
+.about-hero__glow-orb {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  filter: blur(22px);
 }
+.about-hero__glow-orb--gold {
+  background: radial-gradient(circle, rgba(246,231,196,0.55) 0%, rgba(205,183,142,0.24) 45%, transparent 75%);
+}
+.about-hero__glow-orb--amber {
+  background: radial-gradient(circle, rgba(243,200,140,0.5) 0%, rgba(205,183,142,0.2) 45%, transparent 75%);
+}
+.about-hero__glow-spark {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--hv2-ink);
+  box-shadow: 0 0 10px 3px rgba(246,231,196,0.85);
+  animation: hv2Twinkle 4s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+.hv2__rock--far .about-hero__glow-orb-wrap { opacity: 0.6; }
 
 /* Destello tipo "sol" con rayos */
 .about-hero__sunburst {
