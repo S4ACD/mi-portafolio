@@ -281,43 +281,72 @@
     </section>
 
     <!-- ═══ SERVICIOS ═══ -->
-    <section class="section" id="servicios">
+    <section class="section services-section" id="servicios">
+      <div class="services-section__decor" aria-hidden="true">
+        <img class="services-section__rock" src="/assets/rocks/rock-03.webp" alt="" width="174" height="320" loading="lazy" decoding="async" />
+        <svg class="services-section__rings" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="92" />
+          <circle class="services-section__rings-dashed" cx="100" cy="100" r="68" />
+        </svg>
+      </div>
       <div class="container">
         <p class="eyebrow">SERVICIOS</p>
         <h2 class="section__title">Qué puedo hacer por ti</h2>
-        <div class="services__grid">
 
-          <article class="card card--service scroll-reveal">
-            <div class="card__icon">
+        <div class="services-list">
+
+          <article class="service-row scroll-reveal">
+            <div class="service-row__num">
+              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
+              <span class="service-row__num-dot" aria-hidden="true"></span>
+              <span>01</span>
+            </div>
+            <div class="service-row__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="3" y="3" width="18" height="18" rx="2"/>
                 <path d="M3 9h18M9 21V9"/>
               </svg>
             </div>
-            <h3 class="card__title">Diseño web</h3>
-            <p class="card__text">Sitios rápidos, bonitos y que venden. Construidos con HTML, CSS y WordPress.</p>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Diseño web</h3>
+              <p class="service-row__text">Sitios rápidos, bonitos y que venden. Construidos con HTML, CSS y WordPress.</p>
+            </div>
           </article>
 
-          <article class="card card--service scroll-reveal" style="--reveal-delay: 0.1s">
-            <div class="card__icon">
+          <article class="service-row scroll-reveal" style="--reveal-delay: 0.08s">
+            <div class="service-row__num">
+              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
+              <span class="service-row__num-dot" aria-hidden="true"></span>
+              <span>02</span>
+            </div>
+            <div class="service-row__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="5" y="2" width="14" height="20" rx="2"/>
                 <circle cx="12" cy="17" r="1"/>
               </svg>
             </div>
-            <h3 class="card__title">Social media design</h3>
-            <p class="card__text">Contenido visual para redes que para el scroll y genera conversación.</p>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Social media design</h3>
+              <p class="service-row__text">Contenido visual para redes que para el scroll y genera conversación.</p>
+            </div>
           </article>
 
-          <article class="card card--service scroll-reveal" style="--reveal-delay: 0.2s">
-            <div class="card__icon">
+          <article class="service-row scroll-reveal" style="--reveal-delay: 0.16s">
+            <div class="service-row__num">
+              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
+              <span class="service-row__num-dot" aria-hidden="true"></span>
+              <span>03</span>
+            </div>
+            <div class="service-row__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
                 <circle cx="12" cy="13" r="4"/>
               </svg>
             </div>
-            <h3 class="card__title">Fotografía de producto</h3>
-            <p class="card__text">Imágenes que muestran el valor real de lo que vendes.</p>
+            <div class="service-row__body">
+              <h3 class="service-row__title">Fotografía de producto</h3>
+              <p class="service-row__text">Imágenes que muestran el valor real de lo que vendes.</p>
+            </div>
           </article>
 
         </div>
@@ -329,38 +358,34 @@
       <div class="container">
         <p class="eyebrow">CÓMO TRABAJO</p>
         <h2 class="section__title">Del brief al resultado<span class="hero__dot">.</span></h2>
-        <div class="proceso-grid">
+        <div class="proceso-timeline">
 
           <div class="proceso-step scroll-reveal">
             <span class="proceso-step__num">01</span>
-            <div class="proceso-step__body">
-              <h3 class="proceso-step__title">Hablamos</h3>
-              <p class="proceso-step__text">Una llamada de 20 minutos o un formulario corto. Me cuentas qué necesitas, quién es tu cliente y qué quieres lograr. Sin decks, sin reuniones eternas — con eso es suficiente para entender si somos un buen match.</p>
-            </div>
+            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
+            <h3 class="proceso-step__title">Hablamos</h3>
+            <p class="proceso-step__text">Una llamada de 20 minutos o un formulario corto. Me cuentas qué necesitas, quién es tu cliente y qué quieres lograr. Sin decks, sin reuniones eternas — con eso es suficiente para entender si somos un buen match.</p>
           </div>
 
-          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.1s">
+          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.08s">
             <span class="proceso-step__num">02</span>
-            <div class="proceso-step__body">
-              <h3 class="proceso-step__title">Propuesta en 48 h</h3>
-              <p class="proceso-step__text">En menos de dos días te llega un documento con el alcance exacto: qué incluye, qué no incluye, tiempos de entrega y precio. Lo revisamos juntos y ajustamos lo que haga falta antes de firmar.</p>
-            </div>
+            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
+            <h3 class="proceso-step__title">Propuesta en 48 h</h3>
+            <p class="proceso-step__text">En menos de dos días te llega un documento con el alcance exacto: qué incluye, qué no incluye, tiempos de entrega y precio. Lo revisamos juntos y ajustamos lo que haga falta antes de firmar.</p>
           </div>
 
-          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.2s">
+          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.16s">
             <span class="proceso-step__num">03</span>
-            <div class="proceso-step__body">
-              <h3 class="proceso-step__title">Producción con visibilidad</h3>
-              <p class="proceso-step__text">No desaparezco dos semanas y aparezco con algo terminado. Trabajo en entregas parciales para que veas el avance real, puedas opinar a tiempo y el resultado final no sea una sorpresa.</p>
-            </div>
+            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
+            <h3 class="proceso-step__title">Producción con visibilidad</h3>
+            <p class="proceso-step__text">No desaparezco dos semanas y aparezco con algo terminado. Trabajo en entregas parciales para que veas el avance real, puedas opinar a tiempo y el resultado final no sea una sorpresa.</p>
           </div>
 
-          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.3s">
+          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.24s">
             <span class="proceso-step__num">04</span>
-            <div class="proceso-step__body">
-              <h3 class="proceso-step__title">Listo para usar</h3>
-              <p class="proceso-step__text">Archivos organizados, código limpio y todo lo que necesitas para tomar el proyecto desde ahí. Sin dependencias de mi parte. Y si en los primeros 7 días necesitas un ajuste, lo resolvemos sin costo extra.</p>
-            </div>
+            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
+            <h3 class="proceso-step__title">Listo para usar</h3>
+            <p class="proceso-step__text">Archivos organizados, código limpio y todo lo que necesitas para tomar el proyecto desde ahí. Sin dependencias de mi parte. Y si en los primeros 7 días necesitas un ajuste, lo resolvemos sin costo extra.</p>
           </div>
 
         </div>
