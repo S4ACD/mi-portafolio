@@ -2727,6 +2727,14 @@ input, textarea {
 .enfoque-section__orbit-dot { fill: var(--hv2-gold); }
 .enfoque-section__orbit-dot--sm { fill: var(--hv2-ink); opacity: 0.6; }
 
+.enfoque-section__orbit--secondary {
+  top: 8%;
+  right: -35px;
+  width: 110px;
+  height: 110px;
+  transform: none;
+}
+
 @media (max-width: 700px) {
   .enfoque-section { flex-direction: column; min-height: 0; }
   .enfoque-section__visual { flex: 0 0 200px; width: 100%; }
