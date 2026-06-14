@@ -3455,8 +3455,8 @@ input, textarea {
 .faq-section__rock {
   position: absolute;
   left: -60px;
-  bottom: -40px;
-  width: 280px;
+  top: 440px;
+  width: 260px;
   z-index: 0;
   pointer-events: none;
 }
