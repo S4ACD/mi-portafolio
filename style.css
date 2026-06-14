@@ -3451,12 +3451,40 @@ input, textarea {
   50%      { opacity: 0.35; transform: scale(1.4); }
 }
 
-/* Bottom-left rock */
+/* Star field — fills the empty space around the orbit/rock */
+.faq-section__stars {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.faq-section__star {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--hv2-ink);
+  box-shadow: 0 0 6px rgba(244,239,230,0.5);
+  animation: hv2Twinkle var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+.faq-section__star--gold {
+  background: var(--hv2-gold);
+  box-shadow: 0 0 6px rgba(205,183,142,0.55);
+}
+.faq-section__star--cyan {
+  background: var(--cyan);
+  box-shadow: 0 0 6px rgba(0,229,229,0.5);
+}
+
+/* Bottom-right corner rock, clear of the orbit */
 .faq-section__rock {
   position: absolute;
-  left: -60px;
-  top: 440px;
-  width: 260px;
+  right: -30px;
+  top: 660px;
+  width: 220px;
   z-index: 0;
   pointer-events: none;
 }
@@ -3511,7 +3539,7 @@ input, textarea {
 
 @media (max-width: 900px) {
   .faq-grid { grid-template-columns: 1fr; gap: 40px; }
-  .faq-section__orbit, .faq-section__rock { display: none; }
+  .faq-section__orbit, .faq-section__rock, .faq-section__stars { display: none; }
 }
 @media (max-width: 700px) {
   .faq-item__planet { display: none; }
@@ -3520,4 +3548,5 @@ input, textarea {
 }
 @media (prefers-reduced-motion: reduce) {
   .faq-section__orbit-glow { animation: none; opacity: 0.14; }
+  .faq-section__star { animation: none; opacity: 0.4; }
 }
