@@ -3078,10 +3078,10 @@ input, textarea {
 /* Top-left orbit — rotating dashed ring + a dot traveling the outer ring */
 .about-header__orbit {
   position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 200px;
-  height: 200px;
+  top: -90px;
+  left: -90px;
+  width: 340px;
+  height: 340px;
   z-index: 0;
   pointer-events: none;
 }
@@ -3116,6 +3116,33 @@ input, textarea {
 }
 .about-section__rock--l { bottom: -40px; left: -50px; width: clamp(180px, 20vw, 300px); }
 .about-section__rock--r { bottom: -50px; right: -60px; width: clamp(180px, 20vw, 280px); }
+
+/* Constellation star field */
+.about-section__stars {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.about-section__star {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--hv2-ink);
+  box-shadow: 0 0 6px rgba(244,239,230,0.5);
+  animation: hv2Twinkle var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+.about-section__star--gold {
+  background: var(--hv2-gold);
+  box-shadow: 0 0 6px rgba(205,183,142,0.55);
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-section__star { animation: none; opacity: 0.4; }
+}
 
 @media (max-width: 700px) {
   .about-header__orbit,
