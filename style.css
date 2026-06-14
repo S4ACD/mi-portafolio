@@ -1605,54 +1605,53 @@ input, textarea {
 }
 .testimonial-card__empresa:hover { opacity: 0.75; }
 
-/* ── PROCESO DE TRABAJO ── */
+/* ── PROCESO DE TRABAJO — línea de tiempo horizontal ── */
 .proceso-section { background: var(--bg); }
-.proceso-grid {
+.proceso-timeline {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
 }
-@media (max-width: 640px) {
-  .proceso-grid { grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+  .proceso-timeline { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 2rem; }
 }
-.proceso-step {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  padding: 1.75rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.proceso-step:hover {
-  border-color: rgba(0,229,229,0.2);
-  box-shadow: 0 0 24px rgba(0,229,229,0.05);
+@media (max-width: 560px) {
+  .proceso-timeline { grid-template-columns: 1fr; gap: 2.25rem; }
 }
 .proceso-step__num {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 700;
-  color: var(--cyan);
-  opacity: 0.25;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
   line-height: 1;
-  flex-shrink: 0;
-  width: 3rem;
-  transition: opacity 0.3s ease;
+  display: block;
+  margin-bottom: 1rem;
 }
-.proceso-step:hover .proceso-step__num { opacity: 0.6; }
-.proceso-step__body { flex: 1; }
+.proceso-step__track {
+  position: relative;
+  height: 1px;
+  background: var(--border);
+  margin: 0 0 1.5rem;
+}
+.proceso-step__dot {
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 13px; height: 13px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--hv2-gold);
+  box-sizing: border-box;
+}
 .proceso-step__title {
   font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 0.5rem;
 }
 .proceso-step__text {
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   line-height: 1.6;
 }
@@ -2386,18 +2385,12 @@ input, textarea {
 
 /* ── Proceso — numerals become italic Fraunces in gold */
 .proceso-section { background: var(--hv2-void-soft); }
-.proceso-step:hover {
-  border-color: rgba(205,183,142,0.2);
-  box-shadow: 0 0 24px rgba(205,183,142,0.06);
-}
 .proceso-step__num {
   font-family: var(--hv2-font-display);
   font-style: italic;
   font-weight: 380;
   color: var(--hv2-gold);
-  opacity: 0.45;
 }
-.proceso-step:hover .proceso-step__num { opacity: 0.85; }
 
 /* ── About — logros + tech chips */
 .logro-card { border-left-color: var(--hv2-gold); }
@@ -2470,3 +2463,149 @@ input, textarea {
 
 /* ── Top scroll-progress bar */
 .scroll-progress { background: linear-gradient(90deg, var(--hv2-gold), rgba(205,183,142,0.4)); }
+
+
+/* ════════════════════════════════════════════════════════════════════
+   SERVICIOS v3 — numbered rows (replaces the 3-card grid)
+   Same titles/descriptions as before, restructured into rows with a
+   ring-framed numeral + icon on the left. Corner decoration reuses an
+   existing hero rock asset (already cached) + two static SVG rings —
+   no new image requests, no animation, so it costs almost nothing.
+   ════════════════════════════════════════════════════════════════════ */
+.services-section { position: relative; overflow: hidden; }
+
+.services-section__decor {
+  position: absolute;
+  top: -8%;
+  right: -4%;
+  width: clamp(200px, 24vw, 360px);
+  z-index: 0;
+  pointer-events: none;
+}
+.services-section__rock {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: lighten;
+  opacity: 0.7;
+  filter: contrast(1.05);
+}
+.services-section__rings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 130%;
+  transform: translate(-15%, -15%);
+  overflow: visible;
+}
+.services-section__rings circle {
+  fill: none;
+  stroke: var(--hv2-line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.services-section__rings-dashed {
+  stroke: var(--hv2-gold-dim);
+  stroke-dasharray: 2 14;
+}
+
+.services-list {
+  position: relative;
+  z-index: 1;
+  margin-top: 2.5rem;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 96px 48px 1fr;
+  align-items: center;
+  gap: 28px;
+  padding: 2.5rem 0;
+}
+.service-row + .service-row { border-top: 1px solid var(--hv2-line); }
+.service-row:first-of-type { padding-top: 0.5rem; }
+.service-row:last-of-type { padding-bottom: 0.5rem; }
+
+/* Ring-framed numeral */
+.service-row__num {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-row__ring {
+  position: absolute;
+  inset: 0;
+  fill: none;
+  stroke: var(--hv2-line);
+  stroke-width: 1;
+}
+.service-row__num-dot {
+  position: absolute;
+  left: 2px;
+  bottom: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--hv2-gold);
+}
+.service-row__num span:last-child {
+  position: relative;
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  font-weight: 380;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  color: var(--hv2-gold);
+}
+
+/* Icon */
+.service-row__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: rgba(205,183,142,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.service-row__icon svg { width: 22px; height: 22px; color: var(--hv2-gold); }
+.service-row:hover .service-row__icon {
+  background: rgba(205,183,142,0.16);
+  box-shadow: 0 0 16px rgba(205,183,142,0.2);
+}
+
+/* Title + text */
+.service-row__title {
+  font-family: var(--hv2-font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--hv2-ink);
+  margin-bottom: 6px;
+}
+.service-row__text {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 52ch;
+}
+
+@media (max-width: 700px) {
+  .services-section__decor { width: 150px; top: -5%; }
+  .service-row {
+    grid-template-columns: 64px 1fr;
+    grid-template-areas:
+      "num  icon"
+      "body body";
+    gap: 16px 18px;
+    padding: 1.75rem 0;
+  }
+  .service-row__num { grid-area: num; width: 64px; height: 64px; }
+  .service-row__num span:last-child { font-size: 1.6rem; }
+  .service-row__icon { grid-area: icon; justify-self: end; }
+  .service-row__body { grid-area: body; }
+}
