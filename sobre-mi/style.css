@@ -79,18 +79,7 @@
   50%      { filter: drop-shadow(0 0 70px rgba(205,183,142,0.5)) drop-shadow(0 0 130px rgba(205,183,142,0.22)); }
 }
 
-/* Rocas con vetas doradas */
-.about-hero__rock-svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 0 14px rgba(205,183,142,0.3));
-}
-.hv2__rock--far .about-hero__rock-svg {
-  opacity: 0.6;
-  filter: drop-shadow(0 0 14px rgba(205,183,142,0.25)) blur(1px);
-}
-.hv2__rock--flip .about-hero__rock-svg { transform: scaleX(-1); }
+/* Rocas con brillo dorado (fotos: .hv2__rock img ya trae mix-blend-mode, flip, dim/blur) */
 
 /* Destello tipo "sol" con rayos */
 .about-hero__sunburst {
