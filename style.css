@@ -1406,7 +1406,7 @@ input, textarea {
   flex-shrink: 0;
   width: 4.5rem;
 }
-.logro-text { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.logro-text { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; flex: 1; }
 .logro-label {
   font-family: var(--font-body);
   font-size: 0.7rem;
@@ -3036,4 +3036,149 @@ input, textarea {
   .trabajo-section__rock {
     display: none;
   }
+}
+
+
+/* ════════════════════════════════════════════════════════════════════
+   SOBRE MÍ — header, orbit, highlights, logro icons + timeline
+   ════════════════════════════════════════════════════════════════════ */
+.about-section { position: relative; overflow: hidden; }
+
+.about-header__title {
+  font-family: var(--hv2-font-display);
+  font-weight: 380;
+  font-size: clamp(1.9rem, 4.2vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--hv2-ink);
+  margin-bottom: 1.25rem;
+}
+.about-header__title em {
+  font-style: italic;
+  color: var(--hv2-gold);
+}
+.about-header__line {
+  position: relative;
+  height: 1px;
+  max-width: 540px;
+  background: var(--hv2-line);
+  margin-bottom: 3rem;
+}
+.about-header__line-dot {
+  position: absolute;
+  right: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hv2-gold);
+}
+
+/* Top-left orbit — rotating dashed ring + a dot traveling the outer ring */
+.about-header__orbit {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  z-index: 0;
+  pointer-events: none;
+}
+.about-header__orbit-ring {
+  fill: none;
+  stroke: var(--hv2-line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.about-header__orbit-ring--dashed {
+  stroke: var(--hv2-gold-dim);
+  stroke-dasharray: 2 12;
+  transform-origin: 80px 80px;
+  animation: hv2Spin 70s linear infinite;
+}
+.about-header__orbit-center { fill: var(--hv2-ink); }
+.about-header__orbit-dot { fill: var(--hv2-gold); }
+
+/* Corner rocks */
+.about-section__rock {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+.about-section__rock img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: lighten;
+  opacity: 0.55;
+  filter: contrast(1.05);
+}
+.about-section__rock--l { bottom: -40px; left: -50px; width: clamp(180px, 20vw, 300px); }
+.about-section__rock--r { bottom: -50px; right: -60px; width: clamp(180px, 20vw, 280px); }
+
+@media (max-width: 700px) {
+  .about-header__orbit,
+  .about-section__rock { display: none; }
+  .about-header__line { max-width: 100%; }
+}
+
+/* Bio keyword highlights */
+.about__hl { color: var(--hv2-ink); font-weight: 600; }
+.about__hl-gold { color: var(--hv2-gold); font-weight: 600; }
+
+/* Logro timeline — vertical line + a dot per card */
+.logros-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+.logros-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: var(--hv2-line);
+}
+.logro-card { position: relative; }
+.logro-card::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hv2-gold);
+}
+
+/* Logro icon — dashed ring + glyph */
+.logro-icon {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logro-icon__ring {
+  position: absolute;
+  inset: 0;
+  fill: none;
+  stroke: var(--hv2-line);
+  stroke-width: 1;
+  stroke-dasharray: 2 6;
+}
+.logro-icon__glyph {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  color: var(--hv2-gold);
+}
+
+@media (max-width: 480px) {
+  .logro-icon { display: none; }
 }
