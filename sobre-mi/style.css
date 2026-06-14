@@ -4,7 +4,7 @@
 ═══════════════════════════════════════════════════════════════ */
 
 /* Nav link activo */
-.nav__link--active { color: var(--cyan) !important; }
+.nav__link--active { color: #cdb78e !important; }
 
 /* ── BACK LINK ── */
 .back-link {
@@ -16,47 +16,119 @@
   margin-bottom: 28px;
   transition: color var(--transition), gap var(--transition);
 }
-.back-link:hover { color: var(--cyan); gap: 12px; }
+.back-link:hover { color: var(--hv2-gold); gap: 12px; }
 
-/* ── HERO ── */
-.about-hero {
-  min-height: 92svh;
-  display: flex;
-  align-items: center;
-  padding: 120px 0 80px;
-  position: relative;
-  overflow: hidden;
-}
-.about-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,229,229,0.04) 0%, transparent 70%),
-    linear-gradient(to bottom, transparent 70%, var(--bg) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-.about-hero__inner { position: relative; z-index: 2; }
+/* ── HERO — capas heredadas de .hv2, ajustes propios abajo ── */
+.about-hero-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 .about-hero__title {
-  font-family: var(--font-display);
-  font-size: clamp(3rem, 9vw, 7rem);
-  font-weight: 700;
-  line-height: 1.0;
-  letter-spacing: -0.04em;
-  color: #fff;
+  font-family: var(--hv2-font-display);
+  font-weight: 340;
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--hv2-ink);
   margin-bottom: 24px;
 }
-.about-hero__accent {
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(0,229,229,0.5);
+.about-hero__title em {
+  font-style: italic;
+  font-weight: 380;
+  color: var(--hv2-gold);
 }
 .about-hero__sub {
+  font-family: var(--hv2-font-body);
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: var(--text-muted);
+  color: var(--hv2-ink-dim);
   line-height: 1.7;
-  max-width: 480px;
+  max-width: 460px;
+  margin-bottom: 40px;
+}
+.about-hero__sub-accent { color: var(--hv2-gold); font-weight: 500; }
+
+/* "Descubrir mi universo" — CTA con línea inferior */
+.about-hero__discover {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+  font-family: var(--hv2-font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hv2-gold);
+}
+.about-hero__discover-line {
+  width: 100%;
+  height: 1px;
+  background: var(--hv2-gold-dim);
+  transition: background var(--transition);
+}
+.about-hero__discover:hover .about-hero__discover-line { background: var(--hv2-gold); }
+
+/* Planeta dorado con anillos — reemplaza al retrato */
+.about-hero__planet-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
+  animation: aboutPlanetGlow 6s ease-in-out infinite;
+}
+@keyframes aboutPlanetGlow {
+  0%, 100% { filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15)); }
+  50%      { filter: drop-shadow(0 0 70px rgba(205,183,142,0.5)) drop-shadow(0 0 130px rgba(205,183,142,0.22)); }
+}
+
+/* Rocas con vetas doradas */
+.about-hero__rock-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 14px rgba(205,183,142,0.3));
+}
+.hv2__rock--far .about-hero__rock-svg {
+  opacity: 0.6;
+  filter: drop-shadow(0 0 14px rgba(205,183,142,0.25)) blur(1px);
+}
+.hv2__rock--flip .about-hero__rock-svg { transform: scaleX(-1); }
+
+/* Destello tipo "sol" con rayos */
+.about-hero__sunburst {
+  position: absolute;
+  z-index: 3;
+  top: 24%;
+  left: 44%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hv2-gold);
+  box-shadow:
+    0 0 20px 6px rgba(246,231,196,0.9),
+    0 0 60px 20px rgba(205,183,142,0.45),
+    0 0 120px 50px rgba(205,183,142,0.16);
+  animation: aboutSunPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+.about-hero__sunburst::before,
+.about-hero__sunburst::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(to right, transparent, rgba(246,231,196,0.45), transparent);
+}
+.about-hero__sunburst::before { width: 240px; height: 1px; transform: translate(-50%, -50%); }
+.about-hero__sunburst::after  { width: 1px; height: 240px; transform: translate(-50%, -50%); }
+@keyframes aboutSunPulse {
+  0%, 100% { opacity: 0.65; }
+  50%      { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-hero__planet-svg { animation: none; }
+  .about-hero__sunburst { animation: none; opacity: 0.8; }
+}
+@media (max-width: 900px) {
+  .about-hero__sunburst { display: none; }
 }
 .about-hero__scroll {
   position: absolute;
@@ -67,8 +139,11 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  z-index: 2;
+  z-index: 10;
   animation: fadeInUp 1s 1s both;
+}
+.about-hero__scroll .hero__scroll-line {
+  background: linear-gradient(to bottom, var(--hv2-gold), transparent);
 }
 .about-hero__scroll span {
   font-size: 10px;
