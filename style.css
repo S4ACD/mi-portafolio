@@ -2638,8 +2638,13 @@ input, textarea {
 
 /* ════════════════════════════════════════════════════════════════════
    ENFOQUE — rock lit from below in gold, headline alongside
-   Reuses an existing hero rock asset (already cached); the glow is a
-   single static radial-gradient layer — no extra requests, no JS.
+   The rock crop still has black background on part of it; rather than
+   fight that, .enfoque-section's own background is a warm dark-gold
+   gradient, so where the rock is "lightened" away it picks up that
+   same warm tone instead of looking like a void. A second, tighter
+   screen-blend glow sits at the base of the rock for the lit-from-
+   below highlight. Orbit decoration is static SVG + two tiny
+   <animateMotion> dots — negligible cost, same technique as the hero.
    ════════════════════════════════════════════════════════════════════ */
 .enfoque-section {
   display: flex;
@@ -2647,7 +2652,7 @@ input, textarea {
   min-height: 280px;
   position: relative;
   overflow: hidden;
-  background: var(--hv2-void-soft);
+  background: radial-gradient(ellipse 65% 85% at 8% 100%, #2b1d0f 0%, var(--hv2-void-soft) 62%);
 }
 .enfoque-section__visual {
   position: relative;
@@ -2659,20 +2664,21 @@ input, textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 30% 80%;
   mix-blend-mode: lighten;
-  filter: contrast(1.05);
+  filter: contrast(1.1) brightness(0.95);
 }
 .enfoque-section__glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 70% at 18% 95%, rgba(205,183,142,0.55) 0%, transparent 62%);
+  background: radial-gradient(circle at 14% 96%, rgba(226,193,132,0.95) 0%, rgba(205,183,142,0.4) 28%, transparent 60%);
   mix-blend-mode: screen;
   pointer-events: none;
 }
 .enfoque-section__content {
   flex: 1;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2696,9 +2702,35 @@ input, textarea {
   line-height: 1.6;
 }
 
+/* Orbit decoration — right edge, partially cut off */
+.enfoque-section__orbit {
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+.enfoque-section__orbit-ring {
+  fill: none;
+  stroke: rgba(244,239,230,0.12);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.enfoque-section__orbit-ring--dashed {
+  stroke: var(--hv2-gold-dim);
+  stroke-dasharray: 2 10;
+}
+.enfoque-section__orbit-dot { fill: var(--hv2-gold); }
+.enfoque-section__orbit-dot--sm { fill: var(--hv2-ink); opacity: 0.6; }
+
 @media (max-width: 700px) {
   .enfoque-section { flex-direction: column; min-height: 0; }
   .enfoque-section__visual { flex: 0 0 200px; width: 100%; }
+  .enfoque-section__orbit { display: none; }
 }
 
 /* ════════════════════════════════════════════════════════════════════
@@ -2707,8 +2739,8 @@ input, textarea {
 .proceso-section { position: relative; overflow: hidden; }
 .proceso-section__decor {
   position: absolute;
-  bottom: -18%;
-  right: -3%;
+  bottom: -40px;
+  right: -30px;
   width: clamp(140px, 16vw, 230px);
   z-index: 0;
   pointer-events: none;
@@ -2720,5 +2752,8 @@ input, textarea {
   mix-blend-mode: lighten;
   opacity: 0.6;
   filter: contrast(1.05);
+}
+@media (max-width: 700px) {
+  .proceso-section__decor { display: none; }
 }
 .proceso-section .container { position: relative; z-index: 1; }
