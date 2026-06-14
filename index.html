@@ -99,8 +99,8 @@
   <!-- Fuentes — no bloqueantes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
@@ -109,161 +109,175 @@
   <main>
 
     <!-- ═══ HERO ═══ -->
-    <section class="hero" id="inicio">
-      <canvas id="heroCanvas" class="hero__canvas"></canvas>
+    <section class="hv2" id="inicio">
 
-      <!-- Ambiente: orbes de luz difusa -->
-      <div class="hero__orb hero__orb--cyan" aria-hidden="true"></div>
-      <div class="hero__orb hero__orb--purple" aria-hidden="true"></div>
-      <div class="hero__orb hero__orb--mid" aria-hidden="true"></div>
+      <!-- LAYER 01 — fondo -->
+      <div class="hv2__bg" aria-hidden="true"></div>
+      <div class="hv2__grain" aria-hidden="true"></div>
 
-      <!-- Rejilla de fondo decorativa -->
-      <div class="hero__grid" aria-hidden="true"></div>
+      <!-- LAYER 02 — niebla -->
+      <div class="hv2__fog" aria-hidden="true"></div>
 
-      <!-- Líneas decorativas laterales -->
-      <div class="hero__side-deco hero__side-deco--left" aria-hidden="true">
-        <span class="hero__side-line"></span>
-        <span class="hero__side-tag">UX — UI — DEV</span>
-        <span class="hero__side-line"></span>
-      </div>
-      <div class="hero__side-deco hero__side-deco--right" aria-hidden="true">
-        <span class="hero__side-line"></span>
-        <span class="hero__side-tag">BOGOTÁ — 2025</span>
-        <span class="hero__side-line"></span>
-      </div>
+      <!-- LAYER 02.5 — partículas (polvo + estrellas), generadas en hero.js -->
+      <div class="hv2__particles" id="hv2Particles" aria-hidden="true"></div>
 
-      <div class="hero__inner container">
+      <!-- LAYER 03 — anillos + destello orbital -->
+      <svg class="hv2__rings" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <path id="hv2GlintPath" d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" />
+        </defs>
+        <circle cx="100" cy="100" r="99" />
+        <circle cx="100" cy="100" r="78" />
+        <circle class="hv2__rings-dashed" cx="100" cy="100" r="60" />
 
-        <!-- Badge de disponibilidad -->
-        <div class="hero__top-row">
-          <span class="hero__badge">
-            <span class="hero__badge-dot"></span>
-            Disponible para proyectos
-          </span>
-          <span class="hero__counter" aria-hidden="true">
-            <span class="hero__counter-num">03</span>
-            <span class="hero__counter-slash">/</span>
-            <span class="hero__counter-total">06</span>
-          </span>
+        <!-- Destello orbital: cometa cyan con cola de luz, mismo trazado
+             que el anillo punteado pero con su propio recorrido (15s) -->
+        <circle class="hv2__glint-tail" r="9">
+          <animateMotion dur="15s" begin="-0.6s" repeatCount="indefinite">
+            <mpath href="#hv2GlintPath" />
+          </animateMotion>
+        </circle>
+        <circle class="hv2__glint-mid" r="4.5">
+          <animateMotion dur="15s" begin="-0.3s" repeatCount="indefinite">
+            <mpath href="#hv2GlintPath" />
+          </animateMotion>
+        </circle>
+        <circle class="hv2__glint-core" r="2.2">
+          <animateMotion dur="15s" repeatCount="indefinite">
+            <mpath href="#hv2GlintPath" />
+          </animateMotion>
+        </circle>
+      </svg>
+
+      <!-- LAYERS 04–06 — rocas + retrato -->
+      <div class="hv2__stage" id="hv2Stage" aria-hidden="true">
+
+        <!-- rocas lejanas: opacas, desenfocadas, suben poco -->
+        <div class="hv2__rock hv2__rock--far hv2__rock--far1"
+             data-rise="22" data-float-y="10" data-float-rot="3" data-duration="11">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--far hv2__rock--far2"
+             data-rise="30" data-float-y="12" data-float-rot="-4" data-duration="13">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-02.webp" alt="" width="320" height="300" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--far hv2__rock--far3 hv2__rock--flip"
+             data-rise="26" data-float-y="8" data-float-rot="2" data-duration="12">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
+          </div></div>
         </div>
 
-        <!-- Bloque central: avatar + columnas de texto -->
-        <div class="hero__center">
+        <!-- retrato -->
+        <div class="hv2__portrait" id="hv2Portrait"
+             data-rise="18" data-float-y="16" data-float-rot="0" data-duration="9">
+          <div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
+            <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781396255/Escultura_de_Alexander_ykbpww.png"
+                 alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada"
+                 width="1024" height="1536" fetchpriority="high" decoding="async" />
+          </div></div>
+        </div>
 
-          <!-- Columna izquierda: texto principal -->
-          <div class="hero__col hero__col--left">
-            <p class="hero__eyebrow">
-              <span class="hero__eyebrow-line"></span>
-              Designer &amp; Developer
-            </p>
-            <h1 class="hero__title">
-              <span class="hero__title-name">Alexander</span>
-              <span class="hero__title-last">Caro<span class="hero__dot">.</span></span>
-            </h1>
-            <p class="hero__desc">
-              El diseñador que también programa.<br>
-              El desarrollador que también diseña.
-            </p>
-            <div class="hero__actions">
-              <a href="#trabajo" class="btn btn--cyan">Ver mi trabajo</a>
-              <a href="#contacto-form" class="btn btn--ghost">Hablemos</a>
-            </div>
+        <!-- rocas cercanas: nítidas, concentradas abajo, suben más rápido -->
+        <div class="hv2__rock hv2__rock--near hv2__rock--near1"
+             data-rise="56" data-float-y="18" data-float-rot="5" data-duration="8">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-01.webp" alt="" width="270" height="226" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--near hv2__rock--near2"
+             data-rise="64" data-float-y="22" data-float-rot="-6" data-duration="9">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-03.webp" alt="" width="174" height="320" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--near hv2__rock--near3"
+             data-rise="90" data-float-y="16" data-float-rot="3" data-duration="10">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--near hv2__rock--near4 hv2__rock--flip"
+             data-rise="70" data-float-y="20" data-float-rot="-5" data-duration="7">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-01.webp" alt="" width="270" height="226" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--near hv2__rock--near5 hv2__rock--flip"
+             data-rise="48" data-float-y="14" data-float-rot="4" data-duration="9">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
 
-            <!-- Stats integrados en la columna izquierda -->
-            <div class="hero__stats-row">
-              <div class="hero__stat-item">
-                <span class="hero__stat-num">15<span class="hero__stat-plus">+</span></span>
-                <span class="hero__stat-label">Proyectos<br>completados</span>
-              </div>
-              <div class="hero__stat-divider" aria-hidden="true"></div>
-              <div class="hero__stat-item">
-                <span class="hero__stat-num">100<span class="hero__stat-plus">%</span></span>
-                <span class="hero__stat-label">Clientes<br>satisfechos</span>
-              </div>
-              <div class="hero__stat-divider" aria-hidden="true"></div>
-              <div class="hero__stat-item">
-                <span class="hero__stat-num">3<span class="hero__stat-plus">+</span></span>
-                <span class="hero__stat-label">Años de<br>experiencia</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna central: avatar -->
-          <div class="hero__col hero__col--center">
-            <div class="hero__stage" id="heroAvatarRow">
-              <div class="hero__frame-wrap" id="heroTiltTarget">
-
-                <!-- Anillos de neón pulsantes -->
-                <div class="hero__ring hero__ring--cyan" aria-hidden="true"></div>
-                <div class="hero__ring hero__ring--purple" aria-hidden="true"></div>
-
-                <!-- Tarjeta glassmorphism -->
-                <div class="hero__glass">
-                  <img
-                    class="hero__avatar"
-                    src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781371543/ChatGPT_Image_13_jun_2026__12_22_42_p.m.-removebg-preview_wb5jtf.png"
-                    alt="Alexander Caro — Designer & Developer"
-                    width="420" height="520"
-                    fetchpriority="high"
-                    draggable="false"
-                  />
-                  <div class="hero__avatar-fade" aria-hidden="true"></div>
-                  <div class="hero__scanline" aria-hidden="true"></div>
-                  <!-- Circuito decorativo overlay -->
-                  <div class="hero__circuit" aria-hidden="true"></div>
-                </div>
-
-                <!-- Esquinas HUD -->
-                <div class="hero__corner hero__corner--tl" aria-hidden="true"></div>
-                <div class="hero__corner hero__corner--tr" aria-hidden="true"></div>
-                <div class="hero__corner hero__corner--bl" aria-hidden="true"></div>
-                <div class="hero__corner hero__corner--br" aria-hidden="true"></div>
-
-                <!-- Etiqueta HUD inferior -->
-                <div class="hero__hud-tag" aria-hidden="true">
-                  <span class="hero__hud-dot"></span>
-                  <span>ID_001 — CARO.AC</span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna derecha: info lateral -->
-          <div class="hero__col hero__col--right">
-            <div class="hero__right-block">
-              <p class="hero__right-label">Stack principal</p>
-              <ul class="hero__tech-list">
-                <li><span class="hero__tech-dot hero__tech-dot--cyan"></span>HTML / CSS</li>
-                <li><span class="hero__tech-dot hero__tech-dot--cyan"></span>JavaScript</li>
-                <li><span class="hero__tech-dot hero__tech-dot--purple"></span>UI / UX Design</li>
-                <li><span class="hero__tech-dot hero__tech-dot--purple"></span>Identidad Visual</li>
-              </ul>
-            </div>
-
-            <div class="hero__right-block">
-              <p class="hero__right-label">Disponibilidad</p>
-              <div class="hero__availability">
-                <span class="hero__avail-dot"></span>
-                <span>Freelance activo</span>
-              </div>
-              <p class="hero__avail-note">Respuesta en &lt; 24h</p>
-            </div>
-
-            <div class="hero__right-block hero__right-block--code">
-              <p class="hero__right-label">Filosofía</p>
-              <p class="hero__quote">"Diseño que convierte.<br>Código que vuela."</p>
-            </div>
-          </div>
-
-        </div><!-- /.hero__center -->
-
-      </div><!-- /.hero__inner -->
-
-      <div class="hero__scroll-hint">
-        <span>scroll</span>
-        <div class="hero__scroll-line"></div>
       </div>
+
+      <!-- CONTENIDO -->
+      <div class="hv2__content">
+        <span class="hv2__status" data-reveal>
+          <span class="hv2__status-dot" aria-hidden="true"></span>
+          Disponible para proyectos
+        </span>
+
+        <p class="hv2__kicker" data-reveal>Alexander Caro — Diseñador &amp; Desarrollador</p>
+
+        <h1 class="hv2__title">
+          <span class="hv2__title-line"><span>Creando</span></span>
+          <span class="hv2__title-line"><span>Experiencias</span></span>
+          <span class="hv2__title-script" data-reveal>Digitales</span>
+        </h1>
+
+        <p class="hv2__desc" data-reveal>
+          Diseño y desarrollo marcas, sitios web y productos digitales — uniendo
+          diseño, frontend y estrategia en un mismo proceso, sin intermediarios,
+          con resultados que conectan, convierten y duran.
+        </p>
+
+        <div class="hv2__actions" data-reveal>
+          <a href="/trabajo/" class="hv2-btn hv2-btn--primary" data-magnetic>
+            Ver trabajo seleccionado
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="/sobre-mi/" class="hv2-btn hv2-btn--ghost" data-magnetic>
+            Conóceme
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- decoraciones laterales -->
+      <div class="hv2__side hv2__side--scroll" data-reveal>
+        <span>Desliza para explorar</span>
+      </div>
+      <div class="hv2__side hv2__side--tags" data-reveal>
+        <span>Branding</span>
+        <span>Diseño Web</span>
+        <span>Frontend</span>
+      </div>
+
+      <!-- insignia -->
+      <div class="hv2__badge" data-reveal>
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <path id="hv2BadgePath" d="M60,60 m0,-52 a52,52 0 1,1 0,104 a52,52 0 1,1 0,-104" />
+          </defs>
+          <text>
+            <textPath href="#hv2BadgePath" startOffset="0">
+              Basado en Bogotá · Colombia · Basado en Bogotá · Colombia ·
+            </textPath>
+          </text>
+        </svg>
+        <span class="hv2__badge-dot" aria-hidden="true"></span>
+      </div>
+
     </section>
 
     <!-- ═══ SERVICIOS ═══ -->
@@ -788,6 +802,15 @@
     </section>
 
   </main>
+
+  <!-- Hero: Lenis (smooth scroll) + GSAP/ScrollTrigger (todas las
+       animaciones del hero: flotación, parallax al subir, destello
+       orbital, partículas, reveal de entrada). Solo en el home —
+       ver /hero.js. -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="/hero.js"></script>
 
   <script src="/nav.js"></script>
   <script src="/script.js"></script>
