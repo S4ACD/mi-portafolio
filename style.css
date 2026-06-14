@@ -864,9 +864,12 @@ img { display: block; max-width: 100%; }
 ═══════════════════════════════════════════════════════════════ */
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
+@media (max-width: 1000px) { .projects__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .projects__grid { grid-template-columns: 1fr; } }
 .card--project { overflow: hidden; padding: 0; }
 .card__thumb {
@@ -2834,4 +2837,202 @@ input, textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .section-divider__star { animation: none; opacity: 0.4; }
+}
+
+
+/* ════════════════════════════════════════════════════════════════════
+   TRABAJO — header, filters, numeral overlays, CTA card
+   ════════════════════════════════════════════════════════════════════ */
+.trabajo-section { position: relative; overflow: hidden; }
+
+.trabajo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 3rem;
+}
+.trabajo-header__title {
+  font-family: var(--hv2-font-display);
+  font-weight: 380;
+  font-size: clamp(1.9rem, 4.2vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--hv2-ink);
+  margin-bottom: 0.6rem;
+}
+.trabajo-header__title em {
+  font-style: italic;
+  color: var(--hv2-gold);
+}
+.trabajo-header__lede {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 42ch;
+}
+
+/* Decorative filter pills — visual only, mirror the reference */
+.trabajo-filters {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.trabajo-filters__label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+.trabajo-filter {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.trabajo-filter--active {
+  padding: 8px 20px;
+  border: 1px solid var(--hv2-line);
+  border-radius: 100px;
+  color: var(--hv2-ink);
+}
+@media (max-width: 700px) {
+  .trabajo-filters { display: none; }
+}
+
+/* Numeral overlay on each thumbnail (sits on the existing dark scrim) */
+.card__num {
+  position: absolute;
+  left: 16px;
+  bottom: 10px;
+  z-index: 3;
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  font-weight: 380;
+  font-size: clamp(1.7rem, 2.4vw, 2.3rem);
+  color: var(--hv2-gold);
+  line-height: 1;
+}
+
+/* Tags row + circular arrow */
+.card__meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+.card__arrow {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--hv2-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.card__arrow svg { width: 14px; height: 14px; color: var(--hv2-ink-dim); transition: color 0.3s ease; }
+.card--project:hover .card__arrow {
+  background: var(--hv2-gold);
+  border-color: var(--hv2-gold);
+  transform: rotate(45deg);
+}
+.card--project:hover .card__arrow svg { color: var(--hv2-void); }
+
+/* 6th cell — CTA card */
+.card--cta {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card--cta__orbit { width: 52px; height: 52px; margin-bottom: 1.25rem; }
+.card--cta__orbit-ring { fill: none; stroke: var(--hv2-line); stroke-width: 1; }
+.card--cta__orbit-dot { fill: var(--hv2-gold); }
+.card--cta__text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+.card--cta__highlight {
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  font-weight: 380;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: 1.35;
+  color: var(--hv2-gold);
+  margin-bottom: 1.5rem;
+}
+.card--cta__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hv2-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hv2-line);
+  padding-bottom: 4px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.card--cta__link svg { width: 14px; height: 14px; transition: transform 0.3s ease; }
+.card--cta:hover .card--cta__link { color: var(--hv2-gold); border-color: var(--hv2-gold-dim); }
+.card--cta:hover .card--cta__link svg { transform: translateX(4px); }
+
+/* Section decorations — top-left orbit, bottom-right rock */
+.trabajo-section__orbit-tl {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  z-index: 0;
+  pointer-events: none;
+}
+.trabajo-section__orbit-ring {
+  fill: none;
+  stroke: var(--hv2-line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.trabajo-section__orbit-ring--dashed {
+  stroke: var(--hv2-gold-dim);
+  stroke-dasharray: 2 10;
+}
+.trabajo-section__orbit-dot { fill: var(--hv2-ink); }
+.trabajo-section__orbit-dot--sm { fill: var(--hv2-gold); }
+
+.trabajo-section__rock {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: clamp(160px, 18vw, 260px);
+  z-index: 0;
+  pointer-events: none;
+}
+.trabajo-section__rock img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: lighten;
+  opacity: 0.55;
+  filter: contrast(1.05);
+}
+
+@media (max-width: 700px) {
+  .trabajo-section__orbit-tl,
+  .trabajo-section__rock {
+    display: none;
+  }
 }
