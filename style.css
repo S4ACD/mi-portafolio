@@ -1670,6 +1670,7 @@ input, textarea {
 .faq-item {
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-left: 3px solid transparent;
   border-radius: var(--radius);
   overflow: hidden;
   transition: border-color var(--transition);
@@ -1682,8 +1683,7 @@ input, textarea {
 .faq-item__question {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
   padding: 20px 24px;
   font-family: var(--font-display);
   font-size: 0.95rem;
@@ -1734,12 +1734,14 @@ input, textarea {
 
 .faq-item[open] .faq-item__icon {
   border-color: var(--cyan);
-  transform: rotate(45deg);
 }
 
-.faq-item[open] .faq-item__icon::before,
-.faq-item[open] .faq-item__icon::after {
+.faq-item[open] .faq-item__icon::before {
   background: var(--cyan);
+}
+
+.faq-item[open] .faq-item__icon::after {
+  opacity: 0;
 }
 
 .faq-item__answer {
@@ -2431,11 +2433,10 @@ input, textarea {
 .testimonials__dot--active ~ .testimonials__dot-sep { background: var(--hv2-gold-dim); }
 
 /* ── FAQ */
-.faq-item[open] { border-color: rgba(205,183,142,0.25); }
+.faq-item[open] { border-color: rgba(205,183,142,0.25); border-left-color: var(--hv2-gold); }
 .faq-item[open] .faq-item__question { color: var(--hv2-gold); }
 .faq-item[open] .faq-item__icon { border-color: var(--hv2-gold); }
-.faq-item[open] .faq-item__icon::before,
-.faq-item[open] .faq-item__icon::after { background: var(--hv2-gold); }
+.faq-item[open] .faq-item__icon::before { background: var(--hv2-gold); }
 
 /* ── Contact form + aside */
 .contact-section { background: var(--hv2-void-soft); }
@@ -3389,4 +3390,134 @@ input, textarea {
 }
 @media (prefers-reduced-motion: reduce) {
   .testimonial-card__sparks .spark { animation: none; opacity: 0.5; }
+}
+
+
+/* ════════════════════════════════════════════════════════════════════
+   FAQ — grid layout, illuminated orbit, item numerals, gold planet
+   ════════════════════════════════════════════════════════════════════ */
+.faq-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+}
+.faq-aside { position: relative; }
+.faq-aside__lede {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 34ch;
+}
+
+/* Large orbit with a pulsing, glowing center */
+.faq-section__orbit {
+  position: absolute;
+  left: -90px;
+  top: 260px;
+  width: 380px;
+  height: 380px;
+  z-index: 0;
+  pointer-events: none;
+}
+.faq-section__orbit-ring {
+  fill: none;
+  stroke: var(--hv2-line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+.faq-section__orbit-ring--dashed {
+  stroke: var(--hv2-gold-dim);
+  stroke-dasharray: 2 12;
+  transform-origin: 200px 200px;
+  animation: hv2Spin 90s linear infinite;
+}
+.faq-section__orbit-glow {
+  fill: var(--hv2-gold);
+  opacity: 0.14;
+  transform-origin: 200px 200px;
+  animation: faqSunPulse 3.5s ease-in-out infinite;
+}
+.faq-section__orbit-sun {
+  fill: var(--hv2-gold);
+  filter: drop-shadow(0 0 14px rgba(205,183,142,0.9));
+}
+.faq-section__orbit-dot { fill: var(--hv2-ink-dim); }
+
+@keyframes faqSunPulse {
+  0%, 100% { opacity: 0.12; transform: scale(1); }
+  50%      { opacity: 0.35; transform: scale(1.4); }
+}
+
+/* Bottom-left rock */
+.faq-section__rock {
+  position: absolute;
+  left: -60px;
+  bottom: -40px;
+  width: 280px;
+  z-index: 0;
+  pointer-events: none;
+}
+.faq-section__rock img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: lighten;
+  opacity: 0.6;
+  filter: contrast(1.05);
+}
+
+/* FAQ item — numeral · divider · question text · icon */
+.faq-item__num {
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  font-weight: 380;
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  color: var(--hv2-gold);
+  flex-shrink: 0;
+  width: 2.6rem;
+}
+.faq-item__divider {
+  width: 1px;
+  height: 24px;
+  background: var(--hv2-line);
+  flex-shrink: 0;
+}
+.faq-item__text { flex: 1; }
+
+/* Gold planet reveal */
+.faq-item__answer { position: relative; }
+.faq-item__answer p { position: relative; z-index: 1; max-width: 60%; }
+.faq-item__planet {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  width: 240px;
+  height: 240px;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 0 28px rgba(205,183,142,0.25));
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes faqPlanetReveal {
+  from { opacity: 0; transform: translateY(-50%) scale(0.85); }
+  to   { opacity: 1; transform: translateY(-50%) scale(1); }
+}
+.faq-item[open] .faq-item__planet {
+  animation: faqPlanetReveal 0.5s ease-out;
+}
+
+@media (max-width: 900px) {
+  .faq-grid { grid-template-columns: 1fr; gap: 40px; }
+  .faq-section__orbit, .faq-section__rock { display: none; }
+}
+@media (max-width: 700px) {
+  .faq-item__planet { display: none; }
+  .faq-item__answer p { max-width: 100%; }
+  .faq-item__num { width: 2rem; font-size: 1.3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-section__orbit-glow { animation: none; opacity: 0.14; }
 }
