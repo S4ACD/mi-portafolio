@@ -140,21 +140,23 @@
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion) {
     hero.querySelectorAll('.hv2__rock, .hv2__portrait').forEach(function (el) {
-      var parallaxEl = el.querySelector(':scope > .hv2__rock-parallax, :scope > .hv2__portrait-parallax');
-      if (!parallaxEl) return;
+  var parallaxEl = el.querySelector(':scope > .hv2__rock-parallax, :scope > .hv2__portrait-parallax');
+  if (!parallaxEl) return;
 
-      var rise = parseFloat(el.dataset.rise) || 40;
+  var rise   = parseFloat(el.dataset.rise) || 40;
+  var isRock = el.classList.contains('hv2__rock');
+  var blur   = isRock ? Math.min(5, rise / 18) : 0;
 
-      gsap.fromTo(parallaxEl,
-        { y: 0 },
-        {
-          y: -rise,
-          ease: 'none',
-          scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true }
-        }
-      );
-    });
-  }
+  gsap.fromTo(parallaxEl,
+    { y: 0, filter: 'blur(0px)' },
+    {
+      y: -rise,
+      filter: blur ? 'blur(' + blur.toFixed(1) + 'px)' : 'blur(0px)',
+      ease: 'none',
+      scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true }
+    }
+  );
+});
 
   /* ════════════════════════════════════════════════════════════════
      5. PARTICLES — dust + starlight
