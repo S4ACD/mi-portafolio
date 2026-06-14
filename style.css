@@ -2018,6 +2018,9 @@ input, textarea {
   display: block;
   width: 100%;
   height: auto;
+  max-height: calc(100svh - 80px);
+  object-fit: contain;
+  object-position: right center;
   mix-blend-mode: lighten;
   filter: contrast(1.04) saturate(0.96);
 }
