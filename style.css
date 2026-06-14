@@ -2652,7 +2652,9 @@ input, textarea {
   min-height: 280px;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(ellipse 65% 85% at 8% 100%, #2b1d0f 0%, var(--hv2-void-soft) 62%);
+  background: radial-gradient(ellipse 70% 90% at 8% 100%, #2f2010 0%, #1a1209 60%);
+  border-top: 1px solid var(--hv2-gold-dim);
+  border-bottom: 1px solid var(--hv2-gold-dim);
 }
 .enfoque-section__visual {
   position: relative;
@@ -2733,6 +2735,33 @@ input, textarea {
   width: 110px;
   height: 110px;
   transform: none;
+}
+
+/* Constellation star field for the empty space */
+.enfoque-section__stars {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.enfoque-section__star {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--hv2-ink);
+  box-shadow: 0 0 6px rgba(244,239,230,0.5);
+  animation: hv2Twinkle var(--dur) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+.enfoque-section__star--gold {
+  background: var(--hv2-gold);
+  box-shadow: 0 0 6px rgba(205,183,142,0.55);
+}
+@media (prefers-reduced-motion: reduce) {
+  .enfoque-section__star { animation: none; opacity: 0.4; }
 }
 
 @media (max-width: 700px) {
