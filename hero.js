@@ -94,7 +94,7 @@
   var lenis = null;
   if (!reduceMotion && !coarsePointer && window.Lenis) {
     lenis = new Lenis({
-      duration: 0.7,
+      duration: 0.45,
       easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
       smoothWheel: true,
       smoothTouch: false
