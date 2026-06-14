@@ -586,15 +586,30 @@
     </section>
 
     <!-- ═══ SOBRE MÍ ═══ -->
-    <section class="section" id="sobre-mi">
+    <section class="section about-section" id="sobre-mi">
+      <svg class="about-header__orbit" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="about-header__orbit-ring" cx="80" cy="80" r="78"/>
+        <circle class="about-header__orbit-ring about-header__orbit-ring--dashed" cx="80" cy="80" r="50"/>
+        <circle class="about-header__orbit-center" cx="80" cy="80" r="3"/>
+        <circle class="about-header__orbit-dot" r="2.5">
+          <animateMotion dur="22s" repeatCount="indefinite" path="M 80 2 A 78 78 0 1 1 80 158 A 78 78 0 1 1 80 2"/>
+        </circle>
+      </svg>
+      <div class="about-section__rock about-section__rock--l" aria-hidden="true">
+        <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
+      </div>
+      <div class="about-section__rock about-section__rock--r" aria-hidden="true">
+        <img src="/assets/rocks/rock-02.webp" alt="" width="320" height="300" loading="lazy" decoding="async" />
+      </div>
       <div class="container">
         <p class="eyebrow">SOBRE MÍ</p>
-        <h2 class="section__title">La persona detrás del trabajo</h2>
+        <h2 class="about-header__title">La persona<br><em>detrás</em> del trabajo<span class="hero__dot">.</span></h2>
+        <div class="about-header__line" aria-hidden="true"><span class="about-header__line-dot"></span></div>
         <div class="about__grid">
           <div class="about__primary scroll-reveal">
             <div class="about__bio">
-              <p>Si buscas alguien que diseñe, desarrolle <em>y</em> entienda la estrategia detrás — sin pasarte entre equipos ni traducir lo que necesitas — estás en el lugar correcto.</p>
-              <p>Llevo 2 años manejando todo lo digital de Orbidental: e-commerce, pauta en Meta y Google, fotografía de producto y diseño. No teoría — entornos reales, con métricas reales.</p>
+              <p>Si buscas alguien que <strong class="about__hl">diseñe</strong>, desarrolle <em>y</em> entienda la estrategia detrás — <strong class="about__hl">sin pasarte entre equipos</strong> ni traducir lo que necesitas — estás en el lugar correcto.</p>
+              <p>Llevo 2 años manejando todo lo digital de <strong class="about__hl-gold">Orbidental</strong>: e-commerce, pauta en <strong class="about__hl-gold">Meta</strong> y <strong class="about__hl-gold">Google</strong>, fotografía de producto y diseño. No teoría — entornos reales, con métricas reales.</p>
             </div>
             <div class="about__skills">
               <div class="tech-grid">
@@ -644,12 +659,18 @@
             </div>
           </div>
           <div class="about__logros scroll-reveal" style="--reveal-delay: 0.1s">
-            <div class="logros-grid">
+            <div class="logros-grid logros-timeline">
               <div class="logro-card">
                 <span class="logro-numero">97</span>
                 <div class="logro-text">
                   <span class="logro-label">PageSpeed Score</span>
                   <span class="logro-desc">E-commerce migrado de 40 a 97 en producción real</span>
+                </div>
+                <div class="logro-icon">
+                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
+                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l3-3.5"/><circle cx="12" cy="18" r="0.9" fill="currentColor" stroke="none"/>
+                  </svg>
                 </div>
               </div>
               <div class="logro-card">
@@ -658,6 +679,12 @@
                   <span class="logro-label">Productos fotografiados</span>
                   <span class="logro-desc">Catálogo completo para e-commerce de Orbidental</span>
                 </div>
+                <div class="logro-icon">
+                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
+                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
+                  </svg>
+                </div>
               </div>
               <div class="logro-card">
                 <span class="logro-numero">5</span>
@@ -665,12 +692,24 @@
                   <span class="logro-label">Proyectos de branding</span>
                   <span class="logro-desc">Identidades visuales construidas desde cero</span>
                 </div>
+                <div class="logro-icon">
+                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
+                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                  </svg>
+                </div>
               </div>
               <div class="logro-card">
                 <span class="logro-numero">100%</span>
                 <div class="logro-text">
                   <span class="logro-label">Proyectos entregados</span>
                   <span class="logro-desc">Sin retrasos, sin intermediarios, directo con el cliente</span>
+                </div>
+                <div class="logro-icon">
+                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
+                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>
+                  </svg>
                 </div>
               </div>
             </div>
