@@ -960,6 +960,7 @@ a.card--project {
   display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
 }
 @media (max-width: 767px) { .about__grid { grid-template-columns: 1fr; gap: 40px; } }
+.about__primary { display: flex; flex-direction: column; gap: 40px; }
 .about__bio p { font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 20px; }
 .about__bio p:last-child { margin-bottom: 0; }
 .skill-item { margin-bottom: 22px; }
@@ -1374,22 +1375,18 @@ input, textarea {
 /* ── LOGROS GRID ── */
 .logros-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 0.875rem;
-  margin-bottom: 2rem;
-}
-@media (max-width: 480px) {
-  .logros-grid { grid-template-columns: 1fr; }
 }
 .logro-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--cyan);
-  padding: 1.1rem 1.25rem;
+  border-left: 3px solid var(--hv2-gold);
+  padding: 1.25rem 1.5rem;
   border-radius: 4px;
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  align-items: center;
+  gap: 1.25rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .logro-card:hover {
@@ -1397,12 +1394,16 @@ input, textarea {
   box-shadow: var(--cyan-glow);
 }
 .logro-numero {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-  font-weight: 700;
-  color: var(--cyan);
+  font-family: var(--hv2-font-display);
+  font-style: italic;
+  font-weight: 380;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--hv2-gold);
   line-height: 1;
+  flex-shrink: 0;
+  width: 4.5rem;
 }
+.logro-text { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
 .logro-label {
   font-family: var(--font-body);
   font-size: 0.7rem;
@@ -1416,7 +1417,6 @@ input, textarea {
   font-size: 0.82rem;
   color: rgba(255,255,255,0.65);
   line-height: 1.4;
-  margin-top: 0.2rem;
 }
 
 /* ── SECCIÓN CONTACTO ── */
@@ -2030,9 +2030,10 @@ input, textarea {
   flex-direction: column;
   justify-content: center;
   min-height: 100svh;
-  max-width: 640px;
+  max-width: 720px;
   padding: var(--hv2-pad);
   padding-top: clamp(120px, 16vh, 180px); /* clears the fixed global nav */
+  padding-left: clamp(40px, 7vw, 96px);
 }
 
 /* "Disponible para proyectos" — lives in the hero content now (the
@@ -2271,11 +2272,9 @@ input, textarea {
   .hv2__fog,
   .hv2__rings-dashed,
   .hv2__badge svg,
-  .hv2__status-dot,
-  .hv2__particle {
+  .hv2__status-dot {
     animation: none !important;
   }
-  .hv2__particles { display: none; }
   .hv2__title-line > span { transform: none; }
 }
 
