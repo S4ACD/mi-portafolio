@@ -76,7 +76,15 @@
   50%      { filter: drop-shadow(0 0 70px rgba(205,183,142,0.5)) drop-shadow(0 0 130px rgba(205,183,142,0.22)); }
 }
 
-/* Rocas con brillo dorado (fotos: .hv2__rock img ya trae mix-blend-mode, flip, dim/blur) */
+/* Rocas con brillo dorado (fotos: .hv2__rock img ya trae mix-blend-mode, flip, dim/blur).
+   Rotamos el tono naranja de la lava hacia dorado/ámbar para que combine con la paleta. */
+.hv2__rock .about-hero__rock-img {
+  filter: contrast(1.1) saturate(0.85) hue-rotate(-18deg) brightness(1.05);
+}
+.hv2__rock--far .about-hero__rock-img {
+  filter: contrast(1.1) saturate(0.85) hue-rotate(-18deg) brightness(1.05) blur(1px);
+}
+ */
 
 /* Destello tipo "sol" con rayos */
 .about-hero__sunburst {
