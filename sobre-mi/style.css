@@ -86,6 +86,16 @@
   filter: contrast(1.05) blur(1.5px) drop-shadow(0 0 30px rgba(205,183,142,0.2));
 }
 
+/* Ajustes de posición/tamaño solo para este hero (no afecta el del inicio) */
+#aboutHero .hv2__rock--far1 {
+  width: clamp(220px, 24vw, 380px);
+}
+#aboutHero .hv2__rock--near3 {
+  right: -4%;
+  bottom: -18%;
+  width: clamp(200px, 25vw, 380px);
+}
+
 /* Destello tipo "sol" con rayos */
 .about-hero__sunburst {
   position: absolute;
