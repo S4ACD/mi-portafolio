@@ -91,9 +91,18 @@
   width: clamp(220px, 24vw, 380px);
 }
 #aboutHero .hv2__rock--near3 {
-  right: -4%;
-  bottom: -18%;
-  width: clamp(200px, 25vw, 380px);
+  right: 13%;
+  bottom: -12%;
+  width: clamp(230px, 28vw, 420px);
+}
+#aboutHero .hv2__rock--near3 .about-hero__rock-img {
+  transform: rotate(-5deg);
+}
+#aboutHero .hv2__rock--near5 {
+  width: clamp(170px, 19vw, 320px);
+}
+#aboutHero .hv2__rock--near5 .about-hero__rock-img {
+  transform: scaleX(-1) rotate(14deg);
 }
 
 /* Destello tipo "sol" con rayos */
