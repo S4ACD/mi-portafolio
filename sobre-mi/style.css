@@ -66,62 +66,25 @@
 }
 .about-hero__discover:hover .about-hero__discover-line { background: var(--hv2-gold); }
 
-/* Planeta dorado con anillos — foto real de Saturno (NASA/JPL, dominio público).
-   El "viñeteado" pinta los bordes del mismo color que el fondo de la página,
-   eliminando el rectángulo sin depender de mask-image. */
-.about-hero__planet-frame {
-  position: relative;
-  display: block;
-}
+/* Planeta dorado con anillos — foto real de Saturno, PNG con transparencia real.
+   drop-shadow ahora traza la silueta real (planeta + anillos), no un rectángulo. */
 .hv2__portrait .about-hero__planet-img {
-  display: block;
-  width: 100%;
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
   animation: aboutPlanetGlow 6s ease-in-out infinite;
-}
-.about-hero__planet-vignette {
-  position: absolute;
-  inset: -2px;
-  pointer-events: none;
-  background: radial-gradient(ellipse 70% 70% at 50% 50%, transparent 42%, var(--hv2-void) 100%);
 }
 @keyframes aboutPlanetGlow {
   0%, 100% { filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15)); }
   50%      { filter: drop-shadow(0 0 70px rgba(205,183,142,0.5)) drop-shadow(0 0 130px rgba(205,183,142,0.22)); }
 }
 
-/* Rocas → esferas de brillo dorado/ámbar 100% CSS (sin fotos, sin rectángulos).
-   Mismo slot, mismo parallax/flotación; chispas que titilan con hv2Twinkle. */
-.about-hero__glow-orb-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1;
+/* Rocas — fotos PNG con transparencia real (.hv2__rock img ya trae mix-blend-mode,
+   flip, dim/blur). Sumamos un halo dorado sutil que sigue el contorno real de la roca. */
+.hv2__rock .about-hero__rock-img {
+  filter: contrast(1.05) drop-shadow(0 0 30px rgba(205,183,142,0.25));
 }
-.about-hero__glow-orb {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  filter: blur(22px);
+.hv2__rock--far .about-hero__rock-img {
+  filter: contrast(1.05) blur(1.5px) drop-shadow(0 0 30px rgba(205,183,142,0.2));
 }
-.about-hero__glow-orb--gold {
-  background: radial-gradient(circle, rgba(246,231,196,0.55) 0%, rgba(205,183,142,0.24) 45%, transparent 75%);
-}
-.about-hero__glow-orb--amber {
-  background: radial-gradient(circle, rgba(243,200,140,0.5) 0%, rgba(205,183,142,0.2) 45%, transparent 75%);
-}
-.about-hero__glow-spark {
-  position: absolute;
-  top: var(--y);
-  left: var(--x);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--hv2-ink);
-  box-shadow: 0 0 10px 3px rgba(246,231,196,0.85);
-  animation: hv2Twinkle 4s ease-in-out infinite;
-  animation-delay: var(--delay);
-}
-.hv2__rock--far .about-hero__glow-orb-wrap { opacity: 0.6; }
 
 /* Destello tipo "sol" con rayos */
 .about-hero__sunburst {
