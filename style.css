@@ -1965,10 +1965,16 @@ input, textarea {
 .hv2__stage {
   position: absolute;
   inset: 0;
-  z-index: 3;
   perspective: 1600px;
   pointer-events: none;
 }
+/* Far rocks sit behind the portrait; near rocks sit in front of it —
+   this only works correctly because they're now two separate stage
+   containers in the DOM (see index.html), each with its own z-index,
+   instead of one shared container whose internal z-index couldn't be
+   compared against the portrait once the portrait moved outside it. */
+.hv2__stage--far  { z-index: 1; }
+.hv2__stage--near { z-index: 5; }
 
 /* Each rock/portrait is THREE nested wrappers — see hero.js for why:
      .hv2__rock            → static CSS position, untouched by JS
