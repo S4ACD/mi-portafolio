@@ -44,6 +44,9 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+.services-grid > .svc-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
 @media (max-width: 860px) {
   .services-grid { grid-template-columns: 1fr; }
 }
