@@ -2227,15 +2227,15 @@ input, textarea {
     max-width: 100%;
     text-align: left;
     min-height: auto;
-    /* portrait width is clamp(300px,60vw,480px) at 1.5x aspect ratio (1024x1536) → height is 1.5x that width, +24px air */
-    padding-bottom: clamp(474px, 90vw, 744px);
+    /* portrait width is clamp(220px,78vw,480px) at 1.5x aspect ratio (1024x1536) → height is 1.5x that width, +32px fixed air */
+    padding-bottom: calc(clamp(220px, 78vw, 480px) * 1.5 + 32px);
   }
   .hv2__portrait {
     top: auto;
     bottom: 0;
     right: 50%;
     transform: translate(50%, 0);
-    width: clamp(300px, 60vw, 480px);
+    width: clamp(220px, 78vw, 480px);
   }
   .hv2__rock--near1 { right: 2%; }
   .hv2__rock--near2,
@@ -2245,8 +2245,8 @@ input, textarea {
 @media (max-width: 767px) {
   .hv2__content {
     padding-top: clamp(100px, 22vh, 140px);
-    /* portrait width is clamp(240px,68vw,360px) at 1.5x aspect ratio → height is 1.5x that width, +24px air */
-    padding-bottom: clamp(384px, 102vw, 564px);
+    /* portrait width is clamp(220px,86vw,360px) at 1.5x aspect ratio → height is 1.5x that width, +32px fixed air */
+    padding-bottom: calc(clamp(220px, 86vw, 360px) * 1.5 + 32px);
   }
   .hv2__title        { font-size: clamp(2rem, 11.5vw, 2.8rem); }
   .hv2__title-script { font-size: clamp(2.6rem, 15vw, 3.8rem); }
@@ -2261,7 +2261,7 @@ input, textarea {
     bottom: 0;
     right: 50%;
     transform: translate(50%, 0);
-    width: clamp(240px, 68vw, 360px);
+    width: clamp(220px, 86vw, 360px);
   }
   .hv2__rock--far3 {
     bottom: -2%;
