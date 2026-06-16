@@ -2001,10 +2001,9 @@ input, textarea {
 .hv2__portrait {
   position: absolute;
   z-index: 4;
-  top: calc(50% + 50px);
+  bottom: 0;
   right: 11%;
   width: clamp(340px, 38vw, 620px);
-  transform: translateY(-50%);
   will-change: transform;
 }
 /* New: subtle cursor-follow layer, sits between the static position and
