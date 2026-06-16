@@ -15,9 +15,11 @@ const revealObs = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.scroll-reveal').forEach(el => revealObs.observe(el));
 
-// Filtros
+// Filtros — por objetivo de negocio. data-category puede tener varios
+// valores separados por espacio (un proyecto puede resolver conversión
+// Y performance a la vez), así que se comprueba con includes(), no ===.
 const filterBtns = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.trabajo-card');
+const cards = document.querySelectorAll('.tw-card');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -26,7 +28,8 @@ filterBtns.forEach(btn => {
 
     const filter = btn.dataset.filter;
     cards.forEach(card => {
-      if (filter === 'all' || card.dataset.category === filter) {
+      const categories = (card.dataset.category || '').split(' ');
+      if (filter === 'all' || categories.includes(filter)) {
         card.classList.remove('hidden');
       } else {
         card.classList.add('hidden');
@@ -35,14 +38,14 @@ filterBtns.forEach(btn => {
   });
 });
 
-// Partículas
+// Partículas — doradas, mismo motor que el resto del sitio
 (function initParticles() {
   const canvas = document.getElementById('heroCanvas');
   if (!canvas) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { canvas.style.display = 'none'; return; }
   const ctx = canvas.getContext('2d');
   let W, H, particles, mouse = { x: -9999, y: -9999 };
-  const C = { count: 70, maxRadius: 1.4, speed: 0.28, connectionDist: 110, mouseRadius: 120, color: '0,229,229' };
+  const C = { count: 70, maxRadius: 1.4, speed: 0.28, connectionDist: 110, mouseRadius: 120, color: '205,183,142' };
   function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
   function createParticle() {
     const a = Math.random()*Math.PI*2, s=(0.4+Math.random()*0.6)*C.speed;
@@ -64,7 +67,7 @@ filterBtns.forEach(btn => {
     particles.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(${C.color},${p.alpha})`;ctx.fill();});
     requestAnimationFrame(draw);
   }
-  const hero = document.querySelector('.trabajo-hero');
+  const hero = document.querySelector('.tw-hero');
   hero?.addEventListener('mousemove', e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;},{passive:true});
   hero?.addEventListener('mouseleave',()=>{mouse.x=-9999;mouse.y=-9999;});
   let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(resize,150);});
