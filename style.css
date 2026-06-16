@@ -1789,6 +1789,12 @@ input, textarea {
 
   --hv2-ease:      cubic-bezier(0.16, 1, 0.3, 1);
   --hv2-pad:       clamp(20px, 4vw, 56px);
+
+  /* Single source of truth for sizing — reused by both the orbital
+     rings and the portrait, so their centres always line up exactly,
+     no matter the viewport. Change either formula in ONE place. */
+  --hv2-rings-size:    min(74vw, 980px);
+  --hv2-portrait-width: min(clamp(340px, 38vw, 620px), calc((100svh - 80px) / 1.5));
 }
 
 /* ──────────────────────────────────────────────────────────────────
@@ -1923,8 +1929,8 @@ input, textarea {
   z-index: 2;
   top: calc(50% + 50px);
   right: 4%;
-  width: min(74vw, 980px);
-  height: min(74vw, 980px);
+  width: var(--hv2-rings-size);
+  height: var(--hv2-rings-size);
   transform: translateY(-50%);
   overflow: visible;
   pointer-events: none;
@@ -2002,13 +2008,15 @@ input, textarea {
   position: absolute;
   z-index: 4;
   bottom: 0;
-  right: 11%;
-  /* Width is capped by BOTH available width (38vw) and available height.
-     The image is 1024×1536 (1.5x taller than wide), so to keep it fully
-     visible without shrinking, max width = available height ÷ 1.5.
-     Whichever constraint is tighter wins — the statue never grows
-     taller than the viewport, even in short/wide windows. */
-  width: min(clamp(340px, 38vw, 620px), calc((100svh - 80px) / 1.5));
+  /* Horizontally centred on the orbital rings' own centre (not an
+     independent %). Rings sit at `right: 4%`; their centre-from-right-
+     edge is 4% + half the rings' size. `right` on the portrait measures
+     to its near (right) edge, so we subtract half the portrait's own
+     width from that same centre point. Both sizes come from the shared
+     --hv2-rings-size / --hv2-portrait-width variables above, so this
+     stays correct automatically if either formula changes. */
+  right: calc(4% + (var(--hv2-rings-size) / 2) - (var(--hv2-portrait-width) / 2));
+  width: var(--hv2-portrait-width);
   will-change: transform;
 }
 /* New: subtle cursor-follow layer, sits between the static position and
