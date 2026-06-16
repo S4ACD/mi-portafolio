@@ -2227,7 +2227,8 @@ input, textarea {
     max-width: 100%;
     text-align: left;
     min-height: auto;
-    padding-bottom: clamp(320px, 64vw, 480px); /* reserves room for the portrait, scales with it */
+    /* portrait width is clamp(300px,60vw,480px) at 1.5x aspect ratio (1024x1536) → height is 1.5x that width, +24px air */
+    padding-bottom: clamp(474px, 90vw, 744px);
   }
   .hv2__portrait {
     top: auto;
@@ -2244,7 +2245,8 @@ input, textarea {
 @media (max-width: 767px) {
   .hv2__content {
     padding-top: clamp(100px, 22vh, 140px);
-    padding-bottom: clamp(240px, 68vw, 380px); /* matches portrait width below */
+    /* portrait width is clamp(240px,68vw,360px) at 1.5x aspect ratio → height is 1.5x that width, +24px air */
+    padding-bottom: clamp(384px, 102vw, 564px);
   }
   .hv2__title        { font-size: clamp(2rem, 11.5vw, 2.8rem); }
   .hv2__title-script { font-size: clamp(2.6rem, 15vw, 3.8rem); }
