@@ -1,85 +1,65 @@
-/* trabajo/script.js */
+/* servicios/hub.js — exclusivo del hub /servicios/ */
 
-// Hero entrance animation — adds reveal-done once the CSS animation
-// finishes. fill-mode:forwards keeps the element on a GPU compositing
-// layer indefinitely, which rendered Fraunces text with different
-// subpixel antialiasing than static text (a permanent slight blur).
-// reveal-done sets will-change back to auto, releasing that layer —
-// opacity/transform stay untouched, so there's no visual jump.
-document.querySelectorAll('.reveal-up').forEach(el => {
-  el.addEventListener('animationend', () => el.classList.add('reveal-done'), { once: true });
-});
-
-// WhatsApp
-document.getElementById('whatsappBtn')?.addEventListener('click', () => {
-  const phone = '573024457653';
-  const message = encodeURIComponent('¡Hola Alexander! Vi tu portafolio y me interesa cotizar un proyecto contigo. ¿Podemos hablar?');
-  window.open(`https://wa.me/${phone}?text=${message}`, '_blank', 'noopener,noreferrer');
+// Hero entrance animation — ver hub.css para la explicación completa
+// del bug de blur que esto soluciona (mismo patrón que /trabajo/).
+document.querySelectorAll('.reveal-up').forEach(function (el) {
+  el.addEventListener('animationend', function () { el.classList.add('reveal-done'); }, { once: true });
 });
 
 // Scroll reveal
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
+var revealObs = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e) {
     if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
   });
 }, { threshold: 0.1 });
-document.querySelectorAll('.scroll-reveal').forEach(el => revealObs.observe(el));
+document.querySelectorAll('.scroll-reveal').forEach(function (el) { revealObs.observe(el); });
 
-// Filtros — por objetivo de negocio. data-category puede tener varios
-// valores separados por espacio (un proyecto puede resolver conversión
-// Y performance a la vez), así que se comprueba con includes(), no ===.
-const filterBtns = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.tw-card');
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
-    btn.classList.add('filter-btn--active');
-
-    const filter = btn.dataset.filter;
-    cards.forEach(card => {
-      const categories = (card.dataset.category || '').split(' ');
-      if (filter === 'all' || categories.includes(filter)) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
+// FAQ acordeón — un solo item abierto a la vez, accesible vía aria-expanded
+var faqItems = document.querySelectorAll('[data-faq]');
+faqItems.forEach(function (item) {
+  item.setAttribute('aria-expanded', 'false');
+  item.addEventListener('click', function () {
+    var isOpen = item.getAttribute('aria-expanded') === 'true';
+    faqItems.forEach(function (i) { i.setAttribute('aria-expanded', 'false'); });
+    if (!isOpen) item.setAttribute('aria-expanded', 'true');
   });
 });
 
-// Partículas — doradas, mismo motor que el resto del sitio
+// Partículas doradas (canvas propio del hub, no toca el compartido)
 (function initParticles() {
-  const canvas = document.getElementById('heroCanvas');
+  var canvas = document.getElementById('hubCanvas');
   if (!canvas) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { canvas.style.display = 'none'; return; }
-  const ctx = canvas.getContext('2d');
-  let W, H, particles, mouse = { x: -9999, y: -9999 };
-  const C = { count: 70, maxRadius: 1.4, speed: 0.28, connectionDist: 110, mouseRadius: 120, color: '205,183,142' };
+  var ctx = canvas.getContext('2d'), W, H, particles, mouse = { x: -9999, y: -9999 };
+  var C = { count: 70, maxRadius: 1.4, speed: 0.28, connectionDist: 110, mouseRadius: 120, color: '205,183,142' };
   function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
   function createParticle() {
-    const a = Math.random()*Math.PI*2, s=(0.4+Math.random()*0.6)*C.speed;
-    return { x:Math.random()*W, y:Math.random()*H, vx:Math.cos(a)*s, vy:Math.sin(a)*s, r:0.4+Math.random()*C.maxRadius, alpha:0.3+Math.random()*0.5 };
+    var a = Math.random() * Math.PI * 2, s = (0.4 + Math.random() * 0.6) * C.speed;
+    return { x: Math.random() * W, y: Math.random() * H, vx: Math.cos(a) * s, vy: Math.sin(a) * s, r: 0.4 + Math.random() * C.maxRadius, alpha: 0.3 + Math.random() * 0.5 };
   }
-  function init() { resize(); particles = Array.from({length:C.count}, createParticle); }
+  function init() { resize(); particles = Array.from({ length: C.count }, createParticle); }
   function draw() {
-    ctx.clearRect(0,0,W,H);
-    particles.forEach(p => {
-      p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0||p.x>W) p.vx*=-1; if(p.y<0||p.y>H) p.vy*=-1;
-      const dx=p.x-mouse.x, dy=p.y-mouse.y, d=Math.sqrt(dx*dx+dy*dy);
-      if(d<C.mouseRadius){const f=(C.mouseRadius-d)/C.mouseRadius; p.x+=(dx/d)*f*1.8; p.y+=(dy/d)*f*1.8;}
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(function (p) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      var dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.sqrt(dx * dx + dy * dy);
+      if (d < C.mouseRadius) { var f = (C.mouseRadius - d) / C.mouseRadius; p.x += (dx / d) * f * 1.8; p.y += (dy / d) * f * 1.8; }
     });
-    for(let i=0;i<particles.length;i++) for(let j=i+1;j<particles.length;j++){
-      const a=particles[i],b=particles[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<C.connectionDist){ctx.beginPath();ctx.strokeStyle=`rgba(${C.color},${(1-d/C.connectionDist)*0.15})`;ctx.lineWidth=0.6;ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+    for (var i = 0; i < particles.length; i++) for (var j = i + 1; j < particles.length; j++) {
+      var a = particles[i], b = particles[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx * dx + dy * dy);
+      if (d < C.connectionDist) { ctx.beginPath(); ctx.strokeStyle = 'rgba(' + C.color + ',' + ((1 - d / C.connectionDist) * 0.15) + ')'; ctx.lineWidth = 0.6; ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
     }
-    particles.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(${C.color},${p.alpha})`;ctx.fill();});
+    particles.forEach(function (p) { ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fillStyle = 'rgba(' + C.color + ',' + p.alpha + ')'; ctx.fill(); });
     requestAnimationFrame(draw);
   }
-  const hero = document.querySelector('.tw-hero');
-  hero?.addEventListener('mousemove', e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;},{passive:true});
-  hero?.addEventListener('mouseleave',()=>{mouse.x=-9999;mouse.y=-9999;});
-  let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(resize,150);});
+  var hero = document.querySelector('.sv-hero');
+  if (hero) {
+    hero.addEventListener('mousemove', function (e) { var r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; }, { passive: true });
+    hero.addEventListener('mouseleave', function () { mouse.x = -9999; mouse.y = -9999; });
+  }
+  var rt;
+  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(resize, 150); });
   init(); draw();
 })();
