@@ -20,7 +20,7 @@
       '<nav class="nav" id="nav">' +
         '<div class="nav__inner">' +
           '<a href="/" class="nav__logo">' +
-            '<img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" alt="Alexander Caro" class="nav__logo-img">' +
+            '<img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" alt="Alexander Caro" class="nav__logo-img">' +
           '</a>' +
           '<ul class="nav__links">' +
             '<li><a href="/trabajo/"' + (isTrabajo ? ' class="nav__link--active"' : '') + '>Trabajo</a></li>' +
