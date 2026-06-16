@@ -437,6 +437,17 @@
 @keyframes twRevealUp {
   to { opacity: 1; transform: translateY(0); }
 }
+/* fill-mode:forwards (above) keeps the element on its own GPU
+   compositing layer indefinitely once the animation ends, which can
+   render delicate serif text (Fraunces) with different subpixel
+   antialiasing than static text — a permanent slight blur. Adding
+   reveal-done (via JS, on animationend) sets will-change back to its
+   default, releasing that layer and letting the browser repaint the
+   text normally, without touching opacity/transform — so there's no
+   visual jump, just a one-frame sharpening. */
+.reveal-up.reveal-done {
+  will-change: auto;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal, .reveal-up { opacity: 1; transform: none; animation: none; transition: none; }
