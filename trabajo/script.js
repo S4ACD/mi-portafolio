@@ -1,5 +1,15 @@
 /* trabajo/script.js */
 
+// Hero entrance animation — adds reveal-done once the CSS animation
+// finishes. fill-mode:forwards keeps the element on a GPU compositing
+// layer indefinitely, which rendered Fraunces text with different
+// subpixel antialiasing than static text (a permanent slight blur).
+// reveal-done sets will-change back to auto, releasing that layer —
+// opacity/transform stay untouched, so there's no visual jump.
+document.querySelectorAll('.reveal-up').forEach(el => {
+  el.addEventListener('animationend', () => el.classList.add('reveal-done'), { once: true });
+});
+
 // WhatsApp
 document.getElementById('whatsappBtn')?.addEventListener('click', () => {
   const phone = '573024457653';
