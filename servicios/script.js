@@ -14,25 +14,13 @@ var revealObs = new IntersectionObserver(function(entries) {
 }, { threshold: 0.1 });
 document.querySelectorAll('.scroll-reveal').forEach(function(el) { revealObs.observe(el); });
 
-// FAQ acordeón — solo actúa si la página tiene elementos [data-faq] (hub),
-// no afecta a las páginas de subservicio que no lo usan.
-var faqItems = document.querySelectorAll('[data-faq]');
-faqItems.forEach(function (item) {
-  item.setAttribute('aria-expanded', 'false');
-  item.addEventListener('click', function () {
-    var isOpen = item.getAttribute('aria-expanded') === 'true';
-    faqItems.forEach(function (i) { i.setAttribute('aria-expanded', 'false'); });
-    if (!isOpen) item.setAttribute('aria-expanded', 'true');
-  });
-});
-
 // Barra de progreso scroll
 var bar = document.getElementById('scrollProgress');
 window.addEventListener('scroll', function() {
   if (bar) bar.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
 }, { passive: true });
 
-// Partículas canvas — doradas (205,183,142), antes cyan (0,229,229)
+// Partículas canvas
 (function() {
   var c = document.getElementById('heroCanvas');
   if (!c) return;
