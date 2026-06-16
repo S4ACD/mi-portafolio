@@ -2227,14 +2227,14 @@ input, textarea {
     max-width: 100%;
     text-align: left;
     min-height: auto;
-    padding-bottom: clamp(280px, 60vw, 440px); /* reserves room for the portrait, scales with it */
+    padding-bottom: clamp(320px, 64vw, 480px); /* reserves room for the portrait, scales with it */
   }
   .hv2__portrait {
     top: auto;
-    bottom: 4%;
+    bottom: 0;
     right: 50%;
     transform: translate(50%, 0);
-    width: clamp(260px, 56vw, 420px);
+    width: clamp(300px, 60vw, 480px);
   }
   .hv2__rock--near1 { right: 2%; }
   .hv2__rock--near2,
@@ -2244,7 +2244,7 @@ input, textarea {
 @media (max-width: 767px) {
   .hv2__content {
     padding-top: clamp(100px, 22vh, 140px);
-    padding-bottom: clamp(220px, 64vw, 360px); /* matches portrait width below */
+    padding-bottom: clamp(240px, 68vw, 380px); /* matches portrait width below */
   }
   .hv2__title        { font-size: clamp(2rem, 11.5vw, 2.8rem); }
   .hv2__title-script { font-size: clamp(2.6rem, 15vw, 3.8rem); }
@@ -2256,10 +2256,10 @@ input, textarea {
 
   .hv2__portrait {
     top: auto;
-    bottom: 4%;
+    bottom: 0;
     right: 50%;
     transform: translate(50%, 0);
-    width: clamp(220px, 64vw, 340px);
+    width: clamp(240px, 68vw, 360px);
   }
   .hv2__rock--far3 {
     bottom: -2%;
