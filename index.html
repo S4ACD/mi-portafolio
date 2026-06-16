@@ -172,16 +172,6 @@
           </div></div>
         </div>
 
-        <!-- retrato -->
-        <div class="hv2__portrait" id="hv2Portrait"
-             data-rise="18" data-float-y="16" data-float-rot="0" data-duration="9">
-          <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
-            <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781396255/Escultura_de_Alexander_ykbpww.png"
-                 alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada"
-                 width="1024" height="1536" fetchpriority="high" decoding="async" />
-          </div></div></div>
-        </div>
-
         <!-- rocas cercanas: nítidas, concentradas abajo, suben más rápido -->
         <div class="hv2__rock hv2__rock--near hv2__rock--near1"
              data-rise="56" data-float-y="18" data-float-rot="5" data-duration="8">
@@ -216,8 +206,23 @@
 
       </div>
 
+      <!-- retrato: vive FUERA del stage absoluto, en su propio bloque de
+           flujo real (hitbox), hermano de .hv2__content dentro de .hv2.
+           En desktop vuelve a comportarse como absoluto (ver CSS
+           ≥1024px); en mobile/tablet es un bloque normal que el
+           navegador mide solo — nunca se superpone al texto. -->
+      <div class="hv2__portrait" id="hv2Portrait"
+           data-rise="18" data-float-y="16" data-float-rot="0" data-duration="9">
+        <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781396255/Escultura_de_Alexander_ykbpww.png"
+               alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada"
+               width="1024" height="1536" fetchpriority="high" decoding="async" />
+        </div></div></div>
+      </div>
+
       <!-- CONTENIDO -->
       <div class="hv2__content">
+
         <span class="hv2__status" data-reveal>
           <span class="hv2__status-dot" aria-hidden="true"></span>
           Disponible para proyectos
