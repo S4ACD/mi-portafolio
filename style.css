@@ -2003,7 +2003,12 @@ input, textarea {
   z-index: 4;
   bottom: 0;
   right: 11%;
-  width: clamp(340px, 38vw, 620px);
+  /* Width is capped by BOTH available width (38vw) and available height.
+     The image is 1024×1536 (1.5x taller than wide), so to keep it fully
+     visible without shrinking, max width = available height ÷ 1.5.
+     Whichever constraint is tighter wins — the statue never grows
+     taller than the viewport, even in short/wide windows. */
+  width: min(clamp(340px, 38vw, 620px), calc((100svh - 80px) / 1.5));
   will-change: transform;
 }
 /* New: subtle cursor-follow layer, sits between the static position and
