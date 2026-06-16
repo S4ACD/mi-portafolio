@@ -428,14 +428,20 @@
 }
 .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
 
-.reveal-up {
+/* Specificity bump (body .reveal-up, not just .reveal-up) so this
+   definition always wins over the root /style.css one regardless of
+   link order — the root's .reveal-up uses filter:blur(6px) as its
+   entrance state (intentional there, for other pages), which must
+   never apply here. */
+body .reveal-up {
   opacity: 0;
   transform: translateY(16px);
+  filter: none;
   animation: twRevealUp 0.7s var(--hv2-ease) forwards;
   animation-delay: var(--delay, 0s);
 }
 @keyframes twRevealUp {
-  to { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); filter: none; }
 }
 /* fill-mode:forwards (above) keeps the element on its own GPU
    compositing layer indefinitely once the animation ends, which can
@@ -445,10 +451,10 @@
    default, releasing that layer and letting the browser repaint the
    text normally, without touching opacity/transform — so there's no
    visual jump, just a one-frame sharpening. */
-.reveal-up.reveal-done {
+body .reveal-up.reveal-done {
   will-change: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-reveal, .reveal-up { opacity: 1; transform: none; animation: none; transition: none; }
+  .scroll-reveal, body .reveal-up { opacity: 1; transform: none; filter: none; animation: none; transition: none; }
 }
