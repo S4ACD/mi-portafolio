@@ -159,7 +159,11 @@
      never fights this one).
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion) {
+    var isStackedLayout = window.innerWidth < 1024; // matches the CSS breakpoint where .hv2__portrait leaves position:absolute and joins the normal flex flow
     hero.querySelectorAll('.hv2__rock, .hv2__portrait').forEach(function (el) {
+      var isPortrait = el.classList.contains('hv2__portrait');
+      if (isPortrait && isStackedLayout) return; // portrait is in-flow here; scroll-rise no longer applies (would fight the document's real height)
+
       var parallaxEl = el.querySelector(
         ':scope > .hv2__rock-parallax, :scope > .hv2__portrait-tilt > .hv2__portrait-parallax'
       );
