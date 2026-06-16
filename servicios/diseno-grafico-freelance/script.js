@@ -40,11 +40,11 @@ window.addEventListener('scroll', function() {
       var dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.sqrt(dx*dx + dy*dy);
       if (d < 120) { var f = (120-d)/120; p.x += (dx/d)*f*1.5; p.y += (dy/d)*f*1.5; }
       ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
-      ctx.fillStyle = 'rgba(0,229,229,' + p.alpha + ')'; ctx.fill();
+      ctx.fillStyle = 'rgba(205,183,142,' + p.alpha + ')'; ctx.fill();
     });
     for (var i = 0; i < P.length; i++) for (var j = i+1; j < P.length; j++) {
       var a = P[i], b = P[j], dx = a.x-b.x, dy = a.y-b.y, d = Math.sqrt(dx*dx+dy*dy);
-      if (d < 110) { ctx.beginPath(); ctx.strokeStyle = 'rgba(0,229,229,' + (1-d/110)*0.15 + ')'; ctx.lineWidth = 0.6; ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+      if (d < 110) { ctx.beginPath(); ctx.strokeStyle = 'rgba(205,183,142,' + (1-d/110)*0.15 + ')'; ctx.lineWidth = 0.6; ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
     }
     requestAnimationFrame(draw);
   }
