@@ -14,13 +14,25 @@ var revealObs = new IntersectionObserver(function(entries) {
 }, { threshold: 0.1 });
 document.querySelectorAll('.scroll-reveal').forEach(function(el) { revealObs.observe(el); });
 
+// FAQ acordeón — solo actúa si la página tiene elementos [data-faq] (hub),
+// no afecta a las páginas de subservicio que no lo usan.
+var faqItems = document.querySelectorAll('[data-faq]');
+faqItems.forEach(function (item) {
+  item.setAttribute('aria-expanded', 'false');
+  item.addEventListener('click', function () {
+    var isOpen = item.getAttribute('aria-expanded') === 'true';
+    faqItems.forEach(function (i) { i.setAttribute('aria-expanded', 'false'); });
+    if (!isOpen) item.setAttribute('aria-expanded', 'true');
+  });
+});
+
 // Barra de progreso scroll
 var bar = document.getElementById('scrollProgress');
 window.addEventListener('scroll', function() {
   if (bar) bar.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
 }, { passive: true });
 
-// Partículas canvas
+// Partículas canvas — doradas (205,183,142), antes cyan (0,229,229)
 (function() {
   var c = document.getElementById('heroCanvas');
   if (!c) return;
@@ -40,11 +52,11 @@ window.addEventListener('scroll', function() {
       var dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.sqrt(dx*dx + dy*dy);
       if (d < 120) { var f = (120-d)/120; p.x += (dx/d)*f*1.5; p.y += (dy/d)*f*1.5; }
       ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
-      ctx.fillStyle = 'rgba(0,229,229,' + p.alpha + ')'; ctx.fill();
+      ctx.fillStyle = 'rgba(205,183,142,' + p.alpha + ')'; ctx.fill();
     });
     for (var i = 0; i < P.length; i++) for (var j = i+1; j < P.length; j++) {
       var a = P[i], b = P[j], dx = a.x-b.x, dy = a.y-b.y, d = Math.sqrt(dx*dx+dy*dy);
-      if (d < 110) { ctx.beginPath(); ctx.strokeStyle = 'rgba(0,229,229,' + (1-d/110)*0.15 + ')'; ctx.lineWidth = 0.6; ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
+      if (d < 110) { ctx.beginPath(); ctx.strokeStyle = 'rgba(205,183,142,' + (1-d/110)*0.15 + ')'; ctx.lineWidth = 0.6; ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }
     }
     requestAnimationFrame(draw);
   }
