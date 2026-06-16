@@ -149,8 +149,8 @@
         </circle>
       </svg>
 
-      <!-- LAYERS 04–06 — rocas + retrato -->
-      <div class="hv2__stage" id="hv2Stage" aria-hidden="true">
+      <!-- LAYER 04 — rocas lejanas (quedan DETRÁS del retrato) -->
+      <div class="hv2__stage hv2__stage--far" aria-hidden="true">
 
         <!-- rocas lejanas: opacas, desenfocadas, suben poco -->
         <div class="hv2__rock hv2__rock--far hv2__rock--far1"
@@ -171,6 +171,26 @@
             <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
           </div></div>
         </div>
+
+      </div>
+
+      <!-- retrato: vive entre las dos capas de rocas (far detrás, near
+           delante), en su propio bloque de flujo real (hitbox), hermano
+           de .hv2__content dentro de .hv2. En desktop se comporta como
+           absoluto (ver CSS ≥1024px); en mobile/tablet es un bloque
+           normal que el navegador mide solo — nunca se superpone al
+           texto. -->
+      <div class="hv2__portrait" id="hv2Portrait"
+           data-rise="18" data-float-y="16" data-float-rot="0" data-duration="9">
+        <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781396255/Escultura_de_Alexander_ykbpww.png"
+               alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada"
+               width="1024" height="1536" fetchpriority="high" decoding="async" />
+        </div></div></div>
+      </div>
+
+      <!-- LAYER 06 — rocas cercanas (quedan DELANTE del retrato) -->
+      <div class="hv2__stage hv2__stage--near" id="hv2Stage" aria-hidden="true">
 
         <!-- rocas cercanas: nítidas, concentradas abajo, suben más rápido -->
         <div class="hv2__rock hv2__rock--near hv2__rock--near1"
@@ -204,20 +224,6 @@
           </div></div>
         </div>
 
-      </div>
-
-      <!-- retrato: vive FUERA del stage absoluto, en su propio bloque de
-           flujo real (hitbox), hermano de .hv2__content dentro de .hv2.
-           En desktop vuelve a comportarse como absoluto (ver CSS
-           ≥1024px); en mobile/tablet es un bloque normal que el
-           navegador mide solo — nunca se superpone al texto. -->
-      <div class="hv2__portrait" id="hv2Portrait"
-           data-rise="18" data-float-y="16" data-float-rot="0" data-duration="9">
-        <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781396255/Escultura_de_Alexander_ykbpww.png"
-               alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada"
-               width="1024" height="1536" fetchpriority="high" decoding="async" />
-        </div></div></div>
       </div>
 
       <!-- CONTENIDO -->
