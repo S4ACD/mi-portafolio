@@ -1,13 +1,5 @@
 /* servicios/[subservicio]/style.css — heredado por todas las páginas de servicio */
 
-/* Back link */
-.back-link {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13px; color: var(--text-muted); margin-bottom: 28px;
-  transition: color var(--transition), gap var(--transition);
-}
-.back-link:hover { color: var(--cyan); gap: 12px; }
-
 /* Hero de servicio */
 .srv-hero {
   min-height: 70svh; display: flex; align-items: center;
@@ -16,8 +8,8 @@
 .srv-hero::after {
   content: ''; position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,229,229,0.04) 0%, transparent 70%),
-    linear-gradient(to bottom, transparent 70%, var(--bg) 100%);
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(205,183,142,0.04) 0%, transparent 70%),
+    linear-gradient(to bottom, transparent 70%, var(--hv2-void) 100%);
   pointer-events: none; z-index: 1;
 }
 .srv-hero__title {
@@ -28,9 +20,9 @@
 }
 .srv-hero__accent {
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(0,229,229,0.5);
+  -webkit-text-stroke: 1.5px rgba(205,183,142,0.5);
 }
 .srv-hero__sub {
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: var(--text-muted); line-height: 1.7; max-width: 520px;
+  color: var(--hv2-ink-dim); line-height: 1.7; max-width: 520px;
 }
