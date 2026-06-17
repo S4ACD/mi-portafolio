@@ -9,24 +9,6 @@
 ═══════════════════════════════════════════════════════════════ */
 
 /* ───────────────────────────────────────────────────────────────
-   BACK LINK
-─────────────────────────────────────────────────────────────── */
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--hv2-font-ui);
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--hv2-ink-dim);
-  margin-bottom: 28px;
-  transition: color 0.25s var(--hv2-ease);
-}
-.back-link:hover { color: var(--hv2-gold); }
-.back-link svg { flex-shrink: 0; transition: transform 0.25s var(--hv2-ease); }
-.back-link:hover svg { transform: translateX(-3px); }
-
-/* ───────────────────────────────────────────────────────────────
    HERO — mismo universo del inicio: fondo void, grain, partículas
    doradas. Sin el retrato (no aplica aquí), pero con el mismo aire.
 ─────────────────────────────────────────────────────────────── */
