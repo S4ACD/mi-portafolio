@@ -67,6 +67,17 @@
 
 /* Rocas — fotos PNG con transparencia real (.hv2__rock img ya trae mix-blend-mode,
    flip, dim/blur). Sumamos un halo dorado sutil que sigue el contorno real de la roca. */
+
+/* En este hero las queremos NÍTIDAS (no fundidas con el fondo): anulamos el
+   mix-blend-mode lighten y la atenuación de la capa "far" que vienen del
+   style.css global. Solo afecta a #aboutHero, el hero del inicio queda igual. */
+#aboutHero .hv2__rock img {
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+#aboutHero .hv2__rock--far img {
+  opacity: 1;
+}
 .hv2__rock .about-hero__rock-img {
   filter: contrast(1.05) drop-shadow(0 0 30px rgba(205,183,142,0.25));
 }
