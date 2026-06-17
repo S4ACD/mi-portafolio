@@ -62,6 +62,7 @@
       open = !open;
       drawer.style.display = open ? 'flex' : 'none';
       burger.classList.toggle('open', open);
+      if (open) nav?.classList.remove('nav--hidden');
       setTimeout(() => { touched = false; }, 500);
     }, { passive: false });
 
@@ -70,6 +71,7 @@
       open = !open;
       drawer.style.display = open ? 'flex' : 'none';
       burger.classList.toggle('open', open);
+      if (open) nav?.classList.remove('nav--hidden');
     });
 
     const links = drawer.querySelectorAll('a');
@@ -81,9 +83,47 @@
       });
     });
 
+    // Hide-on-scroll-down / show-on-scroll-up + sombra al separarse del top.
+    let lastY      = window.scrollY;   // última posición conocida
+    let refY       = window.scrollY;   // ancla desde donde medimos la subida
+    let goingUp    = false;            // dirección del último tramo
+    let ticking    = false;
+    const SHOW_THRESHOLD = 60;         // px a subir, de forma sostenida, para reaparecer
+    const TOP_ZONE       = 80;         // cerca del top el nav siempre se ve
+
+    const onScroll = () => {
+      const y = window.scrollY;
+
+      // Sombra: aparece al despegarse del top.
+      if (nav) nav.style.boxShadow = y > 20 ? '0 1px 32px rgba(0,0,0,0.7)' : 'none';
+
+      // Nunca esconder si el menú móvil está abierto o si estamos cerca del top.
+      if (open || y <= TOP_ZONE) {
+        nav?.classList.remove('nav--hidden');
+        refY = y; lastY = y; goingUp = false;
+        ticking = false;
+        return;
+      }
+
+      if (y > lastY) {
+        // Bajando: esconder y reiniciar el ancla de subida.
+        nav?.classList.add('nav--hidden');
+        if (goingUp) { refY = y; goingUp = false; }
+      } else if (y < lastY) {
+        // Subiendo: medir cuánto llevamos subido desde que cambió la dirección.
+        if (!goingUp) { refY = y; goingUp = true; }
+        if (refY - y >= SHOW_THRESHOLD) nav?.classList.remove('nav--hidden');
+      }
+
+      lastY = y;
+      ticking = false;
+    };
+
     window.addEventListener('scroll', () => {
-      if (nav) nav.style.boxShadow = window.scrollY > 20
-        ? '0 1px 32px rgba(0,0,0,0.7)' : 'none';
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(onScroll);
+      }
     }, { passive: true });
   };
 
