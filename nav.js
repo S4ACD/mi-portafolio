@@ -44,6 +44,14 @@
         </div>
       </nav>`
     );
+
+    // Fix: mover el nav directo al <body> para sacarlo de cualquier
+    // ancestro con transform/filter, que rompería su position:fixed.
+    const navEl = document.getElementById('nav');
+    if (navEl && navEl.parentElement !== document.body) {
+      document.body.appendChild(navEl);
+    }
+
     setupToggle();
   };
 
@@ -84,20 +92,18 @@
     });
 
     // Hide-on-scroll-down / show-on-scroll-up + sombra al separarse del top.
-    let lastY      = window.scrollY;   // última posición conocida
-    let refY       = window.scrollY;   // ancla desde donde medimos la subida
-    let goingUp    = false;            // dirección del último tramo
+    let lastY      = window.scrollY;
+    let refY       = window.scrollY;
+    let goingUp    = false;
     let ticking    = false;
-    const SHOW_THRESHOLD = 60;         // px a subir, de forma sostenida, para reaparecer
-    const TOP_ZONE       = 80;         // cerca del top el nav siempre se ve
+    const SHOW_THRESHOLD = 60;
+    const TOP_ZONE       = 80;
 
     const onScroll = () => {
       const y = window.scrollY;
 
-      // Sombra: aparece al despegarse del top.
       if (nav) nav.style.boxShadow = y > 20 ? '0 1px 32px rgba(0,0,0,0.7)' : 'none';
 
-      // Nunca esconder si el menú móvil está abierto o si estamos cerca del top.
       if (open || y <= TOP_ZONE) {
         nav?.classList.remove('nav--hidden');
         refY = y; lastY = y; goingUp = false;
@@ -106,11 +112,9 @@
       }
 
       if (y > lastY) {
-        // Bajando: esconder y reiniciar el ancla de subida.
         nav?.classList.add('nav--hidden');
         if (goingUp) { refY = y; goingUp = false; }
       } else if (y < lastY) {
-        // Subiendo: medir cuánto llevamos subido desde que cambió la dirección.
         if (!goingUp) { refY = y; goingUp = true; }
         if (refY - y >= SHOW_THRESHOLD) nav?.classList.remove('nav--hidden');
       }
