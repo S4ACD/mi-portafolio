@@ -91,20 +91,14 @@
       });
     });
 
-    // Hide-on-scroll-down / show-on-scroll-up + sombra al separarse del top.
-    // En vez de un refY que se reinicia en cada cambio de dirección (frágil
-    // cerca del fondo, donde el scroll "rebota"), acumulamos la distancia
-    // subida y la reseteamos solo cuando bajamos. Así, llegar al fondo y
     // Hide-on-scroll-down / show-on-scroll-up.
-    // Comparamos la posición actual contra la última y acumulamos cuánto
-    // se sube. El acumulado de subida NO se resetea al tocar el fondo
-    // (ese era el bug: en el fondo lastY se igualaba a y y el delta moría),
-    // solo se resetea cuando efectivamente se baja.
-    let lastY        = window.scrollY;
-    let upDistance   = 0;
-    let ticking      = false;
-    const SHOW_THRESHOLD = 60;  // px acumulados subiendo para reaparecer
-    const TOP_ZONE       = 80;  // cerca del top, siempre visible
+    // Apenas el usuario sube (más que un pequeño margen anti-temblor),
+    // el nav reaparece — en cualquier punto de la página, sin pedir una
+    // distancia acumulada. Al bajar, se esconde.
+    let lastY     = window.scrollY;
+    let ticking   = false;
+    const TOP_ZONE = 80;  // cerca del top, siempre visible
+    const JITTER   = 4;   // ignora micro-movimientos (trackpad/rebote)
 
     const show = () => nav?.classList.remove('nav--hidden');
     const hide = () => nav?.classList.add('nav--hidden');
@@ -118,25 +112,23 @@
       // Cerca del top o con el menú abierto: siempre visible.
       if (open || y <= TOP_ZONE) {
         show();
-        upDistance = 0;
         lastY = y;
         ticking = false;
         return;
       }
 
-      if (delta > 0) {
-        // bajando: escondemos y reseteamos el acumulado de subida
+      if (delta < -JITTER) {
+        // subiendo: mostrar de inmediato
+        show();
+        lastY = y;
+      } else if (delta > JITTER) {
+        // bajando: esconder
         hide();
-        upDistance = 0;
-      } else if (delta < 0) {
-        // subiendo: acumulamos y mostramos al pasar el umbral
-        upDistance += -delta;
-        if (upDistance >= SHOW_THRESHOLD) show();
+        lastY = y;
       }
-      // delta === 0 (incluido el "clavado" del fondo): no tocamos nada,
-      // así el acumulado sobrevive hasta que el próximo movimiento real suba.
+      // movimientos menores al jitter: no tocamos lastY, así un micro-temblor
+      // no "consume" la dirección y la próxima subida real se detecta limpia.
 
-      lastY = y;
       ticking = false;
     };
 
