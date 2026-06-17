@@ -6,18 +6,6 @@
 /* Nav link activo */
 .nav__link--active { color: #cdb78e !important; }
 
-/* ── BACK LINK ── */
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 28px;
-  transition: color var(--transition), gap var(--transition);
-}
-.back-link:hover { color: var(--hv2-gold); gap: 12px; }
-
 /* ── HERO — capas heredadas de .hv2, ajustes propios abajo ── */
 .about-hero-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 
@@ -174,7 +162,7 @@
 .about-hero__scroll span {
   font-size: 10px;
   letter-spacing: 0.2em;
-  color: var(--text-muted);
+  color: var(--hv2-ink-dim);
   text-transform: uppercase;
 }
 
@@ -208,7 +196,7 @@
 
 .about-block__body p {
   font-size: 1rem;
-  color: var(--text-muted);
+  color: var(--hv2-ink-dim);
   line-height: 1.8;
   max-width: 560px;
 }
@@ -217,7 +205,7 @@
   max-width: 1100px;
   margin: 0 auto;
   height: 1px;
-  background: var(--border);
+  background: var(--hv2-line);
   padding: 0 24px;
 }
 
@@ -227,9 +215,9 @@
   align-items: center;
   gap: 8px;
   margin-top: 20px;
-  background: rgba(0,229,229,0.07);
-  border: 1px solid rgba(0,229,229,0.18);
-  color: var(--cyan);
+  background: rgba(205,183,142,0.07);
+  border: 1px solid rgba(205,183,142,0.18);
+  color: var(--hv2-gold);
   font-size: 12px;
   font-weight: 500;
   padding: 7px 14px;
@@ -247,8 +235,8 @@
   .about-stats { grid-template-columns: 1fr; }
 }
 .about-stat {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--hv2-void-soft);
+  border: 1px solid var(--hv2-line);
   border-radius: var(--radius);
   padding: 28px 24px;
   display: flex;
@@ -257,14 +245,14 @@
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 .about-stat:hover {
-  border-color: var(--border-hover);
-  box-shadow: var(--cyan-glow);
+  border-color: var(--hv2-gold-dim);
+  box-shadow: var(--hv2-glow);
 }
 .about-stat__num {
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--cyan);
+  color: var(--hv2-gold);
   line-height: 1;
   display: flex;
   align-items: center;
@@ -272,12 +260,12 @@
 }
 .about-stat__arrow {
   font-size: 1.2rem;
-  color: var(--text-muted);
+  color: var(--hv2-ink-dim);
   font-weight: 300;
 }
 .about-stat__label {
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--hv2-ink-dim);
 }
 
 /* ── SKILL CHIPS ── */
@@ -292,19 +280,19 @@
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 100px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text);
+  background: var(--hv2-void-soft);
+  border: 1px solid var(--hv2-line);
+  color: var(--hv2-ink);
   transition: border-color var(--transition), color var(--transition), background var(--transition);
   cursor: default;
 }
 .skill-chip:hover {
-  border-color: var(--border-hover);
-  color: var(--cyan);
-  background: var(--cyan-dim);
+  border-color: var(--hv2-gold-dim);
+  color: var(--hv2-gold);
+  background: var(--hv2-gold-faint);
 }
 .skill-chip--muted {
-  color: var(--text-muted);
+  color: var(--hv2-ink-dim);
   border-style: dashed;
 }
 
