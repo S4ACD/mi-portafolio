@@ -92,31 +92,45 @@
     });
 
     // Hide-on-scroll-down / show-on-scroll-up + sombra al separarse del top.
-    let lastY      = window.scrollY;
-    let refY       = window.scrollY;
-    let goingUp    = false;
-    let ticking    = false;
-    const SHOW_THRESHOLD = 60;
-    const TOP_ZONE       = 80;
+    // En vez de un refY que se reinicia en cada cambio de dirección (frágil
+    // cerca del fondo, donde el scroll "rebota"), acumulamos la distancia
+    // subida y la reseteamos solo cuando bajamos. Así, llegar al fondo y
+    // subir un poco siempre suma hasta el umbral y muestra el nav.
+    let lastY        = window.scrollY;
+    let upDistance   = 0;
+    let ticking      = false;
+    const SHOW_THRESHOLD = 60;  // px acumulados subiendo para reaparecer
+    const TOP_ZONE       = 80;  // cerca del top, siempre visible
+
+    const show = () => nav?.classList.remove('nav--hidden');
+    const hide = () => nav?.classList.add('nav--hidden');
 
     const onScroll = () => {
-      const y = window.scrollY;
+      const y        = window.scrollY;
+      const docH     = document.documentElement.scrollHeight;
+      const atBottom = (window.innerHeight + y) >= (docH - 4);
 
       if (nav) nav.style.boxShadow = y > 20 ? '0 1px 32px rgba(0,0,0,0.7)' : 'none';
 
-      if (open || y <= TOP_ZONE) {
-        nav?.classList.remove('nav--hidden');
-        refY = y; lastY = y; goingUp = false;
+      // Siempre visible: drawer abierto, cerca del top, o pegado al fondo.
+      if (open || y <= TOP_ZONE || atBottom) {
+        show();
+        upDistance = 0;
+        lastY = y;
         ticking = false;
         return;
       }
 
-      if (y > lastY) {
-        nav?.classList.add('nav--hidden');
-        if (goingUp) { refY = y; goingUp = false; }
-      } else if (y < lastY) {
-        if (!goingUp) { refY = y; goingUp = true; }
-        if (refY - y >= SHOW_THRESHOLD) nav?.classList.remove('nav--hidden');
+      const delta = y - lastY;
+
+      if (delta > 0) {
+        // bajando: escondemos y reseteamos el acumulado de subida
+        hide();
+        upDistance = 0;
+      } else if (delta < 0) {
+        // subiendo: acumulamos y mostramos al pasar el umbral
+        upDistance += -delta;
+        if (upDistance >= SHOW_THRESHOLD) show();
       }
 
       lastY = y;
