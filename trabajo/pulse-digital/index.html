@@ -22,66 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="/style.css" />
-  <style>
-    .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 28px; transition: color var(--transition), gap var(--transition); }
-    .back-link:hover { color: var(--cyan); gap: 12px; }
-    .proj-hero { min-height: 75svh; display: flex; align-items: center; padding: 120px 0 60px; position: relative; overflow: hidden; }
-    .proj-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,229,229,0.04) 0%, transparent 70%), linear-gradient(to bottom, transparent 70%, var(--bg) 100%); pointer-events: none; z-index: 1; }
-    .proj-hero__inner { position: relative; z-index: 2; }
-    .proj-hero__title { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; line-height: 1.0; letter-spacing: -0.04em; color: #fff; margin-bottom: 20px; }
-    .proj-hero__accent { color: transparent; -webkit-text-stroke: 1.5px rgba(0,229,229,0.5); }
-    .proj-hero__sub { font-size: clamp(1rem,2vw,1.1rem); color: var(--text-muted); line-height: 1.7; max-width: 540px; margin-bottom: 32px; }
-    .proj-overview { padding: 60px 0; }
-    .proj-overview__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-    @media(max-width:767px){ .proj-overview__grid { grid-template-columns:1fr; gap:40px; } }
-    .proj-section__title { font-family: var(--font-display); font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.15; letter-spacing: -0.02em; }
-    .proj-text { font-size: .95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
-    .proj-info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; transition: border-color var(--transition); }
-    .proj-info-card:hover { border-color: var(--border-hover); }
-    .proj-info-card__label { font-size: 10px; font-weight: 600; letter-spacing: .15em; color: var(--cyan); text-transform: uppercase; }
-    .proj-info-card__value { font-size: 14px; color: var(--text); font-weight: 500; }
-    .live-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--cyan); color: #000; font-size: 13px; font-weight: 600; padding: 10px 20px; border-radius: var(--radius-sm); margin-bottom: 40px; transition: box-shadow var(--transition), transform var(--transition); }
-    .live-btn:hover { box-shadow: var(--cyan-glow); transform: translateY(-2px); }
-
-    /* ── SECCIÓN DECISIONES DE DISEÑO ── */
-    .design-section { padding: 80px 0; }
-    .design-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 48px; }
-    @media(max-width:767px){ .design-grid { grid-template-columns: 1fr; gap: 32px; } }
-
-    /* Tokens visuales */
-    .design-tokens { display: flex; flex-direction: column; gap: 12px; }
-    .token-row-label { font-size: 10px; font-weight: 700; letter-spacing: .15em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px; }
-    .token-colors { display: flex; gap: 10px; align-items: center; }
-    .token-swatch { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; }
-    .token-swatch-info { display: flex; flex-direction: column; gap: 2px; }
-    .token-swatch-name { font-size: 12px; font-weight: 600; color: var(--text); }
-    .token-swatch-val { font-size: 11px; color: var(--text-muted); font-family: monospace; }
-    .token-block { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
-
-    .font-preview { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; }
-    .font-name-big { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: #fff; letter-spacing: -0.02em; line-height: 1; margin-bottom: 4px; }
-    .font-meta { font-size: 11px; color: var(--text-muted); }
-
-    .mode-badge { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #0f0f1a; font-size: 12px; font-weight: 700; padding: 8px 16px; border-radius: 100px; border: 1px solid #e5e7eb; }
-    .mode-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #f97316; }
-
-    /* Lo que resolvimos */
-    .challenges-list { display: flex; flex-direction: column; gap: 0; }
-    .challenge-item { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--border); }
-    .challenge-item:last-child { border-bottom: none; }
-    .challenge-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: rgba(0,229,229,0.2); line-height: 1; flex-shrink: 0; width: 36px; padding-top: 2px; transition: color .25s; }
-    .challenge-item:hover .challenge-num { color: var(--cyan); }
-    .challenge-body {}
-    .challenge-title { font-family: var(--font-display); font-size: .95rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
-    .challenge-desc { font-size: .83rem; color: var(--text-muted); line-height: 1.6; }
-
-    /* Stack técnico */
-    .tech-showcase { display: flex; flex-direction: column; gap: 8px; margin-top: 32px; }
-    .tech-row { display: flex; gap: 8px; flex-wrap: wrap; }
-    .tech-pill { background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; padding: 8px 16px; font-size: 12px; font-weight: 600; color: var(--text-muted); transition: border-color .2s, color .2s; }
-    .tech-pill:hover { border-color: var(--cyan); color: var(--cyan); }
-    .tech-pill--cyan { border-color: rgba(0,229,229,0.3); color: var(--cyan); background: rgba(0,229,229,0.06); }
-  </style>
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
 </head>
@@ -259,28 +200,7 @@
   </section>
 
 
-  <script src="/nav.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('whatsappBtn').addEventListener('click', function(){
-        var m = encodeURIComponent('¡Hola Alexander! Vi tu proyecto de Pulse Digital y me interesa algo similar. ¿Podemos hablar?');
-        window.open('https://wa.me/573024457653?text='+m,'_blank','noopener,noreferrer');
-      });
-      var obs = new IntersectionObserver(function(e){ e.forEach(function(x){ if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);} }); },{threshold:0.1});
-      document.querySelectorAll('.scroll-reveal').forEach(function(el){obs.observe(el);});
-      var bar = document.getElementById('scrollProgress');
-      window.addEventListener('scroll',function(){ if(bar) bar.style.width=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%'; },{passive:true});
-      (function(){
-        var c=document.getElementById('heroCanvas');
-        if(!c)return;
-        var ctx=c.getContext('2d'),W,H,P=[];
-        function resize(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}
-        function mk(){var a=Math.random()*Math.PI*2,s=.3*(0.4+Math.random()*0.6);return{x:Math.random()*W,y:Math.random()*H,vx:Math.cos(a)*s,vy:Math.sin(a)*s,r:.4+Math.random()*1.6,alpha:.3+Math.random()*.5};}
-        function draw(){ctx.clearRect(0,0,W,H);P.forEach(function(p){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(0,229,229,'+p.alpha+')';ctx.fill();});requestAnimationFrame(draw);}
-        resize();P=Array.from({length:60},mk);draw();
-        window.addEventListener('resize',function(){setTimeout(resize,150);});
-      })();
-    });
-  </script>
+  <script src="/nav.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
