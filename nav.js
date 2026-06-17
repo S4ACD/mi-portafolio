@@ -95,7 +95,11 @@
     // En vez de un refY que se reinicia en cada cambio de dirección (frágil
     // cerca del fondo, donde el scroll "rebota"), acumulamos la distancia
     // subida y la reseteamos solo cuando bajamos. Así, llegar al fondo y
-    // subir un poco siempre suma hasta el umbral y muestra el nav.
+    // Hide-on-scroll-down / show-on-scroll-up.
+    // Comparamos la posición actual contra la última y acumulamos cuánto
+    // se sube. El acumulado de subida NO se resetea al tocar el fondo
+    // (ese era el bug: en el fondo lastY se igualaba a y y el delta moría),
+    // solo se resetea cuando efectivamente se baja.
     let lastY        = window.scrollY;
     let upDistance   = 0;
     let ticking      = false;
@@ -106,22 +110,19 @@
     const hide = () => nav?.classList.add('nav--hidden');
 
     const onScroll = () => {
-      const y        = window.scrollY;
-      const docH     = document.documentElement.scrollHeight;
-      const atBottom = (window.innerHeight + y) >= (docH - 4);
+      const y     = window.scrollY;
+      const delta = y - lastY;
 
       if (nav) nav.style.boxShadow = y > 20 ? '0 1px 32px rgba(0,0,0,0.7)' : 'none';
 
-      // Siempre visible: drawer abierto, cerca del top, o pegado al fondo.
-      if (open || y <= TOP_ZONE || atBottom) {
+      // Cerca del top o con el menú abierto: siempre visible.
+      if (open || y <= TOP_ZONE) {
         show();
         upDistance = 0;
         lastY = y;
         ticking = false;
         return;
       }
-
-      const delta = y - lastY;
 
       if (delta > 0) {
         // bajando: escondemos y reseteamos el acumulado de subida
@@ -132,6 +133,8 @@
         upDistance += -delta;
         if (upDistance >= SHOW_THRESHOLD) show();
       }
+      // delta === 0 (incluido el "clavado" del fondo): no tocamos nada,
+      // así el acumulado sobrevive hasta que el próximo movimiento real suba.
 
       lastY = y;
       ticking = false;
