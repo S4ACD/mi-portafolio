@@ -165,7 +165,9 @@ img { display: block; max-width: 100%; }
   transition: box-shadow var(--transition), transform 0.35s var(--hv2-ease);
 }
 /* Hide-on-scroll-down / show-on-scroll-up: lo sube fuera de pantalla.
-   El JS (nav.js) alterna esta clase según la dirección del scroll. */
+   El JS (nav.js) alterna esta clase según la dirección del scroll.
+   (Funciona porque el <body> ya no tiene transform — ver keyframes
+   pageFadeIn más abajo.) */
 .nav--hidden { transform: translateY(-100%); }
 .nav__inner {
   max-width: 1240px; margin: 0 auto; padding: 0 24px;
@@ -1291,9 +1293,13 @@ a.card--project {
 body {
   animation: pageFadeIn 0.4s ease both;
 }
+/* OJO: esta animación NO debe usar transform.
+   Un transform en <body> (aunque sea de una animación con fill-mode:both)
+   crea un contexto de posicionamiento que rompe el position:fixed del nav
+   (lo hace scrollear con la página). Por eso el fade es solo de opacidad. */
 @keyframes pageFadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -3605,13 +3611,4 @@ input, textarea {
 @media (prefers-reduced-motion: reduce) {
   .faq-section__orbit-glow { animation: none; opacity: 0.14; }
   .faq-section__star { animation: none; opacity: 0.4; }
-}
-
-
-/* Fix nav fixed: blindarlo contra contextos de transform de ancestros */
-.nav {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
 }
