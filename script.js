@@ -37,8 +37,8 @@ if (skillsSection) skillObs.observe(skillsSection);
 
 // ─── 5. SMOOTH SCROLL ───────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(e.currentTarget.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
     const offset = target.getBoundingClientRect().top + window.scrollY - (nav?.offsetHeight ?? 64);
@@ -61,6 +61,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 (function initTestimonials() {
   const track   = document.getElementById('testimonialsTrack');
   const nextBtn = document.getElementById('testimonialsNext');
+  const prevBtn = document.getElementById('testimonialsPrev');
   const dots    = document.querySelectorAll('.testimonials__dot');
   if (!track || !nextBtn) return;
 
@@ -76,6 +77,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   }
 
   nextBtn.addEventListener('click', () => goTo(current + 1));
+  prevBtn?.addEventListener('click', () => goTo(current - 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 
   window.addEventListener('resize', () => goTo(current), { passive: true });
@@ -147,7 +149,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.getAttribute('target') === '_blank') return;
 
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
       overlay.classList.add('active');
       setTimeout(() => {
@@ -174,9 +176,9 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 // ─── EASTER EGG EN CONSOLA ──────────────────────────────────────
 (function consoleEasterEgg() {
   const styles = [
-    'color: #00e5e5; font-size: 18px; font-weight: bold; font-family: monospace;',
+    'color: #cdb78e; font-size: 18px; font-weight: bold; font-family: monospace;',
     'color: #888; font-size: 12px; font-family: monospace;',
-    'color: #00e5e5; font-size: 13px; font-family: monospace;',
+    'color: #cdb78e; font-size: 13px; font-family: monospace;',
   ];
   console.log('%c¡Hola, dev curioso! 👋', styles[0]);
   console.log('%cSi estás leyendo esto, probablemente sabes lo que haces.', styles[1]);
@@ -213,11 +215,11 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     }
   }
 
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     let valid = true;
-    form.querySelectorAll('[required]').forEach(function(c) {
+    form.querySelectorAll('[required]').forEach((c) => {
       if (!c.value.trim()) {
         c.classList.add('form-input--error');
         valid = false;
@@ -239,8 +241,8 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
       method: 'POST',
       body: data
     })
-    .then(function(res) { return res.json(); })
-    .then(function(json) {
+    .then((res) => res.json())
+    .then((json) => {
       if (json.success) {
         setFeedback('success',
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
@@ -251,20 +253,20 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
         throw new Error(json.message || 'Error desconocido');
       }
     })
-    .catch(function(err) {
+    .catch((err) => {
       console.error('Web3Forms error:', err);
       setFeedback('error',
         '⚠️ No se pudo enviar el mensaje. Intenta de nuevo o escríbeme directamente por WhatsApp.'
       );
     })
-    .finally(function() {
+    .finally(() => {
       setLoading(false);
     });
   });
 
-  form.querySelectorAll('.form-input').forEach(function(input) {
-    input.addEventListener('input', function() {
-      this.classList.remove('form-input--error');
+  form.querySelectorAll('.form-input').forEach((input) => {
+    input.addEventListener('input', (e) => {
+      e.currentTarget.classList.remove('form-input--error');
       if (feedback && feedback.classList.contains('form-feedback--error')) {
         setFeedback('', '');
       }
