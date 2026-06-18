@@ -56,7 +56,13 @@
 
 /* Planeta dorado con anillos — foto real de Saturno, PNG con transparencia real.
    drop-shadow ahora traza la silueta real (planeta + anillos), no un rectángulo.
-   Igual que con las rocas: lo queremos NÍTIDO, no fundido con mix-blend-mode. */
+   Igual que las rocas: lo queremos NÍTIDO, anulamos el mix-blend-mode lighten
+   del style.css global (que puede fundirlo casi hasta la invisibilidad según
+   el color exacto del fondo detrás). Solo afecta a #aboutHero. */
+#aboutHero .hv2__portrait img {
+  mix-blend-mode: normal;
+  opacity: 1;
+}
 .hv2__portrait .about-hero__planet-img {
   opacity: 1;
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
@@ -143,6 +149,20 @@
 }
 @media (max-width: 900px) {
   .about-hero__sunburst { display: none; }
+}
+/* En 768–1023px el sistema .hv2 apila el contenido (.hv2__content y
+   .hv2__portrait pasan a position:relative + order, ver style.css global).
+   Pero las rocas de #aboutHero (--far1, --near3, --near5) siguen con
+   position:absolute y coordenadas de escritorio, así que quedan flotando
+   sueltas, tapadas por el texto que ahora ocupa el ancho completo. Las
+   ocultamos en este rango — el planeta reordenado es el protagonista
+   visual del layout apilado. */
+@media (max-width: 1023px) and (min-width: 768px) {
+  #aboutHero .hv2__rock--far1,
+  #aboutHero .hv2__rock--near3,
+  #aboutHero .hv2__rock--near5 {
+    display: none;
+  }
 }
 /* A ≤767px el sistema .hv2 centra el planeta debajo del texto y oculta
    --far1/--near5; volvemos --near3 a los valores mobile del sistema base
