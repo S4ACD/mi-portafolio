@@ -4,118 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre mí — Alexander Caro</title>
-  <meta name="description" content="Diseñador, desarrollador y estratega visual. Conoce la historia detrás del trabajo." />
+  <meta name="description" content="Diseñador, desarrollador y estratega visual en Bogotá. Trabajas directo conmigo, sin intermediarios — diseño, código y estrategia en una sola persona." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://alexandercaro.com/sobre-mi/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="preload" as="image" href="../assets/rocks/saturn-gold.webp" fetchpriority="high" />
-  <link rel="preload" as="image" href="../assets/rocks/gold-rock-a.webp" />
-  <link rel="preload" as="image" href="../assets/rocks/gold-rock-b.webp" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="style.css" />
-  <!-- Favicon -->
+
   <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="about-hero hv2" id="aboutHero">
+  <!-- HERO — simple, robusto: un solo grid de 2 columnas, sin wrappers anidados ni breakpoints olvidados -->
+  <section class="ah-hero">
+    <div class="ah-hero__bg" aria-hidden="true"></div>
+    <div class="ah-hero__glow" aria-hidden="true"></div>
 
-    <!-- LAYER 01 — fondo -->
-    <div class="hv2__bg" aria-hidden="true"></div>
-    <div class="hv2__grain" aria-hidden="true"></div>
-
-    <!-- LAYER 02 — niebla -->
-    <div class="hv2__fog" aria-hidden="true"></div>
-
-    <!-- LAYER 02.5 — partículas (estrellas doradas + cyan), generadas en script.js -->
-    <div class="hv2__particles" id="hv2Particles" aria-hidden="true"></div>
-
-    <!-- LAYER 03 — anillos + destello orbital -->
-    <svg class="hv2__rings" viewBox="0 0 200 200" aria-hidden="true">
-      <defs>
-        <path id="hv2GlintPath" d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" />
-      </defs>
-      <circle cx="100" cy="100" r="99" />
-      <circle cx="100" cy="100" r="78" />
-      <circle class="hv2__rings-dashed" cx="100" cy="100" r="60" />
-      <circle class="hv2__glint-tail" r="9">
-        <animateMotion dur="15s" begin="-0.6s" repeatCount="indefinite">
-          <mpath href="#hv2GlintPath" />
-        </animateMotion>
-      </circle>
-      <circle class="hv2__glint-mid" r="4.5">
-        <animateMotion dur="15s" begin="-0.3s" repeatCount="indefinite">
-          <mpath href="#hv2GlintPath" />
-        </animateMotion>
-      </circle>
-      <circle class="hv2__glint-core" r="2.2">
-        <animateMotion dur="15s" repeatCount="indefinite">
-          <mpath href="#hv2GlintPath" />
-        </animateMotion>
-      </circle>
-    </svg>
-
-    <!-- destello tipo "sol" -->
-    <div class="about-hero__sunburst" aria-hidden="true"></div>
-
-    <!-- LAYERS 04–06 — rocas doradas + planeta -->
-    <div class="hv2__stage" id="hv2Stage" aria-hidden="true">
-
-      <div class="hv2__rock hv2__rock--far hv2__rock--far1"
-           data-rise="22" data-float-y="10" data-float-rot="3" data-duration="11">
-        <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-          <img class="about-hero__rock-img" src="../assets/rocks/gold-rock-a.webp" alt="" width="900" height="490">
-        </div></div>
+    <div class="container ah-hero__grid">
+      <div class="ah-hero__text">
+        <p class="eyebrow scroll-reveal">SOBRE MÍ</p>
+        <h1 class="ah-hero__title scroll-reveal" style="--reveal-delay:.05s">
+          La persona <em>detrás</em> del trabajo<span class="hero__dot">.</span>
+        </h1>
+        <p class="ah-hero__sub scroll-reveal" style="--reveal-delay:.1s">
+          Diseñador, desarrollador y estratega visual. <strong>Todo en uno</strong> — sin equipo de 5 personas repartiéndose tu presupuesto.
+        </p>
+        <a href="#aboutContent" class="ah-hero__cta scroll-reveal" style="--reveal-delay:.15s">
+          Descubrir mi historia
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </a>
       </div>
 
-      <div class="hv2__rock hv2__rock--near hv2__rock--near3"
-           data-rise="90" data-float-y="16" data-float-rot="3" data-duration="10">
-        <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-          <img class="about-hero__rock-img" src="../assets/rocks/gold-rock-b.webp" alt="" width="360" height="360">
-        </div></div>
+      <div class="ah-hero__art scroll-reveal" style="--reveal-delay:.1s" aria-hidden="true">
+        <div class="ah-orbit"></div>
+        <div class="ah-orbit ah-orbit--inner"></div>
+        <img class="ah-planet" src="../assets/rocks/saturn-gold.webp" alt="" width="500" height="500" fetchpriority="high" />
+        <img class="ah-rock ah-rock--a" src="../assets/rocks/gold-rock-a.webp" alt="" width="900" height="490" loading="lazy" />
+        <img class="ah-rock ah-rock--b" src="../assets/rocks/gold-rock-b.webp" alt="" width="900" height="900" loading="lazy" />
       </div>
-
-      <div class="hv2__rock hv2__rock--near hv2__rock--near5 hv2__rock--flip"
-           data-rise="48" data-float-y="14" data-float-rot="-4" data-duration="9">
-        <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-          <img class="about-hero__rock-img" src="../assets/rocks/gold-rock-a.webp" alt="" width="900" height="490">
-        </div></div>
-      </div>
-
-      <!-- planeta dorado con anillos -->
-      <div class="hv2__portrait about-hero__planet" id="hv2Portrait"
-           data-rise="18" data-float-y="16" data-float-rot="2" data-duration="9">
-        <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
-          <img class="about-hero__planet-img" src="../assets/rocks/saturn-gold.webp" alt="" width="350" height="350" fetchpriority="high" decoding="async">
-        </div></div></div>
-      </div>
-
-    </div>
-
-    <!-- CONTENIDO -->
-    <div class="hv2__content">
-      <p class="eyebrow" data-reveal>SOBRE MÍ</p>
-      <h1 class="about-hero__title">
-        <span class="hv2__title-line"><span>La persona</span></span>
-        <span class="hv2__title-line"><span><em>detrás</em> del trabajo<span class="hero__dot">.</span></span></span>
-      </h1>
-      <p class="about-hero__sub" data-reveal>
-        Diseñador, desarrollador y estratega visual.<br class="br-desktop"/>
-        <span class="about-hero__sub-accent">Todo en uno.</span>
-      </p>
-      <a href="#aboutContent" class="about-hero__discover" data-reveal data-magnetic>
-        Descubrir mi universo
-        <span class="about-hero__discover-line" aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div class="about-hero__scroll">
-      <span>scroll</span>
-      <div class="hero__scroll-line"></div>
     </div>
   </section>
 
@@ -129,7 +60,7 @@
       </div>
       <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
         <h2 class="about-block__title">Origen</h2>
-       <p>No aprendí en una academia — aprendí construyendo cosas reales. Desde los 13 años experimenté con diseño y código hasta que las cosas funcionaron. Eso significa que cada proyecto que recibo lo abordo como si fuera el mío.</p>
+        <p>No aprendí en una academia — aprendí construyendo cosas reales, a punta de prueba y error, desde los 13 años. Eso tiene una consecuencia directa para ti: no vendo teoría de manual. Cada decisión de diseño o de código que tomo ya falló y se corrigió antes, en un proyecto real, no en un ejercicio de clase.</p>
       </div>
     </section>
 
@@ -142,7 +73,7 @@
       </div>
       <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
         <h2 class="about-block__title">Lo que hago</h2>
-       <p>Durante 2 años he manejado <strong>todo</strong> lo digital de una empresa real: pauta en Meta y Google Ads, diseño para redes, material impreso, fotografía de producto y e-commerce de +3.000 productos. Migré su sitio a código limpio y subí el PageSpeed de 40 a 97. Lo que para una agencia son 3 departamentos, para mí es un día de trabajo.</p>
+        <p>Durante más de 2 años he manejado <strong>todo</strong> lo digital de una empresa real: pauta en Meta y Google Ads, diseño para redes, material impreso, fotografía de producto y un e-commerce de más de 3.000 productos. Migré su sitio a código limpio y subí el PageSpeed de 40 a 97 — sin contratar una agencia, sin reuniones interminables, sin traductor entre "lo que el negocio necesita" y "lo que el desarrollador entiende". Lo que para una agencia son 3 departamentos distintos, para mí es un día de trabajo.</p>
       </div>
     </section>
 
@@ -151,15 +82,15 @@
       <div class="about-stats scroll-reveal">
         <div class="about-stat">
           <span class="about-stat__num">40<span class="about-stat__arrow">→</span>97</span>
-          <span class="about-stat__label">PageSpeed score</span>
+          <span class="about-stat__label">PageSpeed score real, caso Orbidental</span>
         </div>
         <div class="about-stat">
           <span class="about-stat__num">3K+</span>
-          <span class="about-stat__label">Fotos de producto</span>
+          <span class="about-stat__label">Fotos de producto entregadas</span>
         </div>
         <div class="about-stat">
           <span class="about-stat__num">2+</span>
-          <span class="about-stat__label">Años de experiencia</span>
+          <span class="about-stat__label">Años manejando una operación digital completa</span>
         </div>
       </div>
     </div>
@@ -173,7 +104,7 @@
       </div>
       <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
         <h2 class="about-block__title">Cómo trabajo</h2>
-        <p>Trabajas directamente conmigo — no con un account manager que te pasa mensajes. Eso significa respuestas rápidas, decisiones claras y un proyecto que avanza. Trabajo 100% remoto con clientes en Latinoamérica, Europa y Estados Unidos.</p>
+        <p>Trabajas directamente conmigo — no con un account manager que te traduce mensajes, ni con un junior que ejecuta lo que otro decidió. Eso significa respuestas rápidas, decisiones claras tomadas por la misma persona que las va a construir, y un proyecto que avanza sin fricción de por medio. Trabajo 100% remoto con clientes en Latinoamérica, Europa y Estados Unidos.</p>
       </div>
     </section>
 
@@ -186,7 +117,7 @@
       </div>
       <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
         <h2 class="about-block__title">Fuera de la pantalla</h2>
-        <p>Me encuentras en la moto. El motociclismo es mi otra pasión — la misma mentalidad que aplico al trabajo: velocidad, precisión y siempre hacia adelante.</p>
+        <p>Me encuentras en la moto. El motociclismo es mi otra pasión — la misma mentalidad que aplico al trabajo: leer el terreno antes de moverte, mantener el control incluso cuando todo pasa rápido, y siempre hacia adelante.</p>
         <div class="moto-badge">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/>
@@ -223,7 +154,7 @@
       <h2 class="cta-section__title">
         ¿Arrancamos un proyecto<span class="hero__dot">?</span>
       </h2>
-      <p class="cta-section__sub">Cuéntame qué necesitas. Respondo en menos de 24 horas.</p>
+      <p class="cta-section__sub">Cuéntame qué necesitas. Respondo en menos de 24 horas — directamente yo, no un formulario que cae en un buzón sin revisar.</p>
       <div class="cta-section__actions">
         <button class="btn btn--cyan btn--lg" id="whatsappBtn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -236,9 +167,6 @@
     </div>
   </section>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="../nav.js" defer></script>
   <script src="script.js" defer></script>
 </body>
