@@ -105,22 +105,31 @@ document.querySelectorAll('.scroll-reveal').forEach(el => revealObs.observe(el))
 
   gsap.registerPlugin(ScrollTrigger);
 
-  /* ── 1. ENTRADA — gsap.from()
+  /* ── 1. ENTRADA — gsap.from() CON RED DE SEGURIDAD
      Cada grupo de abajo ya está totalmente visible/normal en CSS.
      gsap.from() captura eso como el estado "to" y anima DESDE un estado
-     desplazado/oculto HACIA él — así que si este timeline nunca corre
-     (o falla a la mitad), el hero simplemente muestra su estado de
-     reposo en vez de quedarse oculto. */
+     desplazado/oculto HACIA él. Si por cualquier motivo el timeline no
+     llega a completarse (conflicto de timing, doble carga de GSAP,
+     pestaña en segundo plano, lo que sea), el setTimeout de abajo fuerza
+     opacidad/posición normal a los 2.5s como red de seguridad — así
+     nunca queda nada atascado invisible. */
   if (!reduceMotion) {
     var titleLines = document.querySelectorAll('.hv2__title-line > span');
     var stageEls   = document.querySelectorAll('.hv2__rock, .hv2__portrait');
     var reveals    = document.querySelectorAll('[data-reveal]');
+    var atmosphereEls = document.querySelectorAll('.hv2__rings, .hv2__fog, .hv2__particles');
 
     gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.2 })
       .from(titleLines, { y: '110%', duration: 1.1, stagger: 0.12 }, 0)
       .from(stageEls, { opacity: 0, scale: 0.94, transformOrigin: '50% 50%', duration: 1.4, stagger: 0.06, ease: 'power2.out' }, 0.1)
-      .from('.hv2__rings, .hv2__fog, .hv2__particles', { opacity: 0, duration: 1.8 }, 0.25)
+      .from(atmosphereEls, { opacity: 0, duration: 1.8 }, 0.25)
       .from(reveals, { opacity: 0, y: 22, duration: 0.9, stagger: 0.05 }, 0.35);
+
+    // Red de seguridad: si algo interrumpe el timeline, esto garantiza
+    // que todo quede visible y en su posición final de todas formas.
+    setTimeout(function () {
+      gsap.set([titleLines, stageEls, atmosphereEls, reveals], { clearProps: 'opacity,scale,y' });
+    }, 2500);
   }
 
   /* ── 2. FLOTACIÓN IDLE — "suspendido en gravedad cero" ── */
