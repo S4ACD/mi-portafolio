@@ -55,8 +55,10 @@
 .about-hero__discover:hover .about-hero__discover-line { background: var(--hv2-gold); }
 
 /* Planeta dorado con anillos — foto real de Saturno, PNG con transparencia real.
-   drop-shadow ahora traza la silueta real (planeta + anillos), no un rectángulo. */
+   drop-shadow ahora traza la silueta real (planeta + anillos), no un rectángulo.
+   Igual que con las rocas: lo queremos NÍTIDO, no fundido con mix-blend-mode. */
 .hv2__portrait .about-hero__planet-img {
+  opacity: 1;
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
   animation: aboutPlanetGlow 6s ease-in-out infinite;
 }
