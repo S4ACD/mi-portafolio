@@ -99,16 +99,16 @@
     </div>
   </section>
 
-  <!-- MOCKUP DE LA LANDING — iframe en vivo, tamaño real, con scroll propio -->
+  <!-- MOCKUP DE LA LANDING — miniatura escalada, clickeable al sitio en vivo -->
   <section class="section proj-showcase-live">
     <div class="container">
       <div class="proj-showcase-live__head scroll-reveal">
         <p class="eyebrow">EL RESULTADO</p>
         <h2 class="proj-section__title">Una agencia que se siente como una <em>consultora</em>, no como un SaaS más<span class="hero__dot">.</span></h2>
-        <p class="proj-text">La dirección final fue una identidad tipo growth/SaaS moderno: tipografía Poppins, violeta y verde lima como acentos sobre blanco, y fotografía real de equipo en vez de solo texto en columnas. Esta es una ventana real al sitio — haz scroll dentro de ella para explorarlo completo, o ábrelo en pantalla completa.</p>
+        <p class="proj-text">La dirección final fue una identidad tipo growth/SaaS moderno: tipografía Poppins, violeta y verde lima como acentos sobre blanco, y fotografía real de equipo en vez de solo texto en columnas. Esta es una vista previa del sitio — haz clic para abrirlo completo.</p>
       </div>
 
-      <div class="browser-mock scroll-reveal">
+      <a href="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" target="_blank" rel="noopener" class="browser-mock scroll-reveal" aria-label="Abrir Pulse Digital en una pestaña nueva">
         <div class="browser-mock__bar">
           <div class="browser-mock__dots">
             <span></span><span></span><span></span>
@@ -117,20 +117,24 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             pulsedigital.com
           </div>
-          <a href="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" target="_blank" rel="noopener" class="browser-mock__expand" aria-label="Abrir Pulse Digital en pantalla completa">
+          <div class="browser-mock__expand">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </a>
+          </div>
         </div>
         <div class="browser-mock__viewport">
-          <iframe src="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" title="Pulse Digital — vista en vivo"></iframe>
+          <iframe src="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" title="Pulse Digital — vista en vivo" loading="lazy" tabindex="-1"></iframe>
+          <div class="browser-mock__overlay">
+            <span class="browser-mock__overlay-text">
+              Ver sitio completo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </span>
+          </div>
         </div>
-      </div>
-      <a href="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" target="_blank" rel="noopener" class="browser-mock__caption-link">
-        Abrir Pulse Digital en pantalla completa
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
       </a>
+      <p class="browser-mock__caption">Vista previa — haz clic en cualquier punto para abrir el sitio completo en una pestaña nueva.</p>
     </div>
   </section>
+
 
   <!-- LO DIFÍCIL: criterio de marca, reconstruido con clases reales -->
   <section class="section proj-criteria">
