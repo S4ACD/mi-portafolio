@@ -121,39 +121,62 @@ document.querySelectorAll('.proj-carousel').forEach((carousel) => {
   if (!track || !slides.length) return;
 
   const pad = (n) => String(n).padStart(2, '0');
+  const count = slides.length;
 
-  const closestIndex = () => {
-    const trackRect = track.getBoundingClientRect();
-    const center = trackRect.left + trackRect.width / 2;
+  // El índice es estado explícito, no se recalcula leyendo scrollLeft a mitad
+  // de una animación (eso era lo que rompía el contador y los botones).
+  let current = 0;
+  let isAnimating = false;
+
+  const renderCounter = () => { if (counter) counter.textContent = pad(current + 1); };
+
+  // Los slides usan scroll-snap-align: start, así que el slide "activo" es el
+  // que está más cerca de alinear su borde izquierdo con el borde izquierdo
+  // visible del track (no el centro del viewport — medir contra el centro
+  // hacía que el slide 0 nunca se detectara como activo por el padding inicial).
+  const syncFromScroll = () => {
+    if (isAnimating) return;
     let best = 0, bestDist = Infinity;
     slides.forEach((s, i) => {
-      const r = s.getBoundingClientRect();
-      const dist = Math.abs((r.left + r.width / 2) - center);
+      const dist = Math.abs(s.offsetLeft - track.scrollLeft);
       if (dist < bestDist) { bestDist = dist; best = i; }
     });
-    return best;
+    current = best;
+    renderCounter();
   };
 
-  const updateUI = () => {
-    const idx = closestIndex();
-    if (counter) counter.textContent = pad(idx + 1);
-    if (prevBtn) prevBtn.disabled = idx === 0;
-    if (nextBtn) nextBtn.disabled = idx === slides.length - 1;
+  const scrollToIndex = (idx) => {
+    const isWrapping = idx >= count || idx < 0; // dio la vuelta del ciclo
+    const wrapped = ((idx % count) + count) % count;
+    current = wrapped;
+    renderCounter();
+    isAnimating = true;
+    const target = slides[wrapped];
+    // Al dar la vuelta (siguiente desde el último, o anterior desde el primero)
+    // el salto es instantáneo, para no hacer un scroll visual largo hacia atrás
+    // que se vería como "retroceder" en vez de "seguir avanzando".
+    const behavior = isWrapping ? 'auto' : 'smooth';
+    track.scrollTo({ left: target.offsetLeft, behavior });
+    clearTimeout(track._animLock);
+    const lockDuration = behavior === 'smooth' ? 500 : 150;
+    track._animLock = setTimeout(() => {
+      isAnimating = false;
+      // El navegador puede haber clampeado el scroll real (si el slide
+      // destino no tenía suficiente espacio para desplazarse del todo).
+      // Reafirmamos el índice "current" como fuente de verdad en vez de
+      // dejar que el siguiente evento scroll lo recalcule mal.
+      renderCounter();
+    }, lockDuration);
   };
 
-  const goTo = (idx) => {
-    const clamped = Math.max(0, Math.min(slides.length - 1, idx));
-    slides[clamped].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-  };
-
-  prevBtn?.addEventListener('click', () => goTo(closestIndex() - 1));
-  nextBtn?.addEventListener('click', () => goTo(closestIndex() + 1));
+  prevBtn?.addEventListener('click', () => scrollToIndex(current - 1));
+  nextBtn?.addEventListener('click', () => scrollToIndex(current + 1));
 
   let scrollTimer;
   track.addEventListener('scroll', () => {
     clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(updateUI, 80);
+    scrollTimer = setTimeout(syncFromScroll, 100);
   }, { passive: true });
 
-  updateUI();
+  renderCounter();
 });
