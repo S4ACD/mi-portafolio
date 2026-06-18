@@ -1,8 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
-   trabajo/fueggo/style.css
+   trabajo/rebel-street/style.css
 ═══════════════════════════════════════════════════════════════ */
 
-/* ── BACK LINK ── */
 /* ── HERO ── */
 .proj-hero {
   min-height: 88svh;
@@ -39,8 +38,9 @@
   max-width: 560px;
   margin-bottom: 40px;
 }
+.proj-hero__actions { display: flex; align-items: center; gap: 24px; }
 .proj-hero__logo {
-  max-width: 320px;
+  max-width: 220px;
 }
 .proj-hero__logo img {
   width: 100%;
@@ -48,11 +48,11 @@
   filter: drop-shadow(0 0 24px rgba(205,183,142,0.15));
 }
 
-/* ── OVERVIEW ── */
+/* ── OVERVIEW (EL PROBLEMA REAL) ── */
 .proj-overview { padding-top: 60px; }
 .proj-overview__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 0.7fr;
   gap: 64px;
   align-items: start;
 }
@@ -68,13 +68,29 @@
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
+.proj-section__title em {
+  font-style: italic;
+  color: var(--hv2-gold);
+}
 .proj-text {
   font-size: 0.95rem;
   color: var(--hv2-ink-dim);
   line-height: 1.8;
   margin-bottom: 16px;
 }
-.proj-overview__info {
+/* Frase destacada — el "lo que estaba en juego" en grande, como en Orbidental */
+.proj-text--pull {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 500;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.5;
+  border-left: 2px solid var(--hv2-gold);
+  padding-left: 20px;
+  margin: 28px 0;
+}
+.proj-overview__rail {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -101,7 +117,83 @@
   font-size: 14px;
   color: var(--hv2-ink);
   font-weight: 500;
+  line-height: 1.4;
 }
+
+/* ── LA PRUEBA: antes / después del logo ── */
+.proj-proof { padding: 96px 0; }
+.proj-proof__head { margin-bottom: 56px; max-width: 640px; }
+.proj-proof__split {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--hv2-line);
+}
+.proj-proof__half { position: relative; background: var(--hv2-void-soft); aspect-ratio: 4/3; }
+.proj-proof__half img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proj-proof__half--before { filter: saturate(0.6) brightness(0.8); }
+.proj-proof__divider {
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 1px;
+  background: var(--hv2-line);
+  z-index: 2;
+}
+.proj-proof__vs {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--hv2-void);
+  border: 1px solid var(--hv2-gold-dim);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--hv2-gold);
+  z-index: 3;
+}
+.proj-proof__caption {
+  position: absolute;
+  left: 0; bottom: 0;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: linear-gradient(to top, rgba(5,5,4,0.85) 0%, transparent 100%);
+  width: 100%;
+}
+.proj-proof__caption-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.proj-proof__half--before .proj-proof__caption-label { color: #ff9a8a; }
+.proj-proof__half--after .proj-proof__caption-label { color: var(--hv2-gold); }
+.proj-proof__caption-score {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .proj-proof__split { grid-template-columns: 1fr; }
+  .proj-proof__divider { display: none; }
+  .proj-proof__vs { top: 0; left: 50%; transform: translate(-50%, -50%); }
+  .proj-proof__half { aspect-ratio: 4/3; }
+}
+
+.proj-overview__main { max-width: 620px; }
+
+/* ── LO DIFÍCIL (criterio) ── */
+.proj-criteria { padding: 40px 0 80px; }
+.proj-criteria__grid { max-width: 720px; }
+.proj-criteria__main { max-width: 720px; }
 
 /* ── GALERÍA ── */
 .proj-gallery { padding: 80px 0 100px; }
@@ -175,53 +267,7 @@
   border-top: 1px solid var(--hv2-line);
 }
 
-/* ── MÉTRICAS DE IMPACTO ── */
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin: 2.5rem 0 1.5rem;
-}
-@media (max-width: 768px) {
-  .impact-grid { grid-template-columns: 1fr; }
-}
-.impact-card {
-  background: var(--hv2-void-soft);
-  border: 1px solid var(--hv2-line);
-  border-top: 3px solid var(--hv2-gold);
-  border-radius: 4px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  transition: box-shadow 0.3s ease;
-}
-.impact-card:hover {
-  box-shadow: var(--hv2-glow);
-}
-.impact-card__num {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 700;
-  color: var(--hv2-gold);
-  line-height: 1;
-}
-.impact-card__label {
-  font-family: var(--font-display);
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: #fff;
-  line-height: 1.3;
-}
-.impact-card__desc {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--hv2-ink-dim);
-  line-height: 1.55;
-  margin-top: 0.25rem;
-}
-.impact-note {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.2);
-  font-style: italic;
-}
+/* ── RESULTADO ── */
+.proj-result { padding: 20px 0 100px; }
+.proj-result__grid { max-width: 720px; }
+.proj-result__main { max-width: 720px; }
