@@ -3,224 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pulse Digital — Growth, Measured.</title>
+  <title>Pulse Digital — Growth Marketing That Compounds</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,440;0,9..144,620;1,9..144,440&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,440;0,9..144,620;1,9..144,440&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" /></noscript>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- FULLSCREEN NAV OVERLAY -->
-  <div class="nav-overlay" id="navOverlay">
-    <div class="nav-overlay__head">
-      <div class="nav-logo">Pulse<span class="nav-logo-x">×</span>Digital</div>
-      <button class="nav-close" id="navClose" aria-label="Close menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <nav class="nav-overlay__links">
-      <a href="#work" data-navlink><span class="nl-num">01</span>Work</a>
-      <a href="#practice" data-navlink><span class="nl-num">02</span>Practice</a>
-      <a href="#results" data-navlink><span class="nl-num">03</span>Evidence</a>
-      <a href="#contact" data-navlink><span class="nl-num">04</span>Contact</a>
+  <header class="topbar">
+    <div class="logo">Pulse<span class="logo-dot">•</span>Digital</div>
+    <nav class="topnav">
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#process">Process</a>
     </nav>
-    <div class="nav-overlay__foot">
-      <span>Montreal — remote-first</span>
-      <span>hello@pulsedigital.com</span>
-    </div>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get started</button>
+    <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#results">Results</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Get started →</a>
   </div>
 
-  <header class="topbar">
-    <div class="nav-logo">Pulse<span class="nav-logo-x">×</span>Digital</div>
-    <button class="nav-trigger" id="navTrigger">
-      <span>Menu</span>
-      <span class="nav-trigger__lines"><i></i><i></i></span>
-    </button>
-  </header>
-
-  <!-- HERO — asymmetric, type breaks the grid -->
+  <!-- HERO — big image right, type left, badge floating on image -->
   <section class="hero">
-    <div class="hero-kicker rv">
-      <span class="kicker-dot"></span>
-      Growth marketing, measured quarterly
-    </div>
-    <h1 class="hero-title">
-      <span class="ht-row rv">We don't</span>
-      <span class="ht-row rv ht-row--em">guess<svg class="ht-underline" viewBox="0 0 400 24" preserveAspectRatio="none"><path d="M2 18 Q 100 4 200 14 T 398 10" /></svg></span>
-      <span class="ht-row rv">what grows<span class="ht-dot">.</span></span>
-    </h1>
-
-    <div class="hero-side rv">
-      <p class="hero-side__text">A growth practice for companies that have outgrown guesswork. Strategy, execution, and a number we're willing to be wrong about — in public.</p>
-      <div class="hero-side__actions">
+    <div class="hero-text">
+      <div class="hero-badge rv">
+        <span class="badge-dot"></span>
+        Now booking Q3 engagements
+      </div>
+      <h1 class="hero-title rv">Growth marketing<br/>that actually<br/><span class="hl">compounds.</span></h1>
+      <p class="hero-sub rv">We build paid, organic and lifecycle programs for brands ready to scale past guesswork — backed by a number we report on, every single month.</p>
+      <div class="hero-actions rv">
         <button class="btn-p" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Start a project</button>
-        <button class="btn-g" onclick="document.getElementById('results').scrollIntoView({behavior:'smooth'})">See the evidence</button>
+        <button class="btn-g" onclick="document.getElementById('results').scrollIntoView({behavior:'smooth'})">See results</button>
+      </div>
+      <div class="hero-stats rv">
+        <div class="hs-item"><span class="hs-num">31</span><span class="hs-label">engagements</span></div>
+        <div class="hs-divider"></div>
+        <div class="hs-item"><span class="hs-num">3.4×</span><span class="hs-label">median ROAS</span></div>
+        <div class="hs-divider"></div>
+        <div class="hs-item"><span class="hs-num">6wk</span><span class="hs-label">to first lift</span></div>
       </div>
     </div>
 
-    <div class="hero-graphic rv" aria-hidden="true">
-      <svg viewBox="0 0 600 600" class="signal-svg">
-        <circle class="sg-ring" cx="300" cy="300" r="280"/>
-        <circle class="sg-ring" cx="300" cy="300" r="200"/>
-        <circle class="sg-ring" cx="300" cy="300" r="120"/>
-        <path class="sg-path" id="sgPath" d="M40,420 C140,300 180,500 260,360 C320,260 360,440 420,300 C460,200 500,260 560,160"/>
-        <g id="sgDots"></g>
-      </svg>
-    </div>
-
-    <div class="hero-scroll rv">
-      <span>Scroll</span>
-      <span class="hero-scroll__line"></span>
+    <div class="hero-media rv">
+      <img src="https://images.unsplash.com/photo-1758873269317-51888e824b28?q=80&w=1400&auto=format&fit=crop" alt="Pulse Digital team collaborating" />
+      <div class="hero-media__float">
+        <div class="float-card">
+          <span class="fc-num">+212%</span>
+          <span class="fc-label">qualified leads<br/>for Verdant Foods Co.</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee">
-    <div class="marquee__track">
-      <span>Halsten &amp; Cole</span><span class="mq-dot">·</span>
-      <span>Meridian Outfitters</span><span class="mq-dot">·</span>
-      <span>Northbound</span><span class="mq-dot">·</span>
-      <span>Verdant Foods Co.</span><span class="mq-dot">·</span>
-      <span>Aldermere</span><span class="mq-dot">·</span>
-      <span>Halsten &amp; Cole</span><span class="mq-dot">·</span>
-      <span>Meridian Outfitters</span><span class="mq-dot">·</span>
-      <span>Northbound</span><span class="mq-dot">·</span>
-      <span>Verdant Foods Co.</span><span class="mq-dot">·</span>
-      <span>Aldermere</span><span class="mq-dot">·</span>
+  <!-- LOGOS -->
+  <div class="logos-band">
+    <span class="logos-label">Trusted by growing brands</span>
+    <div class="logos-items">
+      <span class="logo-item">Halsten &amp; Cole</span>
+      <span class="logo-item">Meridian Outfitters</span>
+      <span class="logo-item">Northbound</span>
+      <span class="logo-item">Verdant Foods Co.</span>
+      <span class="logo-item">Aldermere</span>
     </div>
   </div>
 
-  <!-- PRACTICE — offset asymmetric list, not centered grid -->
-  <section class="practice" id="practice">
-    <div class="practice-head">
-      <span class="sec-tag">Fig. 01 — The practice</span>
-      <h2 class="practice-title">Four disciplines.<br/>Nothing we don't<br/>run <em>ourselves</em><span class="ht-dot">.</span></h2>
+  <!-- SERVICES — image left, bento right -->
+  <section class="services" id="services">
+    <div class="services-media rv">
+      <img src="https://images.unsplash.com/photo-1758873268745-dd2cf0d677b5?q=80&w=1200&auto=format&fit=crop" alt="Team reviewing campaign strategy" />
     </div>
-
-    <div class="practice-list">
-      <a class="practice-row rv" data-row="1">
-        <span class="pr-num">01</span>
-        <span class="pr-name">Paid&nbsp;media</span>
-        <span class="pr-desc">Google, Meta and LinkedIn run against a target CAC, not vanity impressions.</span>
-        <span class="pr-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-      </a>
-      <a class="practice-row rv" data-row="2">
-        <span class="pr-num">02</span>
-        <span class="pr-name">SEO &amp; content</span>
-        <span class="pr-desc">Technical fixes and editorial content built to compound for years, not a quarter.</span>
-        <span class="pr-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-      </a>
-      <a class="practice-row rv" data-row="3">
-        <span class="pr-num">03</span>
-        <span class="pr-name">Lifecycle &amp; email</span>
-        <span class="pr-desc">Sequences mapped to your buying cycle, never the same template shipped twice.</span>
-        <span class="pr-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-      </a>
-      <a class="practice-row rv" data-row="4">
-        <span class="pr-num">04</span>
-        <span class="pr-name">Analytics</span>
-        <span class="pr-desc">One dashboard, reviewed monthly — the same raw numbers we use internally.</span>
-        <span class="pr-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-      </a>
+    <div class="services-content">
+      <span class="eyebrow rv">What we do</span>
+      <h2 class="sec-title rv">Four channels.<br/>Zero <span class="hl">guesswork.</span></h2>
+      <div class="services-grid">
+        <div class="srv-card rv">
+          <div class="srv-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Paid media</h3>
+          <p>Google, Meta &amp; LinkedIn campaigns run against a target CAC, reported weekly.</p>
+        </div>
+        <div class="srv-card rv">
+          <div class="srv-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3>SEO &amp; content</h3>
+          <p>Technical fixes and editorial content built to compound for years.</p>
+        </div>
+        <div class="srv-card rv">
+          <div class="srv-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>Lifecycle &amp; email</h3>
+          <p>Sequences mapped to your actual buying cycle, never a generic template.</p>
+        </div>
+        <div class="srv-card rv">
+          <div class="srv-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.1-2.8-2.8L7 14"/></svg>
+          </div>
+          <h3>Analytics</h3>
+          <p>One dashboard, reviewed monthly — the same numbers we use internally.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- BIG TYPE BREAK -->
-  <section class="bigtype">
-    <p class="bigtype-text rv">No <em>"full-service"</em> pretense. If we don't believe in a channel, we say so.</p>
-  </section>
-
-  <!-- RESULTS — horizontal scroll -->
+  <!-- RESULTS -->
   <section class="results" id="results">
     <div class="results-head">
-      <span class="sec-tag">Fig. 02 — Evidence</span>
-      <h2 class="results-title">Numbers we'd still<br/>defend a <em>year</em> later<span class="ht-dot">.</span></h2>
-      <p class="results-hint">Drag to explore →</p>
+      <span class="eyebrow rv">Proven results</span>
+      <h2 class="sec-title rv">Numbers that <span class="hl">speak<br/>for themselves.</span></h2>
     </div>
 
-    <div class="results-track" id="resultsTrack">
-      <div class="result-card rv">
-        <span class="rc-num">+212<small>%</small></span>
-        <span class="rc-label">Qualified leads, 6-month average</span>
-        <span class="rc-client">Verdant Foods Co.</span>
+    <div class="results-grid">
+      <div class="res-card res-card--media rv">
+        <img src="https://images.unsplash.com/photo-1686061592689-312bbfb5c055?q=80&w=900&auto=format&fit=crop" alt="Marketing analytics dashboard" />
+        <div class="res-card__overlay">
+          <span>Live dashboard, reviewed monthly with every client</span>
+        </div>
       </div>
-      <div class="result-card rv">
-        <span class="rc-num">3.4<small>×</small></span>
-        <span class="rc-label">Return on ad spend</span>
-        <span class="rc-client">Meridian Outfitters</span>
+      <div class="res-card rv">
+        <span class="res-num">+212<small>%</small></span>
+        <span class="res-label">Qualified leads, 6-month average</span>
+        <span class="res-client">Verdant Foods Co.</span>
       </div>
-      <div class="result-card rv">
-        <span class="rc-num">−38<small>%</small></span>
-        <span class="rc-label">Cost per acquisition</span>
-        <span class="rc-client">Northbound</span>
+      <div class="res-card rv">
+        <span class="res-num">3.4<small>×</small></span>
+        <span class="res-label">Return on ad spend</span>
+        <span class="res-client">Meridian Outfitters</span>
       </div>
-      <div class="result-card rv">
-        <span class="rc-num">+96<small>%</small></span>
-        <span class="rc-label">Organic traffic, 12 months</span>
-        <span class="rc-client">Halsten &amp; Cole</span>
+      <div class="res-card rv">
+        <span class="res-num">−38<small>%</small></span>
+        <span class="res-label">Cost per acquisition</span>
+        <span class="res-client">Northbound</span>
       </div>
-      <div class="result-card result-card--quote rv">
-        <span class="rc-quote-mark">"</span>
-        <p class="rc-quote-text">First agency that told us a channel wasn't working before we noticed it ourselves.</p>
-        <span class="rc-quote-name">Diane Holt — Verdant Foods Co.</span>
+      <div class="res-card rv">
+        <span class="res-num">+96<small>%</small></span>
+        <span class="res-label">Organic traffic, 12 months</span>
+        <span class="res-client">Halsten &amp; Cole</span>
+      </div>
+      <div class="res-card res-card--quote rv">
+        <span class="rq-mark">"</span>
+        <p>First agency that told us a channel wasn't working before we noticed it ourselves.</p>
+        <span class="rq-name">Diane Holt, Verdant Foods Co.</span>
       </div>
     </div>
   </section>
 
-  <!-- METHOD -->
-  <section class="method" id="work">
-    <div class="method-head">
-      <span class="sec-tag">Fig. 03 — Method</span>
-      <h2 class="method-title">How we <em>work</em><span class="ht-dot">.</span></h2>
-    </div>
-    <div class="method-rows">
-      <div class="method-row rv">
-        <span class="mr-roman">I</span>
-        <span class="mr-name">Audit</span>
-        <span class="mr-desc">Two weeks reviewing what's already running before we propose anything new.</span>
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <span class="eyebrow rv">How we work</span>
+    <h2 class="sec-title rv">Four stages. <span class="hl">No mystery.</span></h2>
+    <div class="process-grid">
+      <div class="proc-step rv">
+        <span class="proc-num">01</span>
+        <h3>Audit</h3>
+        <p>Two weeks reviewing what's already running before we propose anything new.</p>
       </div>
-      <div class="method-row rv">
-        <span class="mr-roman">II</span>
-        <span class="mr-name">Plan</span>
-        <span class="mr-desc">A written roadmap with named channels, target numbers, a first checkpoint date.</span>
+      <div class="proc-step rv">
+        <span class="proc-num">02</span>
+        <h3>Plan</h3>
+        <p>A written roadmap with named channels, target numbers, and a first checkpoint date.</p>
       </div>
-      <div class="method-row rv">
-        <span class="mr-roman">III</span>
-        <span class="mr-name">Run</span>
-        <span class="mr-desc">Campaigns launch. We adjust weekly against data, not the plan for its own sake.</span>
+      <div class="proc-step rv">
+        <span class="proc-num">03</span>
+        <h3>Run</h3>
+        <p>Campaigns launch. We adjust weekly against the data, not the plan for its own sake.</p>
       </div>
-      <div class="method-row rv">
-        <span class="mr-roman">IV</span>
-        <span class="mr-name">Report</span>
-        <span class="mr-desc">Monthly review against original targets. Underperformance named before you ask.</span>
+      <div class="proc-step rv">
+        <span class="proc-num">04</span>
+        <h3>Report</h3>
+        <p>A monthly review against the original targets — underperformance named first.</p>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta" id="contact">
-    <div class="cta-bg" aria-hidden="true">
-      <svg viewBox="0 0 800 400" preserveAspectRatio="none" class="cta-svg">
-        <path class="cta-path" d="M0,300 C150,200 250,360 400,260 C550,160 650,320 800,220"/>
-      </svg>
-    </div>
-    <span class="sec-tag sec-tag--light">Fig. 04 — Let's talk</span>
-    <h2 class="cta-title">Tell us what<br/>you're <em>trying</em><br/>to grow<span class="ht-dot">.</span></h2>
-    <p class="cta-sub">A 30-minute call, no deck. We'll tell you honestly whether we're the right fit before we quote a rate.</p>
-    <div class="cta-actions">
-      <button class="btn-p btn-p--light" onclick="alert('Demo site by Alexander Caro — alexandercaro.com')">Book a call</button>
-      <button class="btn-g btn-g--light" onclick="alert('Demo site by Alexander Caro — alexandercaro.com')">Send an email</button>
+    <div class="cta-content">
+      <span class="eyebrow eyebrow--light rv">Let's talk</span>
+      <h2 class="cta-title rv">Ready to grow <span class="hl">faster?</span></h2>
+      <p class="cta-sub rv">A 30-minute call, no deck. We'll tell you honestly whether we're the right fit before we quote a rate.</p>
+      <div class="cta-actions rv">
+        <button class="btn-p btn-p--light" onclick="alert('Demo site by Alexander Caro — alexandercaro.com')">Book a call</button>
+        <button class="btn-g btn-g--light" onclick="alert('Demo site by Alexander Caro — alexandercaro.com')">Send an email</button>
+      </div>
     </div>
   </section>
 
   <footer>
     <span>© 2026 Pulse Digital — a design concept by <a href="https://alexandercaro.com">Alexander Caro</a></span>
     <div class="foot-links">
-      <a href="#practice">Practice</a>
-      <a href="#results">Evidence</a>
-      <a href="#work">Method</a>
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </div>
   </footer>
