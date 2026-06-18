@@ -111,72 +111,118 @@ const initParticles = (config) => {
 
 initParticles({ canvasId: 'heroCanvas', heroSelector: '.proj-hero' });
 
-// ─── CARRUSEL EDITORIAL ───────────────────────────────────────────
+// ─── CARRUSEL EDITORIAL — LOOP INFINITO REAL ──────────────────────
+// Técnica: clonar los primeros y últimos slides en cada extremo del track.
+// Así, al llegar al final, lo que se ve a continuación ya es una copia del
+// primer slide (no un hueco vacío); cuando el scroll entra en la zona
+// clonada, saltamos sin transición a la posición real equivalente. El ojo
+// nunca percibe el "corte" porque siempre hay imagen visible en ambos lados.
 document.querySelectorAll('.proj-carousel').forEach((carousel) => {
   const track = carousel.querySelector('.proj-carousel__track');
-  const slides = Array.from(carousel.querySelectorAll('.proj-carousel__slide'));
+  const originalSlides = Array.from(carousel.querySelectorAll('.proj-carousel__slide'));
   const counter = carousel.querySelector('.proj-carousel__counter .current');
   const prevBtn = carousel.querySelector('[data-dir="-1"]');
   const nextBtn = carousel.querySelector('[data-dir="1"]');
-  if (!track || !slides.length) return;
+  if (!track || !originalSlides.length) return;
 
+  const count = originalSlides.length;
   const pad = (n) => String(n).padStart(2, '0');
-  const count = slides.length;
 
-  // El índice es estado explícito, no se recalcula leyendo scrollLeft a mitad
-  // de una animación (eso era lo que rompía el contador y los botones).
-  let current = 0;
+  // Cuántos clones poner en cada extremo: suficientes para llenar el ancho
+  // visible más uno de margen, sin pasarnos del total de slides reales.
+  const CLONES = Math.min(count, 3);
+
+  const headClones = originalSlides.slice(0, CLONES).map((s) => {
+    const c = s.cloneNode(true);
+    c.setAttribute('data-clone', 'tail'); // visualmente está al final, es copia del inicio
+    c.setAttribute('aria-hidden', 'true');
+    return c;
+  });
+  const tailClones = originalSlides.slice(-CLONES).map((s) => {
+    const c = s.cloneNode(true);
+    c.setAttribute('data-clone', 'head'); // visualmente está al principio, es copia del final
+    c.setAttribute('aria-hidden', 'true');
+    return c;
+  });
+
+  tailClones.forEach((c) => track.insertBefore(c, track.firstChild));
+  headClones.forEach((c) => track.appendChild(c));
+
+  // Todos los slides en el DOM ahora, en orden: [clones-cola][reales][clones-cabeza]
+  const allSlides = Array.from(carousel.querySelectorAll('.proj-carousel__slide'));
+  const OFFSET = tailClones.length; // índice donde empiezan los slides reales
+
+  let current = 0;       // índice lógico (0..count-1), lo que se muestra en el contador
   let isAnimating = false;
+  const queue = [];      // cola FIFO de direcciones pendientes: cada elemento es +1 o -1
 
   const renderCounter = () => { if (counter) counter.textContent = pad(current + 1); };
 
-  // Los slides usan scroll-snap-align: start, así que el slide "activo" es el
-  // que está más cerca de alinear su borde izquierdo con el borde izquierdo
-  // visible del track (no el centro del viewport — medir contra el centro
-  // hacía que el slide 0 nunca se detectara como activo por el padding inicial).
-  const syncFromScroll = () => {
-    if (isAnimating) return;
-    let best = 0, bestDist = Infinity;
-    slides.forEach((s, i) => {
-      const dist = Math.abs(s.offsetLeft - track.scrollLeft);
-      if (dist < bestDist) { bestDist = dist; best = i; }
-    });
-    current = best;
-    renderCounter();
+  const realIndexFor = (logicalIdx) => OFFSET + logicalIdx;
+
+  // Posiciona el track instantáneamente (sin animación) en el slide real
+  // correspondiente al índice lógico — usado para el "teletransporte" al
+  // cruzar hacia una zona clonada.
+  const jumpTo = (logicalIdx) => {
+    const target = allSlides[realIndexFor(logicalIdx)];
+    track.scrollLeft = target.offsetLeft;
   };
 
-  const scrollToIndex = (idx) => {
-    const isWrapping = idx >= count || idx < 0; // dio la vuelta del ciclo
-    const wrapped = ((idx % count) + count) % count;
+  // Arranca posicionado en el primer slide real (saltando los clones de cola).
+  jumpTo(0);
+  renderCounter();
+
+  const ANIM_MS = 380; // debe ser >= la duración real de la transición smooth del navegador
+
+  // Único punto de entrada para avanzar: si no hay nada corriendo, arranca
+  // inmediatamente; si hay una animación en curso, el paso ya quedó en la
+  // cola (ver `step`) y se procesará automáticamente cuando termine.
+  const processQueue = () => {
+    if (isAnimating || queue.length === 0) return;
+    const dir = queue.shift();
+    const logicalIdx = current + dir;
+    const isWrapping = logicalIdx >= count || logicalIdx < 0; // dio la vuelta al ciclo
+    const wrapped = ((logicalIdx % count) + count) % count;
+
     current = wrapped;
     renderCounter();
     isAnimating = true;
-    const target = slides[wrapped];
-    // Al dar la vuelta (siguiente desde el último, o anterior desde el primero)
-    // el salto es instantáneo, para no hacer un scroll visual largo hacia atrás
-    // que se vería como "retroceder" en vez de "seguir avanzando".
-    const behavior = isWrapping ? 'auto' : 'smooth';
-    track.scrollTo({ left: target.offsetLeft, behavior });
-    clearTimeout(track._animLock);
-    const lockDuration = behavior === 'smooth' ? 500 : 150;
-    track._animLock = setTimeout(() => {
+
+    // Si damos la vuelta, animamos hacia el SLOT CLONADO contiguo (visualmente
+    // idéntico al real), para que el scroll siga fluyendo en la misma
+    // dirección sin saltar de golpe hacia atrás. Si no, animamos directo al
+    // slide real.
+    let targetEl;
+    if (isWrapping && dir > 0) {
+      targetEl = allSlides[OFFSET + count]; // justo después del último real (copia del primero)
+    } else if (isWrapping && dir < 0) {
+      targetEl = allSlides[OFFSET - 1]; // justo antes del primero real (copia del último)
+    } else {
+      targetEl = allSlides[realIndexFor(wrapped)];
+    }
+    track.scrollTo({ left: targetEl.offsetLeft, behavior: 'smooth' });
+
+    setTimeout(() => {
       isAnimating = false;
-      // El navegador puede haber clampeado el scroll real (si el slide
-      // destino no tenía suficiente espacio para desplazarse del todo).
-      // Reafirmamos el índice "current" como fuente de verdad en vez de
-      // dejar que el siguiente evento scroll lo recalcule mal.
-      renderCounter();
-    }, lockDuration);
+      jumpTo(current); // si dimos la vuelta, reposiciona sin transición sobre el slide real
+      processQueue();  // si quedaron pasos en cola, encadena el siguiente de inmediato
+    }, ANIM_MS);
   };
 
-  prevBtn?.addEventListener('click', () => scrollToIndex(current - 1));
-  nextBtn?.addEventListener('click', () => scrollToIndex(current + 1));
+  // Cada clic simplemente entra a la cola; processQueue decide si arranca ya
+  // o espera su turno. Así nunca se pierde ni se duplica un paso, sin
+  // importar cuántos clics rápidos lleguen.
+  const step = (dir) => {
+    queue.push(dir);
+    processQueue();
+  };
 
-  let scrollTimer;
-  track.addEventListener('scroll', () => {
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(syncFromScroll, 100);
-  }, { passive: true });
+  prevBtn?.addEventListener('click', () => step(-1));
+  nextBtn?.addEventListener('click', () => step(1));
 
-  renderCounter();
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => jumpTo(current), 150);
+  });
 });
