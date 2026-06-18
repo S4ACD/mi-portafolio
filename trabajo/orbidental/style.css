@@ -250,7 +250,8 @@
 .proj-carousel { position: relative; }
 .proj-carousel__track {
   display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory;
-  padding: 4px max(24px, calc(50vw - 550px)) 28px; scrollbar-width: none;
+  padding: 4px max(24px, calc(50vw - 550px)) 28px max(24px, calc(50vw - 550px));
+  scrollbar-width: none;
 }
 .proj-carousel__track::-webkit-scrollbar { display: none; }
 .proj-carousel__slide {
