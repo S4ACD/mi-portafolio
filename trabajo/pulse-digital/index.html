@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="style.css" />
 
@@ -99,16 +99,16 @@
     </div>
   </section>
 
-  <!-- MOCKUP DE LA LANDING — iframe en vivo dentro de browser frame -->
+  <!-- MOCKUP DE LA LANDING — iframe en vivo, tamaño real, con scroll propio -->
   <section class="section proj-showcase-live">
     <div class="container">
       <div class="proj-showcase-live__head scroll-reveal">
         <p class="eyebrow">EL RESULTADO</p>
         <h2 class="proj-section__title">Una agencia que se siente como una <em>consultora</em>, no como un SaaS más<span class="hero__dot">.</span></h2>
-        <p class="proj-text">La dirección elegida fue "informe trimestral": tipografía editorial, paleta papel-y-ladrillo, métricas que cuentan en vivo, folios de documento. El sitio de abajo está embebido en vivo — interactúa con él directamente, o ábrelo en una pestaña completa.</p>
+        <p class="proj-text">La dirección final fue una identidad tipo growth/SaaS moderno: tipografía Poppins, violeta y verde lima como acentos sobre blanco, y fotografía real de equipo en vez de solo texto en columnas. Esta es una ventana real al sitio — haz scroll dentro de ella para explorarlo completo, o ábrelo en pantalla completa.</p>
       </div>
 
-      <a href="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" target="_blank" rel="noopener" class="browser-mock scroll-reveal" aria-label="Abrir Pulse Digital en una pestaña nueva">
+      <div class="browser-mock scroll-reveal">
         <div class="browser-mock__bar">
           <div class="browser-mock__dots">
             <span></span><span></span><span></span>
@@ -117,21 +117,18 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             pulsedigital.com
           </div>
-          <div class="browser-mock__expand">
+          <a href="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" target="_blank" rel="noopener" class="browser-mock__expand" aria-label="Abrir Pulse Digital en pantalla completa">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-          </div>
+          </a>
         </div>
         <div class="browser-mock__viewport">
-          <iframe src="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" title="Pulse Digital — vista en vivo" loading="lazy" tabindex="-1"></iframe>
-          <div class="browser-mock__overlay">
-            <span class="browser-mock__overlay-text">
-              Ver sitio completo
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-            </span>
-          </div>
+          <iframe src="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" title="Pulse Digital — vista en vivo"></iframe>
         </div>
+      </div>
+      <a href="https://mi-portafolio-one-mu.vercel.app/trabajo/pulse-digital/site/" target="_blank" rel="noopener" class="browser-mock__caption-link">
+        Abrir Pulse Digital en pantalla completa
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
       </a>
-      <p class="browser-mock__caption">Vista en vivo — haz clic en cualquier punto para abrir el sitio completo en una pestaña nueva.</p>
     </div>
   </section>
 
@@ -141,35 +138,35 @@
       <div class="proj-criteria__main scroll-reveal">
         <p class="eyebrow">LO DIFÍCIL</p>
         <h2 class="proj-section__title">Salir de mi paleta no es solo cambiar el hex<span class="hero__dot">.</span></h2>
-        <p class="proj-text">Cualquiera puede invertir colores y llamarlo "otra identidad". El reto real fue que cada decisión tuviera la misma lógica interna que mi propio sistema: una tipografía display con carácter editorial, una paleta donde el acento aparece poco pero pesa, y micro-interacciones con propósito narrativo — no plantilla de SaaS con un cambio de paleta.</p>
+        <p class="proj-text">Cualquiera puede invertir colores y llamarlo "otra identidad". El reto real fue construir un sistema con la misma lógica interna que cualquier marca real tiene: una tipografía con personalidad propia, una paleta donde el acento aparece con intención, y fotografía que aporta peso visual real — no plantilla genérica con un cambio de paleta.</p>
       </div>
 
       <div class="design-grid scroll-reveal" style="--reveal-delay:.1s">
         <div class="design-grid__tokens">
           <p class="design-grid__label">Paleta de color</p>
           <div class="token-row">
-            <span class="token-swatch" style="background:#8a3324"></span>
-            <span class="token-info"><strong>Ladrillo</strong><br/>#8a3324 — acento único</span>
+            <span class="token-swatch" style="background:#5b3df0"></span>
+            <span class="token-info"><strong>Violeta</strong><br/>#5b3df0 — acento principal</span>
           </div>
           <div class="token-row">
-            <span class="token-swatch" style="background:#f3efe4;border:1px solid #d8cfb8"></span>
-            <span class="token-info"><strong>Papel</strong><br/>#f3efe4 — fondo cálido, no blanco puro</span>
+            <span class="token-swatch" style="background:#c8f750"></span>
+            <span class="token-info"><strong>Lima</strong><br/>#c8f750 — acento secundario, alto contraste</span>
           </div>
           <div class="token-row">
-            <span class="token-swatch" style="background:#1c1812"></span>
-            <span class="token-info"><strong>Tinta</strong><br/>#1c1812 — texto y fondo de CTA</span>
+            <span class="token-swatch" style="background:#14141f"></span>
+            <span class="token-info"><strong>Tinta</strong><br/>#14141f — texto y fondo de CTA</span>
           </div>
 
           <p class="design-grid__label" style="margin-top:28px">Tipografía display</p>
           <div class="font-preview">
-            <span class="font-preview__sample">Fraunces 440</span>
-            <span class="font-preview__meta">Editorial, peso óptico bajo — distinta a la negrita geométrica de mi portafolio</span>
+            <span class="font-preview__sample" style="font-family:'Poppins',sans-serif;font-style:normal;font-weight:700;">Poppins 700</span>
+            <span class="font-preview__meta">Geométrica, redondeada — distinta a la serif y a la Space Grotesk de mi portafolio</span>
           </div>
 
           <p class="design-grid__label" style="margin-top:28px">Concepto</p>
           <div class="concept-badge">
             <span class="concept-badge__dot"></span>
-            "Informe trimestral" — folios, sellos, métricas en vivo
+            Growth agency moderna — fotografía real, bento grid, métricas integradas
           </div>
         </div>
 
@@ -178,22 +175,22 @@
           <div class="challenge-item">
             <span class="challenge-num">01</span>
             <div class="challenge-body">
-              <div class="challenge-title">Que se sintiera premium, no minimalista por defecto</div>
-              <div class="challenge-desc">La primera versión usaba serif + verde + líneas finas — el resultado se sentía "correcto" pero genérico, el tipo de respuesta segura que cualquier IA entrega. Lo resolví con un concepto fuerte (documento financiero) en vez de solo aplicar más minimalismo.</div>
+              <div class="challenge-title">Composición con peso visual real, no solo texto en columnas</div>
+              <div class="challenge-desc">Las primeras direcciones eran sólidas en tipografía pero se sentían planas: todo apilado en columnas parejas. Investigué referencias reales (agencias premiadas en Awwwards) y la diferencia estaba en la fotografía a gran escala y la composición asimétrica — lo apliqué en el hero, los servicios y el bento de resultados.</div>
             </div>
           </div>
           <div class="challenge-item">
             <span class="challenge-num">02</span>
             <div class="challenge-body">
-              <div class="challenge-title">Micro-interacciones con intención narrativa</div>
-              <div class="challenge-desc">Cursor personalizado tipo marca de anotación, números que cuentan en vivo al hacer scroll, barras de resultados que se dibujan — cada interacción refuerza el concepto de "expediente", no son efectos decorativos sueltos.</div>
+              <div class="challenge-title">Curaduría de fotografía con licencia verificada</div>
+              <div class="challenge-desc">Cada imagen se eligió y verificó individualmente por licencia y composición antes de usarla — nada de bancos genéricos sin revisar. El resultado: equipo real, dashboard real, sensación de marca activa, no de stock photo al azar.</div>
             </div>
           </div>
           <div class="challenge-item">
             <span class="challenge-num">03</span>
             <div class="challenge-body">
               <div class="challenge-title">Copy en inglés con tono de autoridad real</div>
-              <div class="challenge-desc">Nada de "we help brands grow" genérico. El copy se escribió con voz de consultora seria: específico, un poco seco, con admisiones de límites ("we'll tell you honestly whether we're the right fit") — eso genera más confianza que cualquier claim de resultados.</div>
+              <div class="challenge-desc">Nada de "we help brands grow" genérico. El copy se escribió con voz de agencia seria: específico, directo, con admisiones de límites ("we'll tell you honestly whether we're the right fit") — eso genera más confianza que cualquier claim de resultados.</div>
             </div>
           </div>
         </div>
@@ -204,7 +201,7 @@
   <!-- CTA -->
   <section class="cta-section" id="contacto">
     <div class="container">
-      <h2 class="cta-section__title">¿Necesitas una identidad que no se vea hecha por IA<span class="hero__dot">?</span></h2>
+      <h2 class="cta-section__title">¿Tu marca necesita una identidad que no se sienta genérica<span class="hero__dot">?</span></h2>
       <p class="cta-section__sub">Cuéntame tu proyecto. Respondo en menos de 24 horas.</p>
       <div class="cta-section__actions">
         <button class="btn btn--cyan btn--lg" id="whatsappBtn">
