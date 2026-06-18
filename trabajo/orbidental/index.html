@@ -7,7 +7,7 @@
   <meta name="description" content="Reconstruí el sitio de Orbidental desde cero: de 14 segundos de carga y roto en móvil a PageSpeed 97 y Core Web Vitals aprobado en un mes — sin perder SEO." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="style.css" />
 
@@ -36,7 +36,7 @@
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO: full-bleed asimétrico — título invade el borde, diagnóstico flotante -->
   <section class="proj-hero">
     <canvas id="heroCanvas" class="hero__canvas"></canvas>
     <div class="container proj-hero__inner">
@@ -52,15 +52,26 @@
         <span class="tag">SEO técnico</span>
         <span class="tag">WordPress</span>
       </div>
-      <h1 class="proj-hero__title reveal-up" style="--delay:.18s">
-        Orbidental<span class="hero__dot">.</span>
-      </h1>
-      <p class="proj-hero__sub reveal-up" style="--delay:.26s">
-        Un catálogo de +3.000 productos dentales que tardaba 14 segundos en cargar y se rompía en el celular.<br class="br-desktop"/>
-        Clientes que se iban antes de ver el primer precio. Lo reconstruí desde cero —sin perder un producto ni una posición en Google—<br class="br-desktop"/>
+
+      <div class="proj-hero__top">
+        <h1 class="proj-hero__title reveal-up" style="--delay:.18s">
+          Orbidental<span class="hero__dot">.</span>
+        </h1>
+        <div class="proj-hero__diagnosis reveal-up" style="--delay:.26s">
+          <span class="proj-hero__diagnosis-score">
+            <span class="from">40</span>
+            <span class="to">97</span>
+          </span>
+          <span class="proj-hero__diagnosis-label">PageSpeed · antes / después</span>
+        </div>
+      </div>
+
+      <p class="proj-hero__sub reveal-up" style="--delay:.34s">
+        Un catálogo de +3.000 productos dentales que tardaba 14 segundos en cargar y se rompía en el celular.
+        Clientes que se iban antes de ver el primer precio. Lo reconstruí desde cero —sin perder un producto ni una posición en Google—
         y pasó de un PageSpeed de 40 a 97.
       </p>
-      <div class="proj-hero__actions reveal-up" style="--delay:.34s">
+      <div class="proj-hero__actions reveal-up" style="--delay:.42s">
         <a href="https://orbidental.com" target="_blank" rel="noopener" class="btn btn--cyan">
           Ver sitio en vivo
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -71,29 +82,26 @@
     </div>
   </section>
 
-  <!-- MÉTRICAS -->
+  <!-- PANEL DE DIAGNÓSTICO: un número domina, el resto son notas al margen -->
   <section class="proj-metrics">
     <div class="container">
       <div class="proj-metrics__grid scroll-reveal">
-        <div class="proj-metric">
+        <div class="proj-metric proj-metric--lead">
           <div class="proj-metric__nums">
             <span class="proj-metric__before">40</span>
             <span class="proj-metric__arrow">→</span>
             <span class="proj-metric__after">97</span>
           </div>
-          <span class="proj-metric__label">PageSpeed Score</span>
+          <span class="proj-metric__label">PageSpeed Score — Core Web Vitals aprobado en un mes</span>
         </div>
-        <div class="proj-metric__divider"></div>
         <div class="proj-metric">
           <span class="proj-metric__big">14 s</span>
-          <span class="proj-metric__label">Lo que tardaba en cargar (antes)</span>
+          <span class="proj-metric__label">Lo que tardaba en cargar, antes</span>
         </div>
-        <div class="proj-metric__divider"></div>
         <div class="proj-metric">
           <span class="proj-metric__big">3.000+</span>
-          <span class="proj-metric__label">Productos en el catálogo</span>
+          <span class="proj-metric__label">Productos migrados sin perder SEO</span>
         </div>
-        <div class="proj-metric__divider"></div>
         <div class="proj-metric">
           <span class="proj-metric__big">100%</span>
           <span class="proj-metric__label">Responsive — antes no servía en móvil</span>
@@ -102,18 +110,19 @@
     </div>
   </section>
 
-  <!-- OVERVIEW / EL PROBLEMA REAL -->
+  <!-- EXPEDIENTE: columna angosta tipo diario + rail de datos al margen -->
   <section class="section proj-overview">
     <div class="container">
       <div class="proj-overview__grid">
-        <div class="scroll-reveal">
+        <div class="proj-overview__main scroll-reveal">
           <p class="eyebrow">EL PROBLEMA REAL</p>
-          <h2 class="proj-section__title">Un sitio lento no es un<br/>problema técnico. Es un<br/>problema de ventas<span class="hero__dot">.</span></h2>
+          <h2 class="proj-section__title">Un sitio lento no es un problema técnico. Es un problema <em>de ventas</em>.</h2>
           <p class="proj-text">El sitio anterior estaba hecho en Divi: arrastraba más de un megabyte de código que nadie usaba en cada visita, no estaba pensado para móvil y, siendo honestos, se veía mal —fondo plano, fotos sueltas, texto sin jerarquía—. Tardaba 14 segundos en abrir.</p>
-          <p class="proj-text">El problema no era estético. Era que cada segundo de espera y cada pantalla rota en un celular era un cliente que cerraba la pestaña, en un catálogo de +3.000 productos donde la gente llega buscando algo puntual y con prisa. Para una empresa que vende online, eso no se ve en el diseño: se ve en las ventas que no entran.</p>
+          <p class="proj-text--pull">Cada segundo de espera y cada pantalla rota en un celular era un cliente que cerraba la pestaña.</p>
+          <p class="proj-text">Eso pasaba en un catálogo de +3.000 productos donde la gente llega buscando algo puntual y con prisa. Para una empresa que vende online, eso no se ve en el diseño: se ve en las ventas que no entran.</p>
           <p class="proj-text">Divi no se podía "optimizar": el peso estaba en el propio sistema. Había que sacarlo. Reconstruí todo en código limpio sobre WordPress, migré los más de 3.000 productos sin perder el SEO ya posicionado —un error ahí y se caen meses de ranking— y rehíce la experiencia visual para que el sitio por fin transmitiera la seriedad de la empresa.</p>
         </div>
-        <div class="proj-overview__info scroll-reveal" style="--reveal-delay:.1s">
+        <div class="proj-overview__rail scroll-reveal" style="--reveal-delay:.1s">
           <div class="proj-info-card">
             <span class="proj-info-card__label">Empresa</span>
             <span class="proj-info-card__value">Orbidental SAS</span>
@@ -139,31 +148,39 @@
     </div>
   </section>
 
-  <!-- LA PRUEBA: ANTES / DESPUÉS -->
-  <section class="proj-gallery">
+  <!-- LA PRUEBA: split-screen con eje central, no dos imágenes idénticas en grid -->
+  <section class="proj-proof">
     <div class="container">
-      <p class="eyebrow scroll-reveal">LA PRUEBA</p>
-      <h2 class="proj-section__title scroll-reveal">De "Desaprobado" a "Aprobado"<br/>en un mes<span class="hero__dot">.</span></h2>
-      <p class="proj-text scroll-reveal" style="max-width:680px;">No es mi opinión: es el propio reporte de Core Web Vitals (Métricas Web Esenciales) de Google. En un mes, el sitio pasó de "Desaprobado" a "Aprobado", y el PageSpeed subió de 40 a 97. En la práctica: 14 segundos de carga convertidos en una apertura casi instantánea.</p>
-      <div class="proj-img-grid">
-        <div class="proj-img-item scroll-reveal">
-          <div class="proj-img-item__badge proj-img-item__badge--bad">Antes</div>
+      <div class="proj-proof__head scroll-reveal">
+        <p class="eyebrow">LA PRUEBA</p>
+        <h2 class="proj-section__title">De "Desaprobado" a "Aprobado" en un mes<span class="hero__dot">.</span></h2>
+        <p class="proj-text">No es mi opinión: es el propio reporte de Core Web Vitals (Métricas Web Esenciales) de Google. En un mes, el sitio pasó de "Desaprobado" a "Aprobado", y el PageSpeed subió de 40 a 97. En la práctica: 14 segundos de carga convertidos en una apertura casi instantánea.</p>
+      </div>
+      <div class="proj-proof__split scroll-reveal">
+        <div class="proj-proof__half proj-proof__half--before">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035692/Antes_web_speed_ozdykm.jpg" alt="PageSpeed de Orbidental antes del rediseño: 40, en rojo" loading="lazy" />
-          <span class="proj-img-caption">PageSpeed antes — 40, en rojo.</span>
+          <div class="proj-proof__caption">
+            <span class="proj-proof__caption-label">Antes</span>
+            <span class="proj-proof__caption-score">40 — Desaprobado</span>
+          </div>
         </div>
-        <div class="proj-img-item scroll-reveal" style="--reveal-delay:.1s">
-          <div class="proj-img-item__badge proj-img-item__badge--good">Después</div>
+        <div class="proj-proof__half proj-proof__half--after">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035690/Despu%C3%A9s_web_speed_fz7f60.png" alt="PageSpeed de Orbidental después del rediseño: 97, en verde" loading="lazy" />
-          <span class="proj-img-caption">PageSpeed después — 97, en verde.</span>
+          <div class="proj-proof__caption">
+            <span class="proj-proof__caption-label">Después</span>
+            <span class="proj-proof__caption-score">97 — Aprobado</span>
+          </div>
         </div>
+        <div class="proj-proof__divider"></div>
+        <div class="proj-proof__vs">VS</div>
       </div>
     </div>
   </section>
 
-  <!-- INICIO -->
-  <section class="proj-gallery">
+  <!-- PÁGINA DE INICIO: full-bleed dramático, sin marco de tarjeta -->
+  <section class="proj-showcase">
     <div class="container">
-      <div class="proj-gallery__header scroll-reveal">
+      <div class="proj-showcase__header scroll-reveal">
         <h2 class="proj-section__title">Página de inicio<span class="hero__dot">.</span></h2>
         <a href="https://orbidental.com" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
           Ver en vivo
@@ -172,14 +189,18 @@
           </svg>
         </a>
       </div>
-      <p class="proj-text scroll-reveal" style="max-width:680px;">Antes: fondo plano, sin jerarquía, lento. Ahora: una home coherente y ordenada que se ve profesional en cualquier pantalla y carga al instante. La credibilidad de una empresa también se diseña.</p>
-      <div class="proj-img-full proj-img-full--screen scroll-reveal">
-        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental — Página de inicio rediseñada" loading="lazy" />
+    </div>
+    <div class="proj-showcase__frame scroll-reveal">
+      <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental — Página de inicio rediseñada" loading="lazy" />
+      <div class="proj-showcase__overlay">
+        <div class="proj-showcase__text">
+          <p class="proj-text">Antes: fondo plano, sin jerarquía, lento. Ahora: una home coherente y ordenada que se ve profesional en cualquier pantalla y carga al instante. La credibilidad de una empresa también se diseña.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PÁGINA DE MARCA -->
+  <!-- PÁGINA DE MARCA — carrusel editorial, no grid de 6 capturas sueltas -->
   <section class="proj-gallery">
     <div class="container">
       <div class="proj-gallery__header scroll-reveal">
@@ -191,31 +212,46 @@
           </svg>
         </a>
       </div>
-      <p class="proj-text scroll-reveal" style="max-width:680px;">Eighteeth es una de las marcas que distribuye Orbidental. En vez de una página genérica más, le construí una experiencia dedicada dentro del sitio —la prueba de que esto no sale de una plantilla, sino que se diseña marca por marca.</p>
-      <div class="proj-img-grid proj-img-grid--3">
-        <div class="proj-img-item proj-img-item--tall scroll-reveal">
+      <p class="proj-text scroll-reveal" style="max-width:600px;">Eighteeth es una de las marcas que distribuye Orbidental. En vez de una página genérica más, le construí una experiencia dedicada dentro del sitio —la prueba de que esto no sale de una plantilla, sino que se diseña marca por marca.</p>
+    </div>
+    <div class="proj-carousel scroll-reveal" data-carousel="marca">
+      <div class="proj-carousel__track">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035690/P%C3%A1gina_de_marca_parte_1_zvdsfw.png" alt="Marca Eighteeth parte 1" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.08s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_2_pi1jpi.png" alt="Marca Eighteeth parte 2" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.16s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_3_ibtubh.png" alt="Marca Eighteeth parte 3" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.24s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_4_km6wot.png" alt="Marca Eighteeth parte 4" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.32s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_5_j8njaj.png" alt="Marca Eighteeth parte 5" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.4s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_6_cvw0xv.png" alt="Marca Eighteeth parte 6" loading="lazy" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="proj-carousel__nav">
+          <span class="proj-carousel__counter"><span class="current">01</span> / 06</span>
+          <div class="proj-carousel__btns">
+            <button class="proj-carousel__btn" data-dir="-1" aria-label="Anterior">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="proj-carousel__btn" data-dir="1" aria-label="Siguiente">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EL SIGUIENTE PASO: PROTOTIPO DE LA FUTURA TIENDA -->
+  <!-- EL SIGUIENTE PASO: PROTOTIPO DE LA FUTURA TIENDA — carrusel editorial -->
   <section class="proj-gallery">
     <div class="container">
       <div class="proj-gallery__header scroll-reveal">
@@ -228,25 +264,40 @@
           </svg>
         </a>
       </div>
-      <p class="proj-text scroll-reveal" style="max-width:680px;">Las páginas de producto actuales son básicas —fondo blanco, una foto, texto sin orden—. El e-commerce real está hoy en desarrollo. Para definir hacia dónde va y alinear a la dirección, diseñé este prototipo de cómo se verá y funcionará la página de producto: coherente, clara y pensada para que el cliente entienda lo que compra y decida con confianza. Es el siguiente paso real de Orbidental — y soy quien lo está construyendo.</p>
-      <div class="proj-img-grid proj-img-grid--3">
-        <div class="proj-img-item proj-img-item--tall scroll-reveal">
+      <p class="proj-text scroll-reveal" style="max-width:600px;">Las páginas de producto actuales son básicas —fondo blanco, una foto, texto sin orden—. El e-commerce real está hoy en desarrollo. Para definir hacia dónde va y alinear a la dirección, diseñé este prototipo de cómo se verá y funcionará la página de producto: coherente, clara y pensada para que el cliente entienda lo que compra y decida con confianza. Es el siguiente paso real de Orbidental — y soy quien lo está construyendo.</p>
+    </div>
+    <div class="proj-carousel scroll-reveal" data-carousel="prototipo">
+      <div class="proj-carousel__track">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035688/P%C3%A1gina_de_producto_parte_1_aobskn.png" alt="Prototipo de página de producto parte 1" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.08s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035689/P%C3%A1gina_de_producto_parte_2_pikggr.png" alt="Prototipo de página de producto parte 2" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.16s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035689/P%C3%A1gina_de_producto_parte_3_ozcq3n.png" alt="Prototipo de página de producto parte 3" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.24s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035689/P%C3%A1gina_de_producto_parte_4_q03noh.png" alt="Prototipo de página de producto parte 4" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.32s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035689/P%C3%A1gina_de_producto_parte_5_rkf3gl.png" alt="Prototipo de página de producto parte 5" loading="lazy" />
         </div>
-        <div class="proj-img-item proj-img-item--tall scroll-reveal" style="--reveal-delay:.4s">
+        <div class="proj-carousel__slide">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035692/P%C3%A1gina_de_marca_parte_7_qziai7.png" alt="Prototipo de página de producto parte 6" loading="lazy" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="proj-carousel__nav">
+          <span class="proj-carousel__counter"><span class="current">01</span> / 06</span>
+          <div class="proj-carousel__btns">
+            <button class="proj-carousel__btn" data-dir="-1" aria-label="Anterior">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="proj-carousel__btn" data-dir="1" aria-label="Siguiente">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
