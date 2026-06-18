@@ -3,36 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Jungla Club — Identidad Visual | Alexander Caro</title>
-  <meta name="description" content="Identidad visual completa para La Jungla Club, discoteca selvática de reggaeton en Bogotá. Logo, menú, fachada, flyers y uniformes." />
+  <title>La Jungla Club — Una identidad que ningún competidor tiene | Alexander Caro</title>
+  <meta name="description" content="En una zona donde toda discoteca compite solo con el nombre, construí un sistema de identidad visual completo para La Jungla Club: logo, fachada, menú, uniformes y flyers con un universo propio." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://alexandercaro.com/trabajo/la-jungla-club/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alexandercaro.com/trabajo/la-jungla-club/" />
-  <meta property="og:title" content="La Jungla Club — Identidad Visual | Alexander Caro" />
-  <meta property="og:description" content="Sistema de identidad visual para discoteca selvática. Logo, menú, fachada, flyers, uniformes y material digital con concepto único." />
+  <meta property="og:title" content="La Jungla Club — Una identidad que ningún competidor tiene | Alexander Caro" />
+  <meta property="og:description" content="Sistema de identidad visual completo para una discoteca de reggaeton con concepto selvático: logo, fachada, menú, uniformes y flyers, diseñados para que la marca se reconozca antes de entrar." />
   <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781034073/Fachada_msspsi.png" />
   <meta property="og:locale" content="es_CO" />
   <meta property="og:site_name" content="Alexander Caro" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="La Jungla Club — Identidad Visual | Alexander Caro" />
-  <meta name="twitter:description" content="Sistema de identidad visual para discoteca selvática con concepto único." />
+  <meta name="twitter:title" content="La Jungla Club — Una identidad que ningún competidor tiene | Alexander Caro" />
+  <meta name="twitter:description" content="Sistema de identidad visual completo para una discoteca de reggaeton con concepto selvático." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781034073/Fachada_msspsi.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Identidad Visual La Jungla Club — Discoteca de Reggaeton",
+  "description": "Sistema de identidad visual completo para La Jungla Club, discoteca de reggaeton con concepto selvático en Bogotá: logo, fachada, menú, uniformes y flyers, diseñados para diferenciarse en un mercado de discotecas visualmente genéricas.",
+  "url": "https://alexandercaro.com/trabajo/la-jungla-club/",
+  "author": {
+    "@type": "Person",
+    "name": "Alexander Caro",
+    "url": "https://alexandercaro.com"
+  },
+  "keywords": "identidad visual bogotá, branding discotecas, diseño de marca colombia, branding entretenimiento nocturno, diseño gráfico freelance",
+  "about": {
+    "@type": "Thing",
+    "name": "Identidad de marca y branding"
+  }
+}
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO: full-bleed asimétrico — título invade el borde, el "antes/después" flota a la derecha -->
   <section class="proj-hero">
     <canvas id="heroCanvas" class="hero__canvas"></canvas>
     <div class="container proj-hero__inner">
@@ -47,125 +69,181 @@
         <span class="tag">Identidad visual</span>
         <span class="tag">Entretenimiento</span>
       </div>
-      <h1 class="proj-hero__title reveal-up" style="--delay:.18s">
-        La Jungla<br/>Club<span class="hero__dot">.</span>
-      </h1>
-      <p class="proj-hero__sub reveal-up" style="--delay:.26s">
-        Identidad visual para una discoteca donde la selva se encuentra<br class="br-desktop"/> con el reggaeton. DJs con máscaras de animales, música que no para.
-      </p>
-      <div class="proj-hero__logo reveal-up" style="--delay:.34s">
-        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_500/v1781034072/Logo-La-jungla_ikx6j0.png" alt="Logo La Jungla Club" />
+
+      <div class="proj-hero__top">
+        <h1 class="proj-hero__title reveal-up" style="--delay:.18s">
+          La Jungla<span class="hero__dot">.</span>
+        </h1>
+        <div class="proj-hero__diagnosis reveal-up" style="--delay:.26s">
+          <span class="proj-hero__diagnosis-score">
+            <span class="from">Nombre genérico</span>
+            <span class="to">Universo propio</span>
+          </span>
+          <span class="proj-hero__diagnosis-label">Lo que tiene la competencia / lo que tiene La Jungla</span>
+        </div>
       </div>
+
+      <p class="proj-hero__sub reveal-up" style="--delay:.34s">
+        En una zona donde toda discoteca cambia de nombre pero se ve igual, La Jungla Club necesitaba
+        algo que ningún competidor pudiera copiar de la noche a la mañana. Construí el sistema completo
+        de identidad —logo, fachada, menú, uniformes y flyers— para que la marca se reconozca antes de
+        cruzar la puerta.
+      </p>
     </div>
   </section>
 
-  <!-- OVERVIEW -->
+  <!-- LOGO SHOWCASE: la pieza central no se mete en un grid -->
+  <section class="proj-showcase proj-showcase--logo">
+    <div class="proj-showcase__frame proj-showcase__frame--logo scroll-reveal">
+      <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_500/v1781034072/Logo-La-jungla_ikx6j0.png" alt="Logo La Jungla Club" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- EXPEDIENTE: el problema real (negocio, no estética) + datos del proyecto -->
   <section class="section proj-overview">
     <div class="container">
       <div class="proj-overview__grid">
-        <div class="scroll-reveal">
-          <p class="eyebrow">EL PROYECTO</p>
-          <h2 class="proj-section__title">Donde la selva<br/>cobra vida<span class="hero__dot">.</span></h2>
-          <p class="proj-text">La Jungla Club necesitaba una identidad tan intensa como su propuesta: una discoteca de reggaeton con estética selvática, donde los DJs usan máscaras de animales y el ambiente lo es todo.</p>
-          <p class="proj-text">El reto fue crear un sistema visual que funcionara en un flyer, en la fachada y en un uniforme — manteniendo siempre esa energía salvaje y nocturna que define la marca.</p>
+        <div class="proj-overview__main scroll-reveal">
+          <p class="eyebrow">EL PROBLEMA REAL</p>
+          <h2 class="proj-section__title">Mismo formato, mismo ambiente. Solo cambia <em>el letrero</em>.</h2>
+          <p class="proj-text">En la mayoría de discotecas de la zona, la identidad se acaba en el nombre. Cambia el aviso de la fachada, cambia el logo del flyer —pero la experiencia, los colores y la sensación al entrar son intercambiables entre un local y el siguiente. Para alguien que sale a bailar un viernes, todas se confunden.</p>
+          <p class="proj-text--pull">El cliente ya tenía algo que ningún competidor tenía: un nombre con carácter, La Jungla. Lo que le faltaba era un sistema visual capaz de honrar ese nombre.</p>
+          <p class="proj-text">El reto no era "hacer un logo bonito para una discoteca". Era construir una identidad que tradujera el concepto —selva, noche, intensidad— a cada superficie donde la marca iba a aparecer: fachada, menú, uniforme, flyer de evento. Algo que la gente recordara antes de haber bailado ahí, no después.</p>
         </div>
-        <div class="proj-overview__info scroll-reveal" style="--reveal-delay:.1s">
+        <div class="proj-overview__rail scroll-reveal" style="--reveal-delay:.1s">
           <div class="proj-info-card">
             <span class="proj-info-card__label">Cliente</span>
             <span class="proj-info-card__value">La Jungla Club</span>
           </div>
           <div class="proj-info-card">
             <span class="proj-info-card__label">Categoría</span>
-            <span class="proj-info-card__value">Discoteca / Entretenimiento</span>
+            <span class="proj-info-card__value">Discoteca de reggaeton · Entretenimiento nocturno</span>
           </div>
           <div class="proj-info-card">
-            <span class="proj-info-card__label">Estilo</span>
-            <span class="proj-info-card__value">Selvático · Reggaeton · Nocturno</span>
+            <span class="proj-info-card__label">Mi rol</span>
+            <span class="proj-info-card__value">Identidad visual completa, de concepto a sistema aplicado</span>
           </div>
           <div class="proj-info-card">
             <span class="proj-info-card__label">Entregables</span>
-            <span class="proj-info-card__value">Logo, flyers, menú, fachada, uniforme</span>
+            <span class="proj-info-card__value">Logo, fachada, menú, uniformes, flyers de evento</span>
+          </div>
+          <div class="proj-info-card">
+            <span class="proj-info-card__label">Herramientas</span>
+            <span class="proj-info-card__value">Illustrator, Photoshop</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALERÍA -->
-  <section class="proj-gallery">
+  <!-- LA DECISIÓN: criterio de diseño, no solo ejecución -->
+  <section class="proj-proof proj-proof--concept">
     <div class="container">
-      <p class="eyebrow scroll-reveal">APLICACIONES</p>
-      <h2 class="proj-section__title scroll-reveal">La marca en acción<span class="hero__dot">.</span></h2>
-
-      <!-- Fachada — imagen full -->
-      <div class="proj-img-full scroll-reveal">
-        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781034073/Fachada_msspsi.png" alt="La Jungla Club — Fachada" loading="lazy" />
-        <span class="proj-img-caption">Aplicación en fachada</span>
+      <div class="proj-proof__head scroll-reveal">
+        <p class="eyebrow">LA DECISIÓN</p>
+        <h2 class="proj-section__title">La selva no es el fondo. Es <em>el sistema</em>.</h2>
+        <p class="proj-text">El cliente llegó con la idea correcta: una discoteca donde la selva se encuentra con el reggaeton. Mi trabajo no fue inventar el concepto desde cero —fue convertir esa idea en un sistema visual que se sostiene en cualquier superficie, sin perder intensidad ni coherencia.</p>
+        <p class="proj-text">Construimos juntos algo que va más allá del logo: cada DJ residente tiene su propia identidad dentro del universo de la marca. No es un detalle decorativo —es una estructura narrativa que le da a La Jungla Club algo que casi ninguna discoteca de la zona tiene: un mundo visual propio, que puede crecer con cada nuevo evento sin perder su núcleo.</p>
+        <p class="proj-text">Esa decisión —pensar en sistema, no en pieza suelta— es la que separa una identidad que se diluye en seis meses de una que sigue siendo reconocible un año después.</p>
       </div>
+    </div>
+  </section>
 
-      <!-- Grid 2 col — Menú y Uniforme -->
-      <div class="proj-img-grid">
-        <div class="proj-img-item scroll-reveal">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034072/Men%C3%BA_emupa4.png" alt="La Jungla Club — Menú" loading="lazy" />
-          <span class="proj-img-caption">Diseño de menú</span>
-        </div>
-        <div class="proj-img-item scroll-reveal" style="--reveal-delay:.1s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034080/Uniforme-LA-JUNGLA-CLUB_yi3lti.png" alt="La Jungla Club — Uniforme" loading="lazy" />
-          <span class="proj-img-caption">Diseño de uniforme</span>
-        </div>
-      </div>
-
-      <!-- Grid 3 col — Flyers -->
-      <div class="proj-img-grid proj-img-grid--3">
-        <div class="proj-img-item proj-img-item--wide scroll-reveal">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781034073/Flyer1_ncmzhk.png" alt="La Jungla Club — Flyer 1" loading="lazy" />
-          <span class="proj-img-caption">Flyer evento</span>
-        </div>
-        <div class="proj-img-item proj-img-item--wide scroll-reveal" style="--reveal-delay:.1s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781034073/Flyer2_zt0ge8.png" alt="La Jungla Club — Flyer 2" loading="lazy" />
-          <span class="proj-img-caption">Flyer evento</span>
-        </div>
-        <div class="proj-img-item proj-img-item--wide scroll-reveal" style="--reveal-delay:.2s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781034073/Flyer3_w9cmqe.png" alt="La Jungla Club — Flyer 3" loading="lazy" />
-          <span class="proj-img-caption">Flyer evento</span>
+  <!-- LO DIFÍCIL: del concepto narrativo al sistema aplicable -->
+  <section class="section proj-overview proj-overview--reverse">
+    <div class="container">
+      <div class="proj-overview__grid proj-overview__grid--reverse">
+        <div class="proj-overview__main scroll-reveal">
+          <p class="eyebrow">LO DIFÍCIL</p>
+          <h2 class="proj-section__title">Un concepto fuerte en pantalla es fácil. Que sobreviva en <em>cinco materiales distintos</em>, no.</h2>
+          <p class="proj-text">Selva, noche e intensidad funcionan bien en una ilustración. El reto real es que ese mismo concepto se vea igual de fuerte impreso en vinil sobre una fachada de varios metros, bordado o estampado en tela de uniforme, en el papel de un menú bajo luz de discoteca, y en un flyer que va a competir por atención en un feed saturado de eventos de viernes.</p>
+          <p class="proj-text">Cada superficie impone sus propias restricciones —de color, de legibilidad, de durabilidad—. Diseñar un sistema que respetara esas restricciones sin diluir la identidad en ninguna de ellas, y sin que cada pieza nueva pareciera de otra marca, fue el trabajo real detrás de este proyecto.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MÉTRICAS DE IMPACTO -->
-  <section class="section">
+  <!-- GALERÍA PRINCIPAL: la marca en sus aplicaciones reales -->
+  <section class="proj-gallery">
     <div class="container">
-      <p class="eyebrow scroll-reveal">RESULTADOS</p>
-      <h2 class="proj-section__title scroll-reveal">Una marca que se siente<br/>antes de entrar<span class="hero__dot">.</span></h2>
+      <div class="proj-gallery__header scroll-reveal">
+        <h2 class="proj-section__title">El sistema, pieza por pieza<span class="hero__dot">.</span></h2>
+      </div>
+      <p class="proj-text scroll-reveal" style="max-width:600px; margin-top:28px;">
+        Cada pieza está pensada para la superficie donde vive: la fachada tiene que detener a alguien en la calle, el uniforme tiene que sobrevivir un turno completo de trabajo, el menú tiene que leerse bajo luz baja, y el flyer tiene que ganar el scroll en menos de un segundo.
+      </p>
+
+      <!-- Imagen grande — fachada -->
+      <div class="proj-img-full scroll-reveal">
+        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781034073/Fachada_msspsi.png" alt="La Jungla Club — Diseño de fachada" loading="lazy" />
+        <span class="proj-img-caption">Fachada — la primera impresión, la que decide si alguien cruza la puerta</span>
+      </div>
+
+      <!-- Grid 2 columnas — menú y uniforme -->
+      <div class="proj-img-grid">
+        <div class="proj-img-item scroll-reveal">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034072/Men%C3%BA_emupa4.png" alt="La Jungla Club — Diseño de menú" loading="lazy" />
+          <span class="proj-img-caption">Menú — la marca sigue presente en cada mesa</span>
+        </div>
+        <div class="proj-img-item scroll-reveal" style="--reveal-delay:.1s">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034080/Uniforme-LA-JUNGLA-CLUB_yi3lti.png" alt="La Jungla Club — Diseño de uniforme" loading="lazy" />
+          <span class="proj-img-caption">Uniforme — el equipo como parte visible del concepto</span>
+        </div>
+      </div>
+
+      <!-- Grid 3 columnas — flyers -->
+      <div class="proj-img-grid proj-img-grid--3">
+        <div class="proj-img-item proj-img-item--wide scroll-reveal">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781034073/Flyer1_ncmzhk.png" alt="La Jungla Club — Flyer de evento 1" loading="lazy" />
+          <span class="proj-img-caption">Flyer de evento</span>
+        </div>
+        <div class="proj-img-item proj-img-item--wide scroll-reveal" style="--reveal-delay:.1s">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781034073/Flyer2_zt0ge8.png" alt="La Jungla Club — Flyer de evento 2" loading="lazy" />
+          <span class="proj-img-caption">Flyer de evento</span>
+        </div>
+        <div class="proj-img-item proj-img-item--wide scroll-reveal" style="--reveal-delay:.2s">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781034073/Flyer3_w9cmqe.png" alt="La Jungla Club — Flyer de evento 3" loading="lazy" />
+          <span class="proj-img-caption">Flyer de evento</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="section proj-results">
+    <div class="container">
+      <p class="eyebrow scroll-reveal">EL RECONOCIMIENTO</p>
+      <h2 class="proj-section__title scroll-reveal">Una marca que se siente <em>antes de entrar</em><span class="hero__dot">.</span></h2>
       <div class="impact-grid">
         <div class="impact-card scroll-reveal">
-          <span class="impact-card__num">6+</span>
+          <span class="impact-card__num">5+</span>
           <span class="impact-card__label">Piezas de aplicación entregadas</span>
-          <span class="impact-card__desc">Logo, menú, fachada, flyers, uniformes y material digital — coherentes en todas las plataformas.</span>
+          <span class="impact-card__desc">Logo, fachada, menú, uniformes y flyers de evento — coherentes entre sí, sin retrabajo entre piezas.</span>
         </div>
         <div class="impact-card scroll-reveal" style="--reveal-delay:.1s">
           <span class="impact-card__num">1</span>
-          <span class="impact-card__label">Concepto visual unificado</span>
-          <span class="impact-card__desc">La selva y el reggaeton traducidos en un sistema visual que funciona tanto en redes como en señalética física.</span>
+          <span class="impact-card__label">Sistema visual, no solo un logo</span>
+          <span class="impact-card__desc">Selva y reggaeton traducidos en un lenguaje visual que se sostiene en vinil, tela, papel y redes.</span>
         </div>
         <div class="impact-card scroll-reveal" style="--reveal-delay:.2s">
           <span class="impact-card__num">↑</span>
-          <span class="impact-card__label">Identidad diferenciada en el sector</span>
-          <span class="impact-card__desc">En un mercado de discotecas visualmente genéricas, La Jungla Club tiene una estética que nadie más tiene.</span>
+          <span class="impact-card__label">Diferenciación real frente a la competencia</span>
+          <span class="impact-card__desc">En un sector donde casi todas las discotecas compiten solo con el nombre, La Jungla Club ahora compite con una estética que nadie más tiene.</span>
         </div>
       </div>
-      <p class="impact-note scroll-reveal">* Datos cualitativos basados en feedback del cliente. Métricas de asistencia pendientes de seguimiento.</p>
+      <p class="impact-note scroll-reveal">* Resultado cualitativo, basado en la diferenciación visual lograda frente a la competencia directa de la zona. Métricas de asistencia y conversión no fueron parte del alcance de este proyecto.</p>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- CIERRE POR RECONOCIMIENTO -->
   <section class="cta-section" id="contacto">
     <div class="container">
       <h2 class="cta-section__title">
-        ¿Quieres algo así para tu marca<span class="hero__dot">?</span>
+        ¿Tu marca compite con un nombre<br/>o con un sistema<span class="hero__dot">?</span>
       </h2>
-      <p class="cta-section__sub">Cuéntame tu proyecto. Respondo en menos de 24 horas.</p>
+      <p class="cta-section__sub">
+        Si tu negocio se ve igual que el de al lado y solo cambia el aviso, no es un problema de presupuesto —es un problema de sistema. Cuéntame tu proyecto. Respondo en menos de 24 horas.
+      </p>
       <div class="cta-section__actions">
         <button class="btn btn--cyan btn--lg" id="whatsappBtn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -177,7 +255,6 @@
       </div>
     </div>
   </section>
-
 
   <script src="/nav.js"></script>
   <script src="script.js"></script>
