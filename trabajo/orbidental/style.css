@@ -7,8 +7,8 @@
 
 /* ── HERO: full-bleed asimétrico, título invade el borde ── */
 .proj-hero {
-  min-height: 92svh; display: flex; align-items: flex-end;
-  padding: 140px 0 0; position: relative; overflow: hidden;
+  display: flex; align-items: flex-end;
+  padding: 140px 0 80px; position: relative; overflow: hidden;
 }
 .proj-hero::after {
   content: ''; position: absolute; inset: 0;
@@ -54,7 +54,7 @@
 .btn--sm { padding: 8px 16px; font-size: 12px; }
 
 @media (max-width: 767px) {
-  .proj-hero { min-height: auto; padding: 110px 0 0; }
+  .proj-hero { padding: 110px 0 0; }
   .proj-hero__top { grid-template-columns: 1fr; gap: 24px; }
   .proj-hero__diagnosis { align-items: flex-start; text-align: left; }
 }
@@ -246,7 +246,10 @@
   .proj-showcase__overlay { padding: 24px; background: linear-gradient(to top, rgba(5,5,4,0.92) 0%, rgba(5,5,4,0.4) 55%, transparent 90%); }
 }
 
-/* ── CARRUSEL EDITORIAL — reemplaza los grids de 6 capturas sueltas ── */
+/* ── CARRUSEL EDITORIAL — reemplaza los grids de 6 capturas sueltas ──
+   Loop infinito real: el JS clona los primeros y últimos slides en los
+   extremos del track, así nunca hay un hueco vacío al final ni al
+   principio — siempre hay una imagen lista para entrar en escena. */
 .proj-carousel { position: relative; }
 .proj-carousel__track {
   display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory;
