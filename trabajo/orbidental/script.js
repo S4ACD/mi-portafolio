@@ -110,3 +110,50 @@ const initParticles = (config) => {
 };
 
 initParticles({ canvasId: 'heroCanvas', heroSelector: '.proj-hero' });
+
+// ─── CARRUSEL EDITORIAL ───────────────────────────────────────────
+document.querySelectorAll('.proj-carousel').forEach((carousel) => {
+  const track = carousel.querySelector('.proj-carousel__track');
+  const slides = Array.from(carousel.querySelectorAll('.proj-carousel__slide'));
+  const counter = carousel.querySelector('.proj-carousel__counter .current');
+  const prevBtn = carousel.querySelector('[data-dir="-1"]');
+  const nextBtn = carousel.querySelector('[data-dir="1"]');
+  if (!track || !slides.length) return;
+
+  const pad = (n) => String(n).padStart(2, '0');
+
+  const closestIndex = () => {
+    const trackRect = track.getBoundingClientRect();
+    const center = trackRect.left + trackRect.width / 2;
+    let best = 0, bestDist = Infinity;
+    slides.forEach((s, i) => {
+      const r = s.getBoundingClientRect();
+      const dist = Math.abs((r.left + r.width / 2) - center);
+      if (dist < bestDist) { bestDist = dist; best = i; }
+    });
+    return best;
+  };
+
+  const updateUI = () => {
+    const idx = closestIndex();
+    if (counter) counter.textContent = pad(idx + 1);
+    if (prevBtn) prevBtn.disabled = idx === 0;
+    if (nextBtn) nextBtn.disabled = idx === slides.length - 1;
+  };
+
+  const goTo = (idx) => {
+    const clamped = Math.max(0, Math.min(slides.length - 1, idx));
+    slides[clamped].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+  };
+
+  prevBtn?.addEventListener('click', () => goTo(closestIndex() - 1));
+  nextBtn?.addEventListener('click', () => goTo(closestIndex() + 1));
+
+  let scrollTimer;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(updateUI, 80);
+  }, { passive: true });
+
+  updateUI();
+});
