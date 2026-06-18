@@ -3,36 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fueggo — Identidad Visual | Alexander Caro</title>
-  <meta name="description" content="Identidad visual completa para Fueggo, marca de comidas rápidas a la brasa en Bogotá. Logo, manual de marca y aplicaciones." />
+  <title>Fueggo — Una identidad que se reconoce antes de leer el nombre | Alexander Caro</title>
+  <meta name="description" content="Fueggo abría sin ninguna identidad visual, a punto de perderse entre cualquier otro local de comida a la brasa. Construí el sistema completo —logo, manual de marca y aplicaciones— para que se reconozcan antes de leer el nombre." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://alexandercaro.com/trabajo/fueggo/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alexandercaro.com/trabajo/fueggo/" />
-  <meta property="og:title" content="Fueggo — Identidad Visual | Alexander Caro" />
-  <meta property="og:description" content="Sistema de identidad visual completo para marca de comidas a la brasa. Logo, manual de marca, fachada, uniformes y papelería." />
+  <meta property="og:title" content="Fueggo — Una identidad que se reconoce antes de leer el nombre | Alexander Caro" />
+  <meta property="og:description" content="Sistema de identidad visual completo para una marca de comida a la brasa que abría sin ninguna cara. Logo, manual de marca, fachada, uniformes y papelería." />
   <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781033141/Fachada_hkwn2i.png" />
   <meta property="og:locale" content="es_CO" />
   <meta property="og:site_name" content="Alexander Caro" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fueggo — Identidad Visual | Alexander Caro" />
-  <meta name="twitter:description" content="Sistema de identidad visual completo para marca de comidas a la brasa." />
+  <meta name="twitter:title" content="Fueggo — Una identidad que se reconoce antes de leer el nombre | Alexander Caro" />
+  <meta name="twitter:description" content="Sistema de identidad visual completo para una marca de comida a la brasa." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781033141/Fachada_hkwn2i.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Identidad Visual Fueggo — Comida a la Brasa",
+  "description": "Sistema de identidad visual completo para Fueggo, marca de comidas rápidas a la brasa en Bogotá: logo, manual de marca, fachada, empaque, uniformes, papelería y stickers, diseñado para que la marca se reconozca antes de leer el nombre.",
+  "url": "https://alexandercaro.com/trabajo/fueggo/",
+  "author": {
+    "@type": "Person",
+    "name": "Alexander Caro",
+    "url": "https://alexandercaro.com"
+  },
+  "keywords": "identidad visual bogotá, branding restaurantes, diseño de marca colombia, manual de marca, diseño gráfico freelance",
+  "about": {
+    "@type": "Thing",
+    "name": "Identidad de marca y branding"
+  }
+}
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
   <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO: full-bleed asimétrico — título invade el borde, el "antes" flota a la derecha -->
   <section class="proj-hero">
     <canvas id="heroCanvas" class="hero__canvas"></canvas>
     <div class="container proj-hero__inner">
@@ -47,40 +69,62 @@
         <span class="tag">Identidad visual</span>
         <span class="tag">Manual de marca</span>
       </div>
-      <h1 class="proj-hero__title reveal-up" style="--delay:.18s">
-        Fueggo<span class="hero__dot">.</span>
-      </h1>
-      <p class="proj-hero__sub reveal-up" style="--delay:.26s">
-        Identidad visual completa para una marca de comidas rápidas<br class="br-desktop"/> cocinadas a la brasa. Fuego, carácter y velocidad en cada pieza.
-      </p>
-      <div class="proj-hero__logo reveal-up" style="--delay:.34s">
-        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781033539/LOGO-FUEGGO_gozt0l.png" alt="Logo Fueggo" />
+
+      <div class="proj-hero__top">
+        <h1 class="proj-hero__title reveal-up" style="--delay:.18s">
+          Fueggo<span class="hero__dot">.</span>
+        </h1>
+        <div class="proj-hero__diagnosis reveal-up" style="--delay:.26s">
+          <span class="proj-hero__diagnosis-score">
+            <span class="from">Sin cara</span>
+            <span class="to">Sistema completo</span>
+          </span>
+          <span class="proj-hero__diagnosis-label">Antes de abrir / listo para abrir</span>
+        </div>
       </div>
+
+      <p class="proj-hero__sub reveal-up" style="--delay:.34s">
+        Fueggo iba a abrir sin ninguna identidad: ningún logo, ninguna paleta, ningún sistema. Una marca de comida a la brasa
+        a punto de competir contra docenas de locales casi idénticos, sin nada que la hiciera reconocible.
+        Construí el sistema completo de marca para que se distinga antes de leer el nombre.
+      </p>
     </div>
   </section>
 
-  <!-- OVERVIEW -->
+  <!-- LOGO HERO — pieza central de la marca, no se mete en un grid -->
+  <section class="proj-showcase proj-showcase--logo">
+    <div class="proj-showcase__frame proj-showcase__frame--logo scroll-reveal">
+      <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781033539/LOGO-FUEGGO_gozt0l.png" alt="Logo Fueggo" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- EXPEDIENTE: el problema real (negocio, no estética) + datos del proyecto -->
   <section class="section proj-overview">
     <div class="container">
       <div class="proj-overview__grid">
-        <div class="scroll-reveal">
-          <p class="eyebrow">EL PROYECTO</p>
-          <h2 class="proj-section__title">Una marca que<br/>sabe a fuego<span class="hero__dot">.</span></h2>
-          <p class="proj-text">Fueggo necesitaba una identidad que comunicara intensidad, rapidez y sabor desde el primer vistazo. El reto fue construir una marca que funcionara tanto en un uniforme como en una caja de empaque — consistente, agresiva y memorable.</p>
-          <p class="proj-text">El resultado: un sistema visual completo con logo, paleta, tipografía y aplicaciones reales listas para producción.</p>
+        <div class="proj-overview__main scroll-reveal">
+          <p class="eyebrow">EL PROBLEMA REAL</p>
+          <h2 class="proj-section__title">Sin identidad, un restaurante nuevo no compite. <em>Se diluye</em>.</h2>
+          <p class="proj-text">Fueggo todavía no tenía local abierto cuando llegó a mí. Tenía un producto claro —hamburguesas cocinadas a la brasa, con carbón, con ese sabor que solo da el fuego directo— pero ninguna cara visual. Ni logo, ni colores, ni una sola pieza que dijera "esto es Fueggo" antes de que alguien leyera el nombre.</p>
+          <p class="proj-text--pull">En comida rápida a la brasa, el cliente decide en segundos y entre opciones casi idénticas. Sin una identidad fuerte, Fueggo iba a abrir compitiendo a ciegas.</p>
+          <p class="proj-text">El reto no era "hacer un logo bonito". Era traducir el concepto del producto —fuego, carbón, intensidad, velocidad— a un sistema visual que funcionara igual de bien en un uniforme, en una caja de empaque y en una fachada, y que cualquier proveedor de impresión pudiera aplicar sin perder consistencia.</p>
         </div>
-        <div class="proj-overview__info scroll-reveal" style="--reveal-delay:.1s">
+        <div class="proj-overview__rail scroll-reveal" style="--reveal-delay:.1s">
           <div class="proj-info-card">
             <span class="proj-info-card__label">Cliente</span>
             <span class="proj-info-card__value">Fueggo</span>
           </div>
           <div class="proj-info-card">
             <span class="proj-info-card__label">Categoría</span>
-            <span class="proj-info-card__value">Comidas rápidas a la brasa</span>
+            <span class="proj-info-card__value">Comida rápida a la brasa</span>
+          </div>
+          <div class="proj-info-card">
+            <span class="proj-info-card__label">Mi rol</span>
+            <span class="proj-info-card__value">Identidad de marca de cero a sistema completo</span>
           </div>
           <div class="proj-info-card">
             <span class="proj-info-card__label">Entregables</span>
-            <span class="proj-info-card__value">Logo, manual de marca, aplicaciones</span>
+            <span class="proj-info-card__value">Logo, manual de marca, fachada, empaque, uniformes, papelería, stickers</span>
           </div>
           <div class="proj-info-card">
             <span class="proj-info-card__label">Herramientas</span>
@@ -91,27 +135,57 @@
     </div>
   </section>
 
-  <!-- GALERÍA PRINCIPAL -->
+  <!-- LA DECISIÓN: criterio de diseño, no solo ejecución -->
+  <section class="proj-proof proj-proof--concept">
+    <div class="container">
+      <div class="proj-proof__head scroll-reveal">
+        <p class="eyebrow">LA DECISIÓN</p>
+        <h2 class="proj-section__title">Cada trazo tenía que oler a carbón<span class="hero__dot">.</span></h2>
+        <p class="proj-text">No diseñé un logo y después "lo apliqué" a todo lo demás. Empecé al revés: ¿qué tiene que sentir alguien al ver una caja de Fueggo en la mano, o el uniforme de quien le entrega el pedido? La respuesta —fuego, carácter, velocidad— definió cada decisión: la tipografía tenía que verse afilada y rápida, la paleta tenía que evocar brasa y carbón sin caer en el rojo-amarillo genérico de "comida rápida", y el símbolo tenía que funcionar tan pequeño como un sticker y tan grande como una fachada.</p>
+        <p class="proj-text">Esa disciplina es la diferencia entre un logo que se ve bien en una pantalla y un sistema de marca que sobrevive a la imprenta, al sol, al uso diario y a quien lo aplique sin supervisión.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LO DIFÍCIL: del símbolo al sistema aplicable -->
+  <section class="section proj-overview proj-overview--reverse">
+    <div class="container">
+      <div class="proj-overview__grid proj-overview__grid--reverse">
+        <div class="proj-overview__main scroll-reveal">
+          <p class="eyebrow">LO DIFÍCIL</p>
+          <h2 class="proj-section__title">Un logo es fácil. Un <em>sistema</em> que no se rompe, no.</h2>
+          <p class="proj-text">Cualquiera puede entregar un logo en PNG. Lo que de verdad protege a una marca es que ese logo siga funcionando igual de bien en una fachada de varios metros, en un sticker de tres centímetros, sobre cartón texturizado o estampado en tela de uniforme — sin que nadie tenga que "arreglarlo" cada vez.</p>
+          <p class="proj-text">Eso significó construir variantes del logo para distintos fondos y tamaños, definir una paleta con jerarquía clara (no solo "los colores de la marca", sino cuál va de fondo, cuál de acento, cuál solo para detalles), y dejarlo todo documentado en un manual de marca para que cualquier imprenta o proveedor futuro lo aplique sin pedirme permiso cada vez.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA PRINCIPAL: la marca en sus aplicaciones reales -->
   <section class="proj-gallery">
     <div class="container">
-      <p class="eyebrow scroll-reveal">APLICACIONES</p>
-      <h2 class="proj-section__title scroll-reveal">La marca en acción<span class="hero__dot">.</span></h2>
+      <div class="proj-gallery__header scroll-reveal">
+        <h2 class="proj-section__title">El sistema, pieza por pieza<span class="hero__dot">.</span></h2>
+      </div>
+      <p class="proj-text scroll-reveal" style="max-width:600px; margin-top:28px;">
+        Diseño terminado y listo para producción — el local de Fueggo todavía no ha abierto, así que estas piezas aún no están impresas ni montadas en el mundo físico. Lo que ves es el sistema completo, listo para ir directo a imprenta y producción el día que abran, sin retrabajo de última hora.
+      </p>
 
       <!-- Imagen grande — fachada -->
       <div class="proj-img-full scroll-reveal">
-        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781033141/Fachada_hkwn2i.png" alt="Fueggo — Fachada" loading="lazy" />
-        <span class="proj-img-caption">Aplicación en fachada</span>
+        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781033141/Fachada_hkwn2i.png" alt="Fueggo — Diseño de fachada" loading="lazy" />
+        <span class="proj-img-caption">Diseño de fachada — listo para producción</span>
       </div>
 
       <!-- Grid 2 columnas -->
       <div class="proj-img-grid">
         <div class="proj-img-item scroll-reveal">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781033140/Mock-Up-Caja_hiq9ii.png" alt="Fueggo — Caja de empaque" loading="lazy" />
-          <span class="proj-img-caption">Caja de empaque</span>
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781033140/Mock-Up-Caja_hiq9ii.png" alt="Fueggo — Diseño de caja de empaque" loading="lazy" />
+          <span class="proj-img-caption">Caja de empaque — diseño listo para impresión</span>
         </div>
         <div class="proj-img-item scroll-reveal" style="--reveal-delay:.1s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781033136/Uniforme_o95iz6.png" alt="Fueggo — Uniforme" loading="lazy" />
-          <span class="proj-img-caption">Diseño de uniforme</span>
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781033136/Uniforme_o95iz6.png" alt="Fueggo — Diseño de uniforme" loading="lazy" />
+          <span class="proj-img-caption">Diseño de uniforme — listo para confección</span>
         </div>
       </div>
 
@@ -126,46 +200,48 @@
           <span class="proj-img-caption">Stickers</span>
         </div>
         <div class="proj-img-item proj-img-item--wide scroll-reveal" style="--reveal-delay:.2s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781033133/StikersPNG_mfm9ne.png" alt="Fueggo — Stickers variantes" loading="lazy" />
-          <span class="proj-img-caption">Stickers variantes</span>
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781033133/StikersPNG_mfm9ne.png" alt="Fueggo — Stickers, variantes" loading="lazy" />
+          <span class="proj-img-caption">Stickers — variantes</span>
         </div>
       </div>
     </div>
   </section>
 
-<!-- MÉTRICAS DE IMPACTO -->
-  <section class="section">
+  <!-- RESULTADOS + VOZ DEL CLIENTE -->
+  <section class="section proj-results">
     <div class="container">
-      <p class="eyebrow scroll-reveal">RESULTADOS</p>
-      <h2 class="proj-section__title scroll-reveal">El impacto de una identidad<br/>bien construida<span class="hero__dot">.</span></h2>
+      <p class="eyebrow scroll-reveal">EL RECONOCIMIENTO</p>
+      <h2 class="proj-section__title scroll-reveal">Lo que el equipo de Fueggo reconoció<span class="hero__dot">.</span></h2>
       <div class="impact-grid">
         <div class="impact-card scroll-reveal">
           <span class="impact-card__num">100%</span>
-          <span class="impact-card__label">Aplicaciones entregadas listas para producción</span>
-          <span class="impact-card__desc">Fachada, empaque, uniformes, papelería y stickers — todo en archivos listos para imprenta.</span>
+          <span class="impact-card__label">Sistema completo, listo para producción</span>
+          <span class="impact-card__desc">Fachada, empaque, uniformes, papelería y stickers — todo diseñado y documentado, sin nada por improvisar el día de la apertura.</span>
         </div>
         <div class="impact-card scroll-reveal" style="--reveal-delay:.1s">
           <span class="impact-card__num">1</span>
-          <span class="impact-card__label">Sistema visual completo desde cero</span>
-          <span class="impact-card__desc">Logo, paleta, tipografía y reglas de uso en un manual de marca que cualquier proveedor puede aplicar.</span>
+          <span class="impact-card__label">Concepto, traducido a cada pieza</span>
+          <span class="impact-card__desc">Fuego, carbón y velocidad — el mismo lenguaje visual en el logo, el empaque y la fachada, sin perder consistencia entre piezas.</span>
         </div>
         <div class="impact-card scroll-reveal" style="--reveal-delay:.2s">
           <span class="impact-card__num">↑</span>
-          <span class="impact-card__label">Reconocimiento de marca desde el primer día</span>
-          <span class="impact-card__desc">La identidad les permite diferenciarse visualmente de la competencia en el punto de venta y en redes sociales.</span>
+          <span class="impact-card__label">Diferenciación frente a la competencia</span>
+          <span class="impact-card__desc">El propio equipo de Fueggo reconoció que la identidad los distingue de otros locales de comida a la brasa y comunica visualmente su producto: carbón, fuego, sabor.</span>
         </div>
       </div>
-      <p class="impact-note scroll-reveal">* Datos cualitativos basados en feedback del cliente. Métricas de ventas pendientes de seguimiento.</p>
+      <p class="impact-note scroll-reveal">* Feedback cualitativo del equipo de Fueggo. Métricas de ventas pendientes, ya que el local todavía no abre con esta identidad aplicada.</p>
     </div>
   </section>
-  
-  <!-- CTA -->
+
+  <!-- CIERRE POR RECONOCIMIENTO -->
   <section class="cta-section" id="contacto">
     <div class="container">
       <h2 class="cta-section__title">
-        ¿Quieres algo así para tu marca<span class="hero__dot">?</span>
+        ¿Tu marca también va a abrir<br/>sin una cara propia<span class="hero__dot">?</span>
       </h2>
-      <p class="cta-section__sub">Cuéntame tu proyecto. Respondo en menos de 24 horas.</p>
+      <p class="cta-section__sub">
+        Si tu producto ya está listo pero todavía no tienes un sistema de marca que lo respalde, estás en el mismo punto en el que estaba Fueggo: a punto de competir a ciegas. Cuéntame tu proyecto. Respondo en menos de 24 horas.
+      </p>
       <div class="cta-section__actions">
         <button class="btn btn--cyan btn--lg" id="whatsappBtn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -178,7 +254,6 @@
     </div>
   </section>
 
- 
   <script src="/nav.js"></script>
   <script src="script.js"></script>
 </body>
