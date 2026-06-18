@@ -1,202 +1,180 @@
 /* ═══════════════════════════════════════════════════════════════
-   sobre-mi/style.css — estilos exclusivos de la página Sobre mí
-   (hereda design tokens y base de ../style.css)
+   sobre-mi/style.css — rediseño completo, robusto, sin dependencias
+   frágiles. Las imágenes son visibles por defecto en CSS puro,
+   nunca dependen de que JS termine de ejecutar una animación.
 ═══════════════════════════════════════════════════════════════ */
 
-/* Nav link activo */
-.nav__link--active { color: #cdb78e !important; }
+/* ── HERO ── */
+.ah-hero {
+  position: relative;
+  min-height: 92svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 120px 0 60px;
+  background: var(--hv2-void);
+}
+.ah-hero__bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(120% 90% at 72% 42%, var(--hv2-void-soft) 0%, var(--hv2-void) 62%);
+  z-index: 0;
+}
+.ah-hero__glow {
+  position: absolute;
+  top: 18%;
+  right: 8%;
+  width: min(50vw, 600px);
+  height: min(50vw, 600px);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--hv2-gold-dim) 0%, transparent 68%);
+  filter: blur(60px);
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
 
-/* ── HERO — capas heredadas de .hv2, ajustes propios abajo ── */
-.about-hero-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ah-hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
 
-.about-hero__title {
+.ah-hero__title {
   font-family: var(--hv2-font-display);
   font-weight: 340;
-  font-size: clamp(2.6rem, 7vw, 5.5rem);
-  line-height: 1.1;
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+  line-height: 1.12;
   letter-spacing: -0.01em;
   color: var(--hv2-ink);
   margin-bottom: 24px;
 }
-.about-hero__title em {
+.ah-hero__title em {
   font-style: italic;
   font-weight: 380;
   color: var(--hv2-gold);
 }
-.about-hero__sub {
+.ah-hero__sub {
   font-family: var(--hv2-font-body);
-  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
   color: var(--hv2-ink-dim);
   line-height: 1.7;
-  max-width: 460px;
-  margin-bottom: 40px;
+  max-width: 440px;
+  margin-bottom: 36px;
 }
-.about-hero__sub-accent { color: var(--hv2-gold); font-weight: 500; }
+.ah-hero__sub strong { color: var(--hv2-ink); font-weight: 600; }
 
-/* "Descubrir mi universo" — CTA con línea inferior */
-.about-hero__discover {
+.ah-hero__cta {
   display: inline-flex;
-  flex-direction: column;
+  align-items: center;
   gap: 10px;
-  width: fit-content;
   font-family: var(--hv2-font-ui);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--hv2-gold);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--hv2-gold-dim);
+  transition: border-color var(--transition), gap var(--transition);
 }
-.about-hero__discover-line {
-  width: 100%;
-  height: 1px;
-  background: var(--hv2-gold-dim);
-  transition: background var(--transition);
+.ah-hero__cta:hover {
+  border-color: var(--hv2-gold);
+  gap: 14px;
 }
-.about-hero__discover:hover .about-hero__discover-line { background: var(--hv2-gold); }
+.ah-hero__cta svg { transform: rotate(90deg); flex-shrink: 0; }
 
-/* Planeta dorado con anillos — foto real de Saturno, PNG con transparencia real.
-   drop-shadow ahora traza la silueta real (planeta + anillos), no un rectángulo.
-   Igual que las rocas: lo queremos NÍTIDO, anulamos el mix-blend-mode lighten
-   del style.css global (que puede fundirlo casi hasta la invisibilidad según
-   el color exacto del fondo detrás). Solo afecta a #aboutHero. */
-#aboutHero .hv2__portrait img {
-  mix-blend-mode: normal;
-  opacity: 1;
+/* ── ARTE DEL HERO — planeta + rocas, sin wrappers anidados ──
+   Visibles por defecto: sin opacity:0 esperando a JS, sin
+   mix-blend-mode dependiente del fondo. Lo que ves en el código
+   es exactamente lo que se renderiza. */
+.ah-hero__art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  max-width: 560px;
+  justify-self: center;
 }
-.hv2__portrait .about-hero__planet-img {
-  opacity: 1;
+
+.ah-orbit {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 92%;
+  height: 92%;
+  border: 1px solid var(--hv2-line);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.ah-orbit--inner {
+  width: 64%;
+  height: 64%;
+  border-style: dashed;
+  opacity: 0.5;
+  animation: ahSpin 90s linear infinite;
+}
+@keyframes ahSpin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+.ah-planet {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 62%;
+  height: auto;
+  transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
-  animation: aboutPlanetGlow 6s ease-in-out infinite;
+  animation: ahPlanetFloat 8s ease-in-out infinite, ahPlanetGlow 6s ease-in-out infinite;
+  z-index: 2;
 }
-@keyframes aboutPlanetGlow {
+@keyframes ahPlanetFloat {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50%      { transform: translate(-50%, -50%) translateY(-12px); }
+}
+@keyframes ahPlanetGlow {
   0%, 100% { filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15)); }
   50%      { filter: drop-shadow(0 0 70px rgba(205,183,142,0.5)) drop-shadow(0 0 130px rgba(205,183,142,0.22)); }
 }
 
-/* Rocas — fotos PNG con transparencia real (.hv2__rock img ya trae mix-blend-mode,
-   flip, dim/blur). Sumamos un halo dorado sutil que sigue el contorno real de la roca. */
-
-/* En este hero las queremos NÍTIDAS (no fundidas con el fondo): anulamos el
-   mix-blend-mode lighten y la atenuación de la capa "far" que vienen del
-   style.css global. Solo afecta a #aboutHero, el hero del inicio queda igual. */
-#aboutHero .hv2__rock img {
-  mix-blend-mode: normal;
-  opacity: 1;
-}
-#aboutHero .hv2__rock--far img {
-  opacity: 1;
-}
-.hv2__rock .about-hero__rock-img {
-  filter: contrast(1.05) drop-shadow(0 0 30px rgba(205,183,142,0.25));
-}
-.hv2__rock--far .about-hero__rock-img {
-  filter: contrast(1.05) blur(1.5px) drop-shadow(0 0 30px rgba(205,183,142,0.2));
-}
-
-/* Ajustes de posición/tamaño solo para este hero (no afecta el del inicio) */
-#aboutHero .hv2__rock--far1 {
-  width: clamp(220px, 24vw, 380px);
-}
-#aboutHero .hv2__rock--near3 {
-  right: 6%;
-  bottom: -16%;
-  width: clamp(230px, 28vw, 420px);
-}
-#aboutHero .hv2__rock--near3 .about-hero__rock-img {
-  transform: rotate(-5deg);
-}
-#aboutHero .hv2__rock--near5 {
-  width: clamp(170px, 19vw, 320px);
-}
-#aboutHero .hv2__rock--near5 .about-hero__rock-img {
-  transform: scaleX(-1) rotate(14deg);
-}
-
-/* Destello tipo "sol" con rayos */
-.about-hero__sunburst {
+.ah-rock {
   position: absolute;
-  z-index: 3;
-  top: 24%;
-  left: 44%;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--hv2-gold);
-  box-shadow:
-    0 0 20px 6px rgba(246,231,196,0.9),
-    0 0 60px 20px rgba(205,183,142,0.45),
-    0 0 120px 50px rgba(205,183,142,0.16);
-  animation: aboutSunPulse 4s ease-in-out infinite;
-  pointer-events: none;
+  filter: drop-shadow(0 0 24px rgba(205,183,142,0.2));
+  z-index: 1;
 }
-.about-hero__sunburst::before,
-.about-hero__sunburst::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background: linear-gradient(to right, transparent, rgba(246,231,196,0.45), transparent);
+.ah-rock--a {
+  width: 26%;
+  top: 6%;
+  left: 2%;
+  animation: ahRockFloatA 11s ease-in-out infinite;
 }
-.about-hero__sunburst::before { width: 240px; height: 1px; transform: translate(-50%, -50%); }
-.about-hero__sunburst::after  { width: 1px; height: 240px; transform: translate(-50%, -50%); }
-@keyframes aboutSunPulse {
-  0%, 100% { opacity: 0.65; }
-  50%      { opacity: 1; }
+.ah-rock--b {
+  width: 22%;
+  bottom: 8%;
+  right: 4%;
+  animation: ahRockFloatB 9s ease-in-out infinite;
 }
+@keyframes ahRockFloatA {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(10px) rotate(3deg); }
+}
+@keyframes ahRockFloatB {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-10px) rotate(-3deg); }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .about-hero__planet-img { animation: none; }
-  .about-hero__sunburst { animation: none; opacity: 0.8; }
+  .ah-planet, .ah-rock, .ah-orbit--inner { animation: none; }
 }
+
 @media (max-width: 900px) {
-  .about-hero__sunburst { display: none; }
+  .ah-hero { padding: 110px 0 50px; min-height: auto; }
+  .ah-hero__grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+  .ah-hero__sub { margin-left: auto; margin-right: auto; }
+  .ah-hero__cta { margin: 0 auto; }
+  .ah-hero__art { max-width: 380px; }
 }
-/* En 768–1023px el sistema .hv2 apila el contenido (.hv2__content y
-   .hv2__portrait pasan a position:relative + order, ver style.css global).
-   Pero las rocas de #aboutHero (--far1, --near3, --near5) siguen con
-   position:absolute y coordenadas de escritorio, así que quedan flotando
-   sueltas, tapadas por el texto que ahora ocupa el ancho completo. Las
-   ocultamos en este rango — el planeta reordenado es el protagonista
-   visual del layout apilado. */
-@media (max-width: 1023px) and (min-width: 768px) {
-  #aboutHero .hv2__rock--far1,
-  #aboutHero .hv2__rock--near3,
-  #aboutHero .hv2__rock--near5 {
-    display: none;
-  }
-}
-/* A ≤767px el sistema .hv2 centra el planeta debajo del texto y oculta
-   --far1/--near5; volvemos --near3 a los valores mobile del sistema base
-   (nuestros ajustes de escritorio no aplican aquí). */
-@media (max-width: 767px) {
-  #aboutHero .hv2__rock--near3 {
-    bottom: -8%;
-    right: -6%;
-    width: clamp(180px, 56vw, 320px);
-  }
-  #aboutHero .hv2__rock--near3 .about-hero__rock-img {
-    transform: none;
-  }
-}
-.about-hero__scroll {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  z-index: 10;
-  animation: fadeInUp 1s 1s both;
-}
-.about-hero__scroll .hero__scroll-line {
-  background: linear-gradient(to bottom, var(--hv2-gold), transparent);
-}
-.about-hero__scroll span {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  color: var(--hv2-ink-dim);
-  text-transform: uppercase;
+@media (max-width: 480px) {
+  .ah-hero__art { max-width: 300px; }
 }
 
 /* ── BLOQUES DE CONTENIDO ── */
@@ -231,7 +209,7 @@
   font-size: 1rem;
   color: var(--hv2-ink-dim);
   line-height: 1.8;
-  max-width: 560px;
+  max-width: 600px;
 }
 
 .about-divider {
@@ -299,6 +277,7 @@
 .about-stat__label {
   font-size: 12px;
   color: var(--hv2-ink-dim);
+  line-height: 1.5;
 }
 
 /* ── SKILL CHIPS ── */
@@ -327,9 +306,4 @@
 .skill-chip--muted {
   color: var(--hv2-ink-dim);
   border-style: dashed;
-}
-
-@keyframes fadeInUp {
-  from { opacity:0; transform: translateX(-50%) translateY(12px); }
-  to   { opacity:1; transform: translateX(-50%) translateY(0); }
 }
