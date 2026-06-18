@@ -2029,7 +2029,7 @@ input, textarea {
        .hv2__rock-parallax  → scroll-driven "rise" (GSAP `y`, scrub)
          .hv2__rock-float   → idle zero-gravity loop (GSAP `y`+rotation)
            img              → mix-blend-mode: lighten                  */
-.hv2__rock { position: absolute; will-change: transform; }
+.hv2__rock { position: absolute; will-change: transform; opacity: 1; }
 .hv2__rock-parallax,
 .hv2__rock-float { will-change: transform; }
 .hv2__rock img {
@@ -2072,6 +2072,7 @@ input, textarea {
   right: calc(4% + (var(--hv2-rings-size) / 2) - (var(--hv2-portrait-width) / 2));
   width: var(--hv2-portrait-width);
   will-change: transform;
+  opacity: 1;
 }
 /* New: subtle cursor-follow layer, sits between the static position and
    the scroll-rise/idle-float layers so it never fights their transforms */
