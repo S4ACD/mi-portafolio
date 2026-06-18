@@ -99,24 +99,19 @@
 }
 .proj-info-card__value { font-size: 14px; color: var(--hv2-ink); font-weight: 500; line-height: 1.4; }
 
-/* ── BROWSER MOCKUP — iframe en vivo ── */
+/* ── BROWSER MOCKUP — iframe en vivo, tamaño real con scroll propio ── */
 .proj-showcase-live { padding: 40px 0 110px; }
 .proj-showcase-live__head { max-width: 680px; margin-bottom: 48px; }
 
 .browser-mock {
-  display: block;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--hv2-line);
   background: var(--hv2-void-soft);
   box-shadow: var(--hv2-glow);
-  text-decoration: none;
-  transition: transform .35s var(--hv2-ease), border-color .35s var(--hv2-ease);
+  transition: border-color .35s var(--hv2-ease);
 }
-.browser-mock:hover {
-  transform: translateY(-4px);
-  border-color: var(--hv2-gold-dim);
-}
+.browser-mock:hover { border-color: var(--hv2-gold-dim); }
 
 .browser-mock__bar {
   display: flex;
@@ -152,61 +147,45 @@
   border: 1px solid var(--hv2-line);
   display: flex; align-items: center; justify-content: center;
   color: var(--hv2-ink-dim);
-  transition: color .25s, border-color .25s;
+  transition: color .25s, border-color .25s, background .25s;
 }
-.browser-mock:hover .browser-mock__expand { color: var(--hv2-gold); border-color: var(--hv2-gold-dim); }
+.browser-mock__expand:hover { color: var(--hv2-gold); border-color: var(--hv2-gold-dim); background: var(--hv2-gold-faint); }
 
+/* El viewport tiene una altura fija generosa; el iframe vive a tamaño
+   real (100% de SU ancho propio, no escalado) y scrollea internamente.
+   Esto evita el problema de "todo diminuto" de los mockups escalados. */
 .browser-mock__viewport {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/10;
+  height: 640px;
   background: #f3efe4;
-  overflow: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .browser-mock__viewport iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 250%;
-  height: 250%;
+  display: block;
+  width: 100%;
+  height: 4200px; /* alto generoso para que el scroll interno revele toda la landing sin recortes ni huecos al final */
   border: none;
-  transform: scale(0.4);
-  transform-origin: top left;
-  pointer-events: none;
 }
-.browser-mock__overlay {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(5,5,4,0);
-  transition: background .3s var(--hv2-ease);
-}
-.browser-mock:hover .browser-mock__overlay { background: rgba(5,5,4,0.45); }
-.browser-mock__overlay-text {
-  display: flex; align-items: center; gap: 8px;
+
+.browser-mock__caption-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--hv2-font-ui);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--hv2-gold);
-  background: var(--hv2-void);
-  border: 1px solid var(--hv2-gold-dim);
-  padding: 10px 18px;
-  border-radius: 100px;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity .3s var(--hv2-ease), transform .3s var(--hv2-ease);
+  margin-top: 18px;
+  transition: opacity .25s;
 }
-.browser-mock:hover .browser-mock__overlay-text { opacity: 1; transform: none; }
-
-.browser-mock__caption {
-  font-size: 12px;
-  color: var(--hv2-ink-faint);
-  margin-top: 16px;
-  text-align: center;
-}
+.browser-mock__caption-link:hover { opacity: 0.75; }
 
 @media (max-width: 600px) {
-  .browser-mock__url { max-width: 140px; }
-  .browser-mock__viewport { aspect-ratio: 4/5; }
-  .browser-mock__viewport iframe { width: 320%; height: 320%; transform: scale(0.3125); }
+  .browser-mock__url { max-width: 130px; }
+  .browser-mock__viewport { height: 460px; }
+  .browser-mock__viewport iframe { height: 5400px; }
 }
 
 /* ── LO DIFÍCIL: design-grid ── */
@@ -248,9 +227,6 @@
 }
 .font-preview__sample {
   display: block;
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-weight: 400;
   font-size: 1.6rem;
   color: #fff;
   margin-bottom: 6px;
