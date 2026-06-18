@@ -161,7 +161,6 @@ document.querySelectorAll('.proj-carousel').forEach((carousel) => {
 
   let current = 0;       // índice lógico (0..count-1), lo que se muestra en el contador
   let isAnimating = false;
-  const queue = [];      // cola FIFO de direcciones pendientes: cada elemento es +1 o -1
 
   const renderCounter = () => { if (counter) counter.textContent = pad(current + 1); };
 
@@ -171,8 +170,8 @@ document.querySelectorAll('.proj-carousel').forEach((carousel) => {
   // correspondiente al índice lógico — usado para el "teletransporte" al
   // cruzar hacia una zona clonada.
   const jumpTo = (logicalIdx) => {
-    const target = allSlides[realIndexFor(logicalIdx)];
-    track.scrollLeft = target.offsetLeft;
+    const targetEl = allSlides[realIndexFor(logicalIdx)];
+    track.scrollLeft = targetEl.offsetLeft;
   };
 
   // Arranca posicionado en el primer slide real (saltando los clones de cola).
@@ -181,12 +180,16 @@ document.querySelectorAll('.proj-carousel').forEach((carousel) => {
 
   const ANIM_MS = 380; // debe ser >= la duración real de la transición smooth del navegador
 
-  // Único punto de entrada para avanzar: si no hay nada corriendo, arranca
-  // inmediatamente; si hay una animación en curso, el paso ya quedó en la
-  // cola (ver `step`) y se procesará automáticamente cuando termine.
-  const processQueue = () => {
-    if (isAnimating || queue.length === 0) return;
-    const dir = queue.shift();
+  // Cada clic mueve exactamente UN slide. Si llega un clic mientras ya hay
+  // una animación en curso, se ignora por completo (no se encola, no se
+  // acumula) — así el carrusel se mueve únicamente cuando el usuario lo
+  // pide en ese instante, y se detiene apenas el usuario deja de hacer
+  // clic. La alternativa de "guardar" los clics de más para ejecutarlos
+  // después es la que causaba que el carrusel pareciera seguir girando
+  // solo tras soltar el botón.
+  const step = (dir) => {
+    if (isAnimating) return;
+
     const logicalIdx = current + dir;
     const isWrapping = logicalIdx >= count || logicalIdx < 0; // dio la vuelta al ciclo
     const wrapped = ((logicalIdx % count) + count) % count;
@@ -212,16 +215,7 @@ document.querySelectorAll('.proj-carousel').forEach((carousel) => {
     setTimeout(() => {
       isAnimating = false;
       jumpTo(current); // si dimos la vuelta, reposiciona sin transición sobre el slide real
-      processQueue();  // si quedaron pasos en cola, encadena el siguiente de inmediato
     }, ANIM_MS);
-  };
-
-  // Cada clic simplemente entra a la cola; processQueue decide si arranca ya
-  // o espera su turno. Así nunca se pierde ni se duplica un paso, sin
-  // importar cuántos clics rápidos lleguen.
-  const step = (dir) => {
-    queue.push(dir);
-    processQueue();
   };
 
   prevBtn?.addEventListener('click', () => step(-1));
