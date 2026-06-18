@@ -128,9 +128,16 @@ document.querySelectorAll('.proj-carousel').forEach((carousel) => {
   const count = originalSlides.length;
   const pad = (n) => String(n).padStart(2, '0');
 
-  // Cuántos clones poner en cada extremo: suficientes para llenar el ancho
-  // visible más uno de margen, sin pasarnos del total de slides reales.
-  const CLONES = Math.min(count, 3);
+  // Cuántos clones poner en cada extremo: con pocos slides (como en este
+  // carrusel, 6 imágenes) clonamos el set COMPLETO en cada lado. Es la
+  // forma más simple de garantizar que nunca aparezca un hueco vacío al
+  // final del recorrido, sin importar qué tan ancha sea la pantalla ni
+  // cuántas tarjetas quepan a la vez — un número fijo más bajo (ej. 3) se
+  // quedaba corto en monitores anchos donde caben ~4 tarjetas, dejando
+  // expuesto ese hueco justo al llegar al final y seguir avanzando.
+  // Si en el futuro el carrusel tuviera muchas más imágenes, esto se
+  // podría acotar de nuevo a un número fijo razonable (ej. 6-8).
+  const CLONES = count;
 
   const headClones = originalSlides.slice(0, CLONES).map((s) => {
     const c = s.cloneNode(true);
