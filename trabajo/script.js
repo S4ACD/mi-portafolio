@@ -14,17 +14,6 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.scroll-reveal').forEach((el) => revealObs.observe(el));
 
-// FAQ acordeón — un solo item abierto a la vez, accesible vía aria-expanded
-const faqItems = document.querySelectorAll('[data-faq]');
-faqItems.forEach((item) => {
-  item.setAttribute('aria-expanded', 'false');
-  item.addEventListener('click', () => {
-    const isOpen = item.getAttribute('aria-expanded') === 'true';
-    faqItems.forEach((i) => i.setAttribute('aria-expanded', 'false'));
-    if (!isOpen) item.setAttribute('aria-expanded', 'true');
-  });
-});
-
 
 // ─── MOTOR DE PARTÍCULAS ──────────────────────────────────────────
 // función compartida — mantener sincronizada en todos los script.js hasta migrar a un build step
@@ -118,4 +107,5 @@ const initParticles = (config) => {
 };
 
 // Partículas doradas (canvas propio del hub)
-initParticles({ canvasId: 'hubCanvas', heroSelector: '.sv-hero' });
+// IDs alineados con el HTML real: #heroCanvas dentro de .tw-hero.
+initParticles({ canvasId: 'heroCanvas', heroSelector: '.tw-hero' });
