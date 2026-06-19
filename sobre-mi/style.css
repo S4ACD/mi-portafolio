@@ -7,11 +7,11 @@
 /* ── HERO ── */
 .ah-hero {
   position: relative;
-  min-height: 92svh;
+  min-height: 86svh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 120px 0 60px;
+  padding: 130px 0 80px;
   background: var(--hv2-void);
 }
 .ah-hero__bg {
@@ -86,7 +86,7 @@
 }
 .ah-hero__cta svg { transform: rotate(90deg); flex-shrink: 0; }
 
-/* ── ARTE DEL HERO — planeta + rocas, sin wrappers anidados ──
+/* ── ARTE DEL HERO — planeta + rocas + órbita SVG ──
    Visibles por defecto: sin opacity:0 esperando a JS, sin
    mix-blend-mode dependiente del fondo. Lo que ves en el código
    es exactamente lo que se renderiza. */
@@ -94,33 +94,58 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1/1;
-  max-width: 560px;
+  max-width: 680px;
   justify-self: center;
 }
 
-.ah-orbit {
+.ah-orbit-svg {
   position: absolute;
-  top: 50%; left: 50%;
-  width: 92%;
-  height: 92%;
-  border: 1px solid var(--hv2-line);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.ah-orbit-ring {
+  fill: none;
+  stroke: var(--hv2-line);
+  stroke-width: 0.4;
+}
+.ah-orbit-ring--dashed {
+  stroke-dasharray: 1.5 2.4;
+  opacity: 0.6;
+  transform-origin: 100px 100px;
+  animation: ahSpin 70s linear infinite;
+}
+@keyframes ahSpin { to { transform: rotate(360deg); } }
+
+.ah-comet {
+  filter: drop-shadow(0 0 4px var(--hv2-gold));
+}
+.ah-comet--tail { fill: var(--hv2-gold); opacity: 0.35; }
+.ah-comet--core { fill: #fff; }
+
+.ah-sunburst {
+  position: absolute;
+  top: 8%;
+  right: 6%;
+  width: 14%;
+  aspect-ratio: 1/1;
+  background: radial-gradient(circle, #fff 0%, var(--hv2-gold) 40%, transparent 72%);
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  filter: blur(2px);
+  opacity: 0.85;
+  animation: ahSunburstPulse 4s ease-in-out infinite;
   pointer-events: none;
 }
-.ah-orbit--inner {
-  width: 64%;
-  height: 64%;
-  border-style: dashed;
-  opacity: 0.5;
-  animation: ahSpin 90s linear infinite;
+@keyframes ahSunburstPulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.15); }
 }
-@keyframes ahSpin { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
 .ah-planet {
   position: absolute;
   top: 50%; left: 50%;
-  width: 62%;
+  width: 46%;
   height: auto;
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
@@ -129,52 +154,55 @@
 }
 @keyframes ahPlanetFloat {
   0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-  50%      { transform: translate(-50%, -50%) translateY(-12px); }
+  50%      { transform: translate(-50%, -50%) translateY(-14px); }
 }
 @keyframes ahPlanetGlow {
   0%, 100% { filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15)); }
   50%      { filter: drop-shadow(0 0 70px rgba(205,183,142,0.5)) drop-shadow(0 0 130px rgba(205,183,142,0.22)); }
 }
 
+/* Rocas: width fijado a su proporción REAL (a = 900x491 ≈ 1.83:1,
+   b = 900x900 = 1:1), nunca forzadas a un height que las distorsione. */
 .ah-rock {
   position: absolute;
+  height: auto;
   filter: drop-shadow(0 0 24px rgba(205,183,142,0.2));
   z-index: 1;
 }
 .ah-rock--a {
-  width: 26%;
-  top: 6%;
-  left: 2%;
+  width: 22%;
+  top: 2%;
+  left: -4%;
   animation: ahRockFloatA 11s ease-in-out infinite;
 }
 .ah-rock--b {
-  width: 22%;
-  bottom: 8%;
-  right: 4%;
+  width: 16%;
+  bottom: 4%;
+  right: 0%;
   animation: ahRockFloatB 9s ease-in-out infinite;
 }
 @keyframes ahRockFloatA {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50%      { transform: translateY(10px) rotate(3deg); }
+  50%      { transform: translateY(12px) rotate(3deg); }
 }
 @keyframes ahRockFloatB {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50%      { transform: translateY(-10px) rotate(-3deg); }
+  50%      { transform: translateY(-12px) rotate(-3deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ah-planet, .ah-rock, .ah-orbit--inner { animation: none; }
+  .ah-planet, .ah-rock, .ah-orbit-ring--dashed, .ah-sunburst, .ah-comet { animation: none; }
 }
 
 @media (max-width: 900px) {
   .ah-hero { padding: 110px 0 50px; min-height: auto; }
-  .ah-hero__grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+  .ah-hero__grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
   .ah-hero__sub { margin-left: auto; margin-right: auto; }
   .ah-hero__cta { margin: 0 auto; }
-  .ah-hero__art { max-width: 380px; }
+  .ah-hero__art { max-width: 440px; }
 }
 @media (max-width: 480px) {
-  .ah-hero__art { max-width: 300px; }
+  .ah-hero__art { max-width: 320px; }
 }
 
 /* ── BLOQUES DE CONTENIDO ── */
