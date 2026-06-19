@@ -152,6 +152,126 @@
   transition: transform 0.6s var(--hv2-ease);
 }
 .tw-featured:hover .tw-featured__media img { transform: scale(1.04); }
+
+/* ── PANEL DE DATOS (reemplaza imagen en el destacado) ──────────
+   Cuenta la historia de performance sin depender de un screenshot.
+   Coherente con el mensaje "carga instantánea, sin dependencias":
+   el caso estrella no carga ni una imagen. Todo en tokens. */
+.tw-featured__panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(205,183,142,0.10) 0%, transparent 55%),
+    radial-gradient(90% 80% at 50% 120%, rgba(205,183,142,0.06) 0%, transparent 60%),
+    var(--hv2-void);
+  isolation: isolate;
+}
+.tw-panel__grain {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.tw-panel__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 340px;
+  padding: 40px;
+  text-align: center;
+}
+.tw-panel__eyebrow {
+  display: block;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+  margin-bottom: 20px;
+}
+.tw-panel__score {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  font-family: var(--hv2-font-display);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+.tw-panel__from {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  color: var(--hv2-ink-faint);
+  position: relative;
+}
+.tw-panel__from::after {
+  content: "";
+  position: absolute;
+  left: -4px; right: -4px;
+  top: 52%;
+  height: 2px;
+  background: var(--hv2-ink-faint);
+  transform: rotate(-8deg);
+}
+.tw-panel__arrow {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--hv2-gold-dim);
+  font-weight: 400;
+}
+.tw-panel__to {
+  font-size: clamp(3.4rem, 7vw, 5rem);
+  color: var(--hv2-gold);
+  text-shadow: 0 0 40px rgba(205,183,142,0.25);
+}
+/* Barra antes/después — se llena al revelar la tarjeta */
+.tw-panel__bar {
+  position: relative;
+  height: 6px;
+  border-radius: 100px;
+  background: rgba(244,239,230,0.08);
+  overflow: visible;
+  margin-bottom: 26px;
+}
+.tw-panel__bar-fill {
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--hv2-gold-dim), var(--hv2-gold));
+  transition: width 1.1s var(--hv2-ease) 0.2s;
+}
+.tw-featured.visible .tw-panel__bar-fill { width: 97%; }
+.tw-panel__bar-mark {
+  position: absolute;
+  top: 12px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-faint);
+}
+.tw-panel__bar-mark--from { left: 2px; }
+.tw-panel__bar-mark--to { right: 2px; color: var(--hv2-gold); }
+.tw-panel__foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.74rem;
+  color: var(--hv2-ink-dim);
+}
+.tw-panel__foot strong { color: var(--hv2-ink); font-weight: 600; }
+.tw-panel__foot-dot { color: var(--hv2-gold-dim); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tw-panel__bar-fill { transition: none; width: 97%; }
+}
 .tw-featured__flag {
   position: absolute;
   top: 16px;
