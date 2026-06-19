@@ -24,6 +24,12 @@
   <section class="ah-hero">
     <div class="ah-hero__bg" aria-hidden="true"></div>
     <div class="ah-hero__glow" aria-hidden="true"></div>
+    <div class="ah-hero__glow--warm" aria-hidden="true"></div>
+    <div class="ah-starfield" aria-hidden="true">
+      <div class="ah-stars ah-stars--small"></div>
+      <div class="ah-stars ah-stars--medium"></div>
+      <div class="ah-stars ah-stars--gold"></div>
+    </div>
 
     <div class="container ah-hero__grid">
       <div class="ah-hero__text">
@@ -45,8 +51,6 @@
           <defs>
             <path id="ahCometPath" d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" />
           </defs>
-          <circle class="ah-orbit-ring" cx="100" cy="100" r="92" />
-          <circle class="ah-orbit-ring ah-orbit-ring--dashed" cx="100" cy="100" r="60" />
           <circle class="ah-comet ah-comet--tail" r="7">
             <animateMotion dur="14s" begin="-0.5s" repeatCount="indefinite">
               <mpath href="#ahCometPath" />
