@@ -9,6 +9,7 @@
     const isServicios = path.includes('/servicios');
     const isSobreMi   = path.includes('/sobre-mi');
     const isTrabajo   = path.includes('/trabajo');
+    const isHome      = path === '/' || path === '/index.html';
 
     const existingNav = document.getElementById('nav');
     if (existingNav) {
@@ -23,6 +24,7 @@
             <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" alt="Alexander Caro" class="nav__logo-img">
           </a>
           <ul class="nav__links">
+            <li><a href="/"${isHome ? ' class="nav__link--active"' : ''}>Inicio</a></li>
             <li><a href="/trabajo/"${isTrabajo ? ' class="nav__link--active"' : ''}>Trabajo</a></li>
             <li><a href="/servicios/"${isServicios ? ' class="nav__link--active"' : ''}>Servicios</a></li>
             <li><a href="/sobre-mi/"${isSobreMi ? ' class="nav__link--active"' : ''}>Sobre mí</a></li>
@@ -33,6 +35,7 @@
           </button>
         </div>
         <div id="navDrawer" class="nav__drawer">
+          <a href="/" class="nav__drawer-link${isHome ? ' nav__link--active' : ''}">Inicio</a>
           <a href="/trabajo/" class="nav__drawer-link${isTrabajo ? ' nav__link--active' : ''}">Trabajo</a>
           <a href="/servicios/" class="nav__drawer-link${isServicios ? ' nav__link--active' : ''}">Servicios</a>
           <a href="/sobre-mi/" class="nav__drawer-link${isSobreMi ? ' nav__link--active' : ''}">Sobre mí</a>
