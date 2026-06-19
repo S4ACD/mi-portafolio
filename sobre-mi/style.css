@@ -89,12 +89,16 @@
 /* ── ARTE DEL HERO — planeta + rocas + órbita SVG ──
    Visibles por defecto: sin opacity:0 esperando a JS, sin
    mix-blend-mode dependiente del fondo. Lo que ves en el código
-   es exactamente lo que se renderiza. */
+   es exactamente lo que se renderiza.
+
+   Composición apretada a propósito: el planeta es el protagonista
+   (64% del contenedor), las rocas viven PEGADAS a su borde como si
+   orbitaran junto a él — no sueltas en las esquinas del contenedor. */
 .ah-hero__art {
   position: relative;
   width: 100%;
   aspect-ratio: 1/1;
-  max-width: 680px;
+  max-width: 620px;
   justify-self: center;
 }
 
@@ -108,11 +112,11 @@
 .ah-orbit-ring {
   fill: none;
   stroke: var(--hv2-line);
-  stroke-width: 0.4;
+  stroke-width: 0.35;
 }
 .ah-orbit-ring--dashed {
-  stroke-dasharray: 1.5 2.4;
-  opacity: 0.6;
+  stroke-dasharray: 1.2 2.2;
+  opacity: 0.55;
   transform-origin: 100px 100px;
   animation: ahSpin 70s linear infinite;
 }
@@ -121,21 +125,22 @@
 .ah-comet {
   filter: drop-shadow(0 0 4px var(--hv2-gold));
 }
-.ah-comet--tail { fill: var(--hv2-gold); opacity: 0.35; }
+.ah-comet--tail { fill: var(--hv2-gold); opacity: 0.4; }
 .ah-comet--core { fill: #fff; }
 
 .ah-sunburst {
   position: absolute;
-  top: 8%;
-  right: 6%;
-  width: 14%;
+  top: 4%;
+  right: 10%;
+  width: 7%;
   aspect-ratio: 1/1;
   background: radial-gradient(circle, #fff 0%, var(--hv2-gold) 40%, transparent 72%);
   border-radius: 50%;
-  filter: blur(2px);
+  filter: blur(1px);
   opacity: 0.85;
   animation: ahSunburstPulse 4s ease-in-out infinite;
   pointer-events: none;
+  z-index: 3;
 }
 @keyframes ahSunburstPulse {
   0%, 100% { opacity: 0.7; transform: scale(1); }
@@ -145,7 +150,7 @@
 .ah-planet {
   position: absolute;
   top: 50%; left: 50%;
-  width: 46%;
+  width: 64%;
   height: auto;
   transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 50px rgba(205,183,142,0.35)) drop-shadow(0 0 100px rgba(205,183,142,0.15));
@@ -162,32 +167,34 @@
 }
 
 /* Rocas: width fijado a su proporción REAL (a = 900x491 ≈ 1.83:1,
-   b = 900x900 = 1:1), nunca forzadas a un height que las distorsione. */
+   b = 900x900 = 1:1), nunca forzadas a un height que las distorsione.
+   Posicionadas PEGADAS al borde del planeta (que ocupa el 64% central),
+   no sueltas en las esquinas del contenedor. */
 .ah-rock {
   position: absolute;
   height: auto;
-  filter: drop-shadow(0 0 24px rgba(205,183,142,0.2));
+  filter: drop-shadow(0 0 20px rgba(205,183,142,0.25));
   z-index: 1;
 }
 .ah-rock--a {
-  width: 22%;
-  top: 2%;
-  left: -4%;
+  width: 19%;
+  top: 16%;
+  left: 8%;
   animation: ahRockFloatA 11s ease-in-out infinite;
 }
 .ah-rock--b {
-  width: 16%;
-  bottom: 4%;
-  right: 0%;
+  width: 14%;
+  bottom: 14%;
+  right: 12%;
   animation: ahRockFloatB 9s ease-in-out infinite;
 }
 @keyframes ahRockFloatA {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50%      { transform: translateY(12px) rotate(3deg); }
+  50%      { transform: translateY(10px) rotate(3deg); }
 }
 @keyframes ahRockFloatB {
   0%, 100% { transform: translateY(0) rotate(0deg); }
-  50%      { transform: translateY(-12px) rotate(-3deg); }
+  50%      { transform: translateY(-10px) rotate(-3deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
