@@ -3613,3 +3613,91 @@ input, textarea {
   .faq-section__orbit-glow { animation: none; opacity: 0.14; }
   .faq-section__star { animation: none; opacity: 0.4; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   POR QUÉ YO (vs agencia) — comparación lado a lado
+   ═══════════════════════════════════════════════════════════════ */
+.porque-section {
+  background: var(--hv2-void);
+  position: relative;
+}
+.porque-section__lede {
+  font-family: var(--hv2-font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--hv2-ink-dim);
+  max-width: 64ch;
+  margin: 24px 0 48px;
+}
+.porque-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.porque-col {
+  border: 1px solid var(--hv2-line);
+  border-radius: 18px;
+  padding: 32px 30px;
+  background: rgba(244,239,230,0.012);
+}
+.porque-col--me {
+  border-color: var(--hv2-gold-dim);
+  background: var(--hv2-gold-faint);
+}
+.porque-col__tag {
+  display: inline-block;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+  margin-bottom: 22px;
+}
+.porque-col__tag--gold { color: var(--hv2-gold); }
+.porque-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.porque-list li {
+  font-family: var(--hv2-font-body);
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: var(--hv2-ink);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.porque-col--them .porque-list li { color: var(--hv2-ink-dim); }
+.porque-x {
+  color: var(--hv2-ink-dim);
+  font-weight: 400;
+  flex-shrink: 0;
+  opacity: 0.5;
+  line-height: 1.55;
+}
+.porque-check {
+  color: var(--hv2-gold);
+  font-weight: 600;
+  flex-shrink: 0;
+  line-height: 1.55;
+}
+.porque-section__close {
+  font-family: var(--hv2-font-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--hv2-ink-dim);
+  max-width: 60ch;
+  margin: 40px 0 0;
+  font-style: italic;
+}
+
+@media (max-width: 760px) {
+  .porque-compare { grid-template-columns: 1fr; gap: 14px; }
+  .porque-col { padding: 26px 22px; }
+  .porque-section__lede { font-size: 1rem; margin-bottom: 36px; }
+}
