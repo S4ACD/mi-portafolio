@@ -41,10 +41,28 @@
       </div>
 
       <div class="ah-hero__art scroll-reveal" style="--reveal-delay:.1s" aria-hidden="true">
-        <div class="ah-orbit"></div>
-        <div class="ah-orbit ah-orbit--inner"></div>
+        <svg class="ah-orbit-svg" viewBox="0 0 200 200">
+          <defs>
+            <path id="ahCometPath" d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" />
+          </defs>
+          <circle class="ah-orbit-ring" cx="100" cy="100" r="92" />
+          <circle class="ah-orbit-ring ah-orbit-ring--dashed" cx="100" cy="100" r="60" />
+          <circle class="ah-comet ah-comet--tail" r="7">
+            <animateMotion dur="14s" begin="-0.5s" repeatCount="indefinite">
+              <mpath href="#ahCometPath" />
+            </animateMotion>
+          </circle>
+          <circle class="ah-comet ah-comet--core" r="3">
+            <animateMotion dur="14s" repeatCount="indefinite">
+              <mpath href="#ahCometPath" />
+            </animateMotion>
+          </circle>
+        </svg>
+
+        <div class="ah-sunburst"></div>
+
         <img class="ah-planet" src="../assets/rocks/saturn-gold.webp" alt="" width="500" height="500" fetchpriority="high" />
-        <img class="ah-rock ah-rock--a" src="../assets/rocks/gold-rock-a.webp" alt="" width="900" height="490" loading="lazy" />
+        <img class="ah-rock ah-rock--a" src="../assets/rocks/gold-rock-a.webp" alt="" width="900" height="491" loading="lazy" />
         <img class="ah-rock ah-rock--b" src="../assets/rocks/gold-rock-b.webp" alt="" width="900" height="900" loading="lazy" />
       </div>
     </div>
