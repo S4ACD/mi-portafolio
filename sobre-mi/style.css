@@ -16,7 +16,7 @@
 }
 .ah-hero__bg {
   position: absolute; inset: 0;
-  background: radial-gradient(120% 90% at 72% 42%, var(--hv2-void-soft) 0%, var(--hv2-void) 62%);
+  background: radial-gradient(140% 120% at 72% 42%, var(--hv2-void-soft) 0%, var(--hv2-void) 85%);
   z-index: 0;
 }
 .ah-hero__glow {
@@ -47,10 +47,11 @@
   pointer-events: none;
 }
 
-/* Campo de estrellas — 3 capas vía box-shadow puro (sin imágenes, sin
-   JS). Cada capa es un único punto de 1x1px replicado cientos de veces
-   en posiciones fijas, con animación de parpadeo y deriva lentísima
-   para dar sensación de profundidad real entre capas. */
+/* Campo de estrellas — elementos individuales (no box-shadow: ese
+   truco no admite porcentajes, así que las estrellas quedaban fuera
+   del área visible real). Cada <i> es una estrella posicionada con
+   top/left en %, así escala correctamente con el contenedor sin
+   importar el ancho real de la pantalla. */
 .ah-starfield {
   position: absolute;
   inset: 0;
@@ -58,36 +59,21 @@
   z-index: 0;
   pointer-events: none;
 }
-.ah-stars {
+.ah-star {
   position: absolute;
-  top: 0; left: 0;
-  width: 1px; height: 1px;
   border-radius: 50%;
-  background: transparent;
+  background: #fff;
+  animation: ahStarTwinkle 5s ease-in-out infinite;
 }
-.ah-stars--small {
-  box-shadow: 1309px 114px #fff, 51px 759px #fff, 563px 250px #fff, 457px 142px #fff, 1508px 104px #fff, 1385px 758px #fff, 1116px 89px #fff, 1209px 432px #fff, 65px 30px #fff, 191px 223px #fff, 476px 517px #fff, 1232px 27px #fff, 1149px 203px #fff, 1466px 665px #fff, 1436px 558px #fff, 859px 225px #fff, 919px 603px #fff, 569px 828px #fff, 1780px 6px #fff, 1554px 825px #fff, 326px 714px #fff, 865px 348px #fff, 569px 159px #fff, 440px 980px #fff, 1563px 344px #fff, 209px 94px #fff, 778px 99px #fff, 735px 867px #fff, 704px 618px #fff, 541px 826px #fff, 88px 747px #fff, 940px 549px #fff, 255px 996px #fff, 775px 80px #fff, 1130px 300px #fff, 1698px 643px #fff, 1266px 906px #fff, 1764px 370px #fff, 1182px 196px #fff, 1442px 71px #fff, 93px 677px #fff, 466px 791px #fff, 592px 81px #fff, 1751px 238px #fff, 1774px 103px #fff, 778px 284px #fff, 928px 650px #fff, 1708px 373px #fff, 333px 379px #fff, 727px 214px #fff, 1372px 273px #fff, 1437px 959px #fff, 1399px 663px #fff, 146px 623px #fff, 1300px 175px #fff, 1093px 746px #fff, 501px 167px #fff, 946px 388px #fff, 552px 947px #fff, 1310px 704px #fff, 1140px 224px #fff, 1402px 332px #fff, 1726px 786px #fff, 1589px 57px #fff, 469px 841px #fff, 65px 824px #fff, 646px 410px #fff, 548px 67px #fff, 432px 935px #fff, 1161px 897px #fff, 1470px 322px #fff, 435px 671px #fff, 1022px 405px #fff, 1316px 469px #fff, 292px 271px #fff, 285px 252px #fff, 1525px 574px #fff, 1103px 269px #fff, 1529px 598px #fff, 877px 919px #fff, 1195px 408px #fff, 741px 224px #fff, 283px 521px #fff, 1010px 93px #fff, 1547px 48px #fff, 1763px 112px #fff, 313px 642px #fff, 327px 811px #fff, 1393px 432px #fff, 1221px 65px #fff, 788px 390px #fff, 1220px 479px #fff, 1083px 257px #fff, 1133px 881px #fff, 23px 696px #fff, 1476px 117px #fff, 1396px 906px #fff, 1099px 768px #fff, 546px 787px #fff, 1312px 348px #fff, 228px 300px #fff, 890px 161px #fff, 929px 3px #fff, 1478px 896px #fff, 1473px 269px #fff, 1025px 780px #fff, 365px 519px #fff, 217px 891px #fff, 1280px 305px #fff, 1723px 654px #fff, 1039px 623px #fff, 407px 156px #fff, 765px 780px #fff, 330px 552px #fff, 1594px 944px #fff, 1086px 940px #fff, 1px 613px #fff, 663px 500px #fff, 39px 114px #fff, 743px 899px #fff, 1703px 826px #fff, 629px 245px #fff, 118px 246px #fff, 1798px 580px #fff, 161px 87px #fff, 1498px 497px #fff, 1671px 70px #fff, 1557px 545px #fff, 1568px 128px #fff, 262px 675px #fff, 973px 969px #fff, 1125px 169px #fff, 542px 540px #fff, 1786px 621px #fff, 866px 987px #fff, 433px 951px #fff, 1104px 773px #fff, 1494px 706px #fff, 411px 730px #fff, 638px 408px #fff;
-  opacity: 0.5;
-  animation: ahStarTwinkle 6s ease-in-out infinite;
-}
-.ah-stars--medium {
-  width: 2px; height: 2px;
-  box-shadow: 1375px 665px #fff, 764px 448px #fff, 1059px 462px #fff, 247px 253px #fff, 460px 65px #fff, 692px 21px #fff, 1204px 567px #fff, 471px 602px #fff, 451px 7px #fff, 145px 724px #fff, 1292px 60px #fff, 468px 69px #fff, 64px 880px #fff, 676px 72px #fff, 1052px 243px #fff, 570px 685px #fff, 994px 219px #fff, 1104px 135px #fff, 1481px 957px #fff, 1169px 590px #fff, 968px 248px #fff, 1606px 484px #fff, 1653px 416px #fff, 389px 96px #fff, 198px 674px #fff, 882px 362px #fff, 867px 420px #fff, 956px 884px #fff, 1493px 55px #fff, 1379px 669px #fff, 1323px 100px #fff, 124px 412px #fff, 1491px 347px #fff, 1639px 882px #fff, 223px 254px #fff, 392px 194px #fff, 1098px 459px #fff, 287px 432px #fff, 375px 285px #fff, 947px 255px #fff, 1790px 945px #fff, 154px 453px #fff, 1654px 882px #fff, 1753px 563px #fff, 200px 51px #fff, 1335px 553px #fff, 1712px 15px #fff, 191px 948px #fff, 1543px 869px #fff, 484px 170px #fff, 832px 497px #fff, 985px 218px #fff, 1770px 410px #fff, 120px 168px #fff, 776px 2px #fff, 799px 271px #fff, 1605px 803px #fff, 931px 292px #fff, 866px 713px #fff, 1496px 802px #fff;
-  opacity: 0.7;
-  animation: ahStarTwinkle 4.5s ease-in-out infinite reverse;
-}
-.ah-stars--gold {
-  width: 2px; height: 2px;
-  box-shadow: 1138px 677px #cdb78e, 1471px 498px #cdb78e, 317px 194px #cdb78e, 607px 222px #cdb78e, 119px 593px #cdb78e, 1506px 555px #cdb78e, 124px 765px #cdb78e, 642px 58px #cdb78e, 102px 598px #cdb78e, 976px 514px #cdb78e, 1746px 543px #cdb78e, 322px 58px #cdb78e, 1040px 82px #cdb78e, 1743px 190px #cdb78e, 140px 609px #cdb78e, 139px 691px #cdb78e, 1765px 240px #cdb78e, 826px 122px #cdb78e, 1166px 252px #cdb78e, 1185px 608px #cdb78e, 81px 634px #cdb78e, 167px 429px #cdb78e;
-  opacity: 0.75;
-  animation: ahStarTwinkle 5.5s ease-in-out infinite;
-}
+.ah-star--small  { width: 1.5px; height: 1.5px; opacity: 0.5; }
+.ah-star--medium { width: 2.5px; height: 2.5px; opacity: 0.7; box-shadow: 0 0 3px rgba(255,255,255,0.6); }
+.ah-star--gold   { width: 2.5px; height: 2.5px; opacity: 0.8; background: #cdb78e; box-shadow: 0 0 4px rgba(205,183,142,0.7); }
 @keyframes ahStarTwinkle {
-  0%, 100% { opacity: 0.3; }
-  50%      { opacity: 0.9; }
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ah-stars--small, .ah-stars--medium, .ah-stars--gold { animation: none; opacity: 0.55; }
+  .ah-star { animation: none; opacity: 0.5; }
 }
 
 .ah-hero__grid {
@@ -223,15 +209,15 @@
   z-index: 1;
 }
 .ah-rock--a {
-  width: 11%;
-  top: 21%;
-  left: 17%;
+  width: 14%;
+  top: 19%;
+  left: 14%;
   animation: ahRockFloatA 11s ease-in-out infinite;
 }
 .ah-rock--b {
-  width: 8%;
-  bottom: 20%;
-  right: 18%;
+  width: 10%;
+  bottom: 18%;
+  right: 16%;
   animation: ahRockFloatB 9s ease-in-out infinite;
 }
 @keyframes ahRockFloatA {
