@@ -3701,3 +3701,31 @@ input, textarea {
   .porque-col { padding: 26px 22px; }
   .porque-section__lede { font-size: 1rem; margin-bottom: 36px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   SEÑAL DE PRECIO — hero, debajo de los CTAs
+   Sutil: contexto, no cartel. Filtra sin intimidar.
+   ═══════════════════════════════════════════════════════════════ */
+.hv2__price-signal {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--hv2-ink-dim);
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hv2__price-signal-dot {
+  color: var(--hv2-gold-dim);
+  font-weight: 400;
+}
+@media (max-width: 640px) {
+  .hv2__price-signal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .hv2__price-signal-dot { display: none; }
+}
