@@ -70,6 +70,26 @@
     </div>
   </section>
 
+  <!-- PRUEBA — lo primero que ve, antes de leer una sola línea -->
+  <section class="section" style="padding-top:0;padding-bottom:0">
+    <div class="container">
+      <div class="proof-row">
+        <div class="proof-stat proof-stat--inline">
+          <span class="proof-stat__num">40 → 97</span>
+          <span class="proof-stat__label">PageSpeed Insights, medido en producción</span>
+        </div>
+        <div class="proof-stat proof-stat--inline">
+          <span class="proof-stat__num">48 h</span>
+          <span class="proof-stat__label">Para recibir la propuesta con alcance y precio</span>
+        </div>
+        <div class="proof-stat proof-stat--inline">
+          <span class="proof-stat__num">100%</span>
+          <span class="proof-stat__label">Código propio — sin builders ni plantillas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- QUÉ ES -->
   <section class="section">
     <div class="container">
@@ -88,21 +108,36 @@
           </p>
         </div>
         <div class="scroll-reveal" style="--reveal-delay:.1s">
-          <div style="display:flex;flex-direction:column;gap:12px">
-            <div class="card" style="padding:20px 24px">
-              <span style="font-size:10px;font-weight:600;letter-spacing:.15em;color:var(--cyan);text-transform:uppercase" data-i18n="label.incluye">Incluye</span>
-              <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:#fff;margin:8px 0 4px" data-i18n="diseno-web.incluye.1.title">Diseño personalizado</h3>
-              <p style="font-size:.85rem;color:var(--text-muted)" data-i18n="diseno-web.incluye.1.desc">Nada de templates. Cada sitio se diseña desde cero según la marca y los objetivos del cliente.</p>
+          <div class="incluye-list">
+            <div class="incluye-item">
+              <div class="incluye-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+              </div>
+              <div>
+                <span class="incluye-item__tag" data-i18n="label.incluye">Incluye</span>
+                <h3 class="incluye-item__title" data-i18n="diseno-web.incluye.1.title">Diseño personalizado</h3>
+                <p class="incluye-item__desc" data-i18n="diseno-web.incluye.1.desc">Nada de templates. Cada sitio se diseña desde cero según la marca y los objetivos del cliente.</p>
+              </div>
             </div>
-            <div class="card" style="padding:20px 24px">
-              <span style="font-size:10px;font-weight:600;letter-spacing:.15em;color:var(--cyan);text-transform:uppercase" data-i18n="label.incluye">Incluye</span>
-              <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:#fff;margin:8px 0 4px" data-i18n="diseno-web.incluye.2.title">Responsive y rápido</h3>
-              <p style="font-size:.85rem;color:var(--text-muted)" data-i18n="diseno-web.incluye.2.desc">Funciona perfecto en celular, tablet y computador. PageSpeed optimizado desde el principio.</p>
+            <div class="incluye-item">
+              <div class="incluye-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/><path d="M2 8h4M2 16h4M18 8h4M18 16h4"/></svg>
+              </div>
+              <div>
+                <span class="incluye-item__tag" data-i18n="label.incluye">Incluye</span>
+                <h3 class="incluye-item__title" data-i18n="diseno-web.incluye.2.title">Responsive y rápido</h3>
+                <p class="incluye-item__desc" data-i18n="diseno-web.incluye.2.desc">Funciona perfecto en celular, tablet y computador. PageSpeed optimizado desde el principio.</p>
+              </div>
             </div>
-            <div class="card" style="padding:20px 24px">
-              <span style="font-size:10px;font-weight:600;letter-spacing:.15em;color:var(--cyan);text-transform:uppercase" data-i18n="label.incluye">Incluye</span>
-              <h3 style="font-family:var(--font-display);font-size:1rem;font-weight:600;color:#fff;margin:8px 0 4px" data-i18n="diseno-web.incluye.3.title">SEO técnico</h3>
-              <p style="font-size:.85rem;color:var(--text-muted)" data-i18n="diseno-web.incluye.3.desc">Estructura semántica, metadatos, Schema JSON-LD y velocidad de carga optimizada para Google.</p>
+            <div class="incluye-item">
+              <div class="incluye-item__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </div>
+              <div>
+                <span class="incluye-item__tag" data-i18n="label.incluye">Incluye</span>
+                <h3 class="incluye-item__title">SEO técnico</h3>
+                <p class="incluye-item__desc">Estructura semántica, metadatos, Schema JSON-LD y velocidad de carga optimizada para Google.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -183,9 +218,18 @@
       <p class="eyebrow scroll-reveal" data-i18n="section.proyectoReal">PROYECTO REAL</p>
       <h2 class="section__title scroll-reveal" data-i18n="diseno-web.proyecto.title">Lo que logra un buen sitio web<span class="hero__dot">.</span></h2>
       <a href="/trabajo/orbidental/" class="card card--project scroll-reveal" style="display:block;text-decoration:none;color:inherit;max-width:600px">
-        <div class="card__thumb">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental rediseño web" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top" />
-          <div class="card__overlay"></div>
+        <div class="card__thumb card__thumb--framed">
+          <div class="browser-mock">
+            <div class="browser-mock__bar">
+              <span class="browser-mock__dot"></span>
+              <span class="browser-mock__dot"></span>
+              <span class="browser-mock__dot"></span>
+              <span class="browser-mock__url"></span>
+            </div>
+            <div class="browser-mock__viewport">
+              <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental rediseño web" loading="lazy" />
+            </div>
+          </div>
         </div>
         <div class="card__meta">
           <h3 class="card__project-title" data-i18n="diseno-web.proyecto.nombre">Rediseño web — Orbidental</h3>
