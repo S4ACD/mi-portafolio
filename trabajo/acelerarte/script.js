@@ -110,3 +110,50 @@ const initParticles = (config) => {
 };
 
 initParticles({ canvasId: 'heroCanvas', heroSelector: '.proj-hero' });
+
+// ─── LIGHTBOX — ver flyer en grande ─────────────────────────────
+(function () {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+  if (!lightbox || !lightboxImg || !closeBtn) return;
+
+  let lastFocused = null;
+
+  function openLightbox(src, alt) {
+    lastFocused = document.activeElement;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+    // limpia el src después de la transición para no dejar la imagen cargada de fondo
+    setTimeout(() => { if (!lightbox.classList.contains('is-open')) lightboxImg.src = ''; }, 300);
+  }
+
+  // Abrir: click en cualquier imagen marcada con data-lightbox
+  document.querySelectorAll('[data-lightbox]').forEach((img) => {
+    img.addEventListener('click', () => openLightbox(img.src, img.alt));
+  });
+
+  // Cerrar: botón X
+  closeBtn.addEventListener('click', closeLightbox);
+
+  // Cerrar: click en cualquier parte fuera de la imagen (el overlay mismo)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Cerrar: tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+  });
+})();
