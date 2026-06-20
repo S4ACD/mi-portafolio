@@ -182,23 +182,31 @@
       <!-- ░░░ MOSAICO ACELERARTE — flyers de motociclismo ░░░ -->
       <div class="dg-mosaic dg-mosaic--moto">
         <figure class="dg-tile dg-tile--tall scroll-reveal">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-1_oyll2h.webp" alt="Flyer deportivo de motociclismo — piloto, estilo MotoGP en rojo" loading="lazy" />
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-1_oyll2h.webp" alt="Flyer deportivo de motociclismo — piloto, estilo MotoGP en rojo" loading="lazy" class="dg-tile__img" data-lightbox />
         </figure>
         <figure class="dg-tile dg-tile--tall scroll-reveal" style="--reveal-delay:.08s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-2_wxhlh0.webp" alt="Flyer de carrera de motos — diseño deportivo azul" loading="lazy" />
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-2_wxhlh0.webp" alt="Flyer de carrera de motos — diseño deportivo azul" loading="lazy" class="dg-tile__img" data-lightbox />
         </figure>
         <figure class="dg-tile dg-tile--tall scroll-reveal" style="--reveal-delay:.16s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-3_a3kxrr.webp" alt="Diseño para piloto de motociclismo — Mario González, verde" loading="lazy" />
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-3_a3kxrr.webp" alt="Diseño para piloto de motociclismo — Mario González, verde" loading="lazy" class="dg-tile__img" data-lightbox />
         </figure>
         <figure class="dg-tile dg-tile--tall scroll-reveal" style="--reveal-delay:.24s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-4_ufa3zy.webp" alt="Flyer deportivo de moto — Camilo Cadavid, cyan" loading="lazy" />
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-4_ufa3zy.webp" alt="Flyer deportivo de moto — Camilo Cadavid, cyan" loading="lazy" class="dg-tile__img" data-lightbox />
         </figure>
         <figure class="dg-tile dg-tile--tall scroll-reveal" style="--reveal-delay:.32s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-5_ihtogs.webp" alt="Diseño para piloto de motociclismo — Angelo Bonilla, Honda" loading="lazy" />
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-5_ihtogs.webp" alt="Diseño para piloto de motociclismo — Angelo Bonilla, Honda" loading="lazy" class="dg-tile__img" data-lightbox />
         </figure>
         <figure class="dg-tile dg-tile--tall scroll-reveal" style="--reveal-delay:.4s">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-6_qdtkda.webp" alt="Flyer de competición de motos — Alexander Rodríguez" loading="lazy" />
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781873289/FLYER-6_qdtkda.webp" alt="Flyer de competición de motos — Alexander Rodríguez" loading="lazy" class="dg-tile__img" data-lightbox />
         </figure>
+      </div>
+
+      <!-- LIGHTBOX — se llena dinámicamente con JS al hacer click en un flyer -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <img class="lightbox__img" id="lightboxImg" src="" alt="" />
       </div>
     </div>
   </section>
