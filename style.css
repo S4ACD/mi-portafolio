@@ -3729,3 +3729,102 @@ input, textarea {
   }
   .hv2__price-signal-dot { display: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   CARD THUMB — FRAME DE NAVEGADOR (presentación premium)
+   En vez de la captura pelada a sangre completa, el sitio flota
+   dentro de un mock-browser minimalista sobre fondo de marca.
+   No reemplaza .card__thumb — es un modificador nuevo.
+   ═══════════════════════════════════════════════════════════════ */
+.card__thumb--framed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% -10%, rgba(205,183,142,0.10) 0%, transparent 55%),
+    var(--hv2-void, #050504);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 22px 0;
+}
+/* textura sutil de grano, coherente con el resto del sitio */
+.card__thumb--framed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.browser-mock {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  background: #181613;
+  border: 1px solid rgba(244,239,230,0.08);
+  border-bottom: none;
+  box-shadow:
+    0 24px 48px -16px rgba(0,0,0,0.55),
+    0 8px 20px -8px rgba(0,0,0,0.4);
+  transform: translateY(14px);
+  transition: transform 0.5s var(--hv2-ease, cubic-bezier(0.16,1,0.3,1)), box-shadow 0.5s ease;
+}
+.card--project:hover .browser-mock {
+  transform: translateY(4px);
+  box-shadow:
+    0 32px 64px -16px rgba(0,0,0,0.6),
+    0 10px 26px -8px rgba(205,183,142,0.12);
+}
+.browser-mock__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  background: #1f1c18;
+  border-bottom: 1px solid rgba(244,239,230,0.06);
+}
+.browser-mock__dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(244,239,230,0.18);
+  flex-shrink: 0;
+}
+.browser-mock__url {
+  flex: 1;
+  margin-left: 6px;
+  height: 14px;
+  border-radius: 4px;
+  background: rgba(244,239,230,0.05);
+}
+.browser-mock__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/11;
+  overflow: hidden;
+  background: #0a0907;
+}
+.browser-mock__viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Etiqueta de proyecto superpuesta, en tu tipografía de marca */
+.card__thumb--framed .card__num {
+  z-index: 2;
+}
+
+@media (max-width: 640px) {
+  .card__thumb--framed { padding: 16px 16px 0; }
+  .browser-mock { max-width: 100%; }
+}
