@@ -678,3 +678,86 @@ body .reveal-up.reveal-done {
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal, body .reveal-up { opacity: 1; transform: none; filter: none; animation: none; transition: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   FRAME DE NAVEGADOR — para tw-card__media (consistente con el home)
+   ═══════════════════════════════════════════════════════════════ */
+.tw-card__media--framed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 18px 0;
+  background:
+    radial-gradient(120% 90% at 50% -10%, rgba(205,183,142,0.10) 0%, transparent 55%),
+    var(--hv2-void, #050504);
+}
+.tw-card__media--framed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.browser-mock {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  background: #181613;
+  border: 1px solid var(--hv2-line);
+  border-bottom: none;
+  box-shadow: 0 24px 48px -16px rgba(0,0,0,0.55), 0 8px 20px -8px rgba(0,0,0,0.4);
+  transform: translateY(14px);
+  transition: transform 0.5s var(--hv2-ease), box-shadow 0.5s ease;
+}
+.tw-card:hover .browser-mock,
+.tw-featured:hover .browser-mock {
+  transform: translateY(4px);
+  box-shadow: 0 32px 64px -16px rgba(0,0,0,0.6), 0 10px 26px -8px rgba(205,183,142,0.12);
+}
+.browser-mock__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  background: #1f1c18;
+  border-bottom: 1px solid rgba(244,239,230,0.06);
+}
+.browser-mock__dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(244,239,230,0.18);
+  flex-shrink: 0;
+}
+.browser-mock__url {
+  flex: 1;
+  margin-left: 6px;
+  height: 14px;
+  border-radius: 4px;
+  background: rgba(244,239,230,0.05);
+}
+.browser-mock__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/11;
+  overflow: hidden;
+  background: #0a0907;
+}
+.browser-mock__viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s var(--hv2-ease);
+}
+.tw-card:hover .browser-mock__viewport img { transform: scale(1.05); }
+
+@media (max-width: 640px) {
+  .tw-card__media--framed { padding: 14px 14px 0; }
+}
