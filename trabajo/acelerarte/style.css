@@ -372,3 +372,75 @@
 @media (max-width: 480px) {
   .dg-mosaic--moto { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHTBOX — ver flyer en grande
+   ═══════════════════════════════════════════════════════════════ */
+.dg-tile__img { cursor: zoom-in; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(5,5,4,0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s var(--hv2-ease, ease), visibility 0.3s;
+}
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox__img {
+  max-width: min(90vw, 720px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 40px 100px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(244,239,230,0.08);
+  object-fit: contain;
+  transform: scale(0.96);
+  transition: transform 0.35s var(--hv2-ease, ease);
+}
+.lightbox.is-open .lightbox__img {
+  transform: scale(1);
+}
+.lightbox__close {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(244,239,230,0.06);
+  border: 1px solid rgba(244,239,230,0.14);
+  color: var(--hv2-ink, #f4efe6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.lightbox__close:hover {
+  background: rgba(244,239,230,0.12);
+  border-color: var(--hv2-gold-dim, rgba(205,183,142,0.35));
+  transform: scale(1.06);
+}
+.lightbox__close:focus-visible {
+  outline: 2px solid var(--hv2-gold, #cdb78e);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .lightbox { padding: 20px; }
+  .lightbox__close { top: 16px; right: 16px; width: 40px; height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lightbox, .lightbox__img { transition: none; }
+}
