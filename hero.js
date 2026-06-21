@@ -33,8 +33,8 @@
      0. PARTICLES — dust + starlight
      Fills `.hv2__particles` with small divs: ~60% soft "ash" motes
      that drift slowly upward and fade (CSS var(--rise)/var(--peak)),
-     ~28% white "stars" that twinkle in place, and ~12% cyan stars —
-     the only other place this hero uses var(--cyan) besides the
+     ~28% white "stars" that twinkle in place, and ~12% gold stars —
+     the only other place this hero uses var(--gold) besides the
      orbital glint. Positions skew toward the right two-thirds of the
      hero (the space around/behind the portrait), with a lighter
      scatter on the left/text side too.
@@ -51,7 +51,7 @@
 
     for (var i = 0; i < count; i++) {
       var roll = Math.random();
-      var type = roll < 0.6 ? 'dust' : (roll < 0.88 ? 'star' : 'star-cyan');
+      var type = roll < 0.6 ? 'dust' : (roll < 0.88 ? 'star' : 'star-gold');
       var el = document.createElement('div');
       el.className = 'hv2__particle hv2__particle--' + type;
 
