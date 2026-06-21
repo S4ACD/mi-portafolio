@@ -4,7 +4,7 @@
 :root {
   /* Sistema unificado en la paleta dorada (Cosmos Editorial).
      Los tokens --hv2-* (definidos más abajo) son la única fuente de
-     verdad de color. Los nombres heredados (--bg, --text, --cyan, …)
+     verdad de color. Los nombres heredados (--bg, --text, --gold, …)
      se conservan como ALIAS que apuntan a esos tokens, para no romper
      los cientos de usos existentes; ya no representan el sistema cian. */
   --bg:           var(--hv2-void);
@@ -13,9 +13,9 @@
   --border:       var(--hv2-line);
   --border-hover: rgba(205,183,142,0.4);
 
-  --cyan:         var(--hv2-gold);
-  --cyan-dim:     var(--hv2-gold-faint);
-  --cyan-glow:    0 0 32px rgba(205,183,142,0.35), 0 0 70px rgba(205,183,142,0.10);
+  --gold:         var(--hv2-gold);
+  --gold-dim:     var(--hv2-gold-faint);
+  --gold-glow:    0 0 32px rgba(205,183,142,0.35), 0 0 70px rgba(205,183,142,0.10);
 
   --text:         var(--hv2-ink);
   --text-muted:   var(--hv2-ink-dim);
@@ -49,7 +49,7 @@ ul { list-style: none; }
 img { display: block; max-width: 100%; }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-.cyan { color: var(--cyan); }
+.gold { color: var(--gold); }
 
 /* ── BACK LINK — versión consolidada y única de todo el sitio.
    Antes estaba reimplementada en trabajo/, servicios/, sobre-mi/ y los
@@ -74,7 +74,7 @@ img { display: block; max-width: 100%; }
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
-  color: var(--cyan);
+  color: var(--gold);
   margin-bottom: 12px;
 }
 .section { padding: 100px 0; }
@@ -90,10 +90,10 @@ img { display: block; max-width: 100%; }
 @media (min-width: 768px) { .br-desktop { display: inline; } }
 
 /* ═══════════════════════════════════════════════════════════════
-   DOT PULSANTE — el punto cyan del título
+   DOT PULSANTE — el punto dorado del título
 ═══════════════════════════════════════════════════════════════ */
 .hero__dot {
-  color: var(--cyan);
+  color: var(--gold);
   display: inline-block;
   animation: dotPulse 2.4s ease-in-out infinite;
   transform-origin: center bottom;
@@ -138,10 +138,10 @@ img { display: block; max-width: 100%; }
   border: none;
   white-space: nowrap;
 }
-.btn--cyan { background: var(--cyan); color: #000; }
-.btn--cyan:hover {
+.btn--gold { background: var(--gold); color: #000; }
+.btn--gold:hover {
   background: #1af5f5;
-  box-shadow: var(--cyan-glow);
+  box-shadow: var(--gold-glow);
   transform: translateY(-2px);
 }
 .btn--ghost {
@@ -149,11 +149,11 @@ img { display: block; max-width: 100%; }
   color: var(--text);
   border: 1px solid var(--border);
 }
-.btn--ghost:hover { border-color: var(--border-hover); color: var(--cyan); }
+.btn--ghost:hover { border-color: var(--border-hover); color: var(--gold); }
 .btn--lg { font-size: 15px; padding: 16px 32px; }
 
 /* ═══════════════════════════════════════════════════════════════
-   NAV — v2: editorial mark + gold accent (cyan stays in the hero's
+   NAV — v2: editorial mark + gold accent (gold stays in the hero's
    orbital glint / particles only — see HERO v3 below)
 ═══════════════════════════════════════════════════════════════ */
 .nav {
@@ -312,7 +312,7 @@ img { display: block; max-width: 100%; }
   filter: blur(80px);
   z-index: 0;
 }
-.hero__orb--cyan {
+.hero__orb--gold {
   width: 600px; height: 600px;
   top: -100px; left: -100px;
   background: radial-gradient(circle, rgba(205,183,142,0.12) 0%, transparent 70%);
@@ -403,13 +403,13 @@ img { display: block; max-width: 100%; }
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(205,183,142,0.07);
   border: 1px solid rgba(205,183,142,0.18);
-  color: var(--cyan); font-size: 11px; font-weight: 500;
+  color: var(--gold); font-size: 11px; font-weight: 500;
   padding: 5px 14px; border-radius: 100px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .hero__badge-dot {
-  width: 6px; height: 6px; background: var(--cyan);
+  width: 6px; height: 6px; background: var(--gold);
   border-radius: 50%;
   animation: badgePulse 2s ease-in-out infinite;
 }
@@ -444,7 +444,7 @@ img { display: block; max-width: 100%; }
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--cyan);
+  color: var(--gold);
   font-family: var(--font-body);
   font-weight: 500;
   margin-bottom: 20px;
@@ -452,7 +452,7 @@ img { display: block; max-width: 100%; }
 .hero__eyebrow-line {
   display: block;
   width: 32px; height: 1px;
-  background: var(--cyan);
+  background: var(--gold);
   opacity: 0.6;
   flex-shrink: 0;
 }
@@ -472,7 +472,7 @@ img { display: block; max-width: 100%; }
 }
 .hero__title-last {
   display: block;
-  background: linear-gradient(120deg, #fff 30%, var(--cyan) 100%);
+  background: linear-gradient(120deg, #fff 30%, var(--gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -514,7 +514,7 @@ img { display: block; max-width: 100%; }
 }
 .hero__stat-plus {
   font-size: 0.6em;
-  color: var(--cyan);
+  color: var(--gold);
   vertical-align: super;
 }
 .hero__stat-label {
@@ -555,13 +555,13 @@ img { display: block; max-width: 100%; }
   border-radius: 22px;
   pointer-events: none;
 }
-.hero__ring--cyan {
+.hero__ring--gold {
   inset: -10px;
   border: 1.5px solid rgba(205,183,142,0.22);
   box-shadow:
     0 0 20px rgba(205,183,142,0.20),
     inset 0 0 20px rgba(205,183,142,0.04);
-  animation: ringPulseCyan 3.5s ease-in-out infinite;
+  animation: ringPulseGold 3.5s ease-in-out infinite;
 }
 .hero__ring--purple {
   inset: -22px;
@@ -571,7 +571,7 @@ img { display: block; max-width: 100%; }
     inset 0 0 35px rgba(160,80,255,0.03);
   animation: ringPulsePurple 4.5s ease-in-out infinite 1s;
 }
-@keyframes ringPulseCyan {
+@keyframes ringPulseGold {
   0%,100% {
     box-shadow: 0 0 20px rgba(205,183,142,0.20), inset 0 0 20px rgba(205,183,142,0.04);
     border-color: rgba(205,183,142,0.22);
@@ -655,8 +655,8 @@ img { display: block; max-width: 100%; }
   pointer-events: none;
   transition: opacity 0.3s;
 }
-.hero__corner--tl { top: -2px; left: -2px; border-top: 2px solid var(--cyan); border-left: 2px solid var(--cyan); border-radius: 4px 0 0 0; }
-.hero__corner--tr { top: -2px; right: -2px; border-top: 2px solid var(--cyan); border-right: 2px solid var(--cyan); border-radius: 0 4px 0 0; }
+.hero__corner--tl { top: -2px; left: -2px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold); border-radius: 4px 0 0 0; }
+.hero__corner--tr { top: -2px; right: -2px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); border-radius: 0 4px 0 0; }
 .hero__corner--bl { bottom: -2px; left: -2px; border-bottom: 2px solid rgba(160,80,255,0.9); border-left: 2px solid rgba(160,80,255,0.9); border-radius: 0 0 0 4px; }
 .hero__corner--br { bottom: -2px; right: -2px; border-bottom: 2px solid rgba(160,80,255,0.9); border-right: 2px solid rgba(160,80,255,0.9); border-radius: 0 0 4px 0; }
 
@@ -679,7 +679,7 @@ img { display: block; max-width: 100%; }
 }
 .hero__hud-dot {
   width: 5px; height: 5px;
-  background: var(--cyan);
+  background: var(--gold);
   border-radius: 50%;
   opacity: 0.7;
   animation: badgePulse 2.5s ease-in-out infinite;
@@ -725,7 +725,7 @@ img { display: block; max-width: 100%; }
   border-radius: 50%;
   flex-shrink: 0;
 }
-.hero__tech-dot--cyan   { background: var(--cyan); box-shadow: 0 0 6px rgba(205,183,142,0.6); }
+.hero__tech-dot--gold   { background: var(--gold); box-shadow: 0 0 6px rgba(205,183,142,0.6); }
 .hero__tech-dot--purple { background: #a050ff; box-shadow: 0 0 6px rgba(160,80,255,0.6); }
 
 .hero__availability {
@@ -771,7 +771,7 @@ img { display: block; max-width: 100%; }
 }
 .hero__scroll-line {
   width: 1px; height: 40px;
-  background: linear-gradient(to bottom, var(--cyan), transparent);
+  background: linear-gradient(to bottom, var(--gold), transparent);
   animation: scrollLine 1.8s ease-in-out infinite;
 }
 @keyframes scrollLine {
@@ -846,9 +846,9 @@ img { display: block; max-width: 100%; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .hero__ring--cyan,
+  .hero__ring--gold,
   .hero__ring--purple,
-  .hero__orb--cyan,
+  .hero__orb--gold,
   .hero__orb--purple,
   .hero__orb--mid { animation: none; }
 }
@@ -865,7 +865,7 @@ img { display: block; max-width: 100%; }
 }
 .card:hover {
   transform: translateY(-5px) scale(1.015);
-  box-shadow: var(--cyan-glow);
+  box-shadow: var(--gold-glow);
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
 }
@@ -881,7 +881,7 @@ img { display: block; max-width: 100%; }
 .card--service { padding: 32px 28px; }
 .card__icon {
   width: 44px; height: 44px;
-  background: var(--cyan-dim);
+  background: var(--gold-dim);
   border-radius: var(--radius-sm);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 20px;
@@ -891,7 +891,7 @@ img { display: block; max-width: 100%; }
   background: rgba(205,183,142,0.18);
   box-shadow: 0 0 16px rgba(205,183,142,0.25);
 }
-.card__icon svg { width: 22px; height: 22px; color: var(--cyan); }
+.card__icon svg { width: 22px; height: 22px; color: var(--gold); }
 .card__title {
   font-family: var(--font-display); font-size: 1.05rem;
   font-weight: 600; color: #fff; margin-bottom: 10px;
@@ -941,7 +941,7 @@ a.card--project {
 }
 .card__overlay {
   position: absolute; inset: 0;
-  background: var(--cyan); opacity: 0;
+  background: var(--gold); opacity: 0;
   mix-blend-mode: overlay;
   transition: opacity var(--transition);
   z-index: 2;
@@ -991,8 +991,8 @@ a.card--project {
   background: rgba(255,255,255,0.04); border: 1px solid var(--border);
   color: var(--text-muted);
 }
-.tag--cyan {
-  background: var(--cyan-dim); border-color: rgba(205,183,142,0.2); color: var(--cyan);
+.tag--gold {
+  background: var(--gold-dim); border-color: rgba(205,183,142,0.2); color: var(--gold);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1011,7 +1011,7 @@ a.card--project {
 .skill-item__pct { font-size: 12px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
 .skill-bar { height: 3px; background: rgba(255,255,255,0.05); border-radius: 2px; overflow: hidden; }
 .skill-bar__fill {
-  height: 100%; width: 0%; background: var(--cyan); border-radius: 2px;
+  height: 100%; width: 0%; background: var(--gold); border-radius: 2px;
   transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
   box-shadow: 0 0 10px rgba(205,183,142,0.6);
 }
@@ -1049,10 +1049,10 @@ a.card--project {
 .footer__bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
 .footer__copy { font-size: 13px; color: var(--text-muted); }
 .footer__privacy { font-size: 12px; color: rgba(255,255,255,0.2); transition: color var(--transition); }
-.footer__privacy:hover { color: var(--cyan); }
+.footer__privacy:hover { color: var(--gold); }
 .footer__links { display: flex; gap: 24px; }
 .footer__links a { font-size: 13px; color: var(--text-muted); transition: color var(--transition); }
-.footer__links a:hover { color: var(--cyan); }
+.footer__links a:hover { color: var(--gold); }
 
 /* ═══════════════════════════════════════════════════════════════
    REVEAL ANIMATIONS
@@ -1077,7 +1077,7 @@ a.card--project {
    TYPEWRITER CURSOR
 ═══════════════════════════════════════════════════════════════ */
 .type-cursor {
-  color: var(--cyan);
+  color: var(--gold);
   font-weight: 300;
   animation: blink 0.75s step-end infinite;
   margin-left: 1px;
@@ -1129,7 +1129,7 @@ a.card--project {
   font-family: var(--font-display);
   font-size: 5rem;
   line-height: 0.8;
-  color: var(--cyan);
+  color: var(--gold);
   opacity: 0.4;
   margin-bottom: 16px;
   font-weight: 700;
@@ -1152,7 +1152,7 @@ a.card--project {
   border-radius: 50%;
   background: linear-gradient(135deg, rgba(205,183,142,0.15) 0%, rgba(205,183,142,0.05) 100%);
   border: 1.5px solid rgba(205,183,142,0.35);
-  color: var(--cyan);
+  color: var(--gold);
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.25rem;
@@ -1197,8 +1197,8 @@ a.card--project {
 }
 .testimonials__btn:hover {
   border-color: var(--border-hover);
-  color: var(--cyan);
-  box-shadow: var(--cyan-glow);
+  color: var(--gold);
+  box-shadow: var(--gold-glow);
 }
 
 /* Paginación numerada — 01 — 02 — 03 */
@@ -1251,7 +1251,7 @@ a.card--project {
    TEXTO GRADIENTE ANIMADO
 ═══════════════════════════════════════════════════════════════ */
 .gradient-text {
-  background: linear-gradient(90deg, var(--cyan) 0%, #fff 40%, var(--cyan) 80%);
+  background: linear-gradient(90deg, var(--gold) 0%, #fff 40%, var(--gold) 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1325,7 +1325,7 @@ input, textarea {
   top: 0; left: 0;
   height: 2px;
   width: 0%;
-  background: linear-gradient(90deg, var(--cyan), rgba(205,183,142,0.4));
+  background: linear-gradient(90deg, var(--gold), rgba(205,183,142,0.4));
   z-index: 9999;
   transition: width 0.1s linear;
   box-shadow: 0 0 8px rgba(205,183,142,0.6);
@@ -1335,7 +1335,7 @@ input, textarea {
    GRADIENTE ANIMADO EN SUBTÍTULO HERO
 ═══════════════════════════════════════════════════════════════ */
 .hero__sub .hero__amp {
-  background: linear-gradient(90deg, #888, var(--cyan), #888);
+  background: linear-gradient(90deg, #888, var(--gold), #888);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1387,13 +1387,13 @@ input, textarea {
 .tech-chip svg {
   width: 16px;
   height: 16px;
-  color: var(--cyan);
+  color: var(--gold);
   flex-shrink: 0;
 }
 .tech-chip:hover {
   border-color: var(--border-hover);
-  color: var(--cyan);
-  background: var(--cyan-dim);
+  color: var(--gold);
+  background: var(--gold-dim);
   box-shadow: 0 0 12px rgba(205,183,142,0.15);
 }
 
@@ -1412,7 +1412,7 @@ input, textarea {
   padding-top: 1rem;
 }
 .nav__drawer-email:hover {
-  color: var(--cyan);
+  color: var(--gold);
 }
 
 /* ── LOGROS GRID ── */
@@ -1437,7 +1437,7 @@ input, textarea {
 }
 .logro-card:hover {
   border-color: var(--border-hover);
-  box-shadow: var(--cyan-glow);
+  box-shadow: var(--gold-glow);
 }
 .logro-numero {
   font-family: var(--hv2-font-display);
@@ -1517,7 +1517,7 @@ input, textarea {
 }
 .form-input::placeholder { color: rgba(255,255,255,0.2); }
 .form-input:focus {
-  border-color: var(--cyan);
+  border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(205,183,142,0.08);
 }
 .form-input--error {
@@ -1555,7 +1555,7 @@ input, textarea {
 }
 .form-feedback--success {
   display: flex;
-  color: var(--cyan);
+  color: var(--gold);
   background: rgba(205,183,142,0.08);
   border: 1px solid rgba(205,183,142,0.25);
 }
@@ -1607,7 +1607,7 @@ input, textarea {
   padding: 0.875rem 1.1rem;
   border: 1px solid rgba(205,183,142,0.3);
   border-radius: 4px;
-  color: var(--cyan);
+  color: var(--gold);
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -1617,7 +1617,7 @@ input, textarea {
 }
 .calendly-link:hover {
   background: rgba(205,183,142,0.06);
-  border-color: var(--cyan);
+  border-color: var(--gold);
 }
 .contact-aside__note {
   font-size: 0.75rem;
@@ -1629,7 +1629,7 @@ input, textarea {
   color: rgba(205,183,142,0.7);
   text-decoration: none;
 }
-.contact-aside__note a:hover { color: var(--cyan); }
+.contact-aside__note a:hover { color: var(--gold); }
 
 /* ── TESTIMONIOS MEJORADOS ── */
 .testimonial-card__info {
@@ -1645,7 +1645,7 @@ input, textarea {
   margin-top: 1px;
 }
 .testimonial-card__empresa {
-  color: var(--cyan);
+  color: var(--gold);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
@@ -1744,7 +1744,7 @@ input, textarea {
 .faq-item__question::-webkit-details-marker { display: none; }
 
 .faq-item[open] .faq-item__question {
-  color: var(--cyan);
+  color: var(--gold);
 }
 
 .faq-item__icon {
@@ -1779,11 +1779,11 @@ input, textarea {
 }
 
 .faq-item[open] .faq-item__icon {
-  border-color: var(--cyan);
+  border-color: var(--gold);
 }
 
 .faq-item[open] .faq-item__icon::before {
-  background: var(--cyan);
+  background: var(--gold);
 }
 
 .faq-item[open] .faq-item__icon::after {
@@ -1810,7 +1810,7 @@ input, textarea {
    the empty space, a comet of light orbiting behind everything.
 
    Palette: warm black + bone white + one muted gold (the hero's voice).
-   Cyan (var(--cyan), already defined above) is used in exactly two
+   Gold (var(--gold), already defined above) is used in exactly two
    places — the orbital glint and a minority of the particles — as the
    single thread tying this hero back to the rest of the site.
 
@@ -1914,7 +1914,7 @@ input, textarea {
    Generated in hero.js: a mix of soft drifting "ash" motes and small
    twinkling "stars", scattered mostly across the right side of the
    scene (the dark space around the portrait that read as empty). Most
-   particles are warm/neutral; a minority are tinted with var(--cyan) —
+   particles are warm/neutral; a minority are tinted with var(--gold) —
    the one place outside the orbital glint this hero borrows the site's
    accent colour.
    ────────────────────────────────────────────────────────────────── */
@@ -1946,8 +1946,8 @@ input, textarea {
   animation: hv2Twinkle var(--dur) ease-in-out infinite;
   animation-delay: var(--delay);
 }
-.hv2__particle--star-cyan {
-  background: var(--cyan);
+.hv2__particle--star-gold {
+  background: var(--gold);
   box-shadow: 0 0 7px rgba(205,183,142,0.65);
   animation: hv2Twinkle var(--dur) ease-in-out infinite;
   animation-delay: var(--delay);
@@ -1967,9 +1967,9 @@ input, textarea {
    LAYER 03 — GEOMETRIC RINGS + ORBITAL GLINT
    Three hairline circles centred on the portrait's head. The dashed
    ring slowly rotates (90s/rev — alive, never a spinner). A small
-   cyan "comet" — bright core + two trailing glows, gently offset along
+   gold "comet" — bright core + two trailing glows, gently offset along
    the same path — travels the dashed ring continuously. This is the
-   ONE deliberate cyan accent besides the particles: a satellite of
+   ONE deliberate gold accent besides the particles: a satellite of
    light, not a neon glow.
    ────────────────────────────────────────────────────────────────── */
 .hv2__rings {
@@ -2000,7 +2000,7 @@ input, textarea {
 .hv2__glint-tail  { fill: rgba(205,183,142,0.10); filter: blur(4px); }
 .hv2__glint-mid   { fill: rgba(205,183,142,0.35); filter: blur(1.5px); }
 .hv2__glint-core  {
-  fill: var(--cyan);
+  fill: var(--gold);
   filter: drop-shadow(0 0 4px rgba(205,183,142,0.9)) drop-shadow(0 0 12px rgba(205,183,142,0.5));
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2374,10 +2374,10 @@ input, textarea {
    the homepage (Servicios → Footer).
 
    Los tokens de color ahora viven en UN solo lugar: el :root del inicio
-   del archivo, donde los nombres heredados (--bg, --text, --cyan, …) son
+   del archivo, donde los nombres heredados (--bg, --text, --gold, …) son
    alias de los --hv2-*. Lo que sigue son las reglas de componente que
    adoptan Fraunces para numerales/comillas/títulos y el dorado como
-   acento directo donde antes se usaba var(--cyan) suelto. */
+   acento directo donde antes se usaba var(--gold) suelto. */
 
 
 /* Eyebrows — Space Grotesk, wide gold tracking, matches .hv2__kicker */
@@ -2397,7 +2397,7 @@ input, textarea {
   letter-spacing: -0.01em;
 }
 
-/* The pulsing "." at the end of several titles — gold instead of cyan */
+/* The pulsing "." at the end of several titles — gold instead of gold */
 .hero__dot { color: var(--hv2-gold); }
 @keyframes dotPulse {
   0%,100% { text-shadow: 0 0 6px rgba(205,183,142,0.6), 0 0 20px rgba(205,183,142,0.3); transform: scale(1); opacity: 1; }
@@ -2414,8 +2414,8 @@ input, textarea {
   font-weight: 600;
   border-radius: 999px;
 }
-.btn--cyan { background: var(--hv2-gold); color: #1a1611; }
-.btn--cyan:hover { background: #e3d2b3; box-shadow: var(--cyan-glow); transform: translateY(-2px); }
+.btn--gold { background: var(--hv2-gold); color: #1a1611; }
+.btn--gold:hover { background: #e3d2b3; box-shadow: var(--gold-glow); transform: translateY(-2px); }
 .btn--ghost:hover { color: var(--hv2-gold); }
 
 /* ── Display headings — Fraunces across cards, projects, testimonials,
@@ -2439,7 +2439,7 @@ input, textarea {
 
 /* ── Project cards */
 .card__overlay { background: var(--hv2-gold); }
-.tag--cyan { border-color: rgba(205,183,142,0.25); color: var(--hv2-gold); }
+.tag--gold { border-color: rgba(205,183,142,0.25); color: var(--hv2-gold); }
 .card__thumb::before {
   font-family: var(--hv2-font-ui);
   letter-spacing: 0.14em;
@@ -3537,8 +3537,8 @@ input, textarea {
   background: var(--hv2-gold);
   box-shadow: 0 0 6px rgba(205,183,142,0.55);
 }
-.faq-section__star--cyan {
-  background: var(--cyan);
+.faq-section__star--gold {
+  background: var(--gold);
   box-shadow: 0 0 6px rgba(205,183,142,0.5);
 }
 
