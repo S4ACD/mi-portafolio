@@ -71,7 +71,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   function goTo(index) {
     current = (index + total) % total;
     const card = track.children[0];
-    const cardWidth = card.offsetWidth + 24;
+    const cardWidth = card.offsetWidth;
     track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
     dots.forEach((d, i) => d.classList.toggle('testimonials__dot--active', i === current));
   }
