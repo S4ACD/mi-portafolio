@@ -206,5 +206,111 @@
   "tw.cap.05.title": "Estrategia digital",
   "tw.cap.05.desc": "Meta y Google Ads configurados con la misma lógica de marca, no por separado.",
   "tw.cta.title": "¿Tu proyecto es el siguiente caso de éxito",
-  "tw.cta.sub": "Trabajo con marcas en Colombia y remoto. Cuéntame qué necesitas — respondo en menos de 24 horas."
+  "tw.cta.sub": "Trabajo con marcas en Colombia y remoto. Cuéntame qué necesitas — respondo en menos de 24 horas.",
+  "contact.select.service": [
+    {
+      "value": "",
+      "label": "Selecciona un servicio"
+    },
+    {
+      "value": "Diseño y desarrollo web",
+      "label": "Diseño y desarrollo web"
+    },
+    {
+      "value": "Identidad visual / Branding",
+      "label": "Identidad visual / Branding"
+    },
+    {
+      "value": "Diseño gráfico / Social media",
+      "label": "Diseño gráfico / Social media"
+    },
+    {
+      "value": "Fotografía de producto",
+      "label": "Fotografía de producto"
+    },
+    {
+      "value": "Pauta digital (Meta / Google Ads)",
+      "label": "Pauta digital (Meta / Google Ads)"
+    },
+    {
+      "value": "Paquete integral",
+      "label": "Paquete integral"
+    },
+    {
+      "value": "Otro / No sé aún",
+      "label": "Otro / No sé aún"
+    }
+  ],
+  "contact.select.budget": [
+    {
+      "value": "",
+      "label": "Selecciona un rango"
+    },
+    {
+      "value": "Menos de $500 USD",
+      "label": "Menos de $500 USD"
+    },
+    {
+      "value": "$500 – $1,000 USD",
+      "label": "$500 – $1,000 USD"
+    },
+    {
+      "value": "$1,000 – $2,500 USD",
+      "label": "$1,000 – $2,500 USD"
+    },
+    {
+      "value": "$2,500 – $5,000 USD",
+      "label": "$2,500 – $5,000 USD"
+    },
+    {
+      "value": "Más de $5,000 USD",
+      "label": "Más de $5,000 USD"
+    },
+    {
+      "value": "Aún no lo tengo claro",
+      "label": "Aún no lo tengo claro"
+    }
+  ],
+  "orb.back": "Volver a proyectos",
+  "orb.tag1": "Diseño web",
+  "orb.tag2": "SEO técnico",
+  "orb.diagnosis": "PageSpeed · antes / después",
+  "orb.hero.sub": "Un catálogo de +3.000 productos dentales que tardaba 14 segundos en cargar y se rompía en el celular. Clientes que se iban antes de ver el primer precio. Lo reconstruí desde cero —sin perder un producto ni una posición en Google— y pasó de un PageSpeed de 40 a 97.",
+  "orb.live": "Ver sitio en vivo",
+  "orb.live.short": "Ver en vivo",
+  "orb.metric1": "PageSpeed Score — Core Web Vitals aprobado en un mes",
+  "orb.metric2": "Lo que tardaba en cargar, antes",
+  "orb.metric3": "Productos migrados sin perder SEO",
+  "orb.metric4": "Responsive — antes no servía en móvil",
+  "orb.problem.eyebrow": "EL PROBLEMA REAL",
+  "orb.problem.title": "Un sitio lento no es un problema técnico. Es un problema <em>de ventas</em>.",
+  "orb.problem.p1": "El sitio anterior estaba hecho en Divi: arrastraba más de un megabyte de código que nadie usaba en cada visita, no estaba pensado para móvil y, siendo honestos, se veía mal —fondo plano, fotos sueltas, texto sin jerarquía—. Tardaba 14 segundos en abrir.",
+  "orb.problem.pull": "Cada segundo de espera y cada pantalla rota en un celular era un cliente que cerraba la pestaña.",
+  "orb.problem.p2": "Eso pasaba en un catálogo de +3.000 productos donde la gente llega buscando algo puntual y con prisa. Para una empresa que vende online, eso no se ve en el diseño: se ve en las ventas que no entran.",
+  "orb.problem.p3": "Divi no se podía \"optimizar\": el peso estaba en el propio sistema. Había que sacarlo. Reconstruí todo en código limpio sobre WordPress, migré los más de 3.000 productos sin perder el SEO ya posicionado —un error ahí y se caen meses de ranking— y rehíce la experiencia visual para que el sitio por fin transmitiera la seriedad de la empresa.",
+  "orb.info.company.label": "Empresa",
+  "orb.info.role.label": "Mi rol",
+  "orb.info.role.value": "A cargo de todo lo digital · 2+ años",
+  "orb.info.category.label": "Categoría",
+  "orb.info.category.value": "Insumos dentales · Catálogo +3.000 productos",
+  "orb.info.stack.label": "Stack",
+  "orb.info.deliverables.label": "Entregables",
+  "orb.info.deliverables.value": "Rediseño completo, performance, SEO técnico, responsive",
+  "orb.proof.eyebrow": "LA PRUEBA",
+  "orb.proof.title": "De \"Desaprobado\" a \"Aprobado\" en un mes<span class=\"hero__dot\">.</span>",
+  "orb.proof.text": "No es mi opinión: es el propio reporte de Core Web Vitals (Métricas Web Esenciales) de Google. En un mes, el sitio pasó de \"Desaprobado\" a \"Aprobado\", y el PageSpeed subió de 40 a 97. En la práctica: 14 segundos de carga convertidos en una apertura casi instantánea.",
+  "orb.proof.before.label": "Antes",
+  "orb.proof.before.score": "40 — Desaprobado",
+  "orb.proof.after.label": "Después",
+  "orb.proof.after.score": "97 — Aprobado",
+  "orb.showcase.title": "Página de inicio",
+  "orb.showcase.text": "Antes: fondo plano, sin jerarquía, lento. Ahora: una home coherente y ordenada que se ve profesional en cualquier pantalla y carga al instante. La credibilidad de una empresa también se diseña.",
+  "orb.gallery1.title": "Página de marca",
+  "orb.gallery1.text": "Eighteeth es una de las marcas que distribuye Orbidental. En vez de una página genérica más, le construí una experiencia dedicada dentro del sitio —la prueba de que esto no sale de una plantilla, sino que se diseña marca por marca.",
+  "orb.gallery2.title": "El prototipo de la futura tienda",
+  "orb.prototype.link": "Ver el prototipo",
+  "orb.gallery2.text": "Las páginas de producto actuales son básicas —fondo blanco, una foto, texto sin orden—. El e-commerce real está hoy en desarrollo. Para definir hacia dónde va y alinear a la dirección, diseñé este prototipo de cómo se verá y funcionará la página de producto: coherente, clara y pensada para que el cliente entienda lo que compra y decida con confianza. Es el siguiente paso real de Orbidental — y soy quien lo está construyendo.",
+  "orb.cta.title": "¿Tu sitio te parece rápido",
+  "orb.cta.sub": "Ábrelo en un celular con datos, fuera de tu casa. Ahí es donde Orbidental perdía clientes sin enterarse —y donde los pierde la mayoría de las tiendas que \"se ven bien\". Si tienes dudas, probablemente ya los estás perdiendo. Cuéntame qué vendes y en menos de 24 horas te digo qué te está costando tu sitio actual.",
+  "orb.cta.more": "Ver más proyectos"
 }
