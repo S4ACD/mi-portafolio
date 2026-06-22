@@ -345,5 +345,9 @@
   "pd.solved.03.title": "English copy with genuine authority",
   "pd.solved.03.desc": "No generic \"we help brands grow\". The copy was written with a serious agency voice: specific, direct, with honest admissions of limits (\"we'll tell you honestly whether we're the right fit\") — that builds more trust than any results claim.",
   "pd.cta.title": "Does your brand need an identity that doesn't feel generic",
-  "pd.cta.sub": "Tell me about your project. I reply within 24 hours."
+  "pd.cta.sub": "Tell me about your project. I reply within 24 hours.",
+  "pd.info.client.value": "Pulse Digital (concept)",
+  "pd.token.violet": "<strong>Violet</strong><br/>#5b3df0 — primary accent",
+  "pd.token.lime": "<strong>Lime</strong><br/>#c8f750 — secondary accent, high contrast",
+  "pd.token.ink": "<strong>Ink</strong><br/>#14141f — text and CTA background"
 }
