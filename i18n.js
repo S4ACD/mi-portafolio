@@ -44,6 +44,24 @@
       if (dict[key] !== undefined) el.innerHTML = dict[key];
     });
 
+    /* Selects: reconstruye opciones desde el JSON */
+    document.querySelectorAll('[data-i18n-select]').forEach(el => {
+      const key = el.getAttribute('data-i18n-select');
+      const opts = dict[key];
+      if (!Array.isArray(opts)) return;
+      const currentVal = el.value;
+      el.innerHTML = '';
+      opts.forEach((opt, i) => {
+        const o = document.createElement('option');
+        o.value = opt.value;
+        o.textContent = opt.label;
+        if (i === 0) { o.disabled = true; o.selected = true; }
+        el.appendChild(o);
+      });
+      // Restore selected value if it still exists
+      if (currentVal) el.value = currentVal;
+    });
+
     /* Atributos: placeholder, aria-label, alt, content */
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
