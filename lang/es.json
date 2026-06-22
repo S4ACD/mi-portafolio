@@ -345,5 +345,9 @@
   "pd.solved.03.title": "Copy en inglés con tono de autoridad real",
   "pd.solved.03.desc": "Nada de \"we help brands grow\" genérico. El copy se escribió con voz de agencia seria: específico, directo, con admisiones de límites (\"we'll tell you honestly whether we're the right fit\") — eso genera más confianza que cualquier claim de resultados.",
   "pd.cta.title": "¿Tu marca necesita una identidad que no se sienta genérica",
-  "pd.cta.sub": "Cuéntame tu proyecto. Respondo en menos de 24 horas."
+  "pd.cta.sub": "Cuéntame tu proyecto. Respondo en menos de 24 horas.",
+  "pd.info.client.value": "Pulse Digital (concepto)",
+  "pd.token.violet": "<strong>Violeta</strong><br/>#5b3df0 — acento principal",
+  "pd.token.lime": "<strong>Lima</strong><br/>#c8f750 — acento secundario, alto contraste",
+  "pd.token.ink": "<strong>Tinta</strong><br/>#14141f — texto y fondo de CTA"
 }
