@@ -24,22 +24,24 @@
             <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" alt="Alexander Caro" class="nav__logo-img">
           </a>
           <ul class="nav__links">
-            <li><a href="/"${isHome ? ' class="nav__link--active"' : ''}>Inicio</a></li>
-            <li><a href="/trabajo/"${isTrabajo ? ' class="nav__link--active"' : ''}>Trabajo</a></li>
-            <li><a href="/servicios/"${isServicios ? ' class="nav__link--active"' : ''}>Servicios</a></li>
-            <li><a href="/sobre-mi/"${isSobreMi ? ' class="nav__link--active"' : ''}>Sobre mí</a></li>
+            <li><a href="/"${isHome ? ' class="nav__link--active"' : ''} data-i18n="nav.home">Inicio</a></li>
+            <li><a href="/trabajo/"${isTrabajo ? ' class="nav__link--active"' : ''} data-i18n="nav.work">Trabajo</a></li>
+            <li><a href="/servicios/"${isServicios ? ' class="nav__link--active"' : ''} data-i18n="nav.services">Servicios</a></li>
+            <li><a href="/sobre-mi/"${isSobreMi ? ' class="nav__link--active"' : ''} data-i18n="nav.about">Sobre mí</a></li>
           </ul>
-          <a href="/#contacto" class="nav__cta">Hablemos</a>
+          <button id="langToggle" class="nav__lang" aria-label="Switch to English" data-current="es">EN</button>
+          <a href="/#contacto" class="nav__cta" data-i18n="nav.cta">Hablemos</a>
           <button id="navBurger" class="nav__burger" aria-label="Menu">
             <span></span><span></span><span></span>
           </button>
         </div>
         <div id="navDrawer" class="nav__drawer">
-          <a href="/" class="nav__drawer-link${isHome ? ' nav__link--active' : ''}">Inicio</a>
-          <a href="/trabajo/" class="nav__drawer-link${isTrabajo ? ' nav__link--active' : ''}">Trabajo</a>
-          <a href="/servicios/" class="nav__drawer-link${isServicios ? ' nav__link--active' : ''}">Servicios</a>
-          <a href="/sobre-mi/" class="nav__drawer-link${isSobreMi ? ' nav__link--active' : ''}">Sobre mí</a>
-          <a href="/#contacto" class="nav__cta">Hablemos</a>
+          <a href="/" class="nav__drawer-link${isHome ? ' nav__link--active' : ''}" data-i18n="nav.home">Inicio</a>
+          <a href="/trabajo/" class="nav__drawer-link${isTrabajo ? ' nav__link--active' : ''}" data-i18n="nav.work">Trabajo</a>
+          <a href="/servicios/" class="nav__drawer-link${isServicios ? ' nav__link--active' : ''}" data-i18n="nav.services">Servicios</a>
+          <a href="/sobre-mi/" class="nav__drawer-link${isSobreMi ? ' nav__link--active' : ''}" data-i18n="nav.about">Sobre mí</a>
+          <button id="langToggle-drawer" class="nav__lang nav__lang--drawer" aria-label="Switch to English" data-current="es">EN</button>
+          <a href="/#contacto" class="nav__cta" data-i18n="nav.cta">Hablemos</a>
           <a href="mailto:hosoyalexander@gmail.com" class="nav__drawer-email">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             hosoyalexander@gmail.com
@@ -150,9 +152,9 @@
         <div class="container">
           <div class="footer__top">
             <div class="footer__meta">
-              <span class="footer__meta-item">\uD83D\uDCCD Bogotá, Colombia — UTC−5</span>
-              <span class="footer__meta-item">\uD83C\uDF10 Español · English</span>
-              <span class="footer__meta-item">\uD83D\uDCBB 100% remoto — Disponible globalmente</span>
+              <span class="footer__meta-item" data-i18n="footer.location">\uD83D\uDCCD Bogotá, Colombia — UTC−5</span>
+              <span class="footer__meta-item" data-i18n="footer.languages">\uD83C\uDF10 Español · English</span>
+              <span class="footer__meta-item" data-i18n="footer.availability">\uD83D\uDCBB 100% remoto — Disponible globalmente</span>
             </div>
             <div class="footer__links">
               <a href="https://www.behance.net/alexandercaro" target="_blank" rel="noopener">Behance</a>
@@ -161,8 +163,8 @@
             </div>
           </div>
           <div class="footer__bottom">
-            <span class="footer__copy">© 2026 Alexander Caro</span>
-            <a href="/privacidad/" class="footer__privacy">Política de privacidad</a>
+            <span class="footer__copy" data-i18n="footer.copy">© 2026 Alexander Caro</span>
+            <a href="/privacidad/" class="footer__privacy" data-i18n="footer.privacy">Política de privacidad</a>
           </div>
         </div>
       </footer>`
