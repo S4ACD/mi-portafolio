@@ -371,7 +371,7 @@ img { display: block; max-width: 100%; }
 .hv2__portrait {
   position: absolute;
   bottom: 0;
-  right: 3%;
+  right: 1%;
   z-index: 6;                     /* detrás de las rocas near */
   width: clamp(280px, 38vw, 520px);
   pointer-events: none;
@@ -387,7 +387,7 @@ img { display: block; max-width: 100%; }
   z-index: 10;
   max-width: 580px;
   padding: 0 24px;
-  margin-left: max(24px, calc((100vw - 1100px) / 2));
+  margin-left: max(48px, calc((100vw - 1240px) / 2));
 }
 
 /* ── Textos del hero ── */
@@ -516,7 +516,7 @@ img { display: block; max-width: 100%; }
   .hv2 {
     align-items: flex-start;      /* en mobile empieza desde arriba */
     flex-direction: column;
-    padding-top: 96px;            /* espacio para el nav */
+    padding-top: 80px;            /* espacio para el nav */
     padding-bottom: 60px;
     min-height: 100svh;
   }
@@ -528,7 +528,7 @@ img { display: block; max-width: 100%; }
     width: clamp(160px, 50vw, 240px);
     margin: 0 auto 8px;
     z-index: 6;
-    order: -1;                    /* va primero visualmente */
+    order: 1;                     /* va al final en mobile */
   }
 
   .hv2__content {
