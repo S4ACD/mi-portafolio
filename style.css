@@ -366,7 +366,7 @@ img { display: block; max-width: 100%; }
 }
 
 .hv2__content {
-  position: relative; z-index: 7;
+  position: relative; z-index: 10;
   max-width: 640px;
   padding: 0 24px;
   margin-left: max(24px, calc((100vw - 1100px) / 2));
@@ -1474,6 +1474,7 @@ body { animation: pageFadeIn 0.4s ease; }
   background: var(--hv2-void-soft);
   border: 1px solid var(--hv2-line);
   border-radius: 10px;
+  box-sizing: border-box;
 }
 .proj-info-card__label {
   font-family: var(--hv2-font-ui);
@@ -1482,6 +1483,10 @@ body { animation: pageFadeIn 0.4s ease; }
 }
 .proj-info-card__value {
   font-size: 0.875rem; font-weight: 500; color: #fff; line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .proj-overview__rail { padding-left: 0; padding-top: 32px; border-top: 1px solid var(--hv2-line); }
+  .proj-info-card { width: 100%; }
 }
 
 /* SHOWCASE / GALLERY */
