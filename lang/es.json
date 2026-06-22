@@ -3,19 +3,16 @@
   "meta.description": "Diseñador web freelance en Bogotá. Creo sitios web profesionales, rápidos y optimizados para empresas en Colombia y Latinoamérica. PageSpeed 97. Consulta gratis.",
   "meta.og.title": "Alexander Caro | Diseñador Web Freelance Bogotá",
   "meta.og.description": "Sitios web profesionales para empresas. Rápidos, optimizados y con resultados reales. PageSpeed 97. Bogotá, Colombia.",
-
   "nav.home": "Inicio",
   "nav.work": "Trabajo",
   "nav.services": "Servicios",
   "nav.about": "Sobre mí",
   "nav.cta": "Hablemos",
-
   "footer.location": "📍 Bogotá, Colombia — UTC−5",
   "footer.languages": "🌐 Español · English",
   "footer.availability": "💻 100% remoto — Disponible globalmente",
   "footer.privacy": "Política de privacidad",
   "footer.copy": "© 2026 Alexander Caro",
-
   "hero.status": "Disponible para proyectos",
   "hero.kicker": "Alexander Caro — Diseñador &amp; Desarrollador",
   "hero.title.line1": "Diseño y código,",
@@ -26,7 +23,6 @@
   "hero.price_signal": "Propuesta clara en 48 h<span class=\"hv2__price-signal-dot\" aria-hidden=\"true\">·</span>Empezamos solo si encaja",
   "hero.scroll": "Desliza para explorar",
   "hero.badge": "Basado en Bogotá · Colombia · Basado en Bogotá · Colombia ·",
-
   "services.eyebrow": "SERVICIOS",
   "services.title": "Diseño y desarrollo que <em>venden</em>.",
   "services.lede": "Diseño, desarrollo y contenido visual — todo en un mismo proceso.",
@@ -36,7 +32,6 @@
   "services.02.text": "Sitios rápidos y a medida — diseñados y programados por la misma persona. Sin plantillas, sin intermediarios. PageSpeed 97 en proyectos reales.",
   "services.03.title": "Contenido y social media",
   "services.03.text": "Piezas visuales para redes que paran el scroll y construyen marca — con una estética pensada, no improvisada.",
-
   "why.eyebrow": "POR QUÉ TRABAJAR CONMIGO",
   "why.title": "La diferencia no es el precio.<br><em>Es la velocidad</em><span class=\"hero__dot\">.</span>",
   "why.lede": "Una agencia tiene tres personas entre tu idea y el resultado: el que vende, el que coordina y el que ejecuta. Cada capa suma tiempo y diluye lo que pediste. Conmigo no hay capas — hablás con quien diseña y programa, y por eso todo se mueve más rápido.",
@@ -53,11 +48,9 @@
   "why.me.04": "Diseño y código los hace la misma persona — nada se pierde",
   "why.me.05": "Pagás el trabajo, no la estructura que lo rodea",
   "why.close": "No es que una agencia esté mal. Es que para la mayoría de proyectos, esa estructura es peso que pagás y tiempo que esperás — sin que el resultado sea mejor.",
-
   "focus.eyebrow": "ENFOQUE",
   "focus.title": "Ideas claras.<br><em>Resultados reales.</em>",
   "focus.lede": "Diseño. Desarrollo. Contenido.<br>Todo en una sola persona.",
-
   "process.eyebrow": "CÓMO TRABAJO",
   "process.title": "Del brief al resultado<span class=\"hero__dot\">.</span>",
   "process.01.title": "Hablamos",
@@ -68,7 +61,6 @@
   "process.03.text": "No desaparezco dos semanas y aparezco con algo terminado. Trabajo en entregas parciales para que veas el avance real, puedas opinar a tiempo y el resultado final no sea una sorpresa.",
   "process.04.title": "Listo para usar",
   "process.04.text": "Archivos organizados, código limpio y todo lo que necesitas para tomar el proyecto desde ahí. Sin dependencias de mi parte. Y si en los primeros 7 días necesitas un ajuste, lo resolvemos sin costo extra.",
-
   "work.eyebrow": "TRABAJO SELECCIONADO",
   "work.title": "Proyectos que <em>hablan</em> por sí solos.",
   "work.lede": "Diseño, estrategia y ejecución visual para marcas que quieren destacar.",
@@ -86,7 +78,6 @@
   "work.cta.text": "Cada proyecto es único,<br>pero el objetivo es el mismo:",
   "work.cta.highlight": "Impactar. Conectar. Convertir.",
   "work.cta.link": "Ver todos los proyectos",
-
   "about.eyebrow": "SOBRE MÍ",
   "about.title": "La persona<br><em>detrás</em> del trabajo<span class=\"hero__dot\">.</span>",
   "about.bio.01": "Si buscas alguien que <strong class=\"about__hl\">diseñe</strong>, desarrolle <em>y</em> entienda la estrategia detrás — <strong class=\"about__hl\">sin pasarte entre equipos</strong> ni traducir lo que necesitas — estás en el lugar correcto.",
@@ -99,7 +90,6 @@
   "about.stat.03.desc": "Identidades visuales construidas desde cero",
   "about.stat.04.label": "Proyectos entregados",
   "about.stat.04.desc": "Sin retrasos, sin intermediarios, directo con el cliente",
-
   "testimonials.eyebrow": "CLIENTES",
   "testimonials.title": "Lo que dicen<br><em>sobre</em> mi trabajo<span class=\"hero__dot\">.</span>",
   "testimonials.note": "Colaboraciones que se convierten en relaciones a largo plazo.",
@@ -118,7 +108,6 @@
   "testimonials.03.role": "Fundador · <a href=\"/trabajo/rebel-street/\" class=\"testimonial-card__empresa\">Rebel Street</a>",
   "testimonials.03.company": "Moda · Streetwear urbano · Bogotá",
   "trusted.label": "Marcas que<br>han confiado",
-
   "faq.eyebrow": "PREGUNTAS FRECUENTES",
   "faq.title": "Lo que siempre<br><em>preguntan</em><span class=\"hero__dot\">.</span>",
   "faq.lede": "Respuestas claras para que tomes decisiones seguras y trabajemos con total transparencia.",
@@ -134,7 +123,6 @@
   "faq.05.a": "Sí, siempre. Antes de arrancar cualquier proyecto firmamos un acuerdo que define el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino.",
   "faq.06.q": "¿Qué pasa si necesito cambios después de la entrega?",
   "faq.06.a": "Los cambios menores dentro del alcance original no tienen costo adicional si los pides dentro de los primeros 7 días. Después de eso, o si son cambios de dirección grandes, los cotizamos por separado. Siempre con precio claro antes de hacer cualquier cosa.",
-
   "contact.eyebrow": "CONTACTO",
   "contact.title": "Hablemos de tu proyecto<span class=\"hero__dot\">.</span>",
   "contact.sub": "Cada semana que esperas, tu competencia ya está online. Cuéntame qué necesitas — respondo en menos de 24 horas.",
@@ -160,9 +148,127 @@
   "contact.calendly": "Agenda una llamada de 20 min →",
   "contact.email.note": "También puedes escribirme directamente a",
   "contact.form.subject": "Nuevo mensaje desde tu portafolio — alexandercaro.com",
-
   "cta.title": "¿Tienes un proyecto en mente<span class=\"hero__dot\">?</span>",
   "cta.sub": "El mejor momento para arreglar tu presencia digital fue ayer. El segundo mejor es hoy. Respondo en menos de 24 horas.",
   "cta.whatsapp": "Escríbeme por WhatsApp",
-  "cta.work": "Ver todos los proyectos"
+  "cta.work": "Ver todos los proyectos",
+  "tw.back": "Volver al inicio",
+  "tw.eyebrow": "PORTAFOLIO",
+  "tw.hero.line1": "Cada proyecto parte",
+  "tw.hero.line2": "de un ",
+  "tw.hero.accent": "problema real",
+  "tw.hero.sub": "Cada marca de esta página perdía algo — ventas, reconocimiento, confianza — antes de que yo entrara. Abajo, lo que pasó después.",
+  "tw.stat1.label": "PageSpeed, Orbidental",
+  "tw.stat2.label": "productos en un catálogo B2B",
+  "tw.stat3.label": "intermediarios entre tú y el código",
+  "tw.featured.flag": "Caso destacado",
+  "tw.panel.eyebrow": "PageSpeed Insights · medido",
+  "tw.panel.before": "antes",
+  "tw.panel.after": "después",
+  "tw.panel.foot1": "<strong>Divi</strong> → código a mano",
+  "tw.panel.foot2": "<strong>4.000</strong> productos",
+  "tw.orbidental.year": "2024 — Plataforma B2B",
+  "tw.orbidental.lead": "Un distribuidor de insumos dentales evalúa a su proveedor en segundos. Si la web carga lenta y se rompe en el celular, asume que la operación entera es así — y se va con la competencia.",
+  "tw.orbidental.metric1": "productos fotografiados uno por uno",
+  "tw.orbidental.metric2": "pérdida de SEO o contenido al migrar",
+  "tw.orbidental.detail": "Migré una web pesada en Divi a código limpio, conservando el posicionamiento ya ganado. Ahora conecto el catálogo con su sistema de inventario por API — integración a código, no plugin.",
+  "tw.cta.case": "Ver el caso completo",
+  "tw.pulse.year": "2026 — Web",
+  "tw.pulse.problem": "<strong>El reto:</strong> probar que no repito un solo estilo. Marca ficticia, código y despliegue 100% reales.",
+  "tw.pulse.solution": "<strong>La decisión:</strong> otro idioma, otra paleta, otra tipografía — sin frameworks ni dependencias. Vanilla, en vivo.",
+  "tw.acelerarte.year": "2026 — Diseño deportivo",
+  "tw.acelerarte.problem": "<strong>El reto:</strong> el motociclismo se vive intenso, pero su contenido casi siempre se ve genérico.",
+  "tw.acelerarte.solution": "<strong>La decisión:</strong> mi marca propia de flyers deportivos — estética de competición que pilotos reconocidos repostean.",
+  "tw.acelerarte.result": "visitas en 28 días",
+  "tw.fueggo.year": "2024 — Branding",
+  "tw.fueggo.problem": "<strong>El reto:</strong> la marca se veía distinta en el local, el empaque y el uniforme — nada amarraba.",
+  "tw.fueggo.solution": "<strong>La decisión:</strong> un sistema —logo, paleta, tipografía— aplicado a piezas reales listas para imprimir.",
+  "tw.fueggo.result": "listo para producción",
+  "tw.jungla.year": "2024 — Branding",
+  "tw.jungla.problem": "<strong>El reto:</strong> una propuesta nocturna intensa —DJs con máscaras, estética selvática— sin identidad a la altura.",
+  "tw.jungla.solution": "<strong>La decisión:</strong> un sistema que pega igual de fuerte en flyer, fachada y uniforme.",
+  "tw.jungla.result": "sistema, toda la experiencia",
+  "tw.rebel.year": "2024 — Branding",
+  "tw.rebel.problem": "<strong>El reto:</strong> en un mercado de streetwear saturado, reconocerse al instante o desaparecer.",
+  "tw.rebel.solution": "<strong>La decisión:</strong> sistema completo, de logo a empaque, pensado para que cada pieza sea inconfundible.",
+  "tw.rebel.result": "reconocimiento instantáneo",
+  "tw.cap.eyebrow": "POR QUÉ YO",
+  "tw.cap.title": "Cada proyecto pasa por una sola persona",
+  "tw.cap.sub": "No coordinas a un diseñador, un desarrollador y un especialista en SEO. Hablas conmigo y el proyecto avanza sin fricción entre fases. Los casos de arriba son una selección — esto es el alcance completo.",
+  "tw.cap.01.title": "Diseño de marca",
+  "tw.cap.01.desc": "Identidad visual completa: logo, paleta, tipografía y manual de aplicación.",
+  "tw.cap.02.title": "Desarrollo frontend",
+  "tw.cap.02.desc": "Código limpio, sin frameworks innecesarios. Rápido de cargar, fácil de mantener.",
+  "tw.cap.03.title": "SEO técnico",
+  "tw.cap.03.desc": "Estructura, velocidad y datos estructurados pensados desde el primer commit.",
+  "tw.cap.04.title": "Fotografía de producto",
+  "tw.cap.04.desc": "Catálogos completos, listos para e-commerce y redes, sin depender de terceros.",
+  "tw.cap.05.title": "Estrategia digital",
+  "tw.cap.05.desc": "Meta y Google Ads configurados con la misma lógica de marca, no por separado.",
+  "tw.cta.title": "¿Tu proyecto es el siguiente caso de éxito",
+  "tw.cta.sub": "Trabajo con marcas en Colombia y remoto. Cuéntame qué necesitas — respondo en menos de 24 horas.",
+  "contact.select.service": [
+    {
+      "value": "",
+      "label": "Selecciona un servicio"
+    },
+    {
+      "value": "Diseño y desarrollo web",
+      "label": "Diseño y desarrollo web"
+    },
+    {
+      "value": "Identidad visual / Branding",
+      "label": "Identidad visual / Branding"
+    },
+    {
+      "value": "Diseño gráfico / Social media",
+      "label": "Diseño gráfico / Social media"
+    },
+    {
+      "value": "Fotografía de producto",
+      "label": "Fotografía de producto"
+    },
+    {
+      "value": "Pauta digital (Meta / Google Ads)",
+      "label": "Pauta digital (Meta / Google Ads)"
+    },
+    {
+      "value": "Paquete integral",
+      "label": "Paquete integral"
+    },
+    {
+      "value": "Otro / No sé aún",
+      "label": "Otro / No sé aún"
+    }
+  ],
+  "contact.select.budget": [
+    {
+      "value": "",
+      "label": "Selecciona un rango"
+    },
+    {
+      "value": "Menos de $500 USD",
+      "label": "Menos de $500 USD"
+    },
+    {
+      "value": "$500 – $1,000 USD",
+      "label": "$500 – $1,000 USD"
+    },
+    {
+      "value": "$1,000 – $2,500 USD",
+      "label": "$1,000 – $2,500 USD"
+    },
+    {
+      "value": "$2,500 – $5,000 USD",
+      "label": "$2,500 – $5,000 USD"
+    },
+    {
+      "value": "Más de $5,000 USD",
+      "label": "Más de $5,000 USD"
+    },
+    {
+      "value": "Aún no lo tengo claro",
+      "label": "Aún no lo tengo claro"
+    }
+  ]
 }
