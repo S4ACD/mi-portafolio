@@ -1,353 +1,765 @@
-{
-  "meta.title": "Alexander Caro | Diseñador Web Freelance Bogotá — Sitios Web Profesionales",
-  "meta.description": "Diseñador web freelance en Bogotá. Creo sitios web profesionales, rápidos y optimizados para empresas en Colombia y Latinoamérica. PageSpeed 97. Consulta gratis.",
-  "meta.og.title": "Alexander Caro | Diseñador Web Freelance Bogotá",
-  "meta.og.description": "Sitios web profesionales para empresas. Rápidos, optimizados y con resultados reales. PageSpeed 97. Bogotá, Colombia.",
-  "nav.home": "Inicio",
-  "nav.work": "Trabajo",
-  "nav.services": "Servicios",
-  "nav.about": "Sobre mí",
-  "nav.cta": "Hablemos",
-  "footer.location": "📍 Bogotá, Colombia — UTC−5",
-  "footer.languages": "🌐 Español · English",
-  "footer.availability": "💻 100% remoto — Disponible globalmente",
-  "footer.privacy": "Política de privacidad",
-  "footer.copy": "© 2026 Alexander Caro",
-  "hero.status": "Disponible para proyectos",
-  "hero.kicker": "Alexander Caro — Diseñador &amp; Desarrollador",
-  "hero.title.line1": "Diseño y código,",
-  "hero.title.line2": "de una sola mano.",
-  "hero.desc": "Diseño gráfico, contenido, diseño y desarrollo web — todo lo visual y técnico de tu marca, en una sola persona. Sin intermediarios, con resultados que conectan, convierten y duran.",
-  "hero.btn.work": "Ver trabajo seleccionado",
-  "hero.btn.about": "Conóceme",
-  "hero.price_signal": "Propuesta clara en 48 h<span class=\"hv2__price-signal-dot\" aria-hidden=\"true\">·</span>Empezamos solo si encaja",
-  "hero.scroll": "Desliza para explorar",
-  "hero.badge": "Basado en Bogotá · Colombia · Basado en Bogotá · Colombia ·",
-  "services.eyebrow": "SERVICIOS",
-  "services.title": "Diseño y desarrollo que <em>venden</em>.",
-  "services.lede": "Diseño, desarrollo y contenido visual — todo en un mismo proceso.",
-  "services.01.title": "Identidad y diseño gráfico",
-  "services.01.text": "Logo, paleta y sistema visual completo. Una marca que se reconoce y se siente coherente en cada pieza.",
-  "services.02.title": "Diseño y desarrollo web",
-  "services.02.text": "Sitios rápidos y a medida — diseñados y programados por la misma persona. Sin plantillas, sin intermediarios. PageSpeed 97 en proyectos reales.",
-  "services.03.title": "Contenido y social media",
-  "services.03.text": "Piezas visuales para redes que paran el scroll y construyen marca — con una estética pensada, no improvisada.",
-  "why.eyebrow": "POR QUÉ TRABAJAR CONMIGO",
-  "why.title": "La diferencia no es el precio.<br><em>Es la velocidad</em><span class=\"hero__dot\">.</span>",
-  "why.lede": "Una agencia tiene tres personas entre tu idea y el resultado: el que vende, el que coordina y el que ejecuta. Cada capa suma tiempo y diluye lo que pediste. Conmigo no hay capas — hablás con quien diseña y programa, y por eso todo se mueve más rápido.",
-  "why.them.tag": "Una agencia",
-  "why.them.01": "Hablás con un vendedor; ejecuta alguien que no conociste",
-  "why.them.02": "Tu mensaje pasa por 3 personas antes de volverse trabajo",
-  "why.them.03": "Cambios y revisiones tardan días en coordinarse",
-  "why.them.04": "El diseño lo hace un equipo, el código otro — y se pierde en el traspaso",
-  "why.them.05": "Pagás también la estructura: oficina, managers, comisiones",
-  "why.me.tag": "Conmigo",
-  "why.me.01": "Hablás directo con quien diseña y programa tu proyecto",
-  "why.me.02": "Lo que pedís llega sin intermediarios que lo diluyan",
-  "why.me.03": "Un cambio se resuelve el mismo día, no la próxima semana",
-  "why.me.04": "Diseño y código los hace la misma persona — nada se pierde",
-  "why.me.05": "Pagás el trabajo, no la estructura que lo rodea",
-  "why.close": "No es que una agencia esté mal. Es que para la mayoría de proyectos, esa estructura es peso que pagás y tiempo que esperás — sin que el resultado sea mejor.",
-  "focus.eyebrow": "ENFOQUE",
-  "focus.title": "Ideas claras.<br><em>Resultados reales.</em>",
-  "focus.lede": "Diseño. Desarrollo. Contenido.<br>Todo en una sola persona.",
-  "process.eyebrow": "CÓMO TRABAJO",
-  "process.title": "Del brief al resultado<span class=\"hero__dot\">.</span>",
-  "process.01.title": "Hablamos",
-  "process.01.text": "Una llamada de 20 minutos o un formulario corto. Me cuentas qué necesitas, quién es tu cliente y qué quieres lograr. Sin decks, sin reuniones eternas — con eso es suficiente para entender si somos un buen match.",
-  "process.02.title": "Propuesta en 48 h",
-  "process.02.text": "En menos de dos días te llega un documento con el alcance exacto: qué incluye, qué no incluye, tiempos de entrega y precio. Lo revisamos juntos y ajustamos lo que haga falta antes de firmar.",
-  "process.03.title": "Producción con visibilidad",
-  "process.03.text": "No desaparezco dos semanas y aparezco con algo terminado. Trabajo en entregas parciales para que veas el avance real, puedas opinar a tiempo y el resultado final no sea una sorpresa.",
-  "process.04.title": "Listo para usar",
-  "process.04.text": "Archivos organizados, código limpio y todo lo que necesitas para tomar el proyecto desde ahí. Sin dependencias de mi parte. Y si en los primeros 7 días necesitas un ajuste, lo resolvemos sin costo extra.",
-  "work.eyebrow": "TRABAJO SELECCIONADO",
-  "work.title": "Proyectos que <em>hablan</em> por sí solos.",
-  "work.lede": "Diseño, estrategia y ejecución visual para marcas que quieren destacar.",
-  "work.filter.all": "Todos",
-  "work.filter.branding": "Branding",
-  "work.filter.web": "Sitios Web",
-  "work.filter.identity": "Identidad Visual",
-  "work.filter.strategy": "Estrategia",
-  "work.card.01.title": "Rediseño web — Orbidental",
-  "work.card.02.title": "Fueggo — Identidad visual",
-  "work.card.03.title": "La Jungla Club — Identidad visual",
-  "work.card.04.title": "Rebel Street — Identidad visual",
-  "work.card.05.title": "AcelerArte — Diseño deportivo",
-  "work.card.06.title": "Pulse Digital — Landing page",
-  "work.cta.text": "Cada proyecto es único,<br>pero el objetivo es el mismo:",
-  "work.cta.highlight": "Impactar. Conectar. Convertir.",
-  "work.cta.link": "Ver todos los proyectos",
-  "about.eyebrow": "SOBRE MÍ",
-  "about.title": "La persona<br><em>detrás</em> del trabajo<span class=\"hero__dot\">.</span>",
-  "about.bio.01": "Si buscas alguien que <strong class=\"about__hl\">diseñe</strong>, desarrolle <em>y</em> entienda la estrategia detrás — <strong class=\"about__hl\">sin pasarte entre equipos</strong> ni traducir lo que necesitas — estás en el lugar correcto.",
-  "about.bio.02": "Llevo 2 años manejando todo lo digital de <strong class=\"about__hl-gold\">Orbidental</strong>: e-commerce, pauta en <strong class=\"about__hl-gold\">Meta</strong> y <strong class=\"about__hl-gold\">Google</strong>, fotografía de producto y diseño. No teoría — entornos reales, con métricas reales.",
-  "about.stat.01.label": "PageSpeed Score",
-  "about.stat.01.desc": "E-commerce migrado de 40 a 97 en producción real",
-  "about.stat.02.label": "Productos fotografiados",
-  "about.stat.02.desc": "Catálogo completo para e-commerce de Orbidental",
-  "about.stat.03.label": "Proyectos de branding",
-  "about.stat.03.desc": "Identidades visuales construidas desde cero",
-  "about.stat.04.label": "Proyectos entregados",
-  "about.stat.04.desc": "Sin retrasos, sin intermediarios, directo con el cliente",
-  "testimonials.eyebrow": "CLIENTES",
-  "testimonials.title": "Lo que dicen<br><em>sobre</em> mi trabajo<span class=\"hero__dot\">.</span>",
-  "testimonials.note": "Colaboraciones que se convierten en relaciones a largo plazo.",
-  "testimonials.prev": "Anterior",
-  "testimonials.next": "Siguiente",
-  "testimonials.01.text": "Alexander logró darnos una identidad visual mucho más potente de lo que esperábamos. Capturó exactamente la esencia del fuego y nos diferenció completamente de otras marcas de comida. Hoy nos reconocen fácilmente — el diseño es único y habla solo.",
-  "testimonials.01.name": "Felipe Romero",
-  "testimonials.01.role": "Fundador · <a href=\"/trabajo/fueggo/\" class=\"testimonial-card__empresa\">Fueggo</a>",
-  "testimonials.01.company": "Comidas rápidas a la brasa · Bogotá",
-  "testimonials.02.text": "El resultado superó nuestras expectativas. Alexander entendió perfectamente lo que queríamos: que se sintiera la jungla, pero que quedara claro que es una discoteca. Cada pieza refleja el nombre y la energía de la marca.",
-  "testimonials.02.name": "Mayra Castaño",
-  "testimonials.02.role": "Gerente · <a href=\"/trabajo/la-jungla-club/\" class=\"testimonial-card__empresa\">La Jungla Club</a>",
-  "testimonials.02.company": "Discoteca · Entretenimiento · Bogotá",
-  "testimonials.03.text": "Quedamos más que satisfechos. Queríamos algo urbano, con ese estilo grafitero pero aplicado a ropa streetwear — y Alexander lo entendió desde el primer momento. La identidad quedó exactamente como la imaginábamos.",
-  "testimonials.03.name": "Steven Mesa",
-  "testimonials.03.role": "Fundador · <a href=\"/trabajo/rebel-street/\" class=\"testimonial-card__empresa\">Rebel Street</a>",
-  "testimonials.03.company": "Moda · Streetwear urbano · Bogotá",
-  "trusted.label": "Marcas que<br>han confiado",
-  "faq.eyebrow": "PREGUNTAS FRECUENTES",
-  "faq.title": "Lo que siempre<br><em>preguntan</em><span class=\"hero__dot\">.</span>",
-  "faq.lede": "Respuestas claras para que tomes decisiones seguras y trabajemos con total transparencia.",
-  "faq.01.q": "¿Trabajas con clientes fuera de Colombia?",
-  "faq.01.a": "Sí, trabajo 100% remoto y tengo clientes en varios países. Nos coordinamos por WhatsApp, Zoom o el canal que prefieras. El huso horario no ha sido un problema — estoy en Bogotá (UTC-5) y me adapto a los horarios de mis clientes.",
-  "faq.02.q": "¿Cómo es el proceso de pago?",
-  "faq.02.a": "Trabajo con un anticipo del 50% para arrancar y el 50% restante contra entrega. Para proyectos grandes lo dividimos en hitos. Acepto transferencia bancaria, Nequi, y para clientes internacionales, PayPal o Wise.",
-  "faq.03.q": "¿Cuántas revisiones incluye cada proyecto?",
-  "faq.03.a": "Depende del servicio, pero en general incluyo dos rondas de revisión dentro del alcance acordado. Si necesitas más ajustes después de eso, los cotizamos aparte — sin sorpresas. Lo importante es que el resultado final sea el correcto.",
-  "faq.04.q": "¿En qué zona horaria trabajas?",
-  "faq.04.a": "Estoy en Bogotá, Colombia — UTC-5, sin horario de verano. Normalmente respondo entre 8am y 8pm hora colombiana, pero me adapto si estás en otra zona horaria y necesitamos cuadrar una llamada.",
-  "faq.05.q": "¿Usas contratos?",
-  "faq.05.a": "Sí, siempre. Antes de arrancar cualquier proyecto firmamos un acuerdo que define el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino.",
-  "faq.06.q": "¿Qué pasa si necesito cambios después de la entrega?",
-  "faq.06.a": "Los cambios menores dentro del alcance original no tienen costo adicional si los pides dentro de los primeros 7 días. Después de eso, o si son cambios de dirección grandes, los cotizamos por separado. Siempre con precio claro antes de hacer cualquier cosa.",
-  "contact.eyebrow": "CONTACTO",
-  "contact.title": "Hablemos de tu proyecto<span class=\"hero__dot\">.</span>",
-  "contact.sub": "Cada semana que esperas, tu competencia ya está online. Cuéntame qué necesitas — respondo en menos de 24 horas.",
-  "contact.name.label": "Nombre *",
-  "contact.name.placeholder": "Tu nombre",
-  "contact.company.label": "Empresa",
-  "contact.company.placeholder": "Tu empresa (opcional)",
-  "contact.service.label": "Servicio de interés *",
-  "contact.service.placeholder": "Selecciona un servicio",
-  "contact.budget.label": "Presupuesto aproximado *",
-  "contact.budget.placeholder": "Selecciona un rango",
-  "contact.message.label": "Mensaje *",
-  "contact.message.placeholder": "Cuéntame en qué puedo ayudarte...",
-  "contact.submit": "Enviar mensaje",
-  "contact.whatsapp": "O escríbeme directo por WhatsApp",
-  "contact.aside.urgency": "Un sitio lento o una marca invisible no es un gasto que pospones — es uno que ya estás pagando en clientes que no llegan.",
-  "contact.response.label": "Tiempo de respuesta",
-  "contact.response.value": "Menos de 24 h",
-  "contact.mode.label": "Modalidad",
-  "contact.mode.value": "100% remoto",
-  "contact.languages.label": "Idiomas",
-  "contact.languages.value": "Español · English",
-  "contact.calendly": "Agenda una llamada de 20 min →",
-  "contact.email.note": "También puedes escribirme directamente a",
-  "contact.form.subject": "Nuevo mensaje desde tu portafolio — alexandercaro.com",
-  "cta.title": "¿Tienes un proyecto en mente<span class=\"hero__dot\">?</span>",
-  "cta.sub": "El mejor momento para arreglar tu presencia digital fue ayer. El segundo mejor es hoy. Respondo en menos de 24 horas.",
-  "cta.whatsapp": "Escríbeme por WhatsApp",
-  "cta.work": "Ver todos los proyectos",
-  "tw.back": "Volver al inicio",
-  "tw.eyebrow": "PORTAFOLIO",
-  "tw.hero.line1": "Cada proyecto parte",
-  "tw.hero.line2": "de un ",
-  "tw.hero.accent": "problema real",
-  "tw.hero.sub": "Cada marca de esta página perdía algo — ventas, reconocimiento, confianza — antes de que yo entrara. Abajo, lo que pasó después.",
-  "tw.stat1.label": "PageSpeed, Orbidental",
-  "tw.stat2.label": "productos en un catálogo B2B",
-  "tw.stat3.label": "intermediarios entre tú y el código",
-  "tw.featured.flag": "Caso destacado",
-  "tw.panel.eyebrow": "PageSpeed Insights · medido",
-  "tw.panel.before": "antes",
-  "tw.panel.after": "después",
-  "tw.panel.foot1": "<strong>Divi</strong> → código a mano",
-  "tw.panel.foot2": "<strong>4.000</strong> productos",
-  "tw.orbidental.year": "2024 — Plataforma B2B",
-  "tw.orbidental.lead": "Un distribuidor de insumos dentales evalúa a su proveedor en segundos. Si la web carga lenta y se rompe en el celular, asume que la operación entera es así — y se va con la competencia.",
-  "tw.orbidental.metric1": "productos fotografiados uno por uno",
-  "tw.orbidental.metric2": "pérdida de SEO o contenido al migrar",
-  "tw.orbidental.detail": "Migré una web pesada en Divi a código limpio, conservando el posicionamiento ya ganado. Ahora conecto el catálogo con su sistema de inventario por API — integración a código, no plugin.",
-  "tw.cta.case": "Ver el caso completo",
-  "tw.pulse.year": "2026 — Web",
-  "tw.pulse.problem": "<strong>El reto:</strong> probar que no repito un solo estilo. Marca ficticia, código y despliegue 100% reales.",
-  "tw.pulse.solution": "<strong>La decisión:</strong> otro idioma, otra paleta, otra tipografía — sin frameworks ni dependencias. Vanilla, en vivo.",
-  "tw.acelerarte.year": "2026 — Diseño deportivo",
-  "tw.acelerarte.problem": "<strong>El reto:</strong> el motociclismo se vive intenso, pero su contenido casi siempre se ve genérico.",
-  "tw.acelerarte.solution": "<strong>La decisión:</strong> mi marca propia de flyers deportivos — estética de competición que pilotos reconocidos repostean.",
-  "tw.acelerarte.result": "visitas en 28 días",
-  "tw.fueggo.year": "2024 — Branding",
-  "tw.fueggo.problem": "<strong>El reto:</strong> la marca se veía distinta en el local, el empaque y el uniforme — nada amarraba.",
-  "tw.fueggo.solution": "<strong>La decisión:</strong> un sistema —logo, paleta, tipografía— aplicado a piezas reales listas para imprimir.",
-  "tw.fueggo.result": "listo para producción",
-  "tw.jungla.year": "2024 — Branding",
-  "tw.jungla.problem": "<strong>El reto:</strong> una propuesta nocturna intensa —DJs con máscaras, estética selvática— sin identidad a la altura.",
-  "tw.jungla.solution": "<strong>La decisión:</strong> un sistema que pega igual de fuerte en flyer, fachada y uniforme.",
-  "tw.jungla.result": "sistema, toda la experiencia",
-  "tw.rebel.year": "2024 — Branding",
-  "tw.rebel.problem": "<strong>El reto:</strong> en un mercado de streetwear saturado, reconocerse al instante o desaparecer.",
-  "tw.rebel.solution": "<strong>La decisión:</strong> sistema completo, de logo a empaque, pensado para que cada pieza sea inconfundible.",
-  "tw.rebel.result": "reconocimiento instantáneo",
-  "tw.cap.eyebrow": "POR QUÉ YO",
-  "tw.cap.title": "Cada proyecto pasa por una sola persona",
-  "tw.cap.sub": "No coordinas a un diseñador, un desarrollador y un especialista en SEO. Hablas conmigo y el proyecto avanza sin fricción entre fases. Los casos de arriba son una selección — esto es el alcance completo.",
-  "tw.cap.01.title": "Diseño de marca",
-  "tw.cap.01.desc": "Identidad visual completa: logo, paleta, tipografía y manual de aplicación.",
-  "tw.cap.02.title": "Desarrollo frontend",
-  "tw.cap.02.desc": "Código limpio, sin frameworks innecesarios. Rápido de cargar, fácil de mantener.",
-  "tw.cap.03.title": "SEO técnico",
-  "tw.cap.03.desc": "Estructura, velocidad y datos estructurados pensados desde el primer commit.",
-  "tw.cap.04.title": "Fotografía de producto",
-  "tw.cap.04.desc": "Catálogos completos, listos para e-commerce y redes, sin depender de terceros.",
-  "tw.cap.05.title": "Estrategia digital",
-  "tw.cap.05.desc": "Meta y Google Ads configurados con la misma lógica de marca, no por separado.",
-  "tw.cta.title": "¿Tu proyecto es el siguiente caso de éxito",
-  "tw.cta.sub": "Trabajo con marcas en Colombia y remoto. Cuéntame qué necesitas — respondo en menos de 24 horas.",
-  "contact.select.service": [
-    {
-      "value": "",
-      "label": "Selecciona un servicio"
-    },
-    {
-      "value": "Diseño y desarrollo web",
-      "label": "Diseño y desarrollo web"
-    },
-    {
-      "value": "Identidad visual / Branding",
-      "label": "Identidad visual / Branding"
-    },
-    {
-      "value": "Diseño gráfico / Social media",
-      "label": "Diseño gráfico / Social media"
-    },
-    {
-      "value": "Fotografía de producto",
-      "label": "Fotografía de producto"
-    },
-    {
-      "value": "Pauta digital (Meta / Google Ads)",
-      "label": "Pauta digital (Meta / Google Ads)"
-    },
-    {
-      "value": "Paquete integral",
-      "label": "Paquete integral"
-    },
-    {
-      "value": "Otro / No sé aún",
-      "label": "Otro / No sé aún"
-    }
-  ],
-  "contact.select.budget": [
-    {
-      "value": "",
-      "label": "Selecciona un rango"
-    },
-    {
-      "value": "Menos de $500 USD",
-      "label": "Menos de $500 USD"
-    },
-    {
-      "value": "$500 – $1,000 USD",
-      "label": "$500 – $1,000 USD"
-    },
-    {
-      "value": "$1,000 – $2,500 USD",
-      "label": "$1,000 – $2,500 USD"
-    },
-    {
-      "value": "$2,500 – $5,000 USD",
-      "label": "$2,500 – $5,000 USD"
-    },
-    {
-      "value": "Más de $5,000 USD",
-      "label": "Más de $5,000 USD"
-    },
-    {
-      "value": "Aún no lo tengo claro",
-      "label": "Aún no lo tengo claro"
-    }
-  ],
-  "orb.back": "Volver a proyectos",
-  "orb.tag1": "Diseño web",
-  "orb.tag2": "SEO técnico",
-  "orb.diagnosis": "PageSpeed · antes / después",
-  "orb.hero.sub": "Un catálogo de +3.000 productos dentales que tardaba 14 segundos en cargar y se rompía en el celular. Clientes que se iban antes de ver el primer precio. Lo reconstruí desde cero —sin perder un producto ni una posición en Google— y pasó de un PageSpeed de 40 a 97.",
-  "orb.live": "Ver sitio en vivo",
-  "orb.live.short": "Ver en vivo",
-  "orb.metric1": "PageSpeed Score — Core Web Vitals aprobado en un mes",
-  "orb.metric2": "Lo que tardaba en cargar, antes",
-  "orb.metric3": "Productos migrados sin perder SEO",
-  "orb.metric4": "Responsive — antes no servía en móvil",
-  "orb.problem.eyebrow": "EL PROBLEMA REAL",
-  "orb.problem.title": "Un sitio lento no es un problema técnico. Es un problema <em>de ventas</em>.",
-  "orb.problem.p1": "El sitio anterior estaba hecho en Divi: arrastraba más de un megabyte de código que nadie usaba en cada visita, no estaba pensado para móvil y, siendo honestos, se veía mal —fondo plano, fotos sueltas, texto sin jerarquía—. Tardaba 14 segundos en abrir.",
-  "orb.problem.pull": "Cada segundo de espera y cada pantalla rota en un celular era un cliente que cerraba la pestaña.",
-  "orb.problem.p2": "Eso pasaba en un catálogo de +3.000 productos donde la gente llega buscando algo puntual y con prisa. Para una empresa que vende online, eso no se ve en el diseño: se ve en las ventas que no entran.",
-  "orb.problem.p3": "Divi no se podía \"optimizar\": el peso estaba en el propio sistema. Había que sacarlo. Reconstruí todo en código limpio sobre WordPress, migré los más de 3.000 productos sin perder el SEO ya posicionado —un error ahí y se caen meses de ranking— y rehíce la experiencia visual para que el sitio por fin transmitiera la seriedad de la empresa.",
-  "orb.info.company.label": "Empresa",
-  "orb.info.role.label": "Mi rol",
-  "orb.info.role.value": "A cargo de todo lo digital · 2+ años",
-  "orb.info.category.label": "Categoría",
-  "orb.info.category.value": "Insumos dentales · Catálogo +3.000 productos",
-  "orb.info.stack.label": "Stack",
-  "orb.info.deliverables.label": "Entregables",
-  "orb.info.deliverables.value": "Rediseño completo, performance, SEO técnico, responsive",
-  "orb.proof.eyebrow": "LA PRUEBA",
-  "orb.proof.title": "De \"Desaprobado\" a \"Aprobado\" en un mes<span class=\"hero__dot\">.</span>",
-  "orb.proof.text": "No es mi opinión: es el propio reporte de Core Web Vitals (Métricas Web Esenciales) de Google. En un mes, el sitio pasó de \"Desaprobado\" a \"Aprobado\", y el PageSpeed subió de 40 a 97. En la práctica: 14 segundos de carga convertidos en una apertura casi instantánea.",
-  "orb.proof.before.label": "Antes",
-  "orb.proof.before.score": "40 — Desaprobado",
-  "orb.proof.after.label": "Después",
-  "orb.proof.after.score": "97 — Aprobado",
-  "orb.showcase.title": "Página de inicio",
-  "orb.showcase.text": "Antes: fondo plano, sin jerarquía, lento. Ahora: una home coherente y ordenada que se ve profesional en cualquier pantalla y carga al instante. La credibilidad de una empresa también se diseña.",
-  "orb.gallery1.title": "Página de marca",
-  "orb.gallery1.text": "Eighteeth es una de las marcas que distribuye Orbidental. En vez de una página genérica más, le construí una experiencia dedicada dentro del sitio —la prueba de que esto no sale de una plantilla, sino que se diseña marca por marca.",
-  "orb.gallery2.title": "El prototipo de la futura tienda",
-  "orb.prototype.link": "Ver el prototipo",
-  "orb.gallery2.text": "Las páginas de producto actuales son básicas —fondo blanco, una foto, texto sin orden—. El e-commerce real está hoy en desarrollo. Para definir hacia dónde va y alinear a la dirección, diseñé este prototipo de cómo se verá y funcionará la página de producto: coherente, clara y pensada para que el cliente entienda lo que compra y decida con confianza. Es el siguiente paso real de Orbidental — y soy quien lo está construyendo.",
-  "orb.cta.title": "¿Tu sitio te parece rápido",
-  "orb.cta.sub": "Ábrelo en un celular con datos, fuera de tu casa. Ahí es donde Orbidental perdía clientes sin enterarse —y donde los pierde la mayoría de las tiendas que \"se ven bien\". Si tienes dudas, probablemente ya los estás perdiendo. Cuéntame qué vendes y en menos de 24 horas te digo qué te está costando tu sitio actual.",
-  "orb.cta.more": "Ver más proyectos",
-  "pd.tag2": "Landing page",
-  "pd.tag3": "Mercado internacional",
-  "pd.hero.sub": "Una identidad de agencia premium construida desde cero — en inglés, para clientes internacionales, sin un solo elemento heredado de mi propia marca.",
-  "pd.challenge.eyebrow": "EL RETO",
-  "pd.challenge.title": "Un cliente internacional no pregunta si <em>puedo</em> diseñar — pregunta si puedo salir de <em>mi</em> estilo<span class=\"hero__dot\">.</span>",
-  "pd.challenge.p1": "Todo mi portafolio vive en un mismo universo visual: oscuro, dorado, Fraunces, una sola voz. Eso es consistencia de marca — pero para un cliente que busca una agencia de marketing premium en inglés, ese universo no le sirve de referencia. Necesita ver que sé construir una identidad completamente distinta a la mía, con el mismo nivel de criterio.",
-  "pd.challenge.pull": "Pulse Digital es esa prueba: una marca de agencia inventada para demostrar versatilidad real, no solo \"puedo cambiar colores\" — puedo cambiar de lenguaje visual entero y que se sienta intencional, no genérico.",
-  "pd.info.client.label": "Cliente",
-  "pd.info.role.value": "Identidad visual + diseño + desarrollo",
-  "pd.info.lang.label": "Idioma",
-  "pd.info.lang.value": "Inglés — mercado EE.UU. / Europa",
-  "pd.result.eyebrow": "EL RESULTADO",
-  "pd.result.title": "Una agencia que se siente como una <em>consultora</em>, no como un SaaS más<span class=\"hero__dot\">.</span>",
-  "pd.result.text": "La dirección final fue una identidad tipo growth/SaaS moderno: tipografía Poppins, violeta y verde lima como acentos sobre blanco, y fotografía real de equipo en vez de solo texto en columnas. Esta es una vista previa del sitio — haz clic para abrirlo completo.",
-  "pd.mock.cta": "Ver sitio completo",
-  "pd.mock.caption": "Vista previa — haz clic en cualquier punto para abrir el sitio completo en una pestaña nueva.",
-  "pd.hard.eyebrow": "LO DIFÍCIL",
-  "pd.hard.title": "Salir de mi paleta no es solo cambiar el hex<span class=\"hero__dot\">.</span>",
-  "pd.hard.text": "Cualquiera puede invertir colores y llamarlo \"otra identidad\". El reto real fue construir un sistema con la misma lógica interna que cualquier marca real tiene: una tipografía con personalidad propia, una paleta donde el acento aparece con intención, y fotografía que aporta peso visual real — no plantilla genérica con un cambio de paleta.",
-  "pd.tokens.palette": "Paleta de color",
-  "pd.tokens.type": "Tipografía display",
-  "pd.tokens.type.desc": "Geométrica, redondeada — distinta a la serif y a la Space Grotesk de mi portafolio",
-  "pd.tokens.concept": "Concepto",
-  "pd.tokens.concept.text": "Growth agency moderna — fotografía real, bento grid, métricas integradas",
-  "pd.solved.label": "Lo que resolví",
-  "pd.solved.01.title": "Composición con peso visual real, no solo texto en columnas",
-  "pd.solved.01.desc": "Las primeras direcciones eran sólidas en tipografía pero se sentían planas: todo apilado en columnas parejas. Investigué referencias reales (agencias premiadas en Awwwards) y la diferencia estaba en la fotografía a gran escala y la composición asimétrica — lo apliqué en el hero, los servicios y el bento de resultados.",
-  "pd.solved.02.title": "Curaduría de fotografía con licencia verificada",
-  "pd.solved.02.desc": "Cada imagen se eligió y verificó individualmente por licencia y composición antes de usarla — nada de bancos genéricos sin revisar. El resultado: equipo real, dashboard real, sensación de marca activa, no de stock photo al azar.",
-  "pd.solved.03.title": "Copy en inglés con tono de autoridad real",
-  "pd.solved.03.desc": "Nada de \"we help brands grow\" genérico. El copy se escribió con voz de agencia seria: específico, directo, con admisiones de límites (\"we'll tell you honestly whether we're the right fit\") — eso genera más confianza que cualquier claim de resultados.",
-  "pd.cta.title": "¿Tu marca necesita una identidad que no se sienta genérica",
-  "pd.cta.sub": "Cuéntame tu proyecto. Respondo en menos de 24 horas.",
-  "pd.info.client.value": "Pulse Digital (concepto)",
-  "pd.token.violet": "<strong>Violeta</strong><br/>#5b3df0 — acento principal",
-  "pd.token.lime": "<strong>Lima</strong><br/>#c8f750 — acento secundario, alto contraste",
-  "pd.token.ink": "<strong>Tinta</strong><br/>#14141f — texto y fondo de CTA"
+/* ═══════════════════════════════════════════════════════════════
+   /trabajo/ — Cosmos Editorial
+   Este archivo NO redefine tokens, nav, botones base ni .eyebrow/
+   .section — todo eso ya vive en /style.css (raíz) y ya está
+   migrado al sistema dorado. Aquí solo lo específico de esta
+   página: hero propio, filtros por objetivo de negocio, tarjetas
+   con storytelling (problema → solución → resultado) y la sección
+   de capacidades.
+═══════════════════════════════════════════════════════════════ */
+
+/* ───────────────────────────────────────────────────────────────
+   HERO — mismo universo del inicio: fondo void, grain, partículas
+   doradas. Sin el retrato (no aplica aquí), pero con el mismo aire.
+─────────────────────────────────────────────────────────────── */
+.tw-hero {
+  position: relative;
+  padding: 160px 0 96px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--hv2-void);
+}
+.tw-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(120% 90% at 50% 0%, var(--hv2-void-soft) 0%, var(--hv2-void) 60%);
+}
+.tw-hero__grain {
+  position: absolute;
+  inset: -50%;
+  z-index: 2;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.tw-hero__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.tw-hero__inner {
+  position: relative;
+  z-index: 3;
+  max-width: 760px;
+}
+.tw-hero__title {
+  font-family: var(--hv2-font-display);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--hv2-ink);
+  margin-bottom: 24px;
+}
+.tw-hero__accent {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--hv2-gold);
+}
+.tw-hero__sub {
+  font-family: var(--hv2-font-body);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--hv2-ink-dim);
+  max-width: 540px;
+  margin-bottom: 48px;
+}
+
+/* Stats — prueba inmediata, no decoración */
+.tw-hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.tw-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.tw-hero__stat-num {
+  font-family: var(--hv2-font-display);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 600;
+  color: var(--hv2-gold);
+  line-height: 1;
+}
+.tw-hero__stat-arrow { margin: 0 4px; opacity: 0.6; font-weight: 400; }
+.tw-hero__stat-label {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+}
+.tw-hero__stat-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--hv2-line);
+}
+
+@media (max-width: 600px) {
+  .tw-hero { padding: 130px 0 72px; }
+  .tw-hero__stats { gap: 18px; }
+  .tw-hero__stat-divider { display: none; }
+}
+
+/* ───────────────────────────────────────────────────────────────
+   GRID DE PROYECTOS
+─────────────────────────────────────────────────────────────── */
+.tw-grid-section {
+  padding: 56px 0 120px;
+  background: var(--hv2-void);
+}
+
+/* ── CASO DESTACADO ────────────────────────────────────────────
+   El único gesto de layout nuevo: una tarjeta a ancho completo,
+   imagen y texto lado a lado, reservada para el caso más fuerte.
+   Mantiene tokens, radios y hover del sistema; solo cambia la
+   escala y la disposición. Escala bien: futuros casos web fuertes
+   entran aquí; el resto cae en .tw-grid de abajo. */
+.tw-featured {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  background: var(--hv2-void-soft);
+  border: 1px solid var(--hv2-line);
+  border-radius: 22px;
+  overflow: hidden;
+  margin-bottom: 56px;
+  transition: border-color 0.3s var(--hv2-ease), transform 0.3s var(--hv2-ease);
+  cursor: pointer;
+}
+.tw-featured:hover {
+  border-color: var(--hv2-gold-dim);
+  transform: translateY(-4px);
+}
+.tw-featured__media {
+  position: relative;
+  overflow: hidden;
+  background: #0a0907;
+  min-height: 420px;
+}
+.tw-featured__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s var(--hv2-ease);
+}
+.tw-featured:hover .tw-featured__media img { transform: scale(1.04); }
+
+/* ── PANEL DE DATOS (reemplaza imagen en el destacado) ──────────
+   Cuenta la historia de performance sin depender de un screenshot.
+   Coherente con el mensaje "carga instantánea, sin dependencias":
+   el caso estrella no carga ni una imagen. Todo en tokens. */
+.tw-featured__panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(100% 85% at 50% 42%, rgba(205,183,142,0.14) 0%, transparent 62%),
+    #030302;
+  border-right: 1px solid var(--hv2-gold-dim);
+  box-shadow: inset -50px 0 70px -50px rgba(0,0,0,0.95);
+  isolation: isolate;
+}
+.tw-panel__grain {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.tw-panel__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 340px;
+  padding: 40px;
+  text-align: center;
+}
+.tw-panel__eyebrow {
+  display: block;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+  margin-bottom: 20px;
+}
+.tw-panel__score {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  font-family: var(--hv2-font-display);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+.tw-panel__from {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  color: var(--hv2-ink-faint);
+  position: relative;
+}
+.tw-panel__from::after {
+  content: "";
+  position: absolute;
+  left: -4px; right: -4px;
+  top: 52%;
+  height: 2px;
+  background: var(--hv2-ink-faint);
+  transform: rotate(-8deg);
+}
+.tw-panel__arrow {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--hv2-gold-dim);
+  font-weight: 400;
+}
+.tw-panel__to {
+  font-size: clamp(3.4rem, 7vw, 5rem);
+  color: var(--hv2-gold);
+  text-shadow: 0 0 55px rgba(205,183,142,0.45);
+}
+/* Barra antes/después — se llena al revelar la tarjeta */
+.tw-panel__bar {
+  position: relative;
+  height: 6px;
+  border-radius: 100px;
+  background: rgba(244,239,230,0.08);
+  overflow: visible;
+  margin-bottom: 26px;
+}
+.tw-panel__bar-fill {
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, var(--hv2-gold-dim), var(--hv2-gold));
+  transition: width 1.1s var(--hv2-ease) 0.2s;
+}
+.tw-featured.visible .tw-panel__bar-fill { width: 97%; }
+.tw-panel__bar-mark {
+  position: absolute;
+  top: 12px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-faint);
+}
+.tw-panel__bar-mark--from { left: 2px; }
+.tw-panel__bar-mark--to { right: 2px; color: var(--hv2-gold); }
+.tw-panel__foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.74rem;
+  color: var(--hv2-ink-dim);
+}
+.tw-panel__foot strong { color: var(--hv2-ink); font-weight: 600; }
+.tw-panel__foot-dot { color: var(--hv2-gold-dim); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tw-panel__bar-fill { transition: none; width: 97%; }
+}
+.tw-featured__flag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hv2-gold);
+  background: rgba(8,8,7,0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--hv2-gold-dim);
+  border-radius: 100px;
+  padding: 7px 14px;
+}
+.tw-featured__body {
+  padding: 44px 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+.tw-featured__title {
+  font-family: var(--hv2-font-display);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 500;
+  color: var(--hv2-ink);
+  line-height: 1.05;
+  margin-bottom: 2px;
+}
+.tw-featured__lead {
+  font-family: var(--hv2-font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--hv2-ink);
+}
+.tw-featured__detail {
+  font-family: var(--hv2-font-body);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--hv2-ink-dim);
+}
+
+/* Métricas del destacado — la jerarquía que separa DATO de CLAIM:
+   el número medido (40→97) manda; los de apoyo van más callados. */
+.tw-featured__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 6px 0 4px;
+}
+.tw-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 12px 16px;
+  border: 1px solid var(--hv2-line);
+  border-radius: 12px;
+  background: rgba(244,239,230,0.02);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.tw-metric--hero {
+  border-color: var(--hv2-gold-dim);
+  background: var(--hv2-gold-faint);
+}
+.tw-metric__num {
+  font-family: var(--hv2-font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--hv2-ink-dim);
+  line-height: 1;
+}
+.tw-metric--hero .tw-metric__num {
+  color: var(--hv2-gold);
+  font-size: 1.65rem;
+}
+.tw-metric__label {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+  line-height: 1.3;
+}
+.tw-featured__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--hv2-ink);
+  margin-top: 10px;
+  transition: gap 0.25s var(--hv2-ease), color 0.25s var(--hv2-ease);
+}
+.tw-featured__cta svg { transition: transform 0.25s var(--hv2-ease); }
+.tw-featured:hover .tw-featured__cta { color: var(--hv2-gold); gap: 11px; }
+.tw-featured:hover .tw-featured__cta svg { transform: translateX(3px); }
+
+@media (max-width: 860px) {
+  .tw-featured { grid-template-columns: 1fr; margin-bottom: 40px; }
+  .tw-featured__media { min-height: 240px; aspect-ratio: 16 / 10; }
+  .tw-featured__body { padding: 32px 24px 30px; }
+  /* Panel apilado arriba: el divisor va abajo, y la altura la marca
+     el contenido (no el aspect-ratio de imagen, que lo aplastaría). */
+  .tw-featured__panel {
+    border-right: none;
+    border-bottom: 1px solid var(--hv2-gold-dim);
+    box-shadow: inset 0 -40px 60px -50px rgba(0,0,0,0.95);
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+}
+
+.tw-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+@media (max-width: 860px) {
+  .tw-grid { grid-template-columns: 1fr; }
+}
+
+.tw-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--hv2-void-soft);
+  border: 1px solid var(--hv2-line);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: border-color 0.3s var(--hv2-ease), transform 0.3s var(--hv2-ease);
+  cursor: pointer;
+}
+.tw-card:hover {
+  border-color: var(--hv2-gold-dim);
+  transform: translateY(-4px);
+}
+.tw-card.hidden { display: none; }
+
+.tw-card__media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: #0a0907;
+}
+.tw-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--hv2-ease);
+}
+.tw-card:hover .tw-card__media img { transform: scale(1.05); }
+
+.tw-card__media--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tw-card__media-mark {
+  text-align: center;
+  padding: 20px;
+  pointer-events: none;
+}
+.tw-card__media-logo {
+  font-family: var(--hv2-font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--hv2-ink);
+}
+.tw-card__media-dot { color: var(--hv2-gold); }
+.tw-card__media-tag {
+  display: block;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--hv2-ink-dim);
+  margin-top: 8px;
+}
+
+/* Badge de resultado — siempre visible, esto es lo que vende */
+.tw-card__result {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(8,8,7,0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--hv2-gold-dim);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+.tw-card__result-num {
+  font-family: var(--hv2-font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--hv2-gold);
+  line-height: 1.1;
+}
+.tw-card__result-label {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+}
+
+.tw-card__body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tw-card__year {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hv2-gold);
+}
+.tw-card__title {
+  font-family: var(--hv2-font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--hv2-ink);
+  margin-bottom: 4px;
+}
+.tw-card__problem,
+.tw-card__solution {
+  font-family: var(--hv2-font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--hv2-ink-dim);
+}
+.tw-card__problem strong,
+.tw-card__solution strong {
+  color: var(--hv2-ink);
+  font-weight: 600;
+}
+.tw-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.tag {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: rgba(244,239,230,0.06);
+  color: var(--hv2-ink-dim);
+}
+.tag--gold {
+  background: var(--hv2-gold-dim);
+  color: var(--hv2-gold);
+}
+/* Marcador honesto de roadmap: distinto del dorado de "entregado",
+   con borde discontinuo que lee como "en construcción" sin gritar. */
+.tag--wip {
+  background: transparent;
+  color: var(--hv2-ink-dim);
+  border: 1px dashed var(--hv2-gold-dim);
+}
+.tw-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--hv2-ink);
+  margin-top: 12px;
+  transition: gap 0.25s var(--hv2-ease), color 0.25s var(--hv2-ease);
+}
+.tw-card__cta svg { transition: transform 0.25s var(--hv2-ease); }
+.tw-card:hover .tw-card__cta { color: var(--hv2-gold); gap: 10px; }
+.tw-card:hover .tw-card__cta svg { transform: translateX(2px); }
+
+/* ───────────────────────────────────────────────────────────────
+   CAPACIDADES
+─────────────────────────────────────────────────────────────── */
+.tw-capabilities {
+  padding: 0 0 120px;
+  background: var(--hv2-void);
+}
+.tw-capabilities__title {
+  font-family: var(--hv2-font-display);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  color: var(--hv2-ink);
+  margin-bottom: 16px;
+  max-width: 600px;
+}
+.tw-capabilities__sub {
+  font-family: var(--hv2-font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--hv2-ink-dim);
+  max-width: 560px;
+  margin-bottom: 56px;
+}
+.tw-capabilities__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--hv2-line);
+  border: 1px solid var(--hv2-line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.tw-capability {
+  background: var(--hv2-void-soft);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.25s var(--hv2-ease);
+}
+.tw-capability:hover { background: #14110c; }
+.tw-capability__num {
+  font-family: var(--hv2-font-display);
+  font-size: 0.85rem;
+  color: var(--hv2-gold);
+  opacity: 0.7;
+}
+.tw-capability__title {
+  font-family: var(--hv2-font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--hv2-ink);
+}
+.tw-capability__desc {
+  font-family: var(--hv2-font-body);
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--hv2-ink-dim);
+}
+
+@media (max-width: 980px) {
+  .tw-capabilities__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .tw-capabilities__grid { grid-template-columns: 1fr; }
+}
+
+/* ───────────────────────────────────────────────────────────────
+   CTA — hereda .cta-section del raíz; solo el botón dorado local
+─────────────────────────────────────────────────────────────── */
+.btn--gold {
+  background: var(--hv2-gold);
+  color: #1a1510;
+}
+.btn--gold:hover {
+  background: #ddc9a0;
+  box-shadow: 0 0 32px rgba(205,183,142,0.35), 0 0 70px rgba(205,183,142,0.12);
+  transform: translateY(-2px);
+}
+
+/* ───────────────────────────────────────────────────────────────
+   SCROLL REVEAL (compartido con el resto del sitio via script.js)
+─────────────────────────────────────────────────────────────── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--hv2-ease), transform 0.6s var(--hv2-ease);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Specificity bump (body .reveal-up, not just .reveal-up) so this
+   definition always wins over the root /style.css one regardless of
+   link order — the root's .reveal-up uses filter:blur(6px) as its
+   entrance state (intentional there, for other pages), which must
+   never apply here. */
+body .reveal-up {
+  opacity: 0;
+  transform: translateY(16px);
+  filter: none;
+  animation: twRevealUp 0.7s var(--hv2-ease) forwards;
+  animation-delay: var(--delay, 0s);
+}
+@keyframes twRevealUp {
+  to { opacity: 1; transform: translateY(0); filter: none; }
+}
+/* fill-mode:forwards (above) keeps the element on its own GPU
+   compositing layer indefinitely once the animation ends, which can
+   render delicate serif text (Fraunces) with different subpixel
+   antialiasing than static text — a permanent slight blur. Adding
+   reveal-done (via JS, on animationend) sets will-change back to its
+   default, releasing that layer and letting the browser repaint the
+   text normally, without touching opacity/transform — so there's no
+   visual jump, just a one-frame sharpening. */
+body .reveal-up.reveal-done {
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal, body .reveal-up { opacity: 1; transform: none; filter: none; animation: none; transition: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FRAME DE NAVEGADOR — para tw-card__media (consistente con el home)
+   ═══════════════════════════════════════════════════════════════ */
+.tw-card__media--framed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 18px 0;
+  background:
+    radial-gradient(120% 90% at 50% -10%, rgba(205,183,142,0.10) 0%, transparent 55%),
+    var(--hv2-void, #050504);
+}
+.tw-card__media--framed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.browser-mock {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  background: #181613;
+  border: 1px solid var(--hv2-line);
+  border-bottom: none;
+  box-shadow: 0 24px 48px -16px rgba(0,0,0,0.55), 0 8px 20px -8px rgba(0,0,0,0.4);
+  transform: translateY(14px);
+  transition: transform 0.5s var(--hv2-ease), box-shadow 0.5s ease;
+}
+.tw-card:hover .browser-mock,
+.tw-featured:hover .browser-mock {
+  transform: translateY(4px);
+  box-shadow: 0 32px 64px -16px rgba(0,0,0,0.6), 0 10px 26px -8px rgba(205,183,142,0.12);
+}
+.browser-mock__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  background: #1f1c18;
+  border-bottom: 1px solid rgba(244,239,230,0.06);
+}
+.browser-mock__dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(244,239,230,0.18);
+  flex-shrink: 0;
+}
+.browser-mock__url {
+  flex: 1;
+  margin-left: 6px;
+  height: 14px;
+  border-radius: 4px;
+  background: rgba(244,239,230,0.05);
+}
+.browser-mock__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/11;
+  overflow: hidden;
+  background: #0a0907;
+}
+.browser-mock__viewport img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s var(--hv2-ease);
+}
+.tw-card:hover .browser-mock__viewport img { transform: scale(1.05); }
+
+@media (max-width: 640px) {
+  .tw-card__media--framed { padding: 14px 14px 0; }
 }
