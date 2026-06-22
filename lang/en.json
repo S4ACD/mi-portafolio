@@ -3,19 +3,16 @@
   "meta.description": "Freelance web designer and developer based in Bogotá. I build fast, custom websites for businesses across Latin America, the US, and Europe. PageSpeed 97. Free consultation.",
   "meta.og.title": "Alexander Caro | Freelance Web Designer & Developer",
   "meta.og.description": "Custom websites that load fast, rank well, and convert. Design, code, and strategy — one person, zero middlemen. PageSpeed 97. Based in Bogotá, available worldwide.",
-
   "nav.home": "Home",
   "nav.work": "Work",
   "nav.services": "Services",
   "nav.about": "About",
   "nav.cta": "Let's talk",
-
   "footer.location": "📍 Bogotá, Colombia — UTC−5",
   "footer.languages": "🌐 English · Español",
   "footer.availability": "💻 100% remote — Available worldwide",
   "footer.privacy": "Privacy policy",
   "footer.copy": "© 2026 Alexander Caro",
-
   "hero.status": "Available for projects",
   "hero.kicker": "Alexander Caro — Designer &amp; Developer",
   "hero.title.line1": "Design and code,",
@@ -26,7 +23,6 @@
   "hero.price_signal": "Clear proposal in 48 h<span class=\"hv2__price-signal-dot\" aria-hidden=\"true\">·</span>We start only if it's a fit",
   "hero.scroll": "Scroll to explore",
   "hero.badge": "Based in Bogotá · Colombia · Based in Bogotá · Colombia ·",
-
   "services.eyebrow": "SERVICES",
   "services.title": "Design and development that <em>sells</em>.",
   "services.lede": "Design, development, and visual content — all in one seamless process.",
@@ -36,7 +32,6 @@
   "services.02.text": "Fast, custom-built websites — designed and coded by the same person. No templates, no handoffs. PageSpeed 97 on real client projects.",
   "services.03.title": "Content & social media design",
   "services.03.text": "Visual assets for social that stop the scroll and build brand equity — crafted with intention, not assembled from a template.",
-
   "why.eyebrow": "WHY WORK WITH ME",
   "why.title": "The difference isn't price.<br><em>It's speed</em><span class=\"hero__dot\">.</span>",
   "why.lede": "An agency puts three people between your idea and the result: the salesperson, the project manager, and the person who actually does the work. Every layer adds time and dilutes what you asked for. With me, there are no layers — you talk directly to the person designing and building your project.",
@@ -53,11 +48,9 @@
   "why.me.04": "Design and code are done by the same person — nothing gets lost",
   "why.me.05": "You pay for the work, not the structure around it",
   "why.close": "It's not that agencies are bad. It's that for most projects, that structure is overhead you pay for and time you wait through — without getting a better result.",
-
   "focus.eyebrow": "APPROACH",
   "focus.title": "Clear thinking.<br><em>Real results.</em>",
   "focus.lede": "Design. Development. Content.<br>All in one person.",
-
   "process.eyebrow": "HOW I WORK",
   "process.title": "From brief to delivery<span class=\"hero__dot\">.</span>",
   "process.01.title": "We talk",
@@ -68,7 +61,6 @@
   "process.03.text": "I don't disappear for two weeks and show up with something finished. I work in partial deliveries so you can see real progress, give feedback in time, and the final result is never a surprise.",
   "process.04.title": "Ready to use",
   "process.04.text": "Organized files, clean code, and everything you need to take the project from there. No dependency on me. And if you need a tweak in the first 7 days, we handle it at no extra cost.",
-
   "work.eyebrow": "SELECTED WORK",
   "work.title": "Projects that <em>speak</em> for themselves.",
   "work.lede": "Design, strategy, and visual execution for brands that want to stand out.",
@@ -86,7 +78,6 @@
   "work.cta.text": "Every project is different,<br>but the goal is always the same:",
   "work.cta.highlight": "Impact. Connect. Convert.",
   "work.cta.link": "View all projects",
-
   "about.eyebrow": "ABOUT ME",
   "about.title": "The person<br><em>behind</em> the work<span class=\"hero__dot\">.</span>",
   "about.bio.01": "If you're looking for someone who can <strong class=\"about__hl\">design</strong>, build <em>and</em> understand the strategy behind it — <strong class=\"about__hl\">without bouncing you between teams</strong> or asking you to translate what you need — you're in the right place.",
@@ -99,7 +90,6 @@
   "about.stat.03.desc": "Visual identities built from scratch",
   "about.stat.04.label": "Projects delivered",
   "about.stat.04.desc": "On time, direct with the client, no middlemen",
-
   "testimonials.eyebrow": "CLIENTS",
   "testimonials.title": "What they say<br><em>about</em> my work<span class=\"hero__dot\">.</span>",
   "testimonials.note": "Collaborations that become long-term relationships.",
@@ -118,7 +108,6 @@
   "testimonials.03.role": "Founder · <a href=\"/trabajo/rebel-street/\" class=\"testimonial-card__empresa\">Rebel Street</a>",
   "testimonials.03.company": "Fashion · Urban streetwear · Bogotá",
   "trusted.label": "Brands that<br>have trusted me",
-
   "faq.eyebrow": "FREQUENTLY ASKED QUESTIONS",
   "faq.title": "Things people<br><em>always ask</em><span class=\"hero__dot\">.</span>",
   "faq.lede": "Clear answers so you can make confident decisions and we can work with full transparency.",
@@ -134,7 +123,6 @@
   "faq.05.a": "Always. Before starting any project we sign an agreement that defines the scope, timeline, price, and delivery terms. It protects both of us and prevents misunderstandings down the road.",
   "faq.06.q": "What if I need changes after delivery?",
   "faq.06.a": "Minor changes within the original scope are covered at no extra cost if you request them within the first 7 days. After that, or for significant direction changes, we price them separately — always with a clear quote before touching anything.",
-
   "contact.eyebrow": "CONTACT",
   "contact.title": "Let's talk about your project<span class=\"hero__dot\">.</span>",
   "contact.sub": "Every week you wait, your competition is already online. Tell me what you need — I reply within 24 hours.",
@@ -160,9 +148,127 @@
   "contact.calendly": "Book a free 20-min call →",
   "contact.email.note": "Or reach me directly at",
   "contact.form.subject": "New message from your portfolio — alexandercaro.com",
-
   "cta.title": "Got a project in mind<span class=\"hero__dot\">?</span>",
   "cta.sub": "The best time to fix your digital presence was yesterday. The second best is right now. I reply within 24 hours.",
   "cta.whatsapp": "Message me on WhatsApp",
-  "cta.work": "View all projects"
+  "cta.work": "View all projects",
+  "tw.back": "Back to home",
+  "tw.eyebrow": "PORTFOLIO",
+  "tw.hero.line1": "Every project starts",
+  "tw.hero.line2": "with a ",
+  "tw.hero.accent": "real problem",
+  "tw.hero.sub": "Every brand on this page was losing something — sales, recognition, trust — before I came in. Below, what happened after.",
+  "tw.stat1.label": "PageSpeed, Orbidental",
+  "tw.stat2.label": "products in a B2B catalog",
+  "tw.stat3.label": "middlemen between you and the code",
+  "tw.featured.flag": "Featured case",
+  "tw.panel.eyebrow": "PageSpeed Insights · measured",
+  "tw.panel.before": "before",
+  "tw.panel.after": "after",
+  "tw.panel.foot1": "<strong>Divi</strong> → hand-coded",
+  "tw.panel.foot2": "<strong>4,000</strong> products",
+  "tw.orbidental.year": "2024 — B2B Platform",
+  "tw.orbidental.lead": "A dental supply distributor sizes up their vendor in seconds. If the site loads slow and breaks on mobile, they assume the whole operation is like that — and they leave for a competitor.",
+  "tw.orbidental.metric1": "products photographed one by one",
+  "tw.orbidental.metric2": "SEO or content lost in migration",
+  "tw.orbidental.detail": "I migrated a heavy Divi site to clean code, preserving all existing rankings. Now I'm connecting the catalog to their inventory system via API — code-level integration, not a plugin.",
+  "tw.cta.case": "View full case study",
+  "tw.pulse.year": "2026 — Web",
+  "tw.pulse.problem": "<strong>The challenge:</strong> prove I don't repeat a single style. Fictional brand, 100% real code and deployment.",
+  "tw.pulse.solution": "<strong>The call:</strong> different language, different palette, different typeface — no frameworks, no dependencies. Vanilla, live.",
+  "tw.acelerarte.year": "2026 — Sports design",
+  "tw.acelerarte.problem": "<strong>The challenge:</strong> motorcycle racing is intense to live, but its content almost always looks generic.",
+  "tw.acelerarte.solution": "<strong>The call:</strong> my own motorsport flyer brand — competition-grade aesthetics that recognized riders actually repost.",
+  "tw.acelerarte.result": "visits in 28 days",
+  "tw.fueggo.year": "2024 — Branding",
+  "tw.fueggo.problem": "<strong>The challenge:</strong> the brand looked different at the restaurant, on packaging, and on uniforms — nothing tied together.",
+  "tw.fueggo.solution": "<strong>The call:</strong> a complete system — logo, palette, typography — applied to real, print-ready pieces.",
+  "tw.fueggo.result": "production-ready",
+  "tw.jungla.year": "2024 — Branding",
+  "tw.jungla.problem": "<strong>The challenge:</strong> an intense nightlife concept — masked DJs, jungle aesthetic — with no identity to match.",
+  "tw.jungla.solution": "<strong>The call:</strong> a system that hits just as hard on a flyer, a facade, and a uniform.",
+  "tw.jungla.result": "one system, entire experience",
+  "tw.rebel.year": "2024 — Branding",
+  "tw.rebel.problem": "<strong>The challenge:</strong> in a saturated streetwear market, you're either instantly recognizable or invisible.",
+  "tw.rebel.solution": "<strong>The call:</strong> a complete system, from logo to packaging, built so every piece is unmistakable.",
+  "tw.rebel.result": "instant recognition",
+  "tw.cap.eyebrow": "WHY ME",
+  "tw.cap.title": "Every project goes through one person",
+  "tw.cap.sub": "You don't coordinate a designer, a developer, and an SEO specialist. You talk to me and the project moves forward without friction between phases. The cases above are a selection — this is the full scope.",
+  "tw.cap.01.title": "Brand design",
+  "tw.cap.01.desc": "Complete visual identity: logo, palette, typography, and brand guidelines.",
+  "tw.cap.02.title": "Frontend development",
+  "tw.cap.02.desc": "Clean code, no unnecessary frameworks. Fast to load, easy to maintain.",
+  "tw.cap.03.title": "Technical SEO",
+  "tw.cap.03.desc": "Structure, speed, and structured data built in from the first commit.",
+  "tw.cap.04.title": "Product photography",
+  "tw.cap.04.desc": "Full catalogs, ready for e-commerce and social, no third parties needed.",
+  "tw.cap.05.title": "Digital strategy",
+  "tw.cap.05.desc": "Meta and Google Ads set up with the same brand logic, not as an afterthought.",
+  "tw.cta.title": "Is your project the next case study",
+  "tw.cta.sub": "I work with brands in Colombia and remotely worldwide. Tell me what you need — I reply within 24 hours.",
+  "contact.select.service": [
+    {
+      "value": "",
+      "label": "Select a service"
+    },
+    {
+      "value": "Diseño y desarrollo web",
+      "label": "Web design & development"
+    },
+    {
+      "value": "Identidad visual / Branding",
+      "label": "Visual identity / Branding"
+    },
+    {
+      "value": "Diseño gráfico / Social media",
+      "label": "Graphic design / Social media"
+    },
+    {
+      "value": "Fotografía de producto",
+      "label": "Product photography"
+    },
+    {
+      "value": "Pauta digital (Meta / Google Ads)",
+      "label": "Digital ads (Meta / Google Ads)"
+    },
+    {
+      "value": "Paquete integral",
+      "label": "Full package"
+    },
+    {
+      "value": "Otro / No sé aún",
+      "label": "Other / Not sure yet"
+    }
+  ],
+  "contact.select.budget": [
+    {
+      "value": "",
+      "label": "Select a range"
+    },
+    {
+      "value": "Menos de $500 USD",
+      "label": "Under $500 USD"
+    },
+    {
+      "value": "$500 – $1,000 USD",
+      "label": "$500 – $1,000 USD"
+    },
+    {
+      "value": "$1,000 – $2,500 USD",
+      "label": "$1,000 – $2,500 USD"
+    },
+    {
+      "value": "$2,500 – $5,000 USD",
+      "label": "$2,500 – $5,000 USD"
+    },
+    {
+      "value": "Más de $5,000 USD",
+      "label": "Over $5,000 USD"
+    },
+    {
+      "value": "Aún no lo tengo claro",
+      "label": "Not sure yet"
+    }
+  ]
 }
