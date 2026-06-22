@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/orbidental/" />
+  <link rel="alternate" hreflang="en" href="https://alexandercaro.com/trabajo/orbidental/" />
+  <link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/orbidental/" />
   <link rel="stylesheet" href="/style.css" />
   <link rel="stylesheet" href="style.css" />
 
@@ -44,12 +47,12 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M19 12H5M12 5l-7 7 7 7"/>
         </svg>
-        Volver a proyectos
+        <span data-i18n="orb.back">Volver a proyectos</span>
       </a>
       <div class="proj-hero__meta reveal-up" style="--delay:.1s">
-        <span class="tag tag--gold">Diseño web</span>
+        <span class="tag tag--gold" data-i18n="orb.tag1">Diseño web</span>
         <span class="tag">Performance</span>
-        <span class="tag">SEO técnico</span>
+        <span class="tag" data-i18n="orb.tag2">SEO técnico</span>
         <span class="tag">WordPress</span>
       </div>
 
@@ -62,18 +65,16 @@
             <span class="from">40</span>
             <span class="to">97</span>
           </span>
-          <span class="proj-hero__diagnosis-label">PageSpeed · antes / después</span>
+          <span class="proj-hero__diagnosis-label" data-i18n="orb.diagnosis">PageSpeed · antes / después</span>
         </div>
       </div>
 
       <p class="proj-hero__sub reveal-up" style="--delay:.34s">
-        Un catálogo de +3.000 productos dentales que tardaba 14 segundos en cargar y se rompía en el celular.
-        Clientes que se iban antes de ver el primer precio. Lo reconstruí desde cero —sin perder un producto ni una posición en Google—
-        y pasó de un PageSpeed de 40 a 97.
+        <span data-i18n="orb.hero.sub">Un catálogo de +3.000 productos dentales que tardaba 14 segundos en cargar y se rompía en el celular. Clientes que se iban antes de ver el primer precio. Lo reconstruí desde cero —sin perder un producto ni una posición en Google— y pasó de un PageSpeed de 40 a 97.</span>
       </p>
       <div class="proj-hero__actions reveal-up" style="--delay:.42s">
         <a href="https://orbidental.com" target="_blank" rel="noopener" class="btn btn--gold">
-          Ver sitio en vivo
+          <span data-i18n="orb.live">Ver sitio en vivo</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
           </svg>
@@ -92,19 +93,19 @@
             <span class="proj-metric__arrow">→</span>
             <span class="proj-metric__after">97</span>
           </div>
-          <span class="proj-metric__label">PageSpeed Score — Core Web Vitals aprobado en un mes</span>
+          <span class="proj-metric__label" data-i18n="orb.metric1">PageSpeed Score — Core Web Vitals aprobado en un mes</span>
         </div>
         <div class="proj-metric">
           <span class="proj-metric__big">14 s</span>
-          <span class="proj-metric__label">Lo que tardaba en cargar, antes</span>
+          <span class="proj-metric__label" data-i18n="orb.metric2">Lo que tardaba en cargar, antes</span>
         </div>
         <div class="proj-metric">
           <span class="proj-metric__big">3.000+</span>
-          <span class="proj-metric__label">Productos migrados sin perder SEO</span>
+          <span class="proj-metric__label" data-i18n="orb.metric3">Productos migrados sin perder SEO</span>
         </div>
         <div class="proj-metric">
           <span class="proj-metric__big">100%</span>
-          <span class="proj-metric__label">Responsive — antes no servía en móvil</span>
+          <span class="proj-metric__label" data-i18n="orb.metric4">Responsive — antes no servía en móvil</span>
         </div>
       </div>
     </div>
@@ -115,33 +116,33 @@
     <div class="container">
       <div class="proj-overview__grid">
         <div class="proj-overview__main scroll-reveal">
-          <p class="eyebrow">EL PROBLEMA REAL</p>
-          <h2 class="proj-section__title">Un sitio lento no es un problema técnico. Es un problema <em>de ventas</em>.</h2>
-          <p class="proj-text">El sitio anterior estaba hecho en Divi: arrastraba más de un megabyte de código que nadie usaba en cada visita, no estaba pensado para móvil y, siendo honestos, se veía mal —fondo plano, fotos sueltas, texto sin jerarquía—. Tardaba 14 segundos en abrir.</p>
-          <p class="proj-text--pull">Cada segundo de espera y cada pantalla rota en un celular era un cliente que cerraba la pestaña.</p>
-          <p class="proj-text">Eso pasaba en un catálogo de +3.000 productos donde la gente llega buscando algo puntual y con prisa. Para una empresa que vende online, eso no se ve en el diseño: se ve en las ventas que no entran.</p>
-          <p class="proj-text">Divi no se podía "optimizar": el peso estaba en el propio sistema. Había que sacarlo. Reconstruí todo en código limpio sobre WordPress, migré los más de 3.000 productos sin perder el SEO ya posicionado —un error ahí y se caen meses de ranking— y rehíce la experiencia visual para que el sitio por fin transmitiera la seriedad de la empresa.</p>
+          <p class="eyebrow" data-i18n="orb.problem.eyebrow">EL PROBLEMA REAL</p>
+          <h2 class="proj-section__title" data-i18n="orb.problem.title">Un sitio lento no es un problema técnico. Es un problema <em>de ventas</em>.</h2>
+          <p class="proj-text" data-i18n="orb.problem.p1">El sitio anterior estaba hecho en Divi: arrastraba más de un megabyte de código que nadie usaba en cada visita, no estaba pensado para móvil y, siendo honestos, se veía mal —fondo plano, fotos sueltas, texto sin jerarquía—. Tardaba 14 segundos en abrir.</p>
+          <p class="proj-text--pull" data-i18n="orb.problem.pull">Cada segundo de espera y cada pantalla rota en un celular era un cliente que cerraba la pestaña.</p>
+          <p class="proj-text" data-i18n="orb.problem.p2">Eso pasaba en un catálogo de +3.000 productos donde la gente llega buscando algo puntual y con prisa. Para una empresa que vende online, eso no se ve en el diseño: se ve en las ventas que no entran.</p>
+          <p class="proj-text" data-i18n="orb.problem.p3">Divi no se podía "optimizar": el peso estaba en el propio sistema. Había que sacarlo. Reconstruí todo en código limpio sobre WordPress, migré los más de 3.000 productos sin perder el SEO ya posicionado —un error ahí y se caen meses de ranking— y rehíce la experiencia visual para que el sitio por fin transmitiera la seriedad de la empresa.</p>
         </div>
         <div class="proj-overview__rail scroll-reveal" style="--reveal-delay:.1s">
           <div class="proj-info-card">
-            <span class="proj-info-card__label">Empresa</span>
+            <span class="proj-info-card__label" data-i18n="orb.info.company.label">Empresa</span>
             <span class="proj-info-card__value">Orbidental SAS</span>
           </div>
           <div class="proj-info-card">
-            <span class="proj-info-card__label">Mi rol</span>
-            <span class="proj-info-card__value">A cargo de todo lo digital · 2+ años</span>
+            <span class="proj-info-card__label" data-i18n="orb.info.role.label">Mi rol</span>
+            <span class="proj-info-card__value" data-i18n="orb.info.role.value">A cargo de todo lo digital · 2+ años</span>
           </div>
           <div class="proj-info-card">
-            <span class="proj-info-card__label">Categoría</span>
-            <span class="proj-info-card__value">Insumos dentales · Catálogo +3.000 productos</span>
+            <span class="proj-info-card__label" data-i18n="orb.info.category.label">Categoría</span>
+            <span class="proj-info-card__value" data-i18n="orb.info.category.value">Insumos dentales · Catálogo +3.000 productos</span>
           </div>
           <div class="proj-info-card">
-            <span class="proj-info-card__label">Stack</span>
+            <span class="proj-info-card__label" data-i18n="orb.info.stack.label">Stack</span>
             <span class="proj-info-card__value">WordPress, Kadence, HTML/CSS/JS</span>
           </div>
           <div class="proj-info-card">
-            <span class="proj-info-card__label">Entregables</span>
-            <span class="proj-info-card__value">Rediseño completo, performance, SEO técnico, responsive</span>
+            <span class="proj-info-card__label" data-i18n="orb.info.deliverables.label">Entregables</span>
+            <span class="proj-info-card__value" data-i18n="orb.info.deliverables.value">Rediseño completo, performance, SEO técnico, responsive</span>
           </div>
         </div>
       </div>
@@ -152,23 +153,23 @@
   <section class="proj-proof">
     <div class="container">
       <div class="proj-proof__head scroll-reveal">
-        <p class="eyebrow">LA PRUEBA</p>
-        <h2 class="proj-section__title">De "Desaprobado" a "Aprobado" en un mes<span class="hero__dot">.</span></h2>
-        <p class="proj-text">No es mi opinión: es el propio reporte de Core Web Vitals (Métricas Web Esenciales) de Google. En un mes, el sitio pasó de "Desaprobado" a "Aprobado", y el PageSpeed subió de 40 a 97. En la práctica: 14 segundos de carga convertidos en una apertura casi instantánea.</p>
+        <p class="eyebrow" data-i18n="orb.proof.eyebrow">LA PRUEBA</p>
+        <h2 class="proj-section__title" data-i18n="orb.proof.title">De "Desaprobado" a "Aprobado" en un mes<span class="hero__dot">.</span></h2>
+        <p class="proj-text" data-i18n="orb.proof.text">No es mi opinión: es el propio reporte de Core Web Vitals (Métricas Web Esenciales) de Google. En un mes, el sitio pasó de "Desaprobado" a "Aprobado", y el PageSpeed subió de 40 a 97. En la práctica: 14 segundos de carga convertidos en una apertura casi instantánea.</p>
       </div>
       <div class="proj-proof__split scroll-reveal">
         <div class="proj-proof__half proj-proof__half--before">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035692/Antes_web_speed_ozdykm.jpg" alt="PageSpeed de Orbidental antes del rediseño: 40, en rojo" loading="lazy" />
           <div class="proj-proof__caption">
-            <span class="proj-proof__caption-label">Antes</span>
-            <span class="proj-proof__caption-score">40 — Desaprobado</span>
+            <span class="proj-proof__caption-label" data-i18n="orb.proof.before.label">Antes</span>
+            <span class="proj-proof__caption-score" data-i18n="orb.proof.before.score">40 — Desaprobado</span>
           </div>
         </div>
         <div class="proj-proof__half proj-proof__half--after">
           <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035690/Despu%C3%A9s_web_speed_fz7f60.png" alt="PageSpeed de Orbidental después del rediseño: 97, en verde" loading="lazy" />
           <div class="proj-proof__caption">
-            <span class="proj-proof__caption-label">Después</span>
-            <span class="proj-proof__caption-score">97 — Aprobado</span>
+            <span class="proj-proof__caption-label" data-i18n="orb.proof.after.label">Después</span>
+            <span class="proj-proof__caption-score" data-i18n="orb.proof.after.score">97 — Aprobado</span>
           </div>
         </div>
         <div class="proj-proof__divider"></div>
@@ -181,9 +182,9 @@
   <section class="proj-showcase">
     <div class="container">
       <div class="proj-showcase__header scroll-reveal">
-        <h2 class="proj-section__title">Página de inicio<span class="hero__dot">.</span></h2>
+        <h2 class="proj-section__title" data-i18n="orb.showcase.title"><span data-i18n="orb.showcase.title">Página de inicio</span><span class="hero__dot">.</span></h2>
         <a href="https://orbidental.com" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
-          Ver en vivo
+          <span data-i18n="orb.live.short">Ver en vivo</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
           </svg>
@@ -194,7 +195,7 @@
       <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental — Página de inicio rediseñada" loading="lazy" />
       <div class="proj-showcase__overlay">
         <div class="proj-showcase__text">
-          <p class="proj-text">Antes: fondo plano, sin jerarquía, lento. Ahora: una home coherente y ordenada que se ve profesional en cualquier pantalla y carga al instante. La credibilidad de una empresa también se diseña.</p>
+          <p class="proj-text" data-i18n="orb.showcase.text">Antes: fondo plano, sin jerarquía, lento. Ahora: una home coherente y ordenada que se ve profesional en cualquier pantalla y carga al instante. La credibilidad de una empresa también se diseña.</p>
         </div>
       </div>
     </div>
@@ -204,7 +205,7 @@
   <section class="proj-gallery">
     <div class="container">
       <div class="proj-gallery__header scroll-reveal">
-        <h2 class="proj-section__title">Página de marca<span class="hero__dot">.</span></h2>
+        <h2 class="proj-section__title"><span data-i18n="orb.gallery1.title">Página de marca</span><span class="hero__dot">.</span></h2>
         <a href="https://orbidental.com/eighteeth/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
           Ver en vivo
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -212,7 +213,7 @@
           </svg>
         </a>
       </div>
-      <p class="proj-text scroll-reveal" style="max-width:600px;">Eighteeth es una de las marcas que distribuye Orbidental. En vez de una página genérica más, le construí una experiencia dedicada dentro del sitio —la prueba de que esto no sale de una plantilla, sino que se diseña marca por marca.</p>
+      <p class="proj-text scroll-reveal" style="max-width:600px;" data-i18n="orb.gallery1.text">Eighteeth es una de las marcas que distribuye Orbidental. En vez de una página genérica más, le construí una experiencia dedicada dentro del sitio —la prueba de que esto no sale de una plantilla, sino que se diseña marca por marca.</p>
     </div>
     <div class="proj-carousel scroll-reveal" data-carousel="marca">
       <div class="proj-carousel__track">
@@ -255,16 +256,16 @@
   <section class="proj-gallery">
     <div class="container">
       <div class="proj-gallery__header scroll-reveal">
-        <h2 class="proj-section__title">El prototipo de la futura tienda<span class="hero__dot">.</span></h2>
+        <h2 class="proj-section__title"><span data-i18n="orb.gallery2.title">El prototipo de la futura tienda</span><span class="hero__dot">.</span></h2>
         <!-- Si esta URL no es pública, borra este enlace. Si lo es, queda como "Ver el prototipo". -->
         <a href="https://orbidental.com/acuvision-x/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
-          Ver el prototipo
+          <span data-i18n="orb.prototype.link">Ver el prototipo</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
           </svg>
         </a>
       </div>
-      <p class="proj-text scroll-reveal" style="max-width:600px;">Las páginas de producto actuales son básicas —fondo blanco, una foto, texto sin orden—. El e-commerce real está hoy en desarrollo. Para definir hacia dónde va y alinear a la dirección, diseñé este prototipo de cómo se verá y funcionará la página de producto: coherente, clara y pensada para que el cliente entienda lo que compra y decida con confianza. Es el siguiente paso real de Orbidental — y soy quien lo está construyendo.</p>
+      <p class="proj-text scroll-reveal" style="max-width:600px;" data-i18n="orb.gallery2.text">Las páginas de producto actuales son básicas —fondo blanco, una foto, texto sin orden—. El e-commerce real está hoy en desarrollo. Para definir hacia dónde va y alinear a la dirección, diseñé este prototipo de cómo se verá y funcionará la página de producto: coherente, clara y pensada para que el cliente entienda lo que compra y decida con confianza. Es el siguiente paso real de Orbidental — y soy quien lo está construyendo.</p>
     </div>
     <div class="proj-carousel scroll-reveal" data-carousel="prototipo">
       <div class="proj-carousel__track">
@@ -316,17 +317,17 @@
   <section class="cta-section" id="contacto">
     <div class="container">
       <h2 class="cta-section__title">
-        ¿Tu sitio te parece rápido<span class="hero__dot">?</span>
+        <span data-i18n="orb.cta.title">¿Tu sitio te parece rápido</span><span class="hero__dot">?</span>
       </h2>
-      <p class="cta-section__sub">Ábrelo en un celular con datos, fuera de tu casa. Ahí es donde Orbidental perdía clientes sin enterarse —y donde los pierde la mayoría de las tiendas que "se ven bien". Si tienes dudas, probablemente ya los estás perdiendo. Cuéntame qué vendes y en menos de 24 horas te digo qué te está costando tu sitio actual.</p>
+      <p class="cta-section__sub" data-i18n="orb.cta.sub">Ábrelo en un celular con datos, fuera de tu casa. Ahí es donde Orbidental perdía clientes sin enterarse —y donde los pierde la mayoría de las tiendas que "se ven bien". Si tienes dudas, probablemente ya los estás perdiendo. Cuéntame qué vendes y en menos de 24 horas te digo qué te está costando tu sitio actual.</p>
       <div class="cta-section__actions">
         <button class="btn btn--gold btn--lg" id="whatsappBtn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
           </svg>
-          Escríbeme por WhatsApp
+          <span data-i18n="cta.whatsapp">Escríbeme por WhatsApp</span>
         </button>
-        <a href="/trabajo/" class="btn btn--ghost">Ver más proyectos</a>
+        <a href="/trabajo/" class="btn btn--ghost" data-i18n="orb.cta.more">Ver más proyectos</a>
       </div>
     </div>
   </section>
@@ -334,6 +335,7 @@
 
 
   <script src="/nav.js"></script>
+  <script src="/i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
