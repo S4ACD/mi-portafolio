@@ -289,8 +289,9 @@ img { display: block; max-width: 100%; }
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 .hv2__bg {
@@ -369,7 +370,7 @@ img { display: block; max-width: 100%; }
   position: relative; z-index: 11;
   max-width: 640px;
   padding: 0 24px;
-  margin-left: max(24px, calc((100vw - 1100px) / 2));
+  margin-left: max(24px, calc((100vw - 1200px) / 2));
 }
 @media (max-width: 1023px) {
   .hv2__content { margin-left: 0; max-width: 100%; }
