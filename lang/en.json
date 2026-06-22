@@ -206,5 +206,111 @@
   "tw.cap.05.title": "Digital strategy",
   "tw.cap.05.desc": "Meta and Google Ads set up with the same brand logic, not as an afterthought.",
   "tw.cta.title": "Is your project the next case study",
-  "tw.cta.sub": "I work with brands in Colombia and remotely worldwide. Tell me what you need — I reply within 24 hours."
+  "tw.cta.sub": "I work with brands in Colombia and remotely worldwide. Tell me what you need — I reply within 24 hours.",
+  "contact.select.service": [
+    {
+      "value": "",
+      "label": "Select a service"
+    },
+    {
+      "value": "Diseño y desarrollo web",
+      "label": "Web design & development"
+    },
+    {
+      "value": "Identidad visual / Branding",
+      "label": "Visual identity / Branding"
+    },
+    {
+      "value": "Diseño gráfico / Social media",
+      "label": "Graphic design / Social media"
+    },
+    {
+      "value": "Fotografía de producto",
+      "label": "Product photography"
+    },
+    {
+      "value": "Pauta digital (Meta / Google Ads)",
+      "label": "Digital ads (Meta / Google Ads)"
+    },
+    {
+      "value": "Paquete integral",
+      "label": "Full package"
+    },
+    {
+      "value": "Otro / No sé aún",
+      "label": "Other / Not sure yet"
+    }
+  ],
+  "contact.select.budget": [
+    {
+      "value": "",
+      "label": "Select a range"
+    },
+    {
+      "value": "Menos de $500 USD",
+      "label": "Under $500 USD"
+    },
+    {
+      "value": "$500 – $1,000 USD",
+      "label": "$500 – $1,000 USD"
+    },
+    {
+      "value": "$1,000 – $2,500 USD",
+      "label": "$1,000 – $2,500 USD"
+    },
+    {
+      "value": "$2,500 – $5,000 USD",
+      "label": "$2,500 – $5,000 USD"
+    },
+    {
+      "value": "Más de $5,000 USD",
+      "label": "Over $5,000 USD"
+    },
+    {
+      "value": "Aún no lo tengo claro",
+      "label": "Not sure yet"
+    }
+  ],
+  "orb.back": "Back to projects",
+  "orb.tag1": "Web design",
+  "orb.tag2": "Technical SEO",
+  "orb.diagnosis": "PageSpeed · before / after",
+  "orb.hero.sub": "A catalog of 3,000+ dental products that took 14 seconds to load and broke on mobile. Customers leaving before seeing a single price. I rebuilt it from scratch — without losing a single product or a single Google ranking — and took PageSpeed from 40 to 97.",
+  "orb.live": "View live site",
+  "orb.live.short": "View live",
+  "orb.metric1": "PageSpeed Score — Core Web Vitals passed in one month",
+  "orb.metric2": "How long it took to load, before",
+  "orb.metric3": "Products migrated without losing SEO",
+  "orb.metric4": "Responsive — before, it didn't work on mobile",
+  "orb.problem.eyebrow": "THE REAL PROBLEM",
+  "orb.problem.title": "A slow website isn't a technical problem. It's a <em>sales</em> problem.",
+  "orb.problem.p1": "The previous site was built on Divi: it dragged over a megabyte of unused code on every visit, wasn't designed for mobile, and — honestly — looked bad. Flat background, scattered photos, no visual hierarchy. It took 14 seconds to open.",
+  "orb.problem.pull": "Every second of waiting and every broken screen on a phone was a customer closing the tab.",
+  "orb.problem.p2": "This was happening on a 3,000+ product catalog where people arrive looking for something specific and in a hurry. For a business selling online, that doesn't show up in the design — it shows up in the sales that never come in.",
+  "orb.problem.p3": "Divi couldn't be \"optimized\" — the weight was in the system itself. It had to go. I rebuilt everything in clean code on WordPress, migrated all 3,000+ products without losing existing SEO rankings — one mistake there and months of positioning collapse — and redesigned the visual experience so the site finally conveyed the seriousness of the company.",
+  "orb.info.company.label": "Company",
+  "orb.info.role.label": "My role",
+  "orb.info.role.value": "In charge of all digital · 2+ years",
+  "orb.info.category.label": "Category",
+  "orb.info.category.value": "Dental supplies · 3,000+ product catalog",
+  "orb.info.stack.label": "Stack",
+  "orb.info.deliverables.label": "Deliverables",
+  "orb.info.deliverables.value": "Full redesign, performance, technical SEO, responsive",
+  "orb.proof.eyebrow": "THE PROOF",
+  "orb.proof.title": "From \"Failed\" to \"Passed\" in one month<span class=\"hero__dot\">.</span>",
+  "orb.proof.text": "This isn't my opinion — it's Google's own Core Web Vitals report. In one month the site went from \"Failed\" to \"Passed\", and PageSpeed climbed from 40 to 97. In practice: 14 seconds of load time turned into a near-instant open.",
+  "orb.proof.before.label": "Before",
+  "orb.proof.before.score": "40 — Failed",
+  "orb.proof.after.label": "After",
+  "orb.proof.after.score": "97 — Passed",
+  "orb.showcase.title": "Homepage",
+  "orb.showcase.text": "Before: flat background, no hierarchy, slow. Now: a coherent, organized homepage that looks professional on any screen and loads instantly. A company's credibility is designed too.",
+  "orb.gallery1.title": "Brand page",
+  "orb.gallery1.text": "Eighteeth is one of the brands Orbidental distributes. Instead of another generic page, I built a dedicated experience inside the site — proof that this doesn't come from a template, but is designed brand by brand.",
+  "orb.gallery2.title": "The prototype for the future store",
+  "orb.prototype.link": "View prototype",
+  "orb.gallery2.text": "The current product pages are basic — white background, one photo, unstructured text. The real e-commerce is now in development. To define where it's headed and align the team, I designed this prototype of how the product page will look and work: clear, coherent, and built so customers understand what they're buying and feel confident deciding. This is Orbidental's real next step — and I'm the one building it.",
+  "orb.cta.title": "Think your site is fast enough",
+  "orb.cta.sub": "Open it on a phone with mobile data, away from your home network. That's where Orbidental was losing customers without knowing it — and where most stores that \"look fine\" lose theirs too. If you're not sure, you're probably already losing them. Tell me what you sell and within 24 hours I'll tell you exactly what your current site is costing you.",
+  "orb.cta.more": "View more projects"
 }
