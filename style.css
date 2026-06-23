@@ -1856,9 +1856,8 @@ input, textarea {
   background: var(--hv2-void);
   color: var(--hv2-ink);
   font-family: var(--hv2-font-body);
-  isolation: isolate; /* contains the `mix-blend-mode: lighten` layers
-                          to this section, so they never blend with the
-                          fixed nav or sections below */
+  perspective: 1200px;
+  isolation: isolate;
 }
 
 /* ──────────────────────────────────────────────────────────────────
@@ -2076,7 +2075,7 @@ input, textarea {
 }
 /* New: subtle cursor-follow layer, sits between the static position and
    the scroll-rise/idle-float layers so it never fights their transforms */
-.hv2__portrait-tilt { will-change: transform; }
+.hv2__portrait-tilt { will-change: transform; transform-style: preserve-3d; }
 .hv2__portrait-parallax,
 .hv2__portrait-float { will-change: transform; }
 .hv2__portrait-float { transform-style: preserve-3d; }
