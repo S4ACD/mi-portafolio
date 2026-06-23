@@ -719,5 +719,13 @@
   "tag.role.jungla": "Discoteca · Entretenimiento · Bogotá",
   "tag.role.rebel": "Moda · Streetwear urbano · Bogotá",
   "tag.illustrator": "Illustrator",
-  "tag.uiux": "UI / UX"
+  "tag.uiux": "UI / UX",
+  "orb.cwv.eyebrow": "UN AÑO DESPUÉS",
+  "orb.cwv.title": "No fue suerte de un mes. La mejora <em>se mantiene</em>",
+  "orb.cwv.text": "Cualquiera puede tener un buen número un día. Lo difícil es sostenerlo. El historial de Core Web Vitals de Google muestra que Orbidental lleva meses con métricas aprobadas y en mejora continua — celular: 90 rendimiento, 96 accesibilidad, 100 SEO. Eso no pasa con un rediseño superficial.",
+  "orb.cwv.caption": "Historial de Core Web Vitals — mejora sostenida durante más de un año. Fuente: Google Search Console.",
+  "orb.cwv.score1": "Rendimiento en celular — hoy",
+  "orb.cwv.score2": "Accesibilidad",
+  "orb.cwv.score3": "SEO técnico",
+  "orb.cwv.score4": "LCP en celular — carga casi instantánea"
 }
