@@ -285,33 +285,14 @@ img { display: block; max-width: 100%; }
 /* ═══════════════════════════════════════════════════════════════
    HERO v2 — Cosmos Editorial
 ═══════════════════════════════════════════════════════════════ */
-/* ═══════════════════════════════════════════════════════════════
-   HERO v2 — Cosmos Editorial — RECONSTRUIDO
-   
-   Arquitectura de capas (z-index):
-   0  hv2__bg        → fondo negro
-   1  hv2__grain     → textura
-   2  hv2__fog       → niebla dorada
-   3  hv2__particles → partículas
-   4  hv2__rings     → órbitas SVG
-   5  hv2__stage--far  → rocas lejanas (borrosas)
-   6  hv2__portrait    → retrato
-   7  hv2__stage--near → rocas cercanas (delante de las rocas far, detrás del texto)
-   9  hv2__side      → texto lateral vertical
-   9  hv2__badge     → badge circular
-   10 hv2__content   → texto principal y botones (siempre encima)
-═══════════════════════════════════════════════════════════════ */
-
 .hv2 {
   position: relative;
   min-height: 100svh;
   display: flex;
-  align-items: flex-end;          /* ancla contenido abajo → las rocas emergen naturalmente */
+  align-items: flex-end;
   overflow: hidden;
-  padding-bottom: 120px;          /* espacio para que el contenido respire sobre las rocas */
+  padding-bottom: 80px;
 }
-
-/* ── Fondo ── */
 .hv2__bg {
   position: absolute; inset: 0; z-index: 0;
   background: var(--hv2-void);
@@ -324,18 +305,17 @@ img { display: block; max-width: 100%; }
 }
 .hv2__fog {
   position: absolute; inset: 0; z-index: 2; pointer-events: none;
-  background:
-    radial-gradient(ellipse 70% 60% at 58% 42%, rgba(205,183,142,0.055) 0%, transparent 65%),
+  background: radial-gradient(ellipse 70% 60% at 58% 42%, rgba(205,183,142,0.055) 0%, transparent 65%),
     radial-gradient(ellipse 55% 50% at 30% 70%, rgba(205,183,142,0.03) 0%, transparent 60%);
 }
 .hv2__particles { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
 
-/* ── Órbitas SVG ── */
 .hv2__rings {
   position: absolute; z-index: 4;
-  width: clamp(320px, 55vw, 750px);
-  top: 50%; right: -8%;
-  transform: translateY(-50%);
+  width: clamp(360px, 46vw, 640px);
+  /* Centrada detrás del retrato (el retrato vive en right:8%) */
+  top: 46%; right: 8%;
+  transform: translate(42%, -50%);
   pointer-events: none;
   fill: none;
   stroke: rgba(205,183,142,0.12);
@@ -346,51 +326,45 @@ img { display: block; max-width: 100%; }
 .hv2__glint-mid   { fill: rgba(205,183,142,0.45); }
 .hv2__glint-core  { fill: #f4efe6; }
 
-/* ── Stages de rocas ── */
 .hv2__stage { position: absolute; inset: 0; pointer-events: none; }
 .hv2__stage--far  { z-index: 5; }
-.hv2__stage--near { z-index: 7; }  /* delante del retrato pero detrás del contenido */
+.hv2__stage--near { z-index: 8; }
 
 .hv2__rock { position: absolute; }
 .hv2__rock-parallax { will-change: transform; }
-.hv2__rock-float    { will-change: transform; }
-.hv2__rock img      { display: block; }
+.hv2__rock-float { will-change: transform; }
+.hv2__rock img { display: block; }
 .hv2__rock--flip img { transform: scaleX(-1); }
 
-/* Posiciones de rocas — emergen desde el borde inferior */
-.hv2__rock--far1  { bottom: -40px; left: 2%;   opacity: 0.35; filter: blur(1.5px); }
-.hv2__rock--far2  { bottom: -80px; right: 5%;  opacity: 0.28; filter: blur(2px);   }
-.hv2__rock--far3  { bottom: -60px; left: 38%;  opacity: 0.22; filter: blur(2.5px); }
-.hv2__rock--near1 { bottom: -30px; left: 28%;  opacity: 0.85; }
-.hv2__rock--near2 { bottom: -50px; right: 22%; opacity: 0.9;  }
-.hv2__rock--near3 { bottom: -40px; left: -2%;  opacity: 0.7;  }
-.hv2__rock--near4 { bottom: -20px; right: 8%;  opacity: 0.8;  }
+/* Rock positions */
+.hv2__rock--far1  { bottom: -40px; left: 2%; opacity: 0.35; filter: blur(1.5px); }
+.hv2__rock--far2  { bottom: -80px; right: 5%; opacity: 0.28; filter: blur(2px); }
+.hv2__rock--far3  { bottom: -60px; left: 38%; opacity: 0.22; filter: blur(2.5px); }
+.hv2__rock--near1 { bottom: -30px; left: 28%; opacity: 0.85; }
+.hv2__rock--near2 { bottom: -50px; right: 22%; opacity: 0.9; }
+.hv2__rock--near3 { bottom: -40px; left: -2%; opacity: 0.7; }
+.hv2__rock--near4 { bottom: -20px; right: 8%; opacity: 0.8; }
 .hv2__rock--near5 { bottom: -60px; right: 42%; opacity: 0.75; }
 
-/* ── Retrato — desktop: absoluto a la derecha ── */
 .hv2__portrait {
   position: absolute;
   bottom: 0;
-  right: 5%;
+  right: 8%;
   z-index: 6;
-  width: clamp(280px, 38vw, 520px);
+  width: clamp(240px, 36vw, 480px);
   pointer-events: none;
 }
-.hv2__portrait-tilt,
-.hv2__portrait-parallax,
-.hv2__portrait-float { will-change: transform; }
+.hv2__portrait-tilt, .hv2__portrait-parallax, .hv2__portrait-float { will-change: transform; }
 .hv2__portrait img { width: 100%; height: auto; display: block; }
 
-/* ── Contenido — siempre encima de todo ── */
 .hv2__content {
-  position: relative;
-  z-index: 10;
-  max-width: 580px;
+  position: relative; z-index: 10;
+  width: min(540px, 46vw);
+  max-width: 540px;
   padding: 0 24px;
-  margin-left: max(40px, calc((100vw - 1180px) / 2));
+  margin-left: max(48px, calc((100vw - 1240px) / 2));
 }
 
-/* ── Textos del hero ── */
 .hv2__status {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--hv2-font-ui);
@@ -408,30 +382,37 @@ img { display: block; max-width: 100%; }
   0%,100% { box-shadow: 0 0 0 3px rgba(74,222,128,0.2); }
   50%      { box-shadow: 0 0 0 6px rgba(74,222,128,0.08); }
 }
+
 .hv2__kicker {
   font-family: var(--hv2-font-ui);
   font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--hv2-gold);
   margin-bottom: 16px;
 }
+
 .hv2__title {
   font-family: var(--hv2-font-display);
-  font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+  font-size: clamp(2.6rem, 6vw, 5.2rem);
   font-weight: 400; line-height: 1.02;
   letter-spacing: -0.02em; color: #fff;
   margin-bottom: 24px;
 }
-.hv2__title-line   { display: block; overflow: hidden; }
-.hv2__title-script { display: block; font-style: italic; color: var(--hv2-gold); }
+.hv2__title-line { display: block; overflow: hidden; }
+.hv2__title-script {
+  display: block;
+  font-style: italic; color: var(--hv2-gold);
+}
+
 .hv2__desc {
   font-family: var(--hv2-font-body);
-  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   line-height: 1.7; color: var(--hv2-ink-dim);
-  max-width: 460px; margin-bottom: 36px;
+  max-width: 480px; margin-bottom: 36px;
 }
+
 .hv2__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
 
-/* ── Botones hero ── */
+/* HV2 buttons */
 .hv2-btn {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--hv2-font-ui);
@@ -456,7 +437,6 @@ img { display: block; max-width: 100%; }
   transform: translateY(-2px);
 }
 
-/* ── Price signal ── */
 .hv2__price-signal {
   font-family: var(--hv2-font-ui);
   font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
@@ -465,7 +445,6 @@ img { display: block; max-width: 100%; }
 }
 .hv2__price-signal-dot { color: var(--hv2-gold); opacity: 0.5; }
 
-/* ── Elementos laterales ── */
 .hv2__side {
   position: absolute; z-index: 9;
   font-family: var(--hv2-font-ui);
@@ -474,13 +453,14 @@ img { display: block; max-width: 100%; }
 }
 .hv2__side--scroll { bottom: 32px; left: 24px; writing-mode: vertical-rl; }
 .hv2__side--tags {
-  bottom: 32px; right: 24px;
-  display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+  top: 50%; right: 24px;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
 }
+@media (max-width: 767px) { .hv2__side { display: none; } }
 
-/* ── Badge circular ── */
 .hv2__badge {
-  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+  position: absolute; bottom: 40px; right: 7%;
   z-index: 9; width: 80px; height: 80px;
 }
 .hv2__badge svg {
@@ -500,68 +480,59 @@ img { display: block; max-width: 100%; }
   background: var(--hv2-gold);
 }
 @keyframes badgeSpin { to { transform: rotate(360deg); } }
+@media (max-width: 767px) { .hv2__badge { display: none; } }
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE HERO
+   HERO MOBILE — texto primero, retrato al final
 ═══════════════════════════════════════════════════════════════ */
-
-/* Tablet: retrato se achica */
-@media (max-width: 1100px) {
-  .hv2__portrait { width: clamp(240px, 34vw, 400px); right: 2%; }
-  .hv2__content  { max-width: 520px; }
-}
-
-/* Mobile: layout en columna, retrato arriba centrado */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .hv2 {
-    align-items: flex-start;      /* en mobile empieza desde arriba */
     flex-direction: column;
-    padding-top: 80px;            /* espacio para el nav */
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 96px;
     padding-bottom: 60px;
-    min-height: 100svh;
   }
-
-  /* Retrato: sale del flujo absoluto y se convierte en elemento en flujo */
+  /* Texto primero */
+  .hv2__content {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0 24px;
+  }
+  /* Retrato al final */
   .hv2__portrait {
+    order: 2;
     position: relative;
     right: auto; bottom: auto;
-    width: clamp(160px, 50vw, 240px);
-    margin: 0 auto 8px;
-    z-index: 6;
-    order: 1;                     /* va al final en mobile */
+    width: clamp(200px, 56vw, 320px);
+    margin: 32px auto 0;
   }
-
-  .hv2__content {
-    margin-left: 0;
-    max-width: 100%;
-    padding: 0 20px;
-    z-index: 10;
-    position: relative;
+  /* Órbita pequeña, detrás, sin estorbar */
+  .hv2__rings {
+    width: clamp(300px, 80vw, 460px);
+    top: auto; bottom: 8%; right: 50%;
+    transform: translateX(50%);
+    opacity: 0.6;
   }
-
-  .hv2__title {
-    font-size: clamp(2.2rem, 8vw, 3rem);
-  }
-
-  .hv2__desc {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-
-  /* Rocas en mobile: más pequeñas y menos intrusivas */
-  .hv2__stage--far  { opacity: 0.5; }
-  .hv2__stage--near { opacity: 0.6; z-index: 3; } /* detrás del contenido en mobile */
-
-  /* Ocultar elementos decorativos laterales en mobile */
+  /* Ocultar decoraciones laterales */
   .hv2__side  { display: none; }
   .hv2__badge { display: none; }
-  .hv2__rings { width: clamp(280px, 90vw, 420px); right: -20%; top: 10%; }
+  /* Rocas más sutiles */
+  .hv2__stage--far  { opacity: 0.4; }
+  .hv2__stage--near { opacity: 0.55; }
 }
 
-/* Mobile pequeño */
+@media (max-width: 767px) {
+  .hv2 { padding-top: 88px; }
+  .hv2__title { font-size: clamp(2.1rem, 8vw, 3rem); }
+  .hv2__desc  { font-size: 0.95rem; max-width: 100%; }
+}
+
 @media (max-width: 400px) {
-  .hv2__portrait { width: 45vw; }
-  .hv2__title { font-size: 2rem; }
+  .hv2__title { font-size: 1.95rem; }
+  .hv2__portrait { width: 58vw; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1848,15 +1819,4 @@ body { animation: pageFadeIn 0.4s ease; }
   padding: 10px 14px;
   font-family: var(--hv2-font-ui);
   font-size: 10px; color: var(--hv2-ink-faint); letter-spacing: 0.05em;
-}
-
-@media (max-width: 900px) {
-  .proj-overview__rail {
-    padding: 32px 0 0 0;
-    border-top: 1px solid rgba(244,239,230,0.1);
-  }
-  .proj-info-card {
-    width: 100%;
-    box-sizing: border-box;
-  }
 }
