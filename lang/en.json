@@ -1,8 +1,8 @@
 {
-  "meta.title": "Alexander Caro | Freelance Web Designer & Developer — Professional Websites",
-  "meta.description": "Freelance web designer and developer based in Bogotá. I build fast, custom websites for businesses across Latin America, the US, and Europe. PageSpeed 97. Free consultation.",
+  "meta.title": "Alexander Caro | Freelance Web Designer & Developer — Fast, Custom Websites",
+  "meta.description": "Freelance web designer and developer based in Bogotá. I build fast, custom websites for businesses across Latin America, the US, and Europe. Real results: PageSpeed 97, Core Web Vitals passed. Free consultation.",
   "meta.og.title": "Alexander Caro | Freelance Web Designer & Developer",
-  "meta.og.description": "Custom websites that load fast, rank well, and convert. Design, code, and strategy — one person, zero middlemen. PageSpeed 97. Based in Bogotá, available worldwide.",
+  "meta.og.description": "Custom websites that load in under 2 seconds, rank on Google, and convert visitors into clients. Design, code, and strategy — one person, zero middlemen. Based in Bogotá, available worldwide.",
   "nav.home": "Home",
   "nav.work": "Work",
   "nav.services": "Services",
@@ -719,5 +719,13 @@
   "tag.role.jungla": "Nightclub · Entertainment · Bogotá",
   "tag.role.rebel": "Fashion · Urban streetwear · Bogotá",
   "tag.illustrator": "Illustrator",
-  "tag.uiux": "UI / UX"
+  "tag.uiux": "UI / UX",
+  "orb.cwv.eyebrow": "ONE YEAR LATER",
+  "orb.cwv.title": "It wasn't a one-month fluke. The improvement <em>has held</em>",
+  "orb.cwv.text": "Anyone can get a good number for a day. The hard part is sustaining it. Google's Core Web Vitals history shows Orbidental has maintained passing scores for months and keeps improving — mobile: 90 performance, 96 accessibility, 100 SEO. That doesn't happen with a superficial redesign.",
+  "orb.cwv.caption": "Core Web Vitals history — sustained improvement for over a year. Source: Google Search Console.",
+  "orb.cwv.score1": "Mobile performance — today",
+  "orb.cwv.score2": "Accessibility",
+  "orb.cwv.score3": "Technical SEO",
+  "orb.cwv.score4": "Mobile LCP — near-instant load"
 }
