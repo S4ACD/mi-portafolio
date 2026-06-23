@@ -430,12 +430,15 @@
   position: relative; overflow: hidden;
   aspect-ratio: 1;
 }
+.sm-phone__carousel-wrap--vertical { aspect-ratio: 9/16; }
 .sm-phone__carousel-track {
   display: flex;
   transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
 }
 .sm-phone__slide { flex-shrink: 0; width: 100%; }
-.sm-phone__slide img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 1; }
+.sm-phone__slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sm-phone__carousel-wrap--vertical .sm-phone__slide img { aspect-ratio: 9/16; }
+.sm-phone__carousel-wrap:not(.sm-phone__carousel-wrap--vertical) .sm-phone__slide img { aspect-ratio: 1; }
 
 /* Carousel buttons */
 .sm-carousel-btn {
