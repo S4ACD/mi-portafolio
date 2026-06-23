@@ -3,187 +3,289 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios — Diseño y Desarrollo Web Bogotá | Alexander Caro</title>
-  <meta name="description" content="Diseño y desarrollo web, identidad visual y diseño gráfico en Bogotá. Una persona para todo tu proyecto digital, sin intermediarios. Proyectos desde 500 USD." />
-  <meta name="keywords" content="servicios diseño web bogotá, desarrollador freelance colombia, identidad visual bogotá, diseño gráfico freelance, agencia digital bogotá, diseñador web freelance" />
+  <title>Sobre mí — Alexander Caro</title>
+  <meta name="description" content="Diseñador, desarrollador y estratega visual en Bogotá. Trabajas directo conmigo, sin intermediarios — diseño, código y estrategia en una sola persona." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://alexandercaro.com/servicios/" />
-  <link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/" />
-  <link rel="alternate" hreflang="en" href="https://alexandercaro.com/servicios/" />
-  <link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/" />
+  <link rel="canonical" href="https://alexandercaro.com/sobre-mi/" />
+  <link rel="alternate" hreflang="es" href="https://alexandercaro.com/sobre-mi/" />
+  <link rel="alternate" hreflang="en" href="https://alexandercaro.com/sobre-mi/" />
+  <link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/sobre-mi/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://alexandercaro.com/servicios/" />
-  <meta property="og:title" content="Servicios — Diseño y Desarrollo Web Bogotá | Alexander Caro" />
-  <meta property="og:description" content="Diseño y desarrollo web, identidad visual y diseño gráfico. Una persona para todo tu proyecto digital." />
-  <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
-  <meta property="og:locale" content="es_CO" />
-  <meta property="og:site_name" content="Alexander Caro" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Servicios — Diseño y Desarrollo Web Bogotá" />
-  <meta name="twitter:description" content="Diseño y desarrollo web, identidad visual y diseño gráfico, sin intermediarios." />
-
-  <!-- JSON-LD: ItemList con los 3 servicios reales (Service schemas individuales viven en cada subpágina) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Servicios — Alexander Caro",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "url": "https://alexandercaro.com/servicios/diseno-web/",
-        "name": "Diseño y desarrollo web"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "url": "https://alexandercaro.com/servicios/identidad-visual/",
-        "name": "Identidad visual y branding"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "url": "https://alexandercaro.com/servicios/diseno-grafico-freelance/",
-        "name": "Diseño gráfico y social media"
-      }
-    ]
-  }
-  </script>
-
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="preload" as="image" href="../assets/rocks/saturn-gold.webp" fetchpriority="high" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
 </head>
 <body>
 
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- HERO -->
-  <section class="srv-hero" style="min-height:62svh">
-    <canvas id="heroCanvas" class="hero__canvas"></canvas>
-    <div class="container" style="position:relative;z-index:2;padding-top:120px;padding-bottom:50px">
-      <a href="/" class="back-link reveal-up">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        <span data-i18n="sv.back">Volver al inicio</span>
-      </a>
-      <p class="eyebrow reveal-up" style="--delay:.1s" data-i18n="sv.eyebrow">SERVICIOS</p>
-      <h1 class="srv-hero__title reveal-up" style="--delay:.18s">
-        <span data-i18n="sv.hero.title1">Diseño, código</span><br/><span class="srv-hero__accent" data-i18n="sv.hero.title2">y estrategia</span><span class="hero__dot">.</span>
-      </h1>
-      <p class="srv-hero__sub reveal-up" style="--delay:.28s">
-        <span data-i18n="sv.hero.sub">Tres disciplinas, una sola persona. Sin traspasos entre equipos, sin intermediarios — hablás directo con quien diseña y programa tu proyecto.</span>
-      </p>
+  <!-- HERO — simple, robusto: un solo grid de 2 columnas, sin wrappers anidados ni breakpoints olvidados -->
+  <section class="ah-hero">
+    <div class="ah-hero__bg" aria-hidden="true"></div>
+    <div class="ah-hero__glow" aria-hidden="true"></div>
+    <div class="ah-hero__glow--warm" aria-hidden="true"></div>
+    <div class="ah-starfield" aria-hidden="true">
+      <i class="ah-star ah-star--small" style="left:63.38%;top:4.4%;animation-delay:-1.65s"></i>
+      <i class="ah-star ah-star--small" style="left:23.43%;top:72.7%;animation-delay:-4.06s"></i>
+      <i class="ah-star ah-star--small" style="left:87.65%;top:10.35%;animation-delay:-2.53s"></i>
+      <i class="ah-star ah-star--small" style="left:4.86%;top:22.99%;animation-delay:-3.03s"></i>
+      <i class="ah-star ah-star--small" style="left:4.55%;top:21.09%;animation-delay:-3.9s"></i>
+      <i class="ah-star ah-star--small" style="left:54.31%;top:23.16%;animation-delay:-3.54s"></i>
+      <i class="ah-star ah-star--small" style="left:79.71%;top:2.62%;animation-delay:-4.83s"></i>
+      <i class="ah-star ah-star--small" style="left:69.02%;top:34.66%;animation-delay:-0.93s"></i>
+      <i class="ah-star ah-star--small" style="left:93.89%;top:34.31%;animation-delay:-0.56s"></i>
+      <i class="ah-star ah-star--small" style="left:11.28%;top:83.36%;animation-delay:-3.62s"></i>
+      <i class="ah-star ah-star--small" style="left:79.48%;top:72.05%;animation-delay:-3.22s"></i>
+      <i class="ah-star ah-star--small" style="left:95.42%;top:38.34%;animation-delay:-3.31s"></i>
+      <i class="ah-star ah-star--small" style="left:81.62%;top:61.38%;animation-delay:-5.17s"></i>
+      <i class="ah-star ah-star--small" style="left:57.43%;top:69.64%;animation-delay:-0.27s"></i>
+      <i class="ah-star ah-star--small" style="left:23.88%;top:29.78%;animation-delay:-0.48s"></i>
+      <i class="ah-star ah-star--small" style="left:24.35%;top:11.7%;animation-delay:-1.67s"></i>
+      <i class="ah-star ah-star--small" style="left:63.03%;top:37.02%;animation-delay:-2.22s"></i>
+      <i class="ah-star ah-star--small" style="left:22.11%;top:27.63%;animation-delay:-5.62s"></i>
+      <i class="ah-star ah-star--small" style="left:64.21%;top:60.48%;animation-delay:-1.03s"></i>
+      <i class="ah-star ah-star--small" style="left:72.0%;top:17.69%;animation-delay:-2.28s"></i>
+      <i class="ah-star ah-star--small" style="left:96.99%;top:63.44%;animation-delay:-3.34s"></i>
+      <i class="ah-star ah-star--small" style="left:67.72%;top:82.91%;animation-delay:-4.66s"></i>
+      <i class="ah-star ah-star--small" style="left:23.99%;top:5.08%;animation-delay:-1.89s"></i>
+      <i class="ah-star ah-star--small" style="left:27.7%;top:22.25%;animation-delay:-5.66s"></i>
+      <i class="ah-star ah-star--small" style="left:86.13%;top:32.21%;animation-delay:-3.93s"></i>
+      <i class="ah-star ah-star--small" style="left:39.98%;top:89.8%;animation-delay:-2.75s"></i>
+      <i class="ah-star ah-star--small" style="left:27.43%;top:25.68%;animation-delay:-3.37s"></i>
+      <i class="ah-star ah-star--small" style="left:27.22%;top:58.12%;animation-delay:-5.39s"></i>
+      <i class="ah-star ah-star--small" style="left:40.34%;top:23.05%;animation-delay:-5.99s"></i>
+      <i class="ah-star ah-star--small" style="left:50.91%;top:10.73%;animation-delay:-0.28s"></i>
+      <i class="ah-star ah-star--small" style="left:12.53%;top:62.23%;animation-delay:-4.75s"></i>
+      <i class="ah-star ah-star--small" style="left:42.53%;top:8.1%;animation-delay:-2.29s"></i>
+      <i class="ah-star ah-star--small" style="left:97.63%;top:52.79%;animation-delay:-5.83s"></i>
+      <i class="ah-star ah-star--small" style="left:84.63%;top:3.1%;animation-delay:-4.32s"></i>
+      <i class="ah-star ah-star--small" style="left:67.44%;top:53.55%;animation-delay:-1.6s"></i>
+      <i class="ah-star ah-star--small" style="left:63.53%;top:12.71%;animation-delay:-2.61s"></i>
+      <i class="ah-star ah-star--small" style="left:45.56%;top:93.57%;animation-delay:-5.26s"></i>
+      <i class="ah-star ah-star--small" style="left:27.29%;top:50.06%;animation-delay:-1.07s"></i>
+      <i class="ah-star ah-star--small" style="left:89.61%;top:85.57%;animation-delay:-1.79s"></i>
+      <i class="ah-star ah-star--small" style="left:63.34%;top:60.46%;animation-delay:-0.92s"></i>
+      <i class="ah-star ah-star--small" style="left:75.2%;top:53.78%;animation-delay:-4.67s"></i>
+      <i class="ah-star ah-star--small" style="left:52.91%;top:2.05%;animation-delay:-1.94s"></i>
+      <i class="ah-star ah-star--small" style="left:3.87%;top:91.19%;animation-delay:-5.27s"></i>
+      <i class="ah-star ah-star--small" style="left:81.84%;top:31.52%;animation-delay:-0.35s"></i>
+      <i class="ah-star ah-star--small" style="left:86.29%;top:92.91%;animation-delay:-0.51s"></i>
+      <i class="ah-star ah-star--small" style="left:48.66%;top:8.64%;animation-delay:-4.56s"></i>
+      <i class="ah-star ah-star--small" style="left:75.52%;top:14.33%;animation-delay:-2.85s"></i>
+      <i class="ah-star ah-star--small" style="left:54.78%;top:27.45%;animation-delay:-5.23s"></i>
+      <i class="ah-star ah-star--small" style="left:42.62%;top:22.33%;animation-delay:-3.24s"></i>
+      <i class="ah-star ah-star--small" style="left:72.07%;top:21.31%;animation-delay:-1.87s"></i>
+      <i class="ah-star ah-star--small" style="left:97.53%;top:64.39%;animation-delay:-2.63s"></i>
+      <i class="ah-star ah-star--small" style="left:51.69%;top:13.62%;animation-delay:-1.35s"></i>
+      <i class="ah-star ah-star--small" style="left:34.46%;top:58.48%;animation-delay:-1.38s"></i>
+      <i class="ah-star ah-star--small" style="left:23.14%;top:8.82%;animation-delay:-3.79s"></i>
+      <i class="ah-star ah-star--small" style="left:23.98%;top:88.92%;animation-delay:-5.16s"></i>
+      <i class="ah-star ah-star--medium" style="left:8.8%;top:24.85%;animation-delay:-4.01s"></i>
+      <i class="ah-star ah-star--medium" style="left:22.57%;top:14.7%;animation-delay:-5.61s"></i>
+      <i class="ah-star ah-star--medium" style="left:56.82%;top:47.38%;animation-delay:-4.71s"></i>
+      <i class="ah-star ah-star--medium" style="left:79.52%;top:20.28%;animation-delay:-0.58s"></i>
+      <i class="ah-star ah-star--medium" style="left:43.38%;top:42.66%;animation-delay:-2.8s"></i>
+      <i class="ah-star ah-star--medium" style="left:71.99%;top:66.64%;animation-delay:-5.9s"></i>
+      <i class="ah-star ah-star--medium" style="left:11.45%;top:40.65%;animation-delay:-2.04s"></i>
+      <i class="ah-star ah-star--medium" style="left:84.72%;top:25.87%;animation-delay:-1.14s"></i>
+      <i class="ah-star ah-star--medium" style="left:45.07%;top:42.5%;animation-delay:-1.67s"></i>
+      <i class="ah-star ah-star--medium" style="left:25.98%;top:90.63%;animation-delay:-2.66s"></i>
+      <i class="ah-star ah-star--medium" style="left:84.69%;top:54.83%;animation-delay:-0.3s"></i>
+      <i class="ah-star ah-star--medium" style="left:97.93%;top:82.26%;animation-delay:-5.81s"></i>
+      <i class="ah-star ah-star--medium" style="left:90.93%;top:83.47%;animation-delay:-1.0s"></i>
+      <i class="ah-star ah-star--medium" style="left:48.62%;top:22.52%;animation-delay:-2.41s"></i>
+      <i class="ah-star ah-star--medium" style="left:7.63%;top:38.38%;animation-delay:-5.91s"></i>
+      <i class="ah-star ah-star--medium" style="left:27.46%;top:77.27%;animation-delay:-2.73s"></i>
+      <i class="ah-star ah-star--medium" style="left:42.61%;top:93.9%;animation-delay:-5.97s"></i>
+      <i class="ah-star ah-star--medium" style="left:55.35%;top:70.97%;animation-delay:-0.93s"></i>
+      <i class="ah-star ah-star--medium" style="left:30.48%;top:95.0%;animation-delay:-3.48s"></i>
+      <i class="ah-star ah-star--medium" style="left:54.05%;top:73.81%;animation-delay:-0.34s"></i>
+      <i class="ah-star ah-star--medium" style="left:58.08%;top:50.27%;animation-delay:-5.12s"></i>
+      <i class="ah-star ah-star--medium" style="left:17.11%;top:94.23%;animation-delay:-0.48s"></i>
+      <i class="ah-star ah-star--medium" style="left:19.84%;top:59.12%;animation-delay:-4.05s"></i>
+      <i class="ah-star ah-star--medium" style="left:24.58%;top:13.51%;animation-delay:-5.34s"></i>
+      <i class="ah-star ah-star--medium" style="left:25.64%;top:59.07%;animation-delay:-3.72s"></i>
+      <i class="ah-star ah-star--medium" style="left:42.25%;top:58.03%;animation-delay:-3.14s"></i>
+      <i class="ah-star ah-star--medium" style="left:91.73%;top:21.61%;animation-delay:-4.3s"></i>
+      <i class="ah-star ah-star--medium" style="left:24.91%;top:40.0%;animation-delay:-4.03s"></i>
+      <i class="ah-star ah-star--gold" style="left:30.8%;top:32.35%;animation-delay:-4.51s"></i>
+      <i class="ah-star ah-star--gold" style="left:8.96%;top:46.0%;animation-delay:-5.99s"></i>
+      <i class="ah-star ah-star--gold" style="left:97.63%;top:9.03%;animation-delay:-1.28s"></i>
+      <i class="ah-star ah-star--gold" style="left:27.46%;top:91.59%;animation-delay:-5.29s"></i>
+      <i class="ah-star ah-star--gold" style="left:86.41%;top:37.47%;animation-delay:-0.95s"></i>
+      <i class="ah-star ah-star--gold" style="left:82.04%;top:69.54%;animation-delay:-3.67s"></i>
+      <i class="ah-star ah-star--gold" style="left:96.77%;top:64.78%;animation-delay:-0.05s"></i>
+      <i class="ah-star ah-star--gold" style="left:80.44%;top:30.74%;animation-delay:-3.98s"></i>
+      <i class="ah-star ah-star--gold" style="left:92.14%;top:14.89%;animation-delay:-0.69s"></i>
+      <i class="ah-star ah-star--gold" style="left:12.28%;top:55.11%;animation-delay:-1.63s"></i>
+      <i class="ah-star ah-star--gold" style="left:60.06%;top:70.89%;animation-delay:-1.22s"></i>
+      <i class="ah-star ah-star--gold" style="left:62.89%;top:27.34%;animation-delay:-2.93s"></i>
     </div>
-  </section>
 
-  <!-- GRID DE SERVICIOS — el índice real -->
-  <section class="section" style="padding-top:0">
-    <div class="container">
-      <div class="services-grid">
-
-        <a href="/servicios/diseno-web/" class="svc-card scroll-reveal">
-          <span class="svc-card__num">01</span>
-          <h2 class="svc-card__title" data-i18n="sv.s1.title">Diseño y desarrollo web</h2>
-          <p class="svc-card__desc" data-i18n="sv.s1.desc">Sitios rápidos y a medida — diseñados y programados por la misma persona. Sin plantillas, sin dependencias de terceros.</p>
-          <ul class="svc-card__list">
-            <li data-i18n="sv.s1.li1">Diseño 100% personalizado, sin templates</li>
-            <li data-i18n="sv.s1.li2">Código limpio: HTML/CSS/JS o WordPress a medida</li>
-            <li data-i18n="sv.s1.li3">SEO técnico y optimización PageSpeed desde el día uno</li>
-          </ul>
-          <span class="svc-card__cta"><span data-i18n="sv.see">Ver servicio</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+    <div class="container ah-hero__grid">
+      <div class="ah-hero__text">
+        <p class="eyebrow scroll-reveal" data-i18n="ab.eyebrow">SOBRE MÍ</p>
+        <h1 class="ah-hero__title scroll-reveal" style="--reveal-delay:.05s">
+          <span data-i18n="ab.hero.title">La persona <em>detrás</em> del trabajo</span><span class="hero__dot">.</span>
+        </h1>
+        <p class="ah-hero__sub scroll-reveal" style="--reveal-delay:.1s">
+          <span data-i18n="ab.hero.sub">Diseñador, desarrollador y estratega visual. <strong>Todo en uno</strong> — sin equipo de 5 personas repartiéndose tu presupuesto.</span>
+        </p>
+        <a href="#aboutContent" class="ah-hero__cta scroll-reveal" style="--reveal-delay:.15s">
+          <span data-i18n="ab.hero.cta">Descubrir mi historia</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </a>
+      </div>
 
-        <a href="/servicios/identidad-visual/" class="svc-card scroll-reveal" style="--reveal-delay:.08s">
-          <span class="svc-card__num">02</span>
-          <h2 class="svc-card__title" data-i18n="sv.s2.title">Identidad visual y branding</h2>
-          <p class="svc-card__desc" data-i18n="sv.s2.desc">Una marca que se recuerda no se improvisa. Logo, manual de marca y aplicaciones reales, construidos con intención.</p>
-          <ul class="svc-card__list">
-            <li data-i18n="sv.s2.li1">Logo profesional en todas sus variantes</li>
-            <li data-i18n="sv.s2.li2">Manual de marca: paleta, tipografía y reglas de uso</li>
-            <li data-i18n="sv.s2.li3">Aplicaciones reales: empaque, uniformes, redes, fachada</li>
-          </ul>
-          <span class="svc-card__cta"><span data-i18n="sv.see">Ver servicio</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-        </a>
+      <div class="ah-hero__art scroll-reveal" style="--reveal-delay:.1s" aria-hidden="true">
+        <svg class="ah-orbit-svg" viewBox="0 0 200 200">
+          <defs>
+            <path id="ahCometPath" d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" />
+          </defs>
+          <circle class="ah-comet ah-comet--tail" r="7">
+            <animateMotion dur="14s" begin="-0.5s" repeatCount="indefinite">
+              <mpath href="#ahCometPath" />
+            </animateMotion>
+          </circle>
+          <circle class="ah-comet ah-comet--core" r="3">
+            <animateMotion dur="14s" repeatCount="indefinite">
+              <mpath href="#ahCometPath" />
+            </animateMotion>
+          </circle>
+        </svg>
 
-        <a href="/servicios/diseno-grafico-freelance/" class="svc-card scroll-reveal" style="--reveal-delay:.16s">
-          <span class="svc-card__num">03</span>
-          <h2 class="svc-card__title" data-i18n="sv.s3.title">Diseño gráfico y social media</h2>
-          <p class="svc-card__desc" data-i18n="sv.s3.desc">Piezas visuales que comunican, venden y se recuerdan — con una estética pensada, no improvisada para el scroll.</p>
-          <ul class="svc-card__list">
-            <li data-i18n="sv.s3.li1">Contenido para redes con sistema visual coherente</li>
-            <li data-i18n="sv.s3.li2">Piezas gráficas para campañas y promociones</li>
-            <li data-i18n="sv.s3.li3">Dirección de arte aplicada a cada entregable</li>
-          </ul>
-          <span class="svc-card__cta"><span data-i18n="sv.see">Ver servicio</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-        </a>
+        <div class="ah-sunburst"></div>
 
+        <img class="ah-planet" src="../assets/rocks/saturn-gold.webp" alt="" width="500" height="500" fetchpriority="high" />
+        <img class="ah-rock ah-rock--a" src="../assets/rocks/gold-rock-a.webp" alt="" width="900" height="491" loading="lazy" />
+        <img class="ah-rock ah-rock--b" src="../assets/rocks/gold-rock-b.webp" alt="" width="900" height="900" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- POR QUÉ UNA SOLA PERSONA -->
-  <section class="section" style="background:rgba(205,183,142,0.015)">
+  <!-- BLOQUES DE CONTENIDO -->
+  <div class="about-content" id="aboutContent">
+
+    <!-- ORIGEN -->
+    <section class="about-block container">
+      <div class="about-block__label scroll-reveal">
+        <span class="eyebrow">01</span>
+      </div>
+      <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
+        <h2 class="about-block__title" data-i18n="ab.01.title">Origen</h2>
+        <p data-i18n="ab.01.body">No aprendí en una academia — aprendí construyendo cosas reales, a punta de prueba y error, desde los 13 años: más de 5 años acumulando errores reales y corrigiéndolos, no ejercicios de clase. Eso tiene una consecuencia directa para ti: no vendo teoría de manual. Cada decisión de diseño o de código que tomo ya falló y se corrigió antes, en un proyecto real.</p>
+      </div>
+    </section>
+
+    <div class="about-divider"></div>
+
+    <!-- LO QUE HAGO -->
+    <section class="about-block container">
+      <div class="about-block__label scroll-reveal">
+        <span class="eyebrow">02</span>
+      </div>
+      <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
+        <h2 class="about-block__title" data-i18n="ab.02.title">Lo que hago</h2>
+        <p data-i18n="ab.02.body">Durante más de 2 años he manejado <strong>todo</strong> lo digital de una empresa real: pauta en Meta y Google Ads, diseño para redes, material impreso, fotografía de producto y un e-commerce de más de 3.000 productos. Migré su sitio a código limpio y subí el PageSpeed de 40 a 97 — sin contratar una agencia, sin reuniones interminables, sin traductor entre "lo que el negocio necesita" y "lo que el desarrollador entiende". Lo que para una agencia son 3 departamentos distintos, para mí es un día de trabajo.</p>
+      </div>
+    </section>
+
+    <!-- STAT CARDS -->
     <div class="container">
-      <div class="about__grid">
-        <div class="scroll-reveal">
-          <p class="eyebrow" data-i18n="sv.why.eyebrow">POR QUÉ TRABAJAR CONMIGO</p>
-          <h2 class="section__title"><span data-i18n="sv.why.title">Una persona, no un equipo que se va turnando</span><span class="hero__dot">.</span></h2>
-          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:16px">
-            <span data-i18n="sv.why.p1">Una agencia tiene tres personas entre tu idea y el resultado: el que vende, el que coordina y el que ejecuta. Cada capa suma tiempo y diluye lo que pediste.</span>
-          </p>
-          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:16px">
-            <span data-i18n="sv.why.p2">Conmigo no hay capas. Hablás directo con quien diseña y programa — el mismo criterio que define tu identidad visual es el que escribe el código de tu sitio. Nada se pierde en el traspaso.</span>
-          </p>
-          <p style="color:var(--text-muted);line-height:1.8">
-            <span data-i18n="sv.why.p3">Proyectos desde 500 USD. Propuesta clara con alcance, tiempos y precio antes de empezar — sin sorpresas en el camino.</span>
-          </p>
+      <div class="about-stats scroll-reveal">
+        <div class="about-stat">
+          <span class="about-stat__num">40<span class="about-stat__arrow">→</span>97</span>
+          <span class="about-stat__label" data-i18n="ab.stat1">PageSpeed score real, caso Orbidental</span>
         </div>
-        <div class="scroll-reveal" style="--reveal-delay:.1s">
-          <div class="proof-stat">
-            <span class="proof-stat__num">40 → 97</span>
-            <span class="proof-stat__label" data-i18n="sv.stat1">PageSpeed Insights, Orbidental — medido en producción</span>
-          </div>
-          <div class="proof-stat">
-            <span class="proof-stat__num">4.000+</span>
-            <span class="proof-stat__label" data-i18n="sv.stat2">Productos fotografiados y catalogados para e-commerce</span>
-          </div>
-          <div class="proof-stat">
-            <span class="proof-stat__num">100%</span>
-            <span class="proof-stat__label" data-i18n="sv.stat3">Proyectos entregados sin intermediarios, directo con el cliente</span>
-          </div>
+        <div class="about-stat">
+          <span class="about-stat__num">3K+</span>
+          <span class="about-stat__label" data-i18n="ab.stat2">Fotos de producto entregadas</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat__num">2+</span>
+          <span class="about-stat__label" data-i18n="ab.stat3">Años manejando una operación digital completa</span>
         </div>
       </div>
     </div>
-  </section>
+
+    <div class="about-divider"></div>
+
+    <!-- CÓMO TRABAJO -->
+    <section class="about-block container">
+      <div class="about-block__label scroll-reveal">
+        <span class="eyebrow">03</span>
+      </div>
+      <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
+        <h2 class="about-block__title" data-i18n="ab.03.title">Cómo trabajo</h2>
+        <p data-i18n="ab.03.body">Trabajas directamente conmigo — no con un account manager que te traduce mensajes, ni con un junior que ejecuta lo que otro decidió. Eso significa respuestas rápidas, decisiones claras tomadas por la misma persona que las va a construir, y un proyecto que avanza sin fricción de por medio. Trabajo 100% remoto con clientes en Latinoamérica, Europa y Estados Unidos.</p>
+      </div>
+    </section>
+
+    <div class="about-divider"></div>
+
+    <!-- DATO RANDOM -->
+    <section class="about-block container">
+      <div class="about-block__label scroll-reveal">
+        <span class="eyebrow">∞</span>
+      </div>
+      <div class="about-block__body scroll-reveal" style="--reveal-delay:.1s">
+        <h2 class="about-block__title" data-i18n="ab.inf.title">Fuera de la pantalla</h2>
+        <p data-i18n="ab.inf.body">Me encuentras en la moto. El motociclismo es mi otra pasión — la misma mentalidad que aplico al trabajo: leer el terreno antes de moverte, mantener el control incluso cuando todo pasa rápido, y siempre hacia adelante.</p>
+        <div class="moto-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/>
+            <path d="M15 6h-3l-2 5H5.5M15 6l3 5h-4.5M15 6l1-3h3"/>
+          </svg>
+          <span data-i18n="ab.inf.badge">Motociclista</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <div class="container">
+      <div class="about-skills-grid scroll-reveal">
+        <div class="skill-chip" data-i18n="ab.skill.uiux">Diseño UI/UX</div>
+        <div class="skill-chip">HTML / CSS</div>
+        <div class="skill-chip">WordPress</div>
+        <div class="skill-chip">JavaScript</div>
+        <div class="skill-chip">SEO técnico</div>
+        <div class="skill-chip">Meta Ads</div>
+        <div class="skill-chip">Google Ads</div>
+        <div class="skill-chip">Fotografía</div>
+        <div class="skill-chip">Photoshop</div>
+        <div class="skill-chip">Branding</div>
+        <div class="skill-chip">Social Media</div>
+        <div class="skill-chip skill-chip--muted" data-i18n="ab.skill.coffee">+ café ∞</div>
+      </div>
+    </div>
+
+  </div>
 
   <!-- CTA -->
   <section class="cta-section" id="contacto">
     <div class="container">
-      <h2 class="cta-section__title"><span data-i18n="sv.cta.title">¿Cuál de los tres necesita tu proyecto</span><span class="hero__dot">?</span></h2>
-      <p class="cta-section__sub" data-i18n="sv.cta.sub">Si no estás seguro, cuéntame qué necesitás y te oriento. Respondo en menos de 24 horas.</p>
+      <h2 class="cta-section__title">
+        <span data-i18n="ab.cta.title">¿Arrancamos un proyecto</span><span class="hero__dot">?</span>
+      </h2>
+      <p class="cta-section__sub" data-i18n="ab.cta.sub">Cuéntame qué necesitas. Respondo en menos de 24 horas — directamente yo, no un formulario que cae en un buzón sin revisar.</p>
       <div class="cta-section__actions">
         <button class="btn btn--gold btn--lg" id="whatsappBtn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
           <span data-i18n="cta.whatsapp">Escríbeme por WhatsApp</span>
         </button>
-        <a href="/trabajo/" class="btn btn--ghost" data-i18n="sv.cta.work">Ver proyectos</a>
+        <a href="../#trabajo" class="btn btn--ghost" data-i18n="sv.cta.work">Ver proyectos</a>
       </div>
     </div>
   </section>
 
-  <script src="/nav.js"></script>
-  <script src="/i18n.js"></script>
-  <script>
-    var WA_MSG = "¡Hola Alexander! Estoy viendo tus servicios y quiero contarte de mi proyecto. ¿Podemos hablar?";
-    document.querySelectorAll('[id^="whatsappBtn"]').forEach(function(b){b.addEventListener('click',function(){openWA(WA_MSG);});});
-  </script>
-  <script src="script.js"></script>
+  <script src="../nav.js" defer></script>
+  <script src="../i18n.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
