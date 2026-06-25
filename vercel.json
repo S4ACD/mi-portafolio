@@ -15,6 +15,17 @@
       "source": "/favicon.ico",
       "destination": "https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_png,w_32/v1781101945/Favicon_jsl63r.webp",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mi-portafolio-one-mu.vercel.app"
+        }
+      ],
+      "destination": "https://alexandercaro.com/$1",
+      "permanent": true
     }
   ]
 }
