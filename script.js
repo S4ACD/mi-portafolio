@@ -57,6 +57,31 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 });
 
 
+// ─── FILTROS DE PROYECTOS ────────────────────────────────────────
+(function initProjectFilters() {
+  const filters = document.querySelectorAll('.trabajo-filter');
+  const cards   = document.querySelectorAll('.card--project[data-tags]');
+  if (!filters.length || !cards.length) return;
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const active = btn.dataset.filter;
+
+      // Actualizar estado activo
+      filters.forEach(f => f.classList.remove('trabajo-filter--active'));
+      btn.classList.add('trabajo-filter--active');
+
+      // Mostrar / ocultar cards con fade
+      cards.forEach(card => {
+        const tags = card.dataset.tags || '';
+        const visible = active === 'todos' || tags.includes(active);
+        card.classList.toggle('card--hidden', !visible);
+      });
+    });
+  });
+})();
+
+
 // ─── TESTIMONIOS CARRUSEL ────────────────────────────────────────
 (function initTestimonials() {
   const track   = document.getElementById('testimonialsTrack');
