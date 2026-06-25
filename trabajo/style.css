@@ -118,6 +118,11 @@
   background: var(--hv2-void);
 }
 
+/* Filtros en la página de trabajo */
+.tw-filters {
+  margin-bottom: 48px;
+}
+
 /* ── CASO DESTACADO ────────────────────────────────────────────
    El único gesto de layout nuevo: una tarjeta a ancho completo,
    imagen y texto lado a lado, reservada para el caso más fuerte.
