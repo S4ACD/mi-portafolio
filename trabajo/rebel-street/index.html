@@ -33,25 +33,50 @@
   <script type="application/ld+json">
   {
   "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  "name": "Identidad Visual Rebel Street — Streetwear Urbano",
-  "description": "Sistema de identidad visual completo para Rebel Street, marca de streetwear urbano: logo, paleta, tipografía y aplicación en fachada, prendas, etiquetas, empaque y uniformes de staff.",
-  "url": "https://alexandercaro.com/trabajo/rebel-street/",
-  "author": {
-    "@type": "Person",
-    "name": "Alexander Caro",
-    "url": "https://alexandercaro.com"
-  },
-  "keywords": "branding streetwear, identidad visual moda, diseño de marca bogotá, sistema gráfico grafitero, diseño gráfico colombia",
-  "about": {
-    "@type": "Thing",
-    "name": "Branding e identidad visual"
-  }
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://alexandercaro.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trabajo",
+          "item": "https://alexandercaro.com/trabajo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rebel Street",
+          "item": "https://alexandercaro.com/trabajo/rebel-street/"
+        }
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Rebel Street — Identidad visual para marca de streetwear",
+      "url": "https://alexandercaro.com/trabajo/rebel-street/",
+      "author": {
+        "@type": "Person",
+        "name": "Alexander Caro",
+        "url": "https://alexandercaro.com"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Alexander Caro",
+        "url": "https://alexandercaro.com"
+      }
+    }
+  ]
 }
   </script>
   <!-- Favicon -->
-  <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
-  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
+
 </head>
 <body>
 
@@ -259,7 +284,6 @@
       </div>
     </div>
   </section>
-
 
   <script src="/nav.js" defer></script>
   <script src="/i18n.js" defer></script>
