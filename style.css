@@ -1358,6 +1358,16 @@ input, textarea {
   background: rgba(20, 20, 20, 0.85) !important;
 }
 
+/* Glow dorado en project cards — más visible y elegante */
+.card--project:hover {
+  border-color: rgba(205,183,142,0.45) !important;
+  box-shadow:
+    0 0 0 1px rgba(205,183,142,0.15),
+    0 8px 32px -8px rgba(205,183,142,0.18),
+    0 24px 48px -16px rgba(0,0,0,0.5);
+  transform: translateY(-6px);
+}
+
 
 
 /* ═══════════════════════════════════════════════════════════════
@@ -2949,15 +2959,47 @@ input, textarea {
   color: var(--text-faint);
 }
 .trabajo-filter {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  font-family: var(--hv2-font-ui);
+  font-weight: 500;
   color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 5px 14px;
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  letter-spacing: 0.02em;
+}
+.trabajo-filter:hover {
+  color: var(--hv2-ink);
+  border-color: var(--hv2-line);
 }
 .trabajo-filter--active {
-  color: var(--hv2-ink);
+  color: var(--hv2-void);
+  background: var(--hv2-gold);
+  border-color: var(--hv2-gold);
   font-weight: 600;
+}
+.trabajo-filter--active:hover {
+  color: var(--hv2-void);
+  background: var(--hv2-gold);
 }
 @media (max-width: 700px) {
   .trabajo-filters { display: none; }
+}
+
+/* Estado oculto al filtrar — fade + colapso suave */
+.card--project.card--hidden {
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.card--project {
+  transition: opacity 0.3s ease, transform 0.3s ease,
+              box-shadow var(--transition), border-color var(--transition),
+              background var(--transition);
 }
 
 /* Numeral overlay on each thumbnail (sits on the existing dark scrim) */
