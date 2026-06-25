@@ -59,7 +59,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
 // ─── FILTROS DE PROYECTOS ────────────────────────────────────────
 (function initProjectFilters() {
-  const filters = document.querySelectorAll('.trabajo-filter');
+  const filters = document.querySelectorAll('.trabajo-filter[data-filter]');
   const cards   = document.querySelectorAll('.card--project[data-tags]');
   if (!filters.length || !cards.length) return;
 
@@ -67,15 +67,32 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     btn.addEventListener('click', () => {
       const active = btn.dataset.filter;
 
-      // Actualizar estado activo
+      // Actualizar estado activo en botones
       filters.forEach(f => f.classList.remove('trabajo-filter--active'));
       btn.classList.add('trabajo-filter--active');
 
-      // Mostrar / ocultar cards con fade
+      // Fade out → display:none / display:block → fade in
       cards.forEach(card => {
-        const tags = card.dataset.tags || '';
+        const tags = (card.dataset.tags || '').split(' ');
         const visible = active === 'todos' || tags.includes(active);
-        card.classList.toggle('card--hidden', !visible);
+
+        if (!visible) {
+          card.classList.add('card--hidden');
+          // Quitar del flujo después del fade (310ms = transition + buffer)
+          setTimeout(() => {
+            if (card.classList.contains('card--hidden')) {
+              card.style.display = 'none';
+            }
+          }, 310);
+        } else {
+          card.style.display = '';
+          // Pequeño delay para que el browser procese el display antes del fade
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              card.classList.remove('card--hidden');
+            });
+          });
+        }
       });
     });
   });
