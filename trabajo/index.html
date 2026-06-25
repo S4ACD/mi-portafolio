@@ -119,8 +119,18 @@
   <section class="tw-grid-section">
     <div class="container">
 
+      <!-- ───── FILTROS ───── -->
+      <div class="trabajo-filters tw-filters" role="group" aria-label="Filtrar proyectos">
+        <span class="trabajo-filters__label">Áreas</span>
+        <button class="trabajo-filter trabajo-filter--active" data-filter="todos">Todos</button>
+        <button class="trabajo-filter" data-filter="identidad">Branding</button>
+        <button class="trabajo-filter" data-filter="conversion">Sitios Web</button>
+        <button class="trabajo-filter" data-filter="grafico">Diseño gráfico</button>
+        <button class="trabajo-filter" data-filter="social">Social Media</button>
+      </div>
+
       <!-- ───── CASO DESTACADO: Orbidental ───── -->
-      <a href="/trabajo/orbidental/" class="tw-featured scroll-reveal">
+      <a href="/trabajo/orbidental/" class="tw-featured scroll-reveal" data-category="conversion performance">
         <div class="tw-featured__media tw-featured__panel" aria-hidden="true">
           <span class="tw-featured__flag" data-i18n="tw.featured.flag">Caso destacado</span>
 
@@ -429,8 +439,46 @@
     </div>
   </section>
 
-  <script src="/nav.js"></script>
-  <script src="/i18n.js"></script>
-  <script src="script.js"></script>
+  <script src="/nav.js" defer></script>
+  <script src="/i18n.js" defer></script>
+  <script src="script.js" defer></script>
+  <script>
+  // Filtros de proyectos — tw-card + tw-featured
+  (function() {
+    var filters  = document.querySelectorAll('.trabajo-filter[data-filter]');
+    var cards    = document.querySelectorAll('.tw-card[data-category], .tw-featured[data-category]');
+    if (!filters.length || !cards.length) return;
+
+    filters.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var active = btn.dataset.filter;
+        filters.forEach(function(f) { f.classList.remove('trabajo-filter--active'); });
+        btn.classList.add('trabajo-filter--active');
+
+        cards.forEach(function(card) {
+          var cats = (card.dataset.category || '').split(' ');
+          var visible = active === 'todos' || cats.includes(active);
+          if (!visible) {
+            card.classList.add('card--hidden');
+            setTimeout(function() {
+              if (card.classList.contains('card--hidden')) card.style.display = 'none';
+            }, 310);
+          } else {
+            card.style.display = '';
+            requestAnimationFrame(function() {
+              requestAnimationFrame(function() { card.classList.remove('card--hidden'); });
+            });
+          }
+        });
+      });
+    });
+  })();
+
+  // WhatsApp
+  document.getElementById('whatsappBtn')?.addEventListener('click', function() {
+    var msg = encodeURIComponent('¡Hola Alexander! Vi tu portafolio y me interesa cotizar un proyecto. ¿Podemos hablar?');
+    window.open('https://wa.me/573024457653?text=' + msg, '_blank', 'noopener,noreferrer');
+  });
+  </script>
 </body>
 </html>
