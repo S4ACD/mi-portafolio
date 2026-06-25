@@ -2,6 +2,44 @@
    script.js — Alexander Caro Portfolio
 ═══════════════════════════════════════════════════════════════ */
 
+// ─── ESTADÍSTICAS — contadores + barras animadas ─────────────────
+(function initStats() {
+  const items = document.querySelectorAll('.stat-item');
+  if (!items.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const item = entry.target;
+
+      // Activar barra
+      item.classList.add('in-view');
+
+      // Animar contador
+      const numEl  = item.querySelector('.stat-num');
+      if (!numEl) return;
+      const target = parseInt(numEl.dataset.target, 10);
+      const suffix = numEl.dataset.suffix || '';
+      const duration = 1600;
+      const start  = performance.now();
+
+      function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const ease     = 1 - Math.pow(1 - progress, 3);
+        const current  = Math.round(target * ease);
+        // Formato con punto de miles
+        numEl.textContent = current.toLocaleString('es-CO') + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      obs.unobserve(item);
+    });
+  }, { threshold: 0.4 });
+
+  items.forEach(item => obs.observe(item));
+})();
+
+
 // ─── 2. WHATSAPP ────────────────────────────────────────────────
 document.getElementById('whatsappBtn')?.addEventListener('click', () => {
   const phone   = '573024457653';
