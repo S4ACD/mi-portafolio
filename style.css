@@ -45,6 +45,7 @@ body {
   overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; }
+button { background: none; border: none; padding: 0; margin: 0; font: inherit; color: inherit; }
 ul { list-style: none; }
 img { display: block; max-width: 100%; }
 
@@ -2959,47 +2960,54 @@ input, textarea {
   color: var(--text-faint);
 }
 .trabajo-filter {
+  /* Reset de estilos nativos de <button> */
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  /* Estilos propios */
   font-size: 0.82rem;
   font-family: var(--hv2-font-ui);
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--hv2-ink-dim);
   background: transparent;
-  border: 1px solid transparent;
+  border: 1px solid rgba(244,239,230,0.12);
   border-radius: 20px;
   padding: 5px 14px;
   cursor: pointer;
   transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
   letter-spacing: 0.02em;
+  line-height: 1.4;
 }
 .trabajo-filter:hover {
   color: var(--hv2-ink);
-  border-color: var(--hv2-line);
+  border-color: rgba(244,239,230,0.28);
 }
 .trabajo-filter--active {
-  color: var(--hv2-void);
-  background: var(--hv2-gold);
-  border-color: var(--hv2-gold);
+  color: #050504;
+  background: #cdb78e;
+  border-color: #cdb78e;
   font-weight: 600;
 }
 .trabajo-filter--active:hover {
-  color: var(--hv2-void);
-  background: var(--hv2-gold);
+  color: #050504;
+  background: #cdb78e;
+  border-color: #cdb78e;
 }
 @media (max-width: 700px) {
   .trabajo-filters { display: none; }
 }
 
-/* Estado oculto al filtrar — fade + colapso suave */
-.card--project.card--hidden {
-  opacity: 0;
-  transform: scale(0.96);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+/* Estado oculto al filtrar — visibility+opacity para mantener grid flow
+   durante la transición, luego display:none via JS después del fade */
 .card--project {
   transition: opacity 0.3s ease, transform 0.3s ease,
               box-shadow var(--transition), border-color var(--transition),
               background var(--transition);
+}
+.card--project.card--hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
 }
 
 /* Numeral overlay on each thumbnail (sits on the existing dark scrim) */
