@@ -67,11 +67,11 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
   let current = 0;
   const total = dots.length;
+  // Cachear cardWidth — se recalcula solo en resize, no en cada goTo()
+  let cardWidth = track.children[0]?.offsetWidth || 0;
 
   function goTo(index) {
     current = (index + total) % total;
-    const card = track.children[0];
-    const cardWidth = card.offsetWidth;
     track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
     dots.forEach((d, i) => d.classList.toggle('testimonials__dot--active', i === current));
   }
@@ -80,7 +80,13 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   prevBtn?.addEventListener('click', () => goTo(current - 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 
-  window.addEventListener('resize', () => goTo(current), { passive: true });
+  window.addEventListener('resize', () => {
+    // Recalcular cardWidth tras el resize y reposicionar sin animación
+    cardWidth = track.children[0]?.offsetWidth || cardWidth;
+    track.style.transition = 'none';
+    goTo(current);
+    requestAnimationFrame(() => { track.style.transition = ''; });
+  }, { passive: true });
 
   let timer = setInterval(() => goTo(current + 1), 5000);
   track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
