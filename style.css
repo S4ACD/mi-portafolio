@@ -545,7 +545,6 @@ img { display: block; max-width: 100%; }
   position: relative;
   width: clamp(240px, 28vw, 360px);
   aspect-ratio: 3 / 4;
-  will-change: transform;
   transform-style: preserve-3d;
 }
 
@@ -2028,7 +2027,9 @@ input, textarea {
        .hv2__rock-parallax  → scroll-driven "rise" (GSAP `y`, scrub)
          .hv2__rock-float   → idle zero-gravity loop (GSAP `y`+rotation)
            img              → mix-blend-mode: lighten                  */
-.hv2__rock { position: absolute; will-change: transform; opacity: 1; }
+/* will-change solo en los hijos que GSAP anima directamente,
+   no en el contenedor estático (.hv2__rock) — evita compositing layers extra */
+.hv2__rock { position: absolute; opacity: 1; }
 .hv2__rock-parallax,
 .hv2__rock-float { will-change: transform; }
 .hv2__rock img {
@@ -2070,11 +2071,9 @@ input, textarea {
      stays correct automatically if either formula changes. */
   right: calc(4% + (var(--hv2-rings-size) / 2) - (var(--hv2-portrait-width) / 2));
   width: var(--hv2-portrait-width);
-  will-change: transform;
   opacity: 1;
 }
-/* New: subtle cursor-follow layer, sits between the static position and
-   the scroll-rise/idle-float layers so it never fights their transforms */
+/* will-change solo en las capas que GSAP anima directamente */
 .hv2__portrait-tilt { will-change: transform; transform-style: preserve-3d; }
 .hv2__portrait-parallax,
 .hv2__portrait-float { will-change: transform; }
