@@ -40,13 +40,17 @@
 })();
 
 
-// ─── 2. WHATSAPP ────────────────────────────────────────────────
-document.getElementById('whatsappBtn')?.addEventListener('click', () => {
-  const phone   = '573024457653';
-  const message = encodeURIComponent(
-    '¡Hola Alexander! Vi tu portafolio y me interesa cotizar un proyecto contigo. ¿Podemos hablar?'
-  );
-  window.open(`https://wa.me/${phone}?text=${message}`, '_blank', 'noopener,noreferrer');
+// ─── 2. ANALYTICS — eventos de contacto (GA4 vía /analytics.js) ──
+function acTrack(name, params) {
+  if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+}
+document.addEventListener('click', (e) => {
+  const a = e.target.closest && e.target.closest('a[href]');
+  if (!a) return;
+  const href = a.getAttribute('href') || '';
+  if (href.indexOf('wa.me') !== -1)             acTrack('click_whatsapp', { location: window.location.pathname });
+  else if (href.indexOf('calendly.com') !== -1) acTrack('click_calendly', { location: window.location.pathname });
+  else if (href.indexOf('mailto:') === 0)       acTrack('click_email',    { location: window.location.pathname });
 });
 
 
@@ -233,7 +237,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
 
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.getAttribute('target') === '_blank') return;
+    if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') || link.getAttribute('target') === '_blank') return;
 
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -330,6 +334,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     .then((res) => res.json())
     .then((json) => {
       if (json.success) {
+        acTrack('generate_lead', { method: 'form' });
         setFeedback('success',
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
           ' Mensaje enviado. Te respondo en menos de 24 horas.'

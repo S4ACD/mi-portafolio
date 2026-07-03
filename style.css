@@ -1520,7 +1520,6 @@ input, textarea {
   font-family: var(--font-body);
   font-size: 0.9rem;
   color: #fff;
-  outline: none;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
   width: 100%;
   box-sizing: border-box;
@@ -3041,7 +3040,6 @@ input, textarea {
   /* Reset de estilos nativos de <button> */
   -webkit-appearance: none;
   appearance: none;
-  outline: none;
   /* Estilos propios */
   font-size: 0.82rem;
   font-family: var(--hv2-font-ui);
@@ -3974,4 +3972,45 @@ input, textarea {
   margin-top: 8px; margin-bottom: 4px;
   width: fit-content; font-size: 12px; padding: 9px 16px;
   border-color: rgba(244,239,230,0.15);
+}
+
+
+/* ═══ ACCESIBILIDAD — foco visible de teclado ═══ */
+:focus-visible {
+  outline: 2px solid var(--hv2-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.form-input:focus-visible { outline-offset: 0; }
+
+/* ═══ DOS PUERTAS — Cliente A / Cliente B ═══ */
+.doors-section { padding: 26px 0 8px; }
+.doors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.door-card {
+  position: relative; display: flex; flex-direction: column; gap: 10px;
+  padding: 26px 26px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none; overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition), background var(--transition);
+}
+.door-card:hover { border-color: var(--border-hover); background: var(--bg-card-hover); transform: translateY(-3px); }
+.door-card__num {
+  position: absolute; top: 10px; right: 16px;
+  font-family: var(--font-display); font-size: 3.4rem; font-weight: 700; line-height: 1;
+  color: var(--hv2-gold); opacity: 0.12; pointer-events: none;
+}
+.door-card__title { font-family: var(--font-display); font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-weight: 600; color: var(--text); margin: 0; }
+.door-card__desc { font-size: 0.92rem; line-height: 1.6; color: var(--text-muted); margin: 0; max-width: 46ch; }
+.door-card__cta {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 6px;
+  font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em;
+  color: var(--hv2-gold);
+}
+.door-card__cta svg { transition: transform var(--transition); }
+.door-card:hover .door-card__cta svg { transform: translateX(4px); }
+@media (max-width: 767px) {
+  .doors-grid { grid-template-columns: 1fr; }
+  .doors-section { padding-top: 14px; }
 }

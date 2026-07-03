@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Página no encontrada | Alexander Caro</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .nf { min-height: 100svh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+    .nf__inner { max-width: 560px; }
+    .nf__code { font-family: var(--font-display); font-size: clamp(5rem, 18vw, 9rem); font-weight: 700; line-height: 1; color: var(--hv2-gold); opacity: .9; }
+    .nf__title { font-family: var(--font-display); font-size: clamp(1.3rem, 4vw, 1.8rem); color: var(--text); margin: 10px 0 8px; }
+    .nf__sub { color: var(--text-muted); line-height: 1.6; margin-bottom: 26px; }
+    .nf__links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <main class="nf">
+    <div class="nf__inner">
+      <div class="nf__code">404</div>
+      <h1 class="nf__title">Esta página se perdió en el vacío<span class="hero__dot">.</span></h1>
+      <p class="nf__sub">La URL no existe o cambió de lugar. Lo importante sigue aquí abajo. / This page doesn't exist — everything important is one click away.</p>
+      <div class="nf__links">
+        <a href="/" class="btn btn--gold">Ir al inicio</a>
+        <a href="/trabajo/" class="btn btn--ghost">Ver proyectos</a>
+        <a href="/#contacto-form" class="btn btn--ghost">Contacto</a>
+      </div>
+    </div>
+  </main>
+  <script defer src="/analytics.js"></script>
+</body>
+</html>
