@@ -93,6 +93,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/pulse-digital/"/>
   </url>
   <url>
+    <loc>https://alexandercaro.com/trabajo/motofaro/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/motofaro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/motofaro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/motofaro/"/>
+  </url>
+  <url>
     <loc>https://alexandercaro.com/trabajo/social-media-dental/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -226,6 +235,15 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/pulse-digital/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/pulse-digital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/pulse-digital/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/en/trabajo/motofaro/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/motofaro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/motofaro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/motofaro/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/social-media-dental/</loc>
