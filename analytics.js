@@ -3,7 +3,7 @@
      copia tu ID de medición (formato G-XXXXXXXXXX) y pégalo abajo.
    Mientras el ID tenga las X, este archivo NO carga nada (cero errores). */
 (function () {
-  var GA_ID = 'G-XXXXXXXXXX';   // ← reemplaza con tu ID real
+  var GA_ID = 'G-QDJ545L7KS';   // ← reemplaza con tu ID real
 
   if (!/^G-[A-Z0-9]{6,}$/.test(GA_ID) || GA_ID.indexOf('X') !== -1) return;
 
