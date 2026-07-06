@@ -120,3 +120,57 @@ Hoy tu contacto es `hosoyalexander@gmail.com`. Para verte más profesional ante 
 - **Schema de reseñas (AggregateRating)**: Google penaliza las reseñas que te pones a ti mismo. Con testimonios reales embebidos basta.
 - **Google Business Profile**: es para negocio local; tú quieres remoto. Opcional.
 - **Reescribir los breakpoints del CSS**: mucho riesgo, poco retorno. El diseño responsive actual funciona.
+
+---
+
+# CAMBIOS — 5 de julio de 2026 · Ofertas productizadas + reparación SEO crítica
+
+## 1. Bug crítico reparado: tus páginas de servicios ES se estaban auto-desindexando
+
+Los 4 archivos en español de `/servicios/{diseno-web, identidad-visual, diseno-grafico-freelance, fotografia-de-producto}/` habían sido **sobrescritos por el build EN**: tenían `lang="en"`, contenido en inglés y canonical apuntando a `/en/…`. Eso le dice a Google "esta URL es un duplicado de la versión en inglés" → Google saca las URLs en español del índice. Es la razón más probable de pérdida de tráfico orgánico en esas páginas.
+
+- Reparado con **`restore-es.py`** (script nuevo en el repo): reaplica `lang/es.json`, restaura metas/canonical/OG en español y quita el prefijo `/en` de los enlaces.
+- **`build-en.py` ahora tiene un guardián**: si una fuente ES tiene `lang="en"`, aborta con instrucciones. Este bug no puede volver a pasar en silencio.
+
+> ⚠️ **PASO MANUAL**: en Google Search Console → Inspección de URL → "Solicitar indexación" para las 4 URLs ES reparadas, y en Sitemaps reenvía `sitemap.xml`.
+
+## 2. Bug reparado: el botón dorado era invisible fuera de /trabajo/
+
+`.btn--gold` lo usan 31 páginas (incluidos todos los CTA de WhatsApp de servicios), pero solo estaba definido en `trabajo/style.css`. Promovido a `style.css` global.
+
+## 3. Bug reparado: la home en inglés mostraba textos en español
+
+8 llaves `stat.*` (labels de las estadísticas del home) no existían en ningún JSON, así que `/en/` mostraba "Visualizaciones orgánicas", "Conversaciones en Meta Ads", etc. Añadidas en ES y EN.
+
+## 4. Tres ofertas productizadas nuevas (ES + EN)
+
+| Página | Precio | Promesa |
+|---|---|---|
+| `/servicios/web-express/` | USD 800 | Sitio de hasta 5 páginas en 14 días desde tu contenido |
+| `/servicios/auditoria-seo-geo/` | USD 400 | Auditoría SEO + GEO (visibilidad en Google y en IA) en 10 días hábiles |
+| `/servicios/plan-mensual/` | USD 600/mes | Bolsa de ~15 h de diseño + web, sin permanencia |
+
+Cada página incluye: precio visible en el hero, qué incluye, **qué NO incluye** (honestidad visible — la misma regla del resto del sitio), proceso en 3 pasos, para quién es, FAQ en acordeón accesible con schema `FAQPage`, schema `Service + Offer` con precio en USD, y CTAs a WhatsApp (mensaje prellenado por oferta, bilingüe según la URL) y Calendly.
+
+## 5. Tres landing pages de ciudad (ES + EN)
+
+`/diseno-web-miami/` · `/diseno-web-houston/` · `/diseno-web-los-angeles/` — contenido diferenciado por ciudad (barrios reales, sectores típicos, FAQ locales sobre pagos desde EE. UU., invoice, idioma y horarios), schema `Service` con `areaServed` City + `AggregateOffer`, y los 3 paquetes enlazados. No son páginas doorway clonadas: cada una tiene copy propio.
+
+## 6. Hub /servicios/ renovado
+
+- Sección **"Paquetes con precio cerrado"** arriba (3 cards, Web Express destacado).
+- Encabezado nuevo para las disciplinas + **4ª card de Fotografía de producto** (la página existía pero el hub nunca la enlazó).
+- `ItemList` schema con 7 ítems, title/description con precios, enlace a las 3 ciudades.
+
+## 7. GEO + sitemap
+
+- **`llms.txt`** en la raíz: resumen bilingüe citable (servicios, precios exactos, URLs, resultados verificables, contacto) para ChatGPT, Claude, Perplexity y AI Overviews.
+- Sitemap: **33 → 45 URLs** con hreflang; `lastmod` actualizado en todo lo tocado hoy.
+- i18n: **771 → 1.060 llaves** por idioma. El copy de las 6 páginas nuevas vive en **`build-offers.py`**: si quieres cambiar textos, edítalos ahí y re-ejecuta (regenera HTML + JSON de una vez).
+
+## Pasos manuales (solo tú puedes hacerlos)
+
+1. `git add -A && git commit -m "Ofertas productizadas + fix canonical ES" && git push` → Vercel despliega solo.
+2. **Search Console**: solicitar indexación de las 4 URLs ES reparadas + reenviar sitemap. Las 6 nuevas también puedes pedirlas, pero con el sitemap basta.
+3. Probar `https://search.google.com/test/rich-results` con `/servicios/web-express/` — deben aparecer FAQ y la oferta con precio.
+4. **Revisa las políticas comerciales que definí yo**: bolsa de 15 h/mes, rollover del 25%, páginas extra a USD 80–120, auditoría descontable en 30 días, pago 50/50. Son propuestas razonables, pero es TU negocio: ajústalas antes de publicar si no te cuadran.
