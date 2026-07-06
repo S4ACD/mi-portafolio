@@ -40,6 +40,12 @@ PAGES = {
  'servicios/identidad-visual/index.html': '/servicios/identidad-visual/',
  'servicios/diseno-grafico-freelance/index.html': '/servicios/diseno-grafico-freelance/',
  'servicios/fotografia-de-producto/index.html': '/servicios/fotografia-de-producto/',
+ 'servicios/web-express/index.html': '/servicios/web-express/',
+ 'servicios/auditoria-seo-geo/index.html': '/servicios/auditoria-seo-geo/',
+ 'servicios/plan-mensual/index.html': '/servicios/plan-mensual/',
+ 'diseno-web-miami/index.html': '/diseno-web-miami/',
+ 'diseno-web-houston/index.html': '/diseno-web-houston/',
+ 'diseno-web-los-angeles/index.html': '/diseno-web-los-angeles/',
 }
 
 EN_META = {
@@ -49,8 +55,8 @@ EN_META = {
        'Designer, developer and visual strategist based in Bogotá. You work directly with me — design, code and strategy in one person, no middlemen.'),
  '/trabajo/': ('Selected Work — Real Results, Not Just Pretty Design | Alexander Caro',
        'From PageSpeed 40 to 97. Brand identities people recognize instantly. Every project here started with a real problem — see what happened next.'),
- '/servicios/': ('Services — Web Design & Development, Branding | Alexander Caro',
-       'Web design and development, visual identity and graphic design for businesses in Colombia, LATAM, the US and Europe. Projects from $500 USD. Remote, direct, no middlemen.'),
+ '/servicios/': ('Services & Fixed-Price Packages — Web, SEO + GEO & Design | Alexander Caro',
+       'Three fixed-price packages: website in 14 days ($800), SEO + GEO Audit ($400) and Monthly plan ($600/mo). Plus custom web design, branding and product photography.'),
  '/trabajo/orbidental/': ('Orbidental — From 14 Seconds to Near-Instant: PageSpeed 97 | Alexander Caro',
        'Real case: a dental e-commerce with 3,000+ products went from 14-second loads and failing Core Web Vitals to PageSpeed 97 — without losing SEO.'),
  '/trabajo/fueggo/': ('Fueggo — Concept Identity System, From Zero to Production | Alexander Caro',
@@ -75,12 +81,64 @@ EN_META = {
        'Freelance graphic design for businesses: social media content, print material and corporate pieces. Remote, working directly with you. From $500 USD.'),
  '/servicios/fotografia-de-producto/': ('Product Photography — E-commerce & Catalogs | Alexander Caro',
        'Professional product photography for e-commerce and catalogs — clean, consistent, conversion-focused images. Based in Bogotá, available remotely.'),
+ '/servicios/web-express/': ('Web Express — Professional Website in 14 Days for $800 | Alexander Caro',
+       'A professional website of up to 5 pages, delivered in 14 days. Fixed price: $800 USD. Custom design, clean code, technical SEO and 90+ PageSpeed. US, LATAM and Europe.'),
+ '/servicios/auditoria-seo-geo/': ('SEO + GEO Audit — Your Visibility on Google and in AI, $400 | Alexander Caro',
+       'Technical SEO, content and GEO audit: find out whether ChatGPT and Google AI answers cite your business. Report + 90-day plan + call. $400 USD, in 10 business days.'),
+ '/servicios/plan-mensual/': ('Monthly Design & Web Plan — $600/month, No Lock-In | Alexander Caro',
+       'Social media design, campaign assets and website improvements every month, with replies within 24 business hours. $600/month, month to month, pause anytime.'),
+ '/diseno-web-miami/': ('Spanish-Speaking Web Designer for Miami Businesses | Alexander Caro',
+       'Professional websites in Spanish (and English) for Hispanic-owned businesses in Miami, Doral, Hialeah and Kendall. Fixed prices from $800, direct communication.'),
+ '/diseno-web-houston/': ('Spanish-Speaking Web Designer for Houston Businesses | Alexander Caro',
+       'Professional websites in Spanish (and English) for Hispanic-owned businesses in Houston: construction, auto shops, restaurants and more. Fixed prices from $800.'),
+ '/diseno-web-los-angeles/': ('Spanish-Speaking Web Designer for Los Angeles Businesses | Alexander Caro',
+       'Professional websites in Spanish (and English) for Hispanic-owned businesses in Los Angeles: restaurants, home services, shops and more. Fixed prices from $800.'),
 }
 
 PERSON_DESC_EN = ('Freelance web designer and frontend developer based in Bogotá. '
                   'Specialized in professional websites, visual identity, digital ads '
                   'and product photography for businesses in Colombia, Latin America, '
                   'the US and Europe.')
+
+JOB_TITLE_EN = 'Freelance Web Designer & Frontend Developer'
+
+# Schemas de las páginas nuevas (ofertas + ciudades): (Service.name, Service.description, breadcrumb)
+NEW_SCHEMA_EN = {
+ '/servicios/web-express/': (
+   'Web Express — Professional website in 14 days',
+   'Fixed-price web design and development package: an up-to-5-page custom site in clean code, with technical SEO and speed optimization. Delivered 14 days after content is received. $800 USD.',
+   'Web Express'),
+ '/servicios/auditoria-seo-geo/': (
+   'SEO + GEO Audit — visibility on Google and AI engines',
+   'Manual audit of technical SEO, content and GEO (Generative Engine Optimization): visibility diagnosis across Google, ChatGPT, Gemini and AI Overviews, with a prioritized 90-day action plan, video summary and a 45-minute call. $400 USD, delivered in 10 business days.',
+   'SEO + GEO Audit'),
+ '/servicios/plan-mensual/': (
+   'Monthly design and web development plan',
+   'Monthly design and development subscription: social media assets, campaign material and ongoing website improvements, with replies within 24 business hours. $600 per month, no lock-in contracts.',
+   'Monthly plan'),
+ '/diseno-web-miami/': (
+   'Spanish-language web design for Miami businesses',
+   'Professional web design and development in Spanish for Hispanic-owned businesses in Miami, Florida: restaurants, clinics, real estate and services. Remote work with fixed pricing, English invoices and direct communication in Spanish.',
+   'Web design in Miami'),
+ '/diseno-web-houston/': (
+   'Spanish-language web design for Houston businesses',
+   'Professional web design and development in Spanish for Hispanic-owned businesses in Houston, Texas: construction, auto shops, restaurants, transport and services. Remote work with fixed pricing, English invoices and direct communication in Spanish.',
+   'Web design in Houston'),
+ '/diseno-web-los-angeles/': (
+   'Spanish-language web design for Los Angeles businesses',
+   'Professional web design and development in Spanish for Hispanic-owned businesses in Los Angeles, California: restaurants, home services, shops and creatives. Remote work with fixed pricing, English invoices and direct communication in Spanish.',
+   'Web design in Los Angeles'),
+}
+
+# Prefijo i18n y nº de preguntas del FAQPage de cada página nueva
+FAQ_I18N = {
+ '/servicios/web-express/': ('wx', 5),
+ '/servicios/auditoria-seo-geo/': ('ag', 5),
+ '/servicios/plan-mensual/': ('pm', 5),
+ '/diseno-web-miami/': ('mia', 5),
+ '/diseno-web-houston/': ('hou', 5),
+ '/diseno-web-los-angeles/': ('lax', 5),
+}
 
 def frag(html):
     return BeautifulSoup(html, 'html.parser')
@@ -108,6 +166,12 @@ def build(rel, url):
     src = io.open(rel, encoding='utf-8').read()
     soup = BeautifulSoup(src, 'html.parser')
     page_dir = posixpath.dirname(rel)
+
+    # Guardián: si una fuente ES ya tiene lang="en" es que un build EN la
+    # sobrescribió (pasó en jul-2026 y auto-desindexó /servicios/*). Abortamos.
+    if (soup.html.get('lang') or 'es').lower().startswith('en'):
+        raise SystemExit(f'✗ {rel} tiene lang="en" — la fuente ES fue sobrescrita. '
+                         f'Corre "python3 restore-es.py" antes de compilar.')
 
     # 1 ── traducciones
     for el in soup.select('[data-i18n]'):
@@ -190,6 +254,55 @@ def build(rel, url):
                     sc.string = '\n  ' + json.dumps(data, ensure_ascii=False, indent=2) + '\n  '
                 except Exception:
                     pass
+
+    # 6b ── schemas de ofertas y ciudades en inglés
+    if url in NEW_SCHEMA_EN:
+        name_en, desc_en, crumb_en = NEW_SCHEMA_EN[url]
+        pfx, nfaq = FAQ_I18N[url]
+        for sc in soup.find_all('script', type='application/ld+json'):
+            try:
+                data = json.loads(sc.string or '')
+            except Exception:
+                continue
+            graph = data.get('@graph')
+            if not graph:
+                continue
+            for node in graph:
+                t = node.get('@type')
+                if t == 'Service':
+                    node['name'] = name_en
+                    node['description'] = desc_en
+                    node['url'] = SITE + '/en' + url
+                    if node.get('serviceType') == 'Diseño y desarrollo web':
+                        node['serviceType'] = 'Web design and development'
+                    ch = node.get('availableChannel')
+                    if ch:
+                        ch['serviceUrl'] = SITE + '/en' + url
+                    off = node.get('offers')
+                    if off and off.get('url'):
+                        off['url'] = SITE + '/en' + url
+                    prov = node.get('provider')
+                    if prov and prov.get('jobTitle'):
+                        prov['jobTitle'] = JOB_TITLE_EN
+                elif t == 'FAQPage':
+                    node['mainEntity'] = [
+                        {"@type": "Question", "name": EN[f'{pfx}.faq.{i}.q'],
+                         "acceptedAnswer": {"@type": "Answer",
+                            "text": re.sub('<[^>]+>', '', EN[f'{pfx}.faq.{i}.a'])}}
+                        for i in range(1, nfaq + 1)]
+                elif t == 'BreadcrumbList':
+                    for item in node.get('itemListElement', []):
+                        nm = item.get('name')
+                        if nm == 'Inicio':
+                            item['name'] = 'Home'
+                        elif nm == 'Servicios':
+                            item['name'] = 'Services'
+                        else:
+                            item['name'] = crumb_en
+                        u = item.get('item', '')
+                        if u.startswith(SITE) and not u.startswith(SITE + '/en'):
+                            item['item'] = SITE + '/en' + u[len(SITE):]
+            sc.string = '\n  ' + json.dumps(data, ensure_ascii=False, indent=2) + '\n  '
 
     out = posixpath.join('en', rel)
     os.makedirs(posixpath.dirname(out) or 'en', exist_ok=True)
