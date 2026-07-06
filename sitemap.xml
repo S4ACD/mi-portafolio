@@ -31,7 +31,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/"/>
@@ -112,7 +112,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/diseno-web/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/diseno-web/"/>
@@ -121,7 +121,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/identidad-visual/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/identidad-visual/"/>
@@ -130,7 +130,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/diseno-grafico-freelance/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/diseno-grafico-freelance/"/>
@@ -139,7 +139,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/fotografia-de-producto/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/fotografia-de-producto/"/>
@@ -175,7 +175,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/"/>
@@ -256,7 +256,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/diseno-web/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/diseno-web/"/>
@@ -265,7 +265,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/identidad-visual/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/identidad-visual/"/>
@@ -274,7 +274,7 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/diseno-grafico-freelance/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/diseno-grafico-freelance/"/>
@@ -283,12 +283,120 @@
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/fotografia-de-producto/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/fotografia-de-producto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/fotografia-de-producto/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/fotografia-de-producto/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/servicios/web-express/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/web-express/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/web-express/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/web-express/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/servicios/auditoria-seo-geo/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/auditoria-seo-geo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/auditoria-seo-geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/auditoria-seo-geo/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/servicios/plan-mensual/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/plan-mensual/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/plan-mensual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/plan-mensual/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/diseno-web-miami/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-miami/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-miami/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-miami/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/diseno-web-houston/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-houston/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-houston/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-houston/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/diseno-web-los-angeles/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-los-angeles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-los-angeles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-los-angeles/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/en/servicios/web-express/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/web-express/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/web-express/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/web-express/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/en/servicios/auditoria-seo-geo/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/auditoria-seo-geo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/auditoria-seo-geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/auditoria-seo-geo/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/en/servicios/plan-mensual/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/plan-mensual/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/plan-mensual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/plan-mensual/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/en/diseno-web-miami/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-miami/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-miami/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-miami/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/en/diseno-web-houston/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-houston/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-houston/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-houston/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/en/diseno-web-los-angeles/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-los-angeles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-los-angeles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-los-angeles/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/privacidad/</loc>
