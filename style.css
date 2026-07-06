@@ -4014,3 +4014,135 @@ input, textarea {
   .doors-grid { grid-template-columns: 1fr; }
   .doors-section { padding-top: 14px; }
 }
+
+/* ───────────────────────────────────────────────────────────────
+   BOTÓN DORADO — promovido a global (antes solo vivía en
+   trabajo/style.css y 31 páginas lo usaban sin definición).
+─────────────────────────────────────────────────────────────── */
+.btn--gold {
+  background: var(--hv2-gold);
+  color: #1a1510;
+}
+.btn--gold:hover {
+  background: #ddc9a0;
+  box-shadow: 0 0 32px rgba(205,183,142,0.35), 0 0 70px rgba(205,183,142,0.12);
+  transform: translateY(-2px);
+}
+
+/* ───────────────────────────────────────────────────────────────
+   PAQUETES PRODUCTIZADOS — cards de precio (hub, ofertas, ciudades)
+─────────────────────────────────────────────────────────────── */
+.pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+@media (max-width: 960px) { .pkg-grid { grid-template-columns: 1fr; } }
+.pkg-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--hv2-void-soft);
+  border: 1px solid var(--hv2-line);
+  border-radius: 18px;
+  padding: 32px 28px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: border-color 0.3s var(--transition), transform 0.3s var(--transition);
+}
+.pkg-card:hover { border-color: var(--hv2-gold-dim); transform: translateY(-4px); }
+.pkg-card--featured { border-color: var(--hv2-gold-dim); background: #12100c; }
+.pkg-card__badge {
+  position: absolute; top: -11px; left: 28px;
+  font-family: var(--hv2-font-ui); font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: #1a1510; background: var(--hv2-gold);
+  padding: 4px 12px; border-radius: 999px;
+}
+.pkg-card__name {
+  font-family: var(--hv2-font-display);
+  font-size: 1.35rem; font-weight: 500; color: var(--hv2-ink);
+  margin-bottom: 6px;
+}
+.pkg-card__price {
+  font-family: var(--hv2-font-display);
+  font-size: 2.1rem; font-weight: 600; color: var(--hv2-gold);
+  line-height: 1; margin-bottom: 2px;
+}
+.pkg-card__price small {
+  font-size: 0.9rem; font-weight: 400; color: var(--hv2-ink-dim);
+  font-family: var(--hv2-font-body);
+}
+.pkg-card__tag {
+  font-size: 0.85rem; color: var(--hv2-ink-dim); line-height: 1.55;
+  margin: 10px 0 18px;
+}
+.pkg-card__list { list-style: none; padding: 0; margin: 0 0 22px; display: flex; flex-direction: column; gap: 9px; }
+.pkg-card__list li {
+  font-size: 0.85rem; color: var(--hv2-ink-dim);
+  padding-left: 20px; position: relative;
+}
+.pkg-card__list li::before {
+  content: '✓'; position: absolute; left: 0; top: 0;
+  color: var(--hv2-gold); font-size: 0.8rem;
+}
+.pkg-card__cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.85rem; font-weight: 600; color: var(--hv2-ink);
+  margin-top: auto;
+  transition: gap 0.25s var(--transition), color 0.25s var(--transition);
+}
+.pkg-card:hover .pkg-card__cta { color: var(--hv2-gold); gap: 10px; }
+
+/* Píldora de precio en el hero de cada oferta */
+.offer-price {
+  display: inline-flex; align-items: baseline; gap: 12px;
+  border: 1px solid var(--hv2-gold-dim);
+  background: rgba(205,183,142,0.06);
+  border-radius: 999px;
+  padding: 10px 22px;
+  margin-bottom: 26px;
+}
+.offer-price__amount {
+  font-family: var(--hv2-font-display);
+  font-size: 1.6rem; font-weight: 600; color: var(--hv2-gold); line-height: 1;
+}
+.offer-price__note {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+}
+
+/* Bloque "qué NO incluye" — honestidad visible */
+.no-incluye {
+  border: 1px dashed var(--hv2-line);
+  border-radius: 14px;
+  padding: 24px 26px;
+  margin-top: 28px;
+}
+.no-incluye__title {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--hv2-ink-dim); margin-bottom: 14px;
+}
+.no-incluye__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; }
+.no-incluye__list li {
+  font-size: 0.87rem; color: var(--hv2-ink-dim);
+  padding-left: 20px; position: relative;
+}
+.no-incluye__list li::before {
+  content: '✕'; position: absolute; left: 0; top: 0;
+  color: var(--hv2-ink-faint); font-size: 0.78rem;
+}
+
+/* Chips de sectores — páginas de ciudad */
+.sector-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.sector-chip {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.82rem; color: var(--hv2-ink);
+  border: 1px solid var(--hv2-line);
+  background: var(--hv2-void-soft);
+  border-radius: 999px;
+  padding: 10px 18px;
+}
