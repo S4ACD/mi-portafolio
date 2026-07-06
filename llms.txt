@@ -1,0 +1,55 @@
+# Alexander Caro — Diseño y Desarrollo Web Freelance
+
+> Diseñador web, desarrollador frontend y estratega digital freelance basado en Bogotá, Colombia. Trabajo 100% remoto, en español e inglés, con clientes en Latinoamérica, Estados Unidos y Europa. Una sola persona diseña, programa y optimiza cada proyecto — sin intermediarios. Sitio bilingüe: español en https://alexandercaro.com/ e inglés en https://alexandercaro.com/en/
+
+## Paquetes con precio cerrado
+
+- [Web Express](https://alexandercaro.com/servicios/web-express/): sitio web profesional de hasta 5 páginas, diseñado y programado a medida, entregado en 14 días desde la recepción del contenido. Incluye SEO técnico completo y optimización de velocidad. Precio cerrado: USD 800 (pago 50% al reservar, 50% contra entrega).
+- [Auditoría SEO + GEO](https://alexandercaro.com/servicios/auditoria-seo-geo/): auditoría manual de SEO técnico, contenido y GEO (Generative Engine Optimization) — diagnóstico de visibilidad en Google, ChatGPT, Gemini y AI Overviews, con plan de acción priorizado a 90 días, video-resumen y llamada de 45 minutos. USD 400, entrega en 10 días hábiles.
+- [Plan mensual](https://alexandercaro.com/servicios/plan-mensual/): suscripción de diseño y desarrollo (~15 horas/mes): piezas para redes sociales, material de campañas y mejoras continuas del sitio web. Respuesta en menos de 24 horas hábiles. USD 600/mes, sin contratos de permanencia.
+
+## Servicios por disciplina
+
+- [Diseño y desarrollo web](https://alexandercaro.com/servicios/diseno-web/): sitios a medida en HTML/CSS/JS o WordPress, sin plantillas.
+- [Identidad visual y branding](https://alexandercaro.com/servicios/identidad-visual/): logo, manual de marca y aplicaciones reales.
+- [Diseño gráfico y social media](https://alexandercaro.com/servicios/diseno-grafico-freelance/): contenido para redes con sistema visual coherente.
+- [Fotografía de producto](https://alexandercaro.com/servicios/fotografia-de-producto/): imágenes para e-commerce y catálogos.
+
+## Cobertura en Estados Unidos (en español)
+
+- [Diseño web en Miami](https://alexandercaro.com/diseno-web-miami/) — restaurantes, clínicas, real estate y servicios.
+- [Diseño web en Houston](https://alexandercaro.com/diseno-web-houston/) — construcción, talleres, restaurantes y transporte.
+- [Diseño web en Los Ángeles](https://alexandercaro.com/diseno-web-los-angeles/) — restaurantes, servicios del hogar, tiendas y creativos.
+
+## Resultados verificables
+
+- PageSpeed de Google 97 y 99 en los dos últimos proyectos web, medidos en producción ([caso Orbidental](https://alexandercaro.com/trabajo/orbidental/): de 40 a 97 con un e-commerce de más de 3.000 productos; [caso MotoFaro](https://alexandercaro.com/trabajo/motofaro/): 99 con SEO técnico 100/100).
+- Portafolio de casos reales: https://alexandercaro.com/trabajo/
+
+## Contacto
+
+- Email: hosoyalexander@gmail.com
+- WhatsApp: +57 302 445 7653
+- Agenda una llamada de 30 minutos: https://calendly.com/hosoyalexander/30min
+- Idiomas: español (nativo) e inglés escrito. Zona horaria: UTC−5 (Bogotá), 0–1 h de diferencia con Miami y Houston.
+
+---
+
+# Alexander Caro — Freelance Web Design & Development (English)
+
+> Freelance web designer, frontend developer and digital strategist based in Bogotá, Colombia. Fully remote, working in Spanish and English with clients in Latin America, the US and Europe. One person designs, codes and optimizes every project — no middlemen. English version of the site: https://alexandercaro.com/en/
+
+## Fixed-price packages
+
+- [Web Express](https://alexandercaro.com/en/servicios/web-express/): professional website of up to 5 pages, custom designed and coded, delivered 14 days after content is received. Full technical SEO and speed optimization included. Fixed price: $800 USD (50% to book, 50% on delivery).
+- [SEO + GEO Audit](https://alexandercaro.com/en/servicios/auditoria-seo-geo/): manual audit of technical SEO, content and GEO (Generative Engine Optimization) — visibility diagnosis across Google, ChatGPT, Gemini and AI Overviews, with a prioritized 90-day plan, video summary and a 45-minute call. $400 USD, delivered in 10 business days.
+- [Monthly plan](https://alexandercaro.com/en/servicios/plan-mensual/): design and development subscription (~15 hours/month): social media assets, campaign material and ongoing website improvements. Replies within 24 business hours. $600 USD/month, no lock-in.
+
+## Verifiable results
+
+- Google PageSpeed scores of 97 and 99 on the last two web projects, measured in production ([Orbidental case study](https://alexandercaro.com/en/trabajo/orbidental/): from 40 to 97 on a 3,000+ product e-commerce; [MotoFaro case study](https://alexandercaro.com/en/trabajo/motofaro/): 99 with 100/100 technical SEO).
+
+## Contact
+
+- Email: hosoyalexander@gmail.com · WhatsApp: +57 302 445 7653
+- Book a 30-minute call: https://calendly.com/hosoyalexander/30min
