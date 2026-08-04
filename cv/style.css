@@ -70,10 +70,11 @@ body { background: var(--hv2-void); }
 .cv-hero__actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .cv-hero__col--portrait { display: flex; justify-content: center; }
 .cv-hero__portrait {
+  display: block;
   width: 100%; max-width: 360px;
   height: auto;
-  aspect-ratio: 640 / 760;
-  object-fit: cover;
+  aspect-ratio: 1024 / 1536;
+  object-fit: contain;
   border-radius: var(--radius);
   filter: saturate(1.02);
 }
