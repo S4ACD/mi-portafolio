@@ -374,3 +374,19 @@
   color: var(--hv2-ink-dim);
   border-style: dashed;
 }
+
+/* ── Nota discreta con link al CV (no va en el nav — ver /cv/) ── */
+.cta-section__note {
+  margin-top: 22px;
+  font-family: var(--hv2-font-body);
+  font-size: 0.82rem;
+  color: var(--hv2-ink-faint);
+  text-align: center;
+}
+.cta-section__note a {
+  color: var(--hv2-ink-dim);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+.cta-section__note a:hover { color: var(--hv2-gold); }
