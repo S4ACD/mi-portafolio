@@ -1,0 +1,264 @@
+/* ═══════════════════════════════════════════════════════════════
+   /cv/ — estilos propios. Depende de /style.css (tokens --hv2-*,
+   .nav, .footer, .stats-section, .btn, .tag, .scroll-reveal).
+═══════════════════════════════════════════════════════════════ */
+
+body { background: var(--hv2-void); }
+
+.cv-eyebrow {
+  display: inline-block;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hv2-gold);
+  margin-bottom: 16px;
+}
+
+/* ── HERO ── */
+.cv-hero {
+  position: relative;
+  padding: 148px 0 72px;
+  overflow: hidden;
+  background: var(--hv2-void);
+}
+.cv-hero__bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 700px 480px at 12% 0%, rgba(205,183,142,0.14), transparent 60%),
+    radial-gradient(ellipse 600px 500px at 100% 30%, rgba(205,183,142,0.08), transparent 65%);
+  pointer-events: none;
+}
+.cv-hero__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 56px;
+  align-items: center;
+}
+.cv-hero__name {
+  font-family: var(--hv2-font-display);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 5.2vw, 4.2rem);
+  line-height: 1.02;
+  color: var(--hv2-ink);
+  margin-bottom: 6px;
+}
+.cv-hero__role {
+  font-family: var(--hv2-font-ui);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: var(--hv2-gold);
+  margin-bottom: 22px;
+}
+.cv-hero__role-sep { color: var(--hv2-ink-faint); margin: 0 2px; }
+.cv-hero__summary {
+  font-family: var(--hv2-font-body);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--hv2-ink-dim);
+  max-width: 56ch;
+  margin-bottom: 26px;
+}
+.cv-hero__facts {
+  display: flex; flex-wrap: wrap; gap: 10px 22px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.82rem;
+  color: var(--hv2-ink-dim);
+  margin-bottom: 30px;
+}
+.cv-hero__actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.cv-hero__col--portrait { display: flex; justify-content: center; }
+.cv-hero__portrait {
+  width: 100%; max-width: 360px;
+  height: auto;
+  aspect-ratio: 640 / 760;
+  object-fit: cover;
+  border-radius: var(--radius);
+  filter: saturate(1.02);
+}
+
+@media (max-width: 860px) {
+  .cv-hero { padding: 116px 0 48px; }
+  .cv-hero__grid { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+  .cv-hero__summary { margin-left: auto; margin-right: auto; }
+  .cv-hero__facts, .cv-hero__actions { justify-content: center; }
+  .cv-hero__col--portrait { order: -1; }
+  .cv-hero__portrait { max-width: 240px; }
+}
+
+/* ── SECCIONES ── */
+.cv-section { padding: 76px 0; }
+.cv-section--alt { background: var(--hv2-void-soft); }
+.cv-h2 {
+  font-family: var(--hv2-font-display);
+  font-weight: 500;
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  line-height: 1.12;
+  color: var(--hv2-ink);
+  max-width: 20ch;
+  margin-bottom: 14px;
+}
+.cv-h2--sm { font-size: clamp(1.35rem, 2.2vw, 1.7rem); max-width: none; }
+.cv-h2 em { color: var(--hv2-gold); font-style: italic; }
+.cv-section__lead {
+  font-family: var(--hv2-font-body);
+  color: var(--hv2-ink-dim);
+  font-size: 1rem;
+  max-width: 58ch;
+  margin-bottom: 40px;
+}
+
+/* ── TIMELINE ── */
+.cv-timeline {
+  display: flex; flex-direction: column; gap: 0;
+  margin-top: 40px;
+  border-top: 1px solid var(--hv2-line);
+}
+.cv-tl-item {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--hv2-line);
+}
+.cv-tl-item__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 16px; flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.cv-tl-item__head h3 {
+  font-family: var(--hv2-font-ui);
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: var(--hv2-ink);
+}
+.cv-tl-item__date {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.8rem;
+  color: var(--hv2-gold);
+  white-space: nowrap;
+}
+.cv-tl-item__org {
+  font-family: var(--hv2-font-body);
+  font-size: 0.9rem;
+  color: var(--hv2-ink-faint);
+  margin-bottom: 14px;
+}
+.cv-tl-item__list {
+  display: flex; flex-direction: column; gap: 9px;
+  list-style: none; margin: 0; padding: 0;
+}
+.cv-tl-item__list li {
+  position: relative;
+  padding-left: 20px;
+  font-family: var(--hv2-font-body);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--hv2-ink-dim);
+}
+.cv-tl-item__list li::before {
+  content: "";
+  position: absolute; left: 0; top: 0.55em;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--hv2-gold);
+}
+
+/* ── HABILIDADES ── */
+.cv-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px 48px;
+  margin-top: 36px;
+}
+.cv-skill-group h3 {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--hv2-ink);
+  margin-bottom: 14px;
+}
+.cv-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 700px) {
+  .cv-skills-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ── PORTAFOLIO ── */
+.cv-work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 24px;
+}
+.cv-work-card {
+  display: flex; flex-direction: column;
+  background: var(--hv2-void-soft);
+  border: 1px solid var(--hv2-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.cv-work-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+}
+.cv-work-card__media { aspect-ratio: 3/2; overflow: hidden; background: #0c0b09; }
+.cv-work-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cv-work-card__media--mock {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--mock-bg, #0a0a0f);
+}
+.cv-work-card__wordmark {
+  font-family: var(--hv2-font-ui);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--hv2-ink);
+}
+.cv-work-card__wordmark em { color: var(--hv2-gold); font-style: normal; }
+.cv-work-card__body { padding: 18px 20px 22px; flex: 1; display: flex; flex-direction: column; }
+.cv-work-card__cat {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--hv2-gold);
+  margin-bottom: 8px;
+}
+.cv-work-card__body h3 {
+  font-family: var(--hv2-font-display);
+  font-size: 1.15rem; font-weight: 500;
+  color: var(--hv2-ink);
+  margin-bottom: 8px;
+}
+.cv-work-card__body p {
+  font-family: var(--hv2-font-body);
+  font-size: 0.88rem; line-height: 1.5;
+  color: var(--hv2-ink-dim);
+}
+.cv-work-more { text-align: center; margin-top: 40px; }
+
+/* ── EDUCACIÓN / IDIOMAS ── */
+.cv-edu-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+}
+.cv-edu-item { padding: 16px 0; border-bottom: 1px solid var(--hv2-line); }
+.cv-edu-item h3 { font-family: var(--hv2-font-ui); font-size: 0.98rem; color: var(--hv2-ink); margin-bottom: 4px; }
+.cv-edu-item__date { font-family: var(--hv2-font-body); font-size: 0.85rem; color: var(--hv2-ink-faint); }
+.cv-edu-note {
+  font-family: var(--hv2-font-body);
+  font-size: 0.88rem; color: var(--hv2-ink-faint);
+  line-height: 1.55; margin-top: 16px;
+}
+.cv-lang-item {
+  display: flex; justify-content: space-between;
+  padding: 14px 0; border-bottom: 1px solid var(--hv2-line);
+  font-family: var(--hv2-font-ui); font-size: 0.95rem; color: var(--hv2-ink);
+}
+.cv-lang-item__level { color: var(--hv2-ink-dim); font-family: var(--hv2-font-body); font-size: 0.88rem; }
+
+@media (max-width: 700px) {
+  .cv-edu-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ── CONTACTO ── */
+.cv-contact__inner { text-align: center; }
+.cv-contact .cv-h2, .cv-contact .cv-section__lead, .cv-contact .cv-eyebrow { margin-left: auto; margin-right: auto; }
+.cv-contact__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 8px; }
