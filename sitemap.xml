@@ -9,7 +9,7 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/sobre-mi/</loc>
@@ -18,7 +18,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/sobre-mi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/sobre-mi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/sobre-mi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/sobre-mi/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/</loc>
@@ -27,7 +27,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/</loc>
@@ -36,7 +36,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/orbidental/</loc>
@@ -45,7 +45,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/orbidental/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/orbidental/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/orbidental/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/orbidental/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/fueggo/</loc>
@@ -54,7 +54,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/fueggo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/fueggo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/fueggo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/fueggo/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/la-jungla-club/</loc>
@@ -63,7 +63,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/la-jungla-club/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/la-jungla-club/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/la-jungla-club/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/la-jungla-club/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/rebel-street/</loc>
@@ -72,7 +72,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/rebel-street/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/rebel-street/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/rebel-street/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/rebel-street/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/acelerarte/</loc>
@@ -81,7 +81,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/acelerarte/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/acelerarte/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/acelerarte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/acelerarte/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/pulse-digital/</loc>
@@ -90,7 +90,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/pulse-digital/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/pulse-digital/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/pulse-digital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/pulse-digital/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/motofaro/</loc>
@@ -99,7 +99,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/motofaro/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/motofaro/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/motofaro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/motofaro/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/trabajo/social-media-dental/</loc>
@@ -108,7 +108,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/social-media-dental/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/social-media-dental/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/social-media-dental/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/social-media-dental/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/diseno-web/</loc>
@@ -117,7 +117,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/diseno-web/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/diseno-web/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/diseno-web/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/diseno-web/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/identidad-visual/</loc>
@@ -126,7 +126,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/identidad-visual/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/identidad-visual/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/identidad-visual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/identidad-visual/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/diseno-grafico-freelance/</loc>
@@ -135,7 +135,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/diseno-grafico-freelance/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/diseno-grafico-freelance/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/diseno-grafico-freelance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/diseno-grafico-freelance/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/fotografia-de-producto/</loc>
@@ -144,7 +144,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/fotografia-de-producto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/fotografia-de-producto/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/fotografia-de-producto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/fotografia-de-producto/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/</loc>
@@ -153,7 +153,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/sobre-mi/</loc>
@@ -162,7 +162,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/sobre-mi/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/sobre-mi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/sobre-mi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/sobre-mi/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/</loc>
@@ -171,7 +171,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/</loc>
@@ -180,7 +180,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/orbidental/</loc>
@@ -189,7 +189,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/orbidental/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/orbidental/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/orbidental/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/orbidental/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/fueggo/</loc>
@@ -198,7 +198,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/fueggo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/fueggo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/fueggo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/fueggo/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/la-jungla-club/</loc>
@@ -207,7 +207,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/la-jungla-club/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/la-jungla-club/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/la-jungla-club/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/la-jungla-club/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/rebel-street/</loc>
@@ -216,7 +216,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/rebel-street/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/rebel-street/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/rebel-street/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/rebel-street/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/acelerarte/</loc>
@@ -225,7 +225,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/acelerarte/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/acelerarte/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/acelerarte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/acelerarte/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/pulse-digital/</loc>
@@ -234,7 +234,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/pulse-digital/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/pulse-digital/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/pulse-digital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/pulse-digital/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/motofaro/</loc>
@@ -243,7 +243,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/motofaro/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/motofaro/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/motofaro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/motofaro/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/trabajo/social-media-dental/</loc>
@@ -252,7 +252,7 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/social-media-dental/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/social-media-dental/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/trabajo/social-media-dental/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/social-media-dental/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/diseno-web/</loc>
@@ -261,7 +261,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/diseno-web/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/diseno-web/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/diseno-web/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/diseno-web/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/identidad-visual/</loc>
@@ -270,7 +270,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/identidad-visual/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/identidad-visual/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/identidad-visual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/identidad-visual/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/diseno-grafico-freelance/</loc>
@@ -279,7 +279,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/diseno-grafico-freelance/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/diseno-grafico-freelance/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/diseno-grafico-freelance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/diseno-grafico-freelance/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/fotografia-de-producto/</loc>
@@ -288,7 +288,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/fotografia-de-producto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/fotografia-de-producto/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/fotografia-de-producto/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/fotografia-de-producto/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/web-express/</loc>
@@ -297,7 +297,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/web-express/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/web-express/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/web-express/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/web-express/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/auditoria-seo-geo/</loc>
@@ -306,7 +306,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/auditoria-seo-geo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/auditoria-seo-geo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/auditoria-seo-geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/auditoria-seo-geo/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/servicios/plan-mensual/</loc>
@@ -315,7 +315,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/plan-mensual/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/plan-mensual/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/plan-mensual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/plan-mensual/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/diseno-web-miami/</loc>
@@ -324,7 +324,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-miami/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-miami/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-miami/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/diseno-web-miami/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/diseno-web-houston/</loc>
@@ -333,7 +333,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-houston/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-houston/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-houston/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/diseno-web-houston/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/diseno-web-los-angeles/</loc>
@@ -342,7 +342,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-los-angeles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-los-angeles/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-los-angeles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/diseno-web-los-angeles/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/web-express/</loc>
@@ -351,7 +351,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/web-express/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/web-express/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/web-express/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/web-express/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/auditoria-seo-geo/</loc>
@@ -360,7 +360,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/auditoria-seo-geo/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/auditoria-seo-geo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/auditoria-seo-geo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/auditoria-seo-geo/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/servicios/plan-mensual/</loc>
@@ -369,7 +369,7 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/servicios/plan-mensual/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/servicios/plan-mensual/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/servicios/plan-mensual/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/servicios/plan-mensual/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/diseno-web-miami/</loc>
@@ -378,7 +378,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-miami/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-miami/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-miami/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/diseno-web-miami/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/diseno-web-houston/</loc>
@@ -387,7 +387,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-houston/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-houston/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-houston/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/diseno-web-houston/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/en/diseno-web-los-angeles/</loc>
@@ -396,7 +396,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/diseno-web-los-angeles/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/diseno-web-los-angeles/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/diseno-web-los-angeles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/diseno-web-los-angeles/"/>
   </url>
   <url>
     <loc>https://alexandercaro.com/privacidad/</loc>
@@ -405,4 +405,22 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://alexandercaro.com/en/cv/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/cv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/cv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/cv/"/>
+  </url>
+  <url>
+    <loc>https://alexandercaro.com/cv/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alexandercaro.com/cv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/cv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/cv/"/>
+  </url>
 </urlset>
