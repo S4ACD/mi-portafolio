@@ -22,13 +22,16 @@
       const suffix = numEl.dataset.suffix || '';
       const duration = 1600;
       const start  = performance.now();
+      // El separador de miles depende del idioma de la página:
+      // es-CO -> 3.000  |  en-US -> 3,000
+      const locale = (document.documentElement.lang || 'es').toLowerCase().startsWith('en')
+        ? 'en-US' : 'es-CO';
 
       function tick(now) {
         const progress = Math.min((now - start) / duration, 1);
         const ease     = 1 - Math.pow(1 - progress, 3);
         const current  = Math.round(target * ease);
-        // Formato con punto de miles
-        numEl.textContent = current.toLocaleString('es-CO') + suffix;
+        numEl.textContent = current.toLocaleString(locale) + suffix;
         if (progress < 1) requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
