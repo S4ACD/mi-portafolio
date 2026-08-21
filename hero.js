@@ -97,12 +97,14 @@
      instead of staying hidden.
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion) {
-    var titleLines = document.querySelectorAll('.hv2__title-line > span');
     var stageEls   = document.querySelectorAll('.hv2__rock, .hv2__portrait');
     var reveals    = document.querySelectorAll('[data-reveal]');
 
+    /* PERF/LCP: el título ya NO se anima con GSAP.
+       Antes, .from({y:'110%'}) lo escondía al cargar GSAP desde el CDN,
+       lo que retrasaba el LCP ~3s en móvil. Ahora lo anima CSS puro
+       (keyframe hv2TitleUp), que corre en el primer frame sin esperar JS. */
     gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.2 })
-      .from(titleLines, { y: '110%', duration: 1.1, stagger: 0.12 }, 0)
       .from(stageEls, { opacity: 0, scale: 0.94, transformOrigin: '50% 50%', duration: 1.4, stagger: 0.06, ease: 'power2.out' }, 0.1)
       .from('.hv2__rings, .hv2__fog, .hv2__particles', { opacity: 0, duration: 1.8 }, 0.25)
       .from(reveals, { opacity: 0, y: 22, duration: 0.9, stagger: 0.05 }, 0.35);
