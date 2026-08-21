@@ -22,7 +22,7 @@
       `<nav class="nav" id="nav">
         <div class="nav__inner">
           <a href="${base}/" class="nav__logo">
-            <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" alt="Alexander Caro" class="nav__logo-img">
+            <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" alt="Alexander Caro" class="nav__logo-img" width="140" height="56" fetchpriority="high">
           </a>
           <ul class="nav__links">
             <li><a href="${base}/"${isHome ? ' class="nav__link--active"' : ''} data-i18n="nav.home">Inicio</a></li>
