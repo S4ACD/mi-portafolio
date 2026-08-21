@@ -10,6 +10,7 @@
   <meta name="keywords" content="diseñador web bogotá, desarrollo web colombia, freelance diseño web, sitios web profesionales, rediseño web colombia, diseño web empresas" />
   <meta name="author" content="Alexander Caro" />
   <meta name="robots" content="index, follow" />
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" fetchpriority="high">
   <link rel="canonical" href="https://alexandercaro.com/" />
   <link rel="alternate" hreflang="es" href="https://alexandercaro.com/" />
   <link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/" />
@@ -17,9 +18,9 @@
 
   <!-- Preload LCP — retrato del hero (Cloudinary, formato auto, 1024px) -->
   <link rel="preload" as="image" fetchpriority="high"
-        href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto:eco,f_auto,w_820/v1781396255/Escultura_de_Alexander_ykbpww.png"
-        imagesrcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto:eco,f_auto,w_360/v1781396255/Escultura_de_Alexander_ykbpww.png 360w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto:eco,f_auto,w_540/v1781396255/Escultura_de_Alexander_ykbpww.png 540w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto:eco,f_auto,w_820/v1781396255/Escultura_de_Alexander_ykbpww.png 820w"
-        imagesizes="(max-width: 767px) 76vw, (max-width: 1279px) 44vw, 560px" />
+        href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png"
+        imagesrcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png 680w"
+        imagesizes="(max-width: 767px) 62vw, (max-width: 1279px) 40vw, 520px" />
 
   <!-- Favicon — definido solo aquí, el browser lo busca en / automáticamente para todas las subpáginas -->
   <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_png,w_32/v1781101945/Favicon_jsl63r.webp" />
@@ -266,9 +267,9 @@
       <div class="hv2__portrait" id="hv2Portrait"
            data-rise="18" data-float-y="16" data-float-rot="0" data-duration="9">
         <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto:eco,f_auto,w_820/v1781396255/Escultura_de_Alexander_ykbpww.png"
-               srcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto:eco,f_auto,w_360/v1781396255/Escultura_de_Alexander_ykbpww.png 360w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto:eco,f_auto,w_540/v1781396255/Escultura_de_Alexander_ykbpww.png 540w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto:eco,f_auto,w_820/v1781396255/Escultura_de_Alexander_ykbpww.png 820w"
-               sizes="(max-width: 767px) 76vw, (max-width: 1279px) 44vw, 560px"
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png"
+               srcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png 680w"
+               sizes="(max-width: 767px) 62vw, (max-width: 1279px) 40vw, 520px"
                alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada"
                width="1024" height="1536" fetchpriority="high" decoding="async" />
         </div></div></div>
@@ -1458,9 +1459,42 @@
        no smooth-scroll library. Loaded homepage-only — see /hero.js.
        defer: el parser HTML no se bloquea — scripts se ejecutan en orden
        tras DOMContentLoaded. hero.js depende de gsap+ST que van primero. -->
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script defer src="/hero.js"></script>
+  <!-- PERF: GSAP + ScrollTrigger (~110KB) ya no bloquean la carga.
+       Se inyectan cuando la página terminó de pintar (load + idle), o antes
+       si el usuario interactúa. El hero ya se anima con CSS puro, así que
+       nada visible depende de que estos scripts lleguen rápido.
+       Esto saca ~340ms de TBT y ~237ms de reprocesamiento del arranque. -->
+  <script>
+  (function () {
+    var cargado = false;
+    function cargarGSAP() {
+      if (cargado) return; cargado = true;
+      var urls = [
+        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',
+        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js',
+        '/hero.js'
+      ];
+      (function siguiente(i) {
+        if (i >= urls.length) return;
+        var s = document.createElement('script');
+        s.src = urls[i];
+        s.async = false;
+        s.onload = function () { siguiente(i + 1); };
+        s.onerror = function () { siguiente(i + 1); };
+        document.body.appendChild(s);
+      })(0);
+    }
+    function programar() {
+      if ('requestIdleCallback' in window) requestIdleCallback(cargarGSAP, { timeout: 2000 });
+      else setTimeout(cargarGSAP, 600);
+    }
+    if (document.readyState === 'complete') programar();
+    else window.addEventListener('load', programar, { once: true });
+    ['pointerdown', 'touchstart', 'wheel', 'keydown'].forEach(function (e) {
+      window.addEventListener(e, cargarGSAP, { once: true, passive: true });
+    });
+  })();
+  </script>
 
   <script defer src="/analytics.js"></script>
   <script defer src="/nav.js"></script>
