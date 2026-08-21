@@ -97,17 +97,17 @@
      instead of staying hidden.
      ════════════════════════════════════════════════════════════════ */
   if (!reduceMotion) {
-    var stageEls   = document.querySelectorAll('.hv2__rock, .hv2__portrait');
-    var reveals    = document.querySelectorAll('[data-reveal]');
+    var stageEls = document.querySelectorAll('.hv2__rock, .hv2__portrait');
 
-    /* PERF/LCP: el título ya NO se anima con GSAP.
-       Antes, .from({y:'110%'}) lo escondía al cargar GSAP desde el CDN,
-       lo que retrasaba el LCP ~3s en móvil. Ahora lo anima CSS puro
-       (keyframe hv2TitleUp), que corre en el primer frame sin esperar JS. */
+    /* PERF/LCP: NI el título NI los [data-reveal] se animan ya con GSAP.
+       Antes arrancaban en opacity:0, y como GSAP baja de un CDN con defer,
+       el texto del hero quedaba invisible ~3s en móvil — el LCP era eso.
+       Ahora los anima CSS puro (keyframes hv2TitleUp / hv2RevealUp), que
+       corre en el primer frame sin depender de ningún script.
+       GSAP sigue encargándose de rocas, retrato, niebla y scroll. */
     gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.2 })
       .from(stageEls, { opacity: 0, scale: 0.94, transformOrigin: '50% 50%', duration: 1.4, stagger: 0.06, ease: 'power2.out' }, 0.1)
-      .from('.hv2__rings, .hv2__fog, .hv2__particles', { opacity: 0, duration: 1.8 }, 0.25)
-      .from(reveals, { opacity: 0, y: 22, duration: 0.9, stagger: 0.05 }, 0.35);
+      .from('.hv2__rings, .hv2__fog, .hv2__particles', { opacity: 0, duration: 1.8 }, 0.25);
   }
 
   /* ════════════════════════════════════════════════════════════════
