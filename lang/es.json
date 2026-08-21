@@ -1123,5 +1123,11 @@
   "stat.04.sub": "catálogo B2B · Orbidental",
   "ab.cert.g1.name": "Google Ads — AI-Powered Performance",
   "ab.cert.g1.meta": "Certificado por Google · Vigente hasta ago 2027 · Verificar ↗",
-  "ab.cert.g1.alt": "Insignia Google Ads AI-Powered Performance"
+  "ab.cert.g1.alt": "Insignia Google Ads AI-Powered Performance",
+  "ab.cert.g2.name": "Google Web Designer — Creativos interactivos",
+  "ab.cert.g2.meta": "Certificado por Google · Vigente hasta ago 2027 · Verificar ↗",
+  "ab.cert.g2.alt": "Insignia Google Web Designer creativos interactivos",
+  "ab.cert.g3.name": "Google Web Designer — Alto impacto",
+  "ab.cert.g3.meta": "Certificado por Google · Vigente hasta ago 2027 · Verificar ↗",
+  "ab.cert.g3.alt": "Insignia Google Web Designer alto impacto"
 }
