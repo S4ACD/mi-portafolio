@@ -468,3 +468,13 @@ body { background: var(--hv2-void); }
 @media (max-width: 700px) {
   .cv-cert-embed iframe { height: 520px; }
 }
+
+/* ── Badge alternativo: glifo nativo cuando el emisor no publica sello ── */
+.cv-cert__badge--glyph { background: var(--hv2-void); border: 1px solid var(--hv2-gold-dim); }
+.cv-cert__badge--glyph svg { width: 42px; height: 42px; color: var(--hv2-gold); }
+
+/* ── Responsive del componente en móvil ── */
+@media (max-width: 700px) {
+  .cv-certs { gap: 16px; }
+  .cv-cert { padding: 22px 20px 20px; }
+}
