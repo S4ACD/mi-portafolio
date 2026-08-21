@@ -390,3 +390,62 @@
   transition: color var(--transition);
 }
 .cta-section__note a:hover { color: var(--hv2-gold); }
+
+/* ═══════════════════════════════════════════════════════════════
+   CERTIFICACIONES — fila compacta bajo las skills.
+   Escala sola: se acomoda a cuantos certificados añadas.
+═══════════════════════════════════════════════════════════════ */
+.about-certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+.about-cert {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px 12px 12px;
+  background: var(--hv2-void-soft);
+  border: 1px solid var(--hv2-line);
+  border-radius: 999px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.about-cert:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+.about-cert__badge {
+  width: 44px; height: 44px;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--hv2-ink);
+  border-radius: 50%;
+  padding: 4px;
+  overflow: hidden;
+}
+.about-cert__badge img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.about-cert__text { display: flex; flex-direction: column; gap: 2px; }
+.about-cert__name {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--hv2-ink);
+  line-height: 1.3;
+}
+.about-cert__meta {
+  font-family: var(--hv2-font-body);
+  font-size: 0.74rem;
+  color: var(--hv2-ink-faint);
+  line-height: 1.3;
+  transition: color var(--transition);
+}
+.about-cert:hover .about-cert__meta { color: var(--hv2-gold); }
+
+@media (max-width: 560px) {
+  .about-cert { width: 100%; border-radius: var(--radius); }
+}
