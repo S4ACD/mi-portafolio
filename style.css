@@ -4219,8 +4219,42 @@ p, li, h1, h2, h3, h4, a, span, td {
   animation: hv2TitleUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 .hv2__title-line:nth-of-type(2) > span { animation-delay: 0.12s; }
-.hv2__title-line:nth-of-type(3) > span { animation-delay: 0.24s; }
+
+/* .hv2__title-script NO está dentro de .hv2__title-line — es hermano,
+   y lleva data-reveal. Es el elemento LCP de la home. */
+@keyframes hv2RevealUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hv2 [data-reveal] {
+  animation: hv2RevealUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hv2 [data-reveal]:nth-of-type(1) { animation-delay: 0.35s; }
+.hv2 [data-reveal]:nth-of-type(2) { animation-delay: 0.40s; }
+.hv2 [data-reveal]:nth-of-type(3) { animation-delay: 0.45s; }
+.hv2 [data-reveal]:nth-of-type(4) { animation-delay: 0.50s; }
+.hv2 [data-reveal]:nth-of-type(5) { animation-delay: 0.55s; }
+.hv2 [data-reveal]:nth-of-type(6) { animation-delay: 0.60s; }
+
+/* El título LCP entra SIN retraso: es lo que mide Lighthouse. */
+.hv2__title-script[data-reveal] { animation-delay: 0s; animation-duration: 0.7s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hv2__title-line > span { animation: none; transform: none; }
+  .hv2__title-line > span,
+  .hv2 [data-reveal] { animation: none; transform: none; opacity: 1; }
+}
+
+/* ── Animaciones compuestas ──
+   text-shadow y box-shadow no se pueden componer en la GPU: obligan a
+   repintar en cada frame. Con opacity sobre un pseudo-elemento, el halo
+   se ve igual pero corre en el compositor. */
+@keyframes hv2PulseComposited { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
+.hero__dot, .hv2__status-dot { position: relative; }
+.hero__dot::after, .hv2__status-dot::after {
+  content: ''; position: absolute; inset: -4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--hv2-gold) 0%, transparent 70%);
+  animation: hv2PulseComposited 2.4s ease-in-out infinite;
+  pointer-events: none;
+  will-change: opacity;
 }
