@@ -1120,5 +1120,8 @@
   "stat.03.label": "B2B leads generated",
   "stat.03.sub": "from Meta Ads at ~$0.61 USD per lead",
   "stat.04.label": "Products photographed",
-  "stat.04.sub": "B2B catalog · Orbidental"
+  "stat.04.sub": "B2B catalog · Orbidental",
+  "ab.cert.g1.name": "Google Ads — AI-Powered Performance",
+  "ab.cert.g1.meta": "Certified by Google · Valid through Aug 2027 · Verify ↗",
+  "ab.cert.g1.alt": "Google Ads AI-Powered Performance badge"
 }
