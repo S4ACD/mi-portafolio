@@ -1129,5 +1129,9 @@
   "ab.cert.g2.alt": "Google Web Designer interactive creatives badge",
   "ab.cert.g3.name": "Google Web Designer — High Impact",
   "ab.cert.g3.meta": "Certified by Google · Valid through Aug 2027 · Verify ↗",
-  "ab.cert.g3.alt": "Google Web Designer high impact badge"
+  "ab.cert.g3.alt": "Google Web Designer high impact badge",
+  "home.certs.label": "Certifications",
+  "home.cert.g1": "Google Ads — AI-Powered Performance",
+  "home.cert.g2": "Google Web Designer — Interactive Creatives",
+  "home.cert.g3": "Google Web Designer — High Impact"
 }
