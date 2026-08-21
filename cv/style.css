@@ -334,3 +334,137 @@ body { background: var(--hv2-void); }
 .cv-contact__inner { text-align: center; }
 .cv-contact .cv-h2, .cv-contact .cv-section__lead, .cv-contact .cv-eyebrow { margin-left: auto; margin-right: auto; }
 .cv-contact__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 8px; }
+
+/* ═══════════════════════════════════════════════════════════════
+   CERTIFICACIONES — componente reutilizable
+   Escala solo: 1 tarjeta se ve bien, 2-3 llenan la fila,
+   4+ hacen wrap automático. No tocar nada al añadir certificados.
+═══════════════════════════════════════════════════════════════ */
+.cv-certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.cv-cert {
+  flex: 1 1 300px;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  background: var(--hv2-void-soft);
+  border: 1px solid var(--hv2-line);
+  border-radius: var(--radius);
+  padding: 26px 24px 22px;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.cv-cert:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+}
+
+/* Plato claro detrás del badge: los PNG de Accredible vienen con fondo
+   blanco o transparente según el emisor. El plato normaliza ambos casos
+   y evita el recuadro blanco suelto sobre el fondo oscuro. */
+.cv-cert__badge {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hv2-ink);
+  border-radius: 50%;
+  padding: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.cv-cert__badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.cv-cert__issuer {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hv2-gold);
+  margin-bottom: 8px;
+}
+.cv-cert__title {
+  font-family: var(--hv2-font-display);
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--hv2-ink);
+  margin-bottom: 10px;
+}
+.cv-cert__desc {
+  font-family: var(--hv2-font-body);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--hv2-ink-dim);
+  margin-bottom: 18px;
+  flex: 1;
+}
+.cv-cert__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.74rem;
+  color: var(--hv2-ink-faint);
+  padding-top: 16px;
+  border-top: 1px solid var(--hv2-line);
+  margin-bottom: 16px;
+}
+.cv-cert__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+}
+.cv-cert__link {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--hv2-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  transition: color var(--transition), gap var(--transition);
+}
+.cv-cert__link:hover { color: var(--hv2-gold); gap: 9px; }
+.cv-cert__link--soft { color: var(--hv2-ink-faint); font-weight: 500; }
+.cv-cert__link--soft:hover { color: var(--hv2-gold); }
+
+@media (max-width: 700px) {
+  .cv-cert { flex: 1 1 100%; max-width: none; }
+  .cv-cert__badge { width: 80px; height: 80px; }
+}
+
+/* ── Bloque opcional del iframe de Accredible ──
+   Solo aplica si decides activar el embed. Le pone marco y fondo claro
+   para que el widget blanco de Accredible no quede flotando suelto. */
+.cv-cert-embed {
+  margin-top: 36px;
+  background: var(--hv2-ink);
+  border: 1px solid var(--hv2-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: 800px;
+}
+.cv-cert-embed iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: 0;
+}
+@media (max-width: 700px) {
+  .cv-cert-embed iframe { height: 520px; }
+}
