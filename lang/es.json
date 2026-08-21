@@ -1129,5 +1129,9 @@
   "ab.cert.g2.alt": "Insignia Google Web Designer creativos interactivos",
   "ab.cert.g3.name": "Google Web Designer — Alto impacto",
   "ab.cert.g3.meta": "Certificado por Google · Vigente hasta ago 2027 · Verificar ↗",
-  "ab.cert.g3.alt": "Insignia Google Web Designer alto impacto"
+  "ab.cert.g3.alt": "Insignia Google Web Designer alto impacto",
+  "home.certs.label": "Certificaciones",
+  "home.cert.g1": "Google Ads — AI-Powered Performance",
+  "home.cert.g2": "Google Web Designer — Creativos interactivos",
+  "home.cert.g3": "Google Web Designer — Alto impacto"
 }
