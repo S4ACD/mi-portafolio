@@ -4204,3 +4204,23 @@ p, li, h1, h2, h3, h4, a, span, td {
 @media (max-width: 400px) {
   .container { padding-left: 18px; padding-right: 18px; }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PERF — Animación del título del hero en CSS puro.
+   Corre en el primer frame, sin esperar a que GSAP baje del CDN.
+   Esto elimina ~3s de "render delay" del LCP en móvil.
+═══════════════════════════════════════════════════════════════ */
+@keyframes hv2TitleUp {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}
+.hv2__title-line > span {
+  animation: hv2TitleUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hv2__title-line:nth-of-type(2) > span { animation-delay: 0.12s; }
+.hv2__title-line:nth-of-type(3) > span { animation-delay: 0.24s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hv2__title-line > span { animation: none; transform: none; }
+}
