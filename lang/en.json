@@ -1123,5 +1123,11 @@
   "stat.04.sub": "B2B catalog · Orbidental",
   "ab.cert.g1.name": "Google Ads — AI-Powered Performance",
   "ab.cert.g1.meta": "Certified by Google · Valid through Aug 2027 · Verify ↗",
-  "ab.cert.g1.alt": "Google Ads AI-Powered Performance badge"
+  "ab.cert.g1.alt": "Google Ads AI-Powered Performance badge",
+  "ab.cert.g2.name": "Google Web Designer — Interactive Creatives",
+  "ab.cert.g2.meta": "Certified by Google · Valid through Aug 2027 · Verify ↗",
+  "ab.cert.g2.alt": "Google Web Designer interactive creatives badge",
+  "ab.cert.g3.name": "Google Web Designer — High Impact",
+  "ab.cert.g3.meta": "Certified by Google · Valid through Aug 2027 · Verify ↗",
+  "ab.cert.g3.alt": "Google Web Designer high impact badge"
 }
