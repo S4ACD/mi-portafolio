@@ -1120,5 +1120,8 @@
   "stat.03.label": "Leads B2B generados",
   "stat.03.sub": "pauta en Meta a ~$2.500 COP por lead",
   "stat.04.label": "Productos fotografiados",
-  "stat.04.sub": "catálogo B2B · Orbidental"
+  "stat.04.sub": "catálogo B2B · Orbidental",
+  "ab.cert.g1.name": "Google Ads — AI-Powered Performance",
+  "ab.cert.g1.meta": "Certificado por Google · Vigente hasta ago 2027 · Verificar ↗",
+  "ab.cert.g1.alt": "Insignia Google Ads AI-Powered Performance"
 }
