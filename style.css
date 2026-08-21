@@ -101,22 +101,18 @@ img { display: block; max-width: 100%; }
 }
 @keyframes dotPulse {
   0%,100% {
-    text-shadow: 0 0 6px rgba(205,183,142,0.6), 0 0 20px rgba(205,183,142,0.3);
     transform: scale(1);
     opacity: 1;
   }
   45% {
-    text-shadow: 0 0 18px rgba(205,183,142,1), 0 0 40px rgba(205,183,142,0.6), 0 0 80px rgba(205,183,142,0.2);
     transform: scale(1.15);
     opacity: 1;
   }
   50% {
-    text-shadow: 0 0 4px rgba(205,183,142,0.3);
     transform: scale(0.9);
     opacity: 0.6;
   }
   55% {
-    text-shadow: 0 0 18px rgba(205,183,142,1), 0 0 40px rgba(205,183,142,0.6);
     transform: scale(1.1);
     opacity: 1;
   }
@@ -2411,7 +2407,7 @@ input, textarea {
   0%,100% { text-shadow: 0 0 6px rgba(205,183,142,0.6), 0 0 20px rgba(205,183,142,0.3); transform: scale(1); opacity: 1; }
   45%  { text-shadow: 0 0 18px rgba(205,183,142,1), 0 0 40px rgba(205,183,142,0.6), 0 0 80px rgba(205,183,142,0.2); transform: scale(1.15); opacity: 1; }
   50%  { text-shadow: 0 0 4px rgba(205,183,142,0.3); transform: scale(0.9); opacity: 0.6; }
-  55%  { text-shadow: 0 0 18px rgba(205,183,142,1), 0 0 40px rgba(205,183,142,0.6); transform: scale(1.1); opacity: 1; }
+  55%  { transform: scale(1.1); opacity: 1; }
 }
 
 /* ── Buttons — pill shape, tracked uppercase Space Grotesk, gold primary */
@@ -4258,3 +4254,8 @@ p, li, h1, h2, h3, h4, a, span, td {
   pointer-events: none;
   will-change: opacity;
 }
+
+
+/* PERF: dotPulse ya no anima text-shadow (obligaba a repintar cada frame).
+   El halo lo pinta el ::after con opacity, que sí se compone en GPU. */
+.hero__dot, .hv2__status-dot { will-change: transform, opacity; }
