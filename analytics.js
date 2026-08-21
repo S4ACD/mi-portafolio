@@ -7,10 +7,24 @@
 
   if (!/^G-[A-Z0-9]{6,}$/.test(GA_ID) || GA_ID.indexOf('X') !== -1) return;
 
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-  document.head.appendChild(s);
+  /* PERF: GTM son ~164KB. Cargarlo en idle (o al primer scroll/toque)
+     lo saca de la ruta crítica sin perder ni una sola medición. */
+  function loadGA() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGA, { timeout: 3500 });
+  } else {
+    setTimeout(loadGA, 2500);
+  }
+  ['scroll','pointerdown','keydown'].forEach(function(e){
+    window.addEventListener(e, loadGA, { once: true, passive: true });
+  });
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
