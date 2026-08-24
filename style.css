@@ -133,7 +133,15 @@ img { display: block; max-width: 100%; }
   cursor: pointer;
   transition: var(--transition);
   border: none;
-  white-space: nowrap;
+  /* ── Antes: white-space: nowrap sin tope de ancho. Cualquier botón con
+     texto largo crecía más que su contenedor y el padre lo recortaba, así
+     que en móvil el texto se cortaba a media palabra. Ahora el botón nunca
+     excede su contenedor y, si no cabe en una línea, envuelve centrado. ── */
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  justify-content: center;
+  text-wrap: balance;
 }
 .btn--cyan { background: var(--cyan); color: #000; }
 .btn--cyan:hover {
