@@ -88,6 +88,11 @@ img { display: block; max-width: 100%; }
   margin-bottom: 12px;
 }
 .section { padding: 100px 0; }
+/* Evita pintar secciones lejanas antes de que entren en el viewport. */
+main > section:not(:first-child) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
 .section__title {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
