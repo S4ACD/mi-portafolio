@@ -2103,6 +2103,7 @@ input, textarea {
   right: calc(4% + (var(--hv2-rings-size) / 2) - (var(--hv2-portrait-width) / 2));
   width: var(--hv2-portrait-width);
   opacity: 1;
+  aspect-ratio: 2 / 3;
 }
 /* will-change solo en las capas que GSAP anima directamente */
 .hv2__portrait-tilt { will-change: transform; transform-style: preserve-3d; }
