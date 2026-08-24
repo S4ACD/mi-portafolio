@@ -67,34 +67,52 @@
     const nav    = document.getElementById('nav');
     if (!burger || !drawer) return;
 
+    burger.setAttribute('aria-controls', 'navDrawer');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Menu');
+    drawer.setAttribute('aria-hidden', 'true');
+
+    const setOpen = (nextOpen) => {
+      open = nextOpen;
+      drawer.style.display = open ? 'flex' : 'none';
+      drawer.setAttribute('aria-hidden', String(!open));
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+      burger.classList.toggle('open', open);
+      if (open) nav?.classList.remove('nav--hidden');
+    };
+
     let open    = false;
     let touched = false;
 
     burger.addEventListener('touchend', (e) => {
       e.preventDefault();
       touched = true;
-      open = !open;
-      drawer.style.display = open ? 'flex' : 'none';
-      burger.classList.toggle('open', open);
-      if (open) nav?.classList.remove('nav--hidden');
+      setOpen(!open);
       setTimeout(() => { touched = false; }, 500);
     }, { passive: false });
 
     burger.addEventListener('click', () => {
       if (touched) return;
-      open = !open;
-      drawer.style.display = open ? 'flex' : 'none';
-      burger.classList.toggle('open', open);
-      if (open) nav?.classList.remove('nav--hidden');
+      setOpen(!open);
     });
 
     const links = drawer.querySelectorAll('a');
     links.forEach((link) => {
       link.addEventListener('click', () => {
-        open = false;
-        drawer.style.display = 'none';
-        burger.classList.remove('open');
+        setOpen(false);
       });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && open) {
+        setOpen(false);
+        burger.focus();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (open && !nav?.contains(e.target)) setOpen(false);
     });
 
     // Hide-on-scroll-down / show-on-scroll-up.
