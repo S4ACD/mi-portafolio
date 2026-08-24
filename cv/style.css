@@ -91,6 +91,13 @@ body { background: var(--hv2-void); }
 /* ── SECCIONES ── */
 .cv-section { padding: 76px 0; }
 .cv-section--alt { background: var(--hv2-void-soft); }
+.cv-hiring { border-top: 1px solid var(--hv2-line); border-bottom: 1px solid var(--hv2-line); }
+.cv-hiring__grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: start; }
+.cv-hiring__details { border-top: 1px solid var(--hv2-line); }
+.cv-hiring__item { display: grid; grid-template-columns: 150px 1fr; gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--hv2-line); }
+.cv-hiring__item span { font-family: var(--hv2-font-ui); font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--hv2-gold); }
+.cv-hiring__item strong { font-family: var(--hv2-font-body); font-size: .9rem; font-weight: 500; line-height: 1.5; color: var(--hv2-ink); }
+@media (max-width: 760px) { .cv-hiring__grid { grid-template-columns: 1fr; gap: 36px; } .cv-hiring__item { grid-template-columns: 1fr; gap: 6px; } }
 .cv-h2 {
   font-family: var(--hv2-font-display);
   font-weight: 500;
