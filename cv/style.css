@@ -91,6 +91,14 @@ body { background: var(--hv2-void); }
 /* ── SECCIONES ── */
 .cv-section { padding: 76px 0; }
 .cv-section--alt { background: var(--hv2-void-soft); }
+.cv-quicknav { position: sticky; top: 0; z-index: 90; background: rgba(5,5,4,.92); border-bottom: 1px solid var(--hv2-line); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.cv-quicknav__inner { min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.cv-quicknav__label { color: var(--hv2-gold); font-family: var(--hv2-font-ui); font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+.cv-quicknav__links { display: flex; align-items: center; gap: clamp(12px, 2.4vw, 28px); overflow-x: auto; scrollbar-width: none; }
+.cv-quicknav__links::-webkit-scrollbar { display: none; }
+.cv-quicknav__links a { color: var(--hv2-ink-dim); font-family: var(--hv2-font-ui); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; transition: color .25s ease; }
+.cv-quicknav__links a:hover { color: var(--hv2-gold); }
+section[id] { scroll-margin-top: 68px; }
 .cv-hiring { border-top: 1px solid var(--hv2-line); border-bottom: 1px solid var(--hv2-line); }
 .cv-hiring__grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: start; }
 .cv-hiring__details { border-top: 1px solid var(--hv2-line); }
@@ -98,6 +106,11 @@ body { background: var(--hv2-void); }
 .cv-hiring__item span { font-family: var(--hv2-font-ui); font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--hv2-gold); }
 .cv-hiring__item strong { font-family: var(--hv2-font-body); font-size: .9rem; font-weight: 500; line-height: 1.5; color: var(--hv2-ink); }
 @media (max-width: 760px) { .cv-hiring__grid { grid-template-columns: 1fr; gap: 36px; } .cv-hiring__item { grid-template-columns: 1fr; gap: 6px; } }
+@media (max-width: 700px) {
+  .cv-quicknav__inner { min-height: 48px; padding-left: 18px; padding-right: 18px; }
+  .cv-quicknav__label { display: none; }
+  .cv-quicknav__links { width: 100%; justify-content: flex-start; gap: 20px; }
+}
 .cv-h2 {
   font-family: var(--hv2-font-display);
   font-weight: 500;
