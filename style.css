@@ -2385,6 +2385,17 @@ input, textarea {
   .hv2__fog { width: 90vw; height: 90vw; top: 4%; right: -10%; }
 }
 
+/* En móvil el titular debe estar pintado desde el primer frame para que
+   Lighthouse pueda registrarlo como candidato LCP. */
+@media (max-width: 767px) {
+  .hv2__title-line > span,
+  .hv2__title-script[data-reveal] {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ──────────────────────────────────────────────────────────────────
    MOTION PREFERENCES
    ────────────────────────────────────────────────────────────────── */
