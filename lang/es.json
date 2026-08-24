@@ -1130,8 +1130,14 @@
   "ab.cert.g3.name": "Google Web Designer — Alto impacto",
   "ab.cert.g3.meta": "Certificado por Google · Vigente hasta ago 2027 · Verificar ↗",
   "ab.cert.g3.alt": "Insignia Google Web Designer alto impacto",
+  "ab.cert.p1.name": "Introducción a la Inteligencia Artificial",
+  "ab.cert.p1.meta": "Certificado por Platzi · Emitido ago 2026 · Verificar ↗",
+  "ab.cert.p2.name": "Programación Básica",
+  "ab.cert.p2.meta": "Certificado por Platzi · Emitido ago 2026 · Verificar ↗",
   "home.certs.label": "Certificaciones",
   "home.cert.g1": "Google Ads — AI-Powered Performance",
   "home.cert.g2": "Google Web Designer — Creativos interactivos",
-  "home.cert.g3": "Google Web Designer — Alto impacto"
+  "home.cert.g3": "Google Web Designer — Alto impacto",
+  "home.cert.p1": "Platzi — Introducción a la IA",
+  "home.cert.p2": "Platzi — Programación Básica"
 }
