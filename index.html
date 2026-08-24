@@ -4,371 +4,1468 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Orbidental — De 14 segundos a casi instantáneo: PageSpeed 97 | Alexander Caro</title>
-  <meta name="description" content="Caso real: sitio de e-commerce dental con 3.000+ productos pasó de 14 segundos de carga y Core Web Vitals reprobado a PageSpeed 97 y métricas aprobadas. Sin perder SEO. Bogotá, Colombia." />
-  <meta name="keywords" content="rediseño web colombia, optimización pagespeed bogotá, core web vitals, wordpress a medida, desarrollador web freelance, e-commerce wordpress" />
+  <!-- SEO principal -->
+  <title>Alexander Caro | Diseñador Web Freelance Bogotá — Sitios Web Profesionales</title>
+  <meta name="description" content="Diseñador web freelance en Bogotá. Creo sitios web profesionales, rápidos y optimizados para empresas en Colombia y Latinoamérica. PageSpeed 97. Consulta gratis." />
+  <meta name="keywords" content="diseñador web bogotá, desarrollo web colombia, freelance diseño web, sitios web profesionales, rediseño web colombia, diseño web empresas" />
+  <meta name="author" content="Alexander Caro" />
   <meta name="robots" content="index, follow" />
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" fetchpriority="high">
+  <link rel="canonical" href="https://alexandercaro.com/" />
+  <link rel="alternate" hreflang="es" href="https://alexandercaro.com/" />
+  <link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/" />
 
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://alexandercaro.com/trabajo/orbidental/" />
-  <meta property="og:title" content="Orbidental: de 14s a PageSpeed 97 — Caso real | Alexander Caro" />
-  <meta property="og:description" content="E-commerce de insumos dentales: 14 segundos de carga, roto en móvil, Core Web Vitals reprobado. Lo reconstruí desde cero. Hoy: PageSpeed 97, métricas aprobadas, 3.000+ productos migrados sin perder SEO." />
+  <!-- Preload LCP — retrato del hero (Cloudinary, formato auto, 1024px) -->
+  <link rel="preload" as="image" fetchpriority="high"
+        href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png"
+        imagesrcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png 680w"
+        imagesizes="(max-width: 767px) 62vw, (max-width: 1279px) 40vw, 520px" />
+
+  <!-- Favicon — definido solo aquí, el browser lo busca en / automáticamente para todas las subpáginas -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_png,w_32/v1781101945/Favicon_jsl63r.webp" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_png,w_16/v1781101945/Favicon_jsl63r.webp" />
+  <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_png,w_180/v1781101945/Favicon_jsl63r.webp" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alexandercaro.com/" />
+  <meta property="og:title" content="Alexander Caro | Diseñador Web Freelance Bogotá" />
+  <meta property="og:description" content="Sitios web profesionales para empresas. Rápidos, optimizados y con resultados reales. PageSpeed 97. Bogotá, Colombia." />
   <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
   <meta property="og:locale" content="es_CO" />
+  <meta property="og:site_name" content="Alexander Caro" />
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Orbidental: de 14s a PageSpeed 97" />
-  <meta name="twitter:description" content="E-commerce dental con 3.000+ productos: de 14s de carga a casi instantáneo. Core Web Vitals aprobado. Sin perder SEO." />
+  <meta name="twitter:title" content="Alexander Caro | Diseñador Web Freelance Bogotá" />
+  <meta name="twitter:description" content="Sitios web profesionales para empresas. Rápidos, optimizados y con resultados reales." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" />
 
-  <link rel="preload" as="image" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" fetchpriority="high">
-  <link rel="canonical" href="https://alexandercaro.com/trabajo/orbidental/" />
-  <link rel="alternate" hreflang="es" href="https://alexandercaro.com/trabajo/orbidental/" />
-  <link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/trabajo/orbidental/" />
-  <link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/trabajo/orbidental/" />
-
+  <!-- Schema JSON-LD Person -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Inicio",
-          "item": "https://alexandercaro.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Trabajo",
-          "item": "https://alexandercaro.com/trabajo/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Orbidental",
-          "item": "https://alexandercaro.com/trabajo/orbidental/"
-        }
-      ]
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alexander Caro",
+    "givenName": "Alexander",
+    "familyName": "Caro",
+    "jobTitle": "Diseñador Web y Desarrollador Frontend Freelance",
+    "url": "https://alexandercaro.com",
+    "image": "https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_400/v1781396255/Escultura_de_Alexander_ykbpww.png",
+    "email": "hosoyalexander@gmail.com",
+    "telephone": "+573024457653",
+    "description": "Diseñador web y desarrollador frontend freelance en Bogotá. Especializado en sitios web profesionales, identidad visual, pauta digital y fotografía de producto para empresas en Colombia, Latinoamérica y Estados Unidos.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Cundinamarca",
+      "addressCountry": "CO"
     },
-    {
-      "@type": "CreativeWork",
-      "name": "Rediseño web Orbidental — PageSpeed 40 a 97",
-      "url": "https://alexandercaro.com/trabajo/orbidental/",
-      "author": {
-        "@type": "Person",
-        "name": "Alexander Caro",
-        "url": "https://alexandercaro.com"
+    "knowsAbout": [
+      "Diseño y desarrollo web",
+      "Desarrollo frontend a medida",
+      "SEO técnico",
+      "Optimización PageSpeed",
+      "Branding e identidad visual",
+      "Diseño gráfico",
+      "Meta Ads",
+      "Google Ads",
+      "Social media design"
+    ],
+    "knowsLanguage": ["es", "en"],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Diseño y desarrollo web",
+        "description": "Sitios web profesionales desde cero o rediseño completo. Responsive, rápidos y optimizados para SEO."
       },
-      "creator": {
-        "@type": "Person",
-        "name": "Alexander Caro",
-        "url": "https://alexandercaro.com"
+      {
+        "@type": "Offer",
+        "name": "Identidad visual y branding",
+        "description": "Logo, manual de marca y aplicaciones visuales para empresas y emprendimientos."
+      },
+      {
+        "@type": "Offer",
+        "name": "Pauta digital",
+        "description": "Campañas en Meta Ads y Google Ads configuradas para convertir."
+      },
+      {
+        "@type": "Offer",
+        "name": "Diseño gráfico y social media",
+        "description": "Identidad visual, contenido para redes y piezas gráficas con estética coherente."
       }
-    }
-  ]
-}
+    ],
+    "sameAs": [
+      "https://www.behance.net/alexandercaro",
+      "https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/",
+      "https://www.instagram.com/alexander_caro7/",
+      "https://github.com/S4ACD"
+    ]
+  }
   </script>
 
+  <!-- Schema JSON-LD FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Trabajas con clientes fuera de Colombia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, trabajo 100% remoto con clientes en varios países. Toda la comunicación es escrita —WhatsApp o correo—, lo que deja cada acuerdo, avance y entrega documentado. Estoy en Bogotá (UTC-5) y me adapto a tu zona horaria."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo es el proceso de pago?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabajo con un anticipo del 50% para arrancar y el 50% restante contra entrega. Para proyectos grandes lo dividimos en hitos. Acepto transferencia bancaria, Nequi, y para clientes internacionales, PayPal o Wise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántas revisiones incluye cada proyecto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del servicio, pero en general incluyo dos rondas de revisión dentro del alcance acordado. Si necesitas más ajustes después de eso, los cotizamos aparte — sin sorpresas. Lo importante es que el resultado final sea el correcto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿En qué zona horaria trabajas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Estoy en Bogotá, Colombia — UTC-5, sin horario de verano. Normalmente respondo entre 8am y 8pm hora colombiana, pero me adapto si estás en otra zona horaria y necesitamos cuadrar una llamada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Usas contratos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, siempre. Antes de arrancar cualquier proyecto firmamos un acuerdo que define el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si necesito cambios después de la entrega?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los cambios menores dentro del alcance original no tienen costo adicional si los pides dentro de los primeros 7 días. Después de eso, o si son cambios de dirección grandes, los cotizamos por separado. Siempre con precio claro antes de hacer cualquier cosa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta un proyecto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los proyectos parten desde $500 USD para un alcance inicial de branding o web básica; la mayoría se mueve entre $500 y $2.500 USD según el alcance. Antes de empezar recibes una propuesta con precio cerrado, tiempos y entregables — sin sorpresas ni costos ocultos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si no puedes continuar a mitad del proyecto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Está cubierto por contrato: trabajo por hitos con entregas parciales, así siempre tienes en tu poder lo que ya pagaste — archivos fuente incluidos. Todo queda documentado por escrito, de modo que cualquier profesional podría retomar el proyecto sin empezar de cero. Hasta hoy, nunca ha sido necesario."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Fuentes — no bloqueantes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
-
-<link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=optional" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=optional" /></noscript>
+  <!-- PERF: CSS critico inline. Para revertir: elimina el bloque de
+       estilos siguiente y quita media=print del link de style.css -->
+  <style>:root{--bg:var(--hv2-void);--bg-card:var(--hv2-void-soft);--bg-card-hover:#181410;--border:var(--hv2-line);--border-hover:rgba(205,183,142,0.4);--cyan:var(--hv2-gold);--cyan-dim:var(--hv2-gold-faint);--cyan-glow:0 0 32px rgba(205,183,142,0.35),0 0 70px rgba(205,183,142,0.10);--text:var(--hv2-ink);--text-muted:var(--hv2-ink-dim);--text-faint:rgba(244,239,230,0.16);--font-display:'Space Grotesk',system-ui,-apple-system,sans-serif;--font-body:'Inter',system-ui,-apple-system,sans-serif;--radius:14px;--radius-sm:8px;--transition:0.3s cubic-bezier(0.4,0,0.2,1)}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:inherit;text-decoration:none}button{background:none;border:none;padding:0;margin:0;font:inherit;color:inherit}ul{list-style:none}img{display:block;max-width:100%}.container{max-width:1100px;margin:0 auto;padding:0 24px}.eyebrow{font-size:11px;font-weight:600;letter-spacing:0.18em;color:var(--cyan);margin-bottom:12px}@media (min-width:768px){.br-desktop{display:inline}}.hero__dot{color:var(--cyan);display:inline-block;animation:dotPulse 2.4s ease-in-out infinite;transform-origin:center bottom}@keyframes dotPulse{0%,100%{transform:scale(1);opacity:1}45%{transform:scale(1.15);opacity:1}50%{transform:scale(0.9);opacity:0.6}55%{transform:scale(1.1);opacity:1}}.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:14px;font-weight:500;padding:12px 24px;border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition);border:none;white-space:nowrap}.btn--cyan{background:var(--cyan);color:#000}.btn--cyan:hover{background:#1af5f5;box-shadow:var(--cyan-glow);transform:translateY(-2px)}.btn--ghost{background:transparent;color:var(--text);border:1px solid var(--border)}.btn--ghost:hover{border-color:var(--border-hover);color:var(--cyan)}.btn--lg{font-size:15px;padding:16px 32px}.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,7,0.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(244,239,230,0.08);transition:box-shadow var(--transition),transform 0.35s var(--hv2-ease)}.nav--hidden{transform:translateY(-100%)}.nav__inner{max-width:1240px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;gap:40px}.nav__logo{margin-right:auto;display:flex;align-items:center;text-decoration:none}.nav__logo-img{height:28px;width:auto;max-width:140px;object-fit:contain;display:block}.nav__links{display:flex;gap:clamp(24px,3vw,40px)}.nav__links a{font-family:'Space Grotesk',var(--font-display);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);transition:color var(--transition)}.nav__links a:hover{color:#f4efe6}.nav__toggle{display:none}.nav__burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:12px;margin-left:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent;min-width:44px;min-height:44px;align-items:center;justify-content:center;user-select:none;-webkit-user-select:none;background:transparent;border:none;appearance:none;-webkit-appearance:none}.nav__burger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition);pointer-events:none}.nav__toggle:checked ~ .nav__inner .nav__burger span:nth-child(1),.nav__toggle:checked + .nav__inner .nav__burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav__toggle:checked ~ .nav__inner .nav__burger span:nth-child(2),.nav__toggle:checked + .nav__inner .nav__burger span:nth-child(2){opacity:0;transform:scaleX(0)}.nav__toggle:checked ~ .nav__inner .nav__burger span:nth-child(3),.nav__toggle:checked + .nav__inner .nav__burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.nav__drawer{display:none;flex-direction:column;gap:4px;padding:16px 24px 24px;border-top:1px solid rgba(244,239,230,0.08);background:rgba(8,8,7,0.98)}.nav__drawer-link{padding:12px 0;font-family:'Space Grotesk',var(--font-display);font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);border-bottom:1px solid rgba(244,239,230,0.08);transition:color var(--transition);background:transparent}.nav__drawer-link:hover{color:#f4efe6}.nav__cta{font-family:'Space Grotesk',var(--font-display);font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;background:#cdb78e;color:#1a1611;padding:11px 22px;border-radius:999px;transition:background var(--transition);white-space:nowrap}.nav__cta:hover{background:#e3d2b3}.nav__drawer .nav__cta{margin-top:12px;width:fit-content}.nav__links a.nav__link--active{color:#cdb78e !important}.nav__drawer-link.nav__link--active{color:#cdb78e !important}@media (max-width:767px){.nav__links,.nav__inner > .nav__cta{display:none}.nav__burger{display:flex}.nav__toggle:checked ~ .nav__drawer{display:flex}}.hero{min-height:100svh;display:flex;align-items:center;padding:110px 0 80px;position:relative;overflow:hidden}.hero__canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}.hero__orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);z-index:0}.hero__orb--cyan{width:600px;height:600px;top:-100px;left:-100px;background:radial-gradient(circle,rgba(205,183,142,0.12) 0%,transparent 70%);animation:orbDrift1 12s ease-in-out infinite alternate}.hero__orb--purple{width:700px;height:700px;bottom:-150px;right:-150px;background:radial-gradient(circle,rgba(160,80,255,0.10) 0%,transparent 70%);animation:orbDrift2 15s ease-in-out infinite alternate}.hero__orb--mid{width:400px;height:400px;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(205,183,142,0.04) 0%,transparent 70%);animation:orbDrift3 9s ease-in-out infinite alternate}@keyframes orbDrift1{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,40px) scale(1.1)}}@keyframes orbDrift2{from{transform:translate(0,0) scale(1)}to{transform:translate(-50px,-30px) scale(1.08)}}@keyframes orbDrift3{from{transform:translate(-50%,-50%) scale(1);opacity:0.6}to{transform:translate(-50%,-50%) scale(1.3);opacity:1}}.hero__grid{position:absolute;inset:0;background-image:linear-gradient(rgba(205,183,142,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(205,183,142,0.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 70% at 50% 40%,black 0%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 40%,black 0%,transparent 80%);pointer-events:none;z-index:0}.hero__side-deco{position:absolute;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:14px;z-index:2;opacity:0.5}.hero__side-deco--left{left:28px}.hero__side-deco--right{right:28px}.hero__side-line{display:block;width:1px;height:80px;background:linear-gradient(to bottom,transparent,rgba(205,183,142,0.4),transparent)}.hero__side-tag{writing-mode:vertical-rl;text-orientation:mixed;font-size:9px;letter-spacing:0.25em;color:var(--text-muted);text-transform:uppercase;font-family:var(--font-body)}.hero__inner{position:relative;z-index:2;width:100%}.hero__top-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;animation:heroFadeDown 0.7s cubic-bezier(0.2,0,0,1) both}.hero__badge{display:inline-flex;align-items:center;gap:8px;background:rgba(205,183,142,0.07);border:1px solid rgba(205,183,142,0.18);color:var(--cyan);font-size:11px;font-weight:500;padding:5px 14px;border-radius:100px;letter-spacing:0.04em;text-transform:uppercase}.hero__badge-dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:badgePulse 2s ease-in-out infinite}@keyframes badgePulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(205,183,142,0.5)}50%{opacity:0.5;box-shadow:0 0 0 5px rgba(205,183,142,0)}}.hero__counter{font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,0.15);font-family:var(--font-display);font-weight:600}.hero__counter-num{color:rgba(205,183,142,0.4)}.hero__center{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:48px}.hero__col--left{animation:heroSlideRight 0.9s cubic-bezier(0.2,0,0,1) 0.1s both}.hero__eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--cyan);font-family:var(--font-body);font-weight:500;margin-bottom:20px}.hero__eyebrow-line{display:block;width:32px;height:1px;background:var(--cyan);opacity:0.6;flex-shrink:0}.hero__title{font-family:var(--font-display);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:700;line-height:1.0;letter-spacing:-0.04em;color:#fff;margin-bottom:20px;display:flex;flex-direction:column}.hero__title-name{display:block}.hero__title-last{display:block;background:linear-gradient(120deg,#fff 30%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.hero__desc{font-size:clamp(0.88rem,1.4vw,1rem);color:var(--text-muted);line-height:1.75;margin-bottom:32px;max-width:340px}.hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}.hero__stats-row{display:flex;align-items:flex-start;gap:24px;border-top:1px solid rgba(255,255,255,0.06);padding-top:28px}.hero__stat-item{display:flex;flex-direction:column;gap:6px}.hero__stat-num{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:700;line-height:1;color:#fff;letter-spacing:-0.04em}.hero__stat-plus{font-size:0.6em;color:var(--cyan);vertical-align:super}.hero__stat-label{font-size:11px;color:var(--text-muted);line-height:1.4;letter-spacing:0.02em;max-width:80px}.hero__stat-divider{width:1px;height:52px;background:rgba(255,255,255,0.07);align-self:center;flex-shrink:0}.hero__col--center{animation:heroFadeIn 1s cubic-bezier(0.2,0,0,1) 0.2s both}.hero__stage{display:flex;justify-content:center}.hero__frame-wrap{position:relative;width:clamp(240px,28vw,360px);aspect-ratio:3 / 4;transform-style:preserve-3d}.hero__ring{position:absolute;border-radius:22px;pointer-events:none}.hero__ring--cyan{inset:-10px;border:1.5px solid rgba(205,183,142,0.22);box-shadow:0 0 20px rgba(205,183,142,0.20),inset 0 0 20px rgba(205,183,142,0.04);animation:ringPulseCyan 3.5s ease-in-out infinite}.hero__ring--purple{inset:-22px;border:1px solid rgba(160,80,255,0.15);box-shadow:0 0 35px rgba(160,80,255,0.12),inset 0 0 35px rgba(160,80,255,0.03);animation:ringPulsePurple 4.5s ease-in-out infinite 1s}@keyframes ringPulseCyan{0%,100%{box-shadow:0 0 20px rgba(205,183,142,0.20),inset 0 0 20px rgba(205,183,142,0.04);border-color:rgba(205,183,142,0.22)}50%{box-shadow:0 0 45px rgba(205,183,142,0.5),0 0 90px rgba(205,183,142,0.12),inset 0 0 30px rgba(205,183,142,0.08);border-color:rgba(205,183,142,0.6)}}@keyframes ringPulsePurple{0%,100%{box-shadow:0 0 35px rgba(160,80,255,0.12),inset 0 0 35px rgba(160,80,255,0.03);border-color:rgba(160,80,255,0.15)}50%{box-shadow:0 0 65px rgba(160,80,255,0.32),0 0 110px rgba(160,80,255,0.08),inset 0 0 45px rgba(160,80,255,0.06);border-color:rgba(160,80,255,0.45)}}.hero__glass{position:relative;width:100%;height:100%;background:linear-gradient(160deg,rgba(205,183,142,0.06) 0%,rgba(160,80,255,0.04) 100%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:20px;border:1px solid rgba(205,183,142,0.14);overflow:hidden;box-shadow:0 12px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(255,255,255,0.04) inset}.hero__avatar{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;user-select:none;-webkit-user-drag:none}.hero__avatar-fade{position:absolute;bottom:0;left:0;right:0;height:45%;background:linear-gradient(to top,rgba(8,8,8,0.85) 0%,transparent 100%);pointer-events:none}.hero__scanline{position:absolute;inset:0;background:repeating-linear-gradient(
+to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,183,142,0.015) 4px
+);pointer-events:none;opacity:0.8}.hero__circuit{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 40% 30% at 15% 70%,rgba(205,183,142,0.08) 0%,transparent 70%),radial-gradient(ellipse 30% 25% at 85% 20%,rgba(160,80,255,0.08) 0%,transparent 70%)}.hero__corner{position:absolute;width:18px;height:18px;pointer-events:none;transition:opacity 0.3s}.hero__corner--tl{top:-2px;left:-2px;border-top:2px solid var(--cyan);border-left:2px solid var(--cyan);border-radius:4px 0 0 0}.hero__corner--tr{top:-2px;right:-2px;border-top:2px solid var(--cyan);border-right:2px solid var(--cyan);border-radius:0 4px 0 0}.hero__corner--bl{bottom:-2px;left:-2px;border-bottom:2px solid rgba(160,80,255,0.9);border-left:2px solid rgba(160,80,255,0.9);border-radius:0 0 0 4px}.hero__corner--br{bottom:-2px;right:-2px;border-bottom:2px solid rgba(160,80,255,0.9);border-right:2px solid rgba(160,80,255,0.9);border-radius:0 0 4px 0}.hero__hud-tag{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;font-size:9px;letter-spacing:0.18em;color:rgba(205,183,142,0.55);font-family:var(--font-body);text-transform:uppercase;white-space:nowrap;z-index:2}.hero__hud-dot{width:5px;height:5px;background:var(--cyan);border-radius:50%;opacity:0.7;animation:badgePulse 2.5s ease-in-out infinite}.hero__col--right{display:flex;flex-direction:column;gap:32px;animation:heroSlideLeft 0.9s cubic-bezier(0.2,0,0,1) 0.15s both}.hero__right-block{display:flex;flex-direction:column;gap:12px}.hero__right-label{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(205,183,142,0.45);font-family:var(--font-body);font-weight:600;margin-bottom:4px}.hero__tech-list{list-style:none;display:flex;flex-direction:column;gap:8px}.hero__tech-list li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-muted);font-family:var(--font-body)}.hero__tech-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}.hero__tech-dot--cyan{background:var(--cyan);box-shadow:0 0 6px rgba(205,183,142,0.6)}.hero__tech-dot--purple{background:#a050ff;box-shadow:0 0 6px rgba(160,80,255,0.6)}.hero__availability{display:flex;align-items:center;gap:9px;font-size:13px;color:#fff;font-weight:500}.hero__avail-dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px rgba(34,197,94,0.7);animation:badgePulse 2s ease-in-out infinite;flex-shrink:0}.hero__avail-note{font-size:11px;color:var(--text-muted)}.hero__quote{font-size:13px;line-height:1.65;color:rgba(255,255,255,0.35);font-style:italic;border-left:2px solid rgba(205,183,142,0.2);padding-left:12px}.hero__scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2;animation:heroFadeIn 1s 1.2s both}.hero__scroll-hint span{font-size:9px;letter-spacing:0.22em;color:var(--text-muted);text-transform:uppercase}.hero__scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:scrollLine 1.8s ease-in-out infinite}@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top;opacity:1}50%{transform:scaleY(1);transform-origin:top;opacity:1}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom;opacity:0}}@keyframes heroFadeIn{from{opacity:0}to{opacity:1}}@keyframes heroFadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}@keyframes heroSlideRight{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:translateX(0)}}@keyframes heroSlideLeft{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}@media (max-width:1024px){.hero__side-deco{display:none}.hero__center{gap:32px}.hero__frame-wrap{width:clamp(220px,26vw,310px)}}@media (max-width:820px){.hero__center{grid-template-columns:1fr;grid-template-rows:auto;justify-items:center}.hero__col--left{order:2;text-align:center}.hero__col--center{order:1}.hero__col--right{order:3;text-align:center;align-items:center}.hero__eyebrow{justify-content:center}.hero__desc{max-width:480px}.hero__actions{justify-content:center}.hero__stats-row{justify-content:center}.hero__tech-list li{justify-content:center}.hero__availability{justify-content:center}.hero__quote{text-align:left}.hero__frame-wrap{width:clamp(220px,65vw,320px)}.hero__top-row{justify-content:center;gap:20px}.hero__right-block--code{display:none}}@media (max-width:480px){.hero{padding-top:90px}.hero__scroll-hint{display:none}.hero__ring--purple{inset:-14px}.hero__stats-row{gap:16px}.hero__stat-num{font-size:1.8rem}.hero__col--right{display:none}}@media (prefers-reduced-motion:reduce){.hero__ring--cyan,.hero__ring--purple,.hero__orb--cyan,.hero__orb--purple,.hero__orb--mid{animation:none}}@media (max-width:1000px){.projects__grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.projects__grid{grid-template-columns:1fr}}a.card--project{display:block;text-decoration:none;color:inherit}.tag{font-size:11px;font-weight:500;padding:4px 10px;border-radius:100px;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text-muted)}.tag--cyan{background:var(--cyan-dim);border-color:rgba(205,183,142,0.2);color:var(--cyan)}@media (max-width:767px){.about__grid{grid-template-columns:1fr;gap:40px}}@keyframes revealUp{to{opacity:1;transform:translateY(0);filter:blur(0)}}.scroll-reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1) var(--reveal-delay,0s),transform 0.7s cubic-bezier(0.4,0,0.2,1) var(--reveal-delay,0s)}.scroll-reveal.visible{opacity:1;transform:translateY(0)}@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}@media (prefers-reduced-motion:reduce){.reveal-up{animation:none;opacity:1;filter:none;transform:none}.scroll-reveal{opacity:1;transform:none;transition:none}.skill-bar__fill{transition:none}.hero__badge-dot,.hero__dot{animation:none}.hero__scroll-line{animation:none}}@media (max-width:600px){.testimonials__btn--prev,.testimonials__btn--next{display:none}.testimonials__dot-sep{width:32px}}@keyframes gradientShift{0%{background-position:0% center}100%{background-position:200% center}}@media (prefers-reduced-motion:reduce){.cursor__dot,.cursor__ring{display:none}*{cursor:auto !important}.gradient-text{animation:none}.page-transition{display:none}}@media (hover:none){.cursor__dot,.cursor__ring{display:none}*{cursor:auto !important}}body{animation:pageFadeIn 0.4s ease both}@keyframes pageFadeIn{from{opacity:0}to{opacity:1}}a,button,[role="button"],label,select,.filter-btn,.testimonials__btn,.testimonials__dot,.nav__burger,.card--project,.trabajo-card,.card--service,.combo-card__btn{cursor:pointer !important}.hero__sub .hero__amp{background:linear-gradient(90deg,#888,var(--cyan),#888);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradientShift 3s linear infinite}@keyframes gradientShift{0%{background-position:0% center}100%{background-position:200% center}}.nav__drawer-email{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:rgba(255,255,255,0.35);text-decoration:none;padding:0.5rem 0;transition:color 0.2s ease;border-top:1px solid rgba(255,255,255,0.06);margin-top:0.5rem;padding-top:1rem}.nav__drawer-email:hover{color:var(--cyan)}@media (max-width:768px){.contact-grid{grid-template-columns:1fr;gap:2rem}}@media (max-width:600px){.form-row{grid-template-columns:1fr}}@media (max-width:900px){.proceso-timeline{grid-template-columns:repeat(2,1fr);gap:2.5rem 2rem}}@media (max-width:560px){.proceso-timeline{grid-template-columns:1fr;gap:2.25rem}}:root{--hv2-void:#050504;--hv2-void-soft:#0e0d0b;--hv2-ink:#f4efe6;--hv2-ink-dim:rgba(244,239,230,0.56);--hv2-ink-faint:rgba(244,239,230,0.30);--hv2-line:rgba(244,239,230,0.10);--hv2-gold:#cdb78e;--hv2-gold-dim:rgba(205,183,142,0.35);--hv2-gold-faint:rgba(205,183,142,0.10);--hv2-glow:0 0 32px rgba(205,183,142,0.35),0 0 70px rgba(205,183,142,0.10);--hv2-font-display:'Fraunces','Georgia',serif;--hv2-font-ui:'Space Grotesk',system-ui,sans-serif;--hv2-font-body:'Inter',system-ui,sans-serif;--hv2-ease:cubic-bezier(0.16,1,0.3,1);--hv2-pad:clamp(20px,4vw,56px);--hv2-rings-size:min(74vw,980px);--hv2-portrait-width:min(clamp(340px,38vw,620px),calc((100svh - 80px) / 1.5))}.hv2{position:relative;width:100%;min-height:100svh;overflow:hidden;background:var(--hv2-void);color:var(--hv2-ink);font-family:var(--hv2-font-body);perspective:1200px;isolation:isolate}.hv2__bg{position:absolute;inset:0;z-index:1;background:radial-gradient(120% 90% at 72% 42%,var(--hv2-void-soft) 0%,var(--hv2-void) 62%)}.hv2__grain{position:absolute;inset:-50%;z-index:9;width:200%;height:200%;pointer-events:none;opacity:0.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.hv2__fog{position:absolute;z-index:2;top:8%;right:4%;width:min(60vw,760px);height:min(60vw,760px);border-radius:50%;background:radial-gradient(circle,var(--hv2-gold-dim) 0%,transparent 68%);filter:blur(60px);opacity:0.5;animation:hv2Breathe 14s ease-in-out infinite;pointer-events:none}@keyframes hv2Breathe{0%,100%{opacity:0.35;transform:scale(1)}50%{opacity:0.55;transform:scale(1.08)}}.hv2__particles{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none}.hv2__particle{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border-radius:50%;will-change:transform,opacity}.hv2__particle--dust{background:radial-gradient(circle,var(--hv2-ink-faint) 0%,transparent 75%);filter:blur(1px);animation:hv2Drift var(--dur) ease-in-out infinite;animation-delay:var(--delay)}.hv2__particle--star{background:var(--hv2-ink);box-shadow:0 0 6px rgba(244,239,230,0.55);animation:hv2Twinkle var(--dur) ease-in-out infinite;animation-delay:var(--delay)}.hv2__particle--star-cyan{background:var(--cyan);box-shadow:0 0 7px rgba(205,183,142,0.65);animation:hv2Twinkle var(--dur) ease-in-out infinite;animation-delay:var(--delay)}@keyframes hv2Drift{0%{transform:translateY(0) scale(1);opacity:0}15%{opacity:var(--peak,0.45)}85%{opacity:var(--peak,0.45)}100%{transform:translateY(var(--rise,-60px)) scale(0.85);opacity:0}}@keyframes hv2Twinkle{0%,100%{opacity:0.15;transform:scale(0.75)}50%{opacity:1;transform:scale(1.2)}}.hv2__rings{position:absolute;z-index:2;top:calc(50% + 50px);right:4%;width:var(--hv2-rings-size);height:var(--hv2-rings-size);transform:translateY(-50%);overflow:visible;pointer-events:none}.hv2__rings circle{fill:none;stroke:var(--hv2-line);stroke-width:1;vector-effect:non-scaling-stroke}.hv2__rings .hv2__rings-dashed{stroke:var(--hv2-gold-dim);stroke-dasharray:2 14;transform-origin:50% 50%;animation:hv2Spin 90s linear infinite}@keyframes hv2Spin{to{transform:rotate(360deg)}}.hv2__glint-tail{fill:rgba(205,183,142,0.10);filter:blur(4px)}.hv2__glint-mid{fill:rgba(205,183,142,0.35);filter:blur(1.5px)}.hv2__glint-core{fill:var(--cyan);filter:drop-shadow(0 0 4px rgba(205,183,142,0.9)) drop-shadow(0 0 12px rgba(205,183,142,0.5))}@media (prefers-reduced-motion:reduce){.hv2__glint-tail,.hv2__glint-mid,.hv2__glint-core{display:none}}.hv2__stage{position:absolute;inset:0;perspective:1600px;pointer-events:none}.hv2__stage--far{z-index:1}.hv2__stage--near{z-index:5}.hv2__rock{position:absolute;opacity:1}.hv2__rock-parallax,.hv2__rock-float{will-change:transform}.hv2__rock img{display:block;width:100%;height:auto;opacity:1;filter:contrast(1.05)}.hv2__rock--flip img{transform:scaleX(-1)}.hv2__rock--far img{opacity:0.75;filter:contrast(1.05) blur(1.5px)}.hv2__rock--far1{top:4%;left:0%;width:clamp(160px,18vw,300px);z-index:1}.hv2__rock--far2{bottom:32%;left:3%;width:clamp(170px,19vw,310px);z-index:1}.hv2__rock--far3{bottom:-6%;left:20%;width:clamp(220px,26vw,420px);z-index:1}.hv2__rock--near img{opacity:0.92}.hv2__rock--near1{top:36%;right:-4%;width:clamp(120px,14vw,210px);z-index:5}.hv2__rock--near2{bottom:0%;right:9%;width:clamp(100px,12vw,180px);z-index:5}.hv2__rock--near3{bottom:-8%;right:13%;width:clamp(240px,30vw,460px);z-index:5}.hv2__rock--near4{bottom:2%;left:27%;width:clamp(90px,11vw,160px);z-index:5}.hv2__rock--near5{bottom:6%;left:-3%;width:clamp(110px,13vw,190px);z-index:5}.hv2__portrait{position:absolute;z-index:4;bottom:0;right:calc(4% + (var(--hv2-rings-size) / 2) - (var(--hv2-portrait-width) / 2));width:var(--hv2-portrait-width);opacity:1}.hv2__portrait-tilt{will-change:transform;transform-style:preserve-3d}.hv2__portrait-parallax,.hv2__portrait-float{will-change:transform}.hv2__portrait-float{transform-style:preserve-3d}.hv2__portrait img{display:block;width:100%;height:auto;max-height:calc(100svh - 80px);object-fit:contain;object-position:right center;opacity:1;filter:contrast(1.04) saturate(0.96)}.hv2__content{position:relative;z-index:10;display:flex;flex-direction:column;justify-content:center;min-height:100svh;max-width:720px;padding:var(--hv2-pad);padding-top:clamp(120px,16vh,180px);padding-left:clamp(40px,7vw,96px)}.hv2__status{display:inline-flex;align-items:center;gap:10px;font-family:var(--hv2-font-ui);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--hv2-ink-dim);margin-bottom:24px}.hv2__status-dot{width:7px;height:7px;border-radius:50%;background:var(--hv2-gold);animation:hv2Pulse 2.6s ease-out infinite}@keyframes hv2Pulse{0%{box-shadow:0 0 0 0 rgba(205,183,142,0.45)}70%{box-shadow:0 0 0 8px rgba(205,183,142,0)}100%{box-shadow:0 0 0 0 rgba(205,183,142,0)}}.hv2__kicker{font-family:var(--hv2-font-ui);font-size:0.78rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--hv2-ink-dim);margin-bottom:28px}.hv2__title{font-family:var(--hv2-font-display);font-weight:340;font-size:clamp(2.4rem,6.4vw,4.8rem);line-height:1.05;letter-spacing:-0.01em;text-transform:uppercase;color:var(--hv2-ink)}.hv2__title-line{display:block;overflow:hidden;padding-top:0.12em;margin-top:-0.12em}.hv2__title-line > span{display:inline-block}.hv2__title-script{display:block;font-style:italic;font-weight:380;text-transform:none;font-size:clamp(3rem,8.8vw,6.6rem);color:var(--hv2-gold);margin-top:-0.06em}.hv2__desc{max-width:42ch;margin-top:28px;font-size:clamp(0.95rem,1.1vw,1.05rem);line-height:1.7;color:var(--hv2-ink-dim)}.hv2__actions{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(16px,2vw,28px);margin-top:44px}.hv2-btn{font-family:var(--hv2-font-ui);font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:14px;white-space:nowrap}.hv2-btn--primary{background:var(--hv2-gold);color:#1a1611;padding:17px 30px;border-radius:999px;font-weight:600;transition:background 0.4s var(--hv2-ease),transform 0.4s var(--hv2-ease)}.hv2-btn--primary:hover{background:#e3d2b3}.hv2-btn--primary svg{transition:transform 0.4s var(--hv2-ease)}.hv2-btn--primary:hover svg{transform:translateX(4px)}.hv2-btn--ghost{color:var(--hv2-ink);padding:17px 4px;font-weight:500;border-bottom:1px solid var(--hv2-line);transition:border-color 0.4s var(--hv2-ease),color 0.4s var(--hv2-ease)}.hv2-btn--ghost:hover{border-color:var(--hv2-ink-faint);color:var(--hv2-gold)}.hv2__side{position:absolute;z-index:10;display:none;font-family:var(--hv2-font-ui);font-size:0.72rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--hv2-ink-faint)}@media (min-width:1024px){.hv2__side{display:flex}}.hv2__side--scroll{left:28px;bottom:56px;writing-mode:vertical-rl;transform:rotate(180deg);align-items:center;gap:14px}.hv2__side--scroll::after{content:"";display:block;width:1px;height:56px;background:linear-gradient(to bottom,var(--hv2-ink-faint),transparent)}.hv2__side--tags{right:28px;top:50%;transform:translateY(-50%);flex-direction:column;align-items:flex-end;gap:10px}.hv2__badge{position:absolute;z-index:10;bottom:clamp(20px,4vh,48px);right:clamp(20px,4vw,56px);width:116px;height:116px}.hv2__badge svg{width:100%;height:100%;animation:hv2Spin 36s linear infinite}.hv2__badge text{font-family:var(--hv2-font-ui);font-size:8.4px;letter-spacing:0.2em;text-transform:uppercase;fill:var(--hv2-ink-faint)}.hv2__badge-dot{position:absolute;top:50%;left:50%;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--hv2-gold)}@media (max-width:768px){.hv2__badge{width:84px;height:84px}}@media (max-width:1023px){.hv2{min-height:auto;display:flex;flex-direction:column}.hv2__content{position:relative;order:1;max-width:100%;text-align:left;min-height:auto;padding-bottom:40px}.hv2__portrait{position:relative;order:2;top:auto;bottom:auto;left:auto;right:auto;margin:0 auto 48px;width:clamp(220px,78vw,480px);transform:none}.hv2__rock--near1{right:2%}.hv2__rock--near2,.hv2__rock--near4{display:none}}@media (max-width:767px){.hv2__content{padding-top:clamp(100px,22vh,140px);padding-bottom:32px}.hv2__title{font-size:clamp(2rem,11.5vw,2.8rem)}.hv2__title-script{font-size:clamp(2.6rem,15vw,3.8rem)}.hv2__desc{max-width:100%}.hv2__rock--far1,.hv2__rock--far2,.hv2__rock--near5{display:none}.hv2__portrait{width:clamp(220px,86vw,360px);margin:0 auto 36px}.hv2__rock--far3{bottom:-2%;left:50%;transform:translateX(-50%);width:clamp(240px,80vw,380px)}.hv2__rock--near1{top:auto;bottom:32%;right:4%;width:clamp(90px,24vw,150px)}.hv2__rock--near3{right:-6%;width:clamp(180px,56vw,320px)}.hv2__fog{width:90vw;height:90vw;top:4%;right:-10%}}@media (prefers-reduced-motion:reduce){.hv2__fog,.hv2__rings-dashed,.hv2__badge svg,.hv2__status-dot{animation:none !important}.hv2__title-line > span{transform:none}}.eyebrow{font-family:var(--hv2-font-ui);font-weight:500;font-size:0.7rem;letter-spacing:0.32em;color:var(--hv2-gold)}.hero__dot{color:var(--hv2-gold)}@keyframes dotPulse{0%,100%{text-shadow:0 0 6px rgba(205,183,142,0.6),0 0 20px rgba(205,183,142,0.3);transform:scale(1);opacity:1}45%{text-shadow:0 0 18px rgba(205,183,142,1),0 0 40px rgba(205,183,142,0.6),0 0 80px rgba(205,183,142,0.2);transform:scale(1.15);opacity:1}50%{text-shadow:0 0 4px rgba(205,183,142,0.3);transform:scale(0.9);opacity:0.6}55%{transform:scale(1.1);opacity:1}}.btn{font-family:var(--hv2-font-ui);text-transform:uppercase;letter-spacing:0.12em;font-weight:600;border-radius:999px}.btn--cyan{background:var(--hv2-gold);color:#1a1611}.btn--cyan:hover{background:#e3d2b3;box-shadow:var(--cyan-glow);transform:translateY(-2px)}.btn--ghost:hover{color:var(--hv2-gold)}.tag--cyan{border-color:rgba(205,183,142,0.25);color:var(--hv2-gold)}.footer__privacy:hover,.footer__links a:hover,.nav__drawer-email:hover{color:var(--hv2-gold)}@media (max-width:900px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:32px 0}.stat-item:nth-child(2){border-right:none;padding-right:0}.stat-item:nth-child(3){padding-left:0;border-right:1px solid var(--hv2-line)}.stat-item:last-child{border-right:none}}@media (max-width:480px){.stats-grid{grid-template-columns:1fr;gap:28px}.stat-item{border-right:none;padding:0}.stats-section{padding:48px 0}}@media (max-width:700px){.services-section__decor{width:150px;top:-5%}.service-row{grid-template-columns:64px 1fr;grid-template-areas:"num  icon"
+"body body";gap:16px 18px;padding:1.75rem 0}.service-row__num{grid-area:num;width:64px;height:64px}.service-row__num span:last-child{font-size:1.6rem}.service-row__icon{grid-area:icon;justify-self:end}.service-row__body{grid-area:body}}@media (prefers-reduced-motion:reduce){.enfoque-section__star{animation:none;opacity:0.4}}@media (max-width:700px){.enfoque-section{flex-direction:column;min-height:0}.enfoque-section__visual{flex:0 0 200px;width:100%}.enfoque-section__orbit{display:none}}@media (max-width:700px){.proceso-section__decor{display:none}}.proceso-section .container{position:relative;z-index:1}@media (prefers-reduced-motion:reduce){.section-divider__star{animation:none;opacity:0.4}}@media (max-width:700px){.trabajo-filters{display:none}}@media (max-width:700px){.trabajo-section__orbit-tl,.trabajo-section__rock{display:none}}@media (prefers-reduced-motion:reduce){.about-section__star{animation:none;opacity:0.4}}@media (max-width:700px){.about-header__orbit,.about-section__rock{display:none}.about-header__line{max-width:100%}}@media (max-width:480px){.logro-icon{display:none}}@media (max-width:900px){.testimonials-section__orbit{display:none}}@media (max-width:700px){.testimonials-header__note{display:none}.testimonial-card__visual{display:none}.testimonial-card > *{max-width:100%}.trusted-by{gap:20px}.trusted-by__logos{gap:24px}}@media (prefers-reduced-motion:reduce){.testimonial-card__sparks .spark{animation:none;opacity:0.5}}@keyframes faqSunPulse{0%,100%{opacity:0.12;transform:scale(1)}50%{opacity:0.35;transform:scale(1.4)}}@keyframes faqPlanetReveal{from{opacity:0;transform:translateY(-50%) scale(0.85)}to{opacity:1;transform:translateY(-50%) scale(1)}}@media (max-width:900px){.faq-grid{grid-template-columns:1fr;gap:40px}.faq-section__orbit,.faq-section__rock,.faq-section__stars{display:none}}@media (max-width:700px){.faq-item__planet{display:none}.faq-item__answer p{max-width:100%}.faq-item__num{width:2rem;font-size:1.3rem}}@media (prefers-reduced-motion:reduce){.faq-section__orbit-glow{animation:none;opacity:0.14}.faq-section__star{animation:none;opacity:0.4}}@media (max-width:760px){.porque-compare{grid-template-columns:1fr;gap:14px}.porque-col{padding:26px 22px}.porque-section__lede{font-size:1rem;margin-bottom:36px}}.hv2__price-signal{font-family:var(--hv2-font-ui);font-size:0.8rem;font-weight:500;letter-spacing:0.01em;color:var(--hv2-ink-dim);margin-top:22px;display:flex;align-items:center;gap:10px}.hv2__price-signal-dot{color:var(--hv2-gold-dim);font-weight:400}@media (max-width:640px){.hv2__price-signal{flex-direction:column;align-items:flex-start;gap:4px}.hv2__price-signal-dot{display:none}}@media (max-width:640px){.card__thumb--framed{padding:16px 16px 0}.browser-mock{max-width:100%}}.nav__lang{font-family:'Space Grotesk',system-ui,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(244,239,230,0.55);background:transparent;border:1px solid rgba(244,239,230,0.2);border-radius:999px;padding:6px 13px;cursor:pointer;transition:color 0.3s,border-color 0.3s;white-space:nowrap;flex-shrink:0;line-height:1}.nav__lang:hover{color:#f4efe6;border-color:rgba(205,183,142,0.5)}.nav__lang--drawer{margin-top:8px;margin-bottom:4px;width:fit-content;font-size:12px;padding:9px 16px;border-color:rgba(244,239,230,0.15)}@media (max-width:767px){.doors-grid{grid-template-columns:1fr}.doors-section{padding-top:14px}}.btn--gold{background:var(--hv2-gold);color:#1a1510}.btn--gold:hover{background:#ddc9a0;box-shadow:0 0 32px rgba(205,183,142,0.35),0 0 70px rgba(205,183,142,0.12);transform:translateY(-2px)}@media (max-width:960px){.pkg-grid{grid-template-columns:1fr}}html{overflow-x:clip;max-width:100%}body{overflow-x:clip;max-width:100%;position:relative}img,svg,video,canvas,iframe,embed,object{max-width:100%}.container > *,[class*="grid"] > *,[class*="__grid"] > *{min-width:0}.hero,.hero__bg,.cta-section,.section,.cv-hero,.ah-hero,.hv2{overflow-x:clip}p,li,h1,h2,h3,h4,a,span,td{overflow-wrap:break-word}@media (max-width:400px){.container{padding-left:18px;padding-right:18px}}@keyframes hv2TitleUp{from{transform:translateY(110%)}to{transform:translateY(0)}}.hv2__title-line > span{animation:hv2TitleUp 1.1s cubic-bezier(0.16,1,0.3,1) both}.hv2__title-line:nth-of-type(2) > span{animation-delay:0.12s}@keyframes hv2RevealUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}.hv2 [data-reveal]{animation:hv2RevealUp 0.9s cubic-bezier(0.16,1,0.3,1) both}.hv2 [data-reveal]:nth-of-type(1){animation-delay:0.35s}.hv2 [data-reveal]:nth-of-type(2){animation-delay:0.40s}.hv2 [data-reveal]:nth-of-type(3){animation-delay:0.45s}.hv2 [data-reveal]:nth-of-type(4){animation-delay:0.50s}.hv2 [data-reveal]:nth-of-type(5){animation-delay:0.55s}.hv2 [data-reveal]:nth-of-type(6){animation-delay:0.60s}.hv2__title-script[data-reveal]{animation-delay:0s;animation-duration:0.7s}@media (prefers-reduced-motion:reduce){.hv2__title-line > span,.hv2 [data-reveal]{animation:none;transform:none;opacity:1}}@keyframes hv2PulseComposited{0%,100%{opacity:0.35}50%{opacity:1}}.hero__dot,.hv2__status-dot{position:relative}.hero__dot::after,.hv2__status-dot::after{content:'';position:absolute;inset:-4px;border-radius:50%;background:radial-gradient(circle,var(--hv2-gold) 0%,transparent 70%);animation:hv2PulseComposited 2.4s ease-in-out infinite;pointer-events:none;will-change:opacity}.hero__dot,.hv2__status-dot{will-change:transform,opacity}</style>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-  <section class="proj-hero">
-    <canvas id="heroCanvas" class="hero__canvas"></canvas>
-    <div class="container proj-hero__inner">
-      <a href="/trabajo/" class="back-link reveal-up">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        <span data-i18n="orb.back">Volver a proyectos</span>
-      </a>
-      <div class="proj-hero__meta reveal-up" style="--delay:.1s">
-        <span class="tag tag--gold" data-i18n="orb.tag1">Diseño web</span>
-        <span class="tag">Performance</span>
-        <span class="tag" data-i18n="orb.tag2">SEO técnico</span>
-        <span class="tag">WordPress</span>
+  <main>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hv2" id="inicio">
+
+      <!-- LAYER 01 — fondo -->
+      <div class="hv2__bg" aria-hidden="true"></div>
+      <div class="hv2__grain" aria-hidden="true"></div>
+
+      <!-- LAYER 02 — niebla -->
+      <div class="hv2__fog" aria-hidden="true"></div>
+
+      <!-- LAYER 02.5 — partículas (polvo + estrellas), generadas en hero.js -->
+      <div class="hv2__particles" id="hv2Particles" aria-hidden="true"></div>
+
+      <!-- LAYER 03 — anillos + destello orbital -->
+      <svg class="hv2__rings" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <path id="hv2GlintPath" d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" />
+        </defs>
+        <circle cx="100" cy="100" r="99" />
+        <circle cx="100" cy="100" r="78" />
+        <circle class="hv2__rings-dashed" cx="100" cy="100" r="60" />
+
+        <!-- Destello orbital: cometa dorado con cola de luz, mismo trazado
+             que el anillo punteado pero con su propio recorrido (15s) -->
+        <circle class="hv2__glint-tail" r="9">
+          <animateMotion dur="15s" begin="-0.6s" repeatCount="indefinite">
+            <mpath href="#hv2GlintPath" />
+          </animateMotion>
+        </circle>
+        <circle class="hv2__glint-mid" r="4.5">
+          <animateMotion dur="15s" begin="-0.3s" repeatCount="indefinite">
+            <mpath href="#hv2GlintPath" />
+          </animateMotion>
+        </circle>
+        <circle class="hv2__glint-core" r="2.2">
+          <animateMotion dur="15s" repeatCount="indefinite">
+            <mpath href="#hv2GlintPath" />
+          </animateMotion>
+        </circle>
+      </svg>
+
+      <!-- LAYER 04 — rocas lejanas (quedan DETRÁS del retrato) -->
+      <div class="hv2__stage hv2__stage--far" aria-hidden="true">
+
+        <!-- rocas lejanas: opacas, desenfocadas, suben poco -->
+        <div class="hv2__rock hv2__rock--far hv2__rock--far1"
+             data-rise="22" data-float-y="10" data-float-rot="3" data-duration="11">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--far hv2__rock--far2"
+             data-rise="30" data-float-y="12" data-float-rot="-4" data-duration="13">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-02.webp" alt="" width="320" height="300" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--far hv2__rock--far3 hv2__rock--flip"
+             data-rise="26" data-float-y="8" data-float-rot="2" data-duration="12">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+
       </div>
-      <div class="proj-hero__top">
-        <h1 class="proj-hero__title reveal-up" style="--delay:.18s">
-          Orbidental<span class="hero__dot">.</span>
+
+      <!-- retrato: vive entre las dos capas de rocas (far detrás, near
+           delante), en su propio bloque de flujo real (hitbox), hermano
+           de .hv2__content dentro de .hv2. En desktop se comporta como
+           absoluto (ver CSS ≥1024px); en mobile/tablet es un bloque
+           normal que el navegador mide solo — nunca se superpone al
+           texto. -->
+      <div class="hv2__portrait" id="hv2Portrait"
+           data-rise="18" data-float-y="16" data-float-rot="0" data-duration="9">
+        <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png"
+               srcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png 680w"
+               sizes="(max-width: 767px) 62vw, (max-width: 1279px) 40vw, 520px"
+               alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada"
+               width="1024" height="1536" fetchpriority="high" loading="eager" decoding="sync" elementtiming="hero-portrait" />
+        </div></div></div>
+      </div>
+
+      <!-- LAYER 06 — rocas cercanas (quedan DELANTE del retrato) -->
+      <div class="hv2__stage hv2__stage--near" id="hv2Stage" aria-hidden="true">
+
+        <!-- rocas cercanas: nítidas, concentradas abajo, suben más rápido -->
+        <div class="hv2__rock hv2__rock--near hv2__rock--near1"
+             data-rise="56" data-float-y="18" data-float-rot="5" data-duration="8">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-01.webp" alt="" width="270" height="226" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--near hv2__rock--near2"
+             data-rise="64" data-float-y="22" data-float-rot="-6" data-duration="9">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-03.webp" alt="" width="174" height="320" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--near hv2__rock--near3"
+             data-rise="90" data-float-y="16" data-float-rot="3" data-duration="10">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--near hv2__rock--near4 hv2__rock--flip"
+             data-rise="70" data-float-y="20" data-float-rot="-5" data-duration="7">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-01.webp" alt="" width="270" height="226" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+        <div class="hv2__rock hv2__rock--near hv2__rock--near5 hv2__rock--flip"
+             data-rise="48" data-float-y="14" data-float-rot="4" data-duration="9">
+          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
+            <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
+          </div></div>
+        </div>
+
+      </div>
+
+      <!-- CONTENIDO -->
+      <div class="hv2__content">
+
+        <span class="hv2__status" data-reveal>
+          <span class="hv2__status-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.status">Disponible para proyectos</span>
+        </span>
+
+        <p class="hv2__kicker" data-reveal data-i18n="hero.kicker">Alexander Caro — Diseñador &amp; Desarrollador</p>
+
+        <h1 class="hv2__title">
+          <span class="hv2__title-line"><span data-i18n="hero.title.line1">Diseño y código,</span></span>
+          <span class="hv2__title-script" data-reveal data-i18n="hero.title.line2">de una sola mano.</span>
         </h1>
-        <div class="proj-hero__diagnosis reveal-up" style="--delay:.26s">
-          <span class="proj-hero__diagnosis-score">
-            <span class="from">40</span>
-            <span class="to">97</span>
-          </span>
-          <span class="proj-hero__diagnosis-label" data-i18n="orb.diagnosis">PageSpeed · antes / después</span>
-        </div>
-      </div>
-      <p class="proj-hero__sub reveal-up" style="--delay:.34s">
-        <span data-i18n="orb.hero.sub">Un catálogo de +3.000 productos dentales que tardaba 14 segundos en cargar y se rompía en el celular. Clientes que se iban antes de ver el primer precio. Lo reconstruí desde cero —sin perder un producto ni una posición en Google— y pasó de un PageSpeed de 40 a 97.</span>
-      </p>
-      <div class="proj-hero__actions reveal-up" style="--delay:.42s">
-        <a href="https://orbidental.com" target="_blank" rel="noopener" class="btn btn--gold">
-          <span data-i18n="orb.live">Ver sitio en vivo</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- MÉTRICAS -->
-  <section class="proj-metrics">
-    <div class="container">
-      <div class="proj-metrics__grid scroll-reveal">
-        <div class="proj-metric proj-metric--lead">
-          <div class="proj-metric__nums">
-            <span class="proj-metric__before">40</span>
-            <span class="proj-metric__arrow">→</span>
-            <span class="proj-metric__after">97</span>
-          </div>
-          <span class="proj-metric__label" data-i18n="orb.metric1">PageSpeed Score — Core Web Vitals aprobado en un mes</span>
-        </div>
-        <div class="proj-metric">
-          <span class="proj-metric__big">14 s</span>
-          <span class="proj-metric__label" data-i18n="orb.metric2">Lo que tardaba en cargar, antes</span>
-        </div>
-        <div class="proj-metric">
-          <span class="proj-metric__big">3.000+</span>
-          <span class="proj-metric__label" data-i18n="orb.metric3">Productos migrados sin perder SEO</span>
-        </div>
-        <div class="proj-metric">
-          <span class="proj-metric__big">100%</span>
-          <span class="proj-metric__label" data-i18n="orb.metric4">Responsive — antes no servía en móvil</span>
-        </div>
-      </div>
-    </div>
-  </section>
+        <p class="hv2__desc" data-reveal data-i18n="hero.desc">Diseño gráfico, contenido, diseño y desarrollo web — todo lo visual y técnico de tu marca, en una sola persona. Sin intermediarios, con resultados que conectan, convierten y duran.</p>
 
-  <!-- EL PROBLEMA REAL -->
-  <section class="section proj-overview">
-    <div class="container">
-      <div class="proj-overview__grid">
-        <div class="proj-overview__main scroll-reveal">
-          <p class="eyebrow" data-i18n="orb.problem.eyebrow">EL PROBLEMA REAL</p>
-          <h2 class="proj-section__title" data-i18n="orb.problem.title">Un sitio lento no es un problema técnico. Es un problema <em>de ventas</em>.</h2>
-          <p class="proj-text" data-i18n="orb.problem.p1">El sitio anterior estaba hecho en Divi: arrastraba más de un megabyte de código que nadie usaba en cada visita, no estaba pensado para móvil y, siendo honestos, se veía mal —fondo plano, fotos sueltas, texto sin jerarquía—. Tardaba 14 segundos en abrir.</p>
-          <p class="proj-text--pull" data-i18n="orb.problem.pull">Cada segundo de espera y cada pantalla rota en un celular era un cliente que cerraba la pestaña.</p>
-          <p class="proj-text" data-i18n="orb.problem.p2">Eso pasaba en un catálogo de +3.000 productos donde la gente llega buscando algo puntual y con prisa. Para una empresa que vende online, eso no se ve en el diseño: se ve en las ventas que no entran.</p>
-          <p class="proj-text" data-i18n="orb.problem.p3">Divi no se podía "optimizar": el peso estaba en el propio sistema. Había que sacarlo. Reconstruí todo en código limpio sobre WordPress, migré los más de 3.000 productos sin perder el SEO ya posicionado —un error ahí y se caen meses de ranking— y rehíce la experiencia visual para que el sitio por fin transmitiera la seriedad de la empresa.</p>
+        <div class="hv2__actions" data-reveal>
+          <a href="/trabajo/" class="hv2-btn hv2-btn--primary" data-magnetic>
+            <span data-i18n="hero.btn.work">Ver trabajo seleccionado</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="/sobre-mi/" class="hv2-btn hv2-btn--ghost" data-magnetic>
+            <span data-i18n="hero.btn.about">Conóceme</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
-        <div class="proj-overview__rail scroll-reveal" style="--reveal-delay:.1s">
-          <div class="proj-info-card">
-            <span class="proj-info-card__label" data-i18n="orb.info.company.label">Empresa</span>
-            <span class="proj-info-card__value">Orbidental SAS</span>
-          </div>
-          <div class="proj-info-card">
-            <span class="proj-info-card__label" data-i18n="orb.info.role.label">Mi rol</span>
-            <span class="proj-info-card__value" data-i18n="orb.info.role.value">A cargo de todo lo digital · 2+ años</span>
-          </div>
-          <div class="proj-info-card">
-            <span class="proj-info-card__label" data-i18n="orb.info.category.label">Categoría</span>
-            <span class="proj-info-card__value" data-i18n="orb.info.category.value">Insumos dentales · Catálogo +3.000 productos</span>
-          </div>
-          <div class="proj-info-card">
-            <span class="proj-info-card__label" data-i18n="orb.info.stack.label">Stack</span>
-            <span class="proj-info-card__value">WordPress, Kadence, HTML/CSS/JS</span>
-          </div>
-          <div class="proj-info-card">
-            <span class="proj-info-card__label" data-i18n="orb.info.deliverables.label">Entregables</span>
-            <span class="proj-info-card__value" data-i18n="orb.info.deliverables.value">Rediseño completo, performance, SEO técnico, responsive</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- PROBLEMA · INTERVENCIÓN · RESULTADO -->
-  <section class="proj-story">
-    <div class="container">
-      <div class="proj-story__header scroll-reveal">
-        <p class="eyebrow" data-i18n="orb.story.eyebrow">DETRÁS DEL REDISEÑO</p>
-        <h2 class="proj-section__title" data-i18n="orb.story.title">No fue solo acelerar la web. Fue recuperar la confianza.</h2>
-        <p class="proj-text" data-i18n="orb.story.intro">Orbidental tenía un problema técnico visible en cada visita: una web lenta, antigua y completamente rota en móvil. La solución fue reconstruirla con cuidado, sin perder el trabajo SEO ni el catálogo que ya existía.</p>
-      </div>
-      <div class="proj-story__grid">
-        <article class="proj-story__card scroll-reveal"><span class="proj-story__number">01</span><p class="eyebrow" data-i18n="orb.story.problem.label">EL PROBLEMA</p><h3 data-i18n="orb.story.problem.title">Una web que hacía desconfiar</h3><p class="proj-text" data-i18n="orb.story.problem.text">El sitio tardaba en cargar, se veía como una web de 2013 y no era responsive. En móvil se rompían elementos y el constructor Divi limitaba el control visual. Un visitante podía irse antes de ver un producto o interpretar esa experiencia como una señal de poca seriedad.</p></article>
-        <article class="proj-story__card scroll-reveal" style="--reveal-delay:.1s"><span class="proj-story__number">02</span><p class="eyebrow" data-i18n="orb.story.work.label">LO QUE HICE</p><h3 data-i18n="orb.story.work.title">Reconstrucción desde la raíz</h3><p class="proj-text" data-i18n="orb.story.work.text">Eliminé Divi y pasé toda la experiencia a código con HTML, CSS y JavaScript sobre WordPress. Durante mes y medio revisé qué conservar, migré el catálogo y cuidé cada URL, contenido y señal técnica para modernizar el sitio sin poner en riesgo el posicionamiento.</p></article>
-        <article class="proj-story__card proj-story__card--result scroll-reveal" style="--reveal-delay:.2s"><span class="proj-story__number">03</span><p class="eyebrow" data-i18n="orb.story.result.label">EL RESULTADO</p><h3 data-i18n="orb.story.result.title">Más rápido, más claro y con más tráfico</h3><p class="proj-text" data-i18n="orb.story.result.text">La web pasó de PageSpeed 40 a 97, mantuvo y mejoró su SEO, y el tráfico aumentó. También recuperó una presentación visual moderna y una experiencia responsive. El e-commerce completo sigue en construcción, sobre una base mucho más sólida.</p></article>
-      </div>
-      <blockquote class="proj-story__quote scroll-reveal" style="--reveal-delay:.25s"><p data-i18n="orb.story.quote">La reacción de mi jefe fue clara: la página se ve mucho mejor visualmente y sí se nota que es rápida.</p><cite data-i18n="orb.story.quote.by">— Reacción del cliente, Orbidental</cite></blockquote>
-    </div>
-  </section>
-
-  <!-- PRUEBA 1: PAGESPEED ANTES / DESPUÉS -->
-  <section class="proj-proof">
-    <div class="container">
-      <div class="proj-proof__head scroll-reveal">
-        <p class="eyebrow" data-i18n="orb.proof.eyebrow">LA PRUEBA</p>
-        <h2 class="proj-section__title" data-i18n="orb.proof.title">De "Desaprobado" a "Aprobado" en un mes<span class="hero__dot">.</span></h2>
-        <p class="proj-text" data-i18n="orb.proof.text">No es mi opinión: es el propio reporte de Core Web Vitals (Métricas Web Esenciales) de Google. En un mes, el sitio pasó de "Desaprobado" a "Aprobado", y el PageSpeed subió de 40 a 97. En la práctica: 14 segundos de carga convertidos en una apertura casi instantánea.</p>
-      </div>
-      <div class="proj-proof__split scroll-reveal">
-        <div class="proj-proof__half proj-proof__half--before">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1782220110/Antes_j9uony.png" alt="Core Web Vitals de Orbidental antes del rediseño: evaluación desaprobada" loading="lazy" />
-          <div class="proj-proof__caption">
-            <span class="proj-proof__caption-label" data-i18n="orb.proof.before.label">Antes</span>
-            <span class="proj-proof__caption-score" data-i18n="orb.proof.before.score">40 — Desaprobado</span>
-          </div>
-        </div>
-        <div class="proj-proof__half proj-proof__half--after">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1782220149/Despu%C3%A9s_iulu8r.png" alt="Core Web Vitals de Orbidental después del rediseño: evaluación aprobada, PageSpeed 97" loading="lazy" />
-          <div class="proj-proof__caption">
-            <span class="proj-proof__caption-label" data-i18n="orb.proof.after.label">Después</span>
-            <span class="proj-proof__caption-score" data-i18n="orb.proof.after.score">97 — Aprobado</span>
-          </div>
-        </div>
-        <div class="proj-proof__divider"></div>
-        <div class="proj-proof__vs">VS</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRUEBA 2: CORE WEB VITALS SOSTENIDO -->
-  <section class="section proj-overview" style="padding-top: 0;">
-    <div class="container">
-      <div class="proj-proof__head scroll-reveal">
-        <p class="eyebrow" data-i18n="orb.cwv.eyebrow">UN AÑO DESPUÉS</p>
-        <h2 class="proj-section__title" data-i18n="orb.cwv.title">No fue suerte de un mes. La mejora <em>se mantiene</em><span class="hero__dot">.</span></h2>
-        <p class="proj-text" data-i18n="orb.cwv.text">Cualquiera puede tener un buen número un día. Lo difícil es sostenerlo. El historial de Core Web Vitals de Google muestra que Orbidental lleva meses con métricas aprobadas y en mejora continua — celular: 90 rendimiento, 96 accesibilidad, 100 SEO. Eso no pasa con un rediseño superficial.</p>
-      </div>
-      <div class="proj-img-full scroll-reveal">
-        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1782220149/Core_web_vitals_sumart_vttkmm.png" alt="Historial de Core Web Vitals de Orbidental: mejora continua durante más de un año" loading="lazy" />
-        <span class="proj-img-caption" data-i18n="orb.cwv.caption">Historial de Core Web Vitals — mejora sostenida durante más de un año. Fuente: Google Search Console.</span>
+        <p class="hv2__price-signal" data-reveal data-i18n="hero.price_signal">Proyectos desde $500 USD<span class="hv2__price-signal-dot" aria-hidden="true">·</span>Propuesta clara en 48 h<span class="hv2__price-signal-dot" aria-hidden="true">·</span>Empezamos solo si encaja</p>
       </div>
 
-      <!-- Scores actuales -->
-      <div class="proj-metrics__grid scroll-reveal" style="margin-top: 40px;">
-        <div class="proj-metric proj-metric--lead">
-          <span class="proj-metric__big" style="color: #4ade80;">90</span>
-          <span class="proj-metric__label" data-i18n="orb.cwv.score1">Rendimiento en celular — hoy</span>
-        </div>
-        <div class="proj-metric">
-          <span class="proj-metric__big" style="color: #4ade80;">96</span>
-          <span class="proj-metric__label" data-i18n="orb.cwv.score2">Accesibilidad</span>
-        </div>
-        <div class="proj-metric">
-          <span class="proj-metric__big" style="color: #4ade80;">100</span>
-          <span class="proj-metric__label" data-i18n="orb.cwv.score3">SEO técnico</span>
-        </div>
-        <div class="proj-metric">
-          <span class="proj-metric__big" style="color: #4ade80;">2 s</span>
-          <span class="proj-metric__label" data-i18n="orb.cwv.score4">LCP en celular — carga casi instantánea</span>
-        </div>
+      <!-- decoraciones laterales -->
+      <div class="hv2__side hv2__side--scroll" data-reveal>
+        <span data-i18n="hero.scroll">Desliza para explorar</span>
       </div>
-    </div>
-  </section>
+      <div class="hv2__side hv2__side--tags" data-reveal>
+        <span data-i18n="hero.tag.1">Branding</span>
+        <span data-i18n="hero.tag.2">Diseño Web</span>
+        <span data-i18n="hero.tag.3">Frontend</span>
+      </div>
 
-  <!-- SHOWCASE -->
-  <section class="proj-showcase">
-    <div class="container">
-      <div class="proj-showcase__header scroll-reveal">
-        <h2 class="proj-section__title"><span data-i18n="orb.showcase.title">Página de inicio</span><span class="hero__dot">.</span></h2>
-        <a href="https://orbidental.com" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
-          <span data-i18n="orb.live.short">Ver en vivo</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-        </a>
+      <!-- insignia -->
+      <div class="hv2__badge" data-reveal>
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs>
+            <path id="hv2BadgePath" d="M60,60 m0,-52 a52,52 0 1,1 0,104 a52,52 0 1,1 0,-104" />
+          </defs>
+          <text>
+            <textPath href="#hv2BadgePath" startOffset="0" data-i18n="hero.badge">
+              Basado en Bogotá · Colombia · Basado en Bogotá · Colombia ·
+            </textPath>
+          </text>
+        </svg>
+        <span class="hv2__badge-dot" aria-hidden="true"></span>
       </div>
+
+    </section>
+
+    <!-- ═══ TRANSICIÓN ═══ -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="section-divider__line"></div>
+      <span class="section-divider__star section-divider__star--1"></span>
+      <span class="section-divider__star section-divider__star--2"></span>
+      <span class="section-divider__star section-divider__star--3"></span>
+      <span class="section-divider__star section-divider__star--4"></span>
     </div>
-    <div class="proj-showcase__frame scroll-reveal">
-      <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental — Página de inicio rediseñada" loading="lazy" />
-      <div class="proj-showcase__overlay">
-        <div class="proj-showcase__text">
-          <p class="proj-text" data-i18n="orb.showcase.text">Antes: fondo plano, sin jerarquía, lento. Ahora: una home coherente y ordenada que se ve profesional en cualquier pantalla y carga al instante. La credibilidad de una empresa también se diseña.</p>
+
+
+    <!-- ═══ DOS PUERTAS — Cliente A / Cliente B ═══ -->
+    <section class="doors-section scroll-reveal" aria-label="Elige tu punto de partida">
+      <div class="container">
+        <div class="doors-grid">
+          <a href="/servicios/identidad-visual/" class="door-card">
+            <span class="door-card__num" aria-hidden="true">A</span>
+            <h2 class="door-card__title" data-i18n="doors.a.title">¿Tu marca no se ve seria?</h2>
+            <p class="door-card__desc" data-i18n="doors.a.desc">Identidad visual que se reconoce antes de leer el nombre — logo, sistema completo y manual listos para producción.</p>
+            <span class="door-card__cta"><span data-i18n="doors.a.cta">Ver identidad visual</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="/trabajo/orbidental/" class="door-card">
+            <span class="door-card__num" aria-hidden="true">B</span>
+            <h2 class="door-card__title" data-i18n="doors.b.title">¿Tu web no vende?</h2>
+            <p class="door-card__desc" data-i18n="doors.b.desc">Sitios que cargan en 2 segundos y convierten: de PageSpeed 40 a 97 en un e-commerce real de 3.000+ productos.</p>
+            <span class="door-card__cta"><span data-i18n="doors.b.cta">Ver el caso Orbidental</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GALERÍA MARCA -->
-  <section class="proj-gallery">
-    <div class="container">
-      <div class="proj-gallery__header scroll-reveal">
-        <h2 class="proj-section__title"><span data-i18n="orb.gallery1.title">Página de marca</span><span class="hero__dot">.</span></h2>
-        <a href="https://orbidental.com/eighteeth/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
-          Ver en vivo
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-        </a>
+    <!-- ═══ ESTADÍSTICAS ═══ -->
+    <section class="stats-section scroll-reveal">
+      <div class="container">
+        <div class="stats-grid">
+
+          <div class="stat-item">
+            <span class="stat-num" data-target="97" data-suffix="">97</span>
+            <span class="stat-bar"><span class="stat-bar__fill" style="--pct:97%"></span></span>
+            <span class="stat-label" data-i18n="stat.01.label">PageSpeed Score</span>
+            <span class="stat-sub" data-i18n="stat.01.sub">de 40 a 97 en producción real</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-num" data-target="179" data-suffix="K+">179K+</span>
+            <span class="stat-bar"><span class="stat-bar__fill" style="--pct:82%"></span></span>
+            <span class="stat-label" data-i18n="stat.02.label">Visualizaciones orgánicas</span>
+            <span class="stat-sub" data-i18n="stat.02.sub">en 4 meses · sin pauta pagada</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-num" data-target="626" data-suffix="">626</span>
+            <span class="stat-bar"><span class="stat-bar__fill" style="--pct:74%"></span></span>
+            <span class="stat-label" data-i18n="stat.03.label">Leads B2B generados</span>
+            <span class="stat-sub" data-i18n="stat.03.sub">pauta en Meta a ~$2.500 COP por lead</span>
+          </div>
+
+          <div class="stat-item">
+            <span class="stat-num" data-target="3000" data-suffix="+">3.000+</span>
+            <span class="stat-bar"><span class="stat-bar__fill" style="--pct:60%"></span></span>
+            <span class="stat-label" data-i18n="stat.04.label">Productos fotografiados</span>
+            <span class="stat-sub" data-i18n="stat.04.sub">catálogo B2B · Orbidental</span>
+          </div>
+
+        </div>
       </div>
-      <p class="proj-text scroll-reveal" style="max-width:600px;" data-i18n="orb.gallery1.text">Eighteeth es una de las marcas que distribuye Orbidental. En vez de una página genérica más, le construí una experiencia dedicada dentro del sitio —la prueba de que esto no sale de una plantilla, sino que se diseña marca por marca.</p>
-    </div>
-    <div class="proj-carousel scroll-reveal" data-carousel="marca">
-      <div class="proj-carousel__track">
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035690/P%C3%A1gina_de_marca_parte_1_zvdsfw.png" alt="Página de marca Eighteeth parte 1" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_2_pi1jpi.png" alt="Página de marca Eighteeth parte 2" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_3_ibtubh.png" alt="Página de marca Eighteeth parte 3" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_4_km6wot.png" alt="Página de marca Eighteeth parte 4" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_5_j8njaj.png" alt="Página de marca Eighteeth parte 5" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035691/P%C3%A1gina_de_marca_parte_6_cvw0xv.png" alt="Página de marca Eighteeth parte 6" loading="lazy" /></div>
+    </section>
+
+    <!-- ═══ SERVICIOS ═══ -->
+    <section class="section services-section" id="servicios">
+      <div class="services-section__decor" aria-hidden="true">
+        <img class="services-section__rock" src="/assets/rocks/rock-03.webp" alt="" width="174" height="320" loading="lazy" decoding="async" />
+        <svg class="services-section__rings" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="92" />
+          <circle class="services-section__rings-dashed" cx="100" cy="100" r="68" />
+        </svg>
       </div>
       <div class="container">
-        <div class="proj-carousel__nav">
-          <span class="proj-carousel__counter"><span class="current">01</span> / 06</span>
-          <div class="proj-carousel__btns">
-            <button class="proj-carousel__btn" data-dir="-1" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-            <button class="proj-carousel__btn" data-dir="1" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
-          </div>
+        <p class="eyebrow" data-i18n="services.eyebrow">SERVICIOS</p>
+        <h2 class="services-section__title" data-i18n="services.title">Diseño y desarrollo que <em>venden</em>.</h2>
+        <p class="services-section__lede" data-i18n="services.lede">Diseño, desarrollo y contenido visual — todo en un mismo proceso.</p>
+
+        <div class="services-list">
+
+          <article class="service-row scroll-reveal">
+            <div class="service-row__num">
+              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
+              <span class="service-row__num-dot" aria-hidden="true"></span>
+              <span>01</span>
+            </div>
+            <div class="service-row__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 3a9 9 0 0 0 0 18M3 12h18"/>
+              </svg>
+            </div>
+            <div class="service-row__body">
+              <h3 class="service-row__title" data-i18n="services.01.title">Identidad y diseño gráfico</h3>
+              <p class="service-row__text" data-i18n="services.01.text">Logo, paleta y sistema visual completo. Una marca que se reconoce y se siente coherente en cada pieza.</p>
+            </div>
+          </article>
+
+          <article class="service-row scroll-reveal" style="--reveal-delay: 0.08s">
+            <div class="service-row__num">
+              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
+              <span class="service-row__num-dot" aria-hidden="true"></span>
+              <span>02</span>
+            </div>
+            <div class="service-row__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="m8 9-3 3 3 3M16 9l3 3-3 3M13 6l-2 12"/>
+              </svg>
+            </div>
+            <div class="service-row__body">
+              <h3 class="service-row__title" data-i18n="services.02.title">Diseño y desarrollo web</h3>
+              <p class="service-row__text" data-i18n="services.02.text">Sitios rápidos y a medida — diseñados y programados por la misma persona. Sin plantillas, sin intermediarios. PageSpeed 97 en proyectos reales.</p>
+            </div>
+          </article>
+
+          <article class="service-row scroll-reveal" style="--reveal-delay: 0.16s">
+            <div class="service-row__num">
+              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
+              <span class="service-row__num-dot" aria-hidden="true"></span>
+              <span>03</span>
+            </div>
+            <div class="service-row__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="5" y="2" width="14" height="20" rx="2"/>
+                <circle cx="12" cy="17" r="1"/>
+              </svg>
+            </div>
+            <div class="service-row__body">
+              <h3 class="service-row__title" data-i18n="services.03.title">Contenido y social media</h3>
+              <p class="service-row__text" data-i18n="services.03.text">Piezas visuales para redes que paran el scroll y construyen marca — con una estética pensada, no improvisada.</p>
+            </div>
+          </article>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROTOTIPO -->
-  <section class="proj-gallery">
-    <div class="container">
-      <div class="proj-gallery__header scroll-reveal">
-        <h2 class="proj-section__title"><span data-i18n="orb.gallery2.title">El prototipo de la futura tienda</span><span class="hero__dot">.</span></h2>
-        <a href="https://orbidental.com/acuvision-x/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
-          <span data-i18n="orb.prototype.link">Ver el prototipo</span>
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-        </a>
+    <!-- ═══ POR QUÉ YO (vs agencia) ═══ -->
+    <section class="section porque-section">
+      <div class="container">
+        <p class="eyebrow scroll-reveal" data-i18n="why.eyebrow">POR QUÉ TRABAJAR CONMIGO</p>
+        <h2 class="section__title scroll-reveal" data-i18n="why.title">La diferencia no es el precio.<br><em>Es la velocidad</em><span class="hero__dot">.</span></h2>
+        <p class="porque-section__lede scroll-reveal">
+          <span data-i18n="why.lede">Una agencia tiene tres personas entre tu idea y el resultado: el que vende, el que coordina y el que ejecuta. Cada capa suma tiempo y diluye lo que pediste. Conmigo no hay capas — hablás con quien diseña y programa, y por eso todo se mueve más rápido.</span>
+        </p>
+
+        <div class="porque-compare scroll-reveal" style="--reveal-delay:.08s">
+          <!-- Columna agencia -->
+          <div class="porque-col porque-col--them">
+            <span class="porque-col__tag" data-i18n="why.them.tag">Una agencia</span>
+            <ul class="porque-list">
+              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.01">Hablás con un vendedor; ejecuta alguien que no conociste</span></li>
+              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.02">Tu mensaje pasa por 3 personas antes de volverse trabajo</span></li>
+              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.03">Cambios y revisiones tardan días en coordinarse</span></li>
+              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.04">El diseño lo hace un equipo, el código otro — y se pierde en el traspaso</span></li>
+              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.05">Pagás también la estructura: oficina, managers, comisiones</span></li>
+            </ul>
+          </div>
+
+          <!-- Columna yo -->
+          <div class="porque-col porque-col--me">
+            <span class="porque-col__tag porque-col__tag--gold" data-i18n="why.me.tag">Conmigo</span>
+            <ul class="porque-list">
+              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.01">Hablás directo con quien diseña y programa tu proyecto</span></li>
+              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.02">Lo que pedís llega sin intermediarios que lo diluyan</span></li>
+              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.03">Un cambio se resuelve el mismo día, no la próxima semana</span></li>
+              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.04">Diseño y código los hace la misma persona — nada se pierde</span></li>
+              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.05">Pagás el trabajo, no la estructura que lo rodea</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="porque-section__close scroll-reveal" style="--reveal-delay:.16s">
+          <span data-i18n="why.close">No es que una agencia esté mal. Es que para la mayoría de proyectos, esa estructura es peso que pagás y tiempo que esperás — sin que el resultado sea mejor.</span>
+        </p>
       </div>
-      <p class="proj-text scroll-reveal" style="max-width:600px;" data-i18n="orb.gallery2.text">Las páginas de producto actuales son básicas —fondo blanco, una foto, texto sin orden—. El e-commerce real está hoy en desarrollo. Para definir hacia dónde va y alinear a la dirección, diseñé este prototipo de cómo se verá y funcionará la página de producto: coherente, clara y pensada para que el cliente entienda lo que compra y decida con confianza. Es el siguiente paso real de Orbidental — y soy quien lo está construyendo.</p>
-    </div>
-    <div class="proj-carousel scroll-reveal" data-carousel="prototipo">
-      <div class="proj-carousel__track">
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035688/P%C3%A1gina_de_producto_parte_1_aobskn.png" alt="Prototipo página de producto parte 1" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035689/P%C3%A1gina_de_producto_parte_2_pikggr.png" alt="Prototipo página de producto parte 2" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035689/P%C3%A1gina_de_producto_parte_3_ozcq3n.png" alt="Prototipo página de producto parte 3" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035689/P%C3%A1gina_de_producto_parte_4_q03noh.png" alt="Prototipo página de producto parte 4" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035689/P%C3%A1gina_de_producto_parte_5_rkf3gl.png" alt="Prototipo página de producto parte 5" loading="lazy" /></div>
-        <div class="proj-carousel__slide"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_600/v1781035692/P%C3%A1gina_de_marca_parte_7_qziai7.png" alt="Prototipo página de producto parte 6" loading="lazy" /></div>
+    </section>
+
+    <!-- ═══ ENFOQUE ═══ -->
+    <section class="enfoque-section">
+      <div class="enfoque-section__visual" aria-hidden="true">
+        <img src="/assets/rocks/enfoque-rock.webp" alt="" width="370" height="320" loading="lazy" decoding="async" />
+        <div class="enfoque-section__glow"></div>
+      </div>
+      <div class="enfoque-section__content">
+        <p class="eyebrow" data-i18n="focus.eyebrow">ENFOQUE</p>
+        <h2 class="enfoque-section__title" data-i18n="focus.title">Ideas claras.<br><em>Resultados reales.</em></h2>
+        <p class="enfoque-section__lede" data-i18n="focus.lede">Diseño. Desarrollo. Contenido.<br>Todo en una sola persona.</p>
+      </div>
+      <svg class="enfoque-section__orbit" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="enfoque-section__orbit-ring" cx="100" cy="100" r="90"/>
+        <circle class="enfoque-section__orbit-ring enfoque-section__orbit-ring--dashed" cx="100" cy="100" r="64"/>
+        <circle class="enfoque-section__orbit-dot" r="3.5">
+          <animateMotion dur="16s" repeatCount="indefinite" path="M 100 10 A 90 90 0 1 1 100 190 A 90 90 0 1 1 100 10"/>
+        </circle>
+        <circle class="enfoque-section__orbit-dot enfoque-section__orbit-dot--sm" r="2">
+          <animateMotion dur="11s" repeatCount="indefinite" path="M 100 36 A 64 64 0 1 0 100 164 A 64 64 0 1 0 100 36"/>
+        </circle>
+      </svg>
+      <svg class="enfoque-section__orbit enfoque-section__orbit--secondary" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="enfoque-section__orbit-ring" cx="100" cy="100" r="90"/>
+        <circle class="enfoque-section__orbit-dot" r="3">
+          <animateMotion dur="12s" repeatCount="indefinite" path="M 100 10 A 90 90 0 1 1 100 190 A 90 90 0 1 1 100 10"/>
+        </circle>
+      </svg>
+      <div class="enfoque-section__stars" aria-hidden="true">
+        <span class="enfoque-section__star" style="--x:38%; --y:14%; --size:2px; --dur:4.5s; --delay:0s;"></span>
+        <span class="enfoque-section__star" style="--x:52%; --y:78%; --size:3px; --dur:5.5s; --delay:1.4s;"></span>
+        <span class="enfoque-section__star enfoque-section__star--gold" style="--x:64%; --y:22%; --size:3px; --dur:6s; --delay:0.6s;"></span>
+        <span class="enfoque-section__star" style="--x:74%; --y:62%; --size:2px; --dur:4s; --delay:2.2s;"></span>
+        <span class="enfoque-section__star" style="--x:88%; --y:18%; --size:2px; --dur:5s; --delay:0.9s;"></span>
+        <span class="enfoque-section__star enfoque-section__star--gold" style="--x:94%; --y:70%; --size:2px; --dur:4.8s; --delay:1.8s;"></span>
+        <span class="enfoque-section__star" style="--x:46%; --y:48%; --size:1.5px; --dur:3.6s; --delay:2.6s;"></span>
+      </div>
+    </section>
+
+    <!-- ═══ PROCESO ═══ -->
+    <section class="section proceso-section">
+      <div class="proceso-section__decor" aria-hidden="true">
+        <img src="/assets/rocks/rock-01.webp" alt="" width="270" height="226" loading="lazy" decoding="async" />
       </div>
       <div class="container">
-        <div class="proj-carousel__nav">
-          <span class="proj-carousel__counter"><span class="current">01</span> / 06</span>
-          <div class="proj-carousel__btns">
-            <button class="proj-carousel__btn" data-dir="-1" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-            <button class="proj-carousel__btn" data-dir="1" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        <p class="eyebrow" data-i18n="process.eyebrow">CÓMO TRABAJO</p>
+        <h2 class="section__title" data-i18n="process.title">Del brief al resultado<span class="hero__dot">.</span></h2>
+        <div class="proceso-timeline">
+
+          <div class="proceso-step scroll-reveal">
+            <span class="proceso-step__num">01</span>
+            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
+            <h3 class="proceso-step__title" data-i18n="process.01.title">Hablamos</h3>
+            <p class="proceso-step__text" data-i18n="process.01.text">Una llamada de 20 minutos o un formulario corto. Me cuentas qué necesitas, quién es tu cliente y qué quieres lograr. Sin decks, sin reuniones eternas — con eso es suficiente para entender si somos un buen match.</p>
+          </div>
+
+          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.08s">
+            <span class="proceso-step__num">02</span>
+            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
+            <h3 class="proceso-step__title" data-i18n="process.02.title">Propuesta en 48 h</h3>
+            <p class="proceso-step__text" data-i18n="process.02.text">En menos de dos días te llega un documento con el alcance exacto: qué incluye, qué no incluye, tiempos de entrega y precio. Lo revisamos juntos y ajustamos lo que haga falta antes de firmar.</p>
+          </div>
+
+          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.16s">
+            <span class="proceso-step__num">03</span>
+            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
+            <h3 class="proceso-step__title" data-i18n="process.03.title">Producción con visibilidad</h3>
+            <p class="proceso-step__text" data-i18n="process.03.text">No desaparezco dos semanas y aparezco con algo terminado. Trabajo en entregas parciales para que veas el avance real, puedas opinar a tiempo y el resultado final no sea una sorpresa.</p>
+          </div>
+
+          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.24s">
+            <span class="proceso-step__num">04</span>
+            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
+            <h3 class="proceso-step__title" data-i18n="process.04.title">Listo para usar</h3>
+            <p class="proceso-step__text" data-i18n="process.04.text">Archivos organizados, código limpio y todo lo que necesitas para tomar el proyecto desde ahí. Sin dependencias de mi parte. Y si en los primeros 7 días necesitas un ajuste, lo resolvemos sin costo extra.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PROYECTOS ═══ -->
+    <!-- ═══ TRABAJO ═══ -->
+    <section class="section trabajo-section" id="trabajo">
+      <svg class="trabajo-section__orbit-tl" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="trabajo-section__orbit-ring" cx="100" cy="100" r="92"/>
+        <circle class="trabajo-section__orbit-ring trabajo-section__orbit-ring--dashed" cx="100" cy="100" r="68"/>
+        <circle class="trabajo-section__orbit-dot" cx="100" cy="8" r="3"/>
+        <circle class="trabajo-section__orbit-dot trabajo-section__orbit-dot--sm" cx="16" cy="116" r="2"/>
+      </svg>
+      <div class="trabajo-section__rock" aria-hidden="true">
+        <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
+      </div>
+      <div class="container">
+        <div class="trabajo-header">
+          <div class="trabajo-header__text">
+            <p class="eyebrow" data-i18n="work.eyebrow">TRABAJO SELECCIONADO</p>
+            <h2 class="trabajo-header__title" data-i18n="work.title">Proyectos que <em>hablan</em> por sí solos.</h2>
+            <p class="trabajo-header__lede" data-i18n="work.lede">Diseño, estrategia y ejecución visual para marcas que quieren destacar.</p>
+          </div>
+          <div class="trabajo-filters" role="group" aria-label="Filtrar proyectos">
+            <span class="trabajo-filters__label">Áreas</span>
+            <button class="trabajo-filter trabajo-filter--active" data-filter="todos">Todos</button>
+            <button class="trabajo-filter" data-filter="branding">Branding</button>
+            <button class="trabajo-filter" data-filter="web">Sitios Web</button>
+            <button class="trabajo-filter" data-filter="grafico">Diseño gráfico</button>
+            <button class="trabajo-filter" data-filter="social">Social Media</button>
+          </div>
+        </div>
+        <div class="projects__grid">
+
+          <a href="/trabajo/orbidental/" class="card card--project scroll-reveal" data-tags="web">
+            <div class="card__thumb card__thumb--framed">
+              <div class="browser-mock">
+                <div class="browser-mock__bar">
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__url"></span>
+                </div>
+                <div class="browser-mock__viewport">
+                  <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781035692/P%C3%A1gina_de_inicio_hucq78.png" alt="Orbidental" loading="lazy" />
+                </div>
+              </div>
+              <div class="card__overlay"></div>
+              <span class="card__num">01</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.01.title">Rediseño web — Orbidental</h3>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--gold">Web</span>
+                  <span class="tag" data-i18n="tag.seo">SEO técnico</span>
+                  <span class="tag">PageSpeed 97</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="/trabajo/fueggo/" class="card card--project scroll-reveal" style="--reveal-delay: 0.1s" data-tags="branding">
+            <div class="card__thumb card__thumb--framed">
+              <div class="browser-mock">
+                <div class="browser-mock__bar">
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__url"></span>
+                </div>
+                <div class="browser-mock__viewport">
+                  <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781033141/Fachada_hkwn2i.png" alt="Fueggo" loading="lazy" />
+                </div>
+              </div>
+              <div class="card__overlay"></div>
+              <span class="card__num">02</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.02.title">Fueggo — Identidad visual</h3>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--gold">Branding</span>
+                  <span class="tag" data-i18n="tag.restaurante">Restaurante</span>
+                  <span class="tag" data-i18n="tag.concepto">Concepto propio</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="/trabajo/la-jungla-club/" class="card card--project scroll-reveal" style="--reveal-delay: 0.2s" data-tags="branding">
+            <div class="card__thumb card__thumb--framed">
+              <div class="browser-mock">
+                <div class="browser-mock__bar">
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__url"></span>
+                </div>
+                <div class="browser-mock__viewport">
+                  <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034073/Fachada_msspsi.png" alt="La Jungla Club" loading="lazy" />
+                </div>
+              </div>
+              <div class="card__overlay"></div>
+              <span class="card__num">03</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.03.title">La Jungla Club — Identidad visual</h3>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--gold">Branding</span>
+                  <span class="tag" data-i18n="tag.discoteca">Discoteca</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="/trabajo/rebel-street/" class="card card--project scroll-reveal" style="--reveal-delay: 0.3s" data-tags="branding">
+            <div class="card__thumb card__thumb--framed">
+              <div class="browser-mock">
+                <div class="browser-mock__bar">
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__dot"></span>
+                  <span class="browser-mock__url"></span>
+                </div>
+                <div class="browser-mock__viewport">
+                  <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781034468/Fachada_w69uxq.png" alt="Rebel Street" loading="lazy" />
+                </div>
+              </div>
+              <div class="card__overlay"></div>
+              <span class="card__num">04</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.04.title">Rebel Street — Identidad visual</h3>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--gold">Branding</span>
+                  <span class="tag" data-i18n="tag.streetwear">Streetwear</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="/trabajo/acelerarte/" class="card card--project scroll-reveal" style="--reveal-delay: 0.4s" data-tags="grafico">
+            <div class="card__thumb">
+              <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781873289/FLYER-1_oyll2h.webp" alt="AcelerArte — diseño deportivo para motociclismo" loading="lazy" />
+              <div class="card__overlay"></div>
+              <span class="card__num">05</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.05.title">AcelerArte — Diseño deportivo</h3>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--gold" data-i18n="tag.diseno.grafico">Diseño gráfico</span>
+                  <span class="tag" data-i18n="tag.motociclismo">Motociclismo</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="/trabajo/pulse-digital/" class="card card--project scroll-reveal" style="--reveal-delay: 0.5s" data-tags="web">
+            <div class="card__thumb" style="background:#080808;display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;pointer-events:none">
+                <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:#fff">Pulse<span style="color:var(--gold)">.</span>Digital</div>
+                <div style="font-size:10px;color:var(--text-muted);margin-top:4px;letter-spacing:.1em">PROYECTO PROPIO</div>
+              </div>
+              <div class="card__overlay"></div>
+              <span class="card__num">06</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.06.title">Pulse Digital — Landing page</h3>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--gold">Web</span>
+                  <span class="tag">English</span>
+                  <span class="tag" data-i18n="tag.concepto">Concepto propio</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+          <a href="/trabajo/motofaro/" class="card card--project scroll-reveal" style="--reveal-delay: 0.55s" data-tags="web">
+            <div class="card__thumb" style="background:#0a0a0f;display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;pointer-events:none">
+                <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:#fff">Moto<span style="color:var(--gold)">Faro</span></div>
+                <div style="font-size:10px;color:var(--text-muted);margin-top:4px;letter-spacing:.1em">COMPARADOR · NEXT.JS</div>
+              </div>
+              <div class="card__overlay"></div>
+              <span class="card__num">08</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.08.title">MotoFaro — Comparador de accesorios para moto</h3>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--gold">Web</span>
+                  <span class="tag">Next.js</span>
+                  <span class="tag" data-i18n="tag.concepto">Concepto propio</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="/trabajo/social-media-dental/" class="card card--project scroll-reveal" style="--reveal-delay: 0.55s" data-tags="social grafico">
+            <div class="card__thumb">
+              <img src="/assets/social/dental/orbidental-post-01.webp" alt="Social Media Dental" loading="lazy" />
+              <div class="card__overlay"></div>
+              <span class="card__num">07</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.07.title">Social Media Dental</h3>
+              <div class="card__meta-row">
+                <div class="card__tags">
+                  <span class="tag tag--gold">Social Media</span>
+                  <span class="tag" data-i18n="tag.diseno.grafico">Diseño gráfico</span>
+                </div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+
+
+          <div class="card card--cta scroll-reveal" style="--reveal-delay: 0.6s">
+            <svg class="card--cta__orbit" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="card--cta__orbit-ring" cx="50" cy="50" r="44"/>
+              <circle class="card--cta__orbit-dot" cx="50" cy="6" r="2.5"/>
+            </svg>
+            <p class="card--cta__text" data-i18n="work.cta.text">Cada proyecto es único,<br>pero el objetivo es el mismo:</p>
+            <p class="card--cta__highlight" data-i18n="work.cta.highlight">Impactar. Conectar. Convertir.</p>
+            <a href="/trabajo/" class="card--cta__link">
+              <span data-i18n="work.cta.link">Ver todos los proyectos</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SOBRE MÍ ═══ -->
+    <section class="section about-section" id="sobre-mi">
+      <svg class="about-header__orbit" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="about-header__orbit-ring" cx="80" cy="80" r="78"/>
+        <circle class="about-header__orbit-ring about-header__orbit-ring--dashed" cx="80" cy="80" r="50"/>
+        <circle class="about-header__orbit-center" cx="80" cy="80" r="3"/>
+        <circle class="about-header__orbit-dot" r="2.5">
+          <animateMotion dur="22s" repeatCount="indefinite" path="M 80 2 A 78 78 0 1 1 80 158 A 78 78 0 1 1 80 2"/>
+        </circle>
+      </svg>
+      <div class="about-section__rock about-section__rock--l" aria-hidden="true">
+        <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
+      </div>
+      <div class="about-section__rock about-section__rock--r" aria-hidden="true">
+        <img src="/assets/rocks/rock-02.webp" alt="" width="320" height="300" loading="lazy" decoding="async" />
+      </div>
+      <div class="about-section__stars" aria-hidden="true">
+        <span class="about-section__star" style="--x:28%; --y:8%; --size:2px; --dur:4.5s; --delay:0s;"></span>
+        <span class="about-section__star about-section__star--gold" style="--x:42%; --y:4%; --size:3px; --dur:5.5s; --delay:1.2s;"></span>
+        <span class="about-section__star" style="--x:18%; --y:32%; --size:2px; --dur:4s; --delay:2s;"></span>
+        <span class="about-section__star" style="--x:52%; --y:14%; --size:1.5px; --dur:3.6s; --delay:0.6s;"></span>
+        <span class="about-section__star about-section__star--gold" style="--x:8%; --y:42%; --size:2px; --dur:5s; --delay:1.8s;"></span>
+      </div>
+      <div class="container">
+        <p class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</p>
+        <h2 class="about-header__title" data-i18n="about.title">La persona<br><em>detrás</em> del trabajo<span class="hero__dot">.</span></h2>
+        <div class="about-header__line" aria-hidden="true"><span class="about-header__line-dot"></span></div>
+        <div class="about__grid">
+          <div class="about__primary scroll-reveal">
+            <div class="about__bio">
+              <p data-i18n="about.bio.01">Si buscas alguien que <strong class="about__hl">diseñe</strong>, desarrolle <em>y</em> entienda la estrategia detrás — <strong class="about__hl">sin pasarte entre equipos</strong> ni traducir lo que necesitas — estás en el lugar correcto.</p>
+              <p data-i18n="about.bio.02">Llevo 2 años manejando todo lo digital de <strong class="about__hl-gold">Orbidental</strong>: e-commerce, pauta en <strong class="about__hl-gold">Meta</strong> y <strong class="about__hl-gold">Google</strong>, fotografía de producto y diseño. No teoría — entornos reales, con métricas reales.</p>
+            </div>
+            <div class="about__skills">
+              <div class="tech-grid">
+
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  <span>HTML / CSS</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  <span>JavaScript</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  <span>WordPress</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                  <span data-i18n="tag.seo">SEO técnico</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  <span>Meta Ads</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  <span>Google Ads</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                  <span data-i18n="tag.fotografia">Fotografía</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  <span>Photoshop</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  <span data-i18n="tag.illustrator">Illustrator</span>
+                </div>
+                <div class="tech-chip">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                  <span data-i18n="tag.uiux">UI / UX</span>
+                </div>
+
+              </div>
+            <div class="home-certs">
+              <p class="home-certs__label" data-i18n="home.certs.label">Certificaciones</p>
+              <div class="home-certs__list">
+            <a href="https://skillshop.credential.net/8356725e-7cc6-43d8-b13e-c0fc7bd12504" target="_blank" rel="noopener" class="home-cert">
+              <span class="home-cert__seal"><img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192113056" alt="" width="30" height="30" loading="lazy" /></span>
+              <span class="home-cert__name" data-i18n="home.cert.g1">Google Ads — AI-Powered Performance</span>
+              <span class="home-cert__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://skillshop.credential.net/7b73e741-2f24-4811-9e6c-60e21cfe66e6" target="_blank" rel="noopener" class="home-cert">
+              <span class="home-cert__seal home-cert__seal--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg></span>
+              <span class="home-cert__name" data-i18n="home.cert.g2">Google Web Designer — Creativos interactivos</span>
+              <span class="home-cert__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://skillshop.credential.net/16c75255-a556-4945-9fae-7ca3b397344a" target="_blank" rel="noopener" class="home-cert">
+              <span class="home-cert__seal home-cert__seal--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg></span>
+              <span class="home-cert__name" data-i18n="home.cert.g3">Google Web Designer — Alto impacto</span>
+              <span class="home-cert__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://platzi.com/p/hosoyalexander/curso/13690-intro-ai/diploma/detalle/" target="_blank" rel="noopener" class="home-cert">
+              <span class="home-cert__seal home-cert__seal--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span>
+              <span class="home-cert__name" data-i18n="home.cert.p1">Platzi — Introducción a la IA</span>
+              <span class="home-cert__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://platzi.com/p/hosoyalexander/curso/13100-programacion-basica/diploma/detalle/" target="_blank" rel="noopener" class="home-cert">
+              <span class="home-cert__seal home-cert__seal--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/><line x1="13.5" y1="4" x2="10.5" y2="20"/></svg></span>
+              <span class="home-cert__name" data-i18n="home.cert.p2">Platzi — Programación Básica</span>
+              <span class="home-cert__arrow" aria-hidden="true">↗</span>
+            </a>
+              </div>
+            </div>
+
+            </div>
+          </div>
+          <div class="about__logros scroll-reveal" style="--reveal-delay: 0.1s">
+            <div class="logros-grid logros-timeline">
+              <div class="logro-card">
+                <span class="logro-numero">97</span>
+                <div class="logro-text">
+                  <span class="logro-label" data-i18n="about.stat.01.label">PageSpeed Score</span>
+                  <span class="logro-desc" data-i18n="about.stat.01.desc">E-commerce migrado de 40 a 97 en producción real</span>
+                </div>
+                <div class="logro-icon">
+                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
+                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l3-3.5"/><circle cx="12" cy="18" r="0.9" fill="currentColor" stroke="none"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="logro-card">
+                <span class="logro-numero">3K+</span>
+                <div class="logro-text">
+                  <span class="logro-label" data-i18n="about.stat.02.label">Productos fotografiados</span>
+                  <span class="logro-desc" data-i18n="about.stat.02.desc">Catálogo completo para e-commerce de Orbidental</span>
+                </div>
+                <div class="logro-icon">
+                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
+                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="logro-card">
+                <span class="logro-numero">5</span>
+                <div class="logro-text">
+                  <span class="logro-label" data-i18n="about.stat.03.label">Proyectos de branding</span>
+                  <span class="logro-desc" data-i18n="about.stat.03.desc">Identidades visuales construidas desde cero</span>
+                </div>
+                <div class="logro-icon">
+                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
+                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="logro-card">
+                <span class="logro-numero">100%</span>
+                <div class="logro-text">
+                  <span class="logro-label" data-i18n="about.stat.04.label">Proyectos entregados</span>
+                  <span class="logro-desc" data-i18n="about.stat.04.desc">Sin retrasos, sin intermediarios, directo con el cliente</span>
+                </div>
+                <div class="logro-icon">
+                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
+                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA CON URGENCIA -->
-  <section class="cta-section" id="contacto">
-    <div class="container">
-      <h2 class="cta-section__title">
-        <span data-i18n="orb.cta.title">¿Tu sitio te parece rápido</span><span class="hero__dot">?</span>
-      </h2>
-      <p class="cta-section__sub" data-i18n="orb.cta.sub">Ábrelo en un celular con datos, fuera de tu casa. Ahí es donde Orbidental perdía clientes sin enterarse —y donde los pierde la mayoría de las tiendas que "se ven bien". Si tienes dudas, probablemente ya los estás perdiendo. Cuéntame qué vendes y en menos de 24 horas te digo qué te está costando tu sitio actual.</p>
-      <div class="cta-section__actions">
-        <a class="btn btn--gold btn--lg" href="https://wa.me/573024457653?text=%C2%A1Hola%20Alexander!%20Vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20un%20proyecto%20contigo.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener noreferrer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          <span data-i18n="cta.whatsapp">Escríbeme por WhatsApp</span>
-        </a>
-        <a href="/trabajo/" class="btn btn--ghost" data-i18n="orb.cta.more">Ver más proyectos</a>
+    <!-- ═══ TESTIMONIOS ═══ -->
+    <section class="section testimonials" id="testimonios">
+      <svg class="testimonials-section__orbit" viewBox="0 0 320 320" aria-hidden="true">
+        <circle class="testimonials-section__orbit-ring" cx="160" cy="160" r="155"/>
+        <circle class="testimonials-section__orbit-ring testimonials-section__orbit-ring--dashed" cx="160" cy="160" r="106"/>
+        <circle class="testimonials-section__orbit-glow" cx="160" cy="160" r="4"/>
+        <circle class="testimonials-section__orbit-dot" cx="42" cy="56" r="2"/>
+        <circle class="testimonials-section__orbit-dot" cx="292" cy="46" r="1.5"/>
+        <circle class="testimonials-section__orbit-dot" cx="70" cy="284" r="1.5"/>
+      </svg>
+      <div class="container">
+        <div class="testimonials-header">
+          <div class="testimonials-header__text">
+            <p class="eyebrow" data-i18n="testimonials.eyebrow">CLIENTES</p>
+            <h2 class="testimonials-header__title" data-i18n="testimonials.title">Lo que dicen<br><em>sobre</em> mi trabajo<span class="hero__dot">.</span></h2>
+          </div>
+          <div class="testimonials-header__note">
+            <span class="testimonials-header__note-line" aria-hidden="true"></span>
+            <p data-i18n="testimonials.note">Colaboraciones que se convierten en relaciones a largo plazo.</p>
+          </div>
+        </div>
+
+        <div class="testimonials__row">
+          <button class="testimonials__btn testimonials__btn--prev" id="testimonialsPrev" aria-label="Anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 5l-7 7 7 7"/>
+            </svg>
+          </button>
+
+          <div class="testimonials__track-wrapper">
+          <div class="testimonials__track" id="testimonialsTrack">
+
+                        <article class="testimonial-card">
+              <div class="testimonial-card__visual" aria-hidden="true">
+                <img src="/assets/rocks/enfoque-rock.webp" alt="" loading="lazy" decoding="async" />
+                <div class="testimonial-card__sparks">
+                  <span class="spark" style="--x:60%; --y:22%; --dur:3.4s; --delay:0.4s;"></span>
+                  <span class="spark" style="--x:82%; --y:40%; --dur:3s; --delay:1.2s;"></span>
+                  <span class="spark" style="--x:50%; --y:60%; --dur:3.8s; --delay:0s;"></span>
+                  <span class="spark" style="--x:90%; --y:65%; --dur:2.8s; --delay:1.6s;"></span>
+                  <span class="spark" style="--x:72%; --y:80%; --dur:3.6s; --delay:0.9s;"></span>
+                  <span class="spark" style="--x:42%; --y:35%; --dur:4s; --delay:2s;"></span>
+                </div>
+              </div>
+              <div class="testimonial-card__quote">"</div>
+              <p class="testimonial-card__text" data-i18n="testimonials.02.text">El resultado superó nuestras expectativas. Alexander entendió perfectamente lo que queríamos: que se sintiera la jungla, pero que quedara claro que es una discoteca. Cada pieza refleja el nombre y la energía de la marca.</p>
+              <div class="testimonial-card__divider"></div>
+              <div class="testimonial-card__footer">
+                <div class="testimonial-card__avatar"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_80,h_80,c_fill,g_face,q_auto,f_auto/v1782219347/Mayra_kybufg.webp" alt="Mayra Castaño" width="40" height="40" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
+                <div class="testimonial-card__info">
+                  <span class="testimonial-card__name">Mayra Castaño</span>
+                  <span class="testimonial-card__cargo">Gerente · <a href="/trabajo/la-jungla-club/" class="testimonial-card__empresa">La Jungla Club</a></span>
+                  <span class="testimonial-card__role" data-i18n="tag.role.jungla">Discoteca · Entretenimiento · Bogotá</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="testimonial-card__visual" aria-hidden="true">
+                <img src="/assets/rocks/enfoque-rock.webp" alt="" loading="lazy" decoding="async" />
+                <div class="testimonial-card__sparks">
+                  <span class="spark" style="--x:58%; --y:20%; --dur:3.2s; --delay:1s;"></span>
+                  <span class="spark" style="--x:85%; --y:38%; --dur:3.8s; --delay:0.2s;"></span>
+                  <span class="spark" style="--x:48%; --y:58%; --dur:3s; --delay:1.6s;"></span>
+                  <span class="spark" style="--x:92%; --y:62%; --dur:3.6s; --delay:0.6s;"></span>
+                  <span class="spark" style="--x:68%; --y:82%; --dur:2.8s; --delay:2.2s;"></span>
+                  <span class="spark" style="--x:40%; --y:32%; --dur:4s; --delay:1.4s;"></span>
+                </div>
+              </div>
+              <div class="testimonial-card__quote">"</div>
+              <p class="testimonial-card__text" data-i18n="testimonials.03.text">Quedamos más que satisfechos. Queríamos algo urbano, con ese estilo grafitero pero aplicado a ropa streetwear — y Alexander lo entendió desde el primer momento. La identidad quedó exactamente como la imaginábamos.</p>
+              <div class="testimonial-card__divider"></div>
+              <div class="testimonial-card__footer">
+                <div class="testimonial-card__avatar"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_80,h_80,c_fill,g_face,q_auto,f_auto/v1782219347/Steven-Mesa_wr3edi.webp" alt="Steven Mesa" width="40" height="40" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
+                <div class="testimonial-card__info">
+                  <span class="testimonial-card__name">Steven Mesa</span>
+                  <span class="testimonial-card__cargo">Fundador · <a href="/trabajo/rebel-street/" class="testimonial-card__empresa">Rebel Street</a></span>
+                  <span class="testimonial-card__role" data-i18n="tag.role.rebel">Moda · Streetwear urbano · Bogotá</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+          </div>
+
+          <button class="testimonials__btn testimonials__btn--next" id="testimonialsNext" aria-label="Siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Paginación numerada -->
+        <div class="testimonials__dots" id="testimonialsDots">
+          <button class="testimonials__dot testimonials__dot--active" data-index="0" aria-label="Testimonio 1">01</button>
+          <span class="testimonials__dot-sep" aria-hidden="true"></span>
+          <button class="testimonials__dot" data-index="1" aria-label="Testimonio 2">02</button>
+        </div>
+
+        <!-- Marcas que han confiado -->
+        <div class="trusted-by">
+          <p class="trusted-by__label" data-i18n="trusted.label">Marcas que<br>han confiado</p>
+          <div class="trusted-by__logos">
+            <!-- TODO: reemplazar por <img> cuando Alexander suba los logos restantes -->
+            <span class="trusted-by__logo">La Jungla Club</span>
+            <img class="trusted-by__logo-img" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781445720/Orbidental_jy5cgn.png" alt="Orbidental" loading="lazy" decoding="async" width="160" height="60" />
+            <span class="trusted-by__logo">Rebel Street</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="section faq-section" id="faq">
+      <svg class="faq-defs" aria-hidden="true" focusable="false">
+        <defs>
+          <symbol id="goldPlanet" viewBox="0 0 200 200">
+            <radialGradient id="goldPlanetBody" cx="35%" cy="32%" r="75%">
+              <stop offset="0%" stop-color="#6b5128"/>
+              <stop offset="55%" stop-color="#2a1f10"/>
+              <stop offset="100%" stop-color="#120e08"/>
+            </radialGradient>
+            <clipPath id="goldPlanetClip"><circle cx="100" cy="100" r="85"/></clipPath>
+            <circle cx="100" cy="100" r="85" fill="url(#goldPlanetBody)"/>
+            <g clip-path="url(#goldPlanetClip)" stroke="#cdb78e" stroke-width="0.6" fill="none" opacity="0.4">
+              <ellipse cx="100" cy="100" rx="85" ry="55" stroke-dasharray="1 3"/>
+              <ellipse cx="100" cy="100" rx="85" ry="25" stroke-dasharray="1 3"/>
+              <ellipse cx="100" cy="100" rx="55" ry="85" stroke-dasharray="1 3"/>
+              <ellipse cx="100" cy="100" rx="25" ry="85" stroke-dasharray="1 3"/>
+              <ellipse cx="100" cy="100" rx="85" ry="42" stroke-dasharray="1 3" transform="rotate(35 100 100)"/>
+            </g>
+            <circle cx="100" cy="100" r="85" fill="none" stroke="#cdb78e" stroke-width="0.75" opacity="0.5"/>
+            <circle cx="64" cy="74" r="2" fill="#f4efe6"/>
+            <circle cx="135" cy="112" r="1.5" fill="#cdb78e"/>
+            <circle cx="102" cy="152" r="1.5" fill="#f4efe6"/>
+            <circle cx="80" cy="44" r="7" fill="#cdb78e" opacity="0.45"/>
+            <circle cx="80" cy="44" r="3" fill="#f4efe6"/>
+          </symbol>
+        </defs>
+      </svg>
+      <div class="container">
+        <div class="faq-grid">
+          <div class="faq-aside">
+            <p class="eyebrow" data-i18n="faq.eyebrow">PREGUNTAS FRECUENTES</p>
+            <h2 class="about-header__title" data-i18n="faq.title">Lo que siempre<br><em>preguntan</em><span class="hero__dot">.</span></h2>
+            <div class="about-header__line" aria-hidden="true"><span class="about-header__line-dot"></span></div>
+            <p class="faq-aside__lede" data-i18n="faq.lede">Respuestas claras para que tomes decisiones seguras y trabajemos con total transparencia.</p>
+
+            <svg class="faq-section__orbit" viewBox="0 0 400 400" aria-hidden="true">
+              <circle class="faq-section__orbit-ring" cx="200" cy="200" r="195"/>
+              <circle class="faq-section__orbit-ring" cx="200" cy="200" r="140"/>
+              <circle class="faq-section__orbit-ring faq-section__orbit-ring--dashed" cx="200" cy="200" r="85"/>
+              <circle class="faq-section__orbit-glow" cx="200" cy="200" r="40"/>
+              <circle class="faq-section__orbit-sun" cx="200" cy="200" r="13"/>
+              <circle class="faq-section__orbit-dot" cx="200" cy="6" r="3"/>
+              <circle class="faq-section__orbit-dot" cx="348" cy="118" r="2"/>
+              <circle class="faq-section__orbit-dot" cx="80" cy="348" r="2"/>
+              <circle class="faq-section__orbit-dot" cx="322" cy="348" r="2"/>
+            </svg>
+            <div class="faq-section__stars" aria-hidden="true">
+              <span class="faq-section__star faq-section__star--gold" style="--x:40px; --y:320px; --size:2px; --dur:4.5s; --delay:0s;"></span>
+              <span class="faq-section__star faq-section__star--gold" style="--x:340px; --y:300px; --size:2px; --dur:5s; --delay:1.2s;"></span>
+              <span class="faq-section__star" style="--x:200px; --y:580px; --size:3px; --dur:6s; --delay:0.4s;"></span>
+              <span class="faq-section__star faq-section__star--gold" style="--x:330px; --y:420px; --size:2px; --dur:4s; --delay:2s;"></span>
+              <span class="faq-section__star faq-section__star--gold" style="--x:60px; --y:560px; --size:1.5px; --dur:5.5s; --delay:0.8s;"></span>
+              <span class="faq-section__star" style="--x:280px; --y:600px; --size:2px; --dur:4.8s; --delay:1.6s;"></span>
+              <span class="faq-section__star faq-section__star--gold" style="--x:180px; --y:610px; --size:3px; --dur:6.5s; --delay:0.2s;"></span>
+              <span class="faq-section__star faq-section__star--gold" style="--x:380px; --y:480px; --size:2px; --dur:4.2s; --delay:2.4s;"></span>
+              <span class="faq-section__star" style="--x:10px; --y:440px; --size:1.5px; --dur:5s; --delay:1s;"></span>
+            </div>
+            <div class="faq-section__rock" aria-hidden="true">
+              <img src="/assets/rocks/rock-02.webp" alt="" width="320" height="300" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <div class="faq-list">
+
+          <details class="faq-item scroll-reveal">
+            <summary class="faq-item__question">
+              <span class="faq-item__num">01</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text" data-i18n="faq.01.q">¿Trabajas con clientes fuera de Colombia?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p data-i18n="faq.01.a">Sí, trabajo 100% remoto con clientes en varios países. Toda la comunicación es escrita —WhatsApp o correo—, lo que deja cada acuerdo, avance y entrega documentado. Estoy en Bogotá (UTC-5) y me adapto a tu zona horaria.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.05s">
+            <summary class="faq-item__question">
+              <span class="faq-item__num">02</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text" data-i18n="faq.02.q">¿Cómo es el proceso de pago?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p data-i18n="faq.02.a">Trabajo con un anticipo del 50% para arrancar y el 50% restante contra entrega. Para proyectos grandes lo dividimos en hitos. Acepto transferencia bancaria, Nequi, y para clientes internacionales, PayPal o Wise.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.1s">
+            <summary class="faq-item__question">
+              <span class="faq-item__num">03</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text" data-i18n="faq.03.q">¿Cuántas revisiones incluye cada proyecto?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p data-i18n="faq.03.a">Depende del servicio, pero en general incluyo dos rondas de revisión dentro del alcance acordado. Si necesitas más ajustes después de eso, los cotizamos aparte — sin sorpresas. Lo importante es que el resultado final sea el correcto.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.15s">
+            <summary class="faq-item__question">
+              <span class="faq-item__num">04</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text" data-i18n="faq.04.q">¿En qué zona horaria trabajas?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p data-i18n="faq.04.a">Estoy en Bogotá, Colombia — UTC-5, sin horario de verano. Normalmente respondo entre 8am y 8pm hora colombiana, pero me adapto si estás en otra zona horaria y necesitamos cuadrar una llamada.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.2s">
+            <summary class="faq-item__question">
+              <span class="faq-item__num">05</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text" data-i18n="faq.05.q">¿Usas contratos?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p data-i18n="faq.05.a">Sí, siempre. Antes de arrancar cualquier proyecto firmamos un acuerdo que define el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.25s">
+            <summary class="faq-item__question">
+              <span class="faq-item__num">06</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text" data-i18n="faq.06.q">¿Qué pasa si necesito cambios después de la entrega?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p data-i18n="faq.06.a">Los cambios menores dentro del alcance original no tienen costo adicional si los pides dentro de los primeros 7 días. Después de eso, o si son cambios de dirección grandes, los cotizamos por separado. Siempre con precio claro antes de hacer cualquier cosa.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.3s">
+            <summary class="faq-item__question">
+              <span class="faq-item__num">07</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text" data-i18n="faq.07.q">¿Cuánto cuesta un proyecto?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p data-i18n="faq.07.a">Los proyectos parten desde $500 USD para un alcance inicial de branding o web básica; la mayoría se mueve entre $500 y $2.500 USD según el alcance. Antes de empezar recibes una propuesta con precio cerrado, tiempos y entregables — sin sorpresas ni costos ocultos.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
+            </div>
+          </details>
+
+          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.35s">
+            <summary class="faq-item__question">
+              <span class="faq-item__num">08</span>
+              <span class="faq-item__divider" aria-hidden="true"></span>
+              <span class="faq-item__text" data-i18n="faq.08.q">¿Qué pasa si no puedes continuar a mitad del proyecto?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__answer">
+              <p data-i18n="faq.08.a">Está cubierto por contrato: trabajo por hitos con entregas parciales, así siempre tienes en tu poder lo que ya pagaste — archivos fuente incluidos. Todo queda documentado por escrito, de modo que cualquier profesional podría retomar el proyecto sin empezar de cero. Hasta hoy, nunca ha sido necesario.</p>
+              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
+            </div>
+          </details>
+
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACTO ═══ -->
+    <section class="section contact-section" id="contacto-form">
+      <div class="container">
+        <p class="eyebrow" data-i18n="contact.eyebrow">CONTACTO</p>
+        <h2 class="section__title" data-i18n="contact.title">Hablemos de tu proyecto<span class="hero__dot">.</span></h2>
+        <p class="contact-section__sub" data-i18n="contact.sub">Cada semana que esperas, tu competencia ya está online. Cuéntame qué necesitas — respondo en menos de 24 horas.</p>
+
+        <div class="contact-grid">
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+
+            <input type="hidden" name="access_key" value="c7415f2c-287b-4376-bbdb-4c243d24a959" />
+            <input type="hidden" name="subject" value="Nuevo mensaje desde tu portafolio — alexandercaro.com" />
+            <input type="hidden" name="from_name" value="Portafolio Alexander Caro" />
+            <input type="hidden" name="redirect" value="false" />
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="cf-nombre" data-i18n="contact.name.label">Nombre *</label>
+                <input class="form-input" type="text" id="cf-nombre" name="nombre" placeholder="Tu nombre" data-i18n-placeholder="contact.name.placeholder" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cf-empresa" data-i18n="contact.company.label">Empresa</label>
+                <input class="form-input" type="text" id="cf-empresa" name="empresa" placeholder="Tu empresa (opcional)" data-i18n-placeholder="contact.company.placeholder" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="cf-servicio" data-i18n="contact.service.label">Servicio de interés *</label>
+                <select class="form-input form-select" id="cf-servicio" name="servicio" data-i18n-select="contact.select.service" required>
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="Diseño y desarrollo web">Diseño y desarrollo web</option>
+                  <option value="Identidad visual / Branding">Identidad visual / Branding</option>
+                  <option value="Diseño gráfico / Social media">Diseño gráfico / Social media</option>
+                  <option value="Fotografía de producto">Fotografía de producto</option>
+                  <option value="Pauta digital (Meta / Google Ads)">Pauta digital (Meta / Google Ads)</option>
+                  <option value="Paquete integral">Paquete integral</option>
+                  <option value="Otro / No sé aún">Otro / No sé aún</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cf-presupuesto" data-i18n="contact.budget.label">Presupuesto aproximado *</label>
+                <select class="form-input form-select" id="cf-presupuesto" name="presupuesto" data-i18n-select="contact.select.budget" required>
+                  <option value="" disabled selected>Selecciona un rango</option>
+                  <option value="Menos de $500 USD">Menos de $500 USD — fuera de mi rango habitual</option>
+                  <option value="$500 – $1,000 USD">$500 – $1,000 USD</option>
+                  <option value="$1,000 – $2,500 USD">$1,000 – $2,500 USD</option>
+                  <option value="$2,500 – $5,000 USD">$2,500 – $5,000 USD</option>
+                  <option value="Más de $5,000 USD">Más de $5,000 USD</option>
+                  <option value="Aún no lo tengo claro">Aún no lo tengo claro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cf-mensaje" data-i18n="contact.message.label">Mensaje *</label>
+              <textarea class="form-input form-textarea" id="cf-mensaje" name="mensaje" rows="4" placeholder="Cuéntame en qué puedo ayudarte..." data-i18n-placeholder="contact.message.placeholder" required></textarea>
+            </div>
+
+            <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+
+            <div class="contact-form__actions">
+              <button type="submit" class="btn btn--gold btn--lg contact-submit" id="contactSubmitBtn">
+                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span class="btn-text" data-i18n="contact.submit">Enviar mensaje</span>
+              </button>
+              <a href="https://wa.me/573024457653" target="_blank" rel="noopener noreferrer" class="contact-whatsapp-link" id="whatsappFormLink">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                <span data-i18n="contact.whatsapp">O escríbeme directo por WhatsApp</span>
+              </a>
+            </div>
+
+          </form>
+
+          <div class="contact-aside">
+            <p class="contact-aside__urgency" data-i18n="contact.aside.urgency">Un sitio lento o una marca invisible no es un gasto que pospones — es uno que ya estás pagando en clientes que no llegan.</p>
+            <div class="contact-info-card">
+              <span class="contact-info-card__label" data-i18n="contact.response.label">Tiempo de respuesta</span>
+              <span class="contact-info-card__value" data-i18n="contact.response.value">Menos de 24 h</span>
+            </div>
+            <div class="contact-info-card">
+              <span class="contact-info-card__label" data-i18n="contact.mode.label">Modalidad</span>
+              <span class="contact-info-card__value" data-i18n="contact.mode.value">100% remoto</span>
+            </div>
+            <div class="contact-info-card">
+              <span class="contact-info-card__label" data-i18n="contact.languages.label">Idiomas</span>
+              <span class="contact-info-card__value" data-i18n="contact.languages.value">Español · English</span>
+            </div>
+            <a href="https://calendly.com/hosoyalexander/30min" target="_blank" rel="noopener noreferrer" class="calendly-link" id="calendlyBtn">
+              <span data-i18n="contact.calendly">Agenda una llamada de 20 min →</span>
+            </a>
+            <p class="contact-aside__note">
+              <span data-i18n="contact.email.note">También puedes escribirme directamente a</span><br/>
+              <a href="mailto:hosoyalexander@gmail.com">hosoyalexander@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="cta-section" id="contacto">
+      <div class="container">
+        <h2 class="cta-section__title">
+          <span data-i18n="cta.title">¿Tienes un proyecto en mente<span class="hero__dot">?</span></span>
+        </h2>
+        <p class="cta-section__sub" data-i18n="cta.sub">El mejor momento para arreglar tu presencia digital fue ayer. El segundo mejor es hoy. Respondo en menos de 24 horas.</p>
+        <div class="cta-section__actions">
+          <a class="btn btn--gold btn--lg" href="https://wa.me/573024457653?text=%C2%A1Hola%20Alexander!%20Vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20un%20proyecto%20contigo.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            <span data-i18n="cta.whatsapp">Escríbeme por WhatsApp</span>
+          </a>
+          <a href="/trabajo/" class="btn btn--ghost" data-i18n="cta.work">Ver todos los proyectos</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer" id="site-footer">
     <div class="container">
@@ -395,10 +1492,51 @@
     </div>
   </footer>
 
+  <!-- Hero: GSAP/ScrollTrigger drive all hero animations (idle float,
+       rise+blur parallax on scroll, reveal on load). Native scroll —
+       no smooth-scroll library. Loaded homepage-only — see /hero.js.
+       defer: el parser HTML no se bloquea — scripts se ejecutan en orden
+       tras DOMContentLoaded. hero.js depende de gsap+ST que van primero. -->
+  <!-- PERF: GSAP + ScrollTrigger (~110KB) ya no bloquean la carga.
+       Se inyectan cuando la página terminó de pintar (load + idle), o antes
+       si el usuario interactúa. El hero ya se anima con CSS puro, así que
+       nada visible depende de que estos scripts lleguen rápido.
+       Esto saca ~340ms de TBT y ~237ms de reprocesamiento del arranque. -->
+  <script>
+  (function () {
+    var cargado = false;
+    function cargarGSAP() {
+      if (cargado) return; cargado = true;
+      var urls = [
+        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',
+        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js',
+        '/hero.js'
+      ];
+      (function siguiente(i) {
+        if (i >= urls.length) return;
+        var s = document.createElement('script');
+        s.src = urls[i];
+        s.async = false;
+        s.onload = function () { siguiente(i + 1); };
+        s.onerror = function () { siguiente(i + 1); };
+        document.body.appendChild(s);
+      })(0);
+    }
+    function programar() {
+      if ('requestIdleCallback' in window) requestIdleCallback(cargarGSAP, { timeout: 2000 });
+      else setTimeout(cargarGSAP, 600);
+    }
+    if (document.readyState === 'complete') programar();
+    else window.addEventListener('load', programar, { once: true });
+    ['pointerdown', 'touchstart', 'wheel', 'keydown'].forEach(function (e) {
+      window.addEventListener(e, cargarGSAP, { once: true, passive: true });
+    });
+  })();
+  </script>
 
   <script defer src="/analytics.js"></script>
-  <script src="/nav.js" defer></script>
-  <script src="/i18n.js" defer></script>
-  <script src="script.js" defer></script> 
+  <script defer src="/nav.js"></script>
+  <script defer src="/i18n.js"></script>
+  <script defer src="/script.js"></script>
 </body>
 </html>
