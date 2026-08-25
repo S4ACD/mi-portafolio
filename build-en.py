@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+⚠️  NO EJECUTES ESTE SCRIPT TODAVÍA — ver INSTRUCCIONES.md, punto 4.
+
+Las páginas publicadas en /en/ fueron editadas a mano después de generarse
+y hoy tienen cosas que las fuentes ES no tienen (preconnect a jsdelivr y a
+cloudinary, x-default apuntando a EN). Regenerar /en/ las perdería.
+Primero hay que backportar esas mejoras a las fuentes ES; después este
+script vuelve a ser seguro.
+"""
+"""
 build-en.py — Genera la versión inglesa REAL del sitio en /en/
 ────────────────────────────────────────────────────────────────
 Uso:   python3 build-en.py        (requiere: pip install beautifulsoup4)
@@ -310,8 +319,22 @@ def build(rel, url):
     return out
 
 if __name__ == '__main__':
-    if os.path.isdir('en'):
-        shutil.rmtree('en')
+    # Antes esto hacía shutil.rmtree('en'), que BORRABA en cada ejecución
+    # cualquier página de /en/ ausente de PAGES — /en/cv/ entre ellas.
+    # Ahora solo se limpian las páginas que este script sí regenera.
+    for rel in PAGES:
+        stale = posixpath.join('en', rel)
+        if os.path.isfile(stale):
+            os.remove(stale)
     for rel, url in PAGES.items():
         print('  →', build(rel, url))
+    huerfanas = sorted(
+        posixpath.join(d, n)
+        for d, _, names in os.walk('en') for n in names
+        if n.endswith('.html') and posixpath.relpath(posixpath.join(d, n), 'en') not in PAGES
+    )
+    if huerfanas:
+        print('\n  ⚠ Páginas en /en/ que este script NO genera (revísalas a mano):')
+        for h in huerfanas:
+            print('     ·', h)
     print(f'\n✔ Versión EN generada: {len(PAGES)} páginas en /en/')
