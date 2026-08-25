@@ -13,8 +13,10 @@ import json, io, os, shutil
 SITE = 'https://alexandercaro.com'
 CAL  = 'https://calendly.com/hosoyalexander/30min'
 OG_IMG = 'https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781035692/P%C3%A1gina_de_inicio_hucq78.png'
-BASE_CSS = 'servicios/diseno-web/style.css'
-BASE_JS  = 'servicios/diseno-web/script.js'
+# Hojas compartidas por TODAS las landings. Son la fuente de verdad y se
+# editan a mano: este script ya no las copia ni las regenera.
+SHARED_CSS = '/css/landing.css'
+SHARED_JS  = '/js/landing.js'
 
 PERSON = {
   "@type": "Person", "name": "Alexander Caro", "url": SITE,
@@ -476,10 +478,11 @@ def head(title, desc, keywords, url, schema):
   <meta name="description" content="{desc}" />
   <meta name="keywords" content="{keywords}" />
   <meta name="robots" content="index, follow" />
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" fetchpriority="high">
   <link rel="canonical" href="{SITE}{url}" />
   <link rel="alternate" hreflang="es" href="{SITE}{url}" />
   <link rel="alternate" hreflang="en" href="{SITE}/en{url}" />
-  <link rel="alternate" hreflang="x-default" href="{SITE}{url}" />
+  <link rel="alternate" hreflang="x-default" href="{SITE}/en{url}" />
 
   {FONTS}
   <meta property="og:type" content="website" />
@@ -499,7 +502,7 @@ def head(title, desc, keywords, url, schema):
   </script>
 
   <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{SHARED_CSS}" />
 </head>
 <body>
 
@@ -541,7 +544,7 @@ def footer(wa_es, wa_en):
       : {json.dumps(wa_es, ensure_ascii=False)};
     document.querySelectorAll('[id^="whatsappBtn"]').forEach(function(b){{b.addEventListener('click',function(){{openWA(WA_MSG);}});}});
   </script>
-  <script src="script.js" defer></script>
+  <script src="{SHARED_JS}" defer></script>
 </body>
 </html>
 '''
@@ -886,6 +889,8 @@ def render_city(c):
     return (head(c['meta_es'][0], c['meta_es'][1], c['keywords'], c['url'], city_schema(c))
             + body + footer(c['wa_es'], c['wa_en']))
 
+# NOTA: FAQ_JS y CSS_EXTRA ya están dentro de js/landing.js y css/landing.css.
+# Se conservan aquí solo como referencia histórica.
 FAQ_JS = '''
 
 // FAQ — acordeón accesible (click + Enter/Espacio)
@@ -910,10 +915,8 @@ CSS_EXTRA = '''
 def write_page(slug, html):
     os.makedirs(slug, exist_ok=True)
     io.open(f'{slug}/index.html', 'w', encoding='utf-8').write(html)
-    shutil.copy(BASE_CSS, f'{slug}/style.css')
-    io.open(f'{slug}/style.css', 'a', encoding='utf-8').write(CSS_EXTRA)
-    js = io.open(BASE_JS, encoding='utf-8').read()
-    io.open(f'{slug}/script.js', 'w', encoding='utf-8').write(js + FAQ_JS)
+    # CSS y JS ya NO se duplican por página: todas las landings enlazan
+    # /css/landing.css y /js/landing.js (ver SHARED_CSS / SHARED_JS arriba).
     print('  →', f'{slug}/index.html')
 
 def merge_lang():
