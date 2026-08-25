@@ -50,10 +50,15 @@ class PageParser(HTMLParser):
             self.title += data
 
 
+# El stub de verificación de Search Console no es una página del sitio:
+# no debe tener <title> ni <h1>, así que auditarlo era un falso positivo.
+SKIP = ("google",)
+
+
 def html_files():
     for directory, _, names in os.walk(ROOT):
         for name in names:
-            if name.endswith(".html"):
+            if name.endswith(".html") and not name.startswith(SKIP):
                 yield os.path.join(directory, name)
 
 
