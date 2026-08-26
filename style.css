@@ -4298,65 +4298,417 @@ p, li, h1, h2, h3, h4, a, span, td {
 .hero__dot, .hv2__status-dot { will-change: transform, opacity; }
 
 /* ═══════════════════════════════════════════════════════════════
-   CERTIFICACIONES EN EL HOME — franja bajo los tech-chips.
-   Reutiliza los tokens del sistema. Escala sola: añade más <a>
-   y se acomodan en filas sin tocar el CSS.
+
+/* ═══════════════════════════════════════════════════════════════
+   CREDENCIALES — bloque único de certificaciones.
+   Vive aquí (CSS global) porque lo comparten /, /sobre-mi/ y /cv/
+   más sus espejos en /en/. Sustituye a .home-cert*, .about-cert*
+   y .cvx-cert*.
+
+   Los tokens propios se declaran en .crd (no en :root) para que el
+   bloque se vea igual sobre fondo void o sobre fondo surface, sin
+   depender de dónde se inserte.
 ═══════════════════════════════════════════════════════════════ */
-.home-certs { margin-top: 28px; }
-.home-certs__label {
-  font-family: var(--hv2-font-ui);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--hv2-gold);
-  margin-bottom: 14px;
+.crd {
+  --crd-bg:      rgba(244,239,230,0.026);
+  --crd-bg-hi:   rgba(244,239,230,0.05);
+  --crd-line:    rgba(244,239,230,0.09);
+  --crd-line-hi: rgba(205,183,142,0.42);
+  --crd-r:       16px;
+}
+
+/* ── Cabecera ──────────────────────────────────────────────── */
+.crd__title {
+  font-family: var(--hv2-font-display);
+  font-size: clamp(1.9rem, 4.6vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--hv2-ink);
+}
+.crd__title em { font-style: italic; color: var(--hv2-gold); }
+.crd__lead {
+  max-width: 48ch;
+  margin-top: 14px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--hv2-ink-dim);
+}
+
+/* ── Índice: contador + categorías ─────────────────────────── */
+.crd__index {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
+  margin: 30px 0 44px;
 }
-.home-certs__label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--hv2-line);
-}
-.home-certs__list { display: flex; flex-wrap: wrap; gap: 10px; }
-.home-cert {
+.crd__count {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 9px 16px 9px 9px;
-  background: var(--hv2-void-soft);
-  border: 1px solid var(--hv2-line);
+  gap: 12px;
+  padding: 8px 20px 8px 8px;
+  border: 1px solid var(--crd-line);
   border-radius: 999px;
-  transition: border-color var(--transition), transform var(--transition);
+  background: var(--crd-bg);
 }
-.home-cert:hover { border-color: var(--border-hover); transform: translateY(-2px); }
-.home-cert__seal {
-  width: 30px; height: 30px;
-  flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--hv2-ink);
+.crd__count b {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  padding: 3px;
-  overflow: hidden;
+  background: rgba(205,183,142,0.12);
+  font-family: var(--hv2-font-ui);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--hv2-gold);
 }
-.home-cert__seal img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
-.home-cert__seal--glyph { background: var(--hv2-void); border: 1px solid var(--hv2-gold-dim); }
-.home-cert__seal--glyph svg { width: 16px; height: 16px; color: var(--hv2-gold); }
-.home-cert__name {
+/* Ancho fijo en px: la regla global `overflow-wrap: break-word`
+   partía "CREDENCIALES" a la mitad cuando el límite iba en ch. */
+.crd__count span {
+  max-width: 100px;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+}
+.crd__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border: 1px solid var(--crd-line);
+  border-radius: 999px;
   font-family: var(--hv2-font-ui);
   font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--hv2-ink);
-  line-height: 1.3;
   white-space: nowrap;
+  color: var(--hv2-ink);
+  transition: border-color var(--transition), background var(--transition);
 }
-.home-cert__arrow { font-size: 0.7rem; color: var(--hv2-ink-faint); transition: color var(--transition); }
-.home-cert:hover .home-cert__arrow { color: var(--hv2-gold); }
+.crd__chip:hover { border-color: var(--crd-line-hi); background: var(--crd-bg); }
+.crd__chip svg { width: 17px; height: 17px; flex: none; }
+.crd__chip--gold svg { color: var(--hv2-gold); }
 
+/* ── Grupos ────────────────────────────────────────────────── */
+.crd__set + .crd__set { margin-top: 44px; }
+.crd__group {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 16px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--hv2-gold);
+}
+.crd__group::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.crd__group--star::before {
+  content: '✳';
+  width: auto;
+  height: auto;
+  background: none;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+.crd__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(290px, 100%), 1fr));
+  gap: 18px;
+}
+
+/* ── Tarjeta base ──────────────────────────────────────────────
+   Rejilla de 2 columnas: sello a la izquierda, texto a la derecha.
+   La fila central mide 1fr, así la meta cae al mismo alto en todas
+   las tarjetas de la fila y el botón cierra abajo a la izquierda.
+   ───────────────────────────────────────────────────────────── */
+.crd-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  gap: 0 20px;
+  padding: 26px 24px 24px;
+  border: 1px solid var(--crd-line);
+  border-radius: var(--crd-r);
+  background: var(--crd-bg);
+  transition: transform 0.45s var(--hv2-ease), border-color 0.45s var(--hv2-ease);
+}
+/* Halo dorado: pseudo-elemento con opacity → se compone en GPU,
+   no repinta como haría animar box-shadow o background. */
+.crd-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(205,183,142,0.15), transparent 62%),
+    var(--crd-bg-hi);
+  opacity: 0;
+  transition: opacity 0.45s var(--hv2-ease);
+}
+.crd-card:hover,
+.crd-card:focus-within { transform: translateY(-5px) scale(1.012); border-color: var(--crd-line-hi); }
+.crd-card:hover::before,
+.crd-card:focus-within::before { opacity: 1; }
+
+.crd-card__badge {
+  grid-column: 1;
+  grid-row: 1;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--hv2-ink);
+  transition: transform 0.45s var(--hv2-ease);
+}
+.crd-card__badge img { width: 100%; height: 100%; object-fit: contain; }
+.crd-card__badge--glyph {
+  background: rgba(205,183,142,0.08);
+  border: 1px solid rgba(205,183,142,0.3);
+  color: var(--hv2-gold);
+}
+.crd-card__badge--glyph svg { width: 22px; height: 22px; }
+.crd-card:hover .crd-card__badge { transform: scale(1.07); }
+
+.crd-card__body { grid-column: 2; grid-row: 1; }
+.crd-card__issuer {
+  display: block;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-faint);
+}
+.crd-card__title {
+  margin-top: 8px;
+  font-family: var(--hv2-font-display);
+  font-size: 1.16rem;
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--hv2-ink);
+}
+.crd-card__desc {
+  margin-top: 10px;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--hv2-ink-dim);
+}
+.crd-card__meta {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  padding-top: 20px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.7rem;
+  color: var(--hv2-ink-faint);
+}
+/* Marca decorativa: abre la línea de meta y se enciende en hover. */
+.crd-card__meta::before {
+  content: '+';
+  color: var(--hv2-ink-faint);
+  transition: color var(--transition);
+}
+.crd-card:hover .crd-card__meta::before { color: var(--hv2-gold); }
+.crd-card__btn {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  padding: 9px 17px;
+  border: 1px solid rgba(205,183,142,0.32);
+  border-radius: 999px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--hv2-gold);
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.crd-card__btn:hover {
+  background: rgba(205,183,142,0.12);
+  border-color: var(--hv2-gold);
+  box-shadow: 0 0 22px rgba(205,183,142,0.2);
+}
+
+/* ── Tarjeta destacada ─────────────────────────────────────── */
+.crd-card--hero { display: block; padding: 30px 32px; }
+.crd-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+}
+.crd-hero__main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "seal body cta"
+    "seal meta meta";
+  gap: 18px 26px;
+  align-items: start;
+}
+.crd-hero__seal {
+  grid-area: seal;
+  width: 108px;
+  height: 108px;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--hv2-ink);
+  transition: transform 0.45s var(--hv2-ease);
+}
+.crd-hero__seal img { width: 100%; height: 100%; object-fit: contain; }
+.crd-card--hero:hover .crd-hero__seal { transform: scale(1.05); }
+.crd-hero__body { grid-area: body; }
+.crd-card--hero .crd-card__title { font-size: clamp(1.4rem, 2.6vw, 1.85rem); }
+.crd-hero__meta {
+  grid-area: meta;
+  align-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  font-family: var(--hv2-font-ui);
+  font-size: 0.73rem;
+  color: var(--hv2-ink-faint);
+}
+.crd-hero__meta > span { display: inline-flex; align-items: center; gap: 7px; }
+.crd-hero__meta svg { width: 14px; height: 14px; flex: none; color: var(--hv2-gold-dim); }
+.crd-hero__meta > span:not(:first-child)::before {
+  content: '';
+  width: 1px;
+  height: 12px;
+  background: var(--crd-line);
+}
+.crd-hero__cta {
+  grid-area: cta;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+.crd-hero__flag {
+  padding: 7px 15px;
+  border: 1px solid var(--crd-line);
+  border-radius: 999px;
+  background: rgba(244,239,230,0.04);
+  font-family: var(--hv2-font-ui);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: var(--hv2-ink-dim);
+}
+.crd-hero__btn {
+  grid-row: auto;
+  grid-column: auto;
+  justify-self: auto;
+  margin-top: 0;
+  padding: 12px 20px;
+  font-size: 0.8rem;
+}
+.crd-hero__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding-left: 32px;
+  border-left: 1px solid var(--crd-line);
+  text-align: center;
+}
+.crd-hero__aside span {
+  font-family: var(--hv2-font-ui);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hv2-ink-faint);
+}
+.crd-hero__aside img {
+  width: 112px;
+  height: auto;
+  transition: transform 0.45s var(--hv2-ease);
+}
+.crd-card--hero:hover .crd-hero__aside img { transform: scale(1.06); }
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .crd-hero { grid-template-columns: 1fr; gap: 24px; }
+  .crd-hero__aside {
+    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+    padding: 22px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--crd-line);
+  }
+  .crd-hero__aside img { width: 84px; }
+}
+@media (max-width: 900px) {
+  .crd-card--hero { padding: 26px 22px; }
+  .crd-hero__main {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas:
+      "seal cta"
+      "body body"
+      "meta meta";
+    gap: 16px 20px;
+  }
+  .crd-hero__seal { width: 76px; height: 76px; }
+  .crd-hero__cta { align-self: center; }
+}
 @media (max-width: 560px) {
-  .home-cert { width: 100%; border-radius: var(--radius); }
-  .home-cert__name { white-space: normal; }
+  .crd__index { gap: 8px; margin: 26px 0 36px; }
+  .crd__chip { padding: 9px 14px; font-size: 0.73rem; }
+  .crd-card { padding: 22px 20px; gap: 0 16px; }
+  .crd-hero__main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "seal" "body" "meta" "cta";
+  }
+  .crd-hero__meta { gap: 6px 12px; font-size: 0.68rem; }
+  .crd-hero__meta > span:not(:first-child)::before { display: none; }
+  .crd-hero__cta { align-items: stretch; align-self: auto; }
+  .crd-hero__flag { align-self: flex-start; }
+  .crd-hero__btn { justify-content: center; }
+}
+
+/* El hover/zoom es decorativo: en táctil y con reduced-motion, fuera. */
+@media (hover: none) {
+  .crd-card:hover { transform: none; }
+  .crd-card:hover .crd-card__badge,
+  .crd-card--hero:hover .crd-hero__seal,
+  .crd-card--hero:hover .crd-hero__aside img { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crd-card:hover, .crd-card:focus-within { transform: none; }
 }
