@@ -201,6 +201,76 @@
 
   <main>
 
+
+<!-- ═══ VIDEO — Short animado (mismo bloque para ES y EN) ═══ -->
+<section class="acv" id="video" data-cld="v1790349952/alexander-caro-short_vyn1m9" aria-labelledby="acvTitle">
+<style>
+.acv{position:relative;padding:clamp(56px,9vw,120px) 0;background:var(--hv2-void,#050504);color:#f4efe6;overflow:hidden}
+.acv::before{content:"";position:absolute;top:10%;left:50%;width:min(90vw,900px);height:min(60vw,560px);transform:translateX(-50%);background:radial-gradient(circle,rgba(205,183,142,.12) 0%,transparent 65%);filter:blur(50px);pointer-events:none}
+.acv__wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px}
+.acv__eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-family:'Space Grotesk',system-ui,sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#cdb78e}
+.acv__eyebrow::before{content:"";width:32px;height:1px;background:#cdb78e;opacity:.6}
+.acv__title{margin:0 0 12px;font-family:'Fraunces',Georgia,serif;font-weight:340;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;text-transform:uppercase;color:#f4efe6}
+.acv__title em{font-style:italic;font-weight:380;text-transform:none;color:#cdb78e}
+.acv__lede{max-width:52ch;margin:0 0 clamp(28px,4vw,44px);font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.7;color:rgba(244,239,230,.56)}
+.acv__player{position:relative;aspect-ratio:16/9;border-radius:clamp(12px,2vw,22px);overflow:hidden;background:#0e0d0b;border:1px solid rgba(205,183,142,.22);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(205,183,142,.08)}
+.acv__player video,.acv__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.acv__play{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;width:100%;padding:0;border:0;cursor:pointer;color:#f4efe6;background:linear-gradient(to top,rgba(5,5,4,.6),rgba(5,5,4,.05) 60%);-webkit-tap-highlight-color:transparent}
+.acv__btn{display:grid;place-items:center;width:clamp(64px,9vw,96px);height:clamp(64px,9vw,96px);border-radius:50%;background:#cdb78e;color:#1a1611;animation:acvPulse 2.4s ease-out infinite;transition:transform .4s cubic-bezier(.16,1,.3,1),background .3s}
+.acv__play:hover .acv__btn,.acv__play:focus-visible .acv__btn{transform:scale(1.08);background:#e3d2b3}
+.acv__play:focus-visible{outline:2px solid #cdb78e;outline-offset:-6px}
+.acv__btn svg{width:34%;height:34%;margin-left:7%}
+.acv__hint{padding:8px 14px;border-radius:999px;border:1px solid rgba(244,239,230,.14);background:rgba(5,5,4,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-family:'Space Grotesk',system-ui,sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+@keyframes acvPulse{0%{box-shadow:0 0 0 0 rgba(205,183,142,.55)}70%{box-shadow:0 0 0 22px rgba(205,183,142,0)}100%{box-shadow:0 0 0 0 rgba(205,183,142,0)}}
+.acv.is-playing .acv__play,.acv.is-playing .acv__poster{display:none}
+@media (max-width:600px){.acv__wrap{padding:0 16px}.acv__hint{font-size:.62rem;letter-spacing:.14em}}
+@media (prefers-reduced-motion:reduce){.acv__btn{animation:none}}
+</style>
+<div class="acv__wrap">
+  <p class="acv__eyebrow" data-acv="eyebrow">En 60 segundos</p>
+  <h2 class="acv__title" id="acvTitle" data-acv="title">Mi historia, <em>animada.</em></h2>
+  <p class="acv__lede" data-acv="lede">Diseño gráfico, desarrollo web y una moto: un corto animado de un minuto sobre quién soy y cómo trabajo. Dale play con sonido.</p>
+  <div class="acv__player">
+    <img class="acv__poster" loading="lazy" decoding="async" width="1280" height="720"
+      src="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg"
+      srcset="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_640,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 640w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 1280w"
+      sizes="(max-width:1148px) 100vw, 1100px" alt="Miniatura del short animado de Alexander Caro" data-acv-alt />
+    <video preload="none" playsinline></video>
+    <button class="acv__play" type="button" aria-label="Reproducir video con sonido" data-acv-aria>
+      <span class="acv__btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"/></svg></span>
+      <span class="acv__hint" data-acv="hint">Ver con sonido · 1:00</span>
+    </button>
+  </div>
+</div>
+<script>
+(function(){
+  var s=document.getElementById('video');if(!s)return;
+  var id=s.getAttribute('data-cld'),base='https://res.cloudinary.com/dg2wnq6ao/video/upload/';
+  var v=s.querySelector('video'),p=s.querySelector('.acv__play'),hint=s.querySelector('[data-acv="hint"]');
+  var en=(document.documentElement.lang||'').toLowerCase().indexOf('en')===0;
+  var T=en?{eyebrow:'In 60 seconds',title:'My story, <em>animated.</em>',lede:'Graphic design, web development and a motorcycle: a one-minute animated short about who I am and how I work. Press play with sound on (in Spanish).',hint:'Watch with sound · 1:00',again:'Watch again',aria:'Play video with sound',alt:'Thumbnail of Alexander Caro animated short'}
+          :{hint:'Ver con sonido · 1:00',again:'Ver de nuevo',aria:'Reproducir video con sonido',alt:''};
+  if(en){['eyebrow','lede'].forEach(function(k){s.querySelector('[data-acv="'+k+'"]').textContent=T[k]});
+    s.querySelector('[data-acv="title"]').innerHTML=T.title;hint.textContent=T.hint;p.setAttribute('aria-label',T.aria);s.querySelector('[data-acv-alt]').alt=T.alt;}
+  p.addEventListener('click',function(){
+    if(!v.querySelector('source')){
+      [['q_auto:good,w_1280,vc_h264,br_2500k/'+id+'.mp4','video/mp4'],['q_auto:good,w_1280/'+id+'.webm','video/webm']].forEach(function(x){
+        var src=document.createElement('source');src.src=base+x[0];src.type=x[1];v.appendChild(src);});
+      v.load();
+    }
+    s.classList.add('is-playing');v.controls=true;
+    var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});
+  });
+  v.addEventListener('ended',function(){s.classList.remove('is-playing');v.controls=false;v.currentTime=0;hint.textContent=T.again;});
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){if(!e[0].isIntersecting&&!v.paused)v.pause();},{threshold:.2}).observe(s);
+  }
+})();
+</script>
+</section>
+
+
+    
   <!-- ═══════════════════════════════════════════════════════════
        CÓMO APORTO — los 3 pilares como un solo flujo, no 3 listas.
        Sustituye a "Perfil profesional" + "Habilidades".
