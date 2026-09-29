@@ -1,3 +1,17 @@
+# RENDIMIENTO MÓVIL — 29 sept 2026
+
+PageSpeed móvil daba 74 (escritorio 98). Cambios solo en `index.html` y `en/index.html`:
+
+1. **Fuentes sin bloqueo.** La hoja de Google Fonts bloqueaba el primer render (~2,8 s en 4G lento). Ahora los `@font-face` van inline apuntando a los mismos woff2 de fonts.gstatic.com. Mismas fuentes, una petición bloqueante menos. Se quitó el preconnect a fonts.googleapis.com (ya no se usa).
+2. **CSS crítico completo.** Le faltaba el reset (`*{margin:0;box-sizing:border-box}`), el `body` y `.scroll-progress`. Al llegar `style.css` el hero saltaba 8 px y cambiaba de alto → CLS 0,061. Ahora el CLS es 0.
+3. **LCP de texto visible de inmediato en móvil.** En móvil el título en cursiva y la descripción ya no arrancan en opacidad 0 (eran el LCP y lo retrasaban). En escritorio la animación sigue igual.
+4. **Preload del retrato solo en ≥768 px.** En móvil el retrato queda bajo la primera pantalla; precargarlo le robaba ancho de banda al texto. El logo ya no pide prioridad alta.
+5. **Miniatura del video** con srcset 480/768/960/1280 y `sizes` real (antes bajaba 1280 px para mostrarse a ~380 px).
+
+Si algún día Google cambia la versión de las fuentes (v38/v20/v22), las URLs viejas siguen sirviéndose; para actualizarlas basta abrir la URL css2 original en Chrome y copiar los bloques `latin`/`latin-ext`.
+
+---
+
 # CAMBIOS APLICADOS — alexandercaro.com
 
 Fecha: 2 de julio de 2026
