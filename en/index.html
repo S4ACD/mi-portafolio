@@ -669,17 +669,29 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 <h2 class="trabajo-header__title" data-i18n="work.title">Projects that <em>speak</em> for themselves.</h2>
 <p class="trabajo-header__lede" data-i18n="work.lede">Design, strategy, and visual execution for brands that want to stand out.</p>
 </div>
-<div aria-label="Filtrar proyectos" class="trabajo-filters" role="group">
-<span class="trabajo-filters__label">Áreas</span>
-<button class="trabajo-filter trabajo-filter--active" data-filter="todos">Todos</button>
+<!-- INICIO: Sector dental — filtros traducidos al inglés + filtro nuevo -->
+<div aria-label="Filter projects" class="trabajo-filters" role="group">
+<span class="trabajo-filters__label">Areas</span>
+<button class="trabajo-filter trabajo-filter--active" data-filter="todos">All</button>
 <button class="trabajo-filter" data-filter="branding">Branding</button>
-<button class="trabajo-filter" data-filter="web">Sitios Web</button>
-<button class="trabajo-filter" data-filter="grafico">Diseño gráfico</button>
+<button class="trabajo-filter" data-filter="web">Websites</button>
+<button class="trabajo-filter" data-filter="grafico">Graphic design</button>
 <button class="trabajo-filter" data-filter="social">Social Media</button>
+<button class="trabajo-filter" data-filter="dental">Dental industry</button>
+<!-- FIN: Sector dental — filtros -->
 </div>
 </div>
+<!-- INICIO: Sector dental — estilos de tarjetas destacadas (home) -->
+<style>
+.card--dental{box-shadow:0 0 0 1px rgba(205,183,142,.32),0 22px 60px rgba(205,183,142,.07)}
+.card--dental:hover{box-shadow:0 0 0 1px rgba(205,183,142,.6),0 22px 60px rgba(205,183,142,.12)}
+.card--dental .card__thumb picture{display:block;width:100%;height:100%}
+.card--dental .card__thumb img{object-position:center}
+.card__badge{position:absolute;top:14px;left:14px;z-index:3;padding:5px 11px;border-radius:999px;background:#cdb78e;color:#1a1611;font-family:'Space Grotesk',system-ui,sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1.3}
+</style>
+<!-- FIN: Sector dental — estilos de tarjetas destacadas (home) -->
 <div class="projects__grid">
-<a class="card card--project scroll-reveal" data-tags="web" href="/en/trabajo/orbidental/">
+<a class="card card--project scroll-reveal" data-tags="web dental" href="/en/trabajo/orbidental/"><!-- CAMBIO: Sector dental — tag "dental" agregado -->
 <div class="card__thumb card__thumb--framed">
 <div class="browser-mock">
 <div class="browser-mock__bar">
@@ -707,6 +719,41 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 </div>
 </div>
 </a>
+          <!-- INICIO: Sector dental — tarjeta diadent -->
+          <a href="/en/trabajo/diadent/" class="card card--project card--dental scroll-reveal" style="--reveal-delay: 0.05s" data-tags="branding social dental">
+            <div class="card__thumb">
+              <picture><source type="image/avif" srcset="/assets/dental/diadent/card-diadent-480.avif 480w, /assets/dental/diadent/card-diadent-800.avif 800w, /assets/dental/diadent/card-diadent-1200.avif 1200w" sizes="(max-width:600px) calc(100vw - 48px), (max-width:1000px) calc(50vw - 34px), 370px"><source type="image/webp" srcset="/assets/dental/diadent/card-diadent-480.webp 480w, /assets/dental/diadent/card-diadent-800.webp 800w, /assets/dental/diadent/card-diadent-1200.webp 1200w" sizes="(max-width:600px) calc(100vw - 48px), (max-width:1000px) calc(50vw - 34px), 370px"><img src="/assets/dental/diadent/card-diadent-800.jpg" srcset="/assets/dental/diadent/card-diadent-480.jpg 480w, /assets/dental/diadent/card-diadent-800.jpg 800w, /assets/dental/diadent/card-diadent-1200.jpg 1200w" sizes="(max-width:600px) calc(100vw - 48px), (max-width:1000px) calc(50vw - 34px), 370px" alt="DiaDent launch Stories: DIA-ROOT BIO MTA, DiaPrep Pro and e-Temp built on the brand's triangle system" width="1200" height="750" loading="lazy" decoding="async"></picture>
+              <span class="card__badge">Dental industry</span>
+              <div class="card__overlay"></div>
+              <span class="card__num">02</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.dd.title">DiaDent — Launch branding</h3>
+              <div class="card__meta-row">
+                <div class="card__tags"><span class="tag tag--gold">Branding</span><span class="tag">Video</span><span class="tag">Dental industry</span></div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+          <!-- FIN: Sector dental — tarjeta diadent -->
+
+          <!-- INICIO: Sector dental — tarjeta eighteeth -->
+          <a href="/en/trabajo/eighteeth/" class="card card--project card--dental scroll-reveal" style="--reveal-delay: 0.08s" data-tags="social dental">
+            <div class="card__thumb">
+              <picture><source type="image/avif" srcset="/assets/dental/eighteeth/card-eighteeth-480.avif 480w, /assets/dental/eighteeth/card-eighteeth-800.avif 800w, /assets/dental/eighteeth/card-eighteeth-1200.avif 1200w" sizes="(max-width:600px) calc(100vw - 48px), (max-width:1000px) calc(50vw - 34px), 370px"><source type="image/webp" srcset="/assets/dental/eighteeth/card-eighteeth-480.webp 480w, /assets/dental/eighteeth/card-eighteeth-800.webp 800w, /assets/dental/eighteeth/card-eighteeth-1200.webp 1200w" sizes="(max-width:600px) calc(100vw - 48px), (max-width:1000px) calc(50vw - 34px), 370px"><img src="/assets/dental/eighteeth/card-eighteeth-800.jpg" srcset="/assets/dental/eighteeth/card-eighteeth-480.jpg 480w, /assets/dental/eighteeth/card-eighteeth-800.jpg 800w, /assets/dental/eighteeth/card-eighteeth-1200.jpg 1200w" sizes="(max-width:600px) calc(100vw - 48px), (max-width:1000px) calc(50vw - 34px), 370px" alt="Eighteeth Reels: Acuvision X microscope, Helios 500 intraoral scanner and E-Sanit autoclave" width="1200" height="750" loading="lazy" decoding="async"></picture>
+              <span class="card__badge">Dental industry</span>
+              <div class="card__overlay"></div>
+              <span class="card__num">03</span>
+            </div>
+            <div class="card__meta">
+              <h3 class="card__project-title" data-i18n="work.card.et.title">Eighteeth — Dental equipment Reels</h3>
+              <div class="card__meta-row">
+                <div class="card__tags"><span class="tag tag--gold">Social Media</span><span class="tag">Video</span><span class="tag">Dental industry</span></div>
+                <span class="card__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M10 7h7v7"/></svg></span>
+              </div>
+            </div>
+          </a>
+          <!-- FIN: Sector dental — tarjeta eighteeth -->
 <a class="card card--project scroll-reveal" data-tags="branding" href="/en/trabajo/fueggo/" style="--reveal-delay: 0.1s">
 <div class="card__thumb card__thumb--framed">
 <div class="browser-mock">
@@ -721,7 +768,7 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 </div>
 </div>
 <div class="card__overlay"></div>
-<span class="card__num">02</span>
+<span class="card__num">04</span>
 </div>
 <div class="card__meta">
 <h3 class="card__project-title" data-i18n="work.card.02.title">Fueggo — Visual identity</h3>
@@ -749,7 +796,7 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 </div>
 </div>
 <div class="card__overlay"></div>
-<span class="card__num">03</span>
+<span class="card__num">05</span>
 </div>
 <div class="card__meta">
 <h3 class="card__project-title" data-i18n="work.card.03.title">La Jungla Club — Visual identity</h3>
@@ -776,7 +823,7 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 </div>
 </div>
 <div class="card__overlay"></div>
-<span class="card__num">04</span>
+<span class="card__num">06</span>
 </div>
 <div class="card__meta">
 <h3 class="card__project-title" data-i18n="work.card.04.title">Rebel Street — Visual identity</h3>
@@ -793,7 +840,7 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 <div class="card__thumb">
 <img alt="AcelerArte — diseño deportivo para motociclismo" loading="lazy" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_800/v1781873289/FLYER-1_oyll2h.webp"/>
 <div class="card__overlay"></div>
-<span class="card__num">05</span>
+<span class="card__num">07</span>
 </div>
 <div class="card__meta">
 <h3 class="card__project-title" data-i18n="work.card.05.title">AcelerArte — Sports design</h3>
@@ -813,7 +860,7 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 <div style="font-size:10px;color:var(--text-muted);margin-top:4px;letter-spacing:.1em">PROYECTO PROPIO</div>
 </div>
 <div class="card__overlay"></div>
-<span class="card__num">06</span>
+<span class="card__num">08</span>
 </div>
 <div class="card__meta">
 <h3 class="card__project-title" data-i18n="work.card.06.title">Pulse Digital — Landing page</h3>
@@ -834,7 +881,7 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 <div style="font-size:10px;color:var(--text-muted);margin-top:4px;letter-spacing:.1em">COMPARADOR · NEXT.JS</div>
 </div>
 <div class="card__overlay"></div>
-<span class="card__num">08</span>
+<span class="card__num">09</span>
 </div>
 <div class="card__meta">
 <h3 class="card__project-title" data-i18n="work.card.08.title">MotoFaro — Motorcycle gear comparison engine</h3>
@@ -848,11 +895,11 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 </div>
 </div>
 </a>
-<a class="card card--project scroll-reveal" data-tags="social grafico" href="/en/trabajo/social-media-dental/" style="--reveal-delay: 0.55s">
+<a class="card card--project scroll-reveal" data-tags="social grafico dental" href="/en/trabajo/social-media-dental/" style="--reveal-delay: 0.55s">
 <div class="card__thumb">
 <img alt="Social Media Dental" loading="lazy" src="/assets/social/dental/orbidental-post-01.webp"/>
 <div class="card__overlay"></div>
-<span class="card__num">07</span>
+<span class="card__num">10</span>
 </div>
 <div class="card__meta">
 <h3 class="card__project-title" data-i18n="work.card.07.title">Dental Social Media</h3>
