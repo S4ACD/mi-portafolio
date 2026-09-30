@@ -113,6 +113,26 @@
     }]
   }
   </script>
+<!-- INICIO: Sector dental — estilos de la sección destacada del CV -->
+<style>
+.cvx-dental{position:relative;background:radial-gradient(ellipse 70% 60% at 85% 0%,rgba(205,183,142,.08),transparent 70%),var(--cvx-void);border-bottom:1px solid var(--cvx-line)}
+.cvx-dental__chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.cvx-dental__chips span{font-family:'Space Grotesk',system-ui,sans-serif;font-size:11.5px;letter-spacing:.04em;color:var(--cvx-dim);border:1px solid var(--cvx-line-2);border-radius:999px;padding:5px 12px}
+.cvx-dental__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.cvx-dcard{display:flex;flex-direction:column;border:1px solid var(--cvx-gold-soft);border-radius:var(--cvx-r);overflow:hidden;background:var(--cvx-surface);box-shadow:0 0 0 1px rgba(205,183,142,.06),0 24px 70px rgba(0,0,0,.45);transition:border-color .4s var(--cvx-ease),transform .4s var(--cvx-ease)}
+.cvx-dcard:hover{border-color:rgba(205,183,142,.55);transform:translateY(-4px)}
+.cvx-dcard:focus-visible{outline:2px solid var(--cvx-gold);outline-offset:3px}
+.cvx-dcard__media{aspect-ratio:16/10;overflow:hidden;background:#0a0a0a}
+.cvx-dcard__media picture,.cvx-dcard__media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--cvx-ease)}
+.cvx-dcard:hover .cvx-dcard__media img{transform:scale(1.03)}
+.cvx-dcard__body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.cvx-dcard__body h3{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:400;color:var(--cvx-ink);margin:0 0 10px}
+.cvx-dcard__body p{font-size:.95rem;line-height:1.65;color:var(--cvx-dim);margin:0 0 20px}
+.cvx-dcard__foot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.cvx-dcard__see{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--cvx-gold)}
+@media (max-width:760px){.cvx-dental__grid{grid-template-columns:1fr}.cvx-dcard__body{padding:22px}}
+</style>
+<!-- FIN: Sector dental — estilos de la sección destacada del CV -->
 </head>
 
 <body class="cv-page">
@@ -190,6 +210,7 @@
       <div class="cvx-nav__links" id="cvxNavLinks">
         <a href="#aporte">What I bring</a>
         <a href="#experiencia">Experience</a>
+        <a href="#sector-dental">Dental industry</a><!-- Sector dental: enlace nuevo -->
         <a href="#portafolio">Work</a>
         <a href="#behance">Behance</a>
         <a href="#formacion">Education</a>
@@ -321,7 +342,7 @@
         <div class="cvx-fit__item"><span>Target roles</span><strong>UX/UI Designer · Graphic Designer · Frontend Web Developer</strong></div>
         <div class="cvx-fit__item"><span>Setup</span><strong>Bogotá · remote, hybrid or on-site</strong></div>
         <div class="cvx-fit__item"><span>Engagement</span><strong>Full-time preferred · available immediately</strong></div>
-        <div class="cvx-fit__item"><span>Industries</span><strong>Agencies · tech · e-commerce · startups · public sector</strong></div>
+        <!-- CAMBIO: Sector dental — se suma el sector odontológico --><div class="cvx-fit__item"><span>Industries</span><strong>Dental industry (supplies and equipment) · agencies · tech · e-commerce · startups · public sector</strong></div>
       </div>
     </div>
   </section>
@@ -374,6 +395,39 @@
       </div>
     </div>
   </section>
+
+    <!-- INICIO: Sección sector dental -->
+  <section class="cvx-section cvx-dental" id="sector-dental">
+    <div class="container">
+      <div class="cvx-head">
+        <span class="cvx-eyebrow">Specialization · Dental industry</span>
+        <h2 class="cvx-h2">I know the dental business <em>from the inside.</em></h2>
+        <p class="cvx-lead">Since May 2024 I've worked inside Orbidental, a distributor of dental supplies and equipment. I know the portfolio, the clinical vocabulary and what a dentist needs to see before buying. These two projects show it.</p>
+        <div class="cvx-dental__chips"><span>Endodontics</span><span>Bonding &amp; restorative</span><span>Digital equipment</span><span>Brand launches</span><span>B2B</span></div>
+      </div>
+      <div class="cvx-dental__grid">
+        <a href="/en/trabajo/diadent/" class="cvx-dcard reveal" target="_blank" rel="noopener">
+          <div class="cvx-dcard__media"><picture><source type="image/avif" srcset="/assets/dental/diadent/card-diadent-480.avif 480w, /assets/dental/diadent/card-diadent-800.avif 800w, /assets/dental/diadent/card-diadent-1200.avif 1200w" sizes="(max-width:760px) calc(100vw - 40px), 560px"><source type="image/webp" srcset="/assets/dental/diadent/card-diadent-480.webp 480w, /assets/dental/diadent/card-diadent-800.webp 800w, /assets/dental/diadent/card-diadent-1200.webp 1200w" sizes="(max-width:760px) calc(100vw - 40px), 560px"><img src="/assets/dental/diadent/card-diadent-800.jpg" srcset="/assets/dental/diadent/card-diadent-480.jpg 480w, /assets/dental/diadent/card-diadent-800.jpg 800w, /assets/dental/diadent/card-diadent-1200.jpg 1200w" sizes="(max-width:760px) calc(100vw - 40px), 560px" alt="DiaDent launch Stories: DIA-ROOT BIO MTA, DiaPrep Pro and e-Temp built on the brand's triangle system" width="1200" height="750" loading="lazy" decoding="async"></picture></div>
+          <div class="cvx-dcard__body">
+            <span class="cvx-card__cat">Branding · Video · Launch</span>
+            <h3>DiaDent</h3>
+            <p>Launch branding for a dental brand new to the portfolio: a visual system, 8 Stories and 8 videos to announce its arrival.</p>
+            <div class="cvx-dcard__foot"><span class="cvx-card__stat">16 assets · 13 products</span><span class="cvx-dcard__see">View case study <span aria-hidden="true">↗</span></span></div>
+          </div>
+        </a>
+        <a href="/en/trabajo/eighteeth/" class="cvx-dcard reveal" target="_blank" rel="noopener">
+          <div class="cvx-dcard__media"><picture><source type="image/avif" srcset="/assets/dental/eighteeth/card-eighteeth-480.avif 480w, /assets/dental/eighteeth/card-eighteeth-800.avif 800w, /assets/dental/eighteeth/card-eighteeth-1200.avif 1200w" sizes="(max-width:760px) calc(100vw - 40px), 560px"><source type="image/webp" srcset="/assets/dental/eighteeth/card-eighteeth-480.webp 480w, /assets/dental/eighteeth/card-eighteeth-800.webp 800w, /assets/dental/eighteeth/card-eighteeth-1200.webp 1200w" sizes="(max-width:760px) calc(100vw - 40px), 560px"><img src="/assets/dental/eighteeth/card-eighteeth-800.jpg" srcset="/assets/dental/eighteeth/card-eighteeth-480.jpg 480w, /assets/dental/eighteeth/card-eighteeth-800.jpg 800w, /assets/dental/eighteeth/card-eighteeth-1200.jpg 1200w" sizes="(max-width:760px) calc(100vw - 40px), 560px" alt="Eighteeth Reels: Acuvision X microscope, Helios 500 intraoral scanner and E-Sanit autoclave" width="1200" height="750" loading="lazy" decoding="async"></picture></div>
+          <div class="cvx-dcard__body">
+            <span class="cvx-card__cat">Video · Social Media · Equipment</span>
+            <h3>Eighteeth</h3>
+            <p>A Reels series explaining a microscope, intraoral scanners, an autoclave and handheld X-ray — each in under 40 seconds.</p>
+            <div class="cvx-dcard__foot"><span class="cvx-card__stat">6 Reels + 1 landscape video</span><span class="cvx-dcard__see">View case study <span aria-hidden="true">↗</span></span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- FIN: Sección sector dental -->
 
   <!-- ═══════════════════════════════════════════════════════════
        WORK — 6 cases with results. The rest live in /en/trabajo/.
