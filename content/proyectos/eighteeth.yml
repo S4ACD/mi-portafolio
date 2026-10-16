@@ -1,0 +1,27 @@
+es:
+  nombre: Eighteeth
+  publicado: true
+  fecha: 2026-04-01
+  anio: '2026'
+  concepto: false
+  destacado: false
+  areas: [social, dental]
+  mostrar_en: [inicio, trabajo, cv_dental]
+  pagina: propia
+  portada:
+    imagen: /assets/dental/eighteeth/card-eighteeth-1200.jpg
+    estilo: foto
+  alt: 'Reels de Eighteeth: microscopio Acuvision X, escáner intraoral Helios 500 y autoclave E-Sanit'
+  resumen: Serie de reels que explica microscopio, escáneres intraorales, autoclave y rayos X en menos de 40 segundos cada uno.
+  disciplinas: [Social media, Video, Sector dental]
+  resultado:
+    cifra: '6'
+    texto: reels y un video horizontal
+en:
+  nombre: Eighteeth
+  alt: 'Eighteeth Reels: Acuvision X microscope, Helios 500 intraoral scanner and E-Sanit autoclave'
+  resumen: A Reels series explaining a microscope, intraoral scanners, an autoclave and handheld X-ray, each in under 40 seconds.
+  disciplinas: [Social media, Video, Dental industry]
+  resultado:
+    cifra: '6'
+    texto: Reels and one landscape video

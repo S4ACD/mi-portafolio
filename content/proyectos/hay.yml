@@ -1,0 +1,221 @@
+# Proyecto con página generada automáticamente desde esta ficha.
+es:
+  publicado: true
+  fecha: '2026-10-10'
+  anio: '2026'
+  concepto: true
+  destacado: false
+  areas:
+  - branding
+  - grafico
+  mostrar_en:
+  - inicio
+  - trabajo
+  pagina: plantilla
+  color: '#FF3D8B'
+  portada:
+    imagen: /uploads/proyectos/hay/logo.jpg
+    estilo: foto
+  nombre: ¡HAY!
+  alt: Logo de ¡HAY! como letrero de lata fucsia
+  resumen: Identidad de campaña para una alcaldía ficticia de Bogotá, hecha con el lenguaje de los letreros de tienda de barrio.
+  disciplinas:
+  - Branding
+  - Campaña
+  - Merch
+  resultado:
+    cifra: '13'
+    texto: piezas de merch
+  seo:
+    titulo: ¡HAY! — Identidad de campaña con letreros de tienda de barrio | Alexander Caro
+    descripcion: 'Proyecto conceptual: una identidad de campaña para la Alcaldía de Bogotá que los jóvenes sí usarían. Logo de letrero de lata, sistema modular, tono de voz y 13 piezas de merch.'
+  caso:
+    portada: /uploads/proyectos/hay/portada.jpg
+    intro: 'En Colombia nadie se pone la camiseta de un político. El reto: una identidad de campaña para la Alcaldía de Bogotá que se use, se pegue y se comparta aunque a uno no le interese la política.'
+    ficha:
+    - etiqueta: Rol
+      valor: Concepto, identidad, tono de voz y merch
+    - etiqueta: Entregables
+      valor: Manual de marca, letrero modular, recursos gráficos y 13 piezas de merch
+    - etiqueta: Público
+      valor: Jóvenes de 18 a 28 años en Bogotá
+    bloques:
+    - tipo: texto
+      titulo: El concepto
+      texto: |-
+        La publicidad electoral es una pared de caras sonrientes, tricolores y promesas que nadie recuerda. Los jóvenes de 18 a 28 años, el grupo que menos vota, ya ni la miran.
+
+        Los letreros de tienda («Hay pan», «Hay gas», «No fío») son el lenguaje más honesto de Bogotá. La campaña los convierte en sistema: una tienda de barrio no promete, anuncia lo que hay.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/hay/logo.jpg
+      alt: Logo ¡HAY! como letrero de lata pintado a mano
+      pie: Un letrero de lata pintado a mano, con sombra de rotulista y dos clavos.
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/hay/construccion.jpg
+        alt: Construcción del logo ¡HAY! sobre retícula
+        pie: Construcción del letrero.
+      - imagen: /uploads/proyectos/hay/versiones.jpg
+        alt: Versiones del logo ¡HAY!
+        pie: Versiones para cada fondo y tamaño.
+    - tipo: colores
+      titulo: Gris para hoy, color para mañana
+      colores:
+      - nombre: Cal de muro
+        hex: '#F6EFE3'
+        proporcion: 40
+      - nombre: Fucsia rótulo
+        hex: '#FF3D8B'
+        proporcion: 30
+      - nombre: Amarillo pollito
+        hex: '#FFD23F'
+        proporcion: 15
+      - nombre: Tinta
+        hex: '#1B1530'
+        proporcion: 10
+      - nombre: Lila tiza
+        hex: '#C7B8FF'
+        proporcion: 5
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/hay/letrero-modular.jpg
+        alt: Letrero modular de ¡HAY! con distintas palabras
+        pie: 'Un letrero que cualquiera puede armar: cuatro encabezados fijos y una palabra libre.'
+      - imagen: /uploads/proyectos/hay/tono.jpg
+        alt: 'Tono de voz de ¡HAY!: ¿Qué hay? ¡Hay con qué!'
+        pie: '«¿Qué hay?» «¡Hay con qué!»: se burla de los absurdos de la ciudad, nunca de personas.'
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /uploads/proyectos/hay/camisetas.jpg
+        alt: Camisetas de la campaña ¡HAY!
+        pie: Camisetas.
+      - imagen: /uploads/proyectos/hay/gorra-bandana.jpg
+        alt: Gorra y bandana de ¡HAY!
+        pie: Gorra y bandana.
+      - imagen: /uploads/proyectos/hay/botones.jpg
+        alt: Botones y stickers de ¡HAY!
+        pie: Botones y stickers.
+      - imagen: /uploads/proyectos/hay/tote.jpg
+        alt: Tote y cordón de ¡HAY!
+        pie: Tote y cordón.
+      - imagen: /uploads/proyectos/hay/calle.jpg
+        alt: Pendones y vallas de ¡HAY! en la calle
+        pie: En la calle.
+      - imagen: /uploads/proyectos/hay/digital.jpg
+        alt: Piezas digitales e impresas de ¡HAY!
+        pie: Digital e impreso.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/hay/letreros-a-mano.jpg
+      alt: Rotulista pintando a mano un letrero de lata ¡HAY!
+      pie: 'Edición especial: letreros de lata pintados a mano por rotulistas del centro de Bogotá.'
+    creditos: |-
+      Concepto, identidad, tono de voz y diseño de merch: Alexander Caro.
+
+      Proyecto conceptual: el candidato y la campaña son ficticios; no representan a ningún partido ni persona real. La fotografía base de los mockups se generó con IA; el logo, los gráficos y el sistema de marca son diseño propio.
+en:
+  nombre: ¡HAY!
+  alt: ¡HAY! logo as a fuchsia tin sign
+  resumen: A campaign identity for a fictional Bogotá mayoral race, built from the language of corner-store signs.
+  disciplinas:
+  - Branding
+  - Campaign
+  - Merch
+  resultado:
+    cifra: '13'
+    texto: merch pieces
+  seo:
+    titulo: ¡HAY! — A Campaign Identity Built From Corner-Store Signs | Alexander Caro
+    descripcion: 'Concept project: a mayoral campaign identity for Bogotá that young people would actually wear. Tin-sign logo, modular sign system, tone of voice and 13 merch pieces.'
+  caso:
+    portada: /uploads/proyectos/hay/portada.jpg
+    intro: 'In Colombia, nobody wears a politician''s T-shirt. The brief: a Bogotá mayoral campaign identity people would use, stick and share even if they don''t care about politics.'
+    ficha:
+    - etiqueta: Role
+      valor: Concept, identity, tone of voice and merch
+    - etiqueta: Deliverables
+      valor: Brand manual, modular sign, graphic assets and 13 merch pieces
+    - etiqueta: Audience
+      valor: Bogotá residents aged 18 to 28
+    bloques:
+    - tipo: texto
+      titulo: The concept
+      texto: |-
+        Election advertising is a wall of smiling faces, flags and promises nobody remembers. Young people aged 18 to 28, the group that votes least, have stopped looking.
+
+        Corner-store signs ("Hay pan", "Hay gas", "No fío") are Bogotá's most honest language. HAY ("there is") turns them into a system: a corner store doesn't promise, it announces what there is.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/hay/logo.jpg
+      alt: ¡HAY! logo as a hand-painted tin sign
+      pie: A hand-lettered tin sign with a sign painter's drop shadow and two nails.
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/hay/construccion.jpg
+        alt: ¡HAY! logo construction grid
+        pie: Sign construction.
+      - imagen: /uploads/proyectos/hay/versiones.jpg
+        alt: ¡HAY! logo versions
+        pie: Versions for every background and size.
+    - tipo: colores
+      titulo: Grey for today, color for tomorrow
+      colores:
+      - nombre: Wall lime
+        hex: '#F6EFE3'
+        proporcion: 40
+      - nombre: Sign fuchsia
+        hex: '#FF3D8B'
+        proporcion: 30
+      - nombre: Chick yellow
+        hex: '#FFD23F'
+        proporcion: 15
+      - nombre: Ink
+        hex: '#1B1530'
+        proporcion: 10
+      - nombre: Chalk lilac
+        hex: '#C7B8FF'
+        proporcion: 5
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/hay/letrero-modular.jpg
+        alt: ¡HAY! modular sign with different words
+        pie: 'A sign anyone can build: four fixed headers and one free word.'
+      - imagen: /uploads/proyectos/hay/tono.jpg
+        alt: ¡HAY! tone of voice
+        pie: '"¿Qué hay?" "¡Hay con qué!": it mocks the city''s absurdities, never people.'
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /uploads/proyectos/hay/camisetas.jpg
+        alt: ¡HAY! campaign T-shirts
+        pie: T-shirts.
+      - imagen: /uploads/proyectos/hay/gorra-bandana.jpg
+        alt: ¡HAY! cap and bandana
+        pie: Cap and bandana.
+      - imagen: /uploads/proyectos/hay/botones.jpg
+        alt: ¡HAY! buttons and stickers
+        pie: Buttons and stickers.
+      - imagen: /uploads/proyectos/hay/tote.jpg
+        alt: ¡HAY! tote and lanyard
+        pie: Tote and lanyard.
+      - imagen: /uploads/proyectos/hay/calle.jpg
+        alt: ¡HAY! banners and billboards on the street
+        pie: On the street.
+      - imagen: /uploads/proyectos/hay/digital.jpg
+        alt: ¡HAY! digital and print pieces
+        pie: Digital and print.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/hay/letreros-a-mano.jpg
+      alt: Sign painter hand-painting a ¡HAY! tin sign
+      pie: 'Special edition: tin signs hand-painted by sign painters from downtown Bogotá.'
+    creditos: |-
+      Concept, identity, tone of voice and merch design: Alexander Caro.
+
+      Concept project: the candidate and campaign are fictional and do not represent any real party or person. Base mockup photography was generated with AI; the logo, graphics and brand system are my own design.

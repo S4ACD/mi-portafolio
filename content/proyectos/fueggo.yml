@@ -1,0 +1,21 @@
+es:
+  nombre: Fueggo
+  publicado: true
+  fecha: 2024-03-01
+  anio: '2024'
+  concepto: true
+  destacado: false
+  areas: [branding]
+  mostrar_en: [inicio, trabajo, cv]
+  pagina: propia
+  portada:
+    imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781033141/Fachada_hkwn2i.png
+    estilo: foto
+  alt: Fachada de Fueggo con su identidad visual
+  resumen: Sistema de marca completo para un concepto de comida a la brasa, de logo a fachada, empaque y uniformes.
+  disciplinas: [Branding, Restaurante]
+en:
+  nombre: Fueggo
+  alt: Fueggo storefront with its visual identity
+  resumen: A complete brand system for a flame-grill restaurant concept, from logo to storefront, packaging and uniforms.
+  disciplinas: [Branding, Restaurant]

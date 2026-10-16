@@ -1,0 +1,31 @@
+es:
+  nombre: MotoFaro
+  publicado: true
+  fecha: 2026-05-01
+  anio: '2026'
+  concepto: true
+  destacado: false
+  areas: [web]
+  mostrar_en: [inicio, trabajo, cv]
+  pagina: propia
+  portada:
+    imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1783086186/Comparador-FOTO1_l00off.webp
+    estilo: foto
+    logotipo_texto: Moto
+    logotipo_acento: Faro
+    logotipo_resto: ''
+    fondo: '#0a0a0f'
+  alt: Comparador lado a lado de MotoFaro con specs, precio y puntuación
+  resumen: Comparador de accesorios para moto en Next.js, con el SEO como arquitectura desde el primer commit.
+  disciplinas: [Web, Next.js, SEO técnico]
+  resultado:
+    cifra: '99'
+    texto: PageSpeed, SEO técnico 100/100
+en:
+  nombre: MotoFaro
+  alt: MotoFaro side-by-side comparison with specs, price and score
+  resumen: A motorcycle gear comparison site in Next.js, with SEO as the architecture from the first commit.
+  disciplinas: [Web, Next.js, Technical SEO]
+  resultado:
+    cifra: '99'
+    texto: PageSpeed, technical SEO 100/100

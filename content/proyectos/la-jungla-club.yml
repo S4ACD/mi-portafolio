@@ -1,0 +1,21 @@
+es:
+  nombre: La Jungla Club
+  publicado: true
+  fecha: 2024-05-01
+  anio: '2024'
+  concepto: false
+  destacado: false
+  areas: [branding]
+  mostrar_en: [inicio, trabajo, cv]
+  pagina: propia
+  portada:
+    imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034073/Fachada_msspsi.png
+    estilo: foto
+  alt: Fachada de La Jungla Club con su identidad visual
+  resumen: Identidad completa para una discoteca de DJs con máscaras y estética selvática, aplicada a fachada, menú y uniformes.
+  disciplinas: [Branding, Discoteca]
+en:
+  nombre: La Jungla Club
+  alt: La Jungla Club storefront with its visual identity
+  resumen: A full identity for a nightclub with masked DJs and a jungle aesthetic, applied to the facade, menu and uniforms.
+  disciplinas: [Branding, Nightclub]

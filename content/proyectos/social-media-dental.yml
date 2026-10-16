@@ -1,0 +1,27 @@
+es:
+  nombre: Social Media Dental
+  publicado: true
+  fecha: 2026-02-01
+  anio: '2026'
+  concepto: false
+  destacado: false
+  areas: [social, grafico, dental]
+  mostrar_en: [inicio, trabajo, cv]
+  pagina: propia
+  portada:
+    imagen: /assets/social/dental/orbidental-post-01.webp
+    estilo: foto
+  alt: Publicación de Orbidental para redes sociales
+  resumen: Estrategia y diseño de contenido para dos distribuidoras dentales a la vez, cada una con su propio sistema visual.
+  disciplinas: [Social media, Diseño gráfico]
+  resultado:
+    cifra: '179K'
+    texto: visualizaciones en 4 meses
+en:
+  nombre: Dental Social Media
+  alt: Orbidental social media post
+  resumen: Content strategy and design for two dental supply brands at once, each with its own visual system.
+  disciplinas: [Social media, Graphic design]
+  resultado:
+    cifra: '179K'
+    texto: views in 4 months

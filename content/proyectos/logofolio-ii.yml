@@ -1,0 +1,213 @@
+# Proyecto con página generada automáticamente desde esta ficha.
+es:
+  publicado: true
+  fecha: '2026-10-09'
+  anio: '2026'
+  concepto: true
+  destacado: false
+  areas:
+  - branding
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
+  color: '#F2F0EB'
+  portada:
+    imagen: /uploads/proyectos/logofolio-ii/portada.jpg
+    estilo: foto
+  nombre: Logofolio II
+  alt: Mosaico de logos del Logofolio II
+  resumen: Doce marcas ficticias de música, belleza y educación, cada una con un concepto que se puede contar en una frase.
+  disciplinas:
+  - Logotipos
+  - Branding
+  - Lettering
+  resultado:
+    cifra: '12'
+    texto: marcas con concepto propio
+  seo:
+    titulo: Logofolio II — 12 marcas con concepto propio | Alexander Caro
+    descripcion: Doce logos de marcas ficticias de música, belleza y educación en Latinoamérica. Cada uno parte de un gesto, un oficio o un dato local.
+  caso:
+    intro: 'Doce marcas ficticias más, en tres sectores. Un picó de Barranquilla, un protector solar que se llama como el índice UV de Bogotá, unas tutorías que convierten el «llevo una» en símbolo. La misma regla: el concepto sale del oficio o del lugar.'
+    ficha:
+    - etiqueta: Rol
+      valor: Naming, concepto y diseño de logotipo
+    - etiqueta: Entregables
+      valor: 12 logos con versiones, paleta, tipografía y aplicación
+    bloques:
+    - tipo: galeria
+      columnas: 4
+      titulo: Música y entretenimiento
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio-ii/marca-01.jpg
+        alt: Logo de Sacudón, picó (sound system) en Barranquilla, Colombia
+        pie: '**Sacudón**. Picó (sound system), Barranquilla, Colombia'
+        texto: Un picó se mide por cuánto hace temblar la cuadra. Las letras llevan tres contornos, como el eco del bajo.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-02.jpg
+        alt: Logo de Cambio de Rollo, cineclub en Medellín, Colombia
+        pie: '**Cambio de Rollo**. Cineclub, Medellín, Colombia'
+        texto: En 35 mm, un punto en la esquina del cuadro avisa que hay que cambiar de rollo. El nombre vive dentro de ese fotograma.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-03.jpg
+        alt: Logo de Pa'lante, equipo de esports en San Juan, Puerto Rico
+        pie: '**Pa''lante**. Equipo de eSports, San Juan, Puerto Rico'
+        texto: 'En los juegos de disparos la W es avanzar: la tecla más gastada del teclado, con la leyenda borrada.'
+      - imagen: /uploads/proyectos/logofolio-ii/marca-04.jpg
+        alt: Logo de Orquesta Vacía, bar de karaoke en Ciudad de México
+        pie: '**Orquesta Vacía**. Bar de karaoke, Ciudad de México'
+        texto: 'Karaoke significa «orquesta vacía»: la música está, faltas tú. El logo es la letra pintándose en pantalla.'
+    - tipo: galeria
+      columnas: 4
+      titulo: Belleza y cuidado personal
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio-ii/marca-05.jpg
+        alt: Logo de Desvanecido, barbería en Medellín, Colombia
+        pie: '**Desvanecido**. Barbería, Medellín, Colombia'
+        texto: Un buen desvanecido va de la piel al pelo sin que se note el salto. Las letras hacen lo mismo.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-06.jpg
+        alt: Logo de Once+, protector solar en Bogotá, Colombia
+        pie: '**Once+**. Protector solar, Bogotá, Colombia'
+        texto: Bogotá está a 2.640 metros y al mediodía el índice UV llega a 11 o más. El nombre es esa cifra.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-07.jpg
+        alt: Logo de Calco, estudio de tatuaje en Ciudad de México
+        pie: '**Calco**. Estudio de tatuaje, Ciudad de México'
+        texto: Antes de tatuar, el diseño se pasa a la piel con un calco de líneas violetas. El logo es ese calco.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-08.jpg
+        alt: Logo de Caminos, salón de trenzas en Cartagena, Colombia
+        pie: '**Caminos**. Salón de trenzas, Cartagena, Colombia'
+        texto: En Palenque se cuenta que las mujeres trenzaban en el pelo los caminos para escapar. La C está hecha de trenzas.
+    - tipo: galeria
+      columnas: 4
+      titulo: Infancia y educación
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio-ii/marca-09.jpg
+        alt: Logo de Bajo la Cobija, librería infantil en Bogotá, Colombia
+        pie: '**Bajo la Cobija**. Librería infantil, Bogotá, Colombia'
+        texto: Casi todos leímos alguna vez con linterna bajo la cobija. La librería es esa carpa de lana.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-10.jpg
+        alt: Logo de ¿Porqué?, museo interactivo de ciencia en Lima, Perú
+        pie: '**¿Porqué?**. Museo interactivo de ciencia, Lima, Perú'
+        texto: 'Los signos de pregunta son rieles de canica y la canica es el punto: la pregunta se resuelve jugando.'
+      - imagen: /uploads/proyectos/logofolio-ii/marca-11.jpg
+        alt: Logo de A esta altura, jardín infantil en Quito, Ecuador
+        pie: '**A esta altura**. Jardín infantil, Quito, Ecuador'
+        texto: En casi todas las casas hay un marco de puerta con rayitas y edades. El nombre es la marca más alta.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-12.jpg
+        alt: Logo de Llevo una, tutorías de matemáticas en Montevideo, Uruguay
+        pie: '**Llevo una**. Tutorías de matemáticas, Montevideo, Uruguay'
+        texto: '«Y llevo una»: lo que se dice al sumar, con el uno chiquito arriba. La marca convierte ese gesto en símbolo.'
+    - tipo: texto
+      titulo: Cada marca, como sistema
+      texto: 'Ninguna marca se queda en el logo: cada una tiene versión en positivo, una tinta, invertida y reducida a 16 px, paleta con valores CMYK, tipografía y una aplicación real.'
+    - tipo: galeria
+      columnas: 1
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio-ii/pagina-1.jpg
+        alt: Página 1 del logofolio con paleta, tipografía y aplicación de cada marca
+      - imagen: /uploads/proyectos/logofolio-ii/pagina-2.jpg
+        alt: Página 2 del logofolio con paleta, tipografía y aplicación de cada marca
+      - imagen: /uploads/proyectos/logofolio-ii/pagina-3.jpg
+        alt: Página 3 del logofolio con paleta, tipografía y aplicación de cada marca
+    creditos: |-
+      Concepto, naming y diseño: Alexander Caro.
+
+      Todas las marcas son ficticias, creadas como conceptos de autor. No representan negocios reales.
+en:
+  nombre: Logofolio II
+  alt: Logofolio II logo mosaic
+  resumen: Twelve fictional brands in music, beauty and education, each with a concept you can tell in one sentence.
+  disciplinas:
+  - Logo design
+  - Branding
+  - Lettering
+  resultado:
+    cifra: '12'
+    texto: brands, each with its own concept
+  seo:
+    titulo: Logofolio II — 12 Brands, Each With Its Own Concept | Alexander Caro
+    descripcion: Twelve logos for fictional brands in music, beauty and education across Latin America. Each starts from a gesture, a craft or a local fact.
+  caso:
+    intro: 'Twelve more fictional brands across three industries. A Barranquilla sound system, a sunscreen named after Bogotá’s UV index, a tutoring service that turns “carry the one” into a symbol. Same rule: the concept comes from the craft or the place.'
+    ficha:
+    - etiqueta: Role
+      valor: Naming, concept and logo design
+    - etiqueta: Deliverables
+      valor: 12 logos with versions, palette, typography and application
+    bloques:
+    - tipo: galeria
+      columnas: 4
+      titulo: Music and entertainment
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio-ii/marca-01.jpg
+        alt: Sacudón logo, picó sound system in Barranquilla, Colombia
+        pie: '**Sacudón**. Picó sound system, Barranquilla, Colombia'
+        texto: A picó is judged by how hard it shakes the block. The letters carry three outlines, like the bass echo.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-02.jpg
+        alt: Cambio de Rollo logo, film club in Medellín, Colombia
+        pie: '**Cambio de Rollo**. Film club, Medellín, Colombia'
+        texto: On 35 mm, a dot in the corner of the frame cues the projectionist to change reels. The name lives in that frame.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-03.jpg
+        alt: Pa'lante logo, esports team in San Juan, Puerto Rico
+        pie: '**Pa''lante**. eSports team, San Juan, Puerto Rico'
+        texto: 'In shooters, W means move forward: the most worn key on the keyboard, its legend rubbed off.'
+      - imagen: /uploads/proyectos/logofolio-ii/marca-04.jpg
+        alt: Orquesta Vacía logo, karaoke bar in Mexico City
+        pie: '**Orquesta Vacía**. Karaoke bar, Mexico City'
+        texto: 'Karaoke literally means “empty orchestra”: the music is there, you''re missing. The logo is the lyric filling in.'
+    - tipo: galeria
+      columnas: 4
+      titulo: Beauty and personal care
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio-ii/marca-05.jpg
+        alt: Desvanecido logo, barbershop in Medellín, Colombia
+        pie: '**Desvanecido**. Barbershop, Medellín, Colombia'
+        texto: A good fade goes from skin to hair without a visible jump. The letters do the same.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-06.jpg
+        alt: Once+ logo, sunscreen in Bogotá, Colombia
+        pie: '**Once+**. Sunscreen, Bogotá, Colombia'
+        texto: Bogotá sits at 2,640 meters and the midday UV index often hits 11 or more. The name is that number.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-07.jpg
+        alt: Calco logo, tattoo studio in Mexico City
+        pie: '**Calco**. Tattoo studio, Mexico City'
+        texto: Before tattooing, the design is transferred with a violet stencil. The logo is that stencil.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-08.jpg
+        alt: Caminos logo, braiding salon in Cartagena, Colombia
+        pie: '**Caminos**. Braiding salon, Cartagena, Colombia'
+        texto: In Palenque, women are said to have braided escape routes into their hair. The C is made of braids.
+    - tipo: galeria
+      columnas: 4
+      titulo: Children and education
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio-ii/marca-09.jpg
+        alt: Bajo la Cobija logo, children's bookstore in Bogotá, Colombia
+        pie: '**Bajo la Cobija**. Children''s bookstore, Bogotá, Colombia'
+        texto: Most of us once read by flashlight under the covers. The bookstore is that woolen tent.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-10.jpg
+        alt: ¿Porqué? logo, interactive science museum in Lima, Peru
+        pie: '**¿Porqué?**. Interactive science museum, Lima, Peru'
+        texto: 'The question marks are marble tracks and the marble is the dot: the question gets answered by playing.'
+      - imagen: /uploads/proyectos/logofolio-ii/marca-11.jpg
+        alt: A esta altura logo, kindergarten in Quito, Ecuador
+        pie: '**A esta altura**. Kindergarten, Quito, Ecuador'
+        texto: Almost every home has a doorframe with pencil marks and ages. The name is the highest mark.
+      - imagen: /uploads/proyectos/logofolio-ii/marca-12.jpg
+        alt: Llevo una logo, math tutoring in Montevideo, Uruguay
+        pie: '**Llevo una**. Math tutoring, Montevideo, Uruguay'
+        texto: '“Carry the one”: what you say when adding, with the tiny 1 on top. The brand turns that into a symbol.'
+    - tipo: texto
+      titulo: Each brand, as a system
+      texto: 'No brand stops at the logo: each one has positive, one-color, inverted and 16 px versions, a palette with CMYK values, typography and a real application.'
+    - tipo: galeria
+      columnas: 1
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio-ii/pagina-1.jpg
+        alt: Logofolio page 1 with palette, typography and application for each brand
+      - imagen: /uploads/proyectos/logofolio-ii/pagina-2.jpg
+        alt: Logofolio page 2 with palette, typography and application for each brand
+      - imagen: /uploads/proyectos/logofolio-ii/pagina-3.jpg
+        alt: Logofolio page 3 with palette, typography and application for each brand
+    creditos: |-
+      Concept, naming and design: Alexander Caro.
+
+      Every brand is fictional, created as an author concept. None of them is a real business.

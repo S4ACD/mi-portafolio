@@ -1,0 +1,279 @@
+# Proyecto con página generada automáticamente desde esta ficha.
+es:
+  publicado: true
+  fecha: '2026-10-14'
+  anio: '2026'
+  concepto: true
+  destacado: false
+  areas:
+  - branding
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
+  color: '#3B1F14'
+  portada:
+    imagen: /uploads/proyectos/onces/portada.jpg
+    estilo: foto
+  nombre: ONCES
+  alt: Portada del manual de marca de ONCES con el logo y un cono de crepe junto a un vaso de chocolate
+  resumen: 'Identidad y packaging para una crepería de Chapinero construida sobre un ritual que Bogotá ya tiene: las onces.'
+  disciplinas:
+  - Branding
+  - Packaging
+  - Naming
+  resultado:
+    cifra: '8'
+    texto: piezas de empaque
+  seo:
+    titulo: ONCES — Identidad y packaging para una crepería en Chapinero | Alexander Caro
+    descripcion: 'Proyecto conceptual de marca: una crepería bogotana construida sobre el ritual de las onces. Naming, logo, sistema visual, voz y 8 piezas de empaque producibles en Colombia.'
+  caso:
+    intro: 'Una crepería para Chapinero que nadie pueda confundir con otra. La respuesta no vino de Francia sino de la mesa de la abuela: las onces, la merienda bogotana de media tarde.'
+    ficha:
+    - etiqueta: Rol
+      valor: Estrategia, naming, identidad y packaging
+    - etiqueta: Entregables
+      valor: Manual de 32 páginas, logo y versiones, sistema gráfico, voz y 8 empaques
+    - etiqueta: Lugar
+      valor: Chapinero, Bogotá
+    bloques:
+    - tipo: texto
+      titulo: El encargo
+      texto: |-
+        Crear desde cero una crepería de dulce y sal para Chapinero, con empaques que la gente fotografíe, comparta y recuerde.
+
+        Quedaron prohibidos los clichés franceses (Torre Eiffel, boinas, tipografías «parisinas») y la estética genérica de cafetería: kraft con sello negro, pizarras, cajas estándar con un logo pegado.
+
+        Antes de diseñar hice doce preguntas sobre público, precio, tono y operación. Mandan las familias de fin de semana, salen más de 300 crepes al día y el pedido fue claro: que abrir el empaque se sienta como recibir un regalo.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/onces/tres-caminos.jpg
+      alt: 'Tres rutas de marca exploradas: ONCES, RUANA y TAPIA'
+      pie: Tres rutas exploradas, cada una con nombre, receta y empaque estrella. Se eligió ONCES.
+    - tipo: texto
+      titulo: La idea
+      texto: |-
+        Las onces son chocolate santafereño, queso que se hunde en la taza y la mesa servida con cuidado. Cualquier rolo reconoce la palabra como suya y ninguna crepería la había reclamado.
+
+        La idea saca la crepe de Francia y la pone en una tradición con siglos de historia, y convierte el chocolate de la casa en protagonista. Además, once es 11: el número se esconde en el isotipo, en la tarjeta de 11 sellos y en el día 11 de cada mes.
+    - tipo: cita
+      texto: Si no la untó en el chocolate, no han sido onces.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/onces/logo.jpg
+      alt: 'Logo de ONCES: la o es un pocillo de peltre visto desde arriba'
+      pie: La o es un pocillo de peltre visto desde arriba, con su despique a las 2 en punto. El lettering sigue los avisos de tienda pintados a mano de los 70.
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/onces/versiones.jpg
+        alt: Sistema de versiones del logo de ONCES
+        pie: Cinco versiones, de la fachada a un sticker de 8 mm.
+      - imagen: /uploads/proyectos/onces/construccion.jpg
+        alt: Construcción y color del logo de ONCES
+        pie: Construcción, área de reserva y versiones en positivo y negativo.
+    - tipo: colores
+      titulo: Paleta y proporción de uso
+      colores:
+      - nombre: Crema
+        hex: '#F3E3C3'
+        proporcion: 45
+      - nombre: Blanco papel
+        hex: '#FFFDF8'
+        proporcion: 25
+      - nombre: Rojo peltre
+        hex: '#B5452B'
+        proporcion: 18
+      - nombre: Chocolate
+        hex: '#3B1F14'
+        proporcion: 10
+      - nombre: Mostaza
+        hex: '#E0A526'
+        proporcion: 2
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/onces/tipografia.jpg
+        alt: Tipografías de ONCES
+        pie: Fraunces para titulares, DM Sans para textos y el lettering propio solo en el logo.
+      - imagen: /uploads/proyectos/onces/recursos.jpg
+        alt: Recursos gráficos de ONCES
+        pie: 'Croché, borde rojo peltre, despique, sombra de rótulo y el 11 escondido: cinco recursos que identifican la marca sin el logo.'
+    - tipo: texto
+      titulo: El packaging
+      texto: |-
+        Cada empaque tiene forma, mecanismo y un momento de revelación. Las crepes dulces van en cono, y el cono se encaja en el vaso de chocolate para comer caminando sin mancharse. Las saladas van en una caja que se abre como una mesa servida.
+
+        Son ocho piezas, todas producibles en Colombia con cartón y papel, con un orden de producción por fases para no comprometer la caja del primer año.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /uploads/proyectos/onces/cono-y-pocillo.jpg
+        alt: Cono de crepe encajado en el vaso de chocolate de ONCES
+        pie: El Cono, encajado en el pocillo.
+      - imagen: /uploads/proyectos/onces/la-mesita.jpg
+        alt: Empaque La Mesita con crepe salada
+        pie: La Mesita, para crepes saladas.
+      - imagen: /uploads/proyectos/onces/mesa-de-onces.jpg
+        alt: Caja Mesa de Onces abierta con cuatro porciones
+        pie: 'Mesa de Onces: la caja se abre como una mesa servida.'
+      - imagen: /uploads/proyectos/onces/bolsa-hay-onces.jpg
+        alt: Bolsa Hay Onces para domicilios
+        pie: Hay Onces, bolsa de domicilio.
+      - imagen: /uploads/proyectos/onces/pocillitos.jpg
+        alt: Pocillitos para salsas y papeletas
+        pie: Pocillitos y papeletas para salsas.
+      - imagen: /uploads/proyectos/onces/edicion-aguacero.jpg
+        alt: Bolsa de la Edición Aguacero
+        pie: Edición Aguacero, para la temporada de lluvias.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/onces/voz.jpg
+      alt: La voz de ONCES aplicada a empaques y redes
+      pie: 'La voz: datos de artesano y humor rolo, sin postal. «Masa reposada 24 horas. Más que usted un domingo.»'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/onces/produccion.jpg
+        alt: Orden de producción del packaging de ONCES
+        pie: Orden de producción por fases.
+      - imagen: /uploads/proyectos/onces/experiencia.jpg
+        alt: La experiencia de ONCES en el local
+        pie: 'El ritual en el local: la hora once a las 4:11 p. m., la pared de pocillos y la ventanilla del cono.'
+    creditos: |-
+      Estrategia, naming, identidad, voz, packaging y manual: Alexander Caro.
+
+      Proyecto conceptual: ONCES no es un negocio real y no hubo cliente. La fotografía base de los mockups se generó con IA; el logo, los gráficos y el sistema de marca son diseño propio.
+en:
+  nombre: ONCES
+  alt: Cover of the ONCES brand manual with the logo and a crepe cone next to a hot chocolate cup
+  resumen: 'Identity and packaging for a crêperie in Chapinero, built on a ritual Bogotá already has: las onces, the afternoon snack.'
+  disciplinas:
+  - Branding
+  - Packaging
+  - Naming
+  resultado:
+    cifra: '8'
+    texto: packaging pieces
+  seo:
+    titulo: ONCES — Identity and Packaging for a Bogotá Crêperie | Alexander Caro
+    descripcion: 'Concept branding project: a Bogotá crêperie built on the local ritual of las onces. Naming, logo, visual system, voice and 8 packaging pieces that can be produced in Colombia.'
+  caso:
+    intro: 'A crêperie for Chapinero that nobody could mistake for another. The answer didn''t come from France but from grandma''s table: las onces, Bogotá''s afternoon snack.'
+    ficha:
+    - etiqueta: Role
+      valor: Strategy, naming, identity and packaging
+    - etiqueta: Deliverables
+      valor: 32-page manual, logo and versions, graphic system, voice and 8 packaging pieces
+    - etiqueta: Location
+      valor: Chapinero, Bogotá
+    bloques:
+    - tipo: texto
+      titulo: The brief
+      texto: |-
+        Create a sweet-and-savory crêperie for Chapinero from scratch, with packaging people want to photograph, share and remember.
+
+        French clichés were off the table (Eiffel Tower, berets, “Parisian” scripts), and so was the generic café look: kraft with a black stamp, chalkboards, stock boxes with a logo slapped on.
+
+        Before designing I asked twelve questions about audience, price, tone and operations. Weekend families come first, the kitchen makes 300+ crêpes a day, and the ask was clear: opening the package should feel like getting a gift.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/onces/tres-caminos.jpg
+      alt: 'Three brand routes explored: ONCES, RUANA and TAPIA'
+      pie: Three routes explored, each with its own name, recipe and hero package. ONCES was chosen.
+    - tipo: texto
+      titulo: The idea
+      texto: |-
+        Las onces means Santafé hot chocolate, cheese melting into the cup and a carefully set table. Every Bogotá local owns the word, and no crêperie had claimed it.
+
+        The idea takes the crêpe out of France and into a centuries-old local tradition, and it makes the house chocolate the star. And once means 11: the number hides in the icon, the 11-stamp loyalty card and the 11th of every month.
+    - tipo: cita
+      texto: If you didn't dip it in the chocolate, it wasn't onces.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/onces/logo.jpg
+      alt: 'ONCES logo: the o is an enamel tin cup seen from above'
+      pie: The o is an enamel tin cup seen from above, chipped at two o’clock. The lettering follows 1970s hand-painted shop signs.
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/onces/versiones.jpg
+        alt: ONCES logo versions
+        pie: Five versions, from the storefront to an 8 mm sticker.
+      - imagen: /uploads/proyectos/onces/construccion.jpg
+        alt: ONCES logo construction and color
+        pie: Construction, clear space and positive and negative versions.
+    - tipo: colores
+      titulo: Palette and proportion of use
+      colores:
+      - nombre: Cream
+        hex: '#F3E3C3'
+        proporcion: 45
+      - nombre: Paper white
+        hex: '#FFFDF8'
+        proporcion: 25
+      - nombre: Enamel red
+        hex: '#B5452B'
+        proporcion: 18
+      - nombre: Chocolate
+        hex: '#3B1F14'
+        proporcion: 10
+      - nombre: Mustard
+        hex: '#E0A526'
+        proporcion: 2
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/onces/tipografia.jpg
+        alt: ONCES typefaces
+        pie: Fraunces for headlines, DM Sans for text, and custom lettering for the logo only.
+      - imagen: /uploads/proyectos/onces/recursos.jpg
+        alt: ONCES graphic assets
+        pie: 'Crochet, the enamel-red rim, the chip, sign-painter shadow and the hidden 11: five assets that identify the brand without the logo.'
+    - tipo: texto
+      titulo: The packaging
+      texto: |-
+        Every package has a shape, a mechanism and a reveal. Sweet crêpes come in a cone that slots into the chocolate cup, so you can eat while walking without a mess. Savory ones come in a box that opens like a set table.
+
+        There are eight pieces, all producible in Colombia in board and paper, with a phased production plan that doesn't strain first-year cash flow.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /uploads/proyectos/onces/cono-y-pocillo.jpg
+        alt: Crêpe cone slotted into the ONCES chocolate cup
+        pie: The Cone, slotted into the cup.
+      - imagen: /uploads/proyectos/onces/la-mesita.jpg
+        alt: La Mesita package with a savory crêpe
+        pie: La Mesita, for savory crêpes.
+      - imagen: /uploads/proyectos/onces/mesa-de-onces.jpg
+        alt: Mesa de Onces box open with four portions
+        pie: 'Mesa de Onces: the box opens like a set table.'
+      - imagen: /uploads/proyectos/onces/bolsa-hay-onces.jpg
+        alt: Hay Onces delivery bag
+        pie: Hay Onces, the delivery bag.
+      - imagen: /uploads/proyectos/onces/pocillitos.jpg
+        alt: Sauce cups and paper wraps
+        pie: Sauce cups and paper wraps.
+      - imagen: /uploads/proyectos/onces/edicion-aguacero.jpg
+        alt: Rainy-season edition bag
+        pie: Aguacero Edition, for the rainy season.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/onces/voz.jpg
+      alt: The ONCES voice applied to packaging and social
+      pie: 'The voice: craftsman facts and Bogotá humor, never postcard clichés.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/onces/produccion.jpg
+        alt: ONCES packaging production plan
+        pie: Phased production plan.
+      - imagen: /uploads/proyectos/onces/experiencia.jpg
+        alt: The ONCES in-store experience
+        pie: 'The ritual in the shop: the 4:11 p.m. chocolate hour, the wall of cups and the cone window.'
+    creditos: |-
+      Strategy, naming, identity, voice, packaging and manual: Alexander Caro.
+
+      Concept project: ONCES is not a real business and there was no client. Base mockup photography was generated with AI; the logo, graphics and brand system are my own design.

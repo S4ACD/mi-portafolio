@@ -1,0 +1,31 @@
+es:
+  nombre: Pulse Digital
+  publicado: true
+  fecha: 2026-02-15
+  anio: '2026'
+  concepto: true
+  destacado: false
+  areas: [web]
+  mostrar_en: [inicio, trabajo]
+  pagina: propia
+  portada:
+    imagen: /uploads/proyectos/pulse-digital/portada.jpg
+    estilo: foto
+    logotipo_texto: Pulse
+    logotipo_acento: .
+    logotipo_resto: Digital
+    fondo: '#080808'
+  alt: Landing page de Pulse Digital en una ventana de navegador
+  resumen: Identidad y landing page en inglés para una agencia ficticia, sin frameworks ni dependencias. Sitio en vivo.
+  disciplinas: [Web, Branding, Inglés]
+  resultado:
+    cifra: '0'
+    texto: frameworks, carga instantánea
+en:
+  nombre: Pulse Digital
+  alt: Pulse Digital landing page in a browser window
+  resumen: Identity and English landing page for a fictional agency, with no frameworks or dependencies. Live site.
+  disciplinas: [Web, Branding, English]
+  resultado:
+    cifra: '0'
+    texto: frameworks, instant load

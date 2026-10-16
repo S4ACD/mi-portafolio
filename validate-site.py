@@ -9,7 +9,9 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from urllib.parse import urlsplit
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+# Por defecto revisa el sitio generado (dist/). Uso: npm run build && python3 validate-site.py
+_HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.join(_HERE, "dist") if os.path.isdir(os.path.join(_HERE, "dist")) else _HERE
 
 
 class PageParser(HTMLParser):
@@ -56,7 +58,9 @@ SKIP = ("google",)
 
 
 def html_files():
-    for directory, _, names in os.walk(ROOT):
+    for directory, dirs, names in os.walk(ROOT):
+        # El panel /admin y las carpetas de trabajo no son páginas del sitio.
+        dirs[:] = [d for d in dirs if d not in ("admin", "node_modules", "dist", "scripts", "content", "uploads", ".git")]
         for name in names:
             if name.endswith(".html") and not name.startswith(SKIP):
                 yield os.path.join(directory, name)

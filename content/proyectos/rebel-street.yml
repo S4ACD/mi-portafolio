@@ -1,0 +1,21 @@
+es:
+  nombre: Rebel Street
+  publicado: true
+  fecha: 2024-04-01
+  anio: '2024'
+  concepto: false
+  destacado: false
+  areas: [branding]
+  mostrar_en: [inicio, trabajo]
+  pagina: propia
+  portada:
+    imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034468/Fachada_w69uxq.png
+    estilo: foto
+  alt: Fachada de Rebel Street con su identidad visual
+  resumen: Sistema de marca de estilo grafitero para una marca de streetwear, de logo a empaque.
+  disciplinas: [Branding, Streetwear]
+en:
+  nombre: Rebel Street
+  alt: Rebel Street storefront with its visual identity
+  resumen: A graffiti-style brand system for a streetwear label, from logo to packaging.
+  disciplinas: [Branding, Streetwear]

@@ -1,3 +1,18 @@
+# PORTAFOLIO v2: proyectos automáticos y rediseño, 16 oct 2026
+
+Uso diario: ver **GUIA.md**.
+
+1. **Un proyecto, un archivo.** Los 16 proyectos viven en `content/proyectos/*.yml` (ES + EN). El build (`npm run build`, lo corre Vercel) genera las tarjetas del inicio, /trabajo/ y el CV en los dos idiomas, las páginas de caso nuevas, el sitemap, el JSON-LD y la lista de `llms.txt`.
+2. **Panel `/admin`** (Sveltia CMS sobre GitHub) para crear, editar, ordenar y subir fotos sin tocar código.
+3. **Rediseño de la zona de proyectos.** Nueva /trabajo/ (grilla editorial con filtros), tarjetas nuevas en inicio y CV, y una plantilla de caso cuya portada toma el color de la marca. Sin animaciones de entrada en esas páginas: el fundido del body impedía que Chrome registrara el LCP.
+4. **6 proyectos nuevos**, todos marcados como concepto propio y con la nota de fotografía con IA en los créditos: ONCES, Hushwork, Double Notch, ¡HAY!, Logofolio I (20 marcas) y Logofolio II (12 marcas). Pulse Digital estrena portada y MotoFaro usa la captura del comparador.
+5. **Imágenes optimizadas al publicar**: AVIF, WebP y JPG en varios tamaños con `srcset`, y `srcset` también para Cloudinary.
+6. **Datos corregidos**: Orbidental dice 3.000+ productos en todo el sitio (antes 4.000 en /trabajo/ y /servicios/); el conteo de proyectos del CV ya no queda desactualizado; se arreglaron textos en español que aparecían en /en/ y viceversa en las tarjetas.
+7. **Ya no se publican** los `.py` ni los `.md` del repositorio: antes eran accesibles en alexandercaro.com/build-en.py, etc.
+8. `validate-site.py` ahora revisa `dist/`. Resultado: 65 páginas OK, 4.512 referencias locales sin enlaces rotos y 320 archivos idénticos al sitio anterior.
+
+---
+
 # RENDIMIENTO MÓVIL — 29 sept 2026
 
 PageSpeed móvil daba 74 (escritorio 98). Cambios solo en `index.html` y `en/index.html`:

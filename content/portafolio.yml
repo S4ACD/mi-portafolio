@@ -1,0 +1,56 @@
+# Orden de los proyectos en cada página.
+# Los proyectos nuevos que todavía no estén en estas listas aparecen primero, del más reciente al más antiguo.
+# En /trabajo/ el proyecto marcado como "destacado" siempre va arriba, a ancho completo.
+inicio:
+  - orbidental
+  - onces
+  - diadent
+  - hushwork
+  - acelerarte
+  - double-notch
+  - eighteeth
+  - hay
+  - motofaro
+  - logofolio
+  - social-media-dental
+  - pulse-digital
+  - logofolio-ii
+  - fueggo
+  - la-jungla-club
+  - rebel-street
+trabajo:
+  - orbidental
+  - onces
+  - diadent
+  - hushwork
+  - acelerarte
+  - double-notch
+  - eighteeth
+  - hay
+  - motofaro
+  - logofolio
+  - social-media-dental
+  - pulse-digital
+  - logofolio-ii
+  - fueggo
+  - la-jungla-club
+  - rebel-street
+cv:
+  - orbidental
+  - social-media-dental
+  - onces
+  - motofaro
+  - hushwork
+  - acelerarte
+  - double-notch
+  - logofolio
+  - fueggo
+  - la-jungla-club
+  - logofolio-ii
+cv_dental:
+  - diadent
+  - eighteeth
+# Cuántos proyectos se muestran como máximo en el inicio (el resto vive en /trabajo/).
+max_inicio: 9
+# Cuántos proyectos se muestran como máximo en el CV.
+max_cv: 9

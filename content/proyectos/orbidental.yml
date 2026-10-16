@@ -1,0 +1,28 @@
+# Proyecto con página de caso propia (diseño a medida en /trabajo/orbidental/).
+es:
+  nombre: Orbidental
+  publicado: true
+  fecha: 2024-06-01
+  anio: '2024'
+  concepto: false
+  destacado: true
+  areas: [web, dental]
+  mostrar_en: [inicio, trabajo, cv]
+  pagina: propia
+  portada:
+    imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035692/P%C3%A1gina_de_inicio_hucq78.png
+    estilo: foto
+  alt: Página de inicio del e-commerce de Orbidental
+  resumen: Rediseño UX/UI y migración a código de un e-commerce B2B de más de 3.000 productos dentales, sin perder el posicionamiento.
+  disciplinas: [Web, UX/UI, SEO técnico]
+  resultado:
+    cifra: '40 → 97'
+    texto: PageSpeed en producción
+en:
+  nombre: Orbidental
+  alt: Orbidental e-commerce home page
+  resumen: UX/UI redesign and hand-coded migration of a B2B e-commerce site with 3,000+ dental products, keeping every ranking it had earned.
+  disciplinas: [Web, UX/UI, Technical SEO]
+  resultado:
+    cifra: '40 → 97'
+    texto: PageSpeed in production

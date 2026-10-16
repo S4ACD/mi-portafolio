@@ -1,0 +1,21 @@
+{
+  "name": "alexandercaro-portafolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio de Alexander Caro. Los proyectos viven en content/proyectos y se publican solos en inicio, /trabajo/ y CV (ES/EN).",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs --watch",
+    "preview": "node scripts/serve.mjs",
+    "check": "node scripts/build.mjs --check"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "js-yaml": "3.15.1",
+    "marked": "18.0.10",
+    "sharp": "0.35.4"
+  }
+}

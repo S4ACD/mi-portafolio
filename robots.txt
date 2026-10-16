@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
 
 # ── Motores de respuesta / IA — allow explícito (GEO) ──
 User-agent: GPTBot

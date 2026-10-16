@@ -1,0 +1,27 @@
+es:
+  nombre: DiaDent
+  publicado: true
+  fecha: 2026-03-01
+  anio: '2026'
+  concepto: false
+  destacado: false
+  areas: [branding, social, dental]
+  mostrar_en: [inicio, trabajo, cv_dental]
+  pagina: propia
+  portada:
+    imagen: /assets/dental/diadent/card-diadent-1200.jpg
+    estilo: foto
+  alt: 'Historias de lanzamiento de DiaDent: DIA-ROOT BIO MTA, DiaPrep Pro y e-Temp con el sistema de triángulos de la marca'
+  resumen: 'Branding de lanzamiento para una marca dental nueva en el portafolio de Orbidental: sistema visual, 8 historias y 8 videos.'
+  disciplinas: [Branding, Video, Sector dental]
+  resultado:
+    cifra: '16'
+    texto: piezas para 13 productos
+en:
+  nombre: DiaDent
+  alt: "DiaDent launch Stories: DIA-ROOT BIO MTA, DiaPrep Pro and e-Temp built on the brand's triangle system"
+  resumen: "Launch branding for a dental brand new to Orbidental's portfolio: a visual system, 8 Stories and 8 videos."
+  disciplinas: [Branding, Video, Dental industry]
+  resultado:
+    cifra: '16'
+    texto: assets for 13 products

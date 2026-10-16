@@ -1,0 +1,412 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+#
+# Panel de proyectos de alexandercaro.com  →  https://alexandercaro.com/admin/
+#
+# Cómo funciona: cada vez que guardas un proyecto, el panel hace un commit en
+# GitHub, Vercel detecta el cambio y reconstruye el sitio (1 o 2 minutos).
+# El proyecto aparece solo en el inicio, en /trabajo/ y en el CV, en ES y EN.
+
+backend:
+  name: github
+  repo: TU-USUARIO/TU-REPOSITORIO # ← cambia esto por tu repositorio, ej. alexandercaro/mi-portafolio
+  branch: main
+  commit_messages:
+    create: 'Proyecto nuevo: {{slug}}'
+    update: 'Proyecto actualizado: {{slug}}'
+    delete: 'Proyecto eliminado: {{slug}}'
+    uploadMedia: 'Imagen subida: {{path}}'
+    deleteMedia: 'Imagen eliminada: {{path}}'
+
+site_url: https://alexandercaro.com
+display_url: https://alexandercaro.com
+logo_url: https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_128/v1781101945/Favicon_jsl63r.webp
+
+# Las fotos se guardan en el repositorio. Al publicar, el build crea solo las
+# versiones AVIF / WebP / JPG en varios tamaños; no tienes que optimizarlas.
+media_folder: /uploads/proyectos
+public_folder: /uploads/proyectos
+media_libraries:
+  default:
+    config:
+      max_file_size: 20000000
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 90
+          width: 2600
+          height: 2600
+
+i18n:
+  structure: single_file
+  locales: [es, en]
+  default_locale: es
+  initial_locales: all
+
+collections:
+  # ─────────────────────────────── PROYECTOS ───────────────────────────────
+  - name: proyectos
+    label: Proyectos
+    label_singular: Proyecto
+    description: >-
+      Cada proyecto aparece automáticamente en el inicio, en /trabajo/ y en el CV,
+      en español e inglés. Escribe en español y usa el botón de traducir o
+      completa la pestaña EN.
+    icon: work
+    folder: /content/proyectos
+    extension: yml
+    format: yaml
+    create: true
+    delete: true
+    i18n: true
+    identifier_field: nombre
+    slug: '{{slug}}'
+    summary: '{{nombre}} ({{anio}})'
+    sortable_fields: [fecha, nombre, anio]
+    preview_path: trabajo/{{slug}}/
+    fields:
+      - name: nombre
+        label: Nombre del proyecto
+        hint: Se usa también para la URL. Ej. «ONCES» → alexandercaro.com/trabajo/onces/
+        required: [es]
+        i18n: true
+
+      # ── Publicación ──
+      - name: publicado
+        label: Publicado
+        hint: Apágalo para ocultar el proyecto sin borrarlo.
+        widget: boolean
+        default: true
+        i18n: duplicate
+      - name: fecha
+        label: Fecha
+        hint: Los proyectos nuevos aparecen primero, del más reciente al más antiguo.
+        widget: datetime
+        type: date
+        picker_utc: true
+        i18n: duplicate
+      - name: anio
+        label: Año que se muestra
+        hint: Ej. 2026
+        i18n: duplicate
+      - name: concepto
+        label: Concepto propio
+        hint: Actívalo si no hubo cliente real. Muestra la etiqueta «Concepto propio» y lo marca así para Google.
+        widget: boolean
+        default: false
+        i18n: duplicate
+      - name: destacado
+        label: Destacado en /trabajo/
+        hint: Aparece arriba, a ancho completo. Deja solo uno activado.
+        widget: boolean
+        default: false
+        i18n: duplicate
+      - name: areas
+        label: Áreas (filtros de /trabajo/)
+        widget: select
+        multiple: true
+        min: 1
+        i18n: duplicate
+        options:
+          - { label: Branding, value: branding }
+          - { label: Web, value: web }
+          - { label: Diseño gráfico, value: grafico }
+          - { label: Social media, value: social }
+          - { label: Sector dental, value: dental }
+      - name: mostrar_en
+        label: Mostrar en
+        widget: select
+        multiple: true
+        default: [inicio, trabajo, cv]
+        i18n: duplicate
+        options:
+          - { label: Inicio, value: inicio }
+          - { label: Trabajo (/trabajo/), value: trabajo }
+          - { label: 'CV: Portafolio', value: cv }
+          - { label: 'CV: Sector dental', value: cv_dental }
+      - name: pagina
+        label: Página del caso
+        hint: «Automática» crea la página del caso con los bloques de abajo. «Hecha a mano» es para los casos antiguos que ya tienen su propio HTML.
+        widget: select
+        default: plantilla
+        i18n: duplicate
+        options:
+          - { label: Automática (recomendado), value: plantilla }
+          - { label: Hecha a mano, value: propia }
+      - name: color
+        label: Color de la marca
+        hint: Fondo de la portada del caso y de «Siguiente proyecto». Usa el color principal de la marca que presentas.
+        widget: color
+        required: false
+        i18n: duplicate
+
+      # ── Portada ──
+      - name: portada
+        label: Portada
+        hint: La imagen de la tarjeta en el inicio, /trabajo/ y el CV.
+        widget: object
+        i18n: duplicate
+        fields:
+          - name: imagen
+            label: Imagen
+            hint: Horizontal, idealmente 2400 px de ancho. Puedes subirla o pegar una URL de Cloudinary.
+            widget: image
+            required: false
+            i18n: duplicate
+          - name: posicion
+            label: Encuadre
+            hint: Qué parte de la imagen se conserva cuando la tarjeta la recorta.
+            widget: select
+            required: false
+            default: center
+            i18n: duplicate
+            options:
+              - { label: Centro, value: center }
+              - { label: Arriba, value: top }
+              - { label: Abajo, value: bottom }
+              - { label: Izquierda, value: left }
+              - { label: Derecha, value: right }
+          - name: estilo
+            label: Tipo de portada
+            widget: select
+            default: foto
+            i18n: duplicate
+            options:
+              - { label: Imagen, value: foto }
+              - { label: Logotipo en texto (sin imagen), value: logotipo }
+          - { name: logotipo_texto, label: 'Logotipo: texto', required: false, i18n: duplicate }
+          - { name: logotipo_acento, label: 'Logotipo: parte en dorado', required: false, i18n: duplicate }
+          - { name: logotipo_resto, label: 'Logotipo: resto', required: false, i18n: duplicate }
+          - { name: fondo, label: 'Logotipo: color de fondo', widget: color, required: false, i18n: duplicate }
+
+      # ── Tarjeta ──
+      - name: alt
+        label: Descripción de la imagen de portada
+        hint: Para accesibilidad y Google. Describe lo que se ve, en una frase.
+        required: [es]
+        i18n: true
+      - name: resumen
+        label: Resumen
+        hint: Una o dos líneas. Aparece debajo del nombre en todas las tarjetas.
+        widget: text
+        required: [es]
+        i18n: true
+      - name: disciplinas
+        label: Disciplinas
+        hint: Ej. Branding, Packaging, Naming
+        widget: list
+        required: [es]
+        i18n: true
+      - name: resultado
+        label: Resultado (opcional)
+        hint: Se muestra en dorado. Ej. cifra «40 → 97», texto «PageSpeed en producción».
+        widget: object
+        required: false
+        i18n: true
+        fields:
+          - { name: cifra, label: Cifra, required: false, i18n: true }
+          - { name: texto, label: Texto, required: false, i18n: true }
+
+      # ── SEO ──
+      - name: seo
+        label: SEO de la página del caso
+        widget: object
+        required: false
+        i18n: true
+        fields:
+          - name: titulo
+            label: Título para Google
+            hint: Unos 60 caracteres. Ej. «ONCES — Identidad y packaging para una crepería | Alexander Caro»
+            required: false
+            i18n: true
+          - name: descripcion
+            label: Descripción para Google
+            hint: Unos 155 caracteres. Qué es el proyecto y qué lo hace distinto.
+            widget: text
+            required: false
+            i18n: true
+
+      # ── Página del caso ──
+      - name: caso
+        label: Página del caso
+        hint: Solo se usa si «Página del caso» es «Automática».
+        widget: object
+        required: false
+        i18n: true
+        fields:
+          - name: portada
+            label: Imagen principal del caso (opcional)
+            hint: Si la dejas vacía se usa la portada de la tarjeta.
+            widget: image
+            required: false
+            i18n: true
+          - name: intro
+            label: Introducción
+            hint: El párrafo grande bajo el nombre.
+            widget: text
+            required: false
+            i18n: true
+          - name: ficha
+            label: Ficha del proyecto
+            hint: Año y disciplinas se agregan solos. Ej. Rol, Entregables, Lugar.
+            widget: list
+            required: false
+            i18n: true
+            summary: '{{etiqueta}}: {{valor}}'
+            fields:
+              - { name: etiqueta, label: Dato, required: [es], i18n: true }
+              - { name: valor, label: Valor, required: [es], i18n: true }
+          - name: bloques
+            label: Contenido
+            hint: Arma la página con bloques y ordénalos arrastrando.
+            widget: list
+            required: false
+            i18n: true
+            typeKey: tipo
+            collapsed: auto
+            types:
+              - name: texto
+                label: Texto
+                summary: '{{titulo}}'
+                fields:
+                  - { name: titulo, label: Título, required: false, i18n: true }
+                  - { name: texto, label: Texto, widget: markdown, required: [es], i18n: true }
+              - name: imagen
+                label: Imagen
+                summary: '{{pie}}'
+                fields:
+                  - { name: imagen, label: Imagen, widget: image, required: [es], i18n: true }
+                  - { name: alt, label: Descripción de la imagen, required: [es], i18n: true }
+                  - { name: pie, label: Pie de foto, required: false, i18n: true }
+                  - name: ancho
+                    label: Ancho
+                    widget: select
+                    default: completo
+                    i18n: true
+                    options:
+                      - { label: Ancho del contenido, value: completo }
+                      - { label: De borde a borde, value: sangrado }
+              - name: galeria
+                label: Galería
+                summary: '{{titulo}}'
+                fields:
+                  - { name: titulo, label: Título (opcional), required: false, i18n: true }
+                  - name: columnas
+                    label: Columnas
+                    widget: select
+                    default: 2
+                    i18n: true
+                    options:
+                      - { label: '1', value: 1 }
+                      - { label: '2', value: 2 }
+                      - { label: '3', value: 3 }
+                      - { label: '4', value: 4 }
+                  - name: imagenes
+                    label: Imágenes
+                    widget: list
+                    i18n: true
+                    summary: '{{pie}}'
+                    fields:
+                      - { name: imagen, label: Imagen, widget: image, required: [es], i18n: true }
+                      - { name: alt, label: Descripción de la imagen, required: [es], i18n: true }
+                      - { name: pie, label: Pie de foto, required: false, i18n: true }
+                      - { name: texto, label: Texto extra bajo el pie, required: false, widget: text, i18n: true }
+              - name: cita
+                label: Cita grande
+                summary: '{{texto}}'
+                fields:
+                  - { name: texto, label: Frase, widget: text, required: [es], i18n: true }
+              - name: cifras
+                label: Cifras
+                fields:
+                  - name: items
+                    label: Cifras
+                    widget: list
+                    i18n: true
+                    summary: '{{cifra}} {{texto}}'
+                    fields:
+                      - { name: cifra, label: Cifra, required: [es], i18n: true }
+                      - { name: texto, label: Texto, required: [es], i18n: true }
+              - name: colores
+                label: Paleta de color
+                summary: '{{titulo}}'
+                fields:
+                  - { name: titulo, label: Título, required: false, i18n: true }
+                  - name: colores
+                    label: Colores
+                    widget: list
+                    i18n: true
+                    summary: '{{nombre}} {{hex}}'
+                    fields:
+                      - { name: nombre, label: Nombre, required: [es], i18n: true }
+                      - { name: hex, label: Color, widget: color, required: [es], i18n: true }
+                      - { name: proporcion, label: Proporción de uso (%), widget: number, required: false, i18n: true }
+          - name: creditos
+            label: Créditos
+            hint: Quién hizo qué. Si es un concepto propio o usaste IA para fotos, dilo aquí.
+            widget: markdown
+            required: false
+            i18n: true
+
+  # ─────────────────────────────── ORDEN ───────────────────────────────
+  - name: ajustes
+    label: Orden de proyectos
+    icon: reorder
+    files:
+      - name: portafolio
+        label: Orden en cada página
+        description: >-
+          Arrastra para ordenar. Si un proyecto nuevo no está en una lista,
+          aparece primero de todas formas; aquí solo afinas el orden.
+        file: /content/portafolio.yml
+        fields:
+          - name: inicio
+            label: Inicio
+            widget: relation
+            collection: proyectos
+            value_field: '{{slug}}'
+            search_fields: [nombre]
+            display_fields: [nombre]
+            multiple: true
+            required: false
+            dropdown_threshold: 1
+          - name: trabajo
+            label: Trabajo (/trabajo/)
+            widget: relation
+            collection: proyectos
+            value_field: '{{slug}}'
+            search_fields: [nombre]
+            display_fields: [nombre]
+            multiple: true
+            required: false
+            dropdown_threshold: 1
+          - name: cv
+            label: 'CV: Portafolio'
+            widget: relation
+            collection: proyectos
+            value_field: '{{slug}}'
+            search_fields: [nombre]
+            display_fields: [nombre]
+            multiple: true
+            required: false
+            dropdown_threshold: 1
+          - name: cv_dental
+            label: 'CV: Sector dental'
+            widget: relation
+            collection: proyectos
+            value_field: '{{slug}}'
+            search_fields: [nombre]
+            display_fields: [nombre]
+            multiple: true
+            required: false
+            dropdown_threshold: 1
+          - name: max_inicio
+            label: Máximo de proyectos en el inicio
+            widget: number
+            value_type: int
+            default: 9
+          - name: max_cv
+            label: Máximo de proyectos en el CV
+            widget: number
+            value_type: int
+            default: 9

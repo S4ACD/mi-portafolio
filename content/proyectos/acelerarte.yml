@@ -1,0 +1,27 @@
+es:
+  nombre: AcelerArte
+  publicado: true
+  fecha: 2026-01-15
+  anio: '2026'
+  concepto: false
+  destacado: false
+  areas: [grafico, branding]
+  mostrar_en: [inicio, trabajo, cv]
+  pagina: propia
+  portada:
+    imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-1_oyll2h.webp
+    estilo: foto
+  alt: Flyer de AcelerArte para una válida de motociclismo
+  resumen: Mi marca propia de flyers deportivos para motociclismo, con estética de competición que los pilotos repostean.
+  disciplinas: [Diseño gráfico, Motociclismo, Marca propia]
+  resultado:
+    cifra: '+5.300'
+    texto: visitas en 28 días
+en:
+  nombre: AcelerArte
+  alt: AcelerArte flyer for a motorcycle race
+  resumen: My own motorsport flyer brand, with race-grade aesthetics that riders actually repost.
+  disciplinas: [Graphic design, Motorsport, Own brand]
+  resultado:
+    cifra: '5,300+'
+    texto: visits in 28 days

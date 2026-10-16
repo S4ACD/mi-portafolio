@@ -1,0 +1,301 @@
+# Proyecto con página generada automáticamente desde esta ficha.
+es:
+  publicado: true
+  fecha: '2026-10-08'
+  anio: '2026'
+  concepto: true
+  destacado: false
+  areas:
+  - branding
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
+  color: '#F2F0EB'
+  portada:
+    imagen: /uploads/proyectos/logofolio/portada.jpg
+    estilo: foto
+  nombre: Logofolio I
+  alt: Mosaico de logos del Logofolio I
+  resumen: Veinte marcas ficticias en cinco sectores, cada logo construido a partir de un detalle real del oficio o del lugar.
+  disciplinas:
+  - Logotipos
+  - Branding
+  - Lettering
+  resultado:
+    cifra: '20'
+    texto: marcas con concepto propio
+  seo:
+    titulo: Logofolio I — 20 marcas con concepto propio | Alexander Caro
+    descripcion: Veinte logos de marcas ficticias en cinco sectores, de una filigranera en Mompox a una clínica para gatos en Montevideo. Cada uno nace de un detalle del oficio o del lugar.
+  caso:
+    intro: 'Veinte marcas ficticias en cinco sectores. La regla para todas fue la misma: el logo tiene que salir del oficio o del lugar, nunca de una plantilla. Una placa de filigrana en Mompox, una coma en un contrato, la bola de cedro de una bodega de sake.'
+    ficha:
+    - etiqueta: Rol
+      valor: Naming, concepto y diseño de logotipo
+    - etiqueta: Entregables
+      valor: 20 logos con versiones, paleta, tipografía y aplicación
+    bloques:
+    - tipo: galeria
+      columnas: 4
+      titulo: Lujo y elegancia
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-01.jpg
+        alt: Logo de Hilera, filigrana momposina en Mompox, Colombia
+        pie: '**Hilera**. Filigrana momposina, Mompox, Colombia'
+        texto: El nombre atraviesa la hilera, la placa de acero con que las filigraneras adelgazan la plata hasta volverla hilo.
+      - imagen: /uploads/proyectos/logofolio/marca-02.jpg
+        alt: Logo de Sondhi, mitti attar en Kannauj, India
+        pie: '**Sondhi**. Mitti attar, Kannauj, India'
+        texto: 'La palabra está escrita en las grietas del estanque seco: el instante antes de la primera lluvia que la casa embotella.'
+      - imagen: /uploads/proyectos/logofolio/marca-03.jpg
+        alt: Logo de Gereh, alfombras anudadas a mano en Kashán, Irán
+        pie: '**Gereh**. Alfombras anudadas a mano, Kashán, Irán'
+        texto: 'La G no está escrita, está tejida: un solo hilo pasa por encima y por debajo de las urdimbres, como en el telar.'
+      - imagen: /uploads/proyectos/logofolio/marca-04.jpg
+        alt: Logo de Contrapeso, hotel de nueve habitaciones en Valparaíso, Chile
+        pie: '**Contrapeso**. Hotel de nueve habitaciones, Valparaíso, Chile'
+        texto: 'Las dos palabras son los carros del ascensor colgados del mismo cable: cuando uno sube, el otro baja.'
+    - tipo: galeria
+      columnas: 4
+      titulo: Streetwear y cultura urbana
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-05.jpg
+        alt: Logo de BAM, ropa que solo abre de noche en Euljiro, Seúl
+        pie: '**BAM**. Ropa que solo abre de noche, Euljiro, Seúl'
+        texto: Un lector latino ve BAM; uno coreano reconoce 밤, «noche», armado en un solo bloque silábico.
+      - imagen: /uploads/proyectos/logofolio/marca-06.jpg
+        alt: Logo de Lau, ropa de la hija de un rotulista en Sham Shui Po, Hong Kong
+        pie: '**Lau**. Ropa de la hija de un rotulista, Sham Shui Po, Hong Kong'
+        texto: Un solo tubo de neón escribe el nombre de corrido; los tramos que no deben encenderse se pintan de negro.
+      - imagen: /uploads/proyectos/logofolio/marca-07.jpg
+        alt: Logo de Tope, marca de skate en Barcelona, España
+        pie: '**Tope**. Marca de skate, Barcelona, España'
+        texto: Las letras son un bordillo con los topes que la ciudad atornilla para que nadie patine. A uno lo arrancaron.
+      - imagen: /uploads/proyectos/logofolio/marca-08.jpg
+        alt: Logo de Téci, ropa de barrio en Saint-Denis, Francia
+        pie: '**Téci**. Ropa de barrio, Saint-Denis, Francia'
+        texto: 'En verlan las sílabas se dicen al revés: CITÉ se vuelve TÉCI. El logo muestra el corte.'
+    - tipo: galeria
+      columnas: 4
+      titulo: Corporativo y tecnología
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-09.jpg
+        alt: Logo de Cifuentes, Lara, litigio contractual en Bogotá, Colombia
+        pie: '**Cifuentes, Lara**. Litigio contractual, Bogotá, Colombia'
+        texto: Las socias ganaron su primer caso por una coma; la que separa sus apellidos es la firma de la firma.
+      - imagen: /uploads/proyectos/logofolio/marca-10.jpg
+        alt: Logo de Ocho, operador logístico portuario en Cartagena, Colombia
+        pie: '**Ocho**. Operador logístico portuario, Cartagena, Colombia'
+        texto: Todo contenedor se sostiene en ocho esquineros de acero. En el logo, las O son esos esquineros.
+      - imagen: /uploads/proyectos/logofolio/marca-11.jpg
+        alt: Logo de Partida, contabilidad para tiendas de barrio en Medellín, Colombia
+        pie: '**Partida**. Contabilidad para tiendas de barrio, Medellín, Colombia'
+        texto: La T es una cuenta T, el esquema con que todo contador aprende la partida doble.
+      - imagen: /uploads/proyectos/logofolio/marca-12.jpg
+        alt: Logo de Sal, ciberseguridad en Montevideo, Uruguay
+        pie: '**Sal**. Ciberseguridad, Montevideo, Uruguay'
+        texto: En criptografía, la sal es el dato aleatorio que se mezcla con cada contraseña. La marca lleva su pizca.
+    - tipo: galeria
+      columnas: 4
+      titulo: Gastronomía y bebidas
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-13.jpg
+        alt: Logo de Arroba, tostador de café de finca en Manizales, Colombia
+        pie: '**Arroba**. Tostador de café de finca, Manizales, Colombia'
+        texto: 'Antes del correo, @ abreviaba la arroba: 12,5 kg, la unidad con que se sigue pagando el café en Colombia.'
+      - imagen: /uploads/proyectos/logofolio/marca-14.jpg
+        alt: Logo de Repulgue, empanadas salteñas en Salta, Argentina
+        pie: '**Repulgue**. Empanadas salteñas, Salta, Argentina'
+        texto: En el norte argentino el borde plegado dice de qué es cada empanada. La palabra corre sobre ese borde.
+      - imagen: /uploads/proyectos/logofolio/marca-15.jpg
+        alt: Logo de Sugi, sake de una sola bodega en Niigata, Japón
+        pie: '**Sugi**. Sake de una sola bodega, Niigata, Japón'
+        texto: 'Las bodegas cuelgan una bola de cedro: verde con el sake nuevo, parda cuando ya maduró.'
+      - imagen: /uploads/proyectos/logofolio/marca-16.jpg
+        alt: Logo de Vaivén, cantina en Centro Histórico, Ciudad de México
+        pie: '**Vaivén**. Cantina, Centro Histórico, Ciudad de México'
+        texto: Desde arriba, las puertas de cantina dibujan una V; la segunda sigue meciéndose porque alguien acaba de entrar.
+    - tipo: galeria
+      columnas: 4
+      titulo: Salud, deporte y movilidad
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-17.jpg
+        alt: Logo de Oclusal, clínica dental en Quito, Ecuador
+        pie: '**Oclusal**. Clínica dental, Quito, Ecuador'
+        texto: 'Ni dientes ni sonrisas: la celda del odontograma con sus cinco caras, con la oclusal marcada al centro.'
+      - imagen: /uploads/proyectos/logofolio/marca-18.jpg
+        alt: Logo de Imperdible, club de corredores en València, España
+        pie: '**Imperdible**. Club de corredores, València, España'
+        texto: 'El dorsal no está dibujado: lo sostienen cuatro imperdibles torcidos, como los pone cualquiera antes de salir.'
+      - imagen: /uploads/proyectos/logofolio/marca-19.jpg
+        alt: Logo de Parpadeo, clínica solo para gatos en Montevideo, Uruguay
+        pie: '**Parpadeo**. Clínica solo para gatos, Montevideo, Uruguay'
+        texto: Cuando un gato cierra los ojos despacio frente a alguien, le dice que confía. La clínica toma ese gesto como firma.
+      - imagen: /uploads/proyectos/logofolio/marca-20.jpg
+        alt: Logo de La Pata, taller y punto de encuentro motero en Bogotá, Colombia
+        pie: '**La Pata**. Taller y punto de encuentro motero, Bogotá, Colombia'
+        texto: Vista de atrás, una moto parqueada es una línea inclinada que descansa en su pata. La l hace lo mismo.
+    - tipo: texto
+      titulo: Cada marca, como sistema
+      texto: 'Ninguna marca se queda en el logo: cada una tiene versión en positivo, una tinta, invertida y reducida a 16 px, paleta con valores CMYK, tipografía y una aplicación real.'
+    - tipo: galeria
+      columnas: 1
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/pagina-1.jpg
+        alt: Página 1 del logofolio con paleta, tipografía y aplicación de cada marca
+      - imagen: /uploads/proyectos/logofolio/pagina-2.jpg
+        alt: Página 2 del logofolio con paleta, tipografía y aplicación de cada marca
+      - imagen: /uploads/proyectos/logofolio/pagina-3.jpg
+        alt: Página 3 del logofolio con paleta, tipografía y aplicación de cada marca
+      - imagen: /uploads/proyectos/logofolio/pagina-4.jpg
+        alt: Página 4 del logofolio con paleta, tipografía y aplicación de cada marca
+      - imagen: /uploads/proyectos/logofolio/pagina-5.jpg
+        alt: Página 5 del logofolio con paleta, tipografía y aplicación de cada marca
+    creditos: |-
+      Concepto, naming y diseño: Alexander Caro.
+
+      Todas las marcas son ficticias, creadas como conceptos de autor. No representan negocios reales.
+en:
+  nombre: Logofolio I
+  alt: Logofolio I logo mosaic
+  resumen: Twenty fictional brands across five industries, each logo built from a real detail of the craft or the place.
+  disciplinas:
+  - Logo design
+  - Branding
+  - Lettering
+  resultado:
+    cifra: '20'
+    texto: brands, each with its own concept
+  seo:
+    titulo: Logofolio I — 20 Brands, Each With Its Own Concept | Alexander Caro
+    descripcion: Twenty logos for fictional brands across five industries, from a filigree maker in Mompox to a cats-only clinic in Montevideo. Each one grows from a detail of the craft or the place.
+  caso:
+    intro: 'Twenty fictional brands across five industries. The rule was the same for all of them: the logo has to come from the craft or the place, never from a template. A filigree draw plate in Mompox, a comma in a contract, the cedar ball outside a sake brewery.'
+    ficha:
+    - etiqueta: Role
+      valor: Naming, concept and logo design
+    - etiqueta: Deliverables
+      valor: 20 logos with versions, palette, typography and application
+    bloques:
+    - tipo: galeria
+      columnas: 4
+      titulo: Luxury
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-01.jpg
+        alt: Hilera logo, filigree jewelry in Mompox, Colombia
+        pie: '**Hilera**. Filigree jewelry, Mompox, Colombia'
+        texto: The name runs through the draw plate filigree makers use to thin silver into wire.
+      - imagen: /uploads/proyectos/logofolio/marca-02.jpg
+        alt: Sondhi logo, mitti attar perfume in Kannauj, India
+        pie: '**Sondhi**. Mitti attar perfume, Kannauj, India'
+        texto: 'The word is written in the cracks of a dry pond: the moment before the first rain, which is what the house bottles.'
+      - imagen: /uploads/proyectos/logofolio/marca-03.jpg
+        alt: Gereh logo, hand-knotted rugs in Kashan, Iran
+        pie: '**Gereh**. Hand-knotted rugs, Kashan, Iran'
+        texto: 'The G isn''t written, it''s woven: a single thread goes over and under the warp, like on the loom.'
+      - imagen: /uploads/proyectos/logofolio/marca-04.jpg
+        alt: Contrapeso logo, nine-room hotel in Valparaíso, Chile
+        pie: '**Contrapeso**. Nine-room hotel, Valparaíso, Chile'
+        texto: 'The two words are the funicular cars on one cable: when one goes up, the other comes down.'
+    - tipo: galeria
+      columnas: 4
+      titulo: Streetwear and urban culture
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-05.jpg
+        alt: BAM logo, clothing that only opens at night in Euljiro, Seoul
+        pie: '**BAM**. Clothing that only opens at night, Euljiro, Seoul'
+        texto: A Latin reader sees BAM; a Korean reader sees 밤, “night”, built as a single syllable block.
+      - imagen: /uploads/proyectos/logofolio/marca-06.jpg
+        alt: Lau logo, a sign painter's daughter's clothing in Sham Shui Po, Hong Kong
+        pie: '**Lau**. A sign painter''s daughter''s clothing, Sham Shui Po, Hong Kong'
+        texto: A single neon tube writes the whole name; the stretches that shouldn't glow are painted black.
+      - imagen: /uploads/proyectos/logofolio/marca-07.jpg
+        alt: Tope logo, skate brand in Barcelona, Spain
+        pie: '**Tope**. Skate brand, Barcelona, Spain'
+        texto: The letters are a curb with the skate stoppers the city bolts on. One has been ripped off.
+      - imagen: /uploads/proyectos/logofolio/marca-08.jpg
+        alt: Téci logo, neighborhood clothing in Saint-Denis, France
+        pie: '**Téci**. Neighborhood clothing, Saint-Denis, France'
+        texto: 'In verlan, syllables are flipped: CITÉ becomes TÉCI. The logo shows the cut.'
+    - tipo: galeria
+      columnas: 4
+      titulo: Corporate and tech
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-09.jpg
+        alt: Cifuentes, Lara logo, contract litigation in Bogotá, Colombia
+        pie: '**Cifuentes, Lara**. Contract litigation, Bogotá, Colombia'
+        texto: The partners won their first case over a comma; the one between their surnames is the firm's signature.
+      - imagen: /uploads/proyectos/logofolio/marca-10.jpg
+        alt: Ocho logo, port logistics operator in Cartagena, Colombia
+        pie: '**Ocho**. Port logistics operator, Cartagena, Colombia'
+        texto: Every container rests on eight steel corner castings. In the logo, the Os are those corners.
+      - imagen: /uploads/proyectos/logofolio/marca-11.jpg
+        alt: Partida logo, bookkeeping for corner stores in Medellín, Colombia
+        pie: '**Partida**. Bookkeeping for corner stores, Medellín, Colombia'
+        texto: The T is a T-account, the diagram every accountant learns double-entry with.
+      - imagen: /uploads/proyectos/logofolio/marca-12.jpg
+        alt: Sal logo, cybersecurity in Montevideo, Uruguay
+        pie: '**Sal**. Cybersecurity, Montevideo, Uruguay'
+        texto: In cryptography, salt is the random data mixed into each password. The brand gets its pinch.
+    - tipo: galeria
+      columnas: 4
+      titulo: Food and drink
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-13.jpg
+        alt: Arroba logo, single-farm coffee roaster in Manizales, Colombia
+        pie: '**Arroba**. Single-farm coffee roaster, Manizales, Colombia'
+        texto: 'Before email, @ stood for the arroba: 12.5 kg, the unit coffee is still paid in across Colombia.'
+      - imagen: /uploads/proyectos/logofolio/marca-14.jpg
+        alt: Repulgue logo, salteña empanadas in Salta, Argentina
+        pie: '**Repulgue**. Salteña empanadas, Salta, Argentina'
+        texto: In northern Argentina, the crimped edge tells you each empanada's filling. The word runs along that edge.
+      - imagen: /uploads/proyectos/logofolio/marca-15.jpg
+        alt: Sugi logo, single-brewery sake in Niigata, Japan
+        pie: '**Sugi**. Single-brewery sake, Niigata, Japan'
+        texto: 'Breweries hang a cedar ball: green when the new sake is out, brown once it has matured.'
+      - imagen: /uploads/proyectos/logofolio/marca-16.jpg
+        alt: Vaivén logo, cantina in Historic Center, Mexico City
+        pie: '**Vaivén**. Cantina, Historic Center, Mexico City'
+        texto: From above, swinging cantina doors draw a V; the second one is still moving because someone just walked in.
+    - tipo: galeria
+      columnas: 4
+      titulo: Health, sport and mobility
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/marca-17.jpg
+        alt: Oclusal logo, dental clinic in Quito, Ecuador
+        pie: '**Oclusal**. Dental clinic, Quito, Ecuador'
+        texto: 'No teeth, no smiles: the dental chart cell with its five surfaces, the occlusal one marked in the middle.'
+      - imagen: /uploads/proyectos/logofolio/marca-18.jpg
+        alt: Imperdible logo, running club in València, Spain
+        pie: '**Imperdible**. Running club, València, Spain'
+        texto: 'The race bib isn''t drawn: four crooked safety pins hold it up, the way everyone pins one on.'
+      - imagen: /uploads/proyectos/logofolio/marca-19.jpg
+        alt: Parpadeo logo, cats-only vet clinic in Montevideo, Uruguay
+        pie: '**Parpadeo**. Cats-only vet clinic, Montevideo, Uruguay'
+        texto: When a cat slowly closes its eyes at someone, it's saying it trusts them. The clinic signs with that gesture.
+      - imagen: /uploads/proyectos/logofolio/marca-20.jpg
+        alt: La Pata logo, motorcycle garage and meeting spot in Bogotá, Colombia
+        pie: '**La Pata**. Motorcycle garage and meeting spot, Bogotá, Colombia'
+        texto: From behind, a parked motorcycle is a slanted line resting on its kickstand. The l does the same.
+    - tipo: texto
+      titulo: Each brand, as a system
+      texto: 'No brand stops at the logo: each one has positive, one-color, inverted and 16 px versions, a palette with CMYK values, typography and a real application.'
+    - tipo: galeria
+      columnas: 1
+      imagenes:
+      - imagen: /uploads/proyectos/logofolio/pagina-1.jpg
+        alt: Logofolio page 1 with palette, typography and application for each brand
+      - imagen: /uploads/proyectos/logofolio/pagina-2.jpg
+        alt: Logofolio page 2 with palette, typography and application for each brand
+      - imagen: /uploads/proyectos/logofolio/pagina-3.jpg
+        alt: Logofolio page 3 with palette, typography and application for each brand
+      - imagen: /uploads/proyectos/logofolio/pagina-4.jpg
+        alt: Logofolio page 4 with palette, typography and application for each brand
+      - imagen: /uploads/proyectos/logofolio/pagina-5.jpg
+        alt: Logofolio page 5 with palette, typography and application for each brand
+    creditos: |-
+      Concept, naming and design: Alexander Caro.
+
+      Every brand is fictional, created as an author concept. None of them is a real business.

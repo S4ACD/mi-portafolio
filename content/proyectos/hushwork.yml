@@ -1,0 +1,220 @@
+# Proyecto con página generada automáticamente desde esta ficha.
+es:
+  publicado: true
+  fecha: '2026-10-12'
+  anio: '2026'
+  concepto: true
+  destacado: false
+  areas:
+  - branding
+  - web
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
+  color: '#1C1D1F'
+  portada:
+    imagen: /uploads/proyectos/hushwork/portada.jpg
+    estilo: foto
+  nombre: Hushwork
+  alt: Camioneta blanca de Hushwork con un gran «Shh.» frente a un edificio de condos
+  resumen: 'Identidad bilingüe para una remodeladora de condos en Houston y Miami que promete lo que nadie vende: obras que no se oyen.'
+  disciplinas:
+  - Branding
+  - Voz bilingüe
+  - Landing page
+  seo:
+    titulo: Hushwork — Identidad para una remodeladora de condos en Houston y Miami | Alexander Caro
+    descripcion: 'Proyecto conceptual: marca bilingüe para una empresa de remodelación de padre e hijo. Logo, voz en inglés y español, camioneta, uniformes, door hanger, cotización y landing page.'
+  caso:
+    intro: 'Remodelar un condo no es un problema de diseño, es un problema de vecinos. Hushwork es una empresa ficticia de padre e hijo que compite contra franquicias nacionales con una promesa simple: el resultado se nota, el proceso no se oye.'
+    ficha:
+    - etiqueta: Rol
+      valor: Estrategia, identidad, voz bilingüe y landing page
+    - etiqueta: Entregables
+      valor: Manual de marca, aplicaciones de calle y obra, cotización y landing en escritorio y móvil
+    - etiqueta: Mercado
+      valor: Houston y Miami, en inglés y español
+    bloques:
+    - tipo: texto
+      titulo: El insight
+      texto: |-
+        Al dueño de un condo le preocupan la HOA, el ruido, el polvo en el pasillo y la relación con los vecinos. Las franquicias venden escala; nadie le vende tranquilidad al vecino de al lado.
+
+        Ese es el espacio de la marca: «Loud results. Quiet work.», resultados que se notan y obras que no se oyen.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/hushwork/shh.jpg
+      alt: El «Shh.» de Hushwork como concepto de marca
+      pie: El concepto en una sílaba.
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/hushwork/logo.jpg
+        alt: Logo de Hushwork con su punto final cuadrado
+        pie: 'Un punto final cuadrado en violeta: silencio y trabajo terminado. Es el único color del logo.'
+      - imagen: /uploads/proyectos/hushwork/versiones.jpg
+        alt: Variaciones del logo de Hushwork
+        pie: Horizontal, apilada, isotipo «h.» y versiones a una tinta.
+    - tipo: colores
+      titulo: Paleta y proporción de uso
+      colores:
+      - nombre: Plaster
+        hex: '#F2F0EB'
+        proporcion: 55
+      - nombre: Ink
+        hex: '#1C1D1F'
+        proporcion: 30
+      - nombre: Concrete
+        hex: '#A7A39B'
+        proporcion: 10
+      - nombre: Hush Violet
+        hex: '#7B61FF'
+        proporcion: 5
+    - tipo: texto
+      titulo: Una voz, dos idiomas
+      texto: |-
+        El inglés va primero y el español va después con el mismo tamaño y peso, nunca como traducción pequeña en cursiva. Se adapta en vez de traducir: «Loud results. Quiet work.» se vuelve «Resultados que se notan. Obras que no se oyen.»
+
+        Frases cortas, humor seco y datos concretos: «Reporte del día 9: la baldosa llegó partida. El nuevo lote llega el jueves. Tu fecha se mantiene.»
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /uploads/proyectos/hushwork/yard-sign.jpg
+        alt: Yard sign de Hushwork frente a una casa
+        pie: 'El yard sign le promete al vecino lo que más teme: que no habrá ruido.'
+      - imagen: /uploads/proyectos/hushwork/uniformes.jpg
+        alt: 'Uniformes de Hushwork: camiseta, polo y gorra'
+        pie: Polo yeso para cotizar, camiseta Ink para la obra.
+      - imagen: /uploads/proyectos/hushwork/kit-de-obra.jpg
+        alt: Kit de obra con cinta, protectores de calzado y tarjeta de bienvenida
+        pie: 'El kit de obra: cinta, protectores y «Welcome home».'
+      - imagen: /uploads/proyectos/hushwork/ascensor.jpg
+        alt: Pantalla de ascensor con el mensaje de Hushwork
+        pie: El ascensor que habla.
+      - imagen: /uploads/proyectos/hushwork/antes-despues.jpg
+        alt: Antes y después de un baño renovado por Hushwork
+        pie: Antes y después, con luz de mañana y el espacio terminado y vacío.
+      - imagen: /uploads/proyectos/hushwork/tarjeta-door-hanger.jpg
+        alt: Tarjeta de presentación y door hanger de Hushwork
+        pie: El door hanger convierte la queja del vecino en un canal de clientes.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/hushwork/cotizacion.jpg
+      alt: Cotización de Hushwork con desglose y calendario de 21 días
+      pie: 'La cotización ata el segundo pago a la prueba de impermeabilización: el cliente paga contra resultados, no contra fechas.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/hushwork/landing.jpg
+        alt: Landing page de Hushwork en escritorio
+        pie: Landing en escritorio.
+      - imagen: /uploads/proyectos/hushwork/landing-movil.jpg
+        alt: Landing page de Hushwork en móvil
+        pie: Y en móvil.
+    creditos: |-
+      Estrategia, identidad, voz y diseño de landing: Alexander Caro.
+
+      Proyecto conceptual: Hushwork, sus fundadores y sus clientes son ficticios. La fotografía base de los mockups se generó con IA; el logo, los gráficos y el sistema de marca son diseño propio.
+en:
+  nombre: Hushwork
+  alt: White Hushwork pickup with a large “Shh.” outside a condo building
+  resumen: 'A bilingual identity for a condo renovation company in Houston and Miami that promises what nobody sells: work you never hear.'
+  disciplinas:
+  - Branding
+  - Bilingual voice
+  - Landing page
+  seo:
+    titulo: Hushwork — Identity for a Condo Renovation Company in Houston and Miami | Alexander Caro
+    descripcion: 'Concept project: a bilingual brand for a father-and-son renovation company. Logo, English and Spanish voice, truck, uniforms, door hanger, quote and landing page.'
+  caso:
+    intro: 'Renovating a condo isn''t a design problem, it''s a neighbor problem. Hushwork is a fictional father-and-son company competing with national franchises on one simple promise: you''ll notice the results, not the work.'
+    ficha:
+    - etiqueta: Role
+      valor: Strategy, identity, bilingual voice and landing page
+    - etiqueta: Deliverables
+      valor: Brand manual, street and on-site applications, quote and landing page for desktop and mobile
+    - etiqueta: Market
+      valor: Houston and Miami, in English and Spanish
+    bloques:
+    - tipo: texto
+      titulo: The insight
+      texto: |-
+        Condo owners worry about the HOA, noise, hallway dust and their neighbors. Franchises sell scale; nobody sells peace of mind to the people next door.
+
+        That is the brand's space: "Loud results. Quiet work."
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/hushwork/shh.jpg
+      alt: The Hushwork “Shh.” as brand concept
+      pie: The concept in one syllable.
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/hushwork/logo.jpg
+        alt: Hushwork logo with its square period
+        pie: 'A violet square period: silence and finished work. It is the only color in the logo.'
+      - imagen: /uploads/proyectos/hushwork/versiones.jpg
+        alt: Hushwork logo variations
+        pie: Horizontal, stacked, the “h.” icon and one-color versions.
+    - tipo: colores
+      titulo: Palette and proportion of use
+      colores:
+      - nombre: Plaster
+        hex: '#F2F0EB'
+        proporcion: 55
+      - nombre: Ink
+        hex: '#1C1D1F'
+        proporcion: 30
+      - nombre: Concrete
+        hex: '#A7A39B'
+        proporcion: 10
+      - nombre: Hush Violet
+        hex: '#7B61FF'
+        proporcion: 5
+    - tipo: texto
+      titulo: One voice, two languages
+      texto: |-
+        English comes first and Spanish follows at the same size and weight, never as a small italic translation. Lines are adapted, not translated.
+
+        Short sentences, dry humor and hard facts: "Day 9 update: the tile arrived cracked. New batch lands Thursday. Your finish date holds."
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /uploads/proyectos/hushwork/yard-sign.jpg
+        alt: Hushwork yard sign outside a house
+        pie: 'The yard sign promises neighbors what they fear most: no noise.'
+      - imagen: /uploads/proyectos/hushwork/uniformes.jpg
+        alt: 'Hushwork uniforms: tee, polo and cap'
+        pie: Plaster polo for quotes, Ink tee for the job site.
+      - imagen: /uploads/proyectos/hushwork/kit-de-obra.jpg
+        alt: Job-site kit with tape, shoe covers and a welcome card
+        pie: 'The job-site kit: tape, shoe covers and “Welcome home”.'
+      - imagen: /uploads/proyectos/hushwork/ascensor.jpg
+        alt: Elevator screen with a Hushwork message
+        pie: The elevator that talks.
+      - imagen: /uploads/proyectos/hushwork/antes-despues.jpg
+        alt: Before and after of a bathroom renovated by Hushwork
+        pie: Before and after, in morning light with the finished space empty.
+      - imagen: /uploads/proyectos/hushwork/tarjeta-door-hanger.jpg
+        alt: Hushwork business card and door hanger
+        pie: The door hanger turns the neighbors' biggest complaint into a lead channel.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/hushwork/cotizacion.jpg
+      alt: Hushwork quote with line items and a 21-day schedule
+      pie: 'The quote ties the second payment to the waterproofing test: clients pay for results, not dates.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/hushwork/landing.jpg
+        alt: Hushwork landing page on desktop
+        pie: Landing page on desktop.
+      - imagen: /uploads/proyectos/hushwork/landing-movil.jpg
+        alt: Hushwork landing page on mobile
+        pie: And on mobile.
+    creditos: |-
+      Strategy, identity, voice and landing page design: Alexander Caro.
+
+      Concept project: Hushwork, its founders and its clients are fictional. Base mockup photography was generated with AI; the logo, graphics and brand system are my own design.

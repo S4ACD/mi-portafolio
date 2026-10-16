@@ -1,0 +1,231 @@
+# Proyecto con página generada automáticamente desde esta ficha.
+es:
+  publicado: true
+  fecha: '2026-10-11'
+  anio: '2026'
+  concepto: true
+  destacado: false
+  areas:
+  - branding
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
+  color: '#2F3322'
+  portada:
+    imagen: /uploads/proyectos/double-notch/portada.jpg
+    estilo: foto
+  nombre: Double Notch
+  alt: Logo de Double Notch sobre una calle del Garment District de Nueva York de noche
+  resumen: Marca de streetwear nacida del vocabulario de los cortadores del Garment District de Nueva York, con su primer drop de 8 piezas.
+  disciplinas:
+  - Branding
+  - Producto
+  - Dirección de arte
+  resultado:
+    cifra: '8'
+    texto: piezas en el Drop 001
+  seo:
+    titulo: Double Notch — Identidad de streetwear y Drop 001 | Alexander Caro
+    descripcion: 'Proyecto conceptual: una marca de streetwear de Nueva York construida con el lenguaje de los cortadores del Garment District. Logotipo dibujado, sistema y un drop de 8 piezas.'
+  caso:
+    intro: Una marca de Nueva York que pudiera lanzar mañana, sin skyline, sin taxi y sin «NYC» universitario. La respuesta estaba en West 38th Street, en el vocabulario privado de quienes todavía cortan y cosen en el Garment District.
+    ficha:
+    - etiqueta: Rol
+      valor: Estrategia, naming, logotipo, sistema, diseño de producto y dirección de arte
+    - etiqueta: Entregables
+      valor: 'Identidad completa y Drop 001: hoodie, camiseta, gorra, bandana, etiquetas, bolsa y un vinilo de 7"'
+    - etiqueta: Lugar
+      valor: Garment District, Nueva York
+    bloques:
+    - tipo: texto
+      titulo: El insight
+      texto: |-
+        Cada pieza de patrón lleva pequeños cortes triangulares para que las costureras sepan cómo se unen. Un piquete marca el frente; dos marcan la espalda.
+
+        Double Notch es la marca para los que te cubren la espalda: los cortadores, los que empujan los carros, el turno de noche.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/double-notch/logo.jpg
+      alt: Logotipo apilado de Double Notch
+      pie: 'Logotipo dibujado: dos cortes de 6 × 6 en la barra superior de la O.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/double-notch/construccion.jpg
+        alt: Construcción del logotipo de Double Notch en retícula
+        pie: Módulo de 14 unidades, esquinas de un cuarto de círculo y cada borde sobre la retícula.
+      - imagen: /uploads/proyectos/double-notch/versiones.jpg
+        alt: Versiones del logotipo de Double Notch
+        pie: Positivo, negativo, una tinta y área de reserva.
+    - tipo: colores
+      titulo: Paleta y proporción de uso
+      colores:
+      - nombre: Oliva profundo
+        hex: '#2F3322'
+        proporcion: 50
+      - nombre: Hueso
+        hex: '#E8DFC8'
+        proporcion: 30
+      - nombre: Cuero
+        hex: '#7A4E2D'
+        proporcion: 10
+      - nombre: Mostaza tiza
+        hex: '#C79A3B'
+        proporcion: 5
+      - nombre: Carbón
+        hex: '#171712'
+        proporcion: 5
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/double-notch/tipografia.jpg
+        alt: Tipografía de Double Notch
+        pie: Lora para la voz, como las notas de un disco de jazz de los 60; Inter para tallas, lotes y precios.
+      - imagen: /uploads/proyectos/double-notch/patron.jpg
+        alt: Patrón de marcada de corte de Double Notch
+        pie: El patrón es una marcada de corte dibujada en repetición.
+    - tipo: texto
+      titulo: Drop 001
+      texto: |-
+        Ocho piezas donde la gráfica aparece cuando te alejas. El hoodie lleva impreso en la espalda su propio patrón; la camiseta, su marcada de corte completa. «Compra una camiseta, ponte el plano de la camiseta.»
+
+        El coleccionable es un vinilo de 7" grabado por una sola cara, solo lado B, numerado del 001 al 250: la idea de marca convertida en objeto.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /uploads/proyectos/double-notch/hoodie.jpg
+        alt: Back Piece Hoodie oliva sobre una mesa de corte
+        pie: 'Back Piece Hoodie: callado al frente.'
+      - imagen: /uploads/proyectos/double-notch/camiseta.jpg
+        alt: Marker Tee vista de espalda en un taller
+        pie: 'Marker Tee: ponte el plano.'
+      - imagen: /uploads/proyectos/double-notch/gorra.jpg
+        alt: Cutter’s Six-Panel color cuero
+        pie: Cutter’s Six-Panel con el isotipo bordado.
+      - imagen: /uploads/proyectos/double-notch/etiqueta.jpg
+        alt: Etiqueta colgante con ticket de lote firmado
+        pie: Cada pieza sale como un lote firmado.
+      - imagen: /uploads/proyectos/double-notch/bolsa.jpg
+        alt: Bolsa Back Room con el doble piquete troquelado
+        pie: El piquete está cortado, no impreso.
+      - imagen: /uploads/proyectos/double-notch/vinilo.jpg
+        alt: Vinilo Back Piece Sessions de 7 pulgadas
+        pie: Un disco sin lado A.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/double-notch/calle.jpg
+      alt: Persona con el hoodie de Double Notch caminando de noche por West 38th Street
+      pie: La gráfica aparece cuando te alejas.
+    creditos: |-
+      Estrategia, naming, logotipo, sistema de identidad, diseño de producto y dirección de arte: Alexander Caro.
+
+      Proyecto conceptual: Double Notch es una marca ficticia sin relación con ninguna empresa, persona u organización real. La fotografía base de los mockups se generó con IA; el logo, los gráficos y el sistema de marca son diseño propio.
+en:
+  nombre: Double Notch
+  alt: Double Notch logo over a Garment District street in New York at night
+  resumen: A streetwear label born from the vocabulary of New York's Garment District cutters, with a first drop of 8 pieces.
+  disciplinas:
+  - Branding
+  - Product
+  - Art direction
+  resultado:
+    cifra: '8'
+    texto: pieces in Drop 001
+  seo:
+    titulo: Double Notch — Streetwear Identity and Drop 001 | Alexander Caro
+    descripcion: 'Concept project: a New York streetwear label built from the language of the Garment District''s cutters. Drawn logotype, identity system and an 8-piece drop.'
+  caso:
+    intro: A New York label that could drop tomorrow, without the skyline, the taxi or a varsity “NYC”. The answer was on West 38th Street, in the private vocabulary of the people who still cut and sew in the Garment District.
+    ficha:
+    - etiqueta: Role
+      valor: Strategy, naming, logotype, identity system, product design and art direction
+    - etiqueta: Deliverables
+      valor: 'Full identity and Drop 001: hoodie, tee, cap, bandana, trims, bag and a 7" record'
+    - etiqueta: Location
+      valor: Garment District, New York
+    bloques:
+    - tipo: texto
+      titulo: The insight
+      texto: |-
+        Every pattern piece carries small triangular cuts so sewers know how pieces meet. A single notch marks the front; a double notch marks the back.
+
+        Double Notch is the brand for the people who have your back: the cutters, the pushers, the night shift.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/double-notch/logo.jpg
+      alt: Double Notch stacked logotype
+      pie: 'A drawn logotype: two 6 × 6 cuts in the top bar of the O.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/double-notch/construccion.jpg
+        alt: Double Notch logotype construction grid
+        pie: A 14-unit module, quarter-circle corners and every edge on the grid.
+      - imagen: /uploads/proyectos/double-notch/versiones.jpg
+        alt: Double Notch logotype versions
+        pie: Positive, negative, one color and clear space.
+    - tipo: colores
+      titulo: Palette and proportion of use
+      colores:
+      - nombre: Deep olive
+        hex: '#2F3322'
+        proporcion: 50
+      - nombre: Bone
+        hex: '#E8DFC8'
+        proporcion: 30
+      - nombre: Leather
+        hex: '#7A4E2D'
+        proporcion: 10
+      - nombre: Chalk mustard
+        hex: '#C79A3B'
+        proporcion: 5
+      - nombre: Charcoal
+        hex: '#171712'
+        proporcion: 5
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: /uploads/proyectos/double-notch/tipografia.jpg
+        alt: Double Notch typography
+        pie: Lora carries the voice, like the sleeve notes on a 1960s jazz record; Inter carries sizes, lots and prices.
+      - imagen: /uploads/proyectos/double-notch/patron.jpg
+        alt: Double Notch cutting-marker pattern
+        pie: The pattern is a cutting marker, drawn as a repeat.
+    - tipo: texto
+      titulo: Drop 001
+      texto: |-
+        Eight pieces where the graphic shows up when you walk away. The hoodie carries its own pattern printed on the back; the tee, its full cutting marker. "Buy a T-shirt, wear the plan of the T-shirt."
+
+        The collectible is a one-sided 7" lathe-cut record, side B only, numbered 001 to 250: the brand idea turned into an object.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /uploads/proyectos/double-notch/hoodie.jpg
+        alt: Olive Back Piece Hoodie on a cutting table
+        pie: 'Back Piece Hoodie: quiet in front.'
+      - imagen: /uploads/proyectos/double-notch/camiseta.jpg
+        alt: Marker Tee seen from the back in a workshop
+        pie: 'Marker Tee: wear the plan.'
+      - imagen: /uploads/proyectos/double-notch/gorra.jpg
+        alt: Leather-brown Cutter’s Six-Panel
+        pie: Cutter’s Six-Panel with the embroidered icon.
+      - imagen: /uploads/proyectos/double-notch/etiqueta.jpg
+        alt: Hangtag with a signed lot ticket
+        pie: Every piece leaves as a signed lot.
+      - imagen: /uploads/proyectos/double-notch/bolsa.jpg
+        alt: Back Room bag with the die-cut double notch
+        pie: The notch is cut, not printed.
+      - imagen: /uploads/proyectos/double-notch/vinilo.jpg
+        alt: Back Piece Sessions 7-inch record
+        pie: A record with no side A.
+    - tipo: imagen
+      ancho: completo
+      imagen: /uploads/proyectos/double-notch/calle.jpg
+      alt: Person wearing the Double Notch hoodie walking down West 38th Street at night
+      pie: The graphic shows up when you walk away.
+    creditos: |-
+      Strategy, naming, logotype, identity system, product design and art direction: Alexander Caro.
+
+      Concept project: Double Notch is a fictional brand, not affiliated with any real company, person or organization. Base mockup photography was generated with AI; the logo, graphics and brand system are my own design.

@@ -27,6 +27,13 @@
 - Portafolio de casos reales: https://alexandercaro.com/trabajo/
 - Especialización en el sector odontológico (Orbidental, distribuidor de insumos dentales): [branding de lanzamiento de DiaDent](https://alexandercaro.com/trabajo/diadent/) y [serie de reels de equipos Eighteeth](https://alexandercaro.com/trabajo/eighteeth/).
 
+## Proyectos
+
+Lista generada automáticamente desde el portafolio. Los marcados como concepto propio no tuvieron cliente.
+
+<!-- @auto:llms-es -->
+<!-- /@auto:llms-es -->
+
 ## Contacto
 
 - Email: hosoyalexander@gmail.com
@@ -51,6 +58,13 @@
 - Google PageSpeed scores of 97 and 99 on the last two web projects, measured in production ([Orbidental case study](https://alexandercaro.com/en/trabajo/orbidental/): from 40 to 97 on a 3,000+ product e-commerce; [MotoFaro case study](https://alexandercaro.com/en/trabajo/motofaro/): 99 with 100/100 technical SEO).
 - Dental industry specialization (Orbidental, dental supply distributor): [DiaDent launch branding](https://alexandercaro.com/en/trabajo/diadent/) and [Eighteeth equipment Reels series](https://alexandercaro.com/en/trabajo/eighteeth/).
 
+## Projects
+
+Generated automatically from the portfolio. Projects marked as own concept had no client.
+
+<!-- @auto:llms-en -->
+<!-- /@auto:llms-en -->
+
 ## Contact
 
 - Email: hosoyalexander@gmail.com · WhatsApp: +57 302 445 7653
@@ -64,7 +78,7 @@ full working-hours overlap with the United States and Canada. Works as an indepe
 contractor (W-8BEN); paid via Deel, Wise or Payoneer.
 
 - Resume: https://alexandercaro.com/en/cv/
-- 4+ years of experience across brand identity, UX/UI and frontend, with 8 documented case studies
+- 4+ years of experience across brand identity, UX/UI and frontend, with documented case studies at https://alexandercaro.com/en/trabajo/
 - Core stack: Figma, HTML/CSS/JavaScript, Next.js, WordPress/WooCommerce, Adobe Creative Cloud
 - Verified results: PageSpeed 40→97 on a 3,000-product e-commerce site in production;
   179K organic impressions in 4 months with zero paid spend; 626 qualified B2B leads
