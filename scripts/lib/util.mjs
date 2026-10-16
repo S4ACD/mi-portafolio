@@ -18,12 +18,22 @@ export const attr = (s) => esc(s).replace(/"/g, '&quot;');
  */
 export const inline = (s) =>
   esc(s)
+    .replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/|#|mailto:)[^)\s"]*)\)/g, (_, txt, href) =>
+      /^https?:/.test(href)
+        ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${txt}</a>`
+        : `<a href="${href}">${txt}</a>`,
+    )
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[^*])\*(?!\s)(.+?)\*(?!\*)/g, '$1<em>$2</em>')
     .replace(/\n/g, '<br>');
 
 /** Texto plano (para alt, meta, JSON-LD): quita el markdown en línea. */
-export const plain = (s) => String(s ?? '').replace(/\*\*?/g, '').replace(/\s+/g, ' ').trim();
+export const plain = (s) =>
+  String(s ?? '')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/\*\*?/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
 
 /** URL pública de un proyecto. */
 export const projectUrl = (slug, lang, abs = false) =>

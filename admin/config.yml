@@ -126,7 +126,7 @@ collections:
           - { label: 'CV: Sector dental', value: cv_dental }
       - name: pagina
         label: Página del caso
-        hint: «Automática» crea la página del caso con los bloques de abajo. «Hecha a mano» es para los casos antiguos que ya tienen su propio HTML.
+        hint: «Automática» crea la página del caso con los bloques de abajo. «Hecha a mano» usa un HTML propio en trabajo/<proyecto>/ (si cambias a «Automática», ese HTML se ignora).
         widget: select
         default: plantilla
         i18n: duplicate
@@ -240,6 +240,21 @@ collections:
             widget: image
             required: false
             i18n: true
+          - name: portada_ajuste
+            label: Encuadre de la imagen principal
+            hint: «Completa» sirve para piezas verticales (flyers, posts) que no se deben recortar.
+            widget: select
+            required: false
+            default: recortar
+            i18n: duplicate
+            options:
+              - { label: Recortar para llenar (recomendado), value: recortar }
+              - { label: Completa sobre el color de la marca, value: completa }
+          - name: etiqueta
+            label: Etiqueta sobre el nombre (opcional)
+            hint: Si la dejas vacía dice «Concepto propio» o «Proyecto para cliente». Ej. «Marca propia».
+            required: false
+            i18n: true
           - name: intro
             label: Introducción
             hint: El párrafo grande bajo el nombre.
@@ -286,6 +301,7 @@ collections:
                     options:
                       - { label: Ancho del contenido, value: completo }
                       - { label: De borde a borde, value: sangrado }
+                      - { label: Logotipo (centrado sobre fondo oscuro), value: logo }
               - name: galeria
                 label: Galería
                 summary: '{{titulo}}'
@@ -316,9 +332,12 @@ collections:
                 summary: '{{texto}}'
                 fields:
                   - { name: texto, label: Frase, widget: text, required: [es], i18n: true }
+                  - { name: autor, label: Quién lo dijo (opcional), required: false, i18n: true }
               - name: cifras
                 label: Cifras
+                summary: '{{titulo}}'
                 fields:
+                  - { name: titulo, label: Título (opcional), required: false, i18n: true }
                   - name: items
                     label: Cifras
                     widget: list
@@ -327,6 +346,53 @@ collections:
                     fields:
                       - { name: cifra, label: Cifra, required: [es], i18n: true }
                       - { name: texto, label: Texto, required: [es], i18n: true }
+                      - { name: detalle, label: Explicación (opcional), widget: text, required: false, i18n: true }
+                  - { name: nota, label: Nota al pie (opcional), hint: 'Ej. de dónde salen los datos.', widget: text, required: false, i18n: true }
+              - name: lista
+                label: Lista de puntos
+                summary: '{{titulo}}'
+                fields:
+                  - { name: titulo, label: Título (opcional), required: false, i18n: true }
+                  - { name: texto, label: Texto antes de la lista (opcional), widget: markdown, required: false, i18n: true }
+                  - name: items
+                    label: Puntos
+                    widget: list
+                    i18n: true
+                    summary: '{{titulo}}'
+                    fields:
+                      - { name: titulo, label: Título, required: false, i18n: true }
+                      - { name: texto, label: Texto, widget: text, required: false, i18n: true }
+              - name: videos
+                label: Videos
+                summary: '{{titulo}}'
+                fields:
+                  - { name: titulo, label: Título (opcional), required: false, i18n: true }
+                  - name: items
+                    label: Videos
+                    widget: list
+                    i18n: true
+                    summary: '{{titulo}}'
+                    fields:
+                      - { name: video, label: Video (MP4), widget: file, required: [es], i18n: true }
+                      - { name: poster, label: Imagen de portada del video, widget: image, required: false, i18n: true }
+                      - name: formato
+                        label: Formato
+                        widget: select
+                        default: vertical
+                        i18n: true
+                        options:
+                          - { label: 'Vertical (9:16)', value: vertical }
+                          - { label: 'Horizontal (16:9)', value: horizontal }
+                      - { name: titulo, label: Título, required: false, i18n: true }
+                      - { name: texto, label: Descripción, widget: text, required: false, i18n: true }
+                      - { name: duracion, label: Duración (ej. 0:30), required: false, i18n: true }
+              - name: sitio
+                label: Sitio web en vivo
+                summary: '{{url}}'
+                fields:
+                  - { name: url, label: Dirección del sitio, hint: 'Se muestra dentro de una ventana de navegador.', required: [es], i18n: true }
+                  - { name: enlace, label: Enlace del botón (opcional), hint: 'Si lo dejas vacío, el botón abre la misma dirección.', required: false, i18n: true }
+                  - { name: pie, label: Texto bajo la ventana, required: false, i18n: true }
               - name: colores
                 label: Paleta de color
                 summary: '{{titulo}}'
@@ -341,6 +407,17 @@ collections:
                       - { name: nombre, label: Nombre, required: [es], i18n: true }
                       - { name: hex, label: Color, widget: color, required: [es], i18n: true }
                       - { name: proporcion, label: Proporción de uso (%), widget: number, required: false, i18n: true }
+                      - { name: uso, label: Para qué se usa (opcional), required: false, i18n: true }
+          - name: cta
+            label: Cierre de la página (opcional)
+            hint: Si lo dejas vacío se usa el cierre general.
+            widget: object
+            required: false
+            collapsed: true
+            i18n: true
+            fields:
+              - { name: titulo, label: Pregunta o título, required: false, i18n: true }
+              - { name: texto, label: Texto, widget: text, required: false, i18n: true }
           - name: creditos
             label: Créditos
             hint: Quién hizo qué. Si es un concepto propio o usaste IA para fotos, dilo aquí.

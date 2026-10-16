@@ -1,4 +1,4 @@
-# Proyecto con página de caso propia (diseño a medida en /trabajo/orbidental/).
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: Orbidental
   publicado: true
@@ -6,23 +6,279 @@ es:
   anio: '2024'
   concepto: false
   destacado: true
-  areas: [web, dental]
-  mostrar_en: [inicio, trabajo, cv]
-  pagina: propia
+  areas:
+  - web
+  - dental
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
   portada:
     imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035692/P%C3%A1gina_de_inicio_hucq78.png
     estilo: foto
   alt: Página de inicio del e-commerce de Orbidental
   resumen: Rediseño UX/UI y migración a código de un e-commerce B2B de más de 3.000 productos dentales, sin perder el posicionamiento.
-  disciplinas: [Web, UX/UI, SEO técnico]
+  disciplinas:
+  - Web
+  - UX/UI
+  - SEO técnico
   resultado:
-    cifra: '40 → 97'
+    cifra: 40 → 97
     texto: PageSpeed en producción
+  color: '#123A33'
+  seo:
+    titulo: 'Orbidental — De 14 segundos a casi instantáneo: PageSpeed 97 | Alexander Caro'
+    descripcion: 'Caso real: sitio de e-commerce dental con 3.000+ productos pasó de 14 segundos de carga y Core Web Vitals reprobado a PageSpeed 97 y métricas aprobadas. Sin perder SEO. Bogotá, Colombia.'
+  caso:
+    intro: Un catálogo de +3.000 productos dentales que tardaba 14 segundos en cargar y se rompía en el celular. Clientes que se iban antes de ver el primer precio. Lo reconstruí desde cero —sin perder un producto ni una posición en Google— y pasó de un PageSpeed de 40 a 97.
+    ficha:
+    - etiqueta: Empresa
+      valor: Orbidental SAS
+    - etiqueta: Mi rol
+      valor: A cargo de todo lo digital · 2+ años
+    - etiqueta: Categoría
+      valor: Insumos dentales · Catálogo +3.000 productos
+    - etiqueta: Stack
+      valor: WordPress, Kadence, HTML/CSS/JS
+    - etiqueta: Entregables
+      valor: Rediseño completo, performance, SEO técnico, responsive
+    bloques:
+    - tipo: cifras
+      items:
+      - cifra: 40 → 97
+        texto: PageSpeed Score — Core Web Vitals aprobado en un mes
+      - cifra: 14 s
+        texto: Lo que tardaba en cargar, antes
+      - cifra: 3.000+
+        texto: Productos migrados sin perder SEO
+      - cifra: 100%
+        texto: Responsive — antes no servía en móvil
+    - tipo: texto
+      titulo: Un sitio lento no es un problema técnico. Es un problema *de ventas*.
+      texto: |-
+        El sitio anterior estaba hecho en Divi: arrastraba más de un megabyte de código que nadie usaba en cada visita, no estaba pensado para móvil y, siendo honestos, se veía mal —fondo plano, fotos sueltas, texto sin jerarquía—. Tardaba 14 segundos en abrir.
+
+        > Cada segundo de espera y cada pantalla rota en un celular era un cliente que cerraba la pestaña.
+
+        Eso pasaba en un catálogo de +3.000 productos donde la gente llega buscando algo puntual y con prisa. Para una empresa que vende online, eso no se ve en el diseño: se ve en las ventas que no entran.
+
+        Divi no se podía "optimizar": el peso estaba en el propio sistema. Había que sacarlo. Reconstruí todo en código limpio sobre WordPress, migré los más de 3.000 productos sin perder el SEO ya posicionado —un error ahí y se caen meses de ranking— y rehíce la experiencia visual para que el sitio por fin transmitiera la seriedad de la empresa.
+    - tipo: lista
+      titulo: No fue solo acelerar la web. Fue recuperar la confianza.
+      texto: 'Orbidental tenía un problema técnico visible en cada visita: una web lenta, antigua y completamente rota en móvil. La solución fue reconstruirla con cuidado, sin perder el trabajo SEO ni el catálogo que ya existía.'
+      items:
+      - titulo: Una web que hacía desconfiar
+        texto: El sitio tardaba en cargar, se veía como una web de 2013 y no era responsive. En móvil se rompían elementos y el constructor Divi limitaba el control visual. Un visitante podía irse antes de ver un producto o interpretar esa experiencia como una señal de poca seriedad.
+      - titulo: Reconstrucción desde la raíz
+        texto: Eliminé Divi y pasé toda la experiencia a código con HTML, CSS y JavaScript sobre WordPress. Durante mes y medio revisé qué conservar, migré el catálogo y cuidé cada URL, contenido y señal técnica para modernizar el sitio sin poner en riesgo el posicionamiento.
+      - titulo: Más rápido, más claro y con más tráfico
+        texto: La web pasó de PageSpeed 40 a 97, mantuvo y mejoró su SEO, y el tráfico aumentó. También recuperó una presentación visual moderna y una experiencia responsive. El e-commerce completo sigue en construcción, sobre una base mucho más sólida.
+    - tipo: cita
+      texto: 'La reacción de mi jefe fue clara: la página se ve mucho mejor visualmente y sí se nota que es rápida.'
+      autor: Reacción del cliente, Orbidental
+    - tipo: texto
+      titulo: De "Desaprobado" a "Aprobado" en un mes.
+      texto: 'No es mi opinión: es el propio reporte de Core Web Vitals (Métricas Web Esenciales) de Google. En un mes, el sitio pasó de "Desaprobado" a "Aprobado", y el PageSpeed subió de 40 a 97. En la práctica: 14 segundos de carga convertidos en una apertura casi instantánea.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220110/Antes_j9uony.png
+        alt: 'Core Web Vitals de Orbidental antes del rediseño: evaluación desaprobada'
+        pie: Antes
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220149/Despu%C3%A9s_iulu8r.png
+        alt: 'Core Web Vitals de Orbidental después del rediseño: evaluación aprobada, PageSpeed 97'
+        pie: Después
+    - tipo: texto
+      titulo: Meses de falla. Un mes de trabajo. *Aprobado y sosteniéndose*
+      texto: 'El sitio llevaba meses con Core Web Vitals reprobado — Google lo marcaba como lento, lo que afecta directamente el posicionamiento y la experiencia del cliente. En un mes lo llevé de Desaprobado a Aprobado. Y lo más importante: el historial de Google muestra que la mejora se mantiene. No fue un parche temporal — fue una reconstrucción real.'
+    - tipo: imagen
+      ancho: completo
+      imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220149/Core_web_vitals_sumart_vttkmm.png
+      alt: 'Historial de Core Web Vitals de Orbidental: mejora continua durante más de un año'
+      pie: 'Historial de Core Web Vitals — mejora sostenida durante más de un año. Fuente: Google Search Console.'
+    - tipo: cifras
+      items:
+      - cifra: '90'
+        texto: Rendimiento en celular — hoy
+      - cifra: '96'
+        texto: Accesibilidad
+      - cifra: '100'
+        texto: SEO técnico
+      - cifra: 2 s
+        texto: LCP en celular — carga casi instantánea
+    - tipo: texto
+      titulo: Página de inicio.
+      texto: 'Antes: fondo plano, sin jerarquía, lento. Ahora: una home coherente y ordenada que se ve profesional en cualquier pantalla y carga al instante. La credibilidad de una empresa también se diseña.'
+    - tipo: texto
+      titulo: Página de marca.
+      texto: Eighteeth es una de las marcas que distribuye Orbidental. En vez de una página genérica más, le construí una experiencia dedicada dentro del sitio —la prueba de que esto no sale de una plantilla, sino que se diseña marca por marca.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035690/P%C3%A1gina_de_marca_parte_1_zvdsfw.png
+        alt: Página de marca Eighteeth parte 1
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_2_pi1jpi.png
+        alt: Página de marca Eighteeth parte 2
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_3_ibtubh.png
+        alt: Página de marca Eighteeth parte 3
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_4_km6wot.png
+        alt: Página de marca Eighteeth parte 4
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_5_j8njaj.png
+        alt: Página de marca Eighteeth parte 5
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_6_cvw0xv.png
+        alt: Página de marca Eighteeth parte 6
+    - tipo: texto
+      titulo: El prototipo de la futura tienda.
+      texto: 'Las páginas de producto actuales son básicas —fondo blanco, una foto, texto sin orden—. El e-commerce real está hoy en desarrollo. Para definir hacia dónde va y alinear a la dirección, diseñé este prototipo de cómo se verá y funcionará la página de producto: coherente, clara y pensada para que el cliente entienda lo que compra y decida con confianza. Es el siguiente paso real de Orbidental — y soy quien lo está construyendo.'
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035688/P%C3%A1gina_de_producto_parte_1_aobskn.png
+        alt: Prototipo página de producto parte 1
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035689/P%C3%A1gina_de_producto_parte_2_pikggr.png
+        alt: Prototipo página de producto parte 2
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035689/P%C3%A1gina_de_producto_parte_3_ozcq3n.png
+        alt: Prototipo página de producto parte 3
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035689/P%C3%A1gina_de_producto_parte_4_q03noh.png
+        alt: Prototipo página de producto parte 4
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035689/P%C3%A1gina_de_producto_parte_5_rkf3gl.png
+        alt: Prototipo página de producto parte 5
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035692/P%C3%A1gina_de_marca_parte_7_qziai7.png
+        alt: Prototipo página de producto parte 6
+    cta:
+      titulo: ¿Tu sitio te parece rápido?
+      texto: Ábrelo en un celular con datos, fuera de tu casa. Ahí es donde Orbidental perdía clientes sin enterarse —y donde los pierde la mayoría de las tiendas que "se ven bien". Si tienes dudas, probablemente ya los estás perdiendo. Cuéntame qué vendes y en menos de 24 horas te digo qué te está costando tu sitio actual.
 en:
   nombre: Orbidental
   alt: Orbidental e-commerce home page
   resumen: UX/UI redesign and hand-coded migration of a B2B e-commerce site with 3,000+ dental products, keeping every ranking it had earned.
-  disciplinas: [Web, UX/UI, Technical SEO]
+  disciplinas:
+  - Web
+  - UX/UI
+  - Technical SEO
   resultado:
-    cifra: '40 → 97'
+    cifra: 40 → 97
     texto: PageSpeed in production
+  seo:
+    titulo: 'Orbidental — From 14 Seconds to Near-Instant: PageSpeed 97 | Alexander Caro'
+    descripcion: 'Real case: a dental e-commerce with 3,000+ products went from 14-second loads and failing Core Web Vitals to PageSpeed 97 — without losing SEO.'
+  caso:
+    intro: A catalog of 3,000+ dental products that took 14 seconds to load and broke on mobile. Customers leaving before seeing a single price. I rebuilt it from scratch — without losing a single product or a single Google ranking — and took PageSpeed from 40 to 97.
+    ficha:
+    - etiqueta: Company
+      valor: Orbidental SAS
+    - etiqueta: My role
+      valor: In charge of all digital · 2+ years
+    - etiqueta: Category
+      valor: Dental supplies · 3,000+ product catalog
+    - etiqueta: Stack
+      valor: WordPress, Kadence, HTML/CSS/JS
+    - etiqueta: Deliverables
+      valor: Full redesign, performance, technical SEO, responsive
+    bloques:
+    - tipo: cifras
+      items:
+      - cifra: 40 → 97
+        texto: PageSpeed Score — Core Web Vitals passed in one month
+      - cifra: 14 s
+        texto: How long it took to load, before
+      - cifra: 3,000+
+        texto: Products migrated without losing SEO
+      - cifra: 100%
+        texto: Responsive — before, it didn't work on mobile
+    - tipo: texto
+      titulo: A slow website isn't a technical problem. It's a *sales* problem.
+      texto: |-
+        The previous site was built on Divi: it dragged over a megabyte of unused code on every visit, wasn't designed for mobile, and — honestly — looked bad. Flat background, scattered photos, no visual hierarchy. It took 14 seconds to open.
+
+        > Every second of waiting and every broken screen on a phone was a customer closing the tab.
+
+        This was happening on a 3,000+ product catalog where people arrive looking for something specific and in a hurry. For a business selling online, that doesn't show up in the design — it shows up in the sales that never come in.
+
+        Divi couldn't be "optimized" — the weight was in the system itself. It had to go. I rebuilt everything in clean code on WordPress, migrated all 3,000+ products without losing existing SEO rankings — one mistake there and months of positioning collapse — and redesigned the visual experience so the site finally conveyed the seriousness of the company.
+    - tipo: lista
+      titulo: This wasn't just about speed. It was about restoring trust.
+      texto: 'Orbidental had a technical problem visible on every visit: a slow, outdated website that completely broke on mobile. The solution was to rebuild it carefully, without losing its SEO work or the catalog already in place.'
+      items:
+      - titulo: A website that made people hesitate
+        texto: The site was slow, looked like a 2013 website and was not responsive. Elements broke on mobile, while the Divi builder limited visual control. A visitor could leave before seeing a product or read that experience as a sign of an unserious business.
+      - titulo: A rebuild from the ground up
+        texto: I removed Divi and moved the entire experience to HTML, CSS and JavaScript on WordPress. Over a month and a half, I decided what to preserve, migrated the catalog and protected every URL, piece of content and technical signal while modernizing the site.
+      - titulo: Faster, clearer and attracting more traffic
+        texto: The site went from PageSpeed 40 to 97, retained and improved its SEO, and traffic increased. It also regained a modern visual presentation and a responsive experience. The full e-commerce is still being built on a much stronger foundation.
+    - tipo: cita
+      texto: 'My boss''s reaction was clear: the page looks much better visually, and you can tell that it is fast.'
+      autor: Client reaction, Orbidental
+    - tipo: texto
+      titulo: From "Failed" to "Passed" in one month.
+      texto: 'This isn''t my opinion — it''s Google''s own Core Web Vitals report. In one month the site went from "Failed" to "Passed", and PageSpeed climbed from 40 to 97. In practice: 14 seconds of load time turned into a near-instant open.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220110/Antes_j9uony.png
+        alt: 'Core Web Vitals de Orbidental antes del rediseño: evaluación desaprobada'
+        pie: Before
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220149/Despu%C3%A9s_iulu8r.png
+        alt: 'Core Web Vitals de Orbidental después del rediseño: evaluación aprobada, PageSpeed 97'
+        pie: After
+    - tipo: texto
+      titulo: Months of failure. One month of work. *Passed and holding*
+      texto: 'The site had been failing Core Web Vitals for months — Google flagging it as slow, which directly hurts rankings and drives customers away. In one month I took it from Failed to Passed. And most importantly: Google''s own history shows the improvement has held. It wasn''t a quick patch — it was a real rebuild.'
+    - tipo: imagen
+      ancho: completo
+      imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220149/Core_web_vitals_sumart_vttkmm.png
+      alt: 'Historial de Core Web Vitals de Orbidental: mejora continua durante más de un año'
+      pie: 'Core Web Vitals history — sustained improvement for over a year. Source: Google Search Console.'
+    - tipo: cifras
+      items:
+      - cifra: '90'
+        texto: Mobile performance — today
+      - cifra: '96'
+        texto: Accessibility
+      - cifra: '100'
+        texto: Technical SEO
+      - cifra: 2 s
+        texto: Mobile LCP — near-instant load
+    - tipo: texto
+      titulo: Homepage.
+      texto: 'Before: flat background, no hierarchy, slow. Now: a coherent, organized homepage that looks professional on any screen and loads instantly. A company''s credibility is designed too.'
+    - tipo: texto
+      titulo: Brand page.
+      texto: Eighteeth is one of the brands Orbidental distributes. Instead of another generic page, I built a dedicated experience inside the site — proof that this doesn't come from a template, but is designed brand by brand.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035690/P%C3%A1gina_de_marca_parte_1_zvdsfw.png
+        alt: Página de marca Eighteeth parte 1
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_2_pi1jpi.png
+        alt: Página de marca Eighteeth parte 2
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_3_ibtubh.png
+        alt: Página de marca Eighteeth parte 3
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_4_km6wot.png
+        alt: Página de marca Eighteeth parte 4
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_5_j8njaj.png
+        alt: Página de marca Eighteeth parte 5
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035691/P%C3%A1gina_de_marca_parte_6_cvw0xv.png
+        alt: Página de marca Eighteeth parte 6
+    - tipo: texto
+      titulo: The prototype for the future store.
+      texto: 'The current product pages are basic — white background, one photo, unstructured text. The real e-commerce is now in development. To define where it''s headed and align the team, I designed this prototype of how the product page will look and work: clear, coherent, and built so customers understand what they''re buying and feel confident deciding. This is Orbidental''s real next step — and I''m the one building it.'
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035688/P%C3%A1gina_de_producto_parte_1_aobskn.png
+        alt: Prototipo página de producto parte 1
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035689/P%C3%A1gina_de_producto_parte_2_pikggr.png
+        alt: Prototipo página de producto parte 2
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035689/P%C3%A1gina_de_producto_parte_3_ozcq3n.png
+        alt: Prototipo página de producto parte 3
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035689/P%C3%A1gina_de_producto_parte_4_q03noh.png
+        alt: Prototipo página de producto parte 4
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035689/P%C3%A1gina_de_producto_parte_5_rkf3gl.png
+        alt: Prototipo página de producto parte 5
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781035692/P%C3%A1gina_de_marca_parte_7_qziai7.png
+        alt: Prototipo página de producto parte 6
+    cta:
+      titulo: Think your site is fast enough?
+      texto: Open it on a phone with mobile data, away from your home network. That's where Orbidental was losing customers without knowing it — and where most stores that "look fine" lose theirs too. If you're not sure, you're probably already losing them. Tell me what you sell and within 24 hours I'll tell you exactly what your current site is costing you.

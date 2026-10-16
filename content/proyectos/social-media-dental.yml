@@ -1,3 +1,4 @@
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: Social Media Dental
   publicado: true
@@ -5,23 +6,284 @@ es:
   anio: '2026'
   concepto: false
   destacado: false
-  areas: [social, grafico, dental]
-  mostrar_en: [inicio, trabajo, cv]
-  pagina: propia
+  areas:
+  - social
+  - grafico
+  - dental
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
   portada:
     imagen: /assets/social/dental/orbidental-post-01.webp
     estilo: foto
   alt: Publicación de Orbidental para redes sociales
   resumen: Estrategia y diseño de contenido para dos distribuidoras dentales a la vez, cada una con su propio sistema visual.
-  disciplinas: [Social media, Diseño gráfico]
+  disciplinas:
+  - Social media
+  - Diseño gráfico
   resultado:
-    cifra: '179K'
+    cifra: 179K
     texto: visualizaciones en 4 meses
+  color: '#2E4719'
+  seo:
+    titulo: Social Media Dental — Contenido que vende | Alexander Caro
+    descripcion: 'Diseño de contenido para redes sociales en el sector dental: Orbidental y Biotec. +179.000 visualizaciones, +1.300% clics al sitio, +498% interacciones en 4 meses.'
+  caso:
+    portada: /uploads/proyectos/social-media-dental/portada-caso.jpg
+    intro: Tu competencia ya tiene mejor contenido que tú. Cada post genérico que publicas es una oportunidad que alguien más está aprovechando. Esto es lo que pasa cuando el diseño y la estrategia trabajan juntos — y los números lo prueban.
+    ficha:
+    - etiqueta: Clientes
+      valor: Orbidental SAS · Biotec
+    - etiqueta: Mi rol
+      valor: Dirección de arte · Diseño · Estrategia visual
+    - etiqueta: Categoría
+      valor: Insumos dentales · Instagram
+    - etiqueta: Entregables
+      valor: Posts, carruseles, stories, fechas especiales
+    - etiqueta: Herramientas
+      valor: Photoshop · Illustrator
+    bloques:
+    - tipo: cifras
+      items:
+      - cifra: 179K
+        texto: Visualizaciones en 4 meses
+      - cifra: +618%
+        texto: Crecimiento en visualizaciones
+      - cifra: 3,6K
+        texto: Clics al sitio web · +1.300%
+      - cifra: +498%
+        texto: Aumento en interacciones
+      nota: '* Datos reales de Meta Business Suite · Orbidental · enero–abril 2026'
+    - tipo: texto
+      titulo: En redes no gana el mejor producto. Gana el que *para el scroll primero*.
+      texto: |-
+        La mayoría de empresas publican contenido porque 'hay que publicar'. Fondo blanco, foto del producto, precio. Sin identidad, sin narrativa, sin razón para que alguien se detenga. El resultado: presupuesto de pauta desperdiciado en contenido que nadie recuerda.
+
+        > Puedes invertir en pauta, pero si el contenido no detiene el scroll, la plata se va. El diseño es lo que convierte la inversión en resultado.
+
+        El trabajo con Orbidental y Biotec combinó diseño con criterio y pauta estratégica: piezas que se ganan la atención visualmente y una inversión que las pone frente a la gente correcta. Los resultados no son coincidencia.
+    - tipo: texto
+      titulo: 4 meses. Diseño + pauta. *Estos resultados*.
+      texto: Meta Business Suite no miente. Esto es lo que generó la combinación de contenido con criterio y pauta bien dirigida para Orbidental entre enero y abril de 2026.
+    - tipo: imagen
+      ancho: completo
+      imagen: /assets/social/dental/estadisticas_4_meses_2026.webp
+      alt: Estadísticas de Meta Business Suite de Orbidental, de enero a abril de 2026
+    - tipo: texto
+      titulo: Contenido que se detiene.
+      texto: 'Cada pieza parte de una pregunta: ¿por qué alguien detendría el scroll aquí? La respuesta define la composición, la tipografía y el color — no al revés.'
+    - tipo: galeria
+      columnas: 4
+      imagenes:
+      - imagen: /assets/social/dental/orbidental-post-01.webp
+        alt: Post Orbidental 01
+      - imagen: /assets/social/dental/orbidental-post-02.webp
+        alt: Post Orbidental 02
+      - imagen: /assets/social/dental/orbidental-post-03.webp
+        alt: Post Orbidental 03
+      - imagen: /assets/social/dental/orbidental-post-04.webp
+        alt: Post Orbidental 04
+    - tipo: texto
+      titulo: Una historia en varias slides.
+      texto: Los carruseles retienen más tiempo y generan más interacciones. Cada slide tiene que funcionar sola y también como parte del conjunto.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /assets/social/dental/orbidental-carrusel-01-slide-01.webp
+        alt: Carrusel Orbidental slide 1
+      - imagen: /assets/social/dental/orbidental-carrusel-01-slide-02.webp
+        alt: Carrusel Orbidental slide 2
+      - imagen: /assets/social/dental/orbidental-carrusel-01-slide-03.webp
+        alt: Carrusel Orbidental slide 3
+    - tipo: texto
+      titulo: El formato más visto. El más *ignorado* en diseño.
+      texto: Las stories duran 24 horas. La impresión que dejan, más. Un diseño de story bien hecho comunica la calidad de la marca antes de que el cliente lea una sola palabra.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /assets/social/dental/orbidental-story-01.webp
+        alt: Story Orbidental 01
+      - imagen: /assets/social/dental/orbidental-story-02.webp
+        alt: Story Orbidental 02
+      - imagen: /assets/social/dental/orbidental-story-03.webp
+        alt: Story Orbidental 03
+    - tipo: texto
+      titulo: Dos marcas, un mismo nicho, *cero confusión*.
+      texto: Orbidental y Biotec comparten industria. Sus identidades visuales, no. Esto demuestra que el criterio de diseño no depende de la marca — depende de quien lo aplica.
+    - tipo: galeria
+      columnas: 4
+      imagenes:
+      - imagen: /assets/social/dental/biotec-post-01.webp
+        alt: Post Biotec 01
+      - imagen: /assets/social/dental/biotec-post-02.webp
+        alt: Post Biotec 02
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-01.webp
+        alt: Carrusel Biotec slide 1
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-02.webp
+        alt: Carrusel Biotec slide 2
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-03.webp
+        alt: Carrusel Biotec slide 3
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-04.webp
+        alt: Carrusel Biotec slide 4
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-05.webp
+        alt: Carrusel Biotec slide 5
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-06.webp
+        alt: Carrusel Biotec slide 6
+    - tipo: texto
+      titulo: La identidad no desaparece en Halloween. *Se adapta*.
+      texto: Una marca con criterio visual mantiene su carácter en cualquier fecha. El reto no es hacer algo 'temático' — es hacer algo que se reconozca como tuyo aunque lleve calabazas.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /assets/social/dental/fecha-halloween-01.webp
+        alt: Halloween 01
+      - imagen: /assets/social/dental/fecha-halloween-02.webp
+        alt: Halloween 02
+      - imagen: /assets/social/dental/fecha-halloween-03.webp
+        alt: Halloween 03
+      - imagen: /assets/social/dental/fecha-amor-y-amistad-01.webp
+        alt: Amor y Amistad 01
+      - imagen: /assets/social/dental/fecha-amor-y-amistad-02.webp
+        alt: Amor y Amistad 02
+      - imagen: /assets/social/dental/fecha-amor-y-amistad-03.webp
+        alt: Amor y Amistad 03
+    cta:
+      titulo: ¿Cuántos clientes está perdiendo tu marca cada semana?
+      texto: Si tu respuesta es 'no sé', ya es demasiado. El contenido genérico no vende — y el presupuesto que inviertes en pauta con diseño mediocre es dinero a la basura. Cuéntame qué vendes y en 24 horas te digo cómo debería verse tu marca en redes.
 en:
   nombre: Dental Social Media
   alt: Orbidental social media post
   resumen: Content strategy and design for two dental supply brands at once, each with its own visual system.
-  disciplinas: [Social media, Graphic design]
+  disciplinas:
+  - Social media
+  - Graphic design
   resultado:
-    cifra: '179K'
+    cifra: 179K
     texto: views in 4 months
+  seo:
+    titulo: Dental Social Media — Content That Sells | Alexander Caro
+    descripcion: 'Social media design for the dental sector: carousels, posts and stories with a consistent visual system that turns views into conversations.'
+  caso:
+    portada: /uploads/proyectos/social-media-dental/portada-caso.jpg
+    intro: Your competition already has better content than you. Every generic post you publish is an opportunity someone else is taking. This is what happens when design and strategy work together — and the numbers prove it.
+    ficha:
+    - etiqueta: Clients
+      valor: Orbidental SAS · Biotec
+    - etiqueta: My role
+      valor: Art direction · Design · Visual strategy
+    - etiqueta: Category
+      valor: Dental supplies · Instagram
+    - etiqueta: Deliverables
+      valor: Posts, carousels, stories, special dates
+    - etiqueta: Tools
+      valor: Photoshop · Illustrator
+    bloques:
+    - tipo: cifras
+      items:
+      - cifra: 179K
+        texto: Views in 4 months
+      - cifra: +618%
+        texto: Growth in views
+      - cifra: 3.6K
+        texto: Website clicks · +1,300%
+      - cifra: +498%
+        texto: Increase in interactions
+      nota: '* Real data from Meta Business Suite · Orbidental · January–April 2026'
+    - tipo: texto
+      titulo: On social media, the best product doesn't win. The one that *stops the scroll first* does.
+      texto: |-
+        Most businesses post content because 'you have to post'. White background, product photo, price. No identity, no narrative, no reason for anyone to stop. The result: ad budget wasted on content nobody remembers.
+
+        > You can invest in paid ads, but if the content doesn't stop the scroll, the money is gone. Design is what turns investment into results.
+
+        The work with Orbidental and Biotec combined deliberate design with strategic paid ads: pieces that earn attention visually and investment that puts them in front of the right people. The results aren't a coincidence.
+    - tipo: texto
+      titulo: 4 months. Design + paid ads. *These results*.
+      texto: Meta Business Suite doesn't lie. This is what the combination of intentional content design and well-targeted paid ads generated for Orbidental between January and April 2026.
+    - tipo: imagen
+      ancho: completo
+      imagen: /assets/social/dental/estadisticas_4_meses_2026.webp
+      alt: Orbidental Meta Business Suite insights, January to April 2026
+    - tipo: texto
+      titulo: Content that stops the scroll.
+      texto: 'Every piece starts with a question: why would someone stop scrolling here? The answer defines the composition, typography, and color — not the other way around.'
+    - tipo: galeria
+      columnas: 4
+      imagenes:
+      - imagen: /assets/social/dental/orbidental-post-01.webp
+        alt: Post Orbidental 01
+      - imagen: /assets/social/dental/orbidental-post-02.webp
+        alt: Post Orbidental 02
+      - imagen: /assets/social/dental/orbidental-post-03.webp
+        alt: Post Orbidental 03
+      - imagen: /assets/social/dental/orbidental-post-04.webp
+        alt: Post Orbidental 04
+    - tipo: texto
+      titulo: A story told across multiple slides.
+      texto: Carousels retain attention longer and generate more interactions. Each slide has to work on its own and also as part of the whole.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /assets/social/dental/orbidental-carrusel-01-slide-01.webp
+        alt: Carrusel Orbidental slide 1
+      - imagen: /assets/social/dental/orbidental-carrusel-01-slide-02.webp
+        alt: Carrusel Orbidental slide 2
+      - imagen: /assets/social/dental/orbidental-carrusel-01-slide-03.webp
+        alt: Carrusel Orbidental slide 3
+    - tipo: texto
+      titulo: The most-watched format. The most *ignored* in design.
+      texto: Stories last 24 hours. The impression they leave, longer. A well-designed story communicates brand quality before the client reads a single word.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /assets/social/dental/orbidental-story-01.webp
+        alt: Story Orbidental 01
+      - imagen: /assets/social/dental/orbidental-story-02.webp
+        alt: Story Orbidental 02
+      - imagen: /assets/social/dental/orbidental-story-03.webp
+        alt: Story Orbidental 03
+    - tipo: texto
+      titulo: Two brands, one niche, *zero confusion*.
+      texto: Orbidental and Biotec share an industry. Their visual identities, they don't. This proves that design judgment doesn't depend on the brand — it depends on who applies it.
+    - tipo: galeria
+      columnas: 4
+      imagenes:
+      - imagen: /assets/social/dental/biotec-post-01.webp
+        alt: Post Biotec 01
+      - imagen: /assets/social/dental/biotec-post-02.webp
+        alt: Post Biotec 02
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-01.webp
+        alt: Carrusel Biotec slide 1
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-02.webp
+        alt: Carrusel Biotec slide 2
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-03.webp
+        alt: Carrusel Biotec slide 3
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-04.webp
+        alt: Carrusel Biotec slide 4
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-05.webp
+        alt: Carrusel Biotec slide 5
+      - imagen: /assets/social/dental/biotec-carrusel-01-slide-06.webp
+        alt: Carrusel Biotec slide 6
+    - tipo: texto
+      titulo: The identity doesn't disappear on Halloween. *It adapts*.
+      texto: A brand with visual judgment keeps its character on any date. The challenge isn't making something 'themed' — it's making something that's recognizably yours even when it has pumpkins.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: /assets/social/dental/fecha-halloween-01.webp
+        alt: Halloween 01
+      - imagen: /assets/social/dental/fecha-halloween-02.webp
+        alt: Halloween 02
+      - imagen: /assets/social/dental/fecha-halloween-03.webp
+        alt: Halloween 03
+      - imagen: /assets/social/dental/fecha-amor-y-amistad-01.webp
+        alt: Amor y Amistad 01
+      - imagen: /assets/social/dental/fecha-amor-y-amistad-02.webp
+        alt: Amor y Amistad 02
+      - imagen: /assets/social/dental/fecha-amor-y-amistad-03.webp
+        alt: Amor y Amistad 03
+    cta:
+      titulo: How many clients is your brand losing every week?
+      texto: If your answer is 'I don't know', that's already too many. Generic content doesn't sell — and the budget you put into ads with mediocre design is money down the drain. Tell me what you sell and within 24 hours I'll show you how your brand should look on social media.

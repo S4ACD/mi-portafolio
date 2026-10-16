@@ -41,7 +41,7 @@ Lo subes desde **alexandercaro.com/admin**, sin tocar código.
    - **Color de la marca**: fondo de la portada del caso.
    - **Portada**: sube la imagen o pega una URL de Cloudinary.
    - **Resumen**, **Disciplinas** y, si lo tienes, **Resultado**.
-   - **SEO** y **Página del caso**. El caso se arma con bloques: texto, imagen, galería de 1 a 4 columnas, cita, cifras y paleta de color con proporción de uso.
+   - **SEO** y **Página del caso**. El caso se arma con bloques: texto (con `> ` al inicio de un párrafo lo vuelves frase destacada), imagen (también como logotipo centrado), galería de 1 a 4 columnas, cita con autor, cifras con explicación y nota, lista de puntos, videos MP4 verticales u horizontales, sitio web en vivo dentro de una ventana de navegador y paleta de color con proporción de uso. Al final puedes cambiar el **cierre de la página** (la pregunta y el texto antes del botón de WhatsApp).
 3. Pasa a la pestaña **EN** y traduce. Lo que dejes vacío en inglés usa el texto en español.
 4. **Save**. En 1 o 2 minutos el proyecto está publicado en todas las páginas.
 
@@ -97,6 +97,6 @@ El panel también funciona sin GitHub: en Chrome, abre `http://localhost:4321/ad
 
 Lo que está entre esas marcas lo escribe el build: no lo edites a mano. El resto de cada página se edita como siempre.
 
-**Casos antiguos.** Los 10 casos que ya tenías (Orbidental, Fueggo, etc.) conservan su página hecha a mano (`Página del caso: Hecha a mano`). Sus tarjetas sí se generan desde el panel. Si algún día quieres pasarlos al diseño nuevo, cambia ese campo a **Automática**, llena los bloques del caso y borra su carpeta `trabajo/<proyecto>/`.
+**Casos antiguos.** Los 10 casos que ya tenías (Orbidental, Fueggo, etc.) ya usan el diseño nuevo: sus textos, imágenes y videos están en el panel como bloques, igual que los proyectos nuevos. Sus páginas hechas a mano siguen en `trabajo/<proyecto>/index.html`, pero el build las reemplaza por la versión del panel; no hace falta borrarlas. La carpeta `trabajo/pulse-digital/site/` (el sitio de Pulse que se ve dentro del caso) sí se sigue usando.
 
 **Scripts de Python anteriores** (`build-en.py`, `restore-es.py`, `build-offers.py`): siguen en el repositorio para el resto del sitio, pero ya no se publican. Las zonas de proyectos no dependen de ellos.

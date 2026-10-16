@@ -1,3 +1,4 @@
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: Eighteeth
   publicado: true
@@ -5,23 +6,231 @@ es:
   anio: '2026'
   concepto: false
   destacado: false
-  areas: [social, dental]
-  mostrar_en: [inicio, trabajo, cv_dental]
-  pagina: propia
+  areas:
+  - social
+  - dental
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv_dental
+  pagina: plantilla
   portada:
     imagen: /assets/dental/eighteeth/card-eighteeth-1200.jpg
     estilo: foto
   alt: 'Reels de Eighteeth: microscopio Acuvision X, escáner intraoral Helios 500 y autoclave E-Sanit'
   resumen: Serie de reels que explica microscopio, escáneres intraorales, autoclave y rayos X en menos de 40 segundos cada uno.
-  disciplinas: [Social media, Video, Sector dental]
+  disciplinas:
+  - Social media
+  - Video
+  - Sector dental
   resultado:
     cifra: '6'
     texto: reels y un video horizontal
+  color: '#1D2633'
+  seo:
+    titulo: Eighteeth — Reels de equipos odontológicos | Alexander Caro
+    descripcion: 'Serie de reels para Eighteeth en Orbidental: microscopio, escáneres intraorales, motor endodóntico, autoclave y rayos X explicados en menos de 40 segundos.'
+  caso:
+    intro: 'Un microscopio, un escáner intraoral o un autoclave no se venden con una foto de catálogo. Se venden cuando el odontólogo entiende en segundos qué le cambia en la consulta. Una serie de reels para Orbidental: un equipo por video, una idea por escena.'
+    ficha:
+    - etiqueta: Cliente
+      valor: Orbidental SAS · marca Eighteeth
+    - etiqueta: Mi rol
+      valor: Guion · Diseño · Video
+    - etiqueta: Categoría
+      valor: Equipos odontológicos · Tecnología digital
+    - etiqueta: Entregables
+      valor: 6 reels 9:16 · 1 video 16:9 para feria
+    bloques:
+    - tipo: cifras
+      items:
+      - cifra: '6'
+        texto: Reels 9:16, uno por equipo
+      - cifra: '7'
+        texto: Equipos presentados
+      - cifra: ≈37 s
+        texto: Duración de cada reel
+      - cifra: '16:9'
+        texto: Versión horizontal para feria
+      nota: '* Serie producida en septiembre de 2026 para Orbidental.'
+    - tipo: texto
+      titulo: Tecnología compleja, explicada en *menos de 40 segundos*.
+      texto: |-
+        Los equipos de Eighteeth tienen fichas técnicas largas: aumentos, lux, N·cm, micras. En un reel nadie las lee. Al odontólogo le sirve ver la cifra que le cambia el día —y entenderla sin pausar el video.
+
+        > Un dato por escena. Un equipo por video. Y la música marcando cada corte.
+
+        Todos los reels siguen la misma estructura: un gancho con el problema («Lo que no se ve», «Adiós a las impresiones»), el equipo, tres o cuatro cifras clave y el cierre con Orbidental como distribuidor. La serie se reconoce al instante sin volverse repetitiva.
+    - tipo: texto
+      titulo: Un equipo. *Una idea* por escena.
+      texto: Microscopio, escáneres intraorales, motor endodóntico, autoclave y rayos X portátil. Seis reels con la misma estructura y la música editada a tiempo con cada dato. Dale play con sonido.
+    - tipo: videos
+      items:
+      - video: /assets/dental/eighteeth/eighteeth-acuvision-x.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-acuvision-x-720.jpg
+        formato: vertical
+        titulo: Acuvision X
+        texto: 'Microscopio dental: óptica apocromática de 2,6× a 23,5×, más de 100.000 lux y 5 filtros.'
+        duracion: 0:38
+      - video: /assets/dental/eighteeth/eighteeth-helios-500.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-helios-500-720.jpg
+        formato: vertical
+        titulo: Helios 500
+        texto: 'Escáner intraoral: arcada completa en menos de 30 s. Adiós a las impresiones.'
+        duracion: 0:38
+      - video: /assets/dental/eighteeth/eighteeth-helios-700.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-helios-700-720.jpg
+        formato: vertical
+        titulo: Helios 700
+        texto: 'Escáner intraoral inalámbrico: wifi dedicado, color real y precisión por diente.'
+        duracion: 0:37
+      - video: /assets/dental/eighteeth/eighteeth-e-connect-s.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-e-connect-s-720.jpg
+        formato: vertical
+        titulo: E-Connect S+
+        texto: Motor endodóntico inalámbrico con localizador de ápice integrado. Mide y trabaja.
+        duracion: 0:37
+      - video: /assets/dental/eighteeth/eighteeth-e-sanit.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-e-sanit-720.jpg
+        formato: vertical
+        titulo: E-Sanit
+        texto: 'Autoclave de vapor clase B en 18 L y 23 L: 134 °C y datos en tiempo real.'
+        duracion: 0:36
+      - video: /assets/dental/eighteeth/eighteeth-hyperlight-m-nanopix-15.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-hyperlight-m-nanopix-15-720.jpg
+        formato: vertical
+        titulo: HyperLight M + NanoPix 1.5
+        texto: 'Rayos X portátil y sensor digital: un sistema, menos repeticiones.'
+        duracion: 0:36
+    - tipo: texto
+      titulo: Toda la línea en *40 segundos*.
+      texto: 'Versión 16:9 que recorre el portafolio Eighteeth con el respaldo de Orbidental, hecha para proyectarse en el stand de Orbidental en una feria del sector: toda la línea, de un vistazo, para quien pasa por el stand.'
+    - tipo: videos
+      items:
+      - video: /assets/dental/eighteeth/eighteeth-feria-horizontal.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-feria-horizontal-1280.jpg
+        formato: horizontal
+        titulo: Eighteeth × Orbidental — video para feria
+        texto: Recorrido 16:9 por el portafolio Eighteeth con el respaldo de Orbidental, proyectado en el stand de una feria del sector.
+        duracion: 0:40
+    - tipo: lista
+      titulo: Equipos de alto valor, *fáciles de entender*.
+      items:
+      - titulo: Traduzco fichas técnicas
+        texto: 'Aumentos, lux, torque, micras: elijo la cifra que le importa al odontólogo y la hago legible en un segundo de pantalla.'
+      - titulo: Series que escalan
+        texto: Una estructura que sirve para el próximo equipo del portafolio sin empezar de cero cada vez.
+      - titulo: El distribuidor siempre presente
+        texto: 'La marca del fabricante brilla y cada video cierra dónde comprarla: en Orbidental.'
+    cta:
+      titulo: ¿Tu portafolio tiene equipos que nadie entiende en un post?
+      texto: Traduzco fichas técnicas en piezas que un odontólogo entiende en segundos y que tu equipo comercial puede usar al día siguiente.
 en:
   nombre: Eighteeth
   alt: 'Eighteeth Reels: Acuvision X microscope, Helios 500 intraoral scanner and E-Sanit autoclave'
   resumen: A Reels series explaining a microscope, intraoral scanners, an autoclave and handheld X-ray, each in under 40 seconds.
-  disciplinas: [Social media, Video, Dental industry]
+  disciplinas:
+  - Social media
+  - Video
+  - Dental industry
   resultado:
     cifra: '6'
     texto: Reels and one landscape video
+  seo:
+    titulo: Eighteeth — Dental Equipment Reels | Alexander Caro
+    descripcion: 'A Reels series for Eighteeth at Orbidental: microscope, intraoral scanners, endo motor, autoclave and handheld X-ray, each explained in under 40 seconds.'
+  caso:
+    intro: 'A microscope, an intraoral scanner or an autoclave doesn''t sell from a catalog photo. It sells when a dentist gets, in seconds, what it changes in their day. A Reels series for Orbidental: one device per video, one idea per scene.'
+    ficha:
+    - etiqueta: Client
+      valor: Orbidental SAS · Eighteeth brand
+    - etiqueta: My role
+      valor: Script · Design · Video
+    - etiqueta: Category
+      valor: Dental equipment · Digital dentistry
+    - etiqueta: Deliverables
+      valor: 6 Reels (9:16) · 1 trade-show video (16:9)
+    bloques:
+    - tipo: cifras
+      items:
+      - cifra: '6'
+        texto: 9:16 Reels, one per device
+      - cifra: '7'
+        texto: Devices featured
+      - cifra: ≈37 s
+        texto: Length of each Reel
+      - cifra: '16:9'
+        texto: Landscape cut for a trade show
+      nota: '* Series produced in September 2026 for Orbidental.'
+    - tipo: texto
+      titulo: Complex tech, explained in *under 40 seconds*.
+      texto: |-
+        Eighteeth devices come with long spec sheets: magnification, lux, N·cm, microns. Nobody reads those in a Reel. A dentist needs the one number that changes their day — and to get it without pausing the video.
+
+        > One fact per scene. One device per video. And the music driving every cut.
+
+        Every Reel follows the same structure: a hook built on the problem ("What you can't see", "Goodbye, impressions"), the device, three or four key numbers, and a close with Orbidental as the distributor. The series is instantly recognizable without feeling repetitive.
+    - tipo: texto
+      titulo: One device. *One idea* per scene.
+      texto: Microscope, intraoral scanners, endo motor, autoclave and handheld X-ray. Six Reels, one structure, with the music cut to every number. Turn the sound on.
+    - tipo: videos
+      items:
+      - video: /assets/dental/eighteeth/eighteeth-acuvision-x.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-acuvision-x-720.jpg
+        formato: vertical
+        titulo: Acuvision X
+        texto: 'Dental microscope: apochromatic optics from 2.6× to 23.5×, 100,000+ lux and 5 filters.'
+        duracion: 0:38
+      - video: /assets/dental/eighteeth/eighteeth-helios-500.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-helios-500-720.jpg
+        formato: vertical
+        titulo: Helios 500
+        texto: 'Intraoral scanner: full arch in under 30 s. Goodbye, impressions.'
+        duracion: 0:38
+      - video: /assets/dental/eighteeth/eighteeth-helios-700.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-helios-700-720.jpg
+        formato: vertical
+        titulo: Helios 700
+        texto: 'Wireless intraoral scanner: dedicated Wi-Fi, true color and per-tooth accuracy.'
+        duracion: 0:37
+      - video: /assets/dental/eighteeth/eighteeth-e-connect-s.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-e-connect-s-720.jpg
+        formato: vertical
+        titulo: E-Connect S+
+        texto: Cordless endo motor with a built-in apex locator. It measures, then it works.
+        duracion: 0:37
+      - video: /assets/dental/eighteeth/eighteeth-e-sanit.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-e-sanit-720.jpg
+        formato: vertical
+        titulo: E-Sanit
+        texto: 'Class B steam autoclave in 18 L and 23 L: 134 °C and real-time cycle data.'
+        duracion: 0:36
+      - video: /assets/dental/eighteeth/eighteeth-hyperlight-m-nanopix-15.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-hyperlight-m-nanopix-15-720.jpg
+        formato: vertical
+        titulo: HyperLight M + NanoPix 1.5
+        texto: 'Handheld X-ray and digital sensor: one system, fewer retakes.'
+        duracion: 0:36
+    - tipo: texto
+      titulo: The whole line in *40 seconds*.
+      texto: A 16:9 version that walks through the Eighteeth portfolio backed by Orbidental, made to play on screen at Orbidental's booth at an industry trade show — the whole line at a glance for everyone walking by.
+    - tipo: videos
+      items:
+      - video: /assets/dental/eighteeth/eighteeth-feria-horizontal.mp4
+        poster: /assets/dental/eighteeth/poster-eighteeth-feria-horizontal-1280.jpg
+        formato: horizontal
+        titulo: Eighteeth × Orbidental — trade-show video
+        texto: 16:9 walkthrough of the Eighteeth line backed by Orbidental, shown at the booth of an industry trade show.
+        duracion: 0:40
+    - tipo: lista
+      titulo: High-ticket equipment, *easy to get*.
+      items:
+      - titulo: I translate spec sheets
+        texto: 'Magnification, lux, torque, microns: I pick the number a dentist cares about and make it readable in one second on screen.'
+      - titulo: Series that scale
+        texto: A structure that works for the next device in the portfolio, without starting from scratch every time.
+      - titulo: The distributor never disappears
+        texto: 'The manufacturer''s brand shines, and every video ends with where to buy it: Orbidental.'
+    cta:
+      titulo: Got equipment nobody understands from a single post?
+      texto: I turn spec sheets into content a dentist gets in seconds — and your sales team can use the very next day.

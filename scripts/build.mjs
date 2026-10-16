@@ -60,16 +60,13 @@ async function main() {
   log(`✓ Contenido: ${content.published.length} proyectos publicados (${content.all.length} en total)`);
   if (CHECK_ONLY) return;
 
-  // Choque entre página propia existente y página generada
-  for (const p of content.published) {
-    if (p.pagina !== 'plantilla') continue;
-    for (const pre of ['', 'en/']) {
-      if (fs.existsSync(path.join(ROOT, pre, 'trabajo', p.slug, 'index.html')))
-        throw new BuildError(
-          `"${p.slug}" está marcado como página automática (plantilla), pero ya existe ${pre}trabajo/${p.slug}/index.html hecho a mano. Cambia "pagina" a "propia" o borra ese archivo.`,
-        );
-    }
-  }
+  // Un proyecto con página automática reemplaza la página hecha a mano que
+  // tenga en trabajo/<slug>/ (esa carpeta puede quedarse en el repositorio).
+  const replacedByTemplate = content.published.filter(
+    (p) => p.pagina === 'plantilla' && ['', 'en/'].some((pre) => fs.existsSync(path.join(ROOT, pre, 'trabajo', p.slug, 'index.html'))),
+  );
+  if (replacedByTemplate.length)
+    log(`· Con diseño de plantilla (reemplazan la página hecha a mano): ${replacedByTemplate.map((p) => p.slug).join(', ')}`);
 
   fs.rmSync(OUT, { recursive: true, force: true });
   copySite(ROOT, OUT);
@@ -157,6 +154,9 @@ async function main() {
     }
     for (const m of s.matchAll(/(?:src|srcset)="(\/assets\/proyectos\/[^"\s]+)/g)) {
       if (!fs.existsSync(path.join(OUT, m[1]))) problems.push(`${path.relative(OUT, file)}: imagen inexistente ${m[1]}`);
+    }
+    for (const m of s.matchAll(/<(?:source|video)\b[^>]*?\b(?:src|poster)="(\/[^"]+)"/g)) {
+      if (!fs.existsSync(path.join(OUT, decodeURI(m[1])))) problems.push(`${path.relative(OUT, file)}: archivo inexistente ${m[1]}`);
     }
   }
   if (problems.length) throw new BuildError('La verificación encontró problemas:\n  · ' + [...new Set(problems)].join('\n  · '));

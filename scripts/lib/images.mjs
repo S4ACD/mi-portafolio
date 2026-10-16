@@ -5,6 +5,8 @@
 //   y se publica en /assets/proyectos/<slug>/. El original NO se publica.
 // · Cloudinary: se reescribe la transformación (q_auto,f_auto,w_N) para cada ancho.
 // · Otra URL externa: se usa tal cual.
+// · Encuadre opcional { ratio, fit, bg }: recorta a una proporción fija
+//   (fit 'cover') o la muestra completa sobre un color de fondo (fit 'contain').
 //
 // Los resultados se guardan en caché (node_modules/.cache) para que los builds
 // siguientes, en tu PC o en Vercel, no vuelvan a procesar lo mismo.
@@ -43,12 +45,27 @@ export function createImagePipeline({ root, outDir, cacheDir }) {
   const isCloudinary = (u) => /^https:\/\/res\.cloudinary\.com\/[^/]+\/image\/upload\//.test(u);
   const isRemote = (u) => /^https?:\/\//.test(u);
 
-  const cloudinaryAt = (url, w) => {
+  const cloudinaryAt = (url, w, frame) => {
     const [head, tail] = url.split('/image/upload/');
     const parts = tail.split('/');
     // Quita los segmentos de transformación existentes (q_auto,f_auto,w_800 · q_auto/f_auto …)
     while (parts.length > 1 && !/^v\d+$/.test(parts[0]) && /^[a-z]{1,3}_[^/]*$/.test(parts[0].split(',')[0])) parts.shift();
-    return `${head}/image/upload/q_auto,f_auto,w_${w}/${parts.join('/')}`;
+    let crop = '';
+    if (frame) {
+      const ar = `ar_${frame.ratio.toFixed(4).replace(/\.?0+$/, '')}`;
+      crop = frame.fit === 'contain'
+        ? `c_pad,${ar},b_rgb:${frame.bg.replace('#', '')},`
+        : `c_fill,g_center,${ar},`;
+    }
+    return `${head}/image/upload/${crop}q_auto,f_auto,w_${w}/${parts.join('/')}`;
+  };
+
+  const normFrame = (o) => {
+    const ratio = Number(o?.ratio);
+    if (!ratio || !isFinite(ratio)) return null;
+    const fit = o.fit === 'contain' ? 'contain' : 'cover';
+    const bg = /^#[0-9a-f]{6}$/i.test(o.bg || '') ? o.bg.toLowerCase() : '#000000';
+    return { ratio, fit, bg };
   };
 
   /**
@@ -56,23 +73,25 @@ export function createImagePipeline({ root, outDir, cacheDir }) {
    * @param {object} o       { slug, widths:[...] }
    * @returns descriptor listo para pintar con <picture>/<img>
    */
-  async function get(src, { slug, widths }) {
+  async function get(src, { slug, widths, frame }) {
     if (!src) return null;
     src = String(src).trim();
-    const key = `${src}|${widths.join(',')}`;
-    if (!memo.has(key)) memo.set(key, build(src, slug, widths));
+    const f = normFrame(frame);
+    const key = `${src}|${widths.join(',')}|${f ? `${f.ratio}${f.fit}${f.bg}` : ''}`;
+    if (!memo.has(key)) memo.set(key, build(src, slug, widths, f));
     return memo.get(key);
   }
 
-  async function build(src, slug, widths) {
+  async function build(src, slug, widths, frame) {
     if (isCloudinary(src)) {
+      const mid = widths[Math.min(1, widths.length - 1)];
       return {
         kind: 'cloudinary',
-        src: cloudinaryAt(src, widths[Math.min(1, widths.length - 1)]),
-        srcset: widths.map((w) => `${cloudinaryAt(src, w)} ${w}w`).join(', '),
-        width: null,
-        height: null,
-        url: (w) => cloudinaryAt(src, w),
+        src: cloudinaryAt(src, mid, frame),
+        srcset: widths.map((w) => `${cloudinaryAt(src, w, frame)} ${w}w`).join(', '),
+        width: frame ? mid : null,
+        height: frame ? Math.round(mid / frame.ratio) : null,
+        url: (w) => cloudinaryAt(src, w, frame),
       };
     }
     if (isRemote(src)) return { kind: 'remote', src, srcset: '', width: null, height: null, url: () => src };
@@ -85,10 +104,12 @@ export function createImagePipeline({ root, outDir, cacheDir }) {
     const buf = fs.readFileSync(file);
     const meta = await sharp(buf).metadata();
     const W = meta.width, H = meta.height;
-    const alpha = !!meta.hasAlpha;
+    const alpha = !!meta.hasAlpha && !(frame && frame.fit === 'contain');
     const fallbackFmt = alpha ? 'png' : 'jpeg';
-    const base = path.basename(rel).replace(/\.[^.]+$/, '').replace(/-(\d{3,4})$/, '').toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    let base = path.basename(rel).replace(/\.[^.]+$/, '').replace(/-(\d{3,4})$/, '').toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    if (frame) base += `-${frame.fit === 'contain' ? 'p' : 'c'}${Math.round(frame.ratio * 1000)}${frame.fit === 'contain' ? frame.bg.slice(1) : ''}`;
     let ws = [...new Set(widths.map((w) => Math.min(w, W)))].sort((a, b) => a - b);
+    const hOf = (w) => Math.round(w / frame.ratio);
     const hash = crypto.createHash('sha1').update(buf).digest('hex').slice(0, 8);
     const pub = `/assets/proyectos/${slug}`;
 
@@ -102,7 +123,10 @@ export function createImagePipeline({ root, outDir, cacheDir }) {
         out[fmt].push({ url: `${pub}/${name}`, w });
         if (written.has(dest)) continue;
         written.add(dest);
-        const ck = crypto.createHash('sha1').update(`${CACHE_VERSION}|${hash}|${w}|${fmt}|${Q[fmt]}`).digest('hex');
+        const ck = crypto
+          .createHash('sha1')
+          .update(`${CACHE_VERSION}|${hash}|${w}|${fmt}|${Q[fmt]}${frame ? `|${frame.ratio}|${frame.fit}|${frame.bg}` : ''}`)
+          .digest('hex');
         const cached = path.join(cacheDir, `${ck}.${ext}`);
         fs.mkdirSync(path.dirname(dest), { recursive: true });
         if (fs.existsSync(cached)) {
@@ -112,7 +136,16 @@ export function createImagePipeline({ root, outDir, cacheDir }) {
         }
         jobs.push(() =>
           limit(async () => {
-            let img = sharp(buf).rotate().resize({ width: w, withoutEnlargement: true });
+            let img = frame
+              ? sharp(buf).rotate().resize({
+                  width: w,
+                  height: hOf(w),
+                  fit: frame.fit,
+                  position: frame.fit === 'cover' ? sharp.strategy.attention : 'centre',
+                  background: frame.bg,
+                })
+              : sharp(buf).rotate().resize({ width: w, withoutEnlargement: true });
+            if (frame && frame.fit === 'contain') img = img.flatten({ background: frame.bg });
             img =
               fmt === 'avif' ? img.avif({ quality: Q.avif, effort: 2 })
               : fmt === 'webp' ? img.webp({ quality: Q.webp, effort: 4 })
@@ -130,10 +163,11 @@ export function createImagePipeline({ root, outDir, cacheDir }) {
     await Promise.all(jobs.map((j) => j()));
     const mid = out[fallbackFmt][Math.min(1, ws.length - 1)];
     const toSet = (list) => list.map((x) => `${x.url} ${x.w}w`).join(', ');
+    const top = ws[ws.length - 1];
     return {
       kind: 'local',
-      width: W,
-      height: H,
+      width: frame ? top : W,
+      height: frame ? hOf(top) : H,
       src: mid.url,
       srcset: toSet(out[fallbackFmt]),
       sources: [
@@ -148,7 +182,35 @@ export function createImagePipeline({ root, outDir, cacheDir }) {
     };
   }
 
-  return { get, stats: () => ({ processed, fromCache }) };
+  /**
+   * Archivo que se publica tal cual (video, póster). Lo que ya vive en una
+   * carpeta pública se usa directo; lo subido desde el panel (/uploads/…)
+   * se copia a /assets/proyectos/<slug>/ con un hash en el nombre.
+   */
+  function asset(src, { slug }) {
+    if (!src) return '';
+    src = String(src).trim();
+    if (isRemote(src)) return src;
+    const rel = decodeURI(src.replace(/^\/+/, '').split(/[?#]/)[0]);
+    const file = path.join(root, rel);
+    if (!file.startsWith(root) || !fs.existsSync(file))
+      throw new BuildError(`Archivo no encontrado: "${src}" (proyecto ${slug}). ¿Se subió al repositorio?`);
+    if (!/^uploads\//.test(rel)) return '/' + rel;
+    const buf = fs.readFileSync(file);
+    const hash = crypto.createHash('sha1').update(buf).digest('hex').slice(0, 8);
+    const ext = path.extname(rel).toLowerCase();
+    const base = path.basename(rel, path.extname(rel)).toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    const pub = `/assets/proyectos/${slug}/${base}-${hash}${ext}`;
+    const dest = path.join(outDir, pub);
+    if (!written.has(dest)) {
+      written.add(dest);
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+      fs.copyFileSync(file, dest);
+    }
+    return pub;
+  }
+
+  return { get, asset, stats: () => ({ processed, fromCache }) };
 }
 
 /**

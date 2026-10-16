@@ -1,3 +1,4 @@
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: Rebel Street
   publicado: true
@@ -5,17 +6,195 @@ es:
   anio: '2024'
   concepto: false
   destacado: false
-  areas: [branding]
-  mostrar_en: [inicio, trabajo]
-  pagina: propia
+  areas:
+  - branding
+  mostrar_en:
+  - inicio
+  - trabajo
+  pagina: plantilla
   portada:
     imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034468/Fachada_w69uxq.png
     estilo: foto
   alt: Fachada de Rebel Street con su identidad visual
   resumen: Sistema de marca de estilo grafitero para una marca de streetwear, de logo a empaque.
-  disciplinas: [Branding, Streetwear]
+  disciplinas:
+  - Branding
+  - Streetwear
+  color: '#3B3A36'
+  seo:
+    titulo: Rebel Street — Cuando un logo de Canva no basta | Alexander Caro
+    descripcion: Cómo construí un sistema de identidad grafitero completo para una marca de streetwear que partió de un logo hecho en Canva/IA — coherente en 9+ aplicaciones, sin caer en lo amateur.
+  caso:
+    intro: Una marca de ropa no vende solo prendas — vende una cara. Rebel Street llegó con un logo hecho en Canva y una idea sin sistema. Lo que se va a poner en la calle es esto.
+    ficha:
+    - etiqueta: Cliente
+      valor: Rebel Street
+    - etiqueta: Mi rol
+      valor: Identidad visual completa, de cero
+    - etiqueta: Categoría
+      valor: Moda · Streetwear urbano
+    - etiqueta: Alcance
+      valor: Diseño y branding — confección y producción a cargo del cliente
+    - etiqueta: Entregables
+      valor: Logo, paleta, tipografía, fachada, prendas, etiquetas, empaque, staff
+    bloques:
+    - tipo: texto
+      titulo: En streetwear, la marca *es* el producto
+      texto: |-
+        Rebel Street era la primera marca propia de un emprendedor independiente. No había tienda, no había producción todavía — había una idea y un logo armado en Canva con ayuda de IA. Funcional para mostrarle algo a un amigo. No para ponerlo en una fachada, en una etiqueta o en la espalda de un hoodie que alguien va a llevar puesto en la calle.
+
+        > En moda urbana nadie compra la prenda primero — compra la identidad. Si esa identidad se ve improvisada, la prenda se siente improvisada, sin importar la calidad de la tela.
+
+        El encargo no era "mejorar el logo". Era construir, desde cero, todo lo que hace falta para que una marca exista de forma coherente antes de su primera venta: un sistema visual con criterio de calle —grafitero, con actitud— pero con la disciplina necesaria para sobrevivir aplicado en fachada, prendas, etiquetas, empaque y uniformes sin desarmarse.
+    - tipo: texto
+      titulo: De un logo de IA a un sistema de marca
+      texto: 'Este es el contraste real: lo que existía cuando llegó el encargo, contra el sistema final ya aplicado. No fue un ajuste de tipografía — fue construir desde la base lo que faltaba: jerarquía, consistencia y un criterio gráfico que se sostiene en cualquier soporte.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034469/REBEL-STREET-LOGO-CON-FONDO_owu22x.png
+        alt: 'Punto de partida: logo improvisado, hecho en Canva con ayuda de IA'
+        pie: Punto de partida
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034468/Fachada_w69uxq.png
+        alt: 'Sistema final: identidad aplicada en fachada física'
+        pie: Sistema final
+    - tipo: texto
+      titulo: Grafitero no significa caótico
+      texto: |-
+        Cualquiera puede poner un spray-font y llamarlo "streetwear". El reto real es distinto: diseñar un sistema con suficiente actitud de calle para que el público correcto lo reconozca al instante, pero con suficiente disciplina para que la misma marca se vea igual de sólida en una fachada de 4 metros que en una etiqueta de 3 centímetros.
+
+        Eso significó definir reglas antes de diseñar piezas: qué elementos gráficos se repiten, cómo se comporta el logo a distintas escalas, qué paleta se mantiene fija y dónde sí hay espacio para variar. Sin ese criterio, un sistema "de calle" se desarma a la tercera aplicación — se nota dónde faltó la regla y empezó la improvisación.
+    - tipo: texto
+      titulo: Una marca que se sostiene en cualquier soporte
+      texto: El valor de un sistema de marca no se ve en una sola pieza — se ve en que la décima pieza siga sintiéndose parte de la misma marca que la primera. Esto es esa prueba.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034468/hoodie_irr8e7.png
+        alt: Rebel Street — Hoodie
+        pie: Hoodie
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034468/jogger_fojiey.png
+        alt: Rebel Street — Jogger
+        pie: Jogger
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034473/Camisa-oversize_wsorvt.png
+        alt: Rebel Street — Camisa oversize
+        pie: Camisa oversize
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034470/Staff_cjrwi6.png
+        alt: Rebel Street — Staff
+        pie: Uniformes de staff — la marca también la lleva quien atiende
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034470/Patr%C3%B3n_p7mani.png
+        alt: Rebel Street — Patrón
+        pie: Patrón de marca — el elemento gráfico que se repite y ancla todo lo demás
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034713/etiqueta_fyafnb.jpg
+        alt: Rebel Street — Etiqueta
+        pie: Etiqueta — la marca se confirma en el detalle más pequeño
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034714/Bolsa_h50jvi.jpg
+        alt: Rebel Street — Bolsa
+        pie: Bolsa de empaque — la experiencia de marca empieza antes de abrir la prenda
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034470/Agradecimiento_fcuaoj.png
+        alt: Rebel Street — Tarjeta
+        pie: Tarjeta de agradecimiento
+    - tipo: texto
+      titulo: Una marca lista para salir a la calle
+      texto: 'Rebel Street pasó de un logo de práctica a un sistema visual completo: 9 piezas aplicadas con la misma identidad gráfica, sin que ninguna se sienta el eslabón débil. Es la base de marca que necesita cualquier proyecto de moda antes de su primera venta — y la prueba de que puedo llevar una identidad de calle desde el concepto hasta la aplicación física, sin perder coherencia en el camino.'
+    cta:
+      titulo: ¿Tu marca todavía se ve como un proyecto de práctica?
+      texto: Si tu logo salió de una herramienta de IA "para empezar" y nunca se actualizó, tu marca probablemente sigue contando esa historia — aunque el producto ya esté listo. Cuéntame qué estás construyendo y te digo qué necesita tu identidad para sostenerse cuando la gente empiece a verla en serio.
 en:
   nombre: Rebel Street
   alt: Rebel Street storefront with its visual identity
   resumen: A graffiti-style brand system for a streetwear label, from logo to packaging.
-  disciplinas: [Branding, Streetwear]
+  disciplinas:
+  - Branding
+  - Streetwear
+  seo:
+    titulo: Rebel Street — When a Canva Logo Isn't Enough | Alexander Caro
+    descripcion: How I built a complete graffiti-style identity system for a streetwear brand — from a generic logo to a recognizable urban brand.
+  caso:
+    intro: A clothing brand doesn't just sell garments — it sells a face. Rebel Street arrived with a logo made in Canva and an idea without a system. What's going on the street is this.
+    ficha:
+    - etiqueta: Client
+      valor: Rebel Street
+    - etiqueta: My role
+      valor: Complete visual identity, from zero
+    - etiqueta: Category
+      valor: Fashion · Urban streetwear
+    - etiqueta: Scope
+      valor: Design and branding — manufacturing and production handled by the client
+    - etiqueta: Deliverables
+      valor: Logo, palette, typography, storefront, garments, tags, packaging, staff uniforms
+    bloques:
+    - tipo: texto
+      titulo: In streetwear, the brand *is* the product
+      texto: |-
+        Rebel Street was an independent entrepreneur's first own brand. No store, no production yet — just an idea and a logo put together in Canva with AI assistance. Good enough to show a friend. Not good enough to put on a storefront, a clothing tag, or the back of a hoodie someone is going to wear in public.
+
+        > In urban fashion, nobody buys the garment first — they buy the identity. If that identity looks improvised, the garment feels improvised, regardless of the fabric quality.
+
+        The brief wasn't "improve the logo". It was building, from scratch, everything a brand needs to exist coherently before its first sale: a visual system with street credibility — graffiti-influenced, with attitude — but with the discipline to survive applied on storefronts, garments, tags, packaging, and uniforms without falling apart.
+    - tipo: texto
+      titulo: From an AI logo to a brand system
+      texto: 'This is the real contrast: what existed when the brief arrived, versus the final system already applied. This wasn''t a typography tweak — it was building from the ground up what was missing: hierarchy, consistency, and a graphic sensibility that holds up on any surface.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034469/REBEL-STREET-LOGO-CON-FONDO_owu22x.png
+        alt: 'Punto de partida: logo improvisado, hecho en Canva con ayuda de IA'
+        pie: Starting point
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034468/Fachada_w69uxq.png
+        alt: 'Sistema final: identidad aplicada en fachada física'
+        pie: Final system
+    - tipo: texto
+      titulo: Graffiti-inspired doesn't mean chaotic
+      texto: |-
+        Anyone can drop a spray font and call it "streetwear". The real challenge is different: designing a system with enough street attitude for the right audience to recognize it instantly, but with enough discipline for the same brand to look just as solid on a 4-meter storefront as on a 3-centimeter tag.
+
+        That meant defining rules before designing pieces: which graphic elements repeat, how the logo behaves at different scales, which palette stays fixed and where there's room to vary. Without that framework, a "street" system falls apart by the third application — you can see exactly where the rule ended and the improvisation began.
+    - tipo: texto
+      titulo: A brand that holds up on any surface
+      texto: The value of a brand system isn't visible in one piece — it's visible in the tenth piece still feeling like it belongs to the same brand as the first. This is that proof.
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034468/hoodie_irr8e7.png
+        alt: Rebel Street — Hoodie
+        pie: Hoodie
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034468/jogger_fojiey.png
+        alt: Rebel Street — Jogger
+        pie: Jogger
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034473/Camisa-oversize_wsorvt.png
+        alt: Rebel Street — Camisa oversize
+        pie: Camisa oversize
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034470/Staff_cjrwi6.png
+        alt: Rebel Street — Staff
+        pie: Staff uniforms — the brand is also worn by the people who serve
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034470/Patr%C3%B3n_p7mani.png
+        alt: Rebel Street — Patrón
+        pie: Brand pattern — the graphic element that repeats and anchors everything else
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034713/etiqueta_fyafnb.jpg
+        alt: Rebel Street — Etiqueta
+        pie: Tag — the brand confirmed in the smallest detail
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034714/Bolsa_h50jvi.jpg
+        alt: Rebel Street — Bolsa
+        pie: Packaging bag — the brand experience starts before the garment is opened
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034470/Agradecimiento_fcuaoj.png
+        alt: Rebel Street — Tarjeta
+        pie: Thank-you card
+    - tipo: texto
+      titulo: A brand ready to hit the street
+      texto: 'Rebel Street went from a practice logo to a complete visual system: 9 pieces applied with the same graphic identity, none of them feeling like the weak link. It''s the brand foundation any fashion project needs before its first sale — and proof that I can take a street identity from concept to physical application without losing coherence along the way.'
+    cta:
+      titulo: Does your brand still look like a practice project?
+      texto: Si tu logo salió de una herramienta de IA "para empezar" y nunca se actualizó, tu marca probablemente sigue contando esa historia — aunque el producto ya esté listo. Cuéntame qué estás construyendo y te digo qué necesita tu identidad para sostenerse cuando la gente empiece a verla en serio.

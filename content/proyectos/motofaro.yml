@@ -1,3 +1,4 @@
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: MotoFaro
   publicado: true
@@ -5,9 +6,13 @@ es:
   anio: '2026'
   concepto: true
   destacado: false
-  areas: [web]
-  mostrar_en: [inicio, trabajo, cv]
-  pagina: propia
+  areas:
+  - web
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
   portada:
     imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1783086186/Comparador-FOTO1_l00off.webp
     estilo: foto
@@ -17,15 +22,146 @@ es:
     fondo: '#0a0a0f'
   alt: Comparador lado a lado de MotoFaro con specs, precio y puntuación
   resumen: Comparador de accesorios para moto en Next.js, con el SEO como arquitectura desde el primer commit.
-  disciplinas: [Web, Next.js, SEO técnico]
+  disciplinas:
+  - Web
+  - Next.js
+  - SEO técnico
   resultado:
     cifra: '99'
     texto: PageSpeed, SEO técnico 100/100
+  color: '#B4400E'
+  seo:
+    titulo: MotoFaro — Comparador de accesorios para moto con SEO técnico | Alexander Caro
+    descripcion: 'Cómo construí MotoFaro de cero: un comparador de accesorios para moto en Next.js con arquitectura SEO-first, PageSpeed 99 y SEO técnico 100/100. Proyecto propio, de cero a producción.'
+  caso:
+    intro: 'Un comparador de accesorios para moto construido en Next.js con arquitectura SEO-first: catálogo filtrable, comparador lado a lado y recomendador por quiz — todo alimentado desde una sola fuente de datos y optimizado para captar tráfico de intención de compra. Proyecto propio, de cero a producción.'
+    ficha:
+    - etiqueta: Cliente
+      valor: MotoFaro (concepto propio)
+    - etiqueta: Mi rol
+      valor: Producto + diseño + desarrollo + SEO
+    - etiqueta: Stack
+      valor: Next.js · React · Tailwind CSS
+    - etiqueta: Enfoque
+      valor: SEO técnico · intención de compra
+    bloques:
+    - tipo: texto
+      titulo: En un comparador, el SEO no es una capa — es la arquitectura.
+      texto: |-
+        Quien busca "mejor intercomunicador para moto en Colombia" está a un clic de comprar. El reto no era diseñar bonito: era construir un sitio donde cada producto, cada categoría y cada comparación fuera una página indexable, rápida y con datos estructurados — para que Google entienda el catálogo y lo muestre justo cuando alguien está decidiendo qué comprar.
+
+        > La monetización por afiliados es el objetivo de negocio; el SEO técnico es lo que la hace posible. Este proyecto es la prueba de que sé construir esa base.
+    - tipo: texto
+      titulo: Un producto real, en vivo — no una maqueta.
+      texto: 'MotoFaro está desplegado y funcionando: 12 productos con puntuación, filtros por categoría, seis modos de orden, comparador lado a lado y un quiz que recomienda según tu tipo de uso. Esta es la web real embebida — haz clic para abrirla completa.'
+    - tipo: sitio
+      url: https://motofaro.vercel.app/
+      pie: 'Vista en vivo de MotoFaro: puedes navegarlo aquí mismo o abrirlo en una pestaña nueva.'
+    - tipo: cifras
+      titulo: Medido, no prometido.
+      items:
+      - cifra: '99'
+        texto: PageSpeed escritorio
+      - cifra: '84'
+        texto: PageSpeed móvil
+      - cifra: '100'
+        texto: SEO técnico
+      - cifra: '12'
+        texto: Productos comparables
+      nota: '* Métricas de rendimiento medidas con Google PageSpeed Insights sobre el sitio en producción. La monetización por afiliados está en fase temprana — este caso documenta la construcción del producto y su base técnica, no ingresos.'
+    - tipo: lista
+      titulo: Rendimiento y SEO no se negocian entre sí.
+      texto: Un comparador con imágenes de producto, filtros dinámicos y muchas páginas suele ser pesado y lento. El reto fue mantener PageSpeed alto Y el catálogo completo indexable al mismo tiempo. Estas son las decisiones que lo hicieron posible.
+      items:
+      - titulo: Una sola fuente de datos alimenta todo el sitio
+        texto: Todo el catálogo vive en un solo archivo de datos estructurado. De ahí se generan las páginas de producto, las de categoría y el comparador — sin duplicar contenido y sin base de datos. Añadir un producto es editar un objeto, y el sitio entero se actualiza de forma consistente.
+      - titulo: Imágenes optimizadas sin sacrificar velocidad
+        texto: 'Uso el sistema de imágenes de Next.js para servir cada foto en el formato y tamaño exactos que necesita cada dispositivo. Resultado: catálogo visualmente rico con PageSpeed 99 en escritorio y 84 en móvil, sin bloquear el renderizado.'
+      - titulo: SEO técnico 100/100 con metadatos y datos estructurados
+        texto: 'Cada página tiene su meta description, Open Graph con locale es_CO, Twitter cards y marcado orientado a producto. La divulgación de afiliados es visible y cumple la normativa. Google no solo indexa el sitio: entiende qué es cada página y para quién.'
+    - tipo: galeria
+      titulo: El comparador en acción.
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1783086186/Comparador-FOTO2_p1ssm7.webp
+        alt: Ficha de producto de MotoFaro con puntuación y detalle técnico
+        pie: Ficha de producto con puntuación y detalle técnico, lista para intención de compra.
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1783086186/Metricas-motofaro_p3nm90.webp
+        alt: 'Métricas de PageSpeed de MotoFaro: 99 escritorio, SEO 100'
+        pie: 'PageSpeed real: 99 escritorio, SEO y Recomendaciones 100/100.'
+    cta:
+      titulo: ¿Necesitas un sitio que Google entienda y que cargue rápido?
+      texto: Si tu negocio vive de aparecer en búsquedas, ese es exactamente el tipo de base técnica que construyo. Cuéntame tu proyecto — respondo en menos de 24 horas.
 en:
   nombre: MotoFaro
   alt: MotoFaro side-by-side comparison with specs, price and score
   resumen: A motorcycle gear comparison site in Next.js, with SEO as the architecture from the first commit.
-  disciplinas: [Web, Next.js, Technical SEO]
+  disciplinas:
+  - Web
+  - Next.js
+  - Technical SEO
   resultado:
     cifra: '99'
     texto: PageSpeed, technical SEO 100/100
+  seo:
+    titulo: MotoFaro — Motorcycle Gear Comparison Engine with Technical SEO | Alexander Caro
+    descripcion: 'Self-initiated project: I built MotoFaro from scratch — a motorcycle-gear comparison engine in Next.js with an SEO-first architecture, PageSpeed 99 and technical SEO 100/100.'
+  caso:
+    intro: 'A motorcycle-gear comparison engine built in Next.js with an SEO-first architecture: filterable catalog, side-by-side comparison and a quiz recommender — all driven from a single data source and optimized to capture purchase-intent traffic. Self-initiated project, from zero to production.'
+    ficha:
+    - etiqueta: Client
+      valor: MotoFaro (own concept)
+    - etiqueta: My role
+      valor: Product + design + development + SEO
+    - etiqueta: Stack
+      valor: Next.js · React · Tailwind CSS
+    - etiqueta: Focus
+      valor: Technical SEO · purchase intent
+    bloques:
+    - tipo: texto
+      titulo: In a comparison engine, SEO isn't a layer — it's the architecture.
+      texto: |-
+        Someone searching "best motorcycle intercom in Colombia" is one click from buying. The challenge wasn't to design something pretty: it was to build a site where every product, category and comparison is an indexable, fast page with structured data — so Google understands the catalog and surfaces it exactly when someone is deciding what to buy.
+
+        > Affiliate monetization is the business goal; technical SEO is what makes it possible. This project is the proof that I can build that foundation.
+    - tipo: texto
+      titulo: A real product, live — not a mockup.
+      texto: 'MotoFaro is deployed and running: 12 scored products, category filters, six sort modes, a side-by-side comparison and a quiz that recommends based on your riding profile. This is the real site embedded — click to open it full.'
+    - tipo: sitio
+      url: https://motofaro.vercel.app/
+      pie: 'Live view of MotoFaro: browse it right here or open it in a new tab.'
+    - tipo: cifras
+      titulo: Measured, not promised.
+      items:
+      - cifra: '99'
+        texto: PageSpeed desktop
+      - cifra: '84'
+        texto: PageSpeed mobile
+      - cifra: '100'
+        texto: Technical SEO
+      - cifra: '12'
+        texto: Comparable products
+      nota: '* Performance metrics measured with Google PageSpeed Insights on the production site. Affiliate monetization is in an early stage — this case documents the product build and its technical foundation, not revenue.'
+    - tipo: lista
+      titulo: Performance and SEO don't trade against each other.
+      texto: A comparison engine with product images, dynamic filters and many pages is usually heavy and slow. The challenge was keeping PageSpeed high AND the full catalog indexable at once. These are the decisions that made it possible.
+      items:
+      - titulo: A single data source feeds the whole site
+        texto: The entire catalog lives in a single structured data file. Product pages, category pages and the comparison engine are all generated from it — no duplicate content, no database. Adding a product means editing one object, and the whole site updates consistently.
+      - titulo: Optimized images without sacrificing speed
+        texto: 'I use Next.js''s image system to serve every photo in the exact format and size each device needs. Result: a visually rich catalog with PageSpeed 99 on desktop and 84 on mobile, without blocking rendering.'
+      - titulo: Technical SEO 100/100 with metadata and structured data
+        texto: 'Every page has its own meta description, Open Graph with es_CO locale, Twitter cards and product-oriented markup. The affiliate disclosure is visible and compliant. Google doesn''t just index the site: it understands what each page is and who it''s for.'
+    - tipo: galeria
+      titulo: The comparison engine in action.
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1783086186/Comparador-FOTO2_p1ssm7.webp
+        alt: Ficha de producto de MotoFaro con puntuación y detalle técnico
+        pie: Product page with score and technical detail, built for purchase intent.
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1783086186/Metricas-motofaro_p3nm90.webp
+        alt: 'Métricas de PageSpeed de MotoFaro: 99 escritorio, SEO 100'
+        pie: 'Real PageSpeed: 99 desktop, SEO and Best Practices 100/100.'
+    cta:
+      titulo: Do you need a site Google understands and that loads fast?
+      texto: If your business lives on showing up in search, that's exactly the kind of technical foundation I build. Tell me about your project — I reply within 24 hours.

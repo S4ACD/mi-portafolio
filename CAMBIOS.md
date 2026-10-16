@@ -1,3 +1,12 @@
+# PORTAFOLIO v2.1: casos antiguos con el diseño nuevo, 16 oct 2026
+
+- Los 10 casos antiguos (Orbidental, DiaDent, Eighteeth, Social Media Dental, AcelerArte, MotoFaro, Pulse Digital, Fueggo, La Jungla Club y Rebel Street) pasan a la plantilla de caso. Sus textos en español e inglés, imágenes, videos, cifras, SEO y cierre se conservan y ahora se editan desde el panel.
+- Bloques nuevos en la plantilla y en el panel: lista de puntos, videos (MP4 vertical u horizontal con portada), sitio web en vivo, cifras con título, explicación y nota, cita con autor, imagen como logotipo, paleta con uso de cada color, etiqueta sobre el nombre y cierre propio por caso. Los textos aceptan enlaces `[texto](url)` y frases destacadas con `> `.
+- Las portadas verticales o alojadas en Cloudinary se encuadran a 16:10 para que la página no salte al cargar. «Completa sobre el color de la marca» muestra la pieza sin recortar (AcelerArte).
+- Nueva portada de caso para Social Media Dental (`uploads/proyectos/social-media-dental/portada-caso.jpg`).
+- Un proyecto con página automática ya no choca con su HTML hecho a mano: el build usa la versión del panel.
+- Se quitó de Rebel Street el texto provisional «[DATO REAL: …]» y de la descripción SEO de Social Media Dental la frase «Sin pauta pagada», que contradecía el resto del caso («diseño + pauta»).
+
 # PORTAFOLIO v2: proyectos automáticos y rediseño, 16 oct 2026
 
 Uso diario: ver **GUIA.md**.

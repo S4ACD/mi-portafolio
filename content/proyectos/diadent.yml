@@ -1,3 +1,4 @@
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: DiaDent
   publicado: true
@@ -5,23 +6,288 @@ es:
   anio: '2026'
   concepto: false
   destacado: false
-  areas: [branding, social, dental]
-  mostrar_en: [inicio, trabajo, cv_dental]
-  pagina: propia
+  areas:
+  - branding
+  - social
+  - dental
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv_dental
+  pagina: plantilla
   portada:
     imagen: /assets/dental/diadent/card-diadent-1200.jpg
     estilo: foto
   alt: 'Historias de lanzamiento de DiaDent: DIA-ROOT BIO MTA, DiaPrep Pro y e-Temp con el sistema de triángulos de la marca'
   resumen: 'Branding de lanzamiento para una marca dental nueva en el portafolio de Orbidental: sistema visual, 8 historias y 8 videos.'
-  disciplinas: [Branding, Video, Sector dental]
+  disciplinas:
+  - Branding
+  - Video
+  - Sector dental
   resultado:
     cifra: '16'
     texto: piezas para 13 productos
+  color: '#1B2F5E'
+  seo:
+    titulo: DiaDent — Branding de lanzamiento para una marca dental | Alexander Caro
+    descripcion: 'Branding de lanzamiento de DiaDent en Orbidental: sistema visual, 8 historias y 8 videos para anunciar la llegada de una marca odontológica nueva al portafolio.'
+  caso:
+    intro: 'Una marca odontológica llega al portafolio de un distribuidor y ningún odontólogo la ha probado todavía. Mi trabajo fue que la reconocieran, la entendieran y quisieran pedirla antes de la primera venta: el branding de lanzamiento de DiaDent en Orbidental.'
+    ficha:
+    - etiqueta: Cliente
+      valor: Orbidental SAS · marca DiaDent
+    - etiqueta: Mi rol
+      valor: Branding de lanzamiento · Dirección de arte · Fotografía de producto · Diseño y video
+    - etiqueta: Categoría
+      valor: Endodoncia · Adhesión · Restauración
+    - etiqueta: Entregables
+      valor: 8 historias 9:16 · 7 reels · 1 video horizontal
+    bloques:
+    - tipo: cifras
+      items:
+      - cifra: '8'
+        texto: Historias 9:16 con un solo sistema visual
+      - cifra: '8'
+        texto: 'Videos: reels por producto + pieza de anuncio'
+      - cifra: '13'
+        texto: Productos presentados en la campaña
+      - cifra: '2'
+        texto: 'Formatos: vertical 9:16 y horizontal 16:9'
+      nota: '* Piezas producidas en septiembre de 2026 para el lanzamiento de DiaDent en Orbidental.'
+    - tipo: texto
+      titulo: Una marca nueva no compite con precio. Compite con *confianza*.
+      texto: |-
+        Cuando un distribuidor suma una marca, el odontólogo ya tiene en su consultorio una de confianza. Si la comunicación de la nueva se ve improvisada, nace con desventaja: nadie cambia un material que le funciona por uno que se ve genérico.
+
+        > La primera impresión de una marca dental no la da el producto. La da su comunicación.
+
+        Por eso el lanzamiento partió de un sistema, no de piezas sueltas: los triángulos del empaque de DiaDent convertidos en protagonistas, un color por producto, titulares que son concepto de marca —«Conductos limpios. Limas libres.»—, fotografías de producto que tomé yo para varias de las piezas y datos técnicos verificados contra la información del fabricante, presentados como ficha, nunca como oferta.
+    - tipo: texto
+      titulo: Primero, que *se sepa*.
+      texto: 'La pieza que abre la campaña: presenta la marca y sus líneas de endodoncia y restauración en 18 segundos. Una versión horizontal para web y pantallas, y otra vertical para reels e historias. Dale play con sonido: la música marca cada corte.'
+    - tipo: videos
+      items:
+      - video: /assets/dental/diadent/diadent-llegada-horizontal.mp4
+        poster: /assets/dental/diadent/poster-diadent-llegada-horizontal-1280.jpg
+        formato: horizontal
+        titulo: ¡Llegó DiaDent! — versión horizontal
+        texto: Pieza de lanzamiento 16:9 que anuncia la llegada de DiaDent a Orbidental y presenta sus líneas de endodoncia y restauración.
+        duracion: 0:18
+      - video: /assets/dental/diadent/diadent-llegada-vertical.mp4
+        poster: /assets/dental/diadent/poster-diadent-llegada-vertical-720.jpg
+        formato: vertical
+        titulo: ¡Llegó DiaDent! — reel
+        texto: La misma pieza de lanzamiento en 9:16 para reels e historias.
+        duracion: 0:18
+    - tipo: texto
+      titulo: Un sistema. *Ocho* productos.
+      texto: Fondo blanco hueso, los triángulos del empaque a escala monumental y el color de cada producto como protagonista. Cambia el producto; la marca se reconoce igual.
+    - tipo: galeria
+      columnas: 4
+      imagenes:
+      - imagen: /assets/dental/diadent/story-dia-root-bio-mta-1080.jpg
+        alt: 'Historia DiaDent de DIA-ROOT BIO MTA: titular «Reparar también es sellar.», ficha técnica y tres beneficios sobre fondo blanco hueso con triángulos azules.'
+      - imagen: /assets/dental/diadent/story-diaetch-dia-x-bond-1080.jpg
+        alt: Historia DiaDent «La adhesión lo es todo» con la jeringa DiaEtch 37 % y el frasco Dia-X Bond Universal sobre bloques grises y fondo azul marino.
+      - imagen: /assets/dental/diadent/story-dia-proseal-1080.jpg
+        alt: 'Historia DiaDent de Dia-ProSeal: titular «El sello que cierra la historia.» con acento verde y triángulos amarillos.'
+      - imagen: /assets/dental/diadent/story-dia-root-bio-sealer-1080.jpg
+        alt: 'Historia DiaDent de Dia-Root BIO Sealer: titular «Sella sin mezclar. Fluye directo.», cifras 100 % premezclado, 0,00 % contracción y pH 12.'
+      - imagen: /assets/dental/diadent/story-diaetch-1080.jpg
+        alt: 'Historia DiaDent de DiaEtch: titular «Grabado preciso. Adhesión predecible.», 37 % de ácido ortofosfórico, 15 s de grabado y punta 25 G.'
+      - imagen: /assets/dental/diadent/story-diaprep-pro-1080.jpg
+        alt: 'Historia DiaDent de DiaPrep Pro: titular «Conductos limpios. Limas libres.» con jeringas sobre un triángulo naranja y tres beneficios numerados.'
+      - imagen: /assets/dental/diadent/story-e-temp-1080.jpg
+        alt: 'Historia DiaDent de e-Temp: titular «Humedad. Fragua. Listo.» sobre fondo verde con el frasco y un 25 gigante de minutos de fraguado.'
+      - imagen: /assets/dental/diadent/story-dia-x-sil-1080.jpg
+        alt: 'Historia DiaDent de Dia-X Sil: titular «Precisión en cada detalle», siliconas de adición light body y bite sobre fondo verde oscuro.'
+    - tipo: texto
+      titulo: Cada producto, a *su ritmo*.
+      texto: 'Un reel por producto, editado a tiempo con la música: cada cambio de escena cae donde cambia el mensaje. Primero el concepto, después la cifra que lo respalda.'
+    - tipo: videos
+      items:
+      - video: /assets/dental/diadent/diadent-diaetch.mp4
+        poster: /assets/dental/diadent/poster-diadent-diaetch-720.jpg
+        formato: vertical
+        titulo: DiaEtch 37 %
+        texto: 'Gel de ácido ortofosfórico: punta 25 G, color visible y grabado preciso.'
+        duracion: 0:30
+      - video: /assets/dental/diadent/diadent-diaplus.mp4
+        poster: /assets/dental/diadent/poster-diadent-diaplus-720.jpg
+        formato: vertical
+        titulo: DiaPlus
+        texto: Adhesivo de un solo paso, contado como un producto hecho para rendir.
+        duracion: 0:33
+      - video: /assets/dental/diadent/diadent-ml029.mp4
+        poster: /assets/dental/diadent/poster-diadent-ml029-720.jpg
+        formato: vertical
+        titulo: Gutapercha ML.029
+        texto: Marcación en milímetros, inspección láser y codificación ISO por color.
+        duracion: 0:49
+      - video: /assets/dental/diadent/diadent-mmpp.mp4
+        poster: /assets/dental/diadent/poster-diadent-mmpp-720.jpg
+        formato: vertical
+        titulo: Paper Points MMPP
+        texto: 'Puntas de papel: absorción, marcas en milímetros y tamaños accesorios.'
+        duracion: 0:49
+      - video: /assets/dental/diadent/diadent-diapex-plus.mp4
+        poster: /assets/dental/diadent/poster-diadent-diapex-plus-720.jpg
+        formato: vertical
+        titulo: DiaPex Plus
+        texto: 'Hidróxido de calcio con yodoformo: «Menos pasos, más confianza».'
+        duracion: '1:00'
+      - video: /assets/dental/diadent/diadent-diaprep-pro-animacion.mp4
+        poster: /assets/dental/diadent/poster-diadent-diaprep-pro-animacion-720.jpg
+        formato: vertical
+        titulo: DiaPrep Pro — animación
+        texto: La historia de DiaPrep Pro llevada a movimiento.
+        duracion: 0:11
+    - tipo: lista
+      titulo: Marcas nuevas, listas para vender *desde el día uno*.
+      items:
+      - titulo: Hablo el idioma clínico
+        texto: Endodoncia, adhesión, tiempos de fraguado, calibres ISO. Traduzco fichas técnicas sin inventar ni exagerar beneficios.
+      - titulo: Lanzo marcas dentro de un portafolio
+        texto: Cada marca tiene identidad propia sin perder la del distribuidor. DiaDent se ve como DiaDent y se compra en Orbidental.
+      - titulo: Diseño y video en una sola persona
+        texto: Historias, reels y piezas horizontales salen del mismo sistema, sin depender de una agencia para cada formato.
+    cta:
+      titulo: ¿Tu distribuidora va a sumar marcas nuevas este año?
+      texto: 'Las marcas llegan con su catálogo. Lo que no traen es cómo contarlas en tu mercado. De eso me encargo: sistema visual, piezas y video listos para que tu equipo comercial venda desde el primer día.'
 en:
   nombre: DiaDent
-  alt: "DiaDent launch Stories: DIA-ROOT BIO MTA, DiaPrep Pro and e-Temp built on the brand's triangle system"
-  resumen: "Launch branding for a dental brand new to Orbidental's portfolio: a visual system, 8 Stories and 8 videos."
-  disciplinas: [Branding, Video, Dental industry]
+  alt: 'DiaDent launch Stories: DIA-ROOT BIO MTA, DiaPrep Pro and e-Temp built on the brand''s triangle system'
+  resumen: 'Launch branding for a dental brand new to Orbidental''s portfolio: a visual system, 8 Stories and 8 videos.'
+  disciplinas:
+  - Branding
+  - Video
+  - Dental industry
   resultado:
     cifra: '16'
     texto: assets for 13 products
+  seo:
+    titulo: DiaDent — Launch Branding for a Dental Brand | Alexander Caro
+    descripcion: 'Launch branding for DiaDent at Orbidental: a visual system, 8 Stories and 8 videos built to introduce a new dental brand to a distributor''s portfolio.'
+  caso:
+    intro: 'A dental brand joins a distributor''s portfolio and no dentist has tried it yet. My job was to make them recognize it, understand it and want to order it before the first sale: the launch branding for DiaDent at Orbidental.'
+    ficha:
+    - etiqueta: Client
+      valor: Orbidental SAS · DiaDent brand
+    - etiqueta: My role
+      valor: Launch branding · Art direction · Product photography · Design and video
+    - etiqueta: Category
+      valor: Endodontics · Bonding · Restorative
+    - etiqueta: Deliverables
+      valor: 8 Stories (9:16) · 7 Reels · 1 landscape video
+    bloques:
+    - tipo: cifras
+      items:
+      - cifra: '8'
+        texto: 9:16 Stories, one visual system
+      - cifra: '8'
+        texto: 'Videos: product Reels + launch spot'
+      - cifra: '13'
+        texto: Products featured in the campaign
+      - cifra: '2'
+        texto: 'Formats: vertical 9:16 and landscape 16:9'
+      nota: '* Assets produced in September 2026 for the DiaDent launch at Orbidental.'
+    - tipo: texto
+      titulo: A new brand doesn't win on price. It wins on *trust*.
+      texto: |-
+        When a distributor adds a brand, the dentist already has a trusted one in the operatory. If the newcomer's marketing looks improvised, it starts at a disadvantage: nobody swaps a material that works for one that looks generic.
+
+        > A dental brand's first impression doesn't come from the product. It comes from how the brand shows up.
+
+        So the launch started with a system, not one-off posts: the triangles on DiaDent's packaging turned into hero elements, one color per product, headlines that work as brand ideas — "Clean canals. Free-moving files." —, product photos I shot myself for several of the pieces, and technical data checked against the manufacturer's information, shown as a spec sheet, never as a sale sticker.
+    - tipo: texto
+      titulo: First, *make it known*.
+      texto: 'The spot that opens the campaign: it introduces the brand and its endodontic and restorative lines in 18 seconds. A landscape cut for web and screens, a vertical one for Reels and Stories. Turn the sound on — the music drives every cut.'
+    - tipo: videos
+      items:
+      - video: /assets/dental/diadent/diadent-llegada-horizontal.mp4
+        poster: /assets/dental/diadent/poster-diadent-llegada-horizontal-1280.jpg
+        formato: horizontal
+        titulo: DiaDent has arrived — landscape cut
+        texto: 16:9 launch spot announcing DiaDent at Orbidental and introducing its endodontic and restorative lines.
+        duracion: 0:18
+      - video: /assets/dental/diadent/diadent-llegada-vertical.mp4
+        poster: /assets/dental/diadent/poster-diadent-llegada-vertical-720.jpg
+        formato: vertical
+        titulo: DiaDent has arrived — reel
+        texto: The same launch spot in 9:16 for Reels and Stories.
+        duracion: 0:18
+    - tipo: texto
+      titulo: One system. *Eight* products.
+      texto: Off-white background, the packaging triangles blown up to monumental scale and each product's own color taking the lead. The product changes; the brand stays instantly recognizable.
+    - tipo: galeria
+      columnas: 4
+      imagenes:
+      - imagen: /assets/dental/diadent/story-dia-root-bio-mta-1080.jpg
+        alt: 'DiaDent story for DIA-ROOT BIO MTA: headline "Repairing is sealing too.", spec sheet and three benefits on off-white with blue triangles.'
+      - imagen: /assets/dental/diadent/story-diaetch-dia-x-bond-1080.jpg
+        alt: DiaDent story "Bonding is everything" with the DiaEtch 37% syringe and Dia-X Bond Universal bottle on grey blocks against navy blue.
+      - imagen: /assets/dental/diadent/story-dia-proseal-1080.jpg
+        alt: 'DiaDent story for Dia-ProSeal: headline "The seal that closes the story." with a green accent and yellow triangles.'
+      - imagen: /assets/dental/diadent/story-dia-root-bio-sealer-1080.jpg
+        alt: 'DiaDent story for Dia-Root BIO Sealer: headline "Seals without mixing. Flows straight in.", 100% premixed, 0.00% shrinkage and pH 12.'
+      - imagen: /assets/dental/diadent/story-diaetch-1080.jpg
+        alt: 'DiaDent story for DiaEtch: headline "Precise etching. Predictable bonding.", 37% phosphoric acid, 15 s etch time and 25 G tip.'
+      - imagen: /assets/dental/diadent/story-diaprep-pro-1080.jpg
+        alt: 'DiaDent story for DiaPrep Pro: headline "Clean canals. Free-moving files." with syringes over an orange triangle and three numbered benefits.'
+      - imagen: /assets/dental/diadent/story-e-temp-1080.jpg
+        alt: 'DiaDent story for e-Temp: headline "Moisture. Set. Done." on green with the jar and an oversized 25 for setting minutes.'
+      - imagen: /assets/dental/diadent/story-dia-x-sil-1080.jpg
+        alt: 'DiaDent story for Dia-X Sil: headline "Precision in every detail", light-body and bite addition silicones on dark green.'
+    - tipo: texto
+      titulo: Every product, *its own beat*.
+      texto: 'One Reel per product, cut to the music: every scene change lands exactly where the message shifts. The idea first, then the number that backs it up.'
+    - tipo: videos
+      items:
+      - video: /assets/dental/diadent/diadent-diaetch.mp4
+        poster: /assets/dental/diadent/poster-diadent-diaetch-720.jpg
+        formato: vertical
+        titulo: DiaEtch 37%
+        texto: 'Phosphoric acid etching gel: 25 G tip, high-visibility color, precise etching.'
+        duracion: 0:30
+      - video: /assets/dental/diadent/diadent-diaplus.mp4
+        poster: /assets/dental/diadent/poster-diadent-diaplus-720.jpg
+        formato: vertical
+        titulo: DiaPlus
+        texto: One-step bonding agent, framed as a product built to perform.
+        duracion: 0:33
+      - video: /assets/dental/diadent/diadent-ml029.mp4
+        poster: /assets/dental/diadent/poster-diadent-ml029-720.jpg
+        formato: vertical
+        titulo: ML.029 gutta-percha
+        texto: Millimeter markings, laser inspection and ISO color coding.
+        duracion: 0:49
+      - video: /assets/dental/diadent/diadent-mmpp.mp4
+        poster: /assets/dental/diadent/poster-diadent-mmpp-720.jpg
+        formato: vertical
+        titulo: MMPP paper points
+        texto: 'Paper points: absorbency, millimeter markings and accessory sizes.'
+        duracion: 0:49
+      - video: /assets/dental/diadent/diadent-diapex-plus.mp4
+        poster: /assets/dental/diadent/poster-diadent-diapex-plus-720.jpg
+        formato: vertical
+        titulo: DiaPex Plus
+        texto: 'Calcium hydroxide with iodoform: "Fewer steps, more confidence."'
+        duracion: '1:00'
+      - video: /assets/dental/diadent/diadent-diaprep-pro-animacion.mp4
+        poster: /assets/dental/diadent/poster-diadent-diaprep-pro-animacion-720.jpg
+        formato: vertical
+        titulo: DiaPrep Pro — motion
+        texto: The DiaPrep Pro story, brought to motion.
+        duracion: 0:11
+    - tipo: lista
+      titulo: New brands, ready to sell *from day one*.
+      items:
+      - titulo: I speak clinical
+        texto: Endodontics, bonding, setting times, ISO sizes. I turn spec sheets into clear messages without inventing or inflating benefits.
+      - titulo: I launch brands inside a portfolio
+        texto: Each brand keeps its own identity without losing the distributor's. DiaDent looks like DiaDent — and you buy it from Orbidental.
+      - titulo: Design and video, one person
+        texto: Stories, Reels and landscape spots come out of the same system, with no agency needed for each format.
+    cta:
+      titulo: Is your company adding new brands this year?
+      texto: 'Brands arrive with a catalog. What they don''t bring is a way to tell their story in your market. That''s what I do: a visual system, assets and video your sales team can use from day one.'

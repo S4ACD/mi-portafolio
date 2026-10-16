@@ -19,6 +19,10 @@ const T = {
     ctaMore: 'Ver más proyectos',
     home: 'Inicio',
     work: 'Trabajo',
+    openSite: 'Abrir el sitio',
+    newTab: '(se abre en una pestaña nueva)',
+    preview: 'Vista en vivo de',
+    noVideo: 'Tu navegador no reproduce este video.',
     wa: (n) => `¡Hola Alexander! Vi tu proyecto ${n} y me interesa algo similar para mi marca. ¿Podemos hablar?`,
   },
   en: {
@@ -35,6 +39,10 @@ const T = {
     ctaMore: 'See more projects',
     home: 'Home',
     work: 'Work',
+    openSite: 'Open the site',
+    newTab: '(opens in a new tab)',
+    preview: 'Live preview of',
+    noVideo: 'Your browser can’t play this video.',
     wa: (n) => `Hi Alexander! I saw your ${n} project and I'd like something similar for my brand. Can we talk?`,
   },
 };
@@ -85,7 +93,13 @@ export async function casePage({ p, lang, next, images, footer, slugToImg }) {
   const seoDesc = plain(d.seo?.descripcion || d.resumen);
 
   const get = (src, widths) => (src ? images.get(src, { slug: p.slug, widths }) : null);
-  const cover = await get(c.portada || p.portada.imagen, W.full);
+  // Imagen principal: las verticales y las de Cloudinary (sin medidas conocidas)
+  // se encuadran a 16:10 para que la portada no salte al cargar.
+  const coverSrc = c.portada || p.portada.imagen;
+  let cover = await get(coverSrc, W.full);
+  const pad = c.portada_ajuste === 'completa';
+  if (cover && (pad || cover.kind === 'cloudinary' || (cover.width && cover.height > cover.width * 0.85)))
+    cover = await images.get(coverSrc, { slug: p.slug, widths: W.full, frame: { ratio: 1.6, fit: pad ? 'contain' : 'cover', bg: brand } });
   const ogImage = cover ? (cover.kind === 'local' ? SITE + cover.url(1200) : cover.url(1200)) : '';
 
   /* ── Bloques ── */
@@ -99,10 +113,12 @@ export async function casePage({ p, lang, next, images, footer, slugToImg }) {
       </section>`);
     } else if (tipo === 'imagen') {
       const bleed = b.ancho === 'sangrado';
-      const img = await get(b.imagen, W.full);
+      const logo = b.ancho === 'logo';
+      const img = await get(b.imagen, logo ? [480, 960] : W.full);
       if (!img) continue;
-      blocks.push(`<figure class="cs-figure${bleed ? ' cs-figure--bleed' : ''}">
-        ${pictureHtml(img, { alt: plain(b.alt), sizes: bleed ? SIZES.bleed : SIZES.full, attrs: ' loading="lazy" decoding="async"' })}
+      const sizes = logo ? '(max-width: 560px) 70vw, 420px' : bleed ? SIZES.bleed : SIZES.full;
+      blocks.push(`<figure class="cs-figure${bleed ? ' cs-figure--bleed' : ''}${logo ? ' cs-figure--logo' : ''}">
+        ${logo ? '<div>' : ''}${pictureHtml(img, { alt: plain(b.alt), sizes, attrs: ' loading="lazy" decoding="async"' })}${logo ? '</div>' : ''}
         ${b.pie ? `<figcaption>${inline(b.pie)}</figcaption>` : ''}
       </figure>`);
     } else if (tipo === 'galeria') {
@@ -126,11 +142,66 @@ export async function casePage({ p, lang, next, images, footer, slugToImg }) {
       </section>`);
     } else if (tipo === 'cita') {
       const [o, cl] = lang === 'en' ? ['“', '”'] : ['«', '»'];
-      blocks.push(`<blockquote class="cs-quote"><p>${o}${inline(b.texto)}${cl}</p></blockquote>`);
+      const q = `<blockquote class="cs-quote"><p>${o}${inline(b.texto)}${cl}</p></blockquote>`;
+      blocks.push(b.autor ? `<figure class="cs-quote-fig">${q}<figcaption>${inline(b.autor)}</figcaption></figure>` : q);
     } else if (tipo === 'cifras') {
-      blocks.push(`<section class="cs-figures">
-        ${(b.items || []).map((x) => `<div><b>${esc(x.cifra)}</b><span>${inline(x.texto)}</span></div>`).join('\n        ')}
+      const items = (b.items || [])
+        .map((x) => `<div><b>${esc(x.cifra)}</b><span>${inline(x.texto)}</span>${x.detalle ? `<p>${inline(x.detalle)}</p>` : ''}</div>`)
+        .join('\n          ');
+      blocks.push(`<section class="cs-stats">
+        ${b.titulo ? `<h3>${inline(b.titulo)}</h3>` : ''}
+        <div class="cs-figures">
+          ${items}
+        </div>
+        ${b.nota ? `<p class="cs-cap cs-note">${inline(b.nota)}</p>` : ''}
       </section>`);
+    } else if (tipo === 'lista') {
+      blocks.push(`<section class="cs-list">
+        ${b.titulo ? `<h2>${inline(b.titulo)}</h2>` : ''}
+        <div class="cs-list__body">
+          ${b.texto ? `<div class="cs-prose">${md(b.texto)}</div>` : ''}
+          <ul>
+            ${(b.items || []).map((x) => `<li>${x.titulo ? `<h3>${inline(x.titulo)}</h3>` : ''}${x.texto ? `<p>${inline(x.texto)}</p>` : ''}</li>`).join('\n            ')}
+          </ul>
+        </div>
+      </section>`);
+    } else if (tipo === 'videos') {
+      const vids = (b.items || []).map((x) => {
+        const wide = x.formato === 'horizontal';
+        const src = images.asset(x.video, { slug: p.slug });
+        const poster = images.asset(x.poster, { slug: p.slug });
+        const label = plain(x.titulo || d.nombre);
+        return `<figure class="cs-video${wide ? ' cs-video--wide' : ''}">
+            <video controls playsinline preload="none"${poster ? ` poster="${attr(poster)}"` : ''} width="${wide ? 1280 : 720}" height="${wide ? 720 : 1280}" aria-label="${attr(label)}">
+              <source src="${attr(src)}" type="video/mp4">
+              ${t.noVideo}
+            </video>
+            ${x.titulo || x.texto || x.duracion ? `<figcaption>${x.titulo ? `<b>${inline(x.titulo)}</b>` : ''}${x.duracion ? `<span>${esc(x.duracion)}</span>` : ''}${x.texto ? `<p>${inline(x.texto)}</p>` : ''}</figcaption>` : ''}
+          </figure>`;
+      });
+      blocks.push(`<section class="cs-videos">
+        ${b.titulo ? `<h3>${inline(b.titulo)}</h3>` : ''}
+        <div class="cs-videos__grid">
+          ${vids.join('\n          ')}
+        </div>
+      </section>`);
+    } else if (tipo === 'sitio') {
+      const href = b.enlace || b.url;
+      let host = '';
+      try {
+        host = new URL(href, SITE).host.replace(/^www\./, '');
+      } catch {}
+      if (href && href.startsWith('/')) host = `alexandercaro.com${href.replace(/\/$/, '')}`;
+      blocks.push(`<figure class="cs-site">
+        <div class="cs-site__frame">
+          <div class="cs-site__bar" aria-hidden="true"><i></i><i></i><i></i><span>${esc(host)}</span></div>
+          <iframe src="${attr(b.url)}" title="${attr(`${t.preview} ${plain(d.nombre)}`)}" loading="lazy" referrerpolicy="no-referrer"></iframe>
+        </div>
+        <figcaption>
+          ${b.pie ? `<span>${inline(b.pie)}</span>` : ''}
+          <a class="pz-btn pz-btn--ghost" href="${attr(href)}" target="_blank" rel="noopener noreferrer">${t.openSite} ↗<span class="pz-sr"> ${t.newTab}</span></a>
+        </figcaption>
+      </figure>`);
     } else if (tipo === 'colores') {
       const cols = b.colores || [];
       blocks.push(`<section class="cs-palette">
@@ -140,7 +211,7 @@ export async function casePage({ p, lang, next, images, footer, slugToImg }) {
             .map((x) => {
               const share = Math.max(Number(x.proporcion) || 0, 0) || 1;
               const pct = x.proporcion ? `<span>${esc(x.proporcion)} %</span>` : '';
-              return `<div class="cs-swatch" style="--share:${share};--c:${attr(x.hex)}"><i></i><p><b>${esc(x.nombre)}</b><span>${esc(String(x.hex).toUpperCase())}</span>${pct}</p></div>`;
+              return `<div class="cs-swatch" style="--share:${share};--c:${attr(x.hex)}"><i></i><p><b>${esc(x.nombre)}</b><span>${esc(String(x.hex).toUpperCase())}</span>${pct}${x.uso ? `<span>${inline(x.uso)}</span>` : ''}</p></div>`;
             })
             .join('\n          ')}
         </div>
@@ -174,7 +245,7 @@ export async function casePage({ p, lang, next, images, footer, slugToImg }) {
   }
 
   const wa = `https://wa.me/573024457653?text=${encodeURIComponent(t.wa(plain(d.nombre)))}`;
-  const kicker = p.concepto ? t.concept : t.client;
+  const kicker = c.etiqueta ? esc(c.etiqueta) : p.concepto ? t.concept : t.client;
 
   const schema = {
     '@context': 'https://schema.org',
@@ -281,8 +352,8 @@ ${nextHtml}
 
     <section class="cs-cta" id="contacto">
       <div class="pz-wrap">
-        <h2>${esc(t.ctaTitle)}</h2>
-        <p>${esc(t.ctaText)}</p>
+        <h2>${c.cta?.titulo ? inline(c.cta.titulo) : esc(t.ctaTitle)}</h2>
+        <p>${c.cta?.texto ? inline(c.cta.texto) : esc(t.ctaText)}</p>
         <div class="cs-cta__actions">
           <a class="pz-btn pz-btn--solid" href="${attr(wa)}" target="_blank" rel="noopener noreferrer">${t.ctaWa}</a>
           <a class="pz-btn pz-btn--ghost" href="${lang === 'en' ? '/en' : ''}/trabajo/">${t.ctaMore}</a>

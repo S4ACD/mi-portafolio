@@ -1,3 +1,4 @@
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: AcelerArte
   publicado: true
@@ -5,23 +6,169 @@ es:
   anio: '2026'
   concepto: false
   destacado: false
-  areas: [grafico, branding]
-  mostrar_en: [inicio, trabajo, cv]
-  pagina: propia
+  areas:
+  - grafico
+  - branding
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
   portada:
     imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-1_oyll2h.webp
     estilo: foto
   alt: Flyer de AcelerArte para una válida de motociclismo
   resumen: Mi marca propia de flyers deportivos para motociclismo, con estética de competición que los pilotos repostean.
-  disciplinas: [Diseño gráfico, Motociclismo, Marca propia]
+  disciplinas:
+  - Diseño gráfico
+  - Motociclismo
+  - Marca propia
   resultado:
     cifra: '+5.300'
     texto: visitas en 28 días
+  color: '#8E0F14'
+  seo:
+    titulo: AcelerArte — Flyers y diseño deportivo para motociclismo | Alexander Caro
+    descripcion: 'AcelerArte: diseño de flyers deportivos y contenido visual para pilotos, equipos y eventos de motociclismo. Piezas de alto impacto al estilo MotoGP — pilotos reconocidos y marcas del sector ya han interactuado con el trabajo.'
+  caso:
+    portada_ajuste: completa
+    etiqueta: Marca propia
+    intro: 'Flyers deportivos y contenido visual para el mundo del motociclismo: pilotos, equipos y eventos. Mi marca propia — nace de entender la cultura de la velocidad desde adentro, y de traducir esa adrenalina a piezas que la gente quiere compartir.'
+    ficha:
+    - etiqueta: Tipo
+      valor: Marca propia
+    - etiqueta: Sector
+      valor: Motociclismo deportivo
+    - etiqueta: Mi rol
+      valor: Identidad, dirección de arte y diseño de cada pieza
+    - etiqueta: Para quién
+      valor: Pilotos, equipos y eventos de motos
+    - etiqueta: Herramientas
+      valor: Photoshop, Illustrator
+    bloques:
+    - tipo: texto
+      titulo: El motociclismo se vive con intensidad. *Su contenido casi nunca*.
+      texto: |-
+        El mundo de las motos está lleno de pasión: pilotos que entrenan a diario, equipos que compiten cada fin de semana, eventos que mueven comunidades enteras. Pero cuando llega el momento de comunicar —un anuncio de carrera, la presentación de un piloto, un evento— la mayoría termina con una plantilla genérica que no transmite nada de esa adrenalina.
+
+        > Una marca deportiva que se ve floja comunica que el equipo es flojo. En un sector donde la imagen es identidad, una pieza sin fuerza es una oportunidad perdida.
+
+        AcelerArte nace de ahí: de ser parte de esa cultura y entender que un flyer de motociclismo no es "un diseño bonito", es una declaración de actitud. Velocidad, riesgo, precisión — eso es lo que cada pieza tiene que hacer sentir antes de que alguien lea una sola palabra.
+    - tipo: texto
+      titulo: No diseño un flyer. Diseño *cómo se siente ir a 200*.
+      texto: |-
+        Cada pieza arranca con una pregunta: ¿qué tiene que sentir alguien al verla en su feed entre cientos de posts? La respuesta —tensión, potencia, movimiento— define todo: la composición tiene que tener velocidad aunque la imagen esté quieta, la tipografía tiene que verse afilada y agresiva, y el color tiene que cargar energía sin caer en el cliché de "rojo y negro genérico".
+
+        Por eso integro la fotografía del piloto con luz dramática, líneas de movimiento, y un sistema tipográfico que se siente sacado del paddock de MotoGP. No es decoración: es traducir la identidad de cada piloto o equipo a una imagen que ellos quieren tener en su perfil — y que su comunidad quiere compartir.
+    - tipo: texto
+      titulo: El trabajo, pieza por pieza
+      texto: 'Flyers deportivos para pilotos y equipos de motociclismo. Cada uno con su propia identidad de color y actitud, pero con la misma firma visual: alto impacto, estética de competición, listo para redes.'
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-1_oyll2h.webp
+        alt: Flyer deportivo de motociclismo — piloto, estilo MotoGP en rojo
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-2_wxhlh0.webp
+        alt: Flyer de carrera de motos — diseño deportivo azul
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-3_a3kxrr.webp
+        alt: Diseño para piloto de motociclismo — Mario González, verde
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-4_ufa3zy.webp
+        alt: Flyer deportivo de moto — Camilo Cadavid, cyan
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-5_ihtogs.webp
+        alt: Diseño para piloto de motociclismo — Angelo Bonilla, Honda
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-6_qdtkda.webp
+        alt: Flyer de competición de motos — Alexander Rodríguez
+    - tipo: cifras
+      titulo: El trabajo movió a la comunidad correcta
+      items:
+      - cifra: '+5.300'
+        texto: Visitas al perfil en 28 días
+        detalle: Alcance reciente de la cuenta de AcelerArte, impulsado por las piezas — no por pauta paga.
+      - cifra: '161'
+        texto: Interacciones en el período
+        detalle: Likes, comentarios y mensajes de una comunidad real de motociclismo, no de seguidores comprados.
+      - cifra: ↗
+        texto: Repost de pilotos reconocidos
+        detalle: Pilotos como Mario González y Angelo Bonilla repostearon sus piezas en historias y escribieron para felicitar el trabajo.
+      nota: '* Datos de Instagram (últimos 28 días). Además, cuentas de marcas del sector como CF Moto y Honda han interactuado con las piezas (reacciones en redes). Cifras reales, verificables en el perfil.'
+    cta:
+      titulo: ¿Tu equipo o evento merece verse a la altura de la pista?
+      texto: Si sos piloto, manejás un equipo u organizás un evento de motos y estás cansado de plantillas genéricas, hablemos. Diseño flyers y contenido que se ven como se siente correr. Respondo en menos de 24 horas.
 en:
   nombre: AcelerArte
   alt: AcelerArte flyer for a motorcycle race
   resumen: My own motorsport flyer brand, with race-grade aesthetics that riders actually repost.
-  disciplinas: [Graphic design, Motorsport, Own brand]
+  disciplinas:
+  - Graphic design
+  - Motorsport
+  - Own brand
   resultado:
-    cifra: '5,300+'
+    cifra: 5,300+
     texto: visits in 28 days
+  seo:
+    titulo: AcelerArte — Sports Design for Motorcycle Racing | Alexander Caro
+    descripcion: 'AcelerArte: race flyers and visual content for Colombian motorcycle racing — my own sports-design project with a real audience.'
+  caso:
+    portada_ajuste: completa
+    etiqueta: Own brand
+    intro: 'Sports flyers and visual content for the world of motorcycle racing: riders, teams, and events. My own brand — born from understanding racing culture from the inside, and translating that adrenaline into pieces people actually want to share.'
+    ficha:
+    - etiqueta: Type
+      valor: Own brand
+    - etiqueta: Sector
+      valor: Competitive motorsport
+    - etiqueta: My role
+      valor: Identity, art direction and design of every piece
+    - etiqueta: For whom
+      valor: Riders, teams, and motorcycle events
+    - etiqueta: Tools
+      valor: Photoshop, Illustrator
+    bloques:
+    - tipo: texto
+      titulo: Motorcycle racing is lived with intensity. *Its content almost never is.*
+      texto: |-
+        The motorcycle world is full of passion: riders training daily, teams competing every weekend, events that move entire communities. But when it comes time to communicate — a race announcement, a rider introduction, an event — most end up with a generic template that conveys none of that adrenaline.
+
+        > A sports brand that looks weak communicates that the team is weak. In a sector where image is identity, a piece without force is a missed opportunity.
+
+        AcelerArte was born from that: from being part of the culture and understanding that a motorsport flyer isn't "a nice design" — it's a statement of attitude. Speed, risk, precision — that's what every piece needs to make someone feel before they read a single word.
+    - tipo: texto
+      titulo: I don't design a flyer. I design *what it feels like to hit 200*.
+      texto: |-
+        Every piece starts with one question: what does someone need to feel when they see it in their feed among hundreds of posts? The answer — tension, power, motion — drives everything: the composition has to have speed even when the image is still, the typography has to look sharp and aggressive, and the color has to carry energy without falling into the cliché of "generic red and black".
+
+        That's why I integrate rider photography with dramatic lighting, motion lines, and a typographic system that feels pulled from the MotoGP paddock. It's not decoration — it's translating each rider's or team's identity into an image they want on their profile, and that their community wants to share.
+    - tipo: texto
+      titulo: The work, piece by piece
+      texto: 'Sports flyers for motorcycle riders and teams. Each one with its own color identity and attitude, but with the same visual signature: high impact, competition aesthetics, built for social media.'
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-1_oyll2h.webp
+        alt: Flyer deportivo de motociclismo — piloto, estilo MotoGP en rojo
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-2_wxhlh0.webp
+        alt: Flyer de carrera de motos — diseño deportivo azul
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-3_a3kxrr.webp
+        alt: Diseño para piloto de motociclismo — Mario González, verde
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-4_ufa3zy.webp
+        alt: Flyer deportivo de moto — Camilo Cadavid, cyan
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-5_ihtogs.webp
+        alt: Diseño para piloto de motociclismo — Angelo Bonilla, Honda
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781873289/FLYER-6_qdtkda.webp
+        alt: Flyer de competición de motos — Alexander Rodríguez
+    - tipo: cifras
+      titulo: The work moved the right community
+      items:
+      - cifra: '+5.300'
+        texto: Profile visits in 28 days
+        detalle: Recent reach for the AcelerArte account, driven by the pieces — not paid ads.
+      - cifra: '161'
+        texto: Interactions in the period
+        detalle: Likes, comments, and messages from a real motorcycle community — not bought followers.
+      - cifra: ↗
+        texto: Reposts from recognized riders
+        detalle: Riders like Mario González and Angelo Bonilla reposted their pieces in stories and messaged to congratulate the work.
+      nota: '* Instagram data (last 28 days). Additionally, brand accounts in the sector such as CF Moto and Honda have interacted with the pieces. Real numbers, verifiable on the profile.'
+    cta:
+      titulo: Does your team or event deserve to look as good as the track?
+      texto: If you're a rider, manage a team, or organize a motorcycle event and you're tired of generic templates — let's talk. I design flyers and content that look like racing feels. I reply within 24 hours.

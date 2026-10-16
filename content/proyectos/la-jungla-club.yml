@@ -1,3 +1,4 @@
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: La Jungla Club
   publicado: true
@@ -5,17 +6,192 @@ es:
   anio: '2024'
   concepto: false
   destacado: false
-  areas: [branding]
-  mostrar_en: [inicio, trabajo, cv]
-  pagina: propia
+  areas:
+  - branding
+  mostrar_en:
+  - inicio
+  - trabajo
+  - cv
+  pagina: plantilla
   portada:
     imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034073/Fachada_msspsi.png
     estilo: foto
   alt: Fachada de La Jungla Club con su identidad visual
   resumen: Identidad completa para una discoteca de DJs con máscaras y estética selvática, aplicada a fachada, menú y uniformes.
-  disciplinas: [Branding, Discoteca]
+  disciplinas:
+  - Branding
+  - Discoteca
+  color: '#0F3B26'
+  seo:
+    titulo: La Jungla Club — Una identidad que ningún competidor tiene | Alexander Caro
+    descripcion: 'En una zona donde toda discoteca compite solo con el nombre, construí un sistema de identidad visual completo para La Jungla Club: logo, fachada, menú, uniformes y flyers con un universo propio.'
+  caso:
+    intro: En una zona donde toda discoteca cambia de nombre pero se ve igual, La Jungla Club necesitaba algo que ningún competidor pudiera copiar de la noche a la mañana. Construí el sistema completo de identidad —logo, fachada, menú, uniformes y flyers— para que la marca se reconozca antes de cruzar la puerta.
+    ficha:
+    - etiqueta: Cliente
+      valor: La Jungla Club
+    - etiqueta: Categoría
+      valor: Discoteca de reggaeton · Entretenimiento nocturno
+    - etiqueta: Mi rol
+      valor: Identidad visual completa, de concepto a sistema aplicado
+    - etiqueta: Entregables
+      valor: Logo, fachada, menú, uniformes, flyers de evento
+    - etiqueta: Herramientas
+      valor: Illustrator, Photoshop
+    bloques:
+    - tipo: texto
+      titulo: Mismo formato, mismo ambiente. Solo cambia *el letrero*.
+      texto: |-
+        En la mayoría de discotecas de la zona, la identidad se acaba en el nombre. Cambia el aviso de la fachada, cambia el logo del flyer —pero la experiencia, los colores y la sensación al entrar son intercambiables entre un local y el siguiente. Para alguien que sale a bailar un viernes, todas se confunden.
+
+        > El cliente ya tenía algo que ningún competidor tenía: un nombre con carácter, La Jungla. Lo que le faltaba era un sistema visual capaz de honrar ese nombre.
+
+        El reto no era "hacer un logo bonito para una discoteca". Era construir una identidad que tradujera el concepto —selva, noche, intensidad— a cada superficie donde la marca iba a aparecer: fachada, menú, uniforme, flyer de evento. Algo que la gente recordara antes de haber bailado ahí, no después.
+    - tipo: imagen
+      ancho: logo
+      imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034072/Logo-La-jungla_ikx6j0.png
+      alt: Logo La Jungla Club
+    - tipo: texto
+      titulo: La selva no es el fondo. Es *el sistema*.
+      texto: |-
+        El cliente llegó con la idea correcta: una discoteca donde la selva se encuentra con el reggaeton. Mi trabajo no fue inventar el concepto desde cero —fue convertir esa idea en un sistema visual que se sostiene en cualquier superficie, sin perder intensidad ni coherencia.
+
+        Construimos juntos algo que va más allá del logo: cada DJ residente tiene su propia identidad dentro del universo de la marca. No es un detalle decorativo —es una estructura narrativa que le da a La Jungla Club algo que casi ninguna discoteca de la zona tiene: un mundo visual propio, que puede crecer con cada nuevo evento sin perder su núcleo.
+
+        Esa decisión —pensar en sistema, no en pieza suelta— es la que separa una identidad que se diluye en seis meses de una que sigue siendo reconocible un año después.
+    - tipo: texto
+      titulo: Un concepto fuerte en pantalla es fácil. Que sobreviva en *cinco materiales distintos*, no.
+      texto: |-
+        Selva, noche e intensidad funcionan bien en una ilustración. El reto real es que ese mismo concepto se vea igual de fuerte impreso en vinil sobre una fachada de varios metros, bordado o estampado en tela de uniforme, en el papel de un menú bajo luz de discoteca, y en un flyer que va a competir por atención en un feed saturado de eventos de viernes.
+
+        Cada superficie impone sus propias restricciones —de color, de legibilidad, de durabilidad—. Diseñar un sistema que respetara esas restricciones sin diluir la identidad en ninguna de ellas, y sin que cada pieza nueva pareciera de otra marca, fue el trabajo real detrás de este proyecto.
+    - tipo: texto
+      titulo: El sistema, pieza por pieza
+      texto: 'Cada pieza está pensada para la superficie donde vive: la fachada tiene que detener a alguien en la calle, el uniforme tiene que sobrevivir un turno completo de trabajo, el menú tiene que leerse bajo luz baja, y el flyer tiene que ganar el scroll en menos de un segundo.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034072/Men%C3%BA_emupa4.png
+        alt: La Jungla Club — Diseño de menú
+        pie: Menú — la marca sigue presente en cada mesa
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034080/Uniforme-LA-JUNGLA-CLUB_yi3lti.png
+        alt: La Jungla Club — Diseño de uniforme
+        pie: Uniforme — el equipo como parte visible del concepto
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034073/Flyer1_ncmzhk.png
+        alt: La Jungla Club — Flyer de evento 1
+        pie: Flyer de evento
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034073/Flyer2_zt0ge8.png
+        alt: La Jungla Club — Flyer de evento 2
+        pie: Flyer de evento
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034073/Flyer3_w9cmqe.png
+        alt: La Jungla Club — Flyer de evento 3
+        pie: Flyer de evento
+    - tipo: cifras
+      titulo: Una marca que se siente *antes de entrar*
+      items:
+      - cifra: 5+
+        texto: Piezas de aplicación entregadas
+        detalle: Logo, fachada, menú, uniformes y flyers de evento — coherentes entre sí, sin retrabajo entre piezas.
+      - cifra: '1'
+        texto: Sistema visual, no solo un logo
+        detalle: Selva y reggaeton traducidos en un lenguaje visual que se sostiene en vinil, tela, papel y redes.
+      - cifra: ↑
+        texto: Diferenciación real frente a la competencia
+        detalle: En un sector donde casi todas las discotecas compiten solo con el nombre, La Jungla Club ahora compite con una estética que nadie más tiene.
+      nota: '* Resultado cualitativo, basado en la diferenciación visual lograda frente a la competencia directa de la zona. Métricas de asistencia y conversión no fueron parte del alcance de este proyecto.'
+    cta:
+      titulo: ¿Tu marca compite con un nombre o con un sistema?
+      texto: Si tu negocio se ve igual que el de al lado y solo cambia el aviso, no es un problema de presupuesto —es un problema de sistema. Cuéntame tu proyecto. Respondo en menos de 24 horas.
 en:
   nombre: La Jungla Club
   alt: La Jungla Club storefront with its visual identity
   resumen: A full identity for a nightclub with masked DJs and a jungle aesthetic, applied to the facade, menu and uniforms.
-  disciplinas: [Branding, Nightclub]
+  disciplinas:
+  - Branding
+  - Nightclub
+  seo:
+    titulo: La Jungla Club — An Identity No Competitor Has | Alexander Caro
+    descripcion: In an area where every nightclub competes on name alone, I built La Jungla Club a visual identity that owns the jungle concept end to end.
+  caso:
+    intro: In an area where every nightclub changes its name but looks the same, La Jungla Club needed something no competitor could copy overnight. I built the complete identity system — logo, storefront, menu, uniforms, and flyers — so the brand is recognized before anyone walks through the door.
+    ficha:
+    - etiqueta: Client
+      valor: La Jungla Club
+    - etiqueta: Category
+      valor: Reggaeton nightclub · Nightlife entertainment
+    - etiqueta: My role
+      valor: Complete visual identity, from concept to applied system
+    - etiqueta: Deliverables
+      valor: Logo, storefront, menu, uniforms, event flyers
+    - etiqueta: Tools
+      valor: Illustrator, Photoshop
+    bloques:
+    - tipo: texto
+      titulo: Same format, same vibe. Only the *sign* changes.
+      texto: |-
+        In most nightclubs in the area, the identity ends at the name. The sign changes, the flyer logo changes — but the experience, the colors, and the feeling of walking in are interchangeable from one venue to the next. For someone going out on a Friday, they all blur together.
+
+        > The client already had something no competitor had: a name with character — La Jungla. What was missing was a visual system capable of honoring that name.
+
+        The brief wasn't "make a nice nightclub logo". It was building an identity that translated the concept — jungle, night, intensity — to every surface the brand would appear on: storefront, menu, uniform, event flyer. Something people remembered before they'd ever danced there, not after.
+    - tipo: imagen
+      ancho: logo
+      imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034072/Logo-La-jungla_ikx6j0.png
+      alt: Logo La Jungla Club
+    - tipo: texto
+      titulo: The jungle isn't the background. It's *the system*.
+      texto: |-
+        The client arrived with the right idea: a nightclub where jungle meets reggaeton. My job wasn't to invent the concept from scratch — it was to turn that idea into a visual system that holds up on any surface without losing intensity or coherence.
+
+        We built something that goes beyond the logo: each resident DJ has their own identity within the brand's universe. It's not a decorative detail — it's a narrative structure that gives La Jungla Club something almost no nightclub in the area has: a visual world of its own, one that can grow with every new event without losing its core.
+
+        That decision — thinking in systems, not in standalone pieces — is what separates an identity that dissolves in six months from one that's still recognizable a year later.
+    - tipo: texto
+      titulo: A strong concept on screen is easy. Surviving *five different materials* — that's not.
+      texto: |-
+        Jungle, night, and intensity work well in an illustration. The real challenge is making that same concept look equally strong printed on vinyl across a multi-meter storefront, embroidered or stamped on uniform fabric, on menu paper under nightclub lighting, and on a flyer competing for attention in a feed saturated with Friday events.
+
+        Every surface imposes its own constraints — color, legibility, durability. Designing a system that respected those constraints without diluting the identity on any of them, and without each new piece looking like it came from a different brand, was the real work behind this project.
+    - tipo: texto
+      titulo: The system, piece by piece
+      texto: 'Every piece is designed for the surface it lives on: the storefront has to stop someone on the street, the uniform has to survive a full shift, the menu has to be readable under low light, and the flyer has to win the scroll in under a second.'
+    - tipo: galeria
+      columnas: 2
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034072/Men%C3%BA_emupa4.png
+        alt: La Jungla Club — Diseño de menú
+        pie: Menu — the brand stays present at every table
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034080/Uniforme-LA-JUNGLA-CLUB_yi3lti.png
+        alt: La Jungla Club — Diseño de uniforme
+        pie: Uniform — the team as a visible part of the concept
+    - tipo: galeria
+      columnas: 3
+      imagenes:
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034073/Flyer1_ncmzhk.png
+        alt: La Jungla Club — Flyer de evento 1
+        pie: Flyer de evento
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034073/Flyer2_zt0ge8.png
+        alt: La Jungla Club — Flyer de evento 2
+        pie: Flyer de evento
+      - imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1781034073/Flyer3_w9cmqe.png
+        alt: La Jungla Club — Flyer de evento 3
+        pie: Flyer de evento
+    - tipo: cifras
+      titulo: A brand you feel *before you walk in*
+      items:
+      - cifra: 5+
+        texto: Application pieces delivered
+        detalle: Logo, storefront, menu, uniforms, and event flyers — all cohesive, no rework between pieces.
+      - cifra: '1'
+        texto: Visual system, not just a logo
+        detalle: Jungle and reggaeton translated into a visual language that holds up on vinyl, fabric, paper, and social media.
+      - cifra: ↑
+        texto: Real differentiation from the competition
+        detalle: In a sector where almost every nightclub competes only on name, La Jungla Club now competes with an aesthetic nobody else has.
+      nota: '* Qualitative result, based on visual differentiation achieved against direct local competitors. Attendance and conversion metrics were not part of this project''s scope.'
+    cta:
+      titulo: Does your brand compete with a name or with a system?
+      texto: If your business looks the same as the one next door and only the sign changes, that's not a budget problem — it's a system problem. Tell me about your project. I reply within 24 hours.

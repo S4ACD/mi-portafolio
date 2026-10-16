@@ -1,3 +1,4 @@
+# Caso migrado a la plantilla nueva (antes tenía página hecha a mano).
 es:
   nombre: Pulse Digital
   publicado: true
@@ -5,9 +6,12 @@ es:
   anio: '2026'
   concepto: true
   destacado: false
-  areas: [web]
-  mostrar_en: [inicio, trabajo]
-  pagina: propia
+  areas:
+  - web
+  mostrar_en:
+  - inicio
+  - trabajo
+  pagina: plantilla
   portada:
     imagen: /uploads/proyectos/pulse-digital/portada.jpg
     estilo: foto
@@ -17,15 +21,148 @@ es:
     fondo: '#080808'
   alt: Landing page de Pulse Digital en una ventana de navegador
   resumen: Identidad y landing page en inglés para una agencia ficticia, sin frameworks ni dependencias. Sitio en vivo.
-  disciplinas: [Web, Branding, Inglés]
+  disciplinas:
+  - Web
+  - Branding
+  - Inglés
   resultado:
     cifra: '0'
     texto: frameworks, carga instantánea
+  color: '#5B3DF0'
+  seo:
+    titulo: Pulse Digital — Diseño web para mercado internacional | Alexander Caro
+    descripcion: Cómo construí desde cero la identidad y la landing de Pulse Digital, un concepto de agencia de marketing premium en inglés — prueba de versatilidad visual y ejecución técnica para mercado internacional.
+  caso:
+    intro: Una identidad de agencia premium construida desde cero — en inglés, para clientes internacionales, sin un solo elemento heredado de mi propia marca.
+    ficha:
+    - etiqueta: Cliente
+      valor: Pulse Digital (concepto)
+    - etiqueta: Mi rol
+      valor: Identidad visual + diseño + desarrollo
+    - etiqueta: Categoría
+      valor: Marketing & growth agency
+    - etiqueta: Stack
+      valor: HTML / CSS / JavaScript vanilla
+    - etiqueta: Idioma
+      valor: Inglés — mercado EE.UU. / Europa
+    bloques:
+    - tipo: texto
+      titulo: Un cliente internacional no pregunta si *puedo* diseñar — pregunta si puedo salir de *mi* estilo.
+      texto: |-
+        Todo mi portafolio vive en un mismo universo visual: oscuro, dorado, Fraunces, una sola voz. Eso es consistencia de marca — pero para un cliente que busca una agencia de marketing premium en inglés, ese universo no le sirve de referencia. Necesita ver que sé construir una identidad completamente distinta a la mía, con el mismo nivel de criterio.
+
+        > Pulse Digital es esa prueba: una marca de agencia inventada para demostrar versatilidad real, no solo "puedo cambiar colores" — puedo cambiar de lenguaje visual entero y que se sienta intencional, no genérico.
+    - tipo: texto
+      titulo: Una agencia que se siente como una *consultora*, no como un SaaS más.
+      texto: 'La dirección final fue una identidad tipo growth/SaaS moderno: tipografía Poppins, violeta y verde lima como acentos sobre blanco, y fotografía real de equipo en vez de solo texto en columnas. Esta es una vista previa del sitio — haz clic para abrirlo completo.'
+    - tipo: sitio
+      url: /trabajo/pulse-digital/site/
+      pie: 'Vista previa del sitio: puedes navegarlo aquí mismo o abrirlo completo en una pestaña nueva.'
+    - tipo: texto
+      titulo: Salir de mi paleta no es solo cambiar el hex.
+      texto: 'Cualquiera puede invertir colores y llamarlo "otra identidad". El reto real fue construir un sistema con la misma lógica interna que cualquier marca real tiene: una tipografía con personalidad propia, una paleta donde el acento aparece con intención, y fotografía que aporta peso visual real — no plantilla genérica con un cambio de paleta.'
+    - tipo: colores
+      titulo: Paleta de color
+      colores:
+      - nombre: Violeta
+        hex: '#5B3DF0'
+        uso: Acento principal
+      - nombre: Lima
+        hex: '#C8F750'
+        uso: Acento secundario, alto contraste
+      - nombre: Tinta
+        hex: '#14141F'
+        uso: Texto y fondo de CTA
+    - tipo: lista
+      titulo: Tipografía y concepto
+      items:
+      - titulo: 'Tipografía display: Poppins 700'
+        texto: Geométrica, redondeada — distinta a la serif y a la Space Grotesk de mi portafolio.
+      - titulo: Concepto
+        texto: Growth agency moderna — fotografía real, bento grid, métricas integradas.
+    - tipo: lista
+      titulo: Lo que resolví
+      items:
+      - titulo: Composición con peso visual real, no solo texto en columnas
+        texto: 'Las primeras direcciones eran sólidas en tipografía pero se sentían planas: todo apilado en columnas parejas. Investigué referencias reales (agencias premiadas en Awwwards) y la diferencia estaba en la fotografía a gran escala y la composición asimétrica — lo apliqué en el hero, los servicios y el bento de resultados.'
+      - titulo: Curaduría de fotografía con licencia verificada
+        texto: 'Cada imagen se eligió y verificó individualmente por licencia y composición antes de usarla — nada de bancos genéricos sin revisar. El resultado: equipo real, dashboard real, sensación de marca activa, no de stock photo al azar.'
+      - titulo: Copy en inglés con tono de autoridad real
+        texto: 'Nada de "we help brands grow" genérico. El copy se escribió con voz de agencia seria: específico, directo, con admisiones de límites ("we''ll tell you honestly whether we''re the right fit") — eso genera más confianza que cualquier claim de resultados.'
+    cta:
+      titulo: ¿Tu marca necesita una identidad que no se sienta genérica?
+      texto: Cuéntame tu proyecto. Respondo en menos de 24 horas.
 en:
   nombre: Pulse Digital
   alt: Pulse Digital landing page in a browser window
   resumen: Identity and English landing page for a fictional agency, with no frameworks or dependencies. Live site.
-  disciplinas: [Web, Branding, English]
+  disciplinas:
+  - Web
+  - Branding
+  - English
   resultado:
     cifra: '0'
     texto: frameworks, instant load
+  seo:
+    titulo: Pulse Digital — Web Design for the International Market | Alexander Caro
+    descripcion: How I built the identity and landing page for Pulse Digital from scratch — a self-initiated concept aimed at English-speaking clients.
+  caso:
+    intro: A premium agency identity built from scratch — in English, for international clients, without a single element borrowed from my own brand.
+    ficha:
+    - etiqueta: Client
+      valor: Pulse Digital (concept)
+    - etiqueta: My role
+      valor: Visual identity + design + development
+    - etiqueta: Category
+      valor: Marketing & growth agency
+    - etiqueta: Stack
+      valor: HTML / CSS / JavaScript vanilla
+    - etiqueta: Language
+      valor: English — US / European market
+    bloques:
+    - tipo: texto
+      titulo: An international client doesn't ask if I *can* design — they ask if I can step outside *my* style.
+      texto: |-
+        My entire portfolio lives in the same visual universe: dark, gold, Fraunces, one voice. That's brand consistency — but for a client looking for a premium English-language marketing agency, that universe doesn't work as a reference. They need to see that I can build a completely different identity with the same level of craft.
+
+        > Pulse Digital is that proof: a fictional agency brand built to demonstrate real versatility — not just "I can change colors" but I can switch visual languages entirely and have it feel intentional, not generic.
+    - tipo: texto
+      titulo: An agency that feels like a *consultancy*, not another SaaS.
+      texto: 'The final direction was a modern growth/SaaS identity: Poppins typography, violet and lime green as accents on white, and real team photography instead of just text in columns. This is a preview of the site — click to open it in full.'
+    - tipo: sitio
+      url: /trabajo/pulse-digital/site/
+      pie: 'Site preview: browse it right here or open the full site in a new tab.'
+    - tipo: texto
+      titulo: Leaving my palette isn't just changing the hex.
+      texto: 'Anyone can invert colors and call it "another identity". The real challenge was building a system with the same internal logic any real brand has: a typeface with its own personality, a palette where the accent appears with intention, and photography that adds real visual weight — not a generic template with a color swap.'
+    - tipo: colores
+      titulo: Color palette
+      colores:
+      - nombre: Violet
+        hex: '#5B3DF0'
+        uso: Primary accent
+      - nombre: Lime
+        hex: '#C8F750'
+        uso: Secondary accent, high contrast
+      - nombre: Ink
+        hex: '#14141F'
+        uso: Text and CTA background
+    - tipo: lista
+      titulo: Typography and concept
+      items:
+      - titulo: 'Display typography: Poppins 700'
+        texto: Geometric, rounded — distinct from the serif and Space Grotesk of my own portfolio.
+      - titulo: Concept
+        texto: Modern growth agency — real photography, bento grid, integrated metrics.
+    - tipo: lista
+      titulo: What I solved
+      items:
+      - titulo: Composition with real visual weight, not just text in columns
+        texto: 'Early directions were solid typographically but felt flat: everything stacked in even columns. I researched real references (Awwwards-winning agencies) and the difference was in large-scale photography and asymmetric composition — I applied that to the hero, services, and results bento.'
+      - titulo: Photography curation with verified licensing
+        texto: 'Every image was individually selected and verified for licensing and composition before use — no generic stock banks left unchecked. The result: real team, real dashboard, an active brand feel rather than random stock photos.'
+      - titulo: English copy with genuine authority
+        texto: 'No generic "we help brands grow". The copy was written with a serious agency voice: specific, direct, with honest admissions of limits ("we''ll tell you honestly whether we''re the right fit") — that builds more trust than any results claim.'
+    cta:
+      titulo: Does your brand need an identity that doesn't feel generic?
+      texto: Tell me about your project. I reply within 24 hours.
