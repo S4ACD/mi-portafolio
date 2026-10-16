@@ -8,7 +8,7 @@
 
 backend:
   name: github
-  repo: TU-USUARIO/TU-REPOSITORIO # ← cambia esto por tu repositorio, ej. alexandercaro/mi-portafolio
+  repo: S4ACD/mi-portafolio
   branch: main
   commit_messages:
     create: 'Proyecto nuevo: {{slug}}'
