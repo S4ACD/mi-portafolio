@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Alexander Caro — UX/UI Designer, Graphic Designer &amp; Web Developer | Resume</title>
-  <meta name="description" content="UX/UI designer, graphic designer and web developer based in Bogotá (UTC−5, full US overlap). 4+ years designing and shipping the same product: PageSpeed 40 to 97, 179K organic impressions, 626 B2B leads." />
+  <meta name="description" content="UX/UI designer, graphic designer and web developer in Bogotá (UTC−5, full US overlap). I design and code the same product: PageSpeed 40 to 97, 626 B2B leads and 179K+ impressions in 4 months." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="author" content="Alexander Caro" />
   <meta name="theme-color" content="#050504" />
@@ -18,14 +18,14 @@
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://alexandercaro.com/en/cv/" />
   <meta property="og:title" content="Alexander Caro — UX/UI Designer, Graphic Designer &amp; Web Developer" />
-  <meta property="og:description" content="I design and ship the same product. PageSpeed 40→97, 179K organic impressions, 626 B2B leads at $0.61 each. Bogotá, UTC−5 — full US time-zone overlap." />
+  <meta property="og:description" content="I design and code the same product. PageSpeed 40→97, 626 B2B leads at 0.61 USD, 179K+ impressions. Bogotá, UTC−5: remote, hybrid or on-site." />
   <meta property="og:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781396255/Escultura_de_Alexander_ykbpww.png" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="es_CO" />
   <meta property="og:site_name" content="Alexander Caro" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Alexander Caro — UX/UI Designer, Graphic Designer &amp; Web Developer" />
-  <meta name="twitter:description" content="I design and ship the same product. PageSpeed 40→97, 179K organic impressions, 626 B2B leads." />
+  <meta name="twitter:description" content="I design and code the same product. PageSpeed 40→97, 626 B2B leads at 0.61 USD, 179K+ impressions. Bogotá, UTC−5: remote, hybrid or on-site." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781396255/Escultura_de_Alexander_ykbpww.png" />
 
   <!-- Favicon -->
@@ -41,9 +41,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
 
-  <!-- Reuses the same page stylesheet/script as the Spanish version — language-agnostic -->
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="/cv/style.css" />
+    <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/css/inicio.css" />
+  <link rel="stylesheet" href="/css/cv.css" />
 
   <!-- Schema JSON-LD -->
   <script type="application/ld+json">
@@ -113,545 +113,206 @@
     }]
   }
   </script>
-<!-- INICIO: Sector dental — estilos de la sección destacada del CV -->
-<style>
-.cvx-dental{position:relative;background:radial-gradient(ellipse 70% 60% at 85% 0%,rgba(205,183,142,.08),transparent 70%),var(--cvx-void);border-bottom:1px solid var(--cvx-line)}
-.cvx-dental__chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.cvx-dental__chips span{font-family:'Space Grotesk',system-ui,sans-serif;font-size:11.5px;letter-spacing:.04em;color:var(--cvx-dim);border:1px solid var(--cvx-line-2);border-radius:999px;padding:5px 12px}
-.cvx-dental__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.cvx-dcard{display:flex;flex-direction:column;border:1px solid var(--cvx-gold-soft);border-radius:var(--cvx-r);overflow:hidden;background:var(--cvx-surface);box-shadow:0 0 0 1px rgba(205,183,142,.06),0 24px 70px rgba(0,0,0,.45);transition:border-color .4s var(--cvx-ease),transform .4s var(--cvx-ease)}
-.cvx-dcard:hover{border-color:rgba(205,183,142,.55);transform:translateY(-4px)}
-.cvx-dcard:focus-visible{outline:2px solid var(--cvx-gold);outline-offset:3px}
-.cvx-dcard__media{aspect-ratio:16/10;overflow:hidden;background:#0a0a0a}
-.cvx-dcard__media picture,.cvx-dcard__media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .7s var(--cvx-ease)}
-.cvx-dcard:hover .cvx-dcard__media img{transform:scale(1.03)}
-.cvx-dcard__body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
-.cvx-dcard__body h3{font-family:'Fraunces',Georgia,serif;font-size:1.6rem;font-weight:400;color:var(--cvx-ink);margin:0 0 10px}
-.cvx-dcard__body p{font-size:.95rem;line-height:1.65;color:var(--cvx-dim);margin:0 0 20px}
-.cvx-dcard__foot{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
-.cvx-dcard__see{font-family:'Space Grotesk',system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--cvx-gold)}
-@media (max-width:760px){.cvx-dental__grid{grid-template-columns:1fr}.cvx-dcard__body{padding:22px}}
-</style>
-<!-- FIN: Sector dental — estilos de la sección destacada del CV -->
-
-  <link rel="stylesheet" href="/css/proyectos.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="/css/proyectos.css" /></noscript>
+<link rel="stylesheet" href="/css/proyectos.css" />
 </head>
 
-<body class="cv-page">
-
-  <!-- ═══════════════════════════════════════════════════════════
-       HERO — name, role, 3 metrics, availability, CTAs.
-       Absorbs the old "Results" section: the metrics live here now.
-  ═══════════════════════════════════════════════════════════ -->
-  <header class="cvx-hero">
-    <div class="cvx-hero__glow" aria-hidden="true"></div>
-    <div class="container cvx-hero__inner">
-
-      <div class="cvx-hero__main">
-        <span class="cvx-eyebrow">Resume · Open to full-time roles</span>
-
-        <h1 class="cvx-hero__name">Alexander Caro</h1>
-
-        <p class="cvx-hero__role">
-          UX/UI Designer <span aria-hidden="true">·</span>
-          Graphic Designer <span aria-hidden="true">·</span>
-          Web Developer
-        </p>
-
-        <p class="cvx-hero__line">
-          I design and ship the same product. 4 years owning brand, UX/UI and
-          frontend end to end for real companies.
-        </p>
-
-        <!-- Metrics: the proof before any scrolling -->
-        <ul class="cvx-metrics" aria-label="Key results">
-          <li class="cvx-metric">
-            <span class="cvx-metric__num" data-count-from="40" data-count-to="97">97</span>
-            <span class="cvx-metric__label">PageSpeed</span>
-            <span class="cvx-metric__sub">from 40 to 97 in production</span>
-          </li>
-          <li class="cvx-metric">
-            <span class="cvx-metric__num" data-count-to="179" data-suffix="K">179K</span>
-            <span class="cvx-metric__label">Organic impressions</span>
-            <span class="cvx-metric__sub">in 4 months</span>
-          </li>
-          <li class="cvx-metric">
-            <span class="cvx-metric__num" data-count-to="626">626</span>
-            <span class="cvx-metric__label">B2B leads</span>
-            <span class="cvx-metric__sub">at ~$0.61 USD each</span>
-          </li>
+<body class="hm-page cv-page">
+  <main class="cv">
+    <!-- ═══ ENCABEZADO ═══ -->
+    <header class="cv-top">
+      <div class="hm-wrap cv-top__grid">
+        <div class="cv-id">
+          <p class="cv-kicker"><i aria-hidden="true"></i>Résumé. Available immediately</p>
+          <h1 class="cv-name">Alexander Caro</h1>
+          <p class="cv-role">UX/UI designer, graphic designer and web developer</p>
+          <p class="cv-summary">I design and code the same product. Since 2022 I've owned branding, UX/UI and frontend on real projects, and since 2024 I've run everything digital at Orbidental, a B2B dental distributor: the online store, Meta Ads campaigns, content and product photography. I'm looking for a team where design and code work together.</p>
+          <div class="cv-actions">
+            <a class="hm-btn hm-btn--gold" href="/assets/cv/Alexander-Caro-CV-EN.pdf" download>Download résumé (PDF)</a>
+            <a class="hm-btn hm-btn--ghost" href="https://wa.me/573024457653?text=Hi%20Alexander%21%20I%20saw%20your%20r%C3%A9sum%C3%A9%20and%20I%27d%20like%20to%20talk%20to%20you%20about%20a%20role." target="_blank" rel="noopener noreferrer">Message me on WhatsApp</a>
+          </div>
+          <ul class="cv-links">
+            <li><a href="mailto:hosoyalexander@gmail.com">hosoyalexander@gmail.com</a></li>
+            <li><a href="https://wa.me/573024457653" target="_blank" rel="noopener noreferrer">+57 302 445 7653</a></li>
+            <li class="cv-screen-only"><a href="https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li class="cv-screen-only"><a href="https://www.behance.net/alexandercaro" target="_blank" rel="noopener noreferrer">Behance</a></li>
+            <li class="cv-print-only"><a href="https://alexandercaro.com/en/cv/">alexandercaro.com/en/cv</a></li>
+            <li class="cv-print-only"><a href="https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/">linkedin.com/in/sneider-alexander-de-la-cuadra-caro</a></li>
+            <li class="cv-print-only"><a href="https://www.behance.net/alexandercaro">behance.net/alexandercaro</a></li>
+          </ul>
+        </div>
+        <aside class="cv-side">
+          <figure class="cv-portrait"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png" srcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png 720w" sizes="(max-width: 560px) 240px, (max-width: 960px) 200px, 30vw" alt="Alexander Caro" width="1024" height="1536" fetchpriority="high" decoding="async"></figure>
+          <dl class="cv-facts">
+            <div><dt>Location</dt><dd>Bogotá, Colombia (UTC−5, full US overlap)</dd></div>
+            <div><dt>Work setup</dt><dd>Remote, hybrid or on-site</dd></div>
+            <div><dt>Engagement</dt><dd>Full-time preferred</dd></div>
+            <div><dt>Availability</dt><dd>Immediate</dd></div>
+          </dl>
+        </aside>
+      </div>
+      <div class="hm-wrap">
+        <ul class="cv-results" style="margin-top: clamp(40px, 5vw, 64px)">
+          <li><b>40 → 97</b><span>PageSpeed of Orbidental's e-commerce site, in production</span></li>
+          <li><b>626</b><span>B2B leads at ~0.61 USD each with Meta Ads</span></li>
+          <li><b>179K</b><span>impressions in 4 months across two brands' social media</span></li>
+          <li><b>$20M+</b><span>Colombian pesos in sales attributed to campaigns</span></li>
         </ul>
-
-        <p class="cvx-hero__avail">
-          <span>Bogotá, Colombia — UTC−5, full US overlap</span>
-          <span>Remote, hybrid or on-site</span>
-          <span>Available immediately · I reply within 24 hours</span>
-        </p>
-
-        <div class="cvx-hero__actions">
-          <a href="https://wa.me/573024457653" target="_blank" rel="noopener" class="cvx-btn cvx-btn--primary">
-            Message me on WhatsApp
-          </a>
-          <a href="/assets/cv/Alexander-Caro-CV-EN.pdf" class="cvx-btn" download>Resume (PDF)</a>
-          <a href="https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/" target="_blank" rel="noopener" class="cvx-btn">LinkedIn</a>
-        </div>
       </div>
+    </header>
 
-      <div class="cvx-hero__portrait">
-        <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_820/v1781396255/Escultura_de_Alexander_ykbpww.png"
-             alt="Portrait of Alexander Caro" width="820" height="1230" fetchpriority="high" />
-      </div>
-
-    </div>
-  </header>
-
-  <!-- ═══════════ QUICK NAV — sticky, with scroll-spy ═══════════ -->
-  <nav class="cvx-nav" id="cvxNav" aria-label="Resume sections">
-    <div class="container cvx-nav__inner">
-      <span class="cvx-nav__brand">Alexander Caro · Resume</span>
-      <div class="cvx-nav__links" id="cvxNavLinks">
-        <a href="#aporte">What I bring</a>
-        <a href="#experiencia">Experience</a>
-        <a href="#sector-dental">Dental industry</a><!-- Sector dental: enlace nuevo -->
-        <a href="#portafolio">Work</a>
-        <a href="#behance">Behance</a>
-        <a href="#formacion">Education</a>
-        <a href="#certificaciones">Certifications</a>
-        <a href="#contacto">Contact</a>
-      </div>
-      <a href="https://wa.me/573024457653" target="_blank" rel="noopener" class="cvx-nav__cta">Get in touch</a>
-    </div>
-  </nav>
-
-  <main>
-
-<!-- ═══ VIDEO — Short animado (mismo bloque para ES y EN) ═══ -->
-<section class="acv" id="video" data-cld="v1790349952/alexander-caro-short_vyn1m9" aria-labelledby="acvTitle">
-<style>
-.acv{position:relative;padding:clamp(56px,9vw,120px) 0;background:var(--hv2-void,#050504);color:#f4efe6;overflow:hidden}
-.acv::before{content:"";position:absolute;top:10%;left:50%;width:min(90vw,900px);height:min(60vw,560px);transform:translateX(-50%);background:radial-gradient(circle,rgba(205,183,142,.12) 0%,transparent 65%);filter:blur(50px);pointer-events:none}
-.acv__wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px}
-.acv__eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-family:'Space Grotesk',system-ui,sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#cdb78e}
-.acv__eyebrow::before{content:"";width:32px;height:1px;background:#cdb78e;opacity:.6}
-.acv__title{margin:0 0 12px;font-family:'Fraunces',Georgia,serif;font-weight:340;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;text-transform:uppercase;color:#f4efe6}
-.acv__title em{font-style:italic;font-weight:380;text-transform:none;color:#cdb78e}
-.acv__lede{max-width:52ch;margin:0 0 clamp(28px,4vw,44px);font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.7;color:rgba(244,239,230,.56)}
-.acv__player{position:relative;aspect-ratio:16/9;border-radius:clamp(12px,2vw,22px);overflow:hidden;background:#0e0d0b;border:1px solid rgba(205,183,142,.22);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(205,183,142,.08)}
-.acv__player video,.acv__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.acv__play{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;width:100%;padding:0;border:0;cursor:pointer;color:#f4efe6;background:linear-gradient(to top,rgba(5,5,4,.6),rgba(5,5,4,.05) 60%);-webkit-tap-highlight-color:transparent}
-.acv__btn{display:grid;place-items:center;width:clamp(64px,9vw,96px);height:clamp(64px,9vw,96px);border-radius:50%;background:#cdb78e;color:#1a1611;animation:acvPulse 2.4s ease-out infinite;transition:transform .4s cubic-bezier(.16,1,.3,1),background .3s}
-.acv__play:hover .acv__btn,.acv__play:focus-visible .acv__btn{transform:scale(1.08);background:#e3d2b3}
-.acv__play:focus-visible{outline:2px solid #cdb78e;outline-offset:-6px}
-.acv__btn svg{width:34%;height:34%;margin-left:7%}
-.acv__hint{padding:8px 14px;border-radius:999px;border:1px solid rgba(244,239,230,.14);background:rgba(5,5,4,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-family:'Space Grotesk',system-ui,sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
-@keyframes acvPulse{0%{box-shadow:0 0 0 0 rgba(205,183,142,.55)}70%{box-shadow:0 0 0 22px rgba(205,183,142,0)}100%{box-shadow:0 0 0 0 rgba(205,183,142,0)}}
-.acv.is-playing .acv__play,.acv.is-playing .acv__poster{display:none}
-@media (max-width:600px){.acv__wrap{padding:0 16px}.acv__hint{font-size:.62rem;letter-spacing:.14em}}
-@media (prefers-reduced-motion:reduce){.acv__btn{animation:none}}
-</style>
-<div class="acv__wrap">
-  <p class="acv__eyebrow" data-acv="eyebrow">En 60 segundos</p>
-  <h2 class="acv__title" id="acvTitle" data-acv="title">Mi historia, <em>animada.</em></h2>
-  <p class="acv__lede" data-acv="lede">Diseño gráfico, desarrollo web y una moto: un corto animado de un minuto sobre quién soy y cómo trabajo. Dale play con sonido.</p>
-  <div class="acv__player">
-    <img class="acv__poster" loading="lazy" decoding="async" width="1280" height="720"
-      src="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg"
-      srcset="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_640,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 640w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 1280w"
-      sizes="(max-width:1148px) 100vw, 1100px" alt="Miniatura del short animado de Alexander Caro" data-acv-alt />
-    <video preload="none" playsinline></video>
-    <button class="acv__play" type="button" aria-label="Reproducir video con sonido" data-acv-aria>
-      <span class="acv__btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"/></svg></span>
-      <span class="acv__hint" data-acv="hint">Ver con sonido · 1:00</span>
-    </button>
-  </div>
-</div>
-<script>
-(function(){
-  var s=document.getElementById('video');if(!s)return;
-  var id=s.getAttribute('data-cld'),base='https://res.cloudinary.com/dg2wnq6ao/video/upload/';
-  var v=s.querySelector('video'),p=s.querySelector('.acv__play'),hint=s.querySelector('[data-acv="hint"]');
-  var en=(document.documentElement.lang||'').toLowerCase().indexOf('en')===0;
-  var T=en?{eyebrow:'In 60 seconds',title:'My story, <em>animated.</em>',lede:'Graphic design, web development and a motorcycle: a one-minute animated short about who I am and how I work. Press play with sound on (in Spanish).',hint:'Watch with sound · 1:00',again:'Watch again',aria:'Play video with sound',alt:'Thumbnail of Alexander Caro animated short'}
-          :{hint:'Ver con sonido · 1:00',again:'Ver de nuevo',aria:'Reproducir video con sonido',alt:''};
-  if(en){['eyebrow','lede'].forEach(function(k){s.querySelector('[data-acv="'+k+'"]').textContent=T[k]});
-    s.querySelector('[data-acv="title"]').innerHTML=T.title;hint.textContent=T.hint;p.setAttribute('aria-label',T.aria);s.querySelector('[data-acv-alt]').alt=T.alt;}
-  p.addEventListener('click',function(){
-    if(!v.querySelector('source')){
-      [['q_auto:good,w_1280,vc_h264,br_2500k/'+id+'.mp4','video/mp4'],['q_auto:good,w_1280/'+id+'.webm','video/webm']].forEach(function(x){
-        var src=document.createElement('source');src.src=base+x[0];src.type=x[1];v.appendChild(src);});
-      v.load();
-    }
-    s.classList.add('is-playing');v.controls=true;
-    var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});
-  });
-  v.addEventListener('ended',function(){s.classList.remove('is-playing');v.controls=false;v.currentTime=0;hint.textContent=T.again;});
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(e){if(!e[0].isIntersecting&&!v.paused)v.pause();},{threshold:.2}).observe(s);
-  }
-})();
-</script>
-</section>
-
-    
-  <!-- ═══════════════════════════════════════════════════════════
-       WHAT I BRING — three pillars as one pipeline, not three lists.
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="cvx-section" id="aporte">
-    <div class="container">
-      <div class="cvx-head">
-        <span class="cvx-eyebrow">What I bring</span>
-        <h2 class="cvx-h2">One point of contact, from brand <em>to deploy.</em></h2>
-      </div>
-
-      <div class="cvx-pillars">
-        <div class="cvx-pillars__rule" aria-hidden="true"></div>
-
-        <article class="cvx-pillar reveal">
-          <span class="cvx-pillar__step" aria-hidden="true">01</span>
-          <h3>Brand</h3>
-          <p>I build the visual system: identity, type, colour and applications ready for production.</p>
-          <p class="cvx-pillar__proof">4 complete identities shipped</p>
-          <ul class="cvx-chips">
-            <li>Branding</li><li>Visual identity</li><li>Brand systems</li>
-            <li>Photoshop</li><li>Illustrator</li>
-          </ul>
-        </article>
-
-        <article class="cvx-pillar reveal">
-          <span class="cvx-pillar__step" aria-hidden="true">02</span>
-          <h3>Product</h3>
-          <p>I translate it into interface: information architecture, flows, wireframes and prototypes.</p>
-          <p class="cvx-pillar__proof">3,000+ SKU e-commerce redesigned end to end</p>
-          <ul class="cvx-chips">
-            <li>UX/UI</li><li>Figma</li><li>Design systems</li>
-            <li>Accessibility</li><li>Responsive</li>
-          </ul>
-        </article>
-
-        <article class="cvx-pillar reveal">
-          <span class="cvx-pillar__step" aria-hidden="true">03</span>
-          <h3>Code</h3>
-          <p>And I ship it working — nothing lost in the handoff between design and development.</p>
-          <p class="cvx-pillar__proof">PageSpeed from 40 to 97 in production</p>
-          <ul class="cvx-chips">
-            <li>HTML / CSS</li><li>JavaScript</li><li>WordPress</li>
-            <li>WooCommerce</li><li>Technical SEO</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="cvx-fit">
-        <div class="cvx-fit__item"><span>Target roles</span><strong>UX/UI Designer · Graphic Designer · Frontend Web Developer</strong></div>
-        <div class="cvx-fit__item"><span>Setup</span><strong>Bogotá · remote, hybrid or on-site</strong></div>
-        <div class="cvx-fit__item"><span>Engagement</span><strong>Full-time preferred · available immediately</strong></div>
-        <!-- CAMBIO: Sector dental — se suma el sector odontológico --><div class="cvx-fit__item"><span>Industries</span><strong>Dental industry (supplies and equipment) · agencies · tech · e-commerce · startups · public sector</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
-       EXPERIENCE — 2 roles, 3 bullets, the number first.
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="cvx-section cvx-section--alt" id="experiencia">
-    <div class="container">
-      <div class="cvx-head">
-        <span class="cvx-eyebrow">Experience</span>
-        <h2 class="cvx-h2">End to end, <em>no middlemen.</em></h2>
-      </div>
-
-      <article class="cvx-role reveal">
-        <div class="cvx-role__aside">
-          <span class="cvx-role__date">May 2024 — Present</span>
-          <span class="cvx-role__now">Current</span>
-        </div>
-        <div class="cvx-role__body">
-          <h3>Digital Specialist — UX/UI, Graphic Design &amp; Meta Ads</h3>
-          <p class="cvx-role__org">Orbidental SAS · Bogotá · Dental supplies distribution (B2B)</p>
-          <ul class="cvx-role__list">
-            <li><b>PageSpeed from 40 to 97</b> on a 3,000+ SKU e-commerce site — redesigned information architecture, checkout and product page as sole owner of UX/UI.</li>
-            <li><b>626 B2B leads at ~$0.61 USD</b> each across 23 Meta Ads campaigns for two brands: 188K unique accounts reached and a 1.61% link CTR, roughly 1.8× the industry average.</li>
-            <li><b>179K impressions and a 1,300% lift in clicks</b> in 4 months, running content strategy and design for two brands with separate visual systems.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="cvx-role reveal">
-        <div class="cvx-role__aside">
-          <span class="cvx-role__date">2022 — Present</span>
-        </div>
-        <div class="cvx-role__body">
-          <h3>Designer &amp; Art Director — Freelance</h3>
-          <p class="cvx-role__org">Independent · Clients across LATAM, the United States and Europe</p>
-          <ul class="cvx-role__list">
-            <li><b>5+ brand identities</b> built from scratch — logo, palette, typography and full system — for Fueggo, La Jungla Club, Rebel Street and AcelerArte.</li>
-            <li><b>2 self-initiated digital products</b> designed and coded from research to production: MotoFaro (PageSpeed 99, SEO 100/100) and Pulse Digital.</li>
-            <li><b>Direct work with founders</b> across time zones, no account manager in between — from brief to final delivery.</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- Mid-page CTA: peak conviction point -->
-      <div class="cvx-midcta">
-        <p>Does this match the role you're hiring for?</p>
-        <a href="https://wa.me/573024457653" target="_blank" rel="noopener" class="cvx-btn cvx-btn--primary">Message me on WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-    <!-- INICIO: Sección sector dental -->
-  <section class="cvx-section cvx-dental" id="sector-dental">
-    <div class="container">
-      <div class="cvx-head">
-        <span class="cvx-eyebrow">Specialization · Dental industry</span>
-        <h2 class="cvx-h2">I know the dental business <em>from the inside.</em></h2>
-        <p class="cvx-lead">Since May 2024 I've worked inside Orbidental, a distributor of dental supplies and equipment. I know the portfolio, the clinical vocabulary and what a dentist needs to see before buying. These <!-- @auto:cv-dental-n -->two<!-- /@auto:cv-dental-n --> projects show it.</p>
-        <div class="cvx-dental__chips"><span>Endodontics</span><span>Bonding &amp; restorative</span><span>Digital equipment</span><span>Brand launches</span><span>B2B</span></div>
-      </div>
-      <div class="pc-grid pc-grid--2">
-        <!-- @auto:cv-dental: tarjetas generadas desde content/proyectos/ -->
-        <!-- /@auto:cv-dental -->
-      </div>
-    </div>
-  </section>
-  <!-- FIN: Sección sector dental -->
-
-  <!-- ═══════════════════════════════════════════════════════════
-       WORK — 6 cases with results. The rest live in /en/trabajo/.
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="cvx-section" id="portafolio">
-    <div class="container">
-      <div class="cvx-head">
-        <span class="cvx-eyebrow">Selected work</span>
-        <h2 class="cvx-h2">Projects that <em>back up</em> the resume.</h2>
-      </div>
-
-      <div class="pc-grid">
-        <!-- @auto:cv: tarjetas generadas desde content/proyectos/ -->
-        <!-- /@auto:cv -->
-      </div>
-
-      <div class="cvx-more">
-        <!-- @auto:cv-mas --><!-- /@auto:cv-mas -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
-       BEHANCE — content untouched. It just breathes more.
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="cvx-section cvx-section--alt cvx-section--roomy" id="behance">
-    <div class="container">
-      <div class="cvx-head">
-        <span class="cvx-eyebrow">Behance</span>
-        <h2 class="cvx-h2">Full case studies, <em>layer by layer.</em></h2>
-        <p class="cvx-lead">The process behind every piece — from idea to final file — curated across two portfolios.</p>
-      </div>
-
-      <div class="cvx-behance">
-        <div class="cvx-behance__card reveal">
-          <div class="cvx-behance__embed">
-            <iframe src="https://www.behance.net/embed/project/221661713?ilo0=1" scrolling="no" allowfullscreen loading="lazy" frameborder="0" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin" title="Creative Graphic Design Portfolio 2025 — Behance"></iframe>
-          </div>
-          <div class="cvx-behance__body">
-            <span class="cvx-behance__tag">General portfolio</span>
-            <h3>Creative Graphic Design Portfolio 2025</h3>
-            <p>Branding, illustration and art direction — the full selection of my work as a graphic designer.</p>
-            <a href="https://www.behance.net/gallery/221661713/Portafolio-creativo-de-diseno-grafico-2025" target="_blank" rel="noopener" class="cvx-behance__cta">View on Behance <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-
-        <div class="cvx-behance__card reveal">
-          <div class="cvx-behance__embed">
-            <iframe src="https://www.behance.net/embed/project/248876531?ilo0=1" scrolling="no" allowfullscreen loading="lazy" frameborder="0" allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin" title="Graphic Design Portfolio — Dental Sector — Behance"></iframe>
-          </div>
-          <div class="cvx-behance__body">
-            <span class="cvx-behance__tag">Specialised portfolio</span>
-            <h3>Graphic Design Portfolio — Dental Sector</h3>
-            <p>Curated for the dental niche: campaigns, content and a visual system applied to healthcare, case by case.</p>
-            <a href="https://www.behance.net/gallery/248876531/Portafolio-de-Diseno-Grafico-Sector-Odontologico" target="_blank" rel="noopener" class="cvx-behance__cta">View on Behance <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
-       EDUCATION + LANGUAGES — a breather between the two dense blocks.
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="cvx-section" id="formacion">
-    <div class="container cvx-edu">
-      <div>
-        <span class="cvx-eyebrow">Education</span>
-        <h2 class="cvx-h2 cvx-h2--sm">Training</h2>
-        <div class="cvx-edu__item">
-          <h3>Technical Degree in Multimedia Design &amp; Integration</h3>
-          <span>SENA — Colombian National Training Service · 2020 – 2022</span>
-        </div>
-        <div class="cvx-edu__item">
-          <h3>Multimedia Engineering</h3>
-          <span>University coursework in progress</span>
-        </div>
-        <div class="cvx-edu__item">
-          <h3>Digital Marketing</h3>
-          <span>Online coursework</span>
-        </div>
-        <p class="cvx-edu__note">5+ years of self-directed learning in design, UX/UI and web development, built on real projects and real clients.</p>
-      </div>
-      <div>
-        <span class="cvx-eyebrow">Languages</span>
-        <h2 class="cvx-h2 cvx-h2--sm">Communication</h2>
-        <div class="cvx-lang"><span>Spanish</span><strong>Native</strong></div>
-        <div class="cvx-lang"><span>English</span><strong>Professional working proficiency — daily written communication with clients</strong></div>
-        <p class="cvx-edu__note">UTC−5: full overlap with US and LATAM business hours.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
-       CERTIFICATIONS — content untouched. It just breathes more.
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="cvx-section cvx-section--alt cvx-section--roomy" id="certificaciones">
-    <div class="container">
-      <span class="cvx-eyebrow">Certifications</span>
-      <div class="crd reveal">
-
-        <div class="crd__head">
-          <h2 class="crd__title">Credentials you can <em>verify.</em></h2>
-          <p class="crd__lead">Official certifications and technical training backed by Google Skillshop and Platzi.</p>
-        </div>
-
-        <div class="crd__index">
-          <span class="crd__count"><b>06</b><span>Verifiable credentials</span></span>
-          <span class="crd__chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBBC04" d="M3.7 16.9 9.4 7a2.1 2.1 0 1 1 3.7 2.1l-5.7 9.9a2.1 2.1 0 0 1-3.7-2.1Z"/><path fill="#4285F4" d="M20.3 16.9 14.6 7a2.1 2.1 0 0 0-3.7 2.1l5.7 9.9a2.1 2.1 0 0 0 3.7-2.1Z"/><circle cx="5.6" cy="18" r="2.4" fill="#34A853"/></svg><span>Google Ads</span></span>
-          <span class="crd__chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="13.5" width="4.4" height="7.5" rx="2.2" fill="#F9AB00"/><rect x="9.8" y="9" width="4.4" height="12" rx="2.2" fill="#F9AB00"/><rect x="16.6" y="3" width="4.4" height="18" rx="2.2" fill="#E37400"/></svg><span>Analytics</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 21 12l-9 9-9-9z"/></svg><span>Web Designer</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>AI</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/></svg><span>Programming</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 21 12l-9 9-9-9z"/></svg><span>Platzi</span></span>
-        </div>
-
-        <div class="crd__set">
-          <p class="crd__group crd__group--star">Featured</p>
-
-          <article class="crd-card crd-card--hero">
-            <div class="crd-hero">
-              <div class="crd-hero__main">
-                <div class="crd-hero__seal">
-                  <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192457956" alt="Official Google Analytics Certification badge" width="92" height="92" loading="lazy" decoding="async" />
-                </div>
-                <div class="crd-hero__body">
-                  <span class="crd-card__issuer">Google · Skillshop</span>
-                  <h3 class="crd-card__title">Google Analytics Certification</h3>
-                  <p class="crd-card__desc">Measurement, analysis and data-driven decision making.</p>
-                </div>
-                <div class="crd-hero__cta">
-                  <span class="crd-hero__flag">Just earned</span>
-                  <a href="https://skillshop.credential.net/38e9b8c5-e101-4df1-bde3-b048f2c18c5a" target="_blank" rel="noopener" class="crd-card__btn crd-hero__btn"><span>Verify credential</span><span aria-hidden="true">↗</span></a>
-                </div>
-                <div class="crd-hero__meta">
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Issued Aug 2026</span></span>
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V6l7-3z"/><path d="M9.3 12.2l1.9 1.9 3.5-3.7"/></svg><span>Valid through Aug 2027</span></span>
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M6.5 10h4M6.5 14h6M15 10h3M15 14h3"/></svg><span>Credential ID: 179835276</span></span>
-                </div>
-              </div>
-              <aside class="crd-hero__aside">
-                <span>Official badge</span>
-                <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192457956" alt="" width="112" height="112" loading="lazy" decoding="async" />
-              </aside>
+    <!-- ═══ EXPERIENCIA ═══ -->
+    <section class="cv-sec" id="experiencia" aria-labelledby="cvExp">
+      <div class="hm-wrap">
+        <div class="hm-head"><h2 class="hm-h2" id="cvExp">Experience</h2><p>Four years designing and coding in real environments, with real metrics.</p></div>
+        <ol class="cv-jobs">
+          <li class="cv-job">
+            <p class="cv-job__when">May 2024 — present <b>Current</b></p>
+            <div class="cv-job__body">
+              <h3>Digital Specialist: UX/UI, graphic design and Meta Ads</h3>
+              <p class="cv-job__org">Orbidental SAS · Bogotá · Dental supplies distribution (B2B)</p>
+              <ul><li><strong>PageSpeed from 40 to 97</strong> on a 3,000+ product e-commerce site: I redesigned the information architecture, checkout and product page as sole owner of UX/UI.</li><li><strong>626 B2B leads at ~0.61 USD</strong> each across 23 Meta Ads campaigns for two brands: 188K accounts reached and a 1.61% CTR, roughly 1.8× the industry average.</li><li><strong>3,215 conversations</strong> in Q1 2026 at ~84 COP per result, with more than 20 million Colombian pesos in sales directly attributed to the campaigns.</li><li><strong>179K+ impressions and a 1,300% lift in clicks</strong> to the website in 4 months, running content strategy and design for two brands with separate visual systems.</li><li>Launch branding and video for brands in the portfolio: <strong>DiaDent</strong> (8 stories and 8 videos) and <strong>Eighteeth</strong> (a 7-video series for social media and a trade show).</li><li>Product photography for 3,000+ SKUs, technical SEO and full management of the WooCommerce site.</li></ul>
             </div>
-          </article>
-        </div>
-
-        <div class="crd__set">
-          <p class="crd__group">Google Skills</p>
-          <div class="crd__grid">
-      <article class="crd-card">
-        <div class="crd-card__badge"><img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192113056" alt="Google Ads AI-Powered Performance badge" width="52" height="52" loading="lazy" decoding="async" /></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title">Google Ads<br>AI-Powered Performance</h3>
-          <p class="crd-card__desc">Performance Max, automation and AI applied to B2B acquisition.</p>
-        </div>
-        <div class="crd-card__meta"><span>Issued Aug 2026</span><span>Valid through Aug 2027</span></div>
-        <a href="https://skillshop.credential.net/8356725e-7cc6-43d8-b13e-c0fc7bd12504" target="_blank" rel="noopener" class="crd-card__btn"><span>Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title">Google Web Designer<br>Interactive creatives</h3>
-          <p class="crd-card__desc">Animated HTML5 banners, dynamic feeds and AMPHTML ads.</p>
-        </div>
-        <div class="crd-card__meta"><span>Issued Aug 2026</span><span>Valid through Aug 2027</span></div>
-        <a href="https://skillshop.credential.net/7b73e741-2f24-4811-9e6c-60e21cfe66e6" target="_blank" rel="noopener" class="crd-card__btn"><span>Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title">Google Web Designer<br>High impact</h3>
-          <p class="crd-card__desc">High-impact display creatives optimised for Google Ads.</p>
-        </div>
-        <div class="crd-card__meta"><span>Issued Aug 2026</span><span>Valid through Aug 2027</span></div>
-        <a href="https://skillshop.credential.net/16c75255-a556-4945-9fae-7ca3b397344a" target="_blank" rel="noopener" class="crd-card__btn"><span>Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
-          </div>
-        </div>
-
-        <div class="crd__set">
-          <p class="crd__group">Technical training</p>
-          <div class="crd__grid">
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Platzi</span>
-          <h3 class="crd-card__title">Introduction to<br>Artificial Intelligence</h3>
-          <p class="crd-card__desc">Applied AI fundamentals, generative models and effective prompting.</p>
-        </div>
-        <div class="crd-card__meta"><span>Issued Aug 2026</span></div>
-        <a href="https://platzi.com/p/hosoyalexander/curso/13690-intro-ai/diploma/detalle/" target="_blank" rel="noopener" class="crd-card__btn"><span>Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/><line x1="13.5" y1="4" x2="10.5" y2="20"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Platzi</span>
-          <h3 class="crd-card__title">Basic Programming</h3>
-          <p class="crd-card__desc">Programming logic, control structures, functions and algorithms.</p>
-        </div>
-        <div class="crd-card__meta"><span>Issued Aug 2026</span></div>
-        <a href="https://platzi.com/p/hosoyalexander/curso/13100-programacion-basica/diploma/detalle/" target="_blank" rel="noopener" class="crd-card__btn"><span>Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
-          </div>
-        </div>
-
+          </li>
+          <li class="cv-job">
+            <p class="cv-job__when">2022 — present <b>Current</b></p>
+            <div class="cv-job__body">
+              <h3>Designer and art director, freelance</h3>
+              <p class="cv-job__org">Independent · Clients across Latin America, the United States and Europe</p>
+              <ul><li><strong>5+ brand identities</strong> built from scratch (logo, palette, typography and full system) for clients such as La Jungla Club and Rebel Street, and for my own brands such as AcelerArte.</li><li>Complete identity and packaging concepts (ONCES, Hushwork, Double Notch, ¡HAY!) to develop brand systems from start to finish.</li><li><strong>2 self-initiated digital products</strong> designed and coded from research to production: MotoFaro (PageSpeed 99, technical SEO 100/100) and Pulse Digital.</li><li>Direct work with founders across time zones, with no middlemen, from brief to final delivery.</li></ul>
+            </div>
+          </li>
+          <li class="cv-job">
+            <p class="cv-job__when">Feb 2023 — Apr 2023</p>
+            <div class="cv-job__body">
+              <h3>Digital graphic designer</h3>
+              <p class="cv-job__org">Masterbag · Motorcycle accessories and gear</p>
+              <ul><li>Social media graphics and web design support, aligning visual communication with the brand's identity and audience.</li></ul>
+            </div>
+          </li>
+          <li class="cv-job">
+            <p class="cv-job__when">2020 — 2023</p>
+            <div class="cv-job__body">
+              <h3>YouTube thumbnail designer, freelance</h3>
+              <p class="cv-job__org">Independent · Gaming channels</p>
+              <ul><li>Thumbnails optimized for click-through in a highly competitive space: my first lab for design driven by measurable results.</li></ul>
+            </div>
+          </li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════ CONTACT ═══════════ -->
-  <section class="cvx-section cvx-contact" id="contacto">
-    <div class="container cvx-contact__inner">
-      <span class="cvx-eyebrow">Contact</span>
-      <h2 class="cvx-h2">Let's talk about <em>the role.</em></h2>
-      <p class="cvx-lead">Available immediately. I reply within 24 hours.</p>
-
-      <div class="cvx-contact__actions">
-        <a href="https://wa.me/573024457653" target="_blank" rel="noopener" class="cvx-btn cvx-btn--primary cvx-btn--lg">Message me on WhatsApp</a>
-        <a href="/assets/cv/Alexander-Caro-CV-EN.pdf" class="cvx-btn cvx-btn--lg" download>Download resume (PDF)</a>
-        <a href="https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/" target="_blank" rel="noopener" class="cvx-btn cvx-btn--lg">LinkedIn</a>
-        <a href="mailto:hosoyalexander@gmail.com" class="cvx-btn cvx-btn--lg">Email</a>
+    <!-- ═══ HABILIDADES ═══ -->
+    <section class="cv-sec" id="habilidades" aria-labelledby="cvSkills">
+      <div class="hm-wrap">
+        <div class="hm-head"><h2 class="hm-h2" id="cvSkills">Skills</h2></div>
+        <dl class="cv-skills">
+          <div><dt>Design and UX/UI</dt><dd>Figma, user research, wireframing, prototyping, design thinking, design systems, accessibility, responsive design.</dd></div>
+          <div><dt>Graphic design and branding</dt><dd>Photoshop, Illustrator, visual identity, brand systems, product photography, retouching and Lightroom, video editing.</dd></div>
+          <div><dt>Web development</dt><dd>HTML and CSS, JavaScript, Next.js, WordPress, WooCommerce, technical SEO, PageSpeed optimization.</dd></div>
+          <div><dt>Marketing and AI</dt><dd>Meta Ads, Google Ads, Meta Business Suite, Google Analytics, Midjourney, Adobe Firefly, AI in the design workflow.</dd></div>
+        </dl>
+        <dl class="cv-want">
+          <div><dt>Roles</dt><dd>UX/UI designer, graphic designer, frontend web developer</dd></div>
+          <div><dt>Work setup</dt><dd>Remote, hybrid or on-site in Bogotá</dd></div>
+          <div><dt>Engagement</dt><dd>Full-time, available immediately</dd></div>
+          <div><dt>Industries</dt><dd>Healthcare and dental, agencies, tech, e-commerce, startups</dd></div>
+        </dl>
       </div>
+    </section>
 
-      <p class="cvx-contact__meta">
-        <span>Bogotá, Colombia — UTC−5</span>
-        <span>Spanish · English</span>
-        <span>Remote, hybrid or on-site</span>
-      </p>
-    </div>
-  </section>
+    <!-- ═══ SECTOR DENTAL ═══ -->
+    <section class="cv-sec cv-sec--dental" id="sector-dental" aria-labelledby="cvDental">
+      <div class="hm-wrap">
+        <div class="hm-head"><h2 class="hm-h2" id="cvDental">I know the dental industry from the inside</h2><p>Since May 2024 I've worked at Orbidental, a distributor of dental supplies and equipment. I know the portfolio, the clinical vocabulary and what a dentist needs to see before buying. These <!-- @auto:cv-dental-n --><!-- /@auto:cv-dental-n --> projects show it.</p></div>
+        <ul class="cv-chips"><li>Endodontics</li><li>Bonding and restorative</li><li>Digital equipment</li><li>Brand launches</li><li>B2B</li></ul>
+        <div class="pc-grid pc-grid--2">
+          <!-- @auto:cv-dental: tarjetas generadas desde content/proyectos/ -->
+          <!-- /@auto:cv-dental -->
+        </div>
+      </div>
+    </section>
 
+    <!-- ═══ PROYECTOS ═══ -->
+    <section class="cv-sec" id="portafolio" aria-labelledby="cvPort">
+      <div class="hm-wrap">
+        <div class="hm-head"><h2 class="hm-h2" id="cvPort">Projects</h2><p>Full case studies at alexandercaro.com/en/trabajo: the problem, the decisions and what changed.</p></div>
+        <div class="pc-grid">
+          <!-- @auto:cv: tarjetas generadas desde content/proyectos/ -->
+          <!-- /@auto:cv -->
+        </div>
+        <div class="cv-print-projects">
+          <ul><!-- @auto:cv-lista --><!-- /@auto:cv-lista --></ul>
+          <p class="cv-note">Full portfolio with case studies: alexandercaro.com/en/trabajo</p>
+        </div>
+        <div class="cv-more"><!-- @auto:cv-mas --><!-- /@auto:cv-mas --></div>
+        <ul class="cv-behance">
+          <li><a href="https://www.behance.net/gallery/221661713/Portafolio-creativo-de-diseno-grafico-2025" target="_blank" rel="noopener noreferrer"><b>Creative graphic design portfolio 2025</b><span>Branding, illustration and art direction: the full selection of my graphic work.</span><em>View on Behance<span class="hm-sr"> (opens in a new tab)</span></em></a></li>
+          <li><a href="https://www.behance.net/gallery/248876531/Portafolio-de-Diseno-Grafico-Sector-Odontologico" target="_blank" rel="noopener noreferrer"><b>Graphic design portfolio for the dental industry</b><span>Campaigns, content and visual systems applied to healthcare, case by case.</span><em>View on Behance<span class="hm-sr"> (opens in a new tab)</span></em></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══ FORMACIÓN E IDIOMAS ═══ -->
+    <section class="cv-sec" id="formacion" aria-labelledby="cvEdu">
+      <div class="hm-wrap">
+        <div class="hm-head"><h2 class="hm-h2" id="cvEdu">Education and languages</h2></div>
+        <div class="cv-two">
+          <div><h3>Education</h3><ul class="cv-list"><li><b>Technical degree in Multimedia Design and Integration</b><span>SENA, Colombian National Training Service · 2020–2022</span></li><li><b>Multimedia Engineering</b><span>University coursework in progress</span></li><li><b>Digital Marketing</b><span>Online coursework</span></li></ul><p class="cv-note">5+ years of self-directed learning in design, UX/UI and web development, built on real projects and real clients.</p></div>
+          <div><h3>Languages</h3><ul class="cv-list"><li><b>Spanish</b><span>Native</span></li><li><b>English</b><span>Intermediate, with daily professional written communication with clients</span></li></ul><p class="cv-note">UTC−5: working hours that overlap with the US and Latin America.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CERTIFICACIONES ═══ -->
+    <section class="cv-sec" id="certificaciones" aria-labelledby="cvCert">
+      <div class="hm-wrap">
+        <div class="hm-head"><h2 class="hm-h2" id="cvCert">Certifications</h2><p>All of them can be verified online.</p></div>
+        <div class="hm-creds">
+          <ul>
+            <li><b>Google Analytics Certification</b><span>Google Skillshop, Aug 2026</span><a href="https://skillshop.credential.net/38e9b8c5-e101-4df1-bde3-b048f2c18c5a" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Google Analytics Certification (opens in a new tab)</span></a></li>
+            <li><b>Google Ads AI-Powered Performance</b><span>Google Skillshop, Aug 2026</span><a href="https://skillshop.credential.net/8356725e-7cc6-43d8-b13e-c0fc7bd12504" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Google Ads AI-Powered Performance (opens in a new tab)</span></a></li>
+            <li><b>Google Web Designer: interactive creatives</b><span>Google Skillshop, Aug 2026</span><a href="https://skillshop.credential.net/7b73e741-2f24-4811-9e6c-60e21cfe66e6" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Google Web Designer: interactive creatives (opens in a new tab)</span></a></li>
+            <li><b>Google Web Designer: high-impact creatives</b><span>Google Skillshop, Aug 2026</span><a href="https://skillshop.credential.net/16c75255-a556-4945-9fae-7ca3b397344a" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Google Web Designer: high-impact creatives (opens in a new tab)</span></a></li>
+            <li><b>Introduction to Artificial Intelligence</b><span>Platzi, Aug 2026</span><a href="https://platzi.com/p/hosoyalexander/curso/13690-intro-ai/diploma/detalle/" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Introduction to Artificial Intelligence (opens in a new tab)</span></a></li>
+            <li><b>Basic Programming</b><span>Platzi, Aug 2026</span><a href="https://platzi.com/p/hosoyalexander/curso/13100-programacion-basica/diploma/detalle/" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Basic Programming (opens in a new tab)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ VIDEO ═══ -->
+    <section class="cv-sec" id="video" aria-labelledby="cvVideo">
+      <div class="hm-wrap hm-video">
+        <div class="hm-video__text">
+          <h2 class="hm-h2" id="cvVideo">My story in one minute</h2>
+          <p>Design, code and a motorcycle: an animated short about who I am and how I work (in Spanish).</p>
+        </div>
+        <div class="hm-player" id="hmPlayer" data-cld="v1790349952/alexander-caro-short_vyn1m9">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg" srcset="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_640,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 640w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_960,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 960w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 1280w" sizes="(max-width: 860px) calc(100vw - 40px), 64vw" alt="Thumbnail of Alexander Caro's animated short" width="1280" height="720" loading="lazy" decoding="async">
+          <video preload="none" playsinline>Your browser can't play this video.</video>
+          <button class="hm-play" type="button" aria-label="Play the animated short with sound"><span><i aria-hidden="true"></i>Watch with sound, 1:00</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CIERRE ═══ -->
+    <section class="cv-sec" id="contacto" aria-labelledby="cvEnd">
+      <div class="hm-wrap cv-end">
+        <h2 class="hm-h2" id="cvEnd">Let's talk about the role</h2>
+        <p>Available immediately. I reply within 24 hours.</p>
+        <div class="cv-actions">
+          <a class="hm-btn hm-btn--gold" href="https://wa.me/573024457653?text=Hi%20Alexander%21%20I%20saw%20your%20r%C3%A9sum%C3%A9%20and%20I%27d%20like%20to%20talk%20to%20you%20about%20a%20role." target="_blank" rel="noopener noreferrer">Message me on WhatsApp</a>
+          <a class="hm-btn hm-btn--ghost" href="mailto:hosoyalexander@gmail.com">Send an email</a>
+          <a class="hm-btn hm-btn--ghost" href="/assets/cv/Alexander-Caro-CV-EN.pdf" download>Download résumé (PDF)</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <div class="cv-dock">
+    <a class="hm-btn hm-btn--gold" href="https://wa.me/573024457653?text=Hi%20Alexander%21%20I%20saw%20your%20r%C3%A9sum%C3%A9%20and%20I%27d%20like%20to%20talk%20to%20you%20about%20a%20role." target="_blank" rel="noopener noreferrer">Message me on WhatsApp</a>
+    <a class="hm-btn hm-btn--ghost" href="/assets/cv/Alexander-Caro-CV-EN.pdf" download aria-label="Download résumé (PDF)">PDF</a>
+  </div>
 
   <footer class="footer" id="site-footer">
     <div class="container">
@@ -678,17 +339,9 @@
     </div>
   </footer>
 
-  <!-- Fixed contact bar — mobile only -->
-  <div class="cvx-dock" id="cvxDock" aria-hidden="true">
-    <a href="https://wa.me/573024457653" target="_blank" rel="noopener" class="cvx-dock__cta">Message me on WhatsApp</a>
-    <a href="/assets/cv/Alexander-Caro-CV-EN.pdf" class="cvx-dock__alt" download aria-label="Download resume as PDF">PDF</a>
-  </div>
-
-  <button class="cvx-top" id="cvxTop" type="button" aria-label="Back to top">↑</button>
-
   <script defer src="/analytics.js"></script>
   <script src="/nav.js" defer></script>
   <script src="/i18n.js" defer></script>
-  <script src="/cv/script.js" defer></script>
+  <script src="/js/inicio.js" defer></script>
 </body>
 </html>

@@ -1,3 +1,11 @@
+# CV v3: hoja de vida rediseñada, 16 oct 2026
+
+- /cv/ y /en/cv/ con el diseño nuevo, en el orden en que lee un reclutador: datos y contacto, resultados, experiencia, habilidades, sector dental, proyectos, formación, certificaciones.
+- Se suman la experiencia de Masterbag y de miniaturas para YouTube, las cifras de ventas atribuidas y el trabajo de DiaDent y Eighteeth, que estaban en el PDF o no estaban en la web.
+- Al imprimir la página (o «Guardar como PDF») sale un CV en blanco y negro de 2 páginas. Los PDF de `assets/cv/` se generaron así y quedan iguales a la web.
+- En el celular, una barra fija con WhatsApp y PDF.
+- Estilos en `css/cv.css` (más las piezas de `css/inicio.css`). `cv/style.css` y `cv/script.js` quedaron sin uso.
+
 # INICIO v3: inicio rediseñado, 16 oct 2026
 
 - Hero nuevo: tu nombre a todo el ancho, el retrato delante y anillos y rocas en capas que se mueven a distinta profundidad con el cursor. Sin GSAP: lo mueve `js/inicio.js` (más liviano y rápido).

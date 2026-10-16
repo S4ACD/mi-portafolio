@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 import { loadContent } from './lib/content.mjs';
 import { createImagePipeline } from './lib/images.mjs';
 import { workPage, workItemList, CARD_WIDTHS } from './lib/render-work.mjs';
-import { homeWork, homeMore, cvCards, cvMore } from './lib/render-home.mjs';
+import { homeWork, homeMore, cvCards, cvMore, cvList } from './lib/render-home.mjs';
 import { casePage } from './lib/render-case.mjs';
 import { updateSitemap, updateLlms } from './lib/seo.mjs';
 import { BuildError, numberWord } from './lib/util.mjs';
@@ -98,6 +98,7 @@ async function main() {
     'cv-dental': (lang) => cvCards(lists.cv_dental, lang, cardImgs, { dental: true }),
     'cv-dental-n': (lang) => numberWord(lists.cv_dental.length, lang),
     'cv-mas': (lang) => cvMore(lists.trabajo.length, lang),
+    'cv-lista': (lang) => cvList([...lists.cv_dental, ...lists.cv], lang),
   };
 
   // 1. Zonas marcadas en las páginas existentes

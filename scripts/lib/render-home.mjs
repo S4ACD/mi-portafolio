@@ -75,5 +75,15 @@ export const homeMore = (n, lang) =>
 
 export const cvMore = (n, lang) =>
   lang === 'en'
-    ? `<a href="/en/trabajo/" target="_blank" rel="noopener" class="cvx-btn">See all ${n} projects with full case studies</a>`
-    : `<a href="/trabajo/" target="_blank" rel="noopener" class="cvx-btn">Ver los ${n} proyectos con casos de estudio</a>`;
+    ? `<a href="/en/trabajo/" target="_blank" rel="noopener" class="hm-btn hm-btn--ghost">See all ${n} projects with full case studies</a>`
+    : `<a href="/trabajo/" target="_blank" rel="noopener" class="hm-btn hm-btn--ghost">Ver los ${n} proyectos con casos de estudio</a>`;
+
+/** Lista en texto de los proyectos del CV (solo se ve al imprimir o en el PDF). */
+export const cvList = (list, lang) =>
+  list
+    .map((p) => {
+      const d = p[lang];
+      const tags = (d.disciplinas || []).join(', ');
+      return `<li><b>${esc(d.nombre)}</b>${tags ? ` · ${esc(tags)}` : ''}<span class="cv-pl-sum">. ${inline(d.resumen)}</span></li>`;
+    })
+    .join('');
