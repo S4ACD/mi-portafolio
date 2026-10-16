@@ -1,6 +1,6 @@
 // Tarjetas de proyecto del inicio y del CV (mismo lenguaje visual que /trabajo/).
 
-import { esc, inline, projectUrl } from './util.mjs';
+import { esc, attr, inline, projectUrl } from './util.mjs';
 import { mediaHtml, metaHtml } from './render-work.mjs';
 
 const SIZES = '(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) 46vw, 420px';
@@ -21,6 +21,48 @@ const card = (p, lang, img, { blank = false, cls = '' } = {}) => {
           </article>`;
 };
 
+/* ── Inicio v3: tres destacados y un índice con vista previa ── */
+const FEAT_SIZES = {
+  big: '(max-width: 860px) calc(100vw - 40px), (max-width: 1440px) 56vw, 780px',
+  sm: '(max-width: 860px) calc(100vw - 40px), (max-width: 1440px) 40vw, 560px',
+};
+
+export function homeWork(list, lang, imgs) {
+  const feat = list.slice(0, 3);
+  const rest = list.slice(3);
+  const cards = feat
+    .map((p, i) => {
+      const d = p[lang];
+      const kind = i === 0 ? 'big' : 'sm';
+      return `
+          <a class="hm-card hm-card--${kind}" href="${projectUrl(p.slug, lang)}">
+            <div class="hm-card__img">${mediaHtml(p, lang, imgs.get(p.slug), { sizes: FEAT_SIZES[kind] })}</div>
+            <div class="hm-card__meta"><h3>${esc(d.nombre)}</h3><small>${esc(p.anio)}</small></div>
+            <p>${inline(d.resumen)}</p>
+          </a>`;
+    })
+    .join('');
+  const rows = rest
+    .map((p) => {
+      const d = p[lang];
+      const img = imgs.get(p.slug);
+      const src = img && p.portada.estilo !== 'logotipo' ? img.url(640) : '';
+      const color = p.color || p.portada.fondo || '#17140f';
+      const thumb = src
+        ? `<img class="hm-thumb" src="${attr(src)}" alt="" width="72" height="72" loading="lazy" decoding="async">`
+        : `<span class="hm-thumb" style="--c:${attr(color)}" aria-hidden="true"></span>`;
+      return `
+          <li><a href="${projectUrl(p.slug, lang)}" data-hm-peek="${attr(src)}" data-hm-color="${attr(color)}" data-hm-name="${attr(d.nombre)}">${thumb}<b>${esc(d.nombre)}</b><span>${esc((d.disciplinas || []).join(', '))}</span><em>${esc(p.anio)}</em></a></li>`;
+    })
+    .join('');
+  return `
+        <div class="hm-feat">${cards}
+        </div>${rest.length ? `
+        <ul class="hm-index">${rows}
+        </ul>` : ''}
+        `;
+}
+
 export const homeCards = (list, lang, imgs) => list.map((p) => card(p, lang, imgs.get(p.slug))).join('') + '\n        ';
 
 export const cvCards = (list, lang, imgs, { dental = false } = {}) =>
@@ -28,8 +70,8 @@ export const cvCards = (list, lang, imgs, { dental = false } = {}) =>
 
 export const homeMore = (n, lang) =>
   lang === 'en'
-    ? `<a href="/en/trabajo/">See all ${n} projects</a>`
-    : `<a href="/trabajo/">Ver los ${n} proyectos</a>`;
+    ? `<a class="hm-btn hm-btn--ghost" href="/en/trabajo/">See all ${n} projects</a>`
+    : `<a class="hm-btn hm-btn--ghost" href="/trabajo/">Ver los ${n} proyectos</a>`;
 
 export const cvMore = (n, lang) =>
   lang === 'en'

@@ -16,11 +16,9 @@
   <link rel="alternate" hreflang="en" href="https://alexandercaro.com/en/" />
   <link rel="alternate" hreflang="x-default" href="https://alexandercaro.com/en/" />
 
-  <!-- Preload LCP — retrato del hero (Cloudinary, formato auto, 1024px) -->
-  <link rel="preload" as="image" media="(min-width: 768px)" fetchpriority="high"
-        href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png"
-        imagesrcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png 680w"
-        imagesizes="(max-width: 767px) 62vw, (max-width: 1279px) 40vw, 520px" />
+  <!-- Preload LCP — retrato del hero (inicio v3) -->
+  <link rel="preload" as="image" fetchpriority="high" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png" imagesrcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_360/v1781396255/Escultura_de_Alexander_ykbpww.png 360w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_520/v1781396255/Escultura_de_Alexander_ykbpww.png 520w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png 720w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1000/v1781396255/Escultura_de_Alexander_ykbpww.png 1000w" imagesizes="(max-width: 1023px) min(74vw, 420px), min(33vw, 500px)" />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2" crossorigin />
 
   <!-- Favicon — definido solo aquí, el browser lo busca en / automáticamente para todas las subpáginas -->
   <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_png,w_32/v1781101945/Favicon_jsl63r.webp" />
@@ -108,76 +106,76 @@
 
   <!-- Schema JSON-LD FAQPage -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Trabajas con clientes fuera de Colombia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí, trabajo 100% remoto con clientes en varios países. Toda la comunicación es escrita —WhatsApp o correo—, lo que deja cada acuerdo, avance y entrega documentado. Estoy en Bogotá (UTC-5) y me adapto a tu zona horaria."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo es el proceso de pago?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Trabajo con un anticipo del 50% para arrancar y el 50% restante contra entrega. Para proyectos grandes lo dividimos en hitos. Acepto transferencia bancaria, Nequi, y para clientes internacionales, PayPal o Wise."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuántas revisiones incluye cada proyecto?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Depende del servicio, pero en general incluyo dos rondas de revisión dentro del alcance acordado. Si necesitas más ajustes después de eso, los cotizamos aparte — sin sorpresas. Lo importante es que el resultado final sea el correcto."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿En qué zona horaria trabajas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Estoy en Bogotá, Colombia — UTC-5, sin horario de verano. Normalmente respondo entre 8am y 8pm hora colombiana, pero me adapto si estás en otra zona horaria y necesitamos cuadrar una llamada."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Usas contratos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí, siempre. Antes de arrancar cualquier proyecto firmamos un acuerdo que define el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué pasa si necesito cambios después de la entrega?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Los cambios menores dentro del alcance original no tienen costo adicional si los pides dentro de los primeros 7 días. Después de eso, o si son cambios de dirección grandes, los cotizamos por separado. Siempre con precio claro antes de hacer cualquier cosa."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuánto cuesta un proyecto?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Los proyectos parten desde $500 USD para un alcance inicial de branding o web básica; la mayoría se mueve entre $500 y $2.500 USD según el alcance. Antes de empezar recibes una propuesta con precio cerrado, tiempos y entregables — sin sorpresas ni costos ocultos."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué pasa si no puedes continuar a mitad del proyecto?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Está cubierto por contrato: trabajo por hitos con entregas parciales, así siempre tienes en tu poder lo que ya pagaste — archivos fuente incluidos. Todo queda documentado por escrito, de modo que cualquier profesional podría retomar el proyecto sin empezar de cero. Hasta hoy, nunca ha sido necesario."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta un proyecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los proyectos parten desde 500 USD para un alcance inicial de branding o web básica; la mayoría está entre 500 y 2.500 USD según el alcance. Antes de empezar recibes una propuesta con precio cerrado, tiempos y entregables, sin sorpresas ni costos ocultos."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajas con clientes fuera de Colombia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, trabajo 100 % remoto con clientes en varios países. La comunicación es escrita, por WhatsApp o correo, así cada acuerdo, avance y entrega queda documentado. Estoy en Bogotá (UTC-5) y me adapto a tu zona horaria."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo es el proceso de pago?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un anticipo del 50 % para arrancar y el 50 % restante contra entrega. Los proyectos grandes se dividen en hitos. Acepto transferencia bancaria, Nequi y, para clientes internacionales, PayPal o Wise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas revisiones incluye cada proyecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende del servicio, pero en general incluyo dos rondas de revisión dentro del alcance acordado. Si necesitas más ajustes, los cotizamos aparte y con precio claro antes de hacerlos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Usas contratos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, siempre. Antes de arrancar firmamos un acuerdo con el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si necesito cambios después de la entrega?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los cambios menores dentro del alcance original no tienen costo si los pides en los primeros 7 días. Después, o si son cambios grandes de dirección, los cotizamos por separado, siempre con precio claro antes de hacer cualquier cosa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué zona horaria trabajas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estoy en Bogotá, Colombia: UTC-5, sin horario de verano. Normalmente respondo entre 8 a. m. y 8 p. m. hora de Colombia, y me adapto si estás en otra zona horaria y necesitamos cuadrar una llamada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si no puedes continuar a mitad del proyecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Está cubierto por contrato: trabajo por hitos con entregas parciales, así siempre tienes lo que ya pagaste, con archivos fuente incluidos. Todo queda documentado por escrito para que otra persona pueda retomarlo sin empezar de cero. Hasta hoy nunca ha sido necesario."
+      }
+    }
+  ]
+}
   </script>
 
   <!-- Fuentes — no bloqueantes -->
@@ -206,1218 +204,220 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 
   <link rel="stylesheet" href="/css/proyectos.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="/css/proyectos.css" /></noscript>
+  <link rel="stylesheet" href="/css/inicio.css" />
 </head>
-<body>
+<body class="hm-page">
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <main>
-
-    <!-- ═══ HERO ═══ -->
-    <section class="hv2" id="inicio">
-
-      <!-- LAYER 01 — fondo -->
-      <div class="hv2__bg" aria-hidden="true"></div>
-      <div class="hv2__grain" aria-hidden="true"></div>
-
-      <!-- LAYER 02 — niebla -->
-      <div class="hv2__fog" aria-hidden="true"></div>
-
-      <!-- LAYER 02.5 — partículas (polvo + estrellas), generadas en hero.js -->
-      <div class="hv2__particles" id="hv2Particles" aria-hidden="true"></div>
-
-      <!-- LAYER 03 — anillos + destello orbital -->
-      <svg class="hv2__rings" viewBox="0 0 200 200" aria-hidden="true">
-        <defs>
-          <path id="hv2GlintPath" d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" />
-        </defs>
-        <circle cx="100" cy="100" r="99" />
-        <circle cx="100" cy="100" r="78" />
-        <circle class="hv2__rings-dashed" cx="100" cy="100" r="60" />
-
-        <!-- Destello orbital: cometa dorado con cola de luz, mismo trazado
-             que el anillo punteado pero con su propio recorrido (15s) -->
-        <circle class="hv2__glint-tail" r="9">
-          <animateMotion dur="15s" begin="-0.6s" repeatCount="indefinite">
-            <mpath href="#hv2GlintPath" />
-          </animateMotion>
-        </circle>
-        <circle class="hv2__glint-mid" r="4.5">
-          <animateMotion dur="15s" begin="-0.3s" repeatCount="indefinite">
-            <mpath href="#hv2GlintPath" />
-          </animateMotion>
-        </circle>
-        <circle class="hv2__glint-core" r="2.2">
-          <animateMotion dur="15s" repeatCount="indefinite">
-            <mpath href="#hv2GlintPath" />
-          </animateMotion>
-        </circle>
-      </svg>
-
-      <!-- LAYER 04 — rocas lejanas (quedan DETRÁS del retrato) -->
-      <div class="hv2__stage hv2__stage--far" aria-hidden="true">
-
-        <!-- rocas lejanas: opacas, desenfocadas, suben poco -->
-        <div class="hv2__rock hv2__rock--far hv2__rock--far1"
-             data-rise="22" data-float-y="10" data-float-rot="3" data-duration="11">
-          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-            <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
-          </div></div>
-        </div>
-        <div class="hv2__rock hv2__rock--far hv2__rock--far2"
-             data-rise="30" data-float-y="12" data-float-rot="-4" data-duration="13">
-          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-            <img src="/assets/rocks/rock-02.webp" alt="" width="320" height="300" loading="lazy" decoding="async" />
-          </div></div>
-        </div>
-        <div class="hv2__rock hv2__rock--far hv2__rock--far3 hv2__rock--flip"
-             data-rise="26" data-float-y="8" data-float-rot="2" data-duration="12">
-          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-            <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
-          </div></div>
-        </div>
-
-      </div>
-
-      <!-- retrato: vive entre las dos capas de rocas (far detrás, near
-           delante), en su propio bloque de flujo real (hitbox), hermano
-           de .hv2__content dentro de .hv2. En desktop se comporta como
-           absoluto (ver CSS ≥1024px); en mobile/tablet es un bloque
-           normal que el navegador mide solo — nunca se superpone al
-           texto. -->
-      <div class="hv2__portrait" id="hv2Portrait"
-           data-rise="18" data-float-y="16" data-float-rot="0" data-duration="9">
-        <div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
-          <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png"
-               srcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png 680w"
-               sizes="(max-width: 767px) 62vw, (max-width: 1279px) 40vw, 520px"
-               alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada"
-               width="1024" height="1536" fetchpriority="high" loading="eager" decoding="sync" elementtiming="hero-portrait" />
-        </div></div></div>
-      </div>
-
-      <!-- LAYER 06 — rocas cercanas (quedan DELANTE del retrato) -->
-      <div class="hv2__stage hv2__stage--near" id="hv2Stage" aria-hidden="true">
-
-        <!-- rocas cercanas: nítidas, concentradas abajo, suben más rápido -->
-        <div class="hv2__rock hv2__rock--near hv2__rock--near1"
-             data-rise="56" data-float-y="18" data-float-rot="5" data-duration="8">
-          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-            <img src="/assets/rocks/rock-01.webp" alt="" width="270" height="226" loading="lazy" decoding="async" />
-          </div></div>
-        </div>
-        <div class="hv2__rock hv2__rock--near hv2__rock--near2"
-             data-rise="64" data-float-y="22" data-float-rot="-6" data-duration="9">
-          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-            <img src="/assets/rocks/rock-03.webp" alt="" width="174" height="320" loading="lazy" decoding="async" />
-          </div></div>
-        </div>
-        <div class="hv2__rock hv2__rock--near hv2__rock--near3"
-             data-rise="90" data-float-y="16" data-float-rot="3" data-duration="10">
-          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-            <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
-          </div></div>
-        </div>
-        <div class="hv2__rock hv2__rock--near hv2__rock--near4 hv2__rock--flip"
-             data-rise="70" data-float-y="20" data-float-rot="-5" data-duration="7">
-          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-            <img src="/assets/rocks/rock-01.webp" alt="" width="270" height="226" loading="lazy" decoding="async" />
-          </div></div>
-        </div>
-        <div class="hv2__rock hv2__rock--near hv2__rock--near5 hv2__rock--flip"
-             data-rise="48" data-float-y="14" data-float-rot="4" data-duration="9">
-          <div class="hv2__rock-parallax"><div class="hv2__rock-float">
-            <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
-          </div></div>
-        </div>
-
-      </div>
-
-      <!-- CONTENIDO -->
-      <div class="hv2__content">
-
-        <span class="hv2__status" data-reveal>
-          <span class="hv2__status-dot" aria-hidden="true"></span>
-          <span data-i18n="hero.status">Disponible para proyectos</span>
-        </span>
-
-        <p class="hv2__kicker" data-reveal data-i18n="hero.kicker">Alexander Caro — Diseñador &amp; Desarrollador</p>
-
-        <h1 class="hv2__title">
-          <span class="hv2__title-line"><span data-i18n="hero.title.line1">Diseño y código,</span></span>
-          <span class="hv2__title-script" data-reveal data-i18n="hero.title.line2">de una sola mano.</span>
-        </h1>
-
-        <p class="hv2__desc" data-reveal data-i18n="hero.desc">Diseño gráfico, contenido, diseño y desarrollo web — todo lo visual y técnico de tu marca, en una sola persona. Sin intermediarios, con resultados que conectan, convierten y duran.</p>
-
-        <div class="hv2__actions" data-reveal>
-          <a href="/trabajo/" class="hv2-btn hv2-btn--primary" data-magnetic>
-            <span data-i18n="hero.btn.work">Ver trabajo seleccionado</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </a>
-          <a href="/sobre-mi/" class="hv2-btn hv2-btn--ghost" data-magnetic>
-            <span data-i18n="hero.btn.about">Conóceme</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14M13 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-
-        <p class="hv2__price-signal" data-reveal data-i18n="hero.price_signal">Proyectos desde $500 USD<span class="hv2__price-signal-dot" aria-hidden="true">·</span>Propuesta clara en 48 h<span class="hv2__price-signal-dot" aria-hidden="true">·</span>Empezamos solo si encaja</p>
-      </div>
-
-      <!-- decoraciones laterales -->
-      <div class="hv2__side hv2__side--scroll" data-reveal>
-        <span data-i18n="hero.scroll">Desliza para explorar</span>
-      </div>
-      <div class="hv2__side hv2__side--tags" data-reveal>
-        <span data-i18n="hero.tag.1">Branding</span>
-        <span data-i18n="hero.tag.2">Diseño Web</span>
-        <span data-i18n="hero.tag.3">Frontend</span>
-      </div>
-
-      <!-- insignia -->
-      <div class="hv2__badge" data-reveal>
-        <svg viewBox="0 0 120 120" aria-hidden="true">
-          <defs>
-            <path id="hv2BadgePath" d="M60,60 m0,-52 a52,52 0 1,1 0,104 a52,52 0 1,1 0,-104" />
-          </defs>
-          <text>
-            <textPath href="#hv2BadgePath" startOffset="0" data-i18n="hero.badge">
-              Basado en Bogotá · Colombia · Basado en Bogotá · Colombia ·
-            </textPath>
-          </text>
+  <main class="hm">
+    <!-- ═══ HERO: escena en capas que siguen al cursor (js/inicio.js) ═══ -->
+    <section class="hm-hero" id="inicio" aria-labelledby="hmTitle">
+      <div class="hm-scene" id="hmScene">
+        <svg class="hm-rings hm-layer" data-depth="-0.25" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <circle cx="100" cy="100" r="99"/><circle cx="100" cy="100" r="80"/><circle class="hm-dash" cx="100" cy="100" r="62"/>
+          <circle class="hm-glint" r="1.3"><animateMotion dur="18s" repeatCount="indefinite" path="M162,100 A62,62 0 1 1 38,100 A62,62 0 1 1 162,100"/></circle>
         </svg>
-        <span class="hv2__badge-dot" aria-hidden="true"></span>
-      </div>
 
-    </section>
+        <h1 class="hm-mast hm-layer" data-depth="-0.35" id="hmTitle"><span>Alexander</span><span>Caro</span><span class="hm-sr">, diseño y código de una sola mano</span></h1>
 
-    <!-- ═══ TRANSICIÓN ═══ -->
-    <div class="section-divider" aria-hidden="true">
-      <div class="section-divider__line"></div>
-      <span class="section-divider__star section-divider__star--1"></span>
-      <span class="section-divider__star section-divider__star--2"></span>
-      <span class="section-divider__star section-divider__star--3"></span>
-      <span class="section-divider__star section-divider__star--4"></span>
-    </div>
+        <div class="hm-rock hm-rock--far hm-rock--a hm-layer" data-depth="0.5" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-a-520.webp" alt="" width="520" height="284" decoding="async"></div>
+        <div class="hm-rock hm-rock--far hm-rock--b hm-layer" data-depth="0.35" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-b-520.webp" alt="" width="520" height="520" decoding="async"></div>
 
-
-<!-- ═══ VIDEO — Short animado (mismo bloque para ES y EN) ═══ -->
-<section class="acv" id="video" data-cld="v1790349952/alexander-caro-short_vyn1m9" aria-labelledby="acvTitle">
-<style>
-.acv{position:relative;padding:clamp(56px,9vw,120px) 0;background:var(--hv2-void,#050504);color:#f4efe6;overflow:hidden}
-.acv::before{content:"";position:absolute;top:10%;left:50%;width:min(90vw,900px);height:min(60vw,560px);transform:translateX(-50%);background:radial-gradient(circle,rgba(205,183,142,.12) 0%,transparent 65%);filter:blur(50px);pointer-events:none}
-.acv__wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px}
-.acv__eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-family:'Space Grotesk',system-ui,sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#cdb78e}
-.acv__eyebrow::before{content:"";width:32px;height:1px;background:#cdb78e;opacity:.6}
-.acv__title{margin:0 0 12px;font-family:'Fraunces',Georgia,serif;font-weight:340;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;text-transform:uppercase;color:#f4efe6}
-.acv__title em{font-style:italic;font-weight:380;text-transform:none;color:#cdb78e}
-.acv__lede{max-width:52ch;margin:0 0 clamp(28px,4vw,44px);font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.7;color:rgba(244,239,230,.56)}
-.acv__player{position:relative;aspect-ratio:16/9;border-radius:clamp(12px,2vw,22px);overflow:hidden;background:#0e0d0b;border:1px solid rgba(205,183,142,.22);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(205,183,142,.08)}
-.acv__player video,.acv__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.acv__play{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;width:100%;padding:0;border:0;cursor:pointer;color:#f4efe6;background:linear-gradient(to top,rgba(5,5,4,.6),rgba(5,5,4,.05) 60%);-webkit-tap-highlight-color:transparent}
-.acv__btn{display:grid;place-items:center;width:clamp(64px,9vw,96px);height:clamp(64px,9vw,96px);border-radius:50%;background:#cdb78e;color:#1a1611;animation:acvPulse 2.4s ease-out infinite;transition:transform .4s cubic-bezier(.16,1,.3,1),background .3s}
-.acv__play:hover .acv__btn,.acv__play:focus-visible .acv__btn{transform:scale(1.08);background:#e3d2b3}
-.acv__play:focus-visible{outline:2px solid #cdb78e;outline-offset:-6px}
-.acv__btn svg{width:34%;height:34%;margin-left:7%}
-.acv__hint{padding:8px 14px;border-radius:999px;border:1px solid rgba(244,239,230,.14);background:rgba(5,5,4,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-family:'Space Grotesk',system-ui,sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
-@keyframes acvPulse{0%{box-shadow:0 0 0 0 rgba(205,183,142,.55)}70%{box-shadow:0 0 0 22px rgba(205,183,142,0)}100%{box-shadow:0 0 0 0 rgba(205,183,142,0)}}
-.acv.is-playing .acv__play,.acv.is-playing .acv__poster{display:none}
-@media (max-width:600px){.acv__wrap{padding:0 16px}.acv__hint{font-size:.62rem;letter-spacing:.14em}}
-@media (prefers-reduced-motion:reduce){.acv__btn{animation:none}}
-</style>
-<div class="acv__wrap">
-  <p class="acv__eyebrow" data-acv="eyebrow">En 60 segundos</p>
-  <h2 class="acv__title" id="acvTitle" data-acv="title">Mi historia, <em>animada.</em></h2>
-  <p class="acv__lede" data-acv="lede">Diseño gráfico, desarrollo web y una moto: un corto animado de un minuto sobre quién soy y cómo trabajo. Dale play con sonido.</p>
-  <div class="acv__player">
-    <img class="acv__poster" loading="lazy" decoding="async" width="1280" height="720"
-      src="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg"
-      srcset="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_480,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 480w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_768,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 768w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_960,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 960w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 1280w"
-      sizes="(max-width:600px) calc(100vw - 32px), (max-width:1148px) calc(100vw - 48px), 1052px" alt="Miniatura del short animado de Alexander Caro" data-acv-alt />
-    <video preload="none" playsinline></video>
-    <button class="acv__play" type="button" aria-label="Reproducir video con sonido" data-acv-aria>
-      <span class="acv__btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"/></svg></span>
-      <span class="acv__hint" data-acv="hint">Ver con sonido · 1:00</span>
-    </button>
-  </div>
-</div>
-<script>
-(function(){
-  var s=document.getElementById('video');if(!s)return;
-  var id=s.getAttribute('data-cld'),base='https://res.cloudinary.com/dg2wnq6ao/video/upload/';
-  var v=s.querySelector('video'),p=s.querySelector('.acv__play'),hint=s.querySelector('[data-acv="hint"]');
-  var en=(document.documentElement.lang||'').toLowerCase().indexOf('en')===0;
-  var T=en?{eyebrow:'In 60 seconds',title:'My story, <em>animated.</em>',lede:'Graphic design, web development and a motorcycle: a one-minute animated short about who I am and how I work. Press play with sound on (in Spanish).',hint:'Watch with sound · 1:00',again:'Watch again',aria:'Play video with sound',alt:'Thumbnail of Alexander Caro animated short'}
-          :{hint:'Ver con sonido · 1:00',again:'Ver de nuevo',aria:'Reproducir video con sonido',alt:''};
-  if(en){['eyebrow','lede'].forEach(function(k){s.querySelector('[data-acv="'+k+'"]').textContent=T[k]});
-    s.querySelector('[data-acv="title"]').innerHTML=T.title;hint.textContent=T.hint;p.setAttribute('aria-label',T.aria);s.querySelector('[data-acv-alt]').alt=T.alt;}
-  p.addEventListener('click',function(){
-    if(!v.querySelector('source')){
-      [['q_auto:good,w_1280,vc_h264,br_2500k/'+id+'.mp4','video/mp4'],['q_auto:good,w_1280/'+id+'.webm','video/webm']].forEach(function(x){
-        var src=document.createElement('source');src.src=base+x[0];src.type=x[1];v.appendChild(src);});
-      v.load();
-    }
-    s.classList.add('is-playing');v.controls=true;
-    var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});
-  });
-  v.addEventListener('ended',function(){s.classList.remove('is-playing');v.controls=false;v.currentTime=0;hint.textContent=T.again;});
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(e){if(!e[0].isIntersecting&&!v.paused)v.pause();},{threshold:.2}).observe(s);
-  }
-})();
-</script>
-</section>
-    
-    
-    <!-- ═══ DOS PUERTAS — Cliente A / Cliente B ═══ -->
-    <section class="doors-section scroll-reveal" aria-label="Elige tu punto de partida">
-      <div class="container">
-        <div class="doors-grid">
-          <a href="/servicios/identidad-visual/" class="door-card">
-            <span class="door-card__num" aria-hidden="true">A</span>
-            <h2 class="door-card__title" data-i18n="doors.a.title">¿Tu marca no se ve seria?</h2>
-            <p class="door-card__desc" data-i18n="doors.a.desc">Identidad visual que se reconoce antes de leer el nombre — logo, sistema completo y manual listos para producción.</p>
-            <span class="door-card__cta"><span data-i18n="doors.a.cta">Ver identidad visual</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </a>
-          <a href="/trabajo/orbidental/" class="door-card">
-            <span class="door-card__num" aria-hidden="true">B</span>
-            <h2 class="door-card__title" data-i18n="doors.b.title">¿Tu web no vende?</h2>
-            <p class="door-card__desc" data-i18n="doors.b.desc">Sitios que cargan en 2 segundos y convierten: de PageSpeed 40 a 97 en un e-commerce real de 3.000+ productos.</p>
-            <span class="door-card__cta"><span data-i18n="doors.b.cta">Ver el caso Orbidental</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ ESTADÍSTICAS ═══ -->
-    <section class="stats-section scroll-reveal">
-      <div class="container">
-        <div class="stats-grid">
-
-          <div class="stat-item">
-            <span class="stat-num" data-target="97" data-suffix="">97</span>
-            <span class="stat-bar"><span class="stat-bar__fill" style="--pct:97%"></span></span>
-            <span class="stat-label" data-i18n="stat.01.label">PageSpeed Score</span>
-            <span class="stat-sub" data-i18n="stat.01.sub">de 40 a 97 en producción real</span>
-          </div>
-
-          <div class="stat-item">
-            <span class="stat-num" data-target="179" data-suffix="K+">179K+</span>
-            <span class="stat-bar"><span class="stat-bar__fill" style="--pct:82%"></span></span>
-            <span class="stat-label" data-i18n="stat.02.label">Visualizaciones orgánicas</span>
-            <span class="stat-sub" data-i18n="stat.02.sub">en 4 meses · sin pauta pagada</span>
-          </div>
-
-          <div class="stat-item">
-            <span class="stat-num" data-target="626" data-suffix="">626</span>
-            <span class="stat-bar"><span class="stat-bar__fill" style="--pct:74%"></span></span>
-            <span class="stat-label" data-i18n="stat.03.label">Leads B2B generados</span>
-            <span class="stat-sub" data-i18n="stat.03.sub">pauta en Meta a ~$2.500 COP por lead</span>
-          </div>
-
-          <div class="stat-item">
-            <span class="stat-num" data-target="3000" data-suffix="+">3.000+</span>
-            <span class="stat-bar"><span class="stat-bar__fill" style="--pct:60%"></span></span>
-            <span class="stat-label" data-i18n="stat.04.label">Productos fotografiados</span>
-            <span class="stat-sub" data-i18n="stat.04.sub">catálogo B2B · Orbidental</span>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ SERVICIOS ═══ -->
-    <section class="section services-section" id="servicios">
-      <div class="services-section__decor" aria-hidden="true">
-        <img class="services-section__rock" src="/assets/rocks/rock-03.webp" alt="" width="174" height="320" loading="lazy" decoding="async" />
-        <svg class="services-section__rings" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="92" />
-          <circle class="services-section__rings-dashed" cx="100" cy="100" r="68" />
-        </svg>
-      </div>
-      <div class="container">
-        <p class="eyebrow" data-i18n="services.eyebrow">SERVICIOS</p>
-        <h2 class="services-section__title" data-i18n="services.title">Diseño y desarrollo que <em>venden</em>.</h2>
-        <p class="services-section__lede" data-i18n="services.lede">Diseño, desarrollo y contenido visual — todo en un mismo proceso.</p>
-
-        <div class="services-list">
-
-          <article class="service-row scroll-reveal">
-            <div class="service-row__num">
-              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
-              <span class="service-row__num-dot" aria-hidden="true"></span>
-              <span>01</span>
+        <div class="hm-portrait">
+          <div class="hm-in">
+            <div class="hm-layer" data-depth="1" data-tilt>
+              <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png" srcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_360/v1781396255/Escultura_de_Alexander_ykbpww.png 360w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_520/v1781396255/Escultura_de_Alexander_ykbpww.png 520w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png 720w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1000/v1781396255/Escultura_de_Alexander_ykbpww.png 1000w" sizes="(max-width: 1023px) min(74vw, 420px), min(33vw, 500px)" alt="Alexander Caro, retrato escultórico emergiendo de roca fracturada" width="1024" height="1536" fetchpriority="high" decoding="async">
             </div>
-            <div class="service-row__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M12 3a9 9 0 0 0 0 18M3 12h18"/>
-              </svg>
-            </div>
-            <div class="service-row__body">
-              <h3 class="service-row__title" data-i18n="services.01.title">Identidad y diseño gráfico</h3>
-              <p class="service-row__text" data-i18n="services.01.text">Logo, paleta y sistema visual completo. Una marca que se reconoce y se siente coherente en cada pieza.</p>
-            </div>
-          </article>
-
-          <article class="service-row scroll-reveal" style="--reveal-delay: 0.08s">
-            <div class="service-row__num">
-              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
-              <span class="service-row__num-dot" aria-hidden="true"></span>
-              <span>02</span>
-            </div>
-            <div class="service-row__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="m8 9-3 3 3 3M16 9l3 3-3 3M13 6l-2 12"/>
-              </svg>
-            </div>
-            <div class="service-row__body">
-              <h3 class="service-row__title" data-i18n="services.02.title">Diseño y desarrollo web</h3>
-              <p class="service-row__text" data-i18n="services.02.text">Sitios rápidos y a medida — diseñados y programados por la misma persona. Sin plantillas, sin intermediarios. PageSpeed 97 en proyectos reales.</p>
-            </div>
-          </article>
-
-          <article class="service-row scroll-reveal" style="--reveal-delay: 0.16s">
-            <div class="service-row__num">
-              <svg class="service-row__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46"/></svg>
-              <span class="service-row__num-dot" aria-hidden="true"></span>
-              <span>03</span>
-            </div>
-            <div class="service-row__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="5" y="2" width="14" height="20" rx="2"/>
-                <circle cx="12" cy="17" r="1"/>
-              </svg>
-            </div>
-            <div class="service-row__body">
-              <h3 class="service-row__title" data-i18n="services.03.title">Contenido y social media</h3>
-              <p class="service-row__text" data-i18n="services.03.text">Piezas visuales para redes que paran el scroll y construyen marca — con una estética pensada, no improvisada.</p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ POR QUÉ YO (vs agencia) ═══ -->
-    <section class="section porque-section">
-      <div class="container">
-        <p class="eyebrow scroll-reveal" data-i18n="why.eyebrow">POR QUÉ TRABAJAR CONMIGO</p>
-        <h2 class="section__title scroll-reveal" data-i18n="why.title">La diferencia no es el precio.<br><em>Es la velocidad</em><span class="hero__dot">.</span></h2>
-        <p class="porque-section__lede scroll-reveal">
-          <span data-i18n="why.lede">Una agencia tiene tres personas entre tu idea y el resultado: el que vende, el que coordina y el que ejecuta. Cada capa suma tiempo y diluye lo que pediste. Conmigo no hay capas — hablás con quien diseña y programa, y por eso todo se mueve más rápido.</span>
-        </p>
-
-        <div class="porque-compare scroll-reveal" style="--reveal-delay:.08s">
-          <!-- Columna agencia -->
-          <div class="porque-col porque-col--them">
-            <span class="porque-col__tag" data-i18n="why.them.tag">Una agencia</span>
-            <ul class="porque-list">
-              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.01">Hablás con un vendedor; ejecuta alguien que no conociste</span></li>
-              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.02">Tu mensaje pasa por 3 personas antes de volverse trabajo</span></li>
-              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.03">Cambios y revisiones tardan días en coordinarse</span></li>
-              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.04">El diseño lo hace un equipo, el código otro — y se pierde en el traspaso</span></li>
-              <li><span class="porque-x" aria-hidden="true">—</span> <span data-i18n="why.them.05">Pagás también la estructura: oficina, managers, comisiones</span></li>
-            </ul>
-          </div>
-
-          <!-- Columna yo -->
-          <div class="porque-col porque-col--me">
-            <span class="porque-col__tag porque-col__tag--gold" data-i18n="why.me.tag">Conmigo</span>
-            <ul class="porque-list">
-              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.01">Hablás directo con quien diseña y programa tu proyecto</span></li>
-              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.02">Lo que pedís llega sin intermediarios que lo diluyan</span></li>
-              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.03">Un cambio se resuelve el mismo día, no la próxima semana</span></li>
-              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.04">Diseño y código los hace la misma persona — nada se pierde</span></li>
-              <li><span class="porque-check" aria-hidden="true">✓</span> <span data-i18n="why.me.05">Pagás el trabajo, no la estructura que lo rodea</span></li>
-            </ul>
           </div>
         </div>
 
-        <p class="porque-section__close scroll-reveal" style="--reveal-delay:.16s">
-          <span data-i18n="why.close">No es que una agencia esté mal. Es que para la mayoría de proyectos, esa estructura es peso que pagás y tiempo que esperás — sin que el resultado sea mejor.</span>
-        </p>
-      </div>
-    </section>
+        <div class="hm-rock hm-rock--near hm-rock--c hm-layer" data-depth="2.2" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-b-520.webp" alt="" width="520" height="520" decoding="async"></div>
+        <div class="hm-rock hm-rock--near hm-rock--d hm-layer" data-depth="1.8" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-a-520.webp" alt="" width="520" height="284" decoding="async"></div>
+        <div class="hm-rock hm-rock--near hm-rock--e hm-layer" data-depth="2.6" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-a-520.webp" alt="" width="520" height="284" decoding="async"></div>
 
-    <!-- ═══ ENFOQUE ═══ -->
-    <section class="enfoque-section">
-      <div class="enfoque-section__visual" aria-hidden="true">
-        <img src="/assets/rocks/enfoque-rock.webp" alt="" width="370" height="320" loading="lazy" decoding="async" />
-        <div class="enfoque-section__glow"></div>
-      </div>
-      <div class="enfoque-section__content">
-        <p class="eyebrow" data-i18n="focus.eyebrow">ENFOQUE</p>
-        <h2 class="enfoque-section__title" data-i18n="focus.title">Ideas claras.<br><em>Resultados reales.</em></h2>
-        <p class="enfoque-section__lede" data-i18n="focus.lede">Diseño. Desarrollo. Contenido.<br>Todo en una sola persona.</p>
-      </div>
-      <svg class="enfoque-section__orbit" viewBox="0 0 200 200" aria-hidden="true">
-        <circle class="enfoque-section__orbit-ring" cx="100" cy="100" r="90"/>
-        <circle class="enfoque-section__orbit-ring enfoque-section__orbit-ring--dashed" cx="100" cy="100" r="64"/>
-        <circle class="enfoque-section__orbit-dot" r="3.5">
-          <animateMotion dur="16s" repeatCount="indefinite" path="M 100 10 A 90 90 0 1 1 100 190 A 90 90 0 1 1 100 10"/>
-        </circle>
-        <circle class="enfoque-section__orbit-dot enfoque-section__orbit-dot--sm" r="2">
-          <animateMotion dur="11s" repeatCount="indefinite" path="M 100 36 A 64 64 0 1 0 100 164 A 64 64 0 1 0 100 36"/>
-        </circle>
-      </svg>
-      <svg class="enfoque-section__orbit enfoque-section__orbit--secondary" viewBox="0 0 200 200" aria-hidden="true">
-        <circle class="enfoque-section__orbit-ring" cx="100" cy="100" r="90"/>
-        <circle class="enfoque-section__orbit-dot" r="3">
-          <animateMotion dur="12s" repeatCount="indefinite" path="M 100 10 A 90 90 0 1 1 100 190 A 90 90 0 1 1 100 10"/>
-        </circle>
-      </svg>
-      <div class="enfoque-section__stars" aria-hidden="true">
-        <span class="enfoque-section__star" style="--x:38%; --y:14%; --size:2px; --dur:4.5s; --delay:0s;"></span>
-        <span class="enfoque-section__star" style="--x:52%; --y:78%; --size:3px; --dur:5.5s; --delay:1.4s;"></span>
-        <span class="enfoque-section__star enfoque-section__star--gold" style="--x:64%; --y:22%; --size:3px; --dur:6s; --delay:0.6s;"></span>
-        <span class="enfoque-section__star" style="--x:74%; --y:62%; --size:2px; --dur:4s; --delay:2.2s;"></span>
-        <span class="enfoque-section__star" style="--x:88%; --y:18%; --size:2px; --dur:5s; --delay:0.9s;"></span>
-        <span class="enfoque-section__star enfoque-section__star--gold" style="--x:94%; --y:70%; --size:2px; --dur:4.8s; --delay:1.8s;"></span>
-        <span class="enfoque-section__star" style="--x:46%; --y:48%; --size:1.5px; --dur:3.6s; --delay:2.6s;"></span>
-      </div>
-    </section>
-
-    <!-- ═══ PROCESO ═══ -->
-    <section class="section proceso-section">
-      <div class="proceso-section__decor" aria-hidden="true">
-        <img src="/assets/rocks/rock-01.webp" alt="" width="270" height="226" loading="lazy" decoding="async" />
-      </div>
-      <div class="container">
-        <p class="eyebrow" data-i18n="process.eyebrow">CÓMO TRABAJO</p>
-        <h2 class="section__title" data-i18n="process.title">Del brief al resultado<span class="hero__dot">.</span></h2>
-        <div class="proceso-timeline">
-
-          <div class="proceso-step scroll-reveal">
-            <span class="proceso-step__num">01</span>
-            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
-            <h3 class="proceso-step__title" data-i18n="process.01.title">Hablamos</h3>
-            <p class="proceso-step__text" data-i18n="process.01.text">Una llamada de 20 minutos o un formulario corto. Me cuentas qué necesitas, quién es tu cliente y qué quieres lograr. Sin decks, sin reuniones eternas — con eso es suficiente para entender si somos un buen match.</p>
+        <div class="hm-intro">
+          <span class="hm-status"><i aria-hidden="true"></i>Disponible para proyectos nuevos</span>
+          <p class="hm-tag">Diseño y código, de una sola mano.</p>
+          <p class="hm-desc">Identidad visual, contenido y sitios web para marcas que quieren verse serias y vender más. Todo lo hago yo, desde el primer boceto hasta la última línea de código.</p>
+          <div class="hm-actions">
+            <a class="hm-btn hm-btn--gold" href="#trabajo">Ver trabajo</a>
+            <a class="hm-btn hm-btn--ghost" href="https://wa.me/573024457653?text=%C2%A1Hola%20Alexander%21%20Vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20un%20proyecto%20contigo.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener noreferrer" id="whatsappHeroLink"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Escríbeme por WhatsApp</a>
           </div>
-
-          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.08s">
-            <span class="proceso-step__num">02</span>
-            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
-            <h3 class="proceso-step__title" data-i18n="process.02.title">Propuesta en 48 h</h3>
-            <p class="proceso-step__text" data-i18n="process.02.text">En menos de dos días te llega un documento con el alcance exacto: qué incluye, qué no incluye, tiempos de entrega y precio. Lo revisamos juntos y ajustamos lo que haga falta antes de firmar.</p>
-          </div>
-
-          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.16s">
-            <span class="proceso-step__num">03</span>
-            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
-            <h3 class="proceso-step__title" data-i18n="process.03.title">Producción con visibilidad</h3>
-            <p class="proceso-step__text" data-i18n="process.03.text">No desaparezco dos semanas y aparezco con algo terminado. Trabajo en entregas parciales para que veas el avance real, puedas opinar a tiempo y el resultado final no sea una sorpresa.</p>
-          </div>
-
-          <div class="proceso-step scroll-reveal" style="--reveal-delay: 0.24s">
-            <span class="proceso-step__num">04</span>
-            <div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
-            <h3 class="proceso-step__title" data-i18n="process.04.title">Listo para usar</h3>
-            <p class="proceso-step__text" data-i18n="process.04.text">Archivos organizados, código limpio y todo lo que necesitas para tomar el proyecto desde ahí. Sin dependencias de mi parte. Y si en los primeros 7 días necesitas un ajuste, lo resolvemos sin costo extra.</p>
-          </div>
-
+          <p class="hm-fine">Proyectos desde 500 USD. Propuesta clara en 48 horas.</p>
         </div>
+
+        <dl class="hm-proof">
+          <div><dt>40 → 97</dt><dd>PageSpeed de Orbidental después de rehacer su tienda en línea</dd></div>
+          <div><dt>179K</dt><dd>visualizaciones en 4 meses para dos marcas del sector dental</dd></div>
+          <div><dt><!-- @auto:trabajo-n --><!-- /@auto:trabajo-n --></dt><dd>proyectos de identidad, web y contenido, en Bogotá y para afuera</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- ═══ PROYECTOS ═══ -->
     <!-- ═══ TRABAJO ═══ -->
-    <section class="section trabajo-section" id="trabajo">
-      <svg class="trabajo-section__orbit-tl" viewBox="0 0 200 200" aria-hidden="true">
-        <circle class="trabajo-section__orbit-ring" cx="100" cy="100" r="92"/>
-        <circle class="trabajo-section__orbit-ring trabajo-section__orbit-ring--dashed" cx="100" cy="100" r="68"/>
-        <circle class="trabajo-section__orbit-dot" cx="100" cy="8" r="3"/>
-        <circle class="trabajo-section__orbit-dot trabajo-section__orbit-dot--sm" cx="16" cy="116" r="2"/>
-      </svg>
-      <div class="trabajo-section__rock" aria-hidden="true">
-        <img src="/assets/rocks/rock-04.webp" alt="" width="400" height="156" loading="lazy" decoding="async" />
+    <section class="hm-block" id="trabajo" aria-labelledby="hmWork">
+      <div class="hm-wrap">
+        <div class="hm-head">
+          <h2 class="hm-h2" id="hmWork">Trabajo seleccionado</h2>
+          <p>Marcas, sitios web y contenido hechos de principio a fin. Cada caso cuenta el problema, lo que decidí y lo que cambió.</p>
+        </div>
+        <!-- @auto:inicio: proyectos generados desde content/proyectos/ (no editar aquí) -->
+        <!-- /@auto:inicio -->
+        <div class="hm-more"><!-- @auto:inicio-mas --><!-- /@auto:inicio-mas --></div>
       </div>
-      <div class="container">
-        <div class="trabajo-header">
-          <div class="trabajo-header__text">
-            <p class="eyebrow" data-i18n="work.eyebrow">TRABAJO SELECCIONADO</p>
-            <h2 class="trabajo-header__title" data-i18n="work.title">Proyectos que <em>hablan</em> por sí solos.</h2>
-            <p class="trabajo-header__lede" data-i18n="work.lede">Diseño, estrategia y ejecución visual para marcas que quieren destacar.</p>
-          </div>
-          
+    </section>
+
+    <!-- ═══ LO QUE HAGO ═══ -->
+    <section class="hm-block" id="servicios" aria-labelledby="hmServ">
+      <div class="hm-wrap">
+        <div class="hm-head">
+          <h2 class="hm-h2" id="hmServ">Lo que hago</h2>
+          <p>Tres frentes que casi siempre se contratan por separado. Conmigo salen del mismo criterio y de las mismas manos.</p>
         </div>
-        <div class="pc-grid">
-          <!-- @auto:inicio: tarjetas generadas desde content/proyectos/ (no editar aquí) -->
-          <!-- /@auto:inicio -->
+        <ul class="hm-services">
+          <li>
+            <h3>Identidad visual</h3>
+            <p>Logo, paleta, tipografía y manual de marca. Un sistema que funciona igual en una fachada, en un empaque y en una historia de Instagram.</p>
+            <p class="hm-eg">Por ejemplo: <a href="/trabajo/onces/">ONCES</a>, <a href="/trabajo/fueggo/">Fueggo</a>, <a href="/trabajo/double-notch/">Double Notch</a></p>
+          </li>
+          <li>
+            <h3>Diseño y desarrollo web</h3>
+            <p>Sitios a medida, diseñados y programados por la misma persona. Rápidos, con SEO técnico desde el primer día y fáciles de actualizar.</p>
+            <p class="hm-eg">Por ejemplo: <a href="/trabajo/orbidental/">Orbidental</a>, <a href="/trabajo/motofaro/">MotoFaro</a>, <a href="/trabajo/pulse-digital/">Pulse Digital</a></p>
+          </li>
+          <li>
+            <h3>Contenido y video</h3>
+            <p>Posts, carruseles, historias y reels con criterio de marca, para el día a día en redes o para lanzar un producto.</p>
+            <p class="hm-eg">Por ejemplo: <a href="/trabajo/social-media-dental/">Social Media Dental</a>, <a href="/trabajo/diadent/">DiaDent</a>, <a href="/trabajo/eighteeth/">Eighteeth</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══ VIDEO ═══ -->
+    <section class="hm-block" id="video" aria-labelledby="hmVideo">
+      <div class="hm-wrap hm-video">
+        <div class="hm-video__text">
+          <h2 class="hm-h2" id="hmVideo">Mi historia en un minuto</h2>
+          <p>Diseño, código y una moto: un corto animado sobre quién soy y cómo trabajo. Dale play con sonido.</p>
         </div>
-        <p class="pc-more"><!-- @auto:inicio-mas --><!-- /@auto:inicio-mas --></p>
+        <div class="hm-player" id="hmPlayer" data-cld="v1790349952/alexander-caro-short_vyn1m9">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg" srcset="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_640,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 640w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_960,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 960w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 1280w" sizes="(max-width: 860px) calc(100vw - 40px), 64vw" alt="Miniatura del corto animado de Alexander Caro" width="1280" height="720" loading="lazy" decoding="async">
+          <video preload="none" playsinline>Tu navegador no puede reproducir este video.</video>
+          <button class="hm-play" type="button" aria-label="Reproducir el corto animado con sonido"><span><i aria-hidden="true"></i>Ver con sonido, 1:00</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CÓMO TRABAJAMOS ═══ -->
+    <section class="hm-block" id="proceso" aria-labelledby="hmProc">
+      <div class="hm-wrap">
+        <div class="hm-head">
+          <h2 class="hm-h2" id="hmProc">Cómo trabajamos</h2>
+          <p>Hablas directo con quien diseña y programa tu proyecto. Sin vendedores ni coordinadores en el medio: lo que pides llega tal cual y un cambio se resuelve el mismo día.</p>
+        </div>
+        <ol class="hm-steps">
+          <li><h3>Hablamos</h3><p>Una llamada de 20 minutos o un mensaje. Me cuentas qué necesitas, para quién es y qué quieres lograr.</p></li>
+          <li><h3>Propuesta en 48 horas</h3><p>Un documento con el alcance exacto, lo que incluye y lo que no, los tiempos y el precio cerrado.</p></li>
+          <li><h3>Avances que puedes ver</h3><p>Entregas parciales para que opines a tiempo. El resultado final nunca es una sorpresa.</p></li>
+          <li><h3>Listo para usar</h3><p>Archivos ordenados, código limpio y 7 días de ajustes sin costo después de la entrega.</p></li>
+        </ol>
       </div>
     </section>
 
     <!-- ═══ SOBRE MÍ ═══ -->
-    <section class="section about-section" id="sobre-mi">
-      <svg class="about-header__orbit" viewBox="0 0 200 200" aria-hidden="true">
-        <circle class="about-header__orbit-ring" cx="80" cy="80" r="78"/>
-        <circle class="about-header__orbit-ring about-header__orbit-ring--dashed" cx="80" cy="80" r="50"/>
-        <circle class="about-header__orbit-center" cx="80" cy="80" r="3"/>
-        <circle class="about-header__orbit-dot" r="2.5">
-          <animateMotion dur="22s" repeatCount="indefinite" path="M 80 2 A 78 78 0 1 1 80 158 A 78 78 0 1 1 80 2"/>
-        </circle>
-      </svg>
-      <div class="about-section__rock about-section__rock--l" aria-hidden="true">
-        <img src="/assets/rocks/rock-05.webp" alt="" width="380" height="156" loading="lazy" decoding="async" />
-      </div>
-      <div class="about-section__rock about-section__rock--r" aria-hidden="true">
-        <img src="/assets/rocks/rock-02.webp" alt="" width="320" height="300" loading="lazy" decoding="async" />
-      </div>
-      <div class="about-section__stars" aria-hidden="true">
-        <span class="about-section__star" style="--x:28%; --y:8%; --size:2px; --dur:4.5s; --delay:0s;"></span>
-        <span class="about-section__star about-section__star--gold" style="--x:42%; --y:4%; --size:3px; --dur:5.5s; --delay:1.2s;"></span>
-        <span class="about-section__star" style="--x:18%; --y:32%; --size:2px; --dur:4s; --delay:2s;"></span>
-        <span class="about-section__star" style="--x:52%; --y:14%; --size:1.5px; --dur:3.6s; --delay:0.6s;"></span>
-        <span class="about-section__star about-section__star--gold" style="--x:8%; --y:42%; --size:2px; --dur:5s; --delay:1.8s;"></span>
-      </div>
-      <div class="container">
-        <p class="eyebrow" data-i18n="about.eyebrow">SOBRE MÍ</p>
-        <h2 class="about-header__title" data-i18n="about.title">La persona<br><em>detrás</em> del trabajo<span class="hero__dot">.</span></h2>
-        <div class="about-header__line" aria-hidden="true"><span class="about-header__line-dot"></span></div>
-        <div class="about__grid">
-          <div class="about__primary scroll-reveal">
-            <div class="about__bio">
-              <p data-i18n="about.bio.01">Si buscas alguien que <strong class="about__hl">diseñe</strong>, desarrolle <em>y</em> entienda la estrategia detrás — <strong class="about__hl">sin pasarte entre equipos</strong> ni traducir lo que necesitas — estás en el lugar correcto.</p>
-              <p data-i18n="about.bio.02">Llevo 2 años manejando todo lo digital de <strong class="about__hl-gold">Orbidental</strong>: e-commerce, pauta en <strong class="about__hl-gold">Meta</strong> y <strong class="about__hl-gold">Google</strong>, fotografía de producto y diseño. No teoría — entornos reales, con métricas reales.</p>
-            </div>
-            <div class="about__skills">
-              <div class="tech-grid">
-
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                  <span>HTML / CSS</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                  <span>JavaScript</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                  <span>WordPress</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                  <span data-i18n="tag.seo">SEO técnico</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                  <span>Meta Ads</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                  <span>Google Ads</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                  <span data-i18n="tag.fotografia">Fotografía</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                  <span>Photoshop</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-                  <span data-i18n="tag.illustrator">Illustrator</span>
-                </div>
-                <div class="tech-chip">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                  <span data-i18n="tag.uiux">UI / UX</span>
-                </div>
-
-              </div>
-            </div>
+    <section class="hm-block" id="sobre-mi" aria-labelledby="hmAbout">
+      <div class="hm-wrap">
+        <div class="hm-head">
+          <h2 class="hm-h2" id="hmAbout">Sobre mí</h2>
+        </div>
+        <div class="hm-about">
+          <div class="hm-about__intro">
+            <p>Soy Alexander Caro, diseñador y desarrollador en Bogotá. Hace dos años manejo todo lo digital de Orbidental, una distribuidora dental: la tienda en línea, la pauta en Meta y Google, la fotografía de producto y el diseño.</p>
+            <p>Por eso mis decisiones de diseño salen de métricas reales: velocidad de carga, clics, ventas. Trabajo en remoto con clientes de Colombia y del exterior, en español y en inglés.</p>
+            <ul class="hm-tools" aria-label="Herramientas"><li>HTML y CSS</li><li>JavaScript</li><li>Next.js</li><li>WordPress</li><li>SEO técnico</li><li>Meta Ads</li><li>Google Ads</li><li>Fotografía de producto</li><li>Photoshop</li><li>Illustrator</li></ul>
+            <a class="hm-btn hm-btn--ghost" href="/sobre-mi/">Conoce mi historia completa</a>
           </div>
-          <div class="about__logros scroll-reveal" style="--reveal-delay: 0.1s">
-            <div class="logros-grid logros-timeline">
-              <div class="logro-card">
-                <span class="logro-numero">97</span>
-                <div class="logro-text">
-                  <span class="logro-label" data-i18n="about.stat.01.label">PageSpeed Score</span>
-                  <span class="logro-desc" data-i18n="about.stat.01.desc">E-commerce migrado de 40 a 97 en producción real</span>
-                </div>
-                <div class="logro-icon">
-                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
-                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l3-3.5"/><circle cx="12" cy="18" r="0.9" fill="currentColor" stroke="none"/>
-                  </svg>
-                </div>
-              </div>
-              <div class="logro-card">
-                <span class="logro-numero">3K+</span>
-                <div class="logro-text">
-                  <span class="logro-label" data-i18n="about.stat.02.label">Productos fotografiados</span>
-                  <span class="logro-desc" data-i18n="about.stat.02.desc">Catálogo completo para e-commerce de Orbidental</span>
-                </div>
-                <div class="logro-icon">
-                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
-                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
-                  </svg>
-                </div>
-              </div>
-              <div class="logro-card">
-                <span class="logro-numero">5</span>
-                <div class="logro-text">
-                  <span class="logro-label" data-i18n="about.stat.03.label">Proyectos de branding</span>
-                  <span class="logro-desc" data-i18n="about.stat.03.desc">Identidades visuales construidas desde cero</span>
-                </div>
-                <div class="logro-icon">
-                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
-                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
-                  </svg>
-                </div>
-              </div>
-              <div class="logro-card">
-                <span class="logro-numero">100%</span>
-                <div class="logro-text">
-                  <span class="logro-label" data-i18n="about.stat.04.label">Proyectos entregados</span>
-                  <span class="logro-desc" data-i18n="about.stat.04.desc">Sin retrasos, sin intermediarios, directo con el cliente</span>
-                </div>
-                <div class="logro-icon">
-                  <svg class="logro-icon__ring" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26"/></svg>
-                  <svg class="logro-icon__glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
+          <div class="hm-creds">
+            <h3>Certificaciones verificables</h3>
+            <ul>
+            <li><b>Google Analytics Certification</b><span>Google Skillshop, 2026</span><a href="https://skillshop.credential.net/38e9b8c5-e101-4df1-bde3-b048f2c18c5a" target="_blank" rel="noopener noreferrer">Verificar<span class="hm-sr"> Google Analytics Certification (se abre en una pestaña nueva)</span></a></li>
+            <li><b>Google Ads AI-Powered Performance</b><span>Google Skillshop, 2026</span><a href="https://skillshop.credential.net/8356725e-7cc6-43d8-b13e-c0fc7bd12504" target="_blank" rel="noopener noreferrer">Verificar<span class="hm-sr"> Google Ads AI-Powered Performance (se abre en una pestaña nueva)</span></a></li>
+            <li><b>Google Web Designer: creativos interactivos</b><span>Google Skillshop, 2026</span><a href="https://skillshop.credential.net/7b73e741-2f24-4811-9e6c-60e21cfe66e6" target="_blank" rel="noopener noreferrer">Verificar<span class="hm-sr"> Google Web Designer: creativos interactivos (se abre en una pestaña nueva)</span></a></li>
+            <li><b>Google Web Designer: alto impacto</b><span>Google Skillshop, 2026</span><a href="https://skillshop.credential.net/16c75255-a556-4945-9fae-7ca3b397344a" target="_blank" rel="noopener noreferrer">Verificar<span class="hm-sr"> Google Web Designer: alto impacto (se abre en una pestaña nueva)</span></a></li>
+            <li><b>Introducción a la Inteligencia Artificial</b><span>Platzi, 2026</span><a href="https://platzi.com/p/hosoyalexander/curso/13690-intro-ai/diploma/detalle/" target="_blank" rel="noopener noreferrer">Verificar<span class="hm-sr"> Introducción a la Inteligencia Artificial (se abre en una pestaña nueva)</span></a></li>
+            <li><b>Programación Básica</b><span>Platzi, 2026</span><a href="https://platzi.com/p/hosoyalexander/curso/13100-programacion-basica/diploma/detalle/" target="_blank" rel="noopener noreferrer">Verificar<span class="hm-sr"> Programación Básica (se abre en una pestaña nueva)</span></a></li>
+            </ul>
           </div>
-        </div>
-
-        <!-- ═══ CREDENCIALES ═══ -->
-      <div class="crd scroll-reveal">
-
-        <div class="crd__head">
-          <h2 class="crd__title" data-i18n="crd.title">Credenciales <em>verificables.</em></h2>
-          <p class="crd__lead" data-i18n="crd.lead">Certificaciones oficiales y formación técnica respaldada por Google Skillshop y Platzi.</p>
-        </div>
-
-        <div class="crd__index">
-          <span class="crd__count"><b>06</b><span data-i18n="crd.count">Credenciales verificables</span></span>
-          <span class="crd__chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBBC04" d="M3.7 16.9 9.4 7a2.1 2.1 0 1 1 3.7 2.1l-5.7 9.9a2.1 2.1 0 0 1-3.7-2.1Z"/><path fill="#4285F4" d="M20.3 16.9 14.6 7a2.1 2.1 0 0 0-3.7 2.1l5.7 9.9a2.1 2.1 0 0 0 3.7-2.1Z"/><circle cx="5.6" cy="18" r="2.4" fill="#34A853"/></svg><span data-i18n="crd.chip.ads">Google Ads</span></span>
-          <span class="crd__chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="13.5" width="4.4" height="7.5" rx="2.2" fill="#F9AB00"/><rect x="9.8" y="9" width="4.4" height="12" rx="2.2" fill="#F9AB00"/><rect x="16.6" y="3" width="4.4" height="18" rx="2.2" fill="#E37400"/></svg><span data-i18n="crd.chip.ga">Analytics</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 21 12l-9 9-9-9z"/></svg><span data-i18n="crd.chip.gwd">Web Designer</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span data-i18n="crd.chip.ia">IA</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/></svg><span data-i18n="crd.chip.code">Programación</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 21 12l-9 9-9-9z"/></svg><span data-i18n="crd.chip.platzi">Platzi</span></span>
-        </div>
-
-        <div class="crd__set">
-          <p class="crd__group crd__group--star" data-i18n="crd.g.featured">Destacada</p>
-
-          <article class="crd-card crd-card--hero">
-            <div class="crd-hero">
-              <div class="crd-hero__main">
-                <div class="crd-hero__seal">
-                  <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192457956" alt="Insignia oficial de Google Analytics Certification" data-i18n-alt="crd.ga.alt" width="92" height="92" loading="lazy" decoding="async" />
-                </div>
-                <div class="crd-hero__body">
-                  <span class="crd-card__issuer">Google · Skillshop</span>
-                  <h3 class="crd-card__title" data-i18n="crd.ga.title">Google Analytics Certification</h3>
-                  <p class="crd-card__desc" data-i18n="crd.ga.desc">Medición, análisis y toma de decisiones basadas en datos.</p>
-                </div>
-                <div class="crd-hero__cta">
-                  <span class="crd-hero__flag" data-i18n="crd.ga.flag">Recién obtenida</span>
-                  <a href="https://skillshop.credential.net/38e9b8c5-e101-4df1-bde3-b048f2c18c5a" target="_blank" rel="noopener" class="crd-card__btn crd-hero__btn"><span data-i18n="crd.verify">Verificar credencial</span><span aria-hidden="true">↗</span></a>
-                </div>
-                <div class="crd-hero__meta">
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-i18n="crd.ga.issued">Emitida ago 2026</span></span>
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V6l7-3z"/><path d="M9.3 12.2l1.9 1.9 3.5-3.7"/></svg><span data-i18n="crd.ga.valid">Vigente hasta ago 2027</span></span>
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M6.5 10h4M6.5 14h6M15 10h3M15 14h3"/></svg><span data-i18n="crd.ga.id">ID de credencial: 179835276</span></span>
-                </div>
-              </div>
-              <aside class="crd-hero__aside">
-                <span data-i18n="crd.ga.badge">Insignia oficial</span>
-                <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192457956" alt="" width="112" height="112" loading="lazy" decoding="async" />
-              </aside>
-            </div>
-          </article>
-        </div>
-
-        <div class="crd__set">
-          <p class="crd__group" data-i18n="crd.g.google">Google Skills</p>
-          <div class="crd__grid">
-      <article class="crd-card">
-        <div class="crd-card__badge"><img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192113056" alt="Insignia Google Ads AI-Powered Performance" data-i18n-alt="crd.ads.alt" width="52" height="52" loading="lazy" decoding="async" /></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title" data-i18n="crd.ads.title">Google Ads<br>AI-Powered Performance</h3>
-          <p class="crd-card__desc" data-i18n="crd.ads.desc">Performance Max, automatización e IA aplicada a adquisición B2B.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Emitida ago 2026</span><span data-i18n="crd.valid">Vigente hasta ago 2027</span></div>
-        <a href="https://skillshop.credential.net/8356725e-7cc6-43d8-b13e-c0fc7bd12504" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verificar credencial</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title" data-i18n="crd.gwd1.title">Google Web Designer<br>Creativos interactivos</h3>
-          <p class="crd-card__desc" data-i18n="crd.gwd1.desc">Banners HTML5 animados, feeds dinámicos y anuncios AMPHTML.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Emitida ago 2026</span><span data-i18n="crd.valid">Vigente hasta ago 2027</span></div>
-        <a href="https://skillshop.credential.net/7b73e741-2f24-4811-9e6c-60e21cfe66e6" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verificar credencial</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title" data-i18n="crd.gwd2.title">Google Web Designer<br>Alto impacto</h3>
-          <p class="crd-card__desc" data-i18n="crd.gwd2.desc">Creativos display de alto impacto optimizados para Google Ads.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Emitida ago 2026</span><span data-i18n="crd.valid">Vigente hasta ago 2027</span></div>
-        <a href="https://skillshop.credential.net/16c75255-a556-4945-9fae-7ca3b397344a" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verificar credencial</span><span aria-hidden="true">↗</span></a>
-      </article>
-          </div>
-        </div>
-
-        <div class="crd__set">
-          <p class="crd__group" data-i18n="crd.g.tech">Formación técnica</p>
-          <div class="crd__grid">
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Platzi</span>
-          <h3 class="crd-card__title" data-i18n="crd.ia.title">Introducción a la<br>Inteligencia Artificial</h3>
-          <p class="crd-card__desc" data-i18n="crd.ia.desc">Fundamentos de IA aplicada, modelos generativos y prompting efectivo.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Emitida ago 2026</span></div>
-        <a href="https://platzi.com/p/hosoyalexander/curso/13690-intro-ai/diploma/detalle/" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verificar credencial</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/><line x1="13.5" y1="4" x2="10.5" y2="20"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Platzi</span>
-          <h3 class="crd-card__title" data-i18n="crd.prog.title">Programación Básica</h3>
-          <p class="crd-card__desc" data-i18n="crd.prog.desc">Lógica de programación, estructuras de control, funciones y algoritmos.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Emitida ago 2026</span></div>
-        <a href="https://platzi.com/p/hosoyalexander/curso/13100-programacion-basica/diploma/detalle/" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verificar credencial</span><span aria-hidden="true">↗</span></a>
-      </article>
-          </div>
-        </div>
-
-      </div>
-      </div>
-    </section>
-
-    <!-- ═══ TESTIMONIOS ═══ -->
-    <section class="section testimonials" id="testimonios">
-      <svg class="testimonials-section__orbit" viewBox="0 0 320 320" aria-hidden="true">
-        <circle class="testimonials-section__orbit-ring" cx="160" cy="160" r="155"/>
-        <circle class="testimonials-section__orbit-ring testimonials-section__orbit-ring--dashed" cx="160" cy="160" r="106"/>
-        <circle class="testimonials-section__orbit-glow" cx="160" cy="160" r="4"/>
-        <circle class="testimonials-section__orbit-dot" cx="42" cy="56" r="2"/>
-        <circle class="testimonials-section__orbit-dot" cx="292" cy="46" r="1.5"/>
-        <circle class="testimonials-section__orbit-dot" cx="70" cy="284" r="1.5"/>
-      </svg>
-      <div class="container">
-        <div class="testimonials-header">
-          <div class="testimonials-header__text">
-            <p class="eyebrow" data-i18n="testimonials.eyebrow">CLIENTES</p>
-            <h2 class="testimonials-header__title" data-i18n="testimonials.title">Lo que dicen<br><em>sobre</em> mi trabajo<span class="hero__dot">.</span></h2>
-          </div>
-          <div class="testimonials-header__note">
-            <span class="testimonials-header__note-line" aria-hidden="true"></span>
-            <p data-i18n="testimonials.note">Colaboraciones que se convierten en relaciones a largo plazo.</p>
-          </div>
-        </div>
-
-        <div class="testimonials__row">
-          <button class="testimonials__btn testimonials__btn--prev" id="testimonialsPrev" aria-label="Anterior">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 12H5M12 5l-7 7 7 7"/>
-            </svg>
-          </button>
-
-          <div class="testimonials__track-wrapper">
-          <div class="testimonials__track" id="testimonialsTrack">
-
-                        <article class="testimonial-card">
-              <div class="testimonial-card__visual" aria-hidden="true">
-                <img src="/assets/rocks/enfoque-rock.webp" alt="" loading="lazy" decoding="async" />
-                <div class="testimonial-card__sparks">
-                  <span class="spark" style="--x:60%; --y:22%; --dur:3.4s; --delay:0.4s;"></span>
-                  <span class="spark" style="--x:82%; --y:40%; --dur:3s; --delay:1.2s;"></span>
-                  <span class="spark" style="--x:50%; --y:60%; --dur:3.8s; --delay:0s;"></span>
-                  <span class="spark" style="--x:90%; --y:65%; --dur:2.8s; --delay:1.6s;"></span>
-                  <span class="spark" style="--x:72%; --y:80%; --dur:3.6s; --delay:0.9s;"></span>
-                  <span class="spark" style="--x:42%; --y:35%; --dur:4s; --delay:2s;"></span>
-                </div>
-              </div>
-              <div class="testimonial-card__quote">"</div>
-              <p class="testimonial-card__text" data-i18n="testimonials.02.text">El resultado superó nuestras expectativas. Alexander entendió perfectamente lo que queríamos: que se sintiera la jungla, pero que quedara claro que es una discoteca. Cada pieza refleja el nombre y la energía de la marca.</p>
-              <div class="testimonial-card__divider"></div>
-              <div class="testimonial-card__footer">
-                <div class="testimonial-card__avatar"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_80,h_80,c_fill,g_face,q_auto,f_auto/v1782219347/Mayra_kybufg.webp" alt="Mayra Castaño" width="40" height="40" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
-                <div class="testimonial-card__info">
-                  <span class="testimonial-card__name">Mayra Castaño</span>
-                  <span class="testimonial-card__cargo">Gerente · <a href="/trabajo/la-jungla-club/" class="testimonial-card__empresa">La Jungla Club</a></span>
-                  <span class="testimonial-card__role" data-i18n="tag.role.jungla">Discoteca · Entretenimiento · Bogotá</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial-card">
-              <div class="testimonial-card__visual" aria-hidden="true">
-                <img src="/assets/rocks/enfoque-rock.webp" alt="" loading="lazy" decoding="async" />
-                <div class="testimonial-card__sparks">
-                  <span class="spark" style="--x:58%; --y:20%; --dur:3.2s; --delay:1s;"></span>
-                  <span class="spark" style="--x:85%; --y:38%; --dur:3.8s; --delay:0.2s;"></span>
-                  <span class="spark" style="--x:48%; --y:58%; --dur:3s; --delay:1.6s;"></span>
-                  <span class="spark" style="--x:92%; --y:62%; --dur:3.6s; --delay:0.6s;"></span>
-                  <span class="spark" style="--x:68%; --y:82%; --dur:2.8s; --delay:2.2s;"></span>
-                  <span class="spark" style="--x:40%; --y:32%; --dur:4s; --delay:1.4s;"></span>
-                </div>
-              </div>
-              <div class="testimonial-card__quote">"</div>
-              <p class="testimonial-card__text" data-i18n="testimonials.03.text">Quedamos más que satisfechos. Queríamos algo urbano, con ese estilo grafitero pero aplicado a ropa streetwear — y Alexander lo entendió desde el primer momento. La identidad quedó exactamente como la imaginábamos.</p>
-              <div class="testimonial-card__divider"></div>
-              <div class="testimonial-card__footer">
-                <div class="testimonial-card__avatar"><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_80,h_80,c_fill,g_face,q_auto,f_auto/v1782219347/Steven-Mesa_wr3edi.webp" alt="Steven Mesa" width="40" height="40" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
-                <div class="testimonial-card__info">
-                  <span class="testimonial-card__name">Steven Mesa</span>
-                  <span class="testimonial-card__cargo">Fundador · <a href="/trabajo/rebel-street/" class="testimonial-card__empresa">Rebel Street</a></span>
-                  <span class="testimonial-card__role" data-i18n="tag.role.rebel">Moda · Streetwear urbano · Bogotá</span>
-                </div>
-              </div>
-            </article>
-
-          </div>
-          </div>
-
-          <button class="testimonials__btn testimonials__btn--next" id="testimonialsNext" aria-label="Siguiente">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Paginación numerada -->
-        <div class="testimonials__dots" id="testimonialsDots">
-          <button class="testimonials__dot testimonials__dot--active" data-index="0" aria-label="Testimonio 1">01</button>
-          <span class="testimonials__dot-sep" aria-hidden="true"></span>
-          <button class="testimonials__dot" data-index="1" aria-label="Testimonio 2">02</button>
-        </div>
-
-        <!-- Marcas que han confiado -->
-        <div class="trusted-by">
-          <p class="trusted-by__label" data-i18n="trusted.label">Marcas que<br>han confiado</p>
-          <div class="trusted-by__logos">
-            <!-- TODO: reemplazar por <img> cuando Alexander suba los logos restantes -->
-            <span class="trusted-by__logo">La Jungla Club</span>
-            <img class="trusted-by__logo-img" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781445720/Orbidental_jy5cgn.png" alt="Orbidental" loading="lazy" decoding="async" width="160" height="60" />
-            <span class="trusted-by__logo">Rebel Street</span>
+          <div class="hm-quotes">
+          <figure>
+            <blockquote>«Alexander entendió perfectamente lo que queríamos: que se sintiera la jungla, pero que quedara claro que es una discoteca.»</blockquote>
+            <figcaption><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_88,h_88,c_fill,g_face,q_auto,f_auto/v1782219347/Mayra_kybufg.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span><b>Mayra Castaño</b>Gerente de La Jungla Club, Bogotá</span></figcaption>
+          </figure>
+          <figure>
+            <blockquote>«Queríamos algo urbano, con estilo grafitero aplicado a streetwear. La identidad quedó exactamente como la imaginábamos.»</blockquote>
+            <figcaption><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_88,h_88,c_fill,g_face,q_auto,f_auto/v1782219347/Steven-Mesa_wr3edi.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span><b>Steven Mesa</b>Fundador de Rebel Street, Bogotá</span></figcaption>
+          </figure>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ FAQ ═══ -->
-    <section class="section faq-section" id="faq">
-      <svg class="faq-defs" aria-hidden="true" focusable="false">
-        <defs>
-          <symbol id="goldPlanet" viewBox="0 0 200 200">
-            <radialGradient id="goldPlanetBody" cx="35%" cy="32%" r="75%">
-              <stop offset="0%" stop-color="#6b5128"/>
-              <stop offset="55%" stop-color="#2a1f10"/>
-              <stop offset="100%" stop-color="#120e08"/>
-            </radialGradient>
-            <clipPath id="goldPlanetClip"><circle cx="100" cy="100" r="85"/></clipPath>
-            <circle cx="100" cy="100" r="85" fill="url(#goldPlanetBody)"/>
-            <g clip-path="url(#goldPlanetClip)" stroke="#cdb78e" stroke-width="0.6" fill="none" opacity="0.4">
-              <ellipse cx="100" cy="100" rx="85" ry="55" stroke-dasharray="1 3"/>
-              <ellipse cx="100" cy="100" rx="85" ry="25" stroke-dasharray="1 3"/>
-              <ellipse cx="100" cy="100" rx="55" ry="85" stroke-dasharray="1 3"/>
-              <ellipse cx="100" cy="100" rx="25" ry="85" stroke-dasharray="1 3"/>
-              <ellipse cx="100" cy="100" rx="85" ry="42" stroke-dasharray="1 3" transform="rotate(35 100 100)"/>
-            </g>
-            <circle cx="100" cy="100" r="85" fill="none" stroke="#cdb78e" stroke-width="0.75" opacity="0.5"/>
-            <circle cx="64" cy="74" r="2" fill="#f4efe6"/>
-            <circle cx="135" cy="112" r="1.5" fill="#cdb78e"/>
-            <circle cx="102" cy="152" r="1.5" fill="#f4efe6"/>
-            <circle cx="80" cy="44" r="7" fill="#cdb78e" opacity="0.45"/>
-            <circle cx="80" cy="44" r="3" fill="#f4efe6"/>
-          </symbol>
-        </defs>
-      </svg>
-      <div class="container">
-        <div class="faq-grid">
-          <div class="faq-aside">
-            <p class="eyebrow" data-i18n="faq.eyebrow">PREGUNTAS FRECUENTES</p>
-            <h2 class="about-header__title" data-i18n="faq.title">Lo que siempre<br><em>preguntan</em><span class="hero__dot">.</span></h2>
-            <div class="about-header__line" aria-hidden="true"><span class="about-header__line-dot"></span></div>
-            <p class="faq-aside__lede" data-i18n="faq.lede">Respuestas claras para que tomes decisiones seguras y trabajemos con total transparencia.</p>
-
-            <svg class="faq-section__orbit" viewBox="0 0 400 400" aria-hidden="true">
-              <circle class="faq-section__orbit-ring" cx="200" cy="200" r="195"/>
-              <circle class="faq-section__orbit-ring" cx="200" cy="200" r="140"/>
-              <circle class="faq-section__orbit-ring faq-section__orbit-ring--dashed" cx="200" cy="200" r="85"/>
-              <circle class="faq-section__orbit-glow" cx="200" cy="200" r="40"/>
-              <circle class="faq-section__orbit-sun" cx="200" cy="200" r="13"/>
-              <circle class="faq-section__orbit-dot" cx="200" cy="6" r="3"/>
-              <circle class="faq-section__orbit-dot" cx="348" cy="118" r="2"/>
-              <circle class="faq-section__orbit-dot" cx="80" cy="348" r="2"/>
-              <circle class="faq-section__orbit-dot" cx="322" cy="348" r="2"/>
-            </svg>
-            <div class="faq-section__stars" aria-hidden="true">
-              <span class="faq-section__star faq-section__star--gold" style="--x:40px; --y:320px; --size:2px; --dur:4.5s; --delay:0s;"></span>
-              <span class="faq-section__star faq-section__star--gold" style="--x:340px; --y:300px; --size:2px; --dur:5s; --delay:1.2s;"></span>
-              <span class="faq-section__star" style="--x:200px; --y:580px; --size:3px; --dur:6s; --delay:0.4s;"></span>
-              <span class="faq-section__star faq-section__star--gold" style="--x:330px; --y:420px; --size:2px; --dur:4s; --delay:2s;"></span>
-              <span class="faq-section__star faq-section__star--gold" style="--x:60px; --y:560px; --size:1.5px; --dur:5.5s; --delay:0.8s;"></span>
-              <span class="faq-section__star" style="--x:280px; --y:600px; --size:2px; --dur:4.8s; --delay:1.6s;"></span>
-              <span class="faq-section__star faq-section__star--gold" style="--x:180px; --y:610px; --size:3px; --dur:6.5s; --delay:0.2s;"></span>
-              <span class="faq-section__star faq-section__star--gold" style="--x:380px; --y:480px; --size:2px; --dur:4.2s; --delay:2.4s;"></span>
-              <span class="faq-section__star" style="--x:10px; --y:440px; --size:1.5px; --dur:5s; --delay:1s;"></span>
-            </div>
-            <div class="faq-section__rock" aria-hidden="true">
-              <img src="/assets/rocks/rock-02.webp" alt="" width="320" height="300" loading="lazy" decoding="async" />
-            </div>
-          </div>
-
-          <div class="faq-list">
-
-          <details class="faq-item scroll-reveal">
-            <summary class="faq-item__question">
-              <span class="faq-item__num">01</span>
-              <span class="faq-item__divider" aria-hidden="true"></span>
-              <span class="faq-item__text" data-i18n="faq.01.q">¿Trabajas con clientes fuera de Colombia?</span>
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p data-i18n="faq.01.a">Sí, trabajo 100% remoto con clientes en varios países. Toda la comunicación es escrita —WhatsApp o correo—, lo que deja cada acuerdo, avance y entrega documentado. Estoy en Bogotá (UTC-5) y me adapto a tu zona horaria.</p>
-              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
-            </div>
-          </details>
-
-          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.05s">
-            <summary class="faq-item__question">
-              <span class="faq-item__num">02</span>
-              <span class="faq-item__divider" aria-hidden="true"></span>
-              <span class="faq-item__text" data-i18n="faq.02.q">¿Cómo es el proceso de pago?</span>
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p data-i18n="faq.02.a">Trabajo con un anticipo del 50% para arrancar y el 50% restante contra entrega. Para proyectos grandes lo dividimos en hitos. Acepto transferencia bancaria, Nequi, y para clientes internacionales, PayPal o Wise.</p>
-              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
-            </div>
-          </details>
-
-          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.1s">
-            <summary class="faq-item__question">
-              <span class="faq-item__num">03</span>
-              <span class="faq-item__divider" aria-hidden="true"></span>
-              <span class="faq-item__text" data-i18n="faq.03.q">¿Cuántas revisiones incluye cada proyecto?</span>
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p data-i18n="faq.03.a">Depende del servicio, pero en general incluyo dos rondas de revisión dentro del alcance acordado. Si necesitas más ajustes después de eso, los cotizamos aparte — sin sorpresas. Lo importante es que el resultado final sea el correcto.</p>
-              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
-            </div>
-          </details>
-
-          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.15s">
-            <summary class="faq-item__question">
-              <span class="faq-item__num">04</span>
-              <span class="faq-item__divider" aria-hidden="true"></span>
-              <span class="faq-item__text" data-i18n="faq.04.q">¿En qué zona horaria trabajas?</span>
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p data-i18n="faq.04.a">Estoy en Bogotá, Colombia — UTC-5, sin horario de verano. Normalmente respondo entre 8am y 8pm hora colombiana, pero me adapto si estás en otra zona horaria y necesitamos cuadrar una llamada.</p>
-              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
-            </div>
-          </details>
-
-          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.2s">
-            <summary class="faq-item__question">
-              <span class="faq-item__num">05</span>
-              <span class="faq-item__divider" aria-hidden="true"></span>
-              <span class="faq-item__text" data-i18n="faq.05.q">¿Usas contratos?</span>
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p data-i18n="faq.05.a">Sí, siempre. Antes de arrancar cualquier proyecto firmamos un acuerdo que define el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino.</p>
-              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
-            </div>
-          </details>
-
-          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.25s">
-            <summary class="faq-item__question">
-              <span class="faq-item__num">06</span>
-              <span class="faq-item__divider" aria-hidden="true"></span>
-              <span class="faq-item__text" data-i18n="faq.06.q">¿Qué pasa si necesito cambios después de la entrega?</span>
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p data-i18n="faq.06.a">Los cambios menores dentro del alcance original no tienen costo adicional si los pides dentro de los primeros 7 días. Después de eso, o si son cambios de dirección grandes, los cotizamos por separado. Siempre con precio claro antes de hacer cualquier cosa.</p>
-              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
-            </div>
-          </details>
-
-          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.3s">
-            <summary class="faq-item__question">
-              <span class="faq-item__num">07</span>
-              <span class="faq-item__divider" aria-hidden="true"></span>
-              <span class="faq-item__text" data-i18n="faq.07.q">¿Cuánto cuesta un proyecto?</span>
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p data-i18n="faq.07.a">Los proyectos parten desde $500 USD para un alcance inicial de branding o web básica; la mayoría se mueve entre $500 y $2.500 USD según el alcance. Antes de empezar recibes una propuesta con precio cerrado, tiempos y entregables — sin sorpresas ni costos ocultos.</p>
-              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
-            </div>
-          </details>
-
-          <details class="faq-item scroll-reveal" style="--reveal-delay: 0.35s">
-            <summary class="faq-item__question">
-              <span class="faq-item__num">08</span>
-              <span class="faq-item__divider" aria-hidden="true"></span>
-              <span class="faq-item__text" data-i18n="faq.08.q">¿Qué pasa si no puedes continuar a mitad del proyecto?</span>
-              <span class="faq-item__icon" aria-hidden="true"></span>
-            </summary>
-            <div class="faq-item__answer">
-              <p data-i18n="faq.08.a">Está cubierto por contrato: trabajo por hitos con entregas parciales, así siempre tienes en tu poder lo que ya pagaste — archivos fuente incluidos. Todo queda documentado por escrito, de modo que cualquier profesional podría retomar el proyecto sin empezar de cero. Hasta hoy, nunca ha sido necesario.</p>
-              <svg class="faq-item__planet" aria-hidden="true"><use href="#goldPlanet"/></svg>
-            </div>
-          </details>
-
-        </div>
+    <!-- ═══ PREGUNTAS ═══ -->
+    <section class="hm-block" id="faq" aria-labelledby="hmFaq">
+      <div class="hm-wrap hm-faq">
+        <h2 class="hm-h2" id="hmFaq">Preguntas frecuentes</h2>
+        <div class="hm-faq__list">
+          <details><summary>¿Cuánto cuesta un proyecto?</summary><p>Los proyectos parten desde 500 USD para un alcance inicial de branding o web básica; la mayoría está entre 500 y 2.500 USD según el alcance. Antes de empezar recibes una propuesta con precio cerrado, tiempos y entregables, sin sorpresas ni costos ocultos.</p></details>
+          <details><summary>¿Trabajas con clientes fuera de Colombia?</summary><p>Sí, trabajo 100 % remoto con clientes en varios países. La comunicación es escrita, por WhatsApp o correo, así cada acuerdo, avance y entrega queda documentado. Estoy en Bogotá (UTC-5) y me adapto a tu zona horaria.</p></details>
+          <details><summary>¿Cómo es el proceso de pago?</summary><p>Un anticipo del 50 % para arrancar y el 50 % restante contra entrega. Los proyectos grandes se dividen en hitos. Acepto transferencia bancaria, Nequi y, para clientes internacionales, PayPal o Wise.</p></details>
+          <details><summary>¿Cuántas revisiones incluye cada proyecto?</summary><p>Depende del servicio, pero en general incluyo dos rondas de revisión dentro del alcance acordado. Si necesitas más ajustes, los cotizamos aparte y con precio claro antes de hacerlos.</p></details>
+          <details><summary>¿Usas contratos?</summary><p>Sí, siempre. Antes de arrancar firmamos un acuerdo con el alcance, los tiempos, el valor y las condiciones de entrega. Protege a los dos y evita malentendidos en el camino.</p></details>
+          <details><summary>¿Qué pasa si necesito cambios después de la entrega?</summary><p>Los cambios menores dentro del alcance original no tienen costo si los pides en los primeros 7 días. Después, o si son cambios grandes de dirección, los cotizamos por separado, siempre con precio claro antes de hacer cualquier cosa.</p></details>
+          <details><summary>¿En qué zona horaria trabajas?</summary><p>Estoy en Bogotá, Colombia: UTC-5, sin horario de verano. Normalmente respondo entre 8 a. m. y 8 p. m. hora de Colombia, y me adapto si estás en otra zona horaria y necesitamos cuadrar una llamada.</p></details>
+          <details><summary>¿Qué pasa si no puedes continuar a mitad del proyecto?</summary><p>Está cubierto por contrato: trabajo por hitos con entregas parciales, así siempre tienes lo que ya pagaste, con archivos fuente incluidos. Todo queda documentado por escrito para que otra persona pueda retomarlo sin empezar de cero. Hasta hoy nunca ha sido necesario.</p></details>
         </div>
       </div>
     </section>
 
     <!-- ═══ CONTACTO ═══ -->
-    <section class="section contact-section" id="contacto-form">
-      <div class="container">
-        <p class="eyebrow" data-i18n="contact.eyebrow">CONTACTO</p>
-        <h2 class="section__title" data-i18n="contact.title">Hablemos de tu proyecto<span class="hero__dot">.</span></h2>
-        <p class="contact-section__sub" data-i18n="contact.sub">Cada semana que esperas, tu competencia ya está online. Cuéntame qué necesitas — respondo en menos de 24 horas.</p>
-
-        <div class="contact-grid">
-          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-
-            <input type="hidden" name="access_key" value="c7415f2c-287b-4376-bbdb-4c243d24a959" />
-            <input type="hidden" name="subject" value="Nuevo mensaje desde tu portafolio — alexandercaro.com" />
-            <input type="hidden" name="from_name" value="Portafolio Alexander Caro" />
-            <input type="hidden" name="redirect" value="false" />
-            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="cf-nombre" data-i18n="contact.name.label">Nombre *</label>
-                <input class="form-input" type="text" id="cf-nombre" name="nombre" placeholder="Tu nombre" data-i18n-placeholder="contact.name.placeholder" required />
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="cf-empresa" data-i18n="contact.company.label">Empresa</label>
-                <input class="form-input" type="text" id="cf-empresa" name="empresa" placeholder="Tu empresa (opcional)" data-i18n-placeholder="contact.company.placeholder" />
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="cf-servicio" data-i18n="contact.service.label">Servicio de interés *</label>
-                <select class="form-input form-select" id="cf-servicio" name="servicio" data-i18n-select="contact.select.service" required>
-                  <option value="" disabled selected>Selecciona un servicio</option>
-                  <option value="Diseño y desarrollo web">Diseño y desarrollo web</option>
-                  <option value="Identidad visual / Branding">Identidad visual / Branding</option>
-                  <option value="Diseño gráfico / Social media">Diseño gráfico / Social media</option>
-                  <option value="Fotografía de producto">Fotografía de producto</option>
-                  <option value="Pauta digital (Meta / Google Ads)">Pauta digital (Meta / Google Ads)</option>
-                  <option value="Paquete integral">Paquete integral</option>
-                  <option value="Otro / No sé aún">Otro / No sé aún</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="cf-presupuesto" data-i18n="contact.budget.label">Presupuesto aproximado *</label>
-                <select class="form-input form-select" id="cf-presupuesto" name="presupuesto" data-i18n-select="contact.select.budget" required>
-                  <option value="" disabled selected>Selecciona un rango</option>
-                  <option value="Menos de $500 USD">Menos de $500 USD — fuera de mi rango habitual</option>
-                  <option value="$500 – $1,000 USD">$500 – $1,000 USD</option>
-                  <option value="$1,000 – $2,500 USD">$1,000 – $2,500 USD</option>
-                  <option value="$2,500 – $5,000 USD">$2,500 – $5,000 USD</option>
-                  <option value="Más de $5,000 USD">Más de $5,000 USD</option>
-                  <option value="Aún no lo tengo claro">Aún no lo tengo claro</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="cf-mensaje" data-i18n="contact.message.label">Mensaje *</label>
-              <textarea class="form-input form-textarea" id="cf-mensaje" name="mensaje" rows="4" placeholder="Cuéntame en qué puedo ayudarte..." data-i18n-placeholder="contact.message.placeholder" required></textarea>
-            </div>
-
-            <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
-
-            <div class="contact-form__actions">
-              <button type="submit" class="btn btn--gold btn--lg contact-submit" id="contactSubmitBtn">
-                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-                <span class="btn-text" data-i18n="contact.submit">Enviar mensaje</span>
-              </button>
-              <a href="https://wa.me/573024457653" target="_blank" rel="noopener noreferrer" class="contact-whatsapp-link" id="whatsappFormLink">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-                <span data-i18n="contact.whatsapp">O escríbeme directo por WhatsApp</span>
-              </a>
-            </div>
-
-          </form>
-
-          <div class="contact-aside">
-            <p class="contact-aside__urgency" data-i18n="contact.aside.urgency">Un sitio lento o una marca invisible no es un gasto que pospones — es uno que ya estás pagando en clientes que no llegan.</p>
-            <div class="contact-info-card">
-              <span class="contact-info-card__label" data-i18n="contact.response.label">Tiempo de respuesta</span>
-              <span class="contact-info-card__value" data-i18n="contact.response.value">Menos de 24 h</span>
-            </div>
-            <div class="contact-info-card">
-              <span class="contact-info-card__label" data-i18n="contact.mode.label">Modalidad</span>
-              <span class="contact-info-card__value" data-i18n="contact.mode.value">100% remoto</span>
-            </div>
-            <div class="contact-info-card">
-              <span class="contact-info-card__label" data-i18n="contact.languages.label">Idiomas</span>
-              <span class="contact-info-card__value" data-i18n="contact.languages.value">Español · English</span>
-            </div>
-            <a href="https://calendly.com/hosoyalexander/30min" target="_blank" rel="noopener noreferrer" class="calendly-link" id="calendlyBtn">
-              <span data-i18n="contact.calendly">Agenda una llamada de 20 min →</span>
-            </a>
-            <p class="contact-aside__note">
-              <span data-i18n="contact.email.note">También puedes escribirme directamente a</span><br/>
-              <a href="mailto:hosoyalexander@gmail.com">hosoyalexander@gmail.com</a>
-            </p>
+    <section class="hm-block" id="contacto" aria-labelledby="hmContact">
+      <span id="contacto-form" aria-hidden="true"></span>
+      <div class="hm-wrap hm-contact">
+        <div class="hm-contact__lead">
+          <h2 class="hm-h2" id="hmContact">Hablemos de tu proyecto</h2>
+          <p>Cuéntame qué necesitas y te respondo en menos de 24 horas con los siguientes pasos.</p>
+          <a class="hm-btn hm-btn--gold" href="https://wa.me/573024457653?text=%C2%A1Hola%20Alexander%21%20Vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20un%20proyecto%20contigo.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener noreferrer" id="whatsappFormLink"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Escríbeme por WhatsApp</a>
+          <dl class="hm-facts">
+            <div><dt>Correo</dt><dd><a href="mailto:hosoyalexander@gmail.com">hosoyalexander@gmail.com</a></dd></div>
+            <div><dt>Llamada</dt><dd><a href="https://calendly.com/hosoyalexander/30min" target="_blank" rel="noopener noreferrer" id="calendlyBtn">Agenda 20 minutos</a></dd></div>
+            <div><dt>Idiomas</dt><dd>Español e inglés</dd></div>
+            <div><dt>Desde</dt><dd>Bogotá, para cualquier país</dd></div>
+          </dl>
+        </div>
+        <form class="hm-form contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="c7415f2c-287b-4376-bbdb-4c243d24a959">
+          <input type="hidden" name="subject" value="Nuevo mensaje desde tu portafolio — alexandercaro.com">
+          <input type="hidden" name="from_name" value="Portafolio Alexander Caro">
+          <input type="hidden" name="redirect" value="false">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <div class="hm-field"><label for="cf-nombre">Nombre</label><input class="form-input" type="text" id="cf-nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required></div>
+          <div class="hm-field"><label for="cf-contacto">Correo o WhatsApp</label><input class="form-input" type="text" id="cf-contacto" name="contacto" autocomplete="email" placeholder="tu@correo.com o +57 300…" required></div>
+          <div class="hm-field"><label for="cf-servicio">Qué necesitas</label><select class="form-input" id="cf-servicio" name="servicio" required><option value="" disabled selected>Elige una opción</option><option value="Identidad visual">Identidad visual</option><option value="Diseño y desarrollo web">Diseño y desarrollo web</option><option value="Contenido y redes sociales">Contenido y redes sociales</option><option value="Fotografía de producto">Fotografía de producto</option><option value="Pauta en Meta o Google">Pauta en Meta o Google</option><option value="Varias de estas">Varias de estas</option><option value="Todavía no lo sé">Todavía no lo sé</option></select></div>
+          <div class="hm-field"><label for="cf-presupuesto">Presupuesto aproximado</label><select class="form-input" id="cf-presupuesto" name="presupuesto" required><option value="" disabled selected>Elige un rango</option><option value="Menos de 500 USD">Menos de 500 USD</option><option value="500 a 1.000 USD">500 a 1.000 USD</option><option value="1.000 a 2.500 USD">1.000 a 2.500 USD</option><option value="2.500 a 5.000 USD">2.500 a 5.000 USD</option><option value="Más de 5.000 USD">Más de 5.000 USD</option><option value="Todavía no lo tengo claro">Todavía no lo tengo claro</option></select></div>
+          <div class="hm-field hm-field--full"><label for="cf-empresa">Empresa (opcional)</label><input class="form-input" type="text" id="cf-empresa" name="empresa" autocomplete="organization"></div>
+          <div class="hm-field hm-field--full"><label for="cf-mensaje">Cuéntame del proyecto</label><textarea class="form-input" id="cf-mensaje" name="mensaje" rows="5" placeholder="Qué quieres lograr, para cuándo y cualquier referencia que te guste." required></textarea></div>
+          <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+          <div class="hm-form__foot">
+            <button type="submit" class="hm-btn hm-btn--gold" id="contactSubmitBtn"><span class="btn-text">Enviar mensaje</span></button>
+            <small>Respondo en menos de 24 horas.</small>
           </div>
-        </div>
+        </form>
       </div>
     </section>
-
-    <!-- ═══ CTA ═══ -->
-    <section class="cta-section" id="contacto">
-      <div class="container">
-        <h2 class="cta-section__title">
-          <span data-i18n="cta.title">¿Tienes un proyecto en mente<span class="hero__dot">?</span></span>
-        </h2>
-        <p class="cta-section__sub" data-i18n="cta.sub">El mejor momento para arreglar tu presencia digital fue ayer. El segundo mejor es hoy. Respondo en menos de 24 horas.</p>
-        <div class="cta-section__actions">
-          <a class="btn btn--gold btn--lg" href="https://wa.me/573024457653?text=%C2%A1Hola%20Alexander!%20Vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20un%20proyecto%20contigo.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-            <span data-i18n="cta.whatsapp">Escríbeme por WhatsApp</span>
-          </a>
-          <a href="/trabajo/" class="btn btn--ghost" data-i18n="cta.work">Ver todos los proyectos</a>
-        </div>
-      </div>
-    </section>
-
   </main>
+
+  <div class="hm-peek" id="hmPeek" aria-hidden="true"></div>
 
   <footer class="footer" id="site-footer">
     <div class="container">
@@ -1444,47 +444,7 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
     </div>
   </footer>
 
-  <!-- Hero: GSAP/ScrollTrigger drive all hero animations (idle float,
-       rise+blur parallax on scroll, reveal on load). Native scroll —
-       no smooth-scroll library. Loaded homepage-only — see /hero.js.
-       defer: el parser HTML no se bloquea — scripts se ejecutan en orden
-       tras DOMContentLoaded. hero.js depende de gsap+ST que van primero. -->
-  <!-- PERF: GSAP + ScrollTrigger (~110KB) ya no bloquean la carga.
-       Se inyectan cuando la página terminó de pintar (load + idle), o antes
-       si el usuario interactúa. El hero ya se anima con CSS puro, así que
-       nada visible depende de que estos scripts lleguen rápido.
-       Esto saca ~340ms de TBT y ~237ms de reprocesamiento del arranque. -->
-  <script>
-  (function () {
-    var cargado = false;
-    function cargarGSAP() {
-      if (cargado) return; cargado = true;
-      var urls = [
-        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',
-        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js',
-        '/hero.js'
-      ];
-      (function siguiente(i) {
-        if (i >= urls.length) return;
-        var s = document.createElement('script');
-        s.src = urls[i];
-        s.async = false;
-        s.onload = function () { siguiente(i + 1); };
-        s.onerror = function () { siguiente(i + 1); };
-        document.body.appendChild(s);
-      })(0);
-    }
-    function programar() {
-      if ('requestIdleCallback' in window) requestIdleCallback(cargarGSAP, { timeout: 2000 });
-      else setTimeout(cargarGSAP, 600);
-    }
-    if (document.readyState === 'complete') programar();
-    else window.addEventListener('load', programar, { once: true });
-    ['pointerdown', 'touchstart', 'wheel', 'keydown'].forEach(function (e) {
-      window.addEventListener(e, cargarGSAP, { once: true, passive: true });
-    });
-  })();
-  </script>
+  <script defer src="/js/inicio.js"></script>
 
   <script defer src="/analytics.js"></script>
   <script defer src="/nav.js"></script>

@@ -1,3 +1,12 @@
+# INICIO v3: inicio rediseñado, 16 oct 2026
+
+- Hero nuevo: tu nombre a todo el ancho, el retrato delante y anillos y rocas en capas que se mueven a distinta profundidad con el cursor. Sin GSAP: lo mueve `js/inicio.js` (más liviano y rápido).
+- El trabajo va justo después del hero: tres proyectos grandes y un índice con vista previa que sigue al cursor. Se generan desde el panel (orden «inicio» y máximo de proyectos en «Orden de proyectos»).
+- De 14 secciones a 8: Lo que hago, Video, Cómo trabajamos, Sobre mí (certificaciones y testimonios), Preguntas frecuentes y Contacto.
+- El formulario ahora pide «Correo o WhatsApp» (antes no había forma de responderle a quien escribía). Los mensajes del formulario salen en el idioma de la página.
+- Las 179K visualizaciones ya no dicen «sin pauta» en el inicio ni en el CV.
+- Estilos en `css/inicio.css`; `hero.js` quedó sin uso.
+
 # PORTAFOLIO v2.1: casos antiguos con el diseño nuevo, 16 oct 2026
 
 - Los 10 casos antiguos (Orbidental, DiaDent, Eighteeth, Social Media Dental, AcelerArte, MotoFaro, Pulse Digital, Fueggo, La Jungla Club y Rebel Street) pasan a la plantilla de caso. Sus textos en español e inglés, imágenes, videos, cifras, SEO y cierre se conservan y ahora se editan desde el panel.

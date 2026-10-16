@@ -2,7 +2,7 @@
 
 Cada proyecto vive **en un solo archivo** (`content/proyectos/<proyecto>.yml`, con español e inglés juntos). Al publicar, el sitio se arma solo:
 
-- Tarjetas del **inicio** (máximo 9), de **/trabajo/** (todos) y del **CV** (portafolio y sector dental), en ES y EN.
+- **Inicio**: los 3 primeros de la lista «inicio» salen grandes y los siguientes en un índice (máximo 9 en total). También las tarjetas de **/trabajo/** (todos) y del **CV** (portafolio y sector dental), en ES y EN.
 - **Página del caso** en `/trabajo/<proyecto>/` y `/en/trabajo/<proyecto>/` para los proyectos con página automática.
 - **Imágenes optimizadas**: cada foto se convierte a AVIF, WebP y JPG en varios tamaños.
 - **SEO**: sitemap, datos estructurados (JSON-LD) y la lista de proyectos en `llms.txt`.

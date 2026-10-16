@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url';
 import { loadContent } from './lib/content.mjs';
 import { createImagePipeline } from './lib/images.mjs';
 import { workPage, workItemList, CARD_WIDTHS } from './lib/render-work.mjs';
-import { homeCards, homeMore, cvCards, cvMore } from './lib/render-home.mjs';
+import { homeWork, homeMore, cvCards, cvMore } from './lib/render-home.mjs';
 import { casePage } from './lib/render-case.mjs';
 import { updateSitemap, updateLlms } from './lib/seo.mjs';
 import { BuildError, numberWord } from './lib/util.mjs';
@@ -91,8 +91,9 @@ async function main() {
   const renderers = {
     trabajo: (lang) => workPage(lists.trabajo, lang, cardImgs),
     'trabajo-schema': (lang) => workItemList(lists.trabajo, lang),
-    inicio: (lang) => homeCards(lists.inicio, lang, cardImgs),
+    inicio: (lang) => homeWork(lists.inicio, lang, cardImgs),
     'inicio-mas': (lang) => homeMore(lists.trabajo.length, lang),
+    'trabajo-n': () => String(lists.trabajo.length),
     cv: (lang) => cvCards(lists.cv, lang, cardImgs),
     'cv-dental': (lang) => cvCards(lists.cv_dental, lang, cardImgs, { dental: true }),
     'cv-dental-n': (lang) => numberWord(lists.cv_dental.length, lang),

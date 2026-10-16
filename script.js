@@ -290,6 +290,13 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
   const btnText   = submitBtn?.querySelector('.btn-text');
   const btnIcon   = submitBtn?.querySelector('.btn-icon');
   const feedback  = document.getElementById('form-feedback');
+  const EN = (document.documentElement.lang || '').toLowerCase().startsWith('en');
+  const MSG = EN
+    ? { sending: 'Sending…', send: 'Send message', missing: 'Please fill in all required fields.',
+        ok: 'Message sent. I will reply within 24 hours.', fail: 'The message could not be sent. Try again or message me on WhatsApp.' }
+    : { sending: 'Enviando…', send: 'Enviar mensaje', missing: 'Por favor completa todos los campos obligatorios.',
+        ok: 'Mensaje enviado. Te respondo en menos de 24 horas.', fail: 'No se pudo enviar el mensaje. Intenta de nuevo o escríbeme directamente por WhatsApp.' };
+  const sendLabel = btnText ? btnText.textContent : MSG.send;
 
   function setFeedback(type, msg) {
     if (!feedback) return;
@@ -302,10 +309,10 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     submitBtn.disabled = on;
     if (on) {
       btnIcon && (btnIcon.style.display = 'none');
-      btnText && (btnText.textContent = 'Enviando…');
+      btnText && (btnText.textContent = MSG.sending);
     } else {
       btnIcon && (btnIcon.style.display = '');
-      btnText && (btnText.textContent = 'Enviar mensaje');
+      btnText && (btnText.textContent = sendLabel);
     }
   }
 
@@ -322,7 +329,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
       }
     });
     if (!valid) {
-      setFeedback('error', '⚠️ Por favor completa todos los campos obligatorios.');
+      setFeedback('error', MSG.missing);
       return;
     }
 
@@ -341,7 +348,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
         acTrack('generate_lead', { method: 'form' });
         setFeedback('success',
           '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
-          ' Mensaje enviado. Te respondo en menos de 24 horas.'
+          ' ' + MSG.ok
         );
         form.reset();
       } else {
@@ -351,7 +358,7 @@ document.getElementById('downloadCV')?.addEventListener('click', e => {
     .catch((err) => {
       console.error('Web3Forms error:', err);
       setFeedback('error',
-        '⚠️ No se pudo enviar el mensaje. Intenta de nuevo o escríbeme directamente por WhatsApp.'
+        MSG.fail
       );
     })
     .finally(() => {

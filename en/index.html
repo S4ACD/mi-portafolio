@@ -15,8 +15,9 @@
 
 
 
-<!-- Preload LCP — retrato del hero (Cloudinary, formato auto, 1024px) -->
-<link as="image" media="(min-width: 768px)" fetchpriority="high" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png" imagesizes="(max-width: 767px) 62vw, (max-width: 1279px) 40vw, 520px" imagesrcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png 680w" rel="preload"/>
+<!-- Preload LCP — retrato del hero (inicio v3) -->
+  <link rel="preload" as="image" fetchpriority="high" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png" imagesrcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_360/v1781396255/Escultura_de_Alexander_ykbpww.png 360w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_520/v1781396255/Escultura_de_Alexander_ykbpww.png 520w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png 720w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1000/v1781396255/Escultura_de_Alexander_ykbpww.png 1000w" imagesizes="(max-width: 1023px) min(74vw, 420px), min(33vw, 500px)" />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2" crossorigin />
 <!-- Favicon — definido solo aquí, el browser lo busca en / automáticamente para todas las subpáginas -->
 <link href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_png,w_32/v1781101945/Favicon_jsl63r.webp" rel="icon" sizes="32x32" type="image/png"/>
 <link href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_png,w_16/v1781101945/Favicon_jsl63r.webp" rel="icon" sizes="16x16" type="image/png"/>
@@ -102,16 +103,24 @@
   </script>
 <!-- Schema JSON-LD FAQPage -->
 <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "How much does a project cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Projects start at 500 USD for an initial branding or basic-website scope; most land between 500 and 2,500 USD depending on scope. Before we start you get a proposal with a fixed price, timeline and deliverables, with no surprises or hidden costs."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Do you work with clients outside Colombia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — I work 100% remotely with clients in several countries. All communication is written — WhatsApp or email — so every agreement, update and delivery stays documented. I'm in Bogotá (UTC-5) and I adapt to your time zone."
+        "text": "Yes, I work 100% remotely with clients in several countries. Communication is written, over WhatsApp or email, so every agreement, update and delivery is documented. I'm in Bogotá (UTC-5) and I adapt to your time zone."
       }
     },
     {
@@ -119,7 +128,7 @@
       "name": "How does payment work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "I work with a 50% deposit to kick things off and the remaining 50% on delivery. For larger projects we split it into milestones. For international clients I accept PayPal or Wise."
+        "text": "A 50% deposit to get started and the remaining 50% on delivery. Larger projects are split into milestones. For international clients I accept PayPal or Wise."
       }
     },
     {
@@ -127,15 +136,7 @@
       "name": "How many revisions are included?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on the service, but generally I include two rounds of revisions within the agreed scope. If you need more after that, we price it separately — no surprises. What matters is that the final result is right."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What time zone do you work in?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "I'm in Bogotá, Colombia — UTC-5, no daylight saving. I'm usually available between 8am and 8pm Colombian time, but I'm flexible when we need to schedule a call across time zones."
+        "text": "It depends on the service, but generally I include two rounds of revisions within the agreed scope. If you need more, we price them separately, with a clear quote before any work."
       }
     },
     {
@@ -143,7 +144,7 @@
       "name": "Do you use contracts?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Always. Before starting any project we sign an agreement that defines the scope, timeline, price, and delivery terms. It protects both of us and prevents misunderstandings down the road."
+        "text": "Always. Before starting we sign an agreement that defines the scope, timeline, price and delivery terms. It protects both of us and prevents misunderstandings down the road."
       }
     },
     {
@@ -151,15 +152,15 @@
       "name": "What if I need changes after delivery?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Minor changes within the original scope are covered at no extra cost if you request them within the first 7 days. After that, or for significant direction changes, we price them separately — always with a clear quote before touching anything."
+        "text": "Minor changes within the original scope are free if you request them within the first 7 days. After that, or for major changes of direction, we price them separately, always with a clear quote first."
       }
     },
     {
       "@type": "Question",
-      "name": "How much does a project cost?",
+      "name": "What time zone do you work in?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Projects start at $500 USD for an initial branding or basic-website scope; most land between $500 and $2,500 USD depending on scope. Before we start you get a proposal with a fixed price, timeline and deliverables — no surprises, no hidden costs."
+        "text": "I'm in Bogotá, Colombia: UTC-5, no daylight saving. I usually reply between 8 a.m. and 8 p.m. Colombian time, and I'm flexible when we need to schedule a call across time zones."
       }
     },
     {
@@ -167,7 +168,7 @@
       "name": "What happens if you can't continue mid-project?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It's covered by contract: I work in milestones with partial deliveries, so you always own what you've already paid for — source files included. Everything is documented in writing, so any professional could pick the project up without starting over. To date, it has never been needed."
+        "text": "It's covered by contract: I work in milestones with partial deliveries, so you always own what you've already paid for, source files included. Everything is documented in writing so anyone could pick the project up without starting over. To date, it has never been needed."
       }
     }
   ]
@@ -200,1102 +201,219 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 
   <link rel="stylesheet" href="/css/proyectos.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="/css/proyectos.css" /></noscript>
+  <link rel="stylesheet" href="/css/inicio.css" />
 </head>
-<body>
+<body class="hm-page">
 <div class="scroll-progress" id="scrollProgress"></div>
-<main>
-<!-- ═══ HERO ═══ -->
-<section class="hv2" id="inicio">
-<!-- LAYER 01 — fondo -->
-<div aria-hidden="true" class="hv2__bg"></div>
-<div aria-hidden="true" class="hv2__grain"></div>
-<!-- LAYER 02 — niebla -->
-<div aria-hidden="true" class="hv2__fog"></div>
-<!-- LAYER 02.5 — partículas (polvo + estrellas), generadas en hero.js -->
-<div aria-hidden="true" class="hv2__particles" id="hv2Particles"></div>
-<!-- LAYER 03 — anillos + destello orbital -->
-<svg aria-hidden="true" class="hv2__rings" viewbox="0 0 200 200">
-<defs>
-<path d="M160,100 A60,60 0 1 1 40,100 A60,60 0 1 1 160,100" id="hv2GlintPath"></path>
-</defs>
-<circle cx="100" cy="100" r="99"></circle>
-<circle cx="100" cy="100" r="78"></circle>
-<circle class="hv2__rings-dashed" cx="100" cy="100" r="60"></circle>
-<!-- Destello orbital: cometa dorado con cola de luz, mismo trazado
-             que el anillo punteado pero con su propio recorrido (15s) -->
-<circle class="hv2__glint-tail" r="9">
-<animatemotion begin="-0.6s" dur="15s" repeatcount="indefinite">
-<mpath href="#hv2GlintPath"></mpath>
-</animatemotion>
-</circle>
-<circle class="hv2__glint-mid" r="4.5">
-<animatemotion begin="-0.3s" dur="15s" repeatcount="indefinite">
-<mpath href="#hv2GlintPath"></mpath>
-</animatemotion>
-</circle>
-<circle class="hv2__glint-core" r="2.2">
-<animatemotion dur="15s" repeatcount="indefinite">
-<mpath href="#hv2GlintPath"></mpath>
-</animatemotion>
-</circle>
-</svg>
-<!-- LAYER 04 — rocas lejanas (quedan DETRÁS del retrato) -->
-<div aria-hidden="true" class="hv2__stage hv2__stage--far">
-<!-- rocas lejanas: opacas, desenfocadas, suben poco -->
-<div class="hv2__rock hv2__rock--far hv2__rock--far1" data-duration="11" data-float-rot="3" data-float-y="10" data-rise="22">
-<div class="hv2__rock-parallax"><div class="hv2__rock-float">
-<img alt="" decoding="async" height="156" loading="lazy" src="/assets/rocks/rock-04.webp" width="400"/>
-</div></div>
-</div>
-<div class="hv2__rock hv2__rock--far hv2__rock--far2" data-duration="13" data-float-rot="-4" data-float-y="12" data-rise="30">
-<div class="hv2__rock-parallax"><div class="hv2__rock-float">
-<img alt="" decoding="async" height="300" loading="lazy" src="/assets/rocks/rock-02.webp" width="320"/>
-</div></div>
-</div>
-<div class="hv2__rock hv2__rock--far hv2__rock--far3 hv2__rock--flip" data-duration="12" data-float-rot="2" data-float-y="8" data-rise="26">
-<div class="hv2__rock-parallax"><div class="hv2__rock-float">
-<img alt="" decoding="async" height="156" loading="lazy" src="/assets/rocks/rock-05.webp" width="380"/>
-</div></div>
-</div>
-</div>
-<!-- retrato: vive entre las dos capas de rocas (far detrás, near
-           delante), en su propio bloque de flujo real (hitbox), hermano
-           de .hv2__content dentro de .hv2. En desktop se comporta como
-           absoluto (ver CSS ≥1024px); en mobile/tablet es un bloque
-           normal que el navegador mide solo — nunca se superpone al
-           texto. -->
-<div class="hv2__portrait" data-duration="9" data-float-rot="0" data-float-y="16" data-rise="18" id="hv2Portrait">
-<div class="hv2__portrait-tilt"><div class="hv2__portrait-parallax"><div class="hv2__portrait-float">
-<img alt="Alexander Caro — retrato escultórico emergiendo de roca fracturada" decoding="sync" elementtiming="hero-portrait" fetchpriority="high" height="1536" loading="eager" sizes="(max-width: 767px) 62vw, (max-width: 1279px) 40vw, 520px" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png" srcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_320/v1781396255/Escultura_de_Alexander_ykbpww.png 320w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_480/v1781396255/Escultura_de_Alexander_ykbpww.png 480w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_680/v1781396255/Escultura_de_Alexander_ykbpww.png 680w" width="1024"/>
-</div></div></div>
-</div>
-<!-- LAYER 06 — rocas cercanas (quedan DELANTE del retrato) -->
-<div aria-hidden="true" class="hv2__stage hv2__stage--near" id="hv2Stage">
-<!-- rocas cercanas: nítidas, concentradas abajo, suben más rápido -->
-<div class="hv2__rock hv2__rock--near hv2__rock--near1" data-duration="8" data-float-rot="5" data-float-y="18" data-rise="56">
-<div class="hv2__rock-parallax"><div class="hv2__rock-float">
-<img alt="" decoding="async" height="226" loading="lazy" src="/assets/rocks/rock-01.webp" width="270"/>
-</div></div>
-</div>
-<div class="hv2__rock hv2__rock--near hv2__rock--near2" data-duration="9" data-float-rot="-6" data-float-y="22" data-rise="64">
-<div class="hv2__rock-parallax"><div class="hv2__rock-float">
-<img alt="" decoding="async" height="320" loading="lazy" src="/assets/rocks/rock-03.webp" width="174"/>
-</div></div>
-</div>
-<div class="hv2__rock hv2__rock--near hv2__rock--near3" data-duration="10" data-float-rot="3" data-float-y="16" data-rise="90">
-<div class="hv2__rock-parallax"><div class="hv2__rock-float">
-<img alt="" decoding="async" height="156" loading="lazy" src="/assets/rocks/rock-05.webp" width="380"/>
-</div></div>
-</div>
-<div class="hv2__rock hv2__rock--near hv2__rock--near4 hv2__rock--flip" data-duration="7" data-float-rot="-5" data-float-y="20" data-rise="70">
-<div class="hv2__rock-parallax"><div class="hv2__rock-float">
-<img alt="" decoding="async" height="226" loading="lazy" src="/assets/rocks/rock-01.webp" width="270"/>
-</div></div>
-</div>
-<div class="hv2__rock hv2__rock--near hv2__rock--near5 hv2__rock--flip" data-duration="9" data-float-rot="4" data-float-y="14" data-rise="48">
-<div class="hv2__rock-parallax"><div class="hv2__rock-float">
-<img alt="" decoding="async" height="156" loading="lazy" src="/assets/rocks/rock-04.webp" width="400"/>
-</div></div>
-</div>
-</div>
-<!-- CONTENIDO -->
-<div class="hv2__content">
-<span class="hv2__status" data-reveal="">
-<span aria-hidden="true" class="hv2__status-dot"></span>
-<span data-i18n="hero.status">Available for projects</span>
-</span>
-<p class="hv2__kicker" data-i18n="hero.kicker" data-reveal="">Alexander Caro — Designer &amp; Developer</p>
-<h1 class="hv2__title">
-<span class="hv2__title-line"><span data-i18n="hero.title.line1">Design and code,</span></span>
-<span class="hv2__title-script" data-i18n="hero.title.line2" data-reveal="">one person. One voice.</span>
-</h1>
-<p class="hv2__desc" data-i18n="hero.desc" data-reveal="">Graphic design, content, web design and development — everything visual and technical your brand needs, handled by a single person. No middlemen, no lost-in-translation. Just results that connect, convert, and last.</p>
-<div class="hv2__actions" data-reveal="">
-<a class="hv2-btn hv2-btn--primary" data-magnetic="" href="/en/trabajo/">
-<span data-i18n="hero.btn.work">View selected work</span>
-<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14">
-<path d="M5 12h14M13 5l7 7-7 7"></path>
-</svg>
-</a>
-<a class="hv2-btn hv2-btn--ghost" data-magnetic="" href="/en/sobre-mi/">
-<span data-i18n="hero.btn.about">About me</span>
-<svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14">
-<path d="M5 12h14M13 5l7 7-7 7"></path>
-</svg>
-</a>
-</div>
-<p class="hv2__price-signal" data-i18n="hero.price_signal" data-reveal="">Projects from $500 USD<span aria-hidden="true" class="hv2__price-signal-dot">·</span>Clear proposal in 48 h<span aria-hidden="true" class="hv2__price-signal-dot">·</span>We start only if it's a fit</p>
-</div>
-<!-- decoraciones laterales -->
-<div class="hv2__side hv2__side--scroll" data-reveal="">
-<span data-i18n="hero.scroll">Scroll to explore</span>
-</div>
-<div class="hv2__side hv2__side--tags" data-reveal="">
-<span data-i18n="hero.tag.1">Branding</span>
-<span data-i18n="hero.tag.2">Web Design</span>
-<span data-i18n="hero.tag.3">Frontend</span>
-</div>
-<!-- insignia -->
-<div class="hv2__badge" data-reveal="">
-<svg aria-hidden="true" viewbox="0 0 120 120">
-<defs>
-<path d="M60,60 m0,-52 a52,52 0 1,1 0,104 a52,52 0 1,1 0,-104" id="hv2BadgePath"></path>
-</defs>
-<text>
-<textpath data-i18n="hero.badge" href="#hv2BadgePath" startoffset="0">Based in Bogotá · Colombia · Based in Bogotá · Colombia ·</textpath>
-</text>
-</svg>
-<span aria-hidden="true" class="hv2__badge-dot"></span>
-</div>
-</section>
-<!-- ═══ TRANSICIÓN ═══ -->
-<div aria-hidden="true" class="section-divider">
-<div class="section-divider__line"></div>
-<span class="section-divider__star section-divider__star--1"></span>
-<span class="section-divider__star section-divider__star--2"></span>
-<span class="section-divider__star section-divider__star--3"></span>
-<span class="section-divider__star section-divider__star--4"></span>
-</div>
+<main class="hm">
+    <!-- ═══ HERO: escena en capas que siguen al cursor (js/inicio.js) ═══ -->
+    <section class="hm-hero" id="inicio" aria-labelledby="hmTitle">
+      <div class="hm-scene" id="hmScene">
+        <svg class="hm-rings hm-layer" data-depth="-0.25" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <circle cx="100" cy="100" r="99"/><circle cx="100" cy="100" r="80"/><circle class="hm-dash" cx="100" cy="100" r="62"/>
+          <circle class="hm-glint" r="1.3"><animateMotion dur="18s" repeatCount="indefinite" path="M162,100 A62,62 0 1 1 38,100 A62,62 0 1 1 162,100"/></circle>
+        </svg>
 
+        <h1 class="hm-mast hm-layer" data-depth="-0.35" id="hmTitle"><span>Alexander</span><span>Caro</span><span class="hm-sr">, design and code from one pair of hands</span></h1>
 
-<!-- ═══ VIDEO — Short animado (mismo bloque para ES y EN) ═══ -->
-<section class="acv" id="video" data-cld="v1790349952/alexander-caro-short_vyn1m9" aria-labelledby="acvTitle">
-<style>
-.acv{position:relative;padding:clamp(56px,9vw,120px) 0;background:var(--hv2-void,#050504);color:#f4efe6;overflow:hidden}
-.acv::before{content:"";position:absolute;top:10%;left:50%;width:min(90vw,900px);height:min(60vw,560px);transform:translateX(-50%);background:radial-gradient(circle,rgba(205,183,142,.12) 0%,transparent 65%);filter:blur(50px);pointer-events:none}
-.acv__wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px}
-.acv__eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-family:'Space Grotesk',system-ui,sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#cdb78e}
-.acv__eyebrow::before{content:"";width:32px;height:1px;background:#cdb78e;opacity:.6}
-.acv__title{margin:0 0 12px;font-family:'Fraunces',Georgia,serif;font-weight:340;font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;text-transform:uppercase;color:#f4efe6}
-.acv__title em{font-style:italic;font-weight:380;text-transform:none;color:#cdb78e}
-.acv__lede{max-width:52ch;margin:0 0 clamp(28px,4vw,44px);font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.7;color:rgba(244,239,230,.56)}
-.acv__player{position:relative;aspect-ratio:16/9;border-radius:clamp(12px,2vw,22px);overflow:hidden;background:#0e0d0b;border:1px solid rgba(205,183,142,.22);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(205,183,142,.08)}
-.acv__player video,.acv__poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.acv__play{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;width:100%;padding:0;border:0;cursor:pointer;color:#f4efe6;background:linear-gradient(to top,rgba(5,5,4,.6),rgba(5,5,4,.05) 60%);-webkit-tap-highlight-color:transparent}
-.acv__btn{display:grid;place-items:center;width:clamp(64px,9vw,96px);height:clamp(64px,9vw,96px);border-radius:50%;background:#cdb78e;color:#1a1611;animation:acvPulse 2.4s ease-out infinite;transition:transform .4s cubic-bezier(.16,1,.3,1),background .3s}
-.acv__play:hover .acv__btn,.acv__play:focus-visible .acv__btn{transform:scale(1.08);background:#e3d2b3}
-.acv__play:focus-visible{outline:2px solid #cdb78e;outline-offset:-6px}
-.acv__btn svg{width:34%;height:34%;margin-left:7%}
-.acv__hint{padding:8px 14px;border-radius:999px;border:1px solid rgba(244,239,230,.14);background:rgba(5,5,4,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-family:'Space Grotesk',system-ui,sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
-@keyframes acvPulse{0%{box-shadow:0 0 0 0 rgba(205,183,142,.55)}70%{box-shadow:0 0 0 22px rgba(205,183,142,0)}100%{box-shadow:0 0 0 0 rgba(205,183,142,0)}}
-.acv.is-playing .acv__play,.acv.is-playing .acv__poster{display:none}
-@media (max-width:600px){.acv__wrap{padding:0 16px}.acv__hint{font-size:.62rem;letter-spacing:.14em}}
-@media (prefers-reduced-motion:reduce){.acv__btn{animation:none}}
-</style>
-<div class="acv__wrap">
-  <p class="acv__eyebrow" data-acv="eyebrow">En 60 segundos</p>
-  <h2 class="acv__title" id="acvTitle" data-acv="title">Mi historia, <em>animada.</em></h2>
-  <p class="acv__lede" data-acv="lede">Diseño gráfico, desarrollo web y una moto: un corto animado de un minuto sobre quién soy y cómo trabajo. Dale play con sonido.</p>
-  <div class="acv__player">
-    <img class="acv__poster" loading="lazy" decoding="async" width="1280" height="720"
-      src="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg"
-      srcset="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_480,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 480w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_768,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 768w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_960,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 960w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 1280w"
-      sizes="(max-width:600px) calc(100vw - 32px), (max-width:1148px) calc(100vw - 48px), 1052px" alt="Miniatura del short animado de Alexander Caro" data-acv-alt />
-    <video preload="none" playsinline></video>
-    <button class="acv__play" type="button" aria-label="Reproducir video con sonido" data-acv-aria>
-      <span class="acv__btn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"/></svg></span>
-      <span class="acv__hint" data-acv="hint">Ver con sonido · 1:00</span>
-    </button>
-  </div>
-</div>
-<script>
-(function(){
-  var s=document.getElementById('video');if(!s)return;
-  var id=s.getAttribute('data-cld'),base='https://res.cloudinary.com/dg2wnq6ao/video/upload/';
-  var v=s.querySelector('video'),p=s.querySelector('.acv__play'),hint=s.querySelector('[data-acv="hint"]');
-  var en=(document.documentElement.lang||'').toLowerCase().indexOf('en')===0;
-  var T=en?{eyebrow:'In 60 seconds',title:'My story, <em>animated.</em>',lede:'Graphic design, web development and a motorcycle: a one-minute animated short about who I am and how I work. Press play with sound on (in Spanish).',hint:'Watch with sound · 1:00',again:'Watch again',aria:'Play video with sound',alt:'Thumbnail of Alexander Caro animated short'}
-          :{hint:'Ver con sonido · 1:00',again:'Ver de nuevo',aria:'Reproducir video con sonido',alt:''};
-  if(en){['eyebrow','lede'].forEach(function(k){s.querySelector('[data-acv="'+k+'"]').textContent=T[k]});
-    s.querySelector('[data-acv="title"]').innerHTML=T.title;hint.textContent=T.hint;p.setAttribute('aria-label',T.aria);s.querySelector('[data-acv-alt]').alt=T.alt;}
-  p.addEventListener('click',function(){
-    if(!v.querySelector('source')){
-      [['q_auto:good,w_1280,vc_h264,br_2500k/'+id+'.mp4','video/mp4'],['q_auto:good,w_1280/'+id+'.webm','video/webm']].forEach(function(x){
-        var src=document.createElement('source');src.src=base+x[0];src.type=x[1];v.appendChild(src);});
-      v.load();
-    }
-    s.classList.add('is-playing');v.controls=true;
-    var pr=v.play();if(pr&&pr.catch)pr.catch(function(){});
-  });
-  v.addEventListener('ended',function(){s.classList.remove('is-playing');v.controls=false;v.currentTime=0;hint.textContent=T.again;});
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(e){if(!e[0].isIntersecting&&!v.paused)v.pause();},{threshold:.2}).observe(s);
-  }
-})();
-</script>
-</section>
+        <div class="hm-rock hm-rock--far hm-rock--a hm-layer" data-depth="0.5" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-a-520.webp" alt="" width="520" height="284" decoding="async"></div>
+        <div class="hm-rock hm-rock--far hm-rock--b hm-layer" data-depth="0.35" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-b-520.webp" alt="" width="520" height="520" decoding="async"></div>
 
-  
-<!-- ═══ DOS PUERTAS — Cliente A / Cliente B ═══ -->
-<section aria-label="Elige tu punto de partida" class="doors-section scroll-reveal">
-<div class="container">
-<div class="doors-grid">
-<a class="door-card" href="/en/servicios/identidad-visual/">
-<span aria-hidden="true" class="door-card__num">A</span>
-<h2 class="door-card__title" data-i18n="doors.a.title">Does your brand look amateur?</h2>
-<p class="door-card__desc" data-i18n="doors.a.desc">A visual identity people recognize before reading the name — logo, full system and brand manual, production-ready.</p>
-<span class="door-card__cta"><span data-i18n="doors.a.cta">See visual identity</span> <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></span>
-</a>
-<a class="door-card" href="/en/trabajo/orbidental/">
-<span aria-hidden="true" class="door-card__num">B</span>
-<h2 class="door-card__title" data-i18n="doors.b.title">Is your website not selling?</h2>
-<p class="door-card__desc" data-i18n="doors.b.desc">Websites that load in 2 seconds and convert: from PageSpeed 40 to 97 on a real 3,000-product e-commerce.</p>
-<span class="door-card__cta"><span data-i18n="doors.b.cta">See the Orbidental case</span> <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="14"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></span>
-</a>
-</div>
-</div>
-</section>
-<!-- ═══ ESTADÍSTICAS ═══ -->
-<section class="stats-section scroll-reveal">
-<div class="container">
-<div class="stats-grid">
-<div class="stat-item">
-<span class="stat-num" data-suffix="" data-target="97">97</span>
-<span class="stat-bar"><span class="stat-bar__fill" style="--pct:97%"></span></span>
-<span class="stat-label" data-i18n="stat.01.label">PageSpeed Score</span>
-<span class="stat-sub" data-i18n="stat.01.sub">from 40 to 97 in real production</span>
-</div>
-<div class="stat-item">
-<span class="stat-num" data-suffix="K+" data-target="179">179K+</span>
-<span class="stat-bar"><span class="stat-bar__fill" style="--pct:82%"></span></span>
-<span class="stat-label" data-i18n="stat.02.label">Organic views</span>
-<span class="stat-sub" data-i18n="stat.02.sub">in 4 months · no paid ads</span>
-</div>
-<div class="stat-item">
-<span class="stat-num" data-suffix="" data-target="626">626</span>
-<span class="stat-bar"><span class="stat-bar__fill" style="--pct:74%"></span></span>
-<span class="stat-label" data-i18n="stat.03.label">B2B leads generated</span>
-<span class="stat-sub" data-i18n="stat.03.sub">from Meta Ads at ~$0.61 USD per lead</span>
-</div>
-<div class="stat-item">
-<span class="stat-num" data-suffix="+" data-target="3000">3,000+</span>
-<span class="stat-bar"><span class="stat-bar__fill" style="--pct:60%"></span></span>
-<span class="stat-label" data-i18n="stat.04.label">Products photographed</span>
-<span class="stat-sub" data-i18n="stat.04.sub">B2B catalog · Orbidental</span>
-</div>
-</div>
-</div>
-</section>
-<!-- ═══ SERVICIOS ═══ -->
-<section class="section services-section" id="servicios">
-<div aria-hidden="true" class="services-section__decor">
-<img alt="" class="services-section__rock" decoding="async" height="320" loading="lazy" src="/assets/rocks/rock-03.webp" width="174"/>
-<svg class="services-section__rings" viewbox="0 0 200 200">
-<circle cx="100" cy="100" r="92"></circle>
-<circle class="services-section__rings-dashed" cx="100" cy="100" r="68"></circle>
-</svg>
-</div>
-<div class="container">
-<p class="eyebrow" data-i18n="services.eyebrow">SERVICES</p>
-<h2 class="services-section__title" data-i18n="services.title">Design and development that <em>sells</em>.</h2>
-<p class="services-section__lede" data-i18n="services.lede">Design, development, and visual content — all in one seamless process.</p>
-<div class="services-list">
-<article class="service-row scroll-reveal">
-<div class="service-row__num">
-<svg aria-hidden="true" class="service-row__ring" viewbox="0 0 100 100"><circle cx="50" cy="50" r="46"></circle></svg>
-<span aria-hidden="true" class="service-row__num-dot"></span>
-<span>01</span>
-</div>
-<div class="service-row__icon">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<circle cx="12" cy="12" r="9"></circle>
-<path d="M12 3a9 9 0 0 0 0 18M3 12h18"></path>
-</svg>
-</div>
-<div class="service-row__body">
-<h3 class="service-row__title" data-i18n="services.01.title">Brand identity &amp; graphic design</h3>
-<p class="service-row__text" data-i18n="services.01.text">Logo, color palette, and a complete visual system. A brand that's instantly recognizable and feels cohesive across every touchpoint.</p>
-</div>
-</article>
-<article class="service-row scroll-reveal" style="--reveal-delay: 0.08s">
-<div class="service-row__num">
-<svg aria-hidden="true" class="service-row__ring" viewbox="0 0 100 100"><circle cx="50" cy="50" r="46"></circle></svg>
-<span aria-hidden="true" class="service-row__num-dot"></span>
-<span>02</span>
-</div>
-<div class="service-row__icon">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<path d="m8 9-3 3 3 3M16 9l3 3-3 3M13 6l-2 12"></path>
-</svg>
-</div>
-<div class="service-row__body">
-<h3 class="service-row__title" data-i18n="services.02.title">Web design &amp; development</h3>
-<p class="service-row__text" data-i18n="services.02.text">Fast, custom-built websites — designed and coded by the same person. No templates, no handoffs. PageSpeed 97 on real client projects.</p>
-</div>
-</article>
-<article class="service-row scroll-reveal" style="--reveal-delay: 0.16s">
-<div class="service-row__num">
-<svg aria-hidden="true" class="service-row__ring" viewbox="0 0 100 100"><circle cx="50" cy="50" r="46"></circle></svg>
-<span aria-hidden="true" class="service-row__num-dot"></span>
-<span>03</span>
-</div>
-<div class="service-row__icon">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<rect height="20" rx="2" width="14" x="5" y="2"></rect>
-<circle cx="12" cy="17" r="1"></circle>
-</svg>
-</div>
-<div class="service-row__body">
-<h3 class="service-row__title" data-i18n="services.03.title">Content &amp; social media design</h3>
-<p class="service-row__text" data-i18n="services.03.text">Visual assets for social that stop the scroll and build brand equity — crafted with intention, not assembled from a template.</p>
-</div>
-</article>
-</div>
-</div>
-</section>
-<!-- ═══ POR QUÉ YO (vs agencia) ═══ -->
-<section class="section porque-section">
-<div class="container">
-<p class="eyebrow scroll-reveal" data-i18n="why.eyebrow">WHY WORK WITH ME</p>
-<h2 class="section__title scroll-reveal" data-i18n="why.title">The difference isn't price.<br/><em>It's speed</em><span class="hero__dot">.</span></h2>
-<p class="porque-section__lede scroll-reveal">
-<span data-i18n="why.lede">An agency puts three people between your idea and the result: the salesperson, the project manager, and the person who actually does the work. Every layer adds time and dilutes what you asked for. With me, there are no layers — you talk directly to the person designing and building your project.</span>
-</p>
-<div class="porque-compare scroll-reveal" style="--reveal-delay:.08s">
-<!-- Columna agencia -->
-<div class="porque-col porque-col--them">
-<span class="porque-col__tag" data-i18n="why.them.tag">An agency</span>
-<ul class="porque-list">
-<li><span aria-hidden="true" class="porque-x">—</span> <span data-i18n="why.them.01">You talk to a salesperson; the work is done by someone you never meet</span></li>
-<li><span aria-hidden="true" class="porque-x">—</span> <span data-i18n="why.them.02">Your brief passes through 3 people before it becomes actual work</span></li>
-<li><span aria-hidden="true" class="porque-x">—</span> <span data-i18n="why.them.03">Revisions and changes take days to coordinate</span></li>
-<li><span aria-hidden="true" class="porque-x">—</span> <span data-i18n="why.them.04">Design and code are handled by different teams — things get lost in handoff</span></li>
-<li><span aria-hidden="true" class="porque-x">—</span> <span data-i18n="why.them.05">You're also paying for the overhead: office, managers, commissions</span></li>
-</ul>
-</div>
-<!-- Columna yo -->
-<div class="porque-col porque-col--me">
-<span class="porque-col__tag porque-col__tag--gold" data-i18n="why.me.tag">With me</span>
-<ul class="porque-list">
-<li><span aria-hidden="true" class="porque-check">✓</span> <span data-i18n="why.me.01">You talk directly to the person designing and building your project</span></li>
-<li><span aria-hidden="true" class="porque-check">✓</span> <span data-i18n="why.me.02">What you ask for arrives without anyone diluting it in the middle</span></li>
-<li><span aria-hidden="true" class="porque-check">✓</span> <span data-i18n="why.me.03">A change gets resolved the same day, not next week</span></li>
-<li><span aria-hidden="true" class="porque-check">✓</span> <span data-i18n="why.me.04">Design and code are done by the same person — nothing gets lost</span></li>
-<li><span aria-hidden="true" class="porque-check">✓</span> <span data-i18n="why.me.05">You pay for the work, not the structure around it</span></li>
-</ul>
-</div>
-</div>
-<p class="porque-section__close scroll-reveal" style="--reveal-delay:.16s">
-<span data-i18n="why.close">It's not that agencies are bad. It's that for most projects, that structure is overhead you pay for and time you wait through — without getting a better result.</span>
-</p>
-</div>
-</section>
-<!-- ═══ ENFOQUE ═══ -->
-<section class="enfoque-section">
-<div aria-hidden="true" class="enfoque-section__visual">
-<img alt="" decoding="async" height="320" loading="lazy" src="/assets/rocks/enfoque-rock.webp" width="370"/>
-<div class="enfoque-section__glow"></div>
-</div>
-<div class="enfoque-section__content">
-<p class="eyebrow" data-i18n="focus.eyebrow">APPROACH</p>
-<h2 class="enfoque-section__title" data-i18n="focus.title">Clear thinking.<br/><em>Real results.</em></h2>
-<p class="enfoque-section__lede" data-i18n="focus.lede">Design. Development. Content.<br/>All in one person.</p>
-</div>
-<svg aria-hidden="true" class="enfoque-section__orbit" viewbox="0 0 200 200">
-<circle class="enfoque-section__orbit-ring" cx="100" cy="100" r="90"></circle>
-<circle class="enfoque-section__orbit-ring enfoque-section__orbit-ring--dashed" cx="100" cy="100" r="64"></circle>
-<circle class="enfoque-section__orbit-dot" r="3.5">
-<animatemotion dur="16s" path="M 100 10 A 90 90 0 1 1 100 190 A 90 90 0 1 1 100 10" repeatcount="indefinite"></animatemotion>
-</circle>
-<circle class="enfoque-section__orbit-dot enfoque-section__orbit-dot--sm" r="2">
-<animatemotion dur="11s" path="M 100 36 A 64 64 0 1 0 100 164 A 64 64 0 1 0 100 36" repeatcount="indefinite"></animatemotion>
-</circle>
-</svg>
-<svg aria-hidden="true" class="enfoque-section__orbit enfoque-section__orbit--secondary" viewbox="0 0 200 200">
-<circle class="enfoque-section__orbit-ring" cx="100" cy="100" r="90"></circle>
-<circle class="enfoque-section__orbit-dot" r="3">
-<animatemotion dur="12s" path="M 100 10 A 90 90 0 1 1 100 190 A 90 90 0 1 1 100 10" repeatcount="indefinite"></animatemotion>
-</circle>
-</svg>
-<div aria-hidden="true" class="enfoque-section__stars">
-<span class="enfoque-section__star" style="--x:38%; --y:14%; --size:2px; --dur:4.5s; --delay:0s;"></span>
-<span class="enfoque-section__star" style="--x:52%; --y:78%; --size:3px; --dur:5.5s; --delay:1.4s;"></span>
-<span class="enfoque-section__star enfoque-section__star--gold" style="--x:64%; --y:22%; --size:3px; --dur:6s; --delay:0.6s;"></span>
-<span class="enfoque-section__star" style="--x:74%; --y:62%; --size:2px; --dur:4s; --delay:2.2s;"></span>
-<span class="enfoque-section__star" style="--x:88%; --y:18%; --size:2px; --dur:5s; --delay:0.9s;"></span>
-<span class="enfoque-section__star enfoque-section__star--gold" style="--x:94%; --y:70%; --size:2px; --dur:4.8s; --delay:1.8s;"></span>
-<span class="enfoque-section__star" style="--x:46%; --y:48%; --size:1.5px; --dur:3.6s; --delay:2.6s;"></span>
-</div>
-</section>
-<!-- ═══ PROCESO ═══ -->
-<section class="section proceso-section">
-<div aria-hidden="true" class="proceso-section__decor">
-<img alt="" decoding="async" height="226" loading="lazy" src="/assets/rocks/rock-01.webp" width="270"/>
-</div>
-<div class="container">
-<p class="eyebrow" data-i18n="process.eyebrow">HOW I WORK</p>
-<h2 class="section__title" data-i18n="process.title">From brief to delivery<span class="hero__dot">.</span></h2>
-<div class="proceso-timeline">
-<div class="proceso-step scroll-reveal">
-<span class="proceso-step__num">01</span>
-<div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
-<h3 class="proceso-step__title" data-i18n="process.01.title">We talk</h3>
-<p class="proceso-step__text" data-i18n="process.01.text">A 20-minute call or a short form. You tell me what you need, who your customer is, and what you want to achieve. No decks, no endless meetings — that's enough to know if we're a good fit.</p>
-</div>
-<div class="proceso-step scroll-reveal" style="--reveal-delay: 0.08s">
-<span class="proceso-step__num">02</span>
-<div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
-<h3 class="proceso-step__title" data-i18n="process.02.title">Proposal in 48 h</h3>
-<p class="proceso-step__text" data-i18n="process.02.text">Within two days you receive a document with the exact scope: what's included, what isn't, delivery timeline, and price. We review it together and adjust anything before signing.</p>
-</div>
-<div class="proceso-step scroll-reveal" style="--reveal-delay: 0.16s">
-<span class="proceso-step__num">03</span>
-<div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
-<h3 class="proceso-step__title" data-i18n="process.03.title">Production with visibility</h3>
-<p class="proceso-step__text" data-i18n="process.03.text">I don't disappear for two weeks and show up with something finished. I work in partial deliveries so you can see real progress, give feedback in time, and the final result is never a surprise.</p>
-</div>
-<div class="proceso-step scroll-reveal" style="--reveal-delay: 0.24s">
-<span class="proceso-step__num">04</span>
-<div class="proceso-step__track"><span class="proceso-step__dot"></span></div>
-<h3 class="proceso-step__title" data-i18n="process.04.title">Ready to use</h3>
-<p class="proceso-step__text" data-i18n="process.04.text">Organized files, clean code, and everything you need to take the project from there. No dependency on me. And if you need a tweak in the first 7 days, we handle it at no extra cost.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- ═══ PROYECTOS ═══ -->
-<!-- ═══ TRABAJO ═══ -->
-<section class="section trabajo-section" id="trabajo">
-<svg aria-hidden="true" class="trabajo-section__orbit-tl" viewbox="0 0 200 200">
-<circle class="trabajo-section__orbit-ring" cx="100" cy="100" r="92"></circle>
-<circle class="trabajo-section__orbit-ring trabajo-section__orbit-ring--dashed" cx="100" cy="100" r="68"></circle>
-<circle class="trabajo-section__orbit-dot" cx="100" cy="8" r="3"></circle>
-<circle class="trabajo-section__orbit-dot trabajo-section__orbit-dot--sm" cx="16" cy="116" r="2"></circle>
-</svg>
-<div aria-hidden="true" class="trabajo-section__rock">
-<img alt="" decoding="async" height="156" loading="lazy" src="/assets/rocks/rock-04.webp" width="400"/>
-</div>
-<div class="container">
-<div class="trabajo-header">
-<div class="trabajo-header__text">
-<p class="eyebrow" data-i18n="work.eyebrow">SELECTED WORK</p>
-<h2 class="trabajo-header__title" data-i18n="work.title">Projects that <em>speak</em> for themselves.</h2>
-<p class="trabajo-header__lede" data-i18n="work.lede">Design, strategy, and visual execution for brands that want to stand out.</p>
-</div>
-<!-- INICIO: Sector dental — filtros traducidos al inglés + filtro nuevo -->
-
-</div>
-<div class="pc-grid">
-          <!-- @auto:inicio: tarjetas generadas desde content/proyectos/ (no editar aquí) -->
-          <!-- /@auto:inicio -->
-        </div>
-        <p class="pc-more"><!-- @auto:inicio-mas --><!-- /@auto:inicio-mas --></p>
-</div>
-</section>
-<!-- ═══ SOBRE MÍ ═══ -->
-<section class="section about-section" id="sobre-mi">
-<svg aria-hidden="true" class="about-header__orbit" viewbox="0 0 200 200">
-<circle class="about-header__orbit-ring" cx="80" cy="80" r="78"></circle>
-<circle class="about-header__orbit-ring about-header__orbit-ring--dashed" cx="80" cy="80" r="50"></circle>
-<circle class="about-header__orbit-center" cx="80" cy="80" r="3"></circle>
-<circle class="about-header__orbit-dot" r="2.5">
-<animatemotion dur="22s" path="M 80 2 A 78 78 0 1 1 80 158 A 78 78 0 1 1 80 2" repeatcount="indefinite"></animatemotion>
-</circle>
-</svg>
-<div aria-hidden="true" class="about-section__rock about-section__rock--l">
-<img alt="" decoding="async" height="156" loading="lazy" src="/assets/rocks/rock-05.webp" width="380"/>
-</div>
-<div aria-hidden="true" class="about-section__rock about-section__rock--r">
-<img alt="" decoding="async" height="300" loading="lazy" src="/assets/rocks/rock-02.webp" width="320"/>
-</div>
-<div aria-hidden="true" class="about-section__stars">
-<span class="about-section__star" style="--x:28%; --y:8%; --size:2px; --dur:4.5s; --delay:0s;"></span>
-<span class="about-section__star about-section__star--gold" style="--x:42%; --y:4%; --size:3px; --dur:5.5s; --delay:1.2s;"></span>
-<span class="about-section__star" style="--x:18%; --y:32%; --size:2px; --dur:4s; --delay:2s;"></span>
-<span class="about-section__star" style="--x:52%; --y:14%; --size:1.5px; --dur:3.6s; --delay:0.6s;"></span>
-<span class="about-section__star about-section__star--gold" style="--x:8%; --y:42%; --size:2px; --dur:5s; --delay:1.8s;"></span>
-</div>
-<div class="container">
-<p class="eyebrow" data-i18n="about.eyebrow">ABOUT ME</p>
-<h2 class="about-header__title" data-i18n="about.title">The person<br/><em>behind</em> the work<span class="hero__dot">.</span></h2>
-<div aria-hidden="true" class="about-header__line"><span class="about-header__line-dot"></span></div>
-<div class="about__grid">
-<div class="about__primary scroll-reveal">
-<div class="about__bio">
-<p data-i18n="about.bio.01">If you're looking for someone who can <strong class="about__hl">design</strong>, build <em>and</em> understand the strategy behind it — <strong class="about__hl">without bouncing you between teams</strong> or asking you to translate what you need — you're in the right place.</p>
-<p data-i18n="about.bio.02">For 2+ years I've managed everything digital at <strong class="about__hl-gold">Orbidental</strong>: e-commerce, <strong class="about__hl-gold">Meta</strong> and <strong class="about__hl-gold">Google Ads</strong>, product photography, and design. Not theory — real environments, real metrics.</p>
-</div>
-<div class="about__skills">
-<div class="tech-grid">
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-<span>HTML / CSS</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg>
-<span>JavaScript</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M3 9h18M9 21V9"></path></svg>
-<span>WordPress</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
-<span data-i18n="tag.seo">Technical SEO</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-<span>Meta Ads</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-<span>Google Ads</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-<span data-i18n="tag.fotografia">Photography</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><path d="M8 21h8M12 17v4"></path></svg>
-<span>Photoshop</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"></path></svg>
-<span data-i18n="tag.illustrator">Illustrator</span>
-</div>
-<div class="tech-chip">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-<span data-i18n="tag.uiux">UI / UX</span>
-</div>
-</div>
-</div>
-</div>
-<div class="about__logros scroll-reveal" style="--reveal-delay: 0.1s">
-<div class="logros-grid logros-timeline">
-<div class="logro-card">
-<span class="logro-numero">97</span>
-<div class="logro-text">
-<span class="logro-label" data-i18n="about.stat.01.label">PageSpeed Score</span>
-<span class="logro-desc" data-i18n="about.stat.01.desc">E-commerce migrated from 40 to 97 on a live production site</span>
-</div>
-<div class="logro-icon">
-<svg aria-hidden="true" class="logro-icon__ring" viewbox="0 0 56 56"><circle cx="28" cy="28" r="26"></circle></svg>
-<svg class="logro-icon__glyph" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<path d="M4 18a8 8 0 1 1 16 0"></path><path d="M12 18l3-3.5"></path><circle cx="12" cy="18" fill="currentColor" r="0.9" stroke="none"></circle>
-</svg>
-</div>
-</div>
-<div class="logro-card">
-<span class="logro-numero">3K+</span>
-<div class="logro-text">
-<span class="logro-label" data-i18n="about.stat.02.label">Products photographed</span>
-<span class="logro-desc" data-i18n="about.stat.02.desc">Full catalog for Orbidental's e-commerce</span>
-</div>
-<div class="logro-icon">
-<svg aria-hidden="true" class="logro-icon__ring" viewbox="0 0 56 56"><circle cx="28" cy="28" r="26"></circle></svg>
-<svg class="logro-icon__glyph" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle>
-</svg>
-</div>
-</div>
-<div class="logro-card">
-<span class="logro-numero">5</span>
-<div class="logro-text">
-<span class="logro-label" data-i18n="about.stat.03.label">Branding projects</span>
-<span class="logro-desc" data-i18n="about.stat.03.desc">Visual identities built from scratch</span>
-</div>
-<div class="logro-icon">
-<svg aria-hidden="true" class="logro-icon__ring" viewbox="0 0 56 56"><circle cx="28" cy="28" r="26"></circle></svg>
-<svg class="logro-icon__glyph" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-</svg>
-</div>
-</div>
-<div class="logro-card">
-<span class="logro-numero">100%</span>
-<div class="logro-text">
-<span class="logro-label" data-i18n="about.stat.04.label">Projects delivered</span>
-<span class="logro-desc" data-i18n="about.stat.04.desc">On time, direct with the client, no middlemen</span>
-</div>
-<div class="logro-icon">
-<svg aria-hidden="true" class="logro-icon__ring" viewbox="0 0 56 56"><circle cx="28" cy="28" r="26"></circle></svg>
-<svg class="logro-icon__glyph" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<circle cx="12" cy="12" r="9"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path>
-</svg>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-        <!-- ═══ CREDENTIALS ═══ -->
-      <div class="crd scroll-reveal">
-
-        <div class="crd__head">
-          <h2 class="crd__title" data-i18n="crd.title">Credentials you can <em>verify.</em></h2>
-          <p class="crd__lead" data-i18n="crd.lead">Official certifications and technical training backed by Google Skillshop and Platzi.</p>
-        </div>
-
-        <div class="crd__index">
-          <span class="crd__count"><b>06</b><span data-i18n="crd.count">Verifiable credentials</span></span>
-          <span class="crd__chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FBBC04" d="M3.7 16.9 9.4 7a2.1 2.1 0 1 1 3.7 2.1l-5.7 9.9a2.1 2.1 0 0 1-3.7-2.1Z"/><path fill="#4285F4" d="M20.3 16.9 14.6 7a2.1 2.1 0 0 0-3.7 2.1l5.7 9.9a2.1 2.1 0 0 0 3.7-2.1Z"/><circle cx="5.6" cy="18" r="2.4" fill="#34A853"/></svg><span data-i18n="crd.chip.ads">Google Ads</span></span>
-          <span class="crd__chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="13.5" width="4.4" height="7.5" rx="2.2" fill="#F9AB00"/><rect x="9.8" y="9" width="4.4" height="12" rx="2.2" fill="#F9AB00"/><rect x="16.6" y="3" width="4.4" height="18" rx="2.2" fill="#E37400"/></svg><span data-i18n="crd.chip.ga">Analytics</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 21 12l-9 9-9-9z"/></svg><span data-i18n="crd.chip.gwd">Web Designer</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span data-i18n="crd.chip.ia">AI</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/></svg><span data-i18n="crd.chip.code">Programming</span></span>
-          <span class="crd__chip crd__chip--gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 21 12l-9 9-9-9z"/></svg><span data-i18n="crd.chip.platzi">Platzi</span></span>
-        </div>
-
-        <div class="crd__set">
-          <p class="crd__group crd__group--star" data-i18n="crd.g.featured">Featured</p>
-
-          <article class="crd-card crd-card--hero">
-            <div class="crd-hero">
-              <div class="crd-hero__main">
-                <div class="crd-hero__seal">
-                  <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192457956" alt="Official Google Analytics Certification badge" data-i18n-alt="crd.ga.alt" width="92" height="92" loading="lazy" decoding="async" />
-                </div>
-                <div class="crd-hero__body">
-                  <span class="crd-card__issuer">Google · Skillshop</span>
-                  <h3 class="crd-card__title" data-i18n="crd.ga.title">Google Analytics Certification</h3>
-                  <p class="crd-card__desc" data-i18n="crd.ga.desc">Measurement, analysis and data-driven decision making.</p>
-                </div>
-                <div class="crd-hero__cta">
-                  <span class="crd-hero__flag" data-i18n="crd.ga.flag">Just earned</span>
-                  <a href="https://skillshop.credential.net/38e9b8c5-e101-4df1-bde3-b048f2c18c5a" target="_blank" rel="noopener" class="crd-card__btn crd-hero__btn"><span data-i18n="crd.verify">Verify credential</span><span aria-hidden="true">↗</span></a>
-                </div>
-                <div class="crd-hero__meta">
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-i18n="crd.ga.issued">Issued Aug 2026</span></span>
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 8.2-7 9-4-.8-7-4.6-7-9V6l7-3z"/><path d="M9.3 12.2l1.9 1.9 3.5-3.7"/></svg><span data-i18n="crd.ga.valid">Valid through Aug 2027</span></span>
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M6.5 10h4M6.5 14h6M15 10h3M15 14h3"/></svg><span data-i18n="crd.ga.id">Credential ID: 179835276</span></span>
-                </div>
-              </div>
-              <aside class="crd-hero__aside">
-                <span data-i18n="crd.ga.badge">Official badge</span>
-                <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192457956" alt="" width="112" height="112" loading="lazy" decoding="async" />
-              </aside>
+        <div class="hm-portrait">
+          <div class="hm-in">
+            <div class="hm-layer" data-depth="1" data-tilt>
+              <img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png" srcset="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_360/v1781396255/Escultura_de_Alexander_ykbpww.png 360w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_520/v1781396255/Escultura_de_Alexander_ykbpww.png 520w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_720/v1781396255/Escultura_de_Alexander_ykbpww.png 720w, https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1000/v1781396255/Escultura_de_Alexander_ykbpww.png 1000w" sizes="(max-width: 1023px) min(74vw, 420px), min(33vw, 500px)" alt="Alexander Caro, sculptural portrait emerging from fractured rock" width="1024" height="1536" fetchpriority="high" decoding="async">
             </div>
-          </article>
-        </div>
-
-        <div class="crd__set">
-          <p class="crd__group" data-i18n="crd.g.google">Google Skills</p>
-          <div class="crd__grid">
-      <article class="crd-card">
-        <div class="crd-card__badge"><img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/192113056" alt="Google Ads AI-Powered Performance badge" data-i18n-alt="crd.ads.alt" width="52" height="52" loading="lazy" decoding="async" /></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title" data-i18n="crd.ads.title">Google Ads<br>AI-Powered Performance</h3>
-          <p class="crd-card__desc" data-i18n="crd.ads.desc">Performance Max, automation and AI applied to B2B acquisition.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Issued Aug 2026</span><span data-i18n="crd.valid">Valid through Aug 2027</span></div>
-        <a href="https://skillshop.credential.net/8356725e-7cc6-43d8-b13e-c0fc7bd12504" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title" data-i18n="crd.gwd1.title">Google Web Designer<br>Interactive creatives</h3>
-          <p class="crd-card__desc" data-i18n="crd.gwd1.desc">Animated HTML5 banners, dynamic feeds and AMPHTML ads.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Issued Aug 2026</span><span data-i18n="crd.valid">Valid through Aug 2027</span></div>
-        <a href="https://skillshop.credential.net/7b73e741-2f24-4811-9e6c-60e21cfe66e6" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5 7 22l5-2.5L17 22l-1.5-7.5"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Google · Skillshop</span>
-          <h3 class="crd-card__title" data-i18n="crd.gwd2.title">Google Web Designer<br>High impact</h3>
-          <p class="crd-card__desc" data-i18n="crd.gwd2.desc">High-impact display creatives optimised for Google Ads.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Issued Aug 2026</span><span data-i18n="crd.valid">Valid through Aug 2027</span></div>
-        <a href="https://skillshop.credential.net/16c75255-a556-4945-9fae-7ca3b397344a" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
           </div>
         </div>
 
-        <div class="crd__set">
-          <p class="crd__group" data-i18n="crd.g.tech">Technical training</p>
-          <div class="crd__grid">
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><rect x="10.5" y="10.5" width="3" height="3"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Platzi</span>
-          <h3 class="crd-card__title" data-i18n="crd.ia.title">Introduction to<br>Artificial Intelligence</h3>
-          <p class="crd-card__desc" data-i18n="crd.ia.desc">Applied AI fundamentals, generative models and effective prompting.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Issued Aug 2026</span></div>
-        <a href="https://platzi.com/p/hosoyalexander/curso/13690-intro-ai/diploma/detalle/" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
-      <article class="crd-card">
-        <div class="crd-card__badge crd-card__badge--glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/><line x1="13.5" y1="4" x2="10.5" y2="20"/></svg></div>
-        <div class="crd-card__body">
-          <span class="crd-card__issuer">Platzi</span>
-          <h3 class="crd-card__title" data-i18n="crd.prog.title">Basic Programming</h3>
-          <p class="crd-card__desc" data-i18n="crd.prog.desc">Programming logic, control structures, functions and algorithms.</p>
-        </div>
-        <div class="crd-card__meta"><span data-i18n="crd.issued">Issued Aug 2026</span></div>
-        <a href="https://platzi.com/p/hosoyalexander/curso/13100-programacion-basica/diploma/detalle/" target="_blank" rel="noopener" class="crd-card__btn"><span data-i18n="crd.verify">Verify credential</span><span aria-hidden="true">↗</span></a>
-      </article>
+        <div class="hm-rock hm-rock--near hm-rock--c hm-layer" data-depth="2.2" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-b-520.webp" alt="" width="520" height="520" decoding="async"></div>
+        <div class="hm-rock hm-rock--near hm-rock--d hm-layer" data-depth="1.8" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-a-520.webp" alt="" width="520" height="284" decoding="async"></div>
+        <div class="hm-rock hm-rock--near hm-rock--e hm-layer" data-depth="2.6" data-float aria-hidden="true"><img src="/assets/rocks/gold-rock-a-520.webp" alt="" width="520" height="284" decoding="async"></div>
+
+        <div class="hm-intro">
+          <span class="hm-status"><i aria-hidden="true"></i>Available for new projects</span>
+          <p class="hm-tag">Design and code, from one pair of hands.</p>
+          <p class="hm-desc">Visual identity, content and websites for brands that want to look serious and sell more. I do all of it myself, from the first sketch to the last line of code.</p>
+          <div class="hm-actions">
+            <a class="hm-btn hm-btn--gold" href="#trabajo">See my work</a>
+            <a class="hm-btn hm-btn--ghost" href="https://wa.me/573024457653?text=Hi%20Alexander%21%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20a%20quote%20for%20a%20project.%20Can%20we%20talk%3F" target="_blank" rel="noopener noreferrer" id="whatsappHeroLink"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Message me on WhatsApp</a>
           </div>
+          <p class="hm-fine">Projects from 500 USD. A clear proposal within 48 hours.</p>
         </div>
 
+        <dl class="hm-proof">
+          <div><dt>40 → 97</dt><dd>Orbidental's PageSpeed after rebuilding its online store</dd></div>
+          <div><dt>179K</dt><dd>views in 4 months for two dental-industry brands</dd></div>
+          <div><dt><!-- @auto:trabajo-n --><!-- /@auto:trabajo-n --></dt><dd>identity, web and content projects, for Bogotá and abroad</dd></div>
+        </dl>
       </div>
-</div>
-</section>
-<!-- ═══ TESTIMONIOS ═══ -->
-<section class="section testimonials" id="testimonios">
-<svg aria-hidden="true" class="testimonials-section__orbit" viewbox="0 0 320 320">
-<circle class="testimonials-section__orbit-ring" cx="160" cy="160" r="155"></circle>
-<circle class="testimonials-section__orbit-ring testimonials-section__orbit-ring--dashed" cx="160" cy="160" r="106"></circle>
-<circle class="testimonials-section__orbit-glow" cx="160" cy="160" r="4"></circle>
-<circle class="testimonials-section__orbit-dot" cx="42" cy="56" r="2"></circle>
-<circle class="testimonials-section__orbit-dot" cx="292" cy="46" r="1.5"></circle>
-<circle class="testimonials-section__orbit-dot" cx="70" cy="284" r="1.5"></circle>
-</svg>
-<div class="container">
-<div class="testimonials-header">
-<div class="testimonials-header__text">
-<p class="eyebrow" data-i18n="testimonials.eyebrow">CLIENTS</p>
-<h2 class="testimonials-header__title" data-i18n="testimonials.title">What they say<br/><em>about</em> my work<span class="hero__dot">.</span></h2>
-</div>
-<div class="testimonials-header__note">
-<span aria-hidden="true" class="testimonials-header__note-line"></span>
-<p data-i18n="testimonials.note">Collaborations that become long-term relationships.</p>
-</div>
-</div>
-<div class="testimonials__row">
-<button aria-label="Anterior" class="testimonials__btn testimonials__btn--prev" id="testimonialsPrev">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
-<path d="M19 12H5M12 5l-7 7 7 7"></path>
-</svg>
-</button>
-<div class="testimonials__track-wrapper">
-<div class="testimonials__track" id="testimonialsTrack">
-<article class="testimonial-card">
-<div aria-hidden="true" class="testimonial-card__visual">
-<img alt="" decoding="async" loading="lazy" src="/assets/rocks/enfoque-rock.webp"/>
-<div class="testimonial-card__sparks">
-<span class="spark" style="--x:60%; --y:22%; --dur:3.4s; --delay:0.4s;"></span>
-<span class="spark" style="--x:82%; --y:40%; --dur:3s; --delay:1.2s;"></span>
-<span class="spark" style="--x:50%; --y:60%; --dur:3.8s; --delay:0s;"></span>
-<span class="spark" style="--x:90%; --y:65%; --dur:2.8s; --delay:1.6s;"></span>
-<span class="spark" style="--x:72%; --y:80%; --dur:3.6s; --delay:0.9s;"></span>
-<span class="spark" style="--x:42%; --y:35%; --dur:4s; --delay:2s;"></span>
-</div>
-</div>
-<div class="testimonial-card__quote">"</div>
-<p class="testimonial-card__text" data-i18n="testimonials.02.text">The result exceeded our expectations. Alexander understood exactly what we wanted: the feel of a jungle, but unmistakably a nightclub. Every piece reflects the name and energy of the brand.</p>
-<div class="testimonial-card__divider"></div>
-<div class="testimonial-card__footer">
-<div class="testimonial-card__avatar"><img alt="Mayra Castaño" decoding="async" height="40" loading="lazy" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_80,h_80,c_fill,g_face,q_auto,f_auto/v1782219347/Mayra_kybufg.webp" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" width="40"/></div>
-<div class="testimonial-card__info">
-<span class="testimonial-card__name">Mayra Castaño</span>
-<span class="testimonial-card__cargo">Gerente · <a class="testimonial-card__empresa" href="/en/trabajo/la-jungla-club/">La Jungla Club</a></span>
-<span class="testimonial-card__role" data-i18n="tag.role.jungla">Nightclub · Entertainment · Bogotá</span>
-</div>
-</div>
-</article>
-<article class="testimonial-card">
-<div aria-hidden="true" class="testimonial-card__visual">
-<img alt="" decoding="async" loading="lazy" src="/assets/rocks/enfoque-rock.webp"/>
-<div class="testimonial-card__sparks">
-<span class="spark" style="--x:58%; --y:20%; --dur:3.2s; --delay:1s;"></span>
-<span class="spark" style="--x:85%; --y:38%; --dur:3.8s; --delay:0.2s;"></span>
-<span class="spark" style="--x:48%; --y:58%; --dur:3s; --delay:1.6s;"></span>
-<span class="spark" style="--x:92%; --y:62%; --dur:3.6s; --delay:0.6s;"></span>
-<span class="spark" style="--x:68%; --y:82%; --dur:2.8s; --delay:2.2s;"></span>
-<span class="spark" style="--x:40%; --y:32%; --dur:4s; --delay:1.4s;"></span>
-</div>
-</div>
-<div class="testimonial-card__quote">"</div>
-<p class="testimonial-card__text" data-i18n="testimonials.03.text">We couldn't be happier with the result. We wanted something urban, with that graffiti edge but applied to streetwear — and Alexander got it from the very first conversation. The identity came out exactly as we imagined it.</p>
-<div class="testimonial-card__divider"></div>
-<div class="testimonial-card__footer">
-<div class="testimonial-card__avatar"><img alt="Steven Mesa" decoding="async" height="40" loading="lazy" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_80,h_80,c_fill,g_face,q_auto,f_auto/v1782219347/Steven-Mesa_wr3edi.webp" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" width="40"/></div>
-<div class="testimonial-card__info">
-<span class="testimonial-card__name">Steven Mesa</span>
-<span class="testimonial-card__cargo">Fundador · <a class="testimonial-card__empresa" href="/en/trabajo/rebel-street/">Rebel Street</a></span>
-<span class="testimonial-card__role" data-i18n="tag.role.rebel">Fashion · Urban streetwear · Bogotá</span>
-</div>
-</div>
-</article>
-</div>
-</div>
-<button aria-label="Siguiente" class="testimonials__btn testimonials__btn--next" id="testimonialsNext">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
-<path d="M5 12h14M12 5l7 7-7 7"></path>
-</svg>
-</button>
-</div>
-<!-- Paginación numerada -->
-<div class="testimonials__dots" id="testimonialsDots">
-<button aria-label="Testimonio 1" class="testimonials__dot testimonials__dot--active" data-index="0">01</button>
-<span aria-hidden="true" class="testimonials__dot-sep"></span>
-<button aria-label="Testimonio 2" class="testimonials__dot" data-index="1">02</button>
-</div>
-<!-- Marcas que han confiado -->
-<div class="trusted-by">
-<p class="trusted-by__label" data-i18n="trusted.label">Brands that<br/>have trusted me</p>
-<div class="trusted-by__logos">
-<!-- TODO: reemplazar por <img> cuando Alexander suba los logos restantes -->
-<span class="trusted-by__logo">La Jungla Club</span>
-<img alt="Orbidental" class="trusted-by__logo-img" decoding="async" loading="lazy" src="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto/f_auto/v1781445720/Orbidental_jy5cgn.png"/>
-<span class="trusted-by__logo">Rebel Street</span>
-</div>
-</div>
-</div>
-</section>
-<!-- ═══ FAQ ═══ -->
-<section class="section faq-section" id="faq">
-<svg aria-hidden="true" class="faq-defs" focusable="false">
-<defs>
-<symbol id="goldPlanet" viewbox="0 0 200 200">
-<radialgradient cx="35%" cy="32%" id="goldPlanetBody" r="75%">
-<stop offset="0%" stop-color="#6b5128"></stop>
-<stop offset="55%" stop-color="#2a1f10"></stop>
-<stop offset="100%" stop-color="#120e08"></stop>
-</radialgradient>
-<clippath id="goldPlanetClip"><circle cx="100" cy="100" r="85"></circle></clippath>
-<circle cx="100" cy="100" fill="url(#goldPlanetBody)" r="85"></circle>
-<g clip-path="url(#goldPlanetClip)" fill="none" opacity="0.4" stroke="#cdb78e" stroke-width="0.6">
-<ellipse cx="100" cy="100" rx="85" ry="55" stroke-dasharray="1 3"></ellipse>
-<ellipse cx="100" cy="100" rx="85" ry="25" stroke-dasharray="1 3"></ellipse>
-<ellipse cx="100" cy="100" rx="55" ry="85" stroke-dasharray="1 3"></ellipse>
-<ellipse cx="100" cy="100" rx="25" ry="85" stroke-dasharray="1 3"></ellipse>
-<ellipse cx="100" cy="100" rx="85" ry="42" stroke-dasharray="1 3" transform="rotate(35 100 100)"></ellipse>
-</g>
-<circle cx="100" cy="100" fill="none" opacity="0.5" r="85" stroke="#cdb78e" stroke-width="0.75"></circle>
-<circle cx="64" cy="74" fill="#f4efe6" r="2"></circle>
-<circle cx="135" cy="112" fill="#cdb78e" r="1.5"></circle>
-<circle cx="102" cy="152" fill="#f4efe6" r="1.5"></circle>
-<circle cx="80" cy="44" fill="#cdb78e" opacity="0.45" r="7"></circle>
-<circle cx="80" cy="44" fill="#f4efe6" r="3"></circle>
-</symbol>
-</defs>
-</svg>
-<div class="container">
-<div class="faq-grid">
-<div class="faq-aside">
-<p class="eyebrow" data-i18n="faq.eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-<h2 class="about-header__title" data-i18n="faq.title">Things people<br/><em>always ask</em><span class="hero__dot">.</span></h2>
-<div aria-hidden="true" class="about-header__line"><span class="about-header__line-dot"></span></div>
-<p class="faq-aside__lede" data-i18n="faq.lede">Clear answers so you can make confident decisions and we can work with full transparency.</p>
-<svg aria-hidden="true" class="faq-section__orbit" viewbox="0 0 400 400">
-<circle class="faq-section__orbit-ring" cx="200" cy="200" r="195"></circle>
-<circle class="faq-section__orbit-ring" cx="200" cy="200" r="140"></circle>
-<circle class="faq-section__orbit-ring faq-section__orbit-ring--dashed" cx="200" cy="200" r="85"></circle>
-<circle class="faq-section__orbit-glow" cx="200" cy="200" r="40"></circle>
-<circle class="faq-section__orbit-sun" cx="200" cy="200" r="13"></circle>
-<circle class="faq-section__orbit-dot" cx="200" cy="6" r="3"></circle>
-<circle class="faq-section__orbit-dot" cx="348" cy="118" r="2"></circle>
-<circle class="faq-section__orbit-dot" cx="80" cy="348" r="2"></circle>
-<circle class="faq-section__orbit-dot" cx="322" cy="348" r="2"></circle>
-</svg>
-<div aria-hidden="true" class="faq-section__stars">
-<span class="faq-section__star faq-section__star--gold" style="--x:40px; --y:320px; --size:2px; --dur:4.5s; --delay:0s;"></span>
-<span class="faq-section__star faq-section__star--gold" style="--x:340px; --y:300px; --size:2px; --dur:5s; --delay:1.2s;"></span>
-<span class="faq-section__star" style="--x:200px; --y:580px; --size:3px; --dur:6s; --delay:0.4s;"></span>
-<span class="faq-section__star faq-section__star--gold" style="--x:330px; --y:420px; --size:2px; --dur:4s; --delay:2s;"></span>
-<span class="faq-section__star faq-section__star--gold" style="--x:60px; --y:560px; --size:1.5px; --dur:5.5s; --delay:0.8s;"></span>
-<span class="faq-section__star" style="--x:280px; --y:600px; --size:2px; --dur:4.8s; --delay:1.6s;"></span>
-<span class="faq-section__star faq-section__star--gold" style="--x:180px; --y:610px; --size:3px; --dur:6.5s; --delay:0.2s;"></span>
-<span class="faq-section__star faq-section__star--gold" style="--x:380px; --y:480px; --size:2px; --dur:4.2s; --delay:2.4s;"></span>
-<span class="faq-section__star" style="--x:10px; --y:440px; --size:1.5px; --dur:5s; --delay:1s;"></span>
-</div>
-<div aria-hidden="true" class="faq-section__rock">
-<img alt="" decoding="async" height="300" loading="lazy" src="/assets/rocks/rock-02.webp" width="320"/>
-</div>
-</div>
-<div class="faq-list">
-<details class="faq-item scroll-reveal">
-<summary class="faq-item__question">
-<span class="faq-item__num">01</span>
-<span aria-hidden="true" class="faq-item__divider"></span>
-<span class="faq-item__text" data-i18n="faq.01.q">Do you work with clients outside Colombia?</span>
-<span aria-hidden="true" class="faq-item__icon"></span>
-</summary>
-<div class="faq-item__answer">
-<p data-i18n="faq.01.a">Yes — I work 100% remotely with clients in several countries. All communication is written — WhatsApp or email — so every agreement, update and delivery stays documented. I'm in Bogotá (UTC-5) and I adapt to your time zone.</p>
-<svg aria-hidden="true" class="faq-item__planet"><use href="#goldPlanet"></use></svg>
-</div>
-</details>
-<details class="faq-item scroll-reveal" style="--reveal-delay: 0.05s">
-<summary class="faq-item__question">
-<span class="faq-item__num">02</span>
-<span aria-hidden="true" class="faq-item__divider"></span>
-<span class="faq-item__text" data-i18n="faq.02.q">How does payment work?</span>
-<span aria-hidden="true" class="faq-item__icon"></span>
-</summary>
-<div class="faq-item__answer">
-<p data-i18n="faq.02.a">I work with a 50% deposit to kick things off and the remaining 50% on delivery. For larger projects we split it into milestones. For international clients I accept PayPal or Wise.</p>
-<svg aria-hidden="true" class="faq-item__planet"><use href="#goldPlanet"></use></svg>
-</div>
-</details>
-<details class="faq-item scroll-reveal" style="--reveal-delay: 0.1s">
-<summary class="faq-item__question">
-<span class="faq-item__num">03</span>
-<span aria-hidden="true" class="faq-item__divider"></span>
-<span class="faq-item__text" data-i18n="faq.03.q">How many revisions are included?</span>
-<span aria-hidden="true" class="faq-item__icon"></span>
-</summary>
-<div class="faq-item__answer">
-<p data-i18n="faq.03.a">It depends on the service, but generally I include two rounds of revisions within the agreed scope. If you need more after that, we price it separately — no surprises. What matters is that the final result is right.</p>
-<svg aria-hidden="true" class="faq-item__planet"><use href="#goldPlanet"></use></svg>
-</div>
-</details>
-<details class="faq-item scroll-reveal" style="--reveal-delay: 0.15s">
-<summary class="faq-item__question">
-<span class="faq-item__num">04</span>
-<span aria-hidden="true" class="faq-item__divider"></span>
-<span class="faq-item__text" data-i18n="faq.04.q">What time zone do you work in?</span>
-<span aria-hidden="true" class="faq-item__icon"></span>
-</summary>
-<div class="faq-item__answer">
-<p data-i18n="faq.04.a">I'm in Bogotá, Colombia — UTC-5, no daylight saving. I'm usually available between 8am and 8pm Colombian time, but I'm flexible when we need to schedule a call across time zones.</p>
-<svg aria-hidden="true" class="faq-item__planet"><use href="#goldPlanet"></use></svg>
-</div>
-</details>
-<details class="faq-item scroll-reveal" style="--reveal-delay: 0.2s">
-<summary class="faq-item__question">
-<span class="faq-item__num">05</span>
-<span aria-hidden="true" class="faq-item__divider"></span>
-<span class="faq-item__text" data-i18n="faq.05.q">Do you use contracts?</span>
-<span aria-hidden="true" class="faq-item__icon"></span>
-</summary>
-<div class="faq-item__answer">
-<p data-i18n="faq.05.a">Always. Before starting any project we sign an agreement that defines the scope, timeline, price, and delivery terms. It protects both of us and prevents misunderstandings down the road.</p>
-<svg aria-hidden="true" class="faq-item__planet"><use href="#goldPlanet"></use></svg>
-</div>
-</details>
-<details class="faq-item scroll-reveal" style="--reveal-delay: 0.25s">
-<summary class="faq-item__question">
-<span class="faq-item__num">06</span>
-<span aria-hidden="true" class="faq-item__divider"></span>
-<span class="faq-item__text" data-i18n="faq.06.q">What if I need changes after delivery?</span>
-<span aria-hidden="true" class="faq-item__icon"></span>
-</summary>
-<div class="faq-item__answer">
-<p data-i18n="faq.06.a">Minor changes within the original scope are covered at no extra cost if you request them within the first 7 days. After that, or for significant direction changes, we price them separately — always with a clear quote before touching anything.</p>
-<svg aria-hidden="true" class="faq-item__planet"><use href="#goldPlanet"></use></svg>
-</div>
-</details>
-<details class="faq-item scroll-reveal" style="--reveal-delay: 0.3s">
-<summary class="faq-item__question">
-<span class="faq-item__num">07</span>
-<span aria-hidden="true" class="faq-item__divider"></span>
-<span class="faq-item__text" data-i18n="faq.07.q">How much does a project cost?</span>
-<span aria-hidden="true" class="faq-item__icon"></span>
-</summary>
-<div class="faq-item__answer">
-<p data-i18n="faq.07.a">Projects start at $500 USD for an initial branding or basic-website scope; most land between $500 and $2,500 USD depending on scope. Before we start you get a proposal with a fixed price, timeline and deliverables — no surprises, no hidden costs.</p>
-<svg aria-hidden="true" class="faq-item__planet"><use href="#goldPlanet"></use></svg>
-</div>
-</details>
-<details class="faq-item scroll-reveal" style="--reveal-delay: 0.35s">
-<summary class="faq-item__question">
-<span class="faq-item__num">08</span>
-<span aria-hidden="true" class="faq-item__divider"></span>
-<span class="faq-item__text" data-i18n="faq.08.q">What happens if you can't continue mid-project?</span>
-<span aria-hidden="true" class="faq-item__icon"></span>
-</summary>
-<div class="faq-item__answer">
-<p data-i18n="faq.08.a">It's covered by contract: I work in milestones with partial deliveries, so you always own what you've already paid for — source files included. Everything is documented in writing, so any professional could pick the project up without starting over. To date, it has never been needed.</p>
-<svg aria-hidden="true" class="faq-item__planet"><use href="#goldPlanet"></use></svg>
-</div>
-</details>
-</div>
-</div>
-</div>
-</section>
-<!-- ═══ CONTACTO ═══ -->
-<section class="section contact-section" id="contacto-form">
-<div class="container">
-<p class="eyebrow" data-i18n="contact.eyebrow">CONTACT</p>
-<h2 class="section__title" data-i18n="contact.title">Let's talk about your project<span class="hero__dot">.</span></h2>
-<p class="contact-section__sub" data-i18n="contact.sub">Every week you wait, your competition is already online. Tell me what you need — I reply within 24 hours.</p>
-<div class="contact-grid">
-<form action="https://api.web3forms.com/submit" class="contact-form" id="contactForm" method="POST" novalidate="">
-<input name="access_key" type="hidden" value="c7415f2c-287b-4376-bbdb-4c243d24a959"/>
-<input name="subject" type="hidden" value="Nuevo mensaje desde tu portafolio — alexandercaro.com"/>
-<input name="from_name" type="hidden" value="Portafolio Alexander Caro"/>
-<input name="redirect" type="hidden" value="false"/>
-<input aria-hidden="true" autocomplete="off" name="botcheck" style="display:none" tabindex="-1" type="checkbox"/>
-<div class="form-row">
-<div class="form-group">
-<label class="form-label" data-i18n="contact.name.label" for="cf-nombre">Name *</label>
-<input class="form-input" data-i18n-placeholder="contact.name.placeholder" id="cf-nombre" name="nombre" placeholder="Your name" required="" type="text"/>
-</div>
-<div class="form-group">
-<label class="form-label" data-i18n="contact.company.label" for="cf-empresa">Company</label>
-<input class="form-input" data-i18n-placeholder="contact.company.placeholder" id="cf-empresa" name="empresa" placeholder="Your company (optional)" type="text"/>
-</div>
-</div>
-<div class="form-row">
-<div class="form-group">
-<label class="form-label" data-i18n="contact.service.label" for="cf-servicio">Service you're interested in *</label>
-<select class="form-input form-select" data-i18n-select="contact.select.service" id="cf-servicio" name="servicio" required=""><option disabled="" selected="" value="">Select a service</option><option value="Diseño y desarrollo web">Web design &amp; development</option><option value="Identidad visual / Branding">Visual identity / Branding</option><option value="Diseño gráfico / Social media">Graphic design / Social media</option><option value="Fotografía de producto">Product photography</option><option value="Pauta digital (Meta / Google Ads)">Digital ads (Meta / Google Ads)</option><option value="Paquete integral">Full package</option><option value="Otro / No sé aún">Other / Not sure yet</option></select>
-</div>
-<div class="form-group">
-<label class="form-label" data-i18n="contact.budget.label" for="cf-presupuesto">Approximate budget *</label>
-<select class="form-input form-select" data-i18n-select="contact.select.budget" id="cf-presupuesto" name="presupuesto" required=""><option disabled="" selected="" value="">Select a range</option><option value="Menos de $500 USD">Under $500 USD — outside my usual range</option><option value="$500 – $1,000 USD">$500 – $1,000 USD</option><option value="$1,000 – $2,500 USD">$1,000 – $2,500 USD</option><option value="$2,500 – $5,000 USD">$2,500 – $5,000 USD</option><option value="Más de $5,000 USD">Over $5,000 USD</option><option value="Aún no lo tengo claro">Not sure yet</option></select>
-</div>
-</div>
-<div class="form-group">
-<label class="form-label" data-i18n="contact.message.label" for="cf-mensaje">Message *</label>
-<textarea class="form-input form-textarea" data-i18n-placeholder="contact.message.placeholder" id="cf-mensaje" name="mensaje" placeholder="Tell me what you're working on..." required="" rows="4"></textarea>
-</div>
-<div aria-live="polite" class="form-feedback" id="form-feedback" role="alert"></div>
-<div class="contact-form__actions">
-<button class="btn btn--gold btn--lg contact-submit" id="contactSubmitBtn" type="submit">
-<svg class="btn-icon" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18">
-<line x1="22" x2="11" y1="2" y2="13"></line>
-<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-</svg>
-<span class="btn-text" data-i18n="contact.submit">Send message</span>
-</button>
-<a class="contact-whatsapp-link" href="https://wa.me/573024457653" id="whatsappFormLink" rel="noopener noreferrer" target="_blank">
-<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16">
-<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-</svg>
-<span data-i18n="contact.whatsapp">Or message me directly on WhatsApp</span>
-</a>
-</div>
-</form>
-<div class="contact-aside">
-<p class="contact-aside__urgency" data-i18n="contact.aside.urgency">A slow website or an invisible brand isn't a cost you can defer — it's one you're already paying in customers who never arrive.</p>
-<div class="contact-info-card">
-<span class="contact-info-card__label" data-i18n="contact.response.label">Response time</span>
-<span class="contact-info-card__value" data-i18n="contact.response.value">Under 24 h</span>
-</div>
-<div class="contact-info-card">
-<span class="contact-info-card__label" data-i18n="contact.mode.label">Format</span>
-<span class="contact-info-card__value" data-i18n="contact.mode.value">100% remote</span>
-</div>
-<div class="contact-info-card">
-<span class="contact-info-card__label" data-i18n="contact.languages.label">Languages</span>
-<span class="contact-info-card__value" data-i18n="contact.languages.value">English · Español</span>
-</div>
-<a class="calendly-link" href="https://calendly.com/hosoyalexander/30min" id="calendlyBtn" rel="noopener noreferrer" target="_blank">
-<span data-i18n="contact.calendly">Book a free 20-min call →</span>
-</a>
-<p class="contact-aside__note">
-<span data-i18n="contact.email.note">Or reach me directly at</span><br>
-<a href="mailto:hosoyalexander@gmail.com">hosoyalexander@gmail.com</a>
-</br></p>
-</div>
-</div>
-</div>
-</section>
-<!-- ═══ CTA ═══ -->
-<section class="cta-section" id="contacto">
-<div class="container">
-<h2 class="cta-section__title">
-<span data-i18n="cta.title">Got a project in mind<span class="hero__dot">?</span></span>
-</h2>
-<p class="cta-section__sub" data-i18n="cta.sub">The best time to fix your digital presence was yesterday. The second best is right now. I reply within 24 hours.</p>
-<div class="cta-section__actions">
-<a class="btn btn--gold btn--lg" href="https://wa.me/573024457653?text=%C2%A1Hola%20Alexander!%20Vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20un%20proyecto%20contigo.%20%C2%BFPodemos%20hablar%3F" rel="noopener noreferrer" target="_blank">
-<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
-<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-</svg>
-<span data-i18n="cta.whatsapp">Message me on WhatsApp</span>
-</a>
-<a class="btn btn--ghost" data-i18n="cta.work" href="/en/trabajo/">View all projects</a>
-</div>
-</div>
-</section>
-</main>
+    </section>
+
+    <!-- ═══ TRABAJO ═══ -->
+    <section class="hm-block" id="trabajo" aria-labelledby="hmWork">
+      <div class="hm-wrap">
+        <div class="hm-head">
+          <h2 class="hm-h2" id="hmWork">Selected work</h2>
+          <p>Brands, websites and content made from start to finish. Each case covers the problem, the decisions and what changed.</p>
+        </div>
+        <!-- @auto:inicio: proyectos generados desde content/proyectos/ (no editar aquí) -->
+        <!-- /@auto:inicio -->
+        <div class="hm-more"><!-- @auto:inicio-mas --><!-- /@auto:inicio-mas --></div>
+      </div>
+    </section>
+
+    <!-- ═══ LO QUE HAGO ═══ -->
+    <section class="hm-block" id="servicios" aria-labelledby="hmServ">
+      <div class="hm-wrap">
+        <div class="hm-head">
+          <h2 class="hm-h2" id="hmServ">What I do</h2>
+          <p>Three things that usually get hired separately. With me they come from the same judgment and the same hands.</p>
+        </div>
+        <ul class="hm-services">
+          <li>
+            <h3>Visual identity</h3>
+            <p>Logo, palette, typography and brand guidelines. A system that works the same on a storefront, a package and an Instagram story.</p>
+            <p class="hm-eg">For example: <a href="/en/trabajo/onces/">ONCES</a>, <a href="/en/trabajo/fueggo/">Fueggo</a>, <a href="/en/trabajo/double-notch/">Double Notch</a></p>
+          </li>
+          <li>
+            <h3>Web design and development</h3>
+            <p>Custom websites, designed and coded by the same person. Fast, with technical SEO from day one, and easy to update.</p>
+            <p class="hm-eg">For example: <a href="/en/trabajo/orbidental/">Orbidental</a>, <a href="/en/trabajo/motofaro/">MotoFaro</a>, <a href="/en/trabajo/pulse-digital/">Pulse Digital</a></p>
+          </li>
+          <li>
+            <h3>Content and video</h3>
+            <p>Posts, carousels, stories and reels with a clear brand point of view, for everyday social media or a product launch.</p>
+            <p class="hm-eg">For example: <a href="/en/trabajo/social-media-dental/">Social Media Dental</a>, <a href="/en/trabajo/diadent/">DiaDent</a>, <a href="/en/trabajo/eighteeth/">Eighteeth</a></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══ VIDEO ═══ -->
+    <section class="hm-block" id="video" aria-labelledby="hmVideo">
+      <div class="hm-wrap hm-video">
+        <div class="hm-video__text">
+          <h2 class="hm-h2" id="hmVideo">My story in one minute</h2>
+          <p>Design, code and a motorcycle: an animated short about who I am and how I work. Press play with sound on (in Spanish).</p>
+        </div>
+        <div class="hm-player" id="hmPlayer" data-cld="v1790349952/alexander-caro-short_vyn1m9">
+          <img src="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg" srcset="https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_640,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 640w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_960,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 960w, https://res.cloudinary.com/dg2wnq6ao/video/upload/so_4.5,w_1280,q_auto,f_auto/v1790349952/alexander-caro-short_vyn1m9.jpg 1280w" sizes="(max-width: 860px) calc(100vw - 40px), 64vw" alt="Thumbnail of Alexander Caro's animated short" width="1280" height="720" loading="lazy" decoding="async">
+          <video preload="none" playsinline>Your browser can't play this video.</video>
+          <button class="hm-play" type="button" aria-label="Play the animated short with sound"><span><i aria-hidden="true"></i>Watch with sound, 1:00</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CÓMO TRABAJAMOS ═══ -->
+    <section class="hm-block" id="proceso" aria-labelledby="hmProc">
+      <div class="hm-wrap">
+        <div class="hm-head">
+          <h2 class="hm-h2" id="hmProc">How we work</h2>
+          <p>You talk directly to the person who designs and builds your project. No salespeople or coordinators in between: what you ask for arrives intact, and a change gets done the same day.</p>
+        </div>
+        <ol class="hm-steps">
+          <li><h3>We talk</h3><p>A 20-minute call or a message. You tell me what you need, who it is for and what you want to achieve.</p></li>
+          <li><h3>Proposal in 48 hours</h3><p>A document with the exact scope, what's included and what isn't, the timeline and a fixed price.</p></li>
+          <li><h3>Progress you can see</h3><p>Partial deliveries so you can give feedback in time. The final result is never a surprise.</p></li>
+          <li><h3>Ready to use</h3><p>Organized files, clean code and 7 days of free adjustments after delivery.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══ SOBRE MÍ ═══ -->
+    <section class="hm-block" id="sobre-mi" aria-labelledby="hmAbout">
+      <div class="hm-wrap">
+        <div class="hm-head">
+          <h2 class="hm-h2" id="hmAbout">About me</h2>
+        </div>
+        <div class="hm-about">
+          <div class="hm-about__intro">
+            <p>I'm Alexander Caro, a designer and developer in Bogotá. For two years I've run everything digital at Orbidental, a dental supply distributor: the online store, Meta and Google ads, product photography and design.</p>
+            <p>So my design decisions come from real metrics: load speed, clicks, sales. I work remotely with clients in Colombia and abroad, in Spanish and English.</p>
+            <ul class="hm-tools" aria-label="Tools"><li>HTML &amp; CSS</li><li>JavaScript</li><li>Next.js</li><li>WordPress</li><li>Technical SEO</li><li>Meta Ads</li><li>Google Ads</li><li>Product photography</li><li>Photoshop</li><li>Illustrator</li></ul>
+            <a class="hm-btn hm-btn--ghost" href="/en/sobre-mi/">Read my full story</a>
+          </div>
+          <div class="hm-creds">
+            <h3>Verifiable certifications</h3>
+            <ul>
+            <li><b>Google Analytics Certification</b><span>Google Skillshop, 2026</span><a href="https://skillshop.credential.net/38e9b8c5-e101-4df1-bde3-b048f2c18c5a" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Google Analytics Certification (opens in a new tab)</span></a></li>
+            <li><b>Google Ads AI-Powered Performance</b><span>Google Skillshop, 2026</span><a href="https://skillshop.credential.net/8356725e-7cc6-43d8-b13e-c0fc7bd12504" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Google Ads AI-Powered Performance (opens in a new tab)</span></a></li>
+            <li><b>Google Web Designer: interactive creatives</b><span>Google Skillshop, 2026</span><a href="https://skillshop.credential.net/7b73e741-2f24-4811-9e6c-60e21cfe66e6" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Google Web Designer: interactive creatives (opens in a new tab)</span></a></li>
+            <li><b>Google Web Designer: high impact</b><span>Google Skillshop, 2026</span><a href="https://skillshop.credential.net/16c75255-a556-4945-9fae-7ca3b397344a" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Google Web Designer: high impact (opens in a new tab)</span></a></li>
+            <li><b>Introduction to Artificial Intelligence</b><span>Platzi, 2026</span><a href="https://platzi.com/p/hosoyalexander/curso/13690-intro-ai/diploma/detalle/" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Introduction to Artificial Intelligence (opens in a new tab)</span></a></li>
+            <li><b>Basic Programming</b><span>Platzi, 2026</span><a href="https://platzi.com/p/hosoyalexander/curso/13100-programacion-basica/diploma/detalle/" target="_blank" rel="noopener noreferrer">Verify<span class="hm-sr"> Basic Programming (opens in a new tab)</span></a></li>
+            </ul>
+          </div>
+          <div class="hm-quotes">
+          <figure>
+            <blockquote>“Alexander understood exactly what we wanted: the feel of a jungle, but unmistakably a nightclub.”</blockquote>
+            <figcaption><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_88,h_88,c_fill,g_face,q_auto,f_auto/v1782219347/Mayra_kybufg.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span><b>Mayra Castaño</b>Manager at La Jungla Club, Bogotá</span></figcaption>
+          </figure>
+          <figure>
+            <blockquote>“We wanted something urban, with a graffiti edge applied to streetwear. The identity came out exactly as we imagined it.”</blockquote>
+            <figcaption><img src="https://res.cloudinary.com/dg2wnq6ao/image/upload/w_88,h_88,c_fill,g_face,q_auto,f_auto/v1782219347/Steven-Mesa_wr3edi.webp" alt="" width="44" height="44" loading="lazy" decoding="async"><span><b>Steven Mesa</b>Founder of Rebel Street, Bogotá</span></figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PREGUNTAS ═══ -->
+    <section class="hm-block" id="faq" aria-labelledby="hmFaq">
+      <div class="hm-wrap hm-faq">
+        <h2 class="hm-h2" id="hmFaq">Frequently asked questions</h2>
+        <div class="hm-faq__list">
+          <details><summary>How much does a project cost?</summary><p>Projects start at 500 USD for an initial branding or basic-website scope; most land between 500 and 2,500 USD depending on scope. Before we start you get a proposal with a fixed price, timeline and deliverables, with no surprises or hidden costs.</p></details>
+          <details><summary>Do you work with clients outside Colombia?</summary><p>Yes, I work 100% remotely with clients in several countries. Communication is written, over WhatsApp or email, so every agreement, update and delivery is documented. I'm in Bogotá (UTC-5) and I adapt to your time zone.</p></details>
+          <details><summary>How does payment work?</summary><p>A 50% deposit to get started and the remaining 50% on delivery. Larger projects are split into milestones. For international clients I accept PayPal or Wise.</p></details>
+          <details><summary>How many revisions are included?</summary><p>It depends on the service, but generally I include two rounds of revisions within the agreed scope. If you need more, we price them separately, with a clear quote before any work.</p></details>
+          <details><summary>Do you use contracts?</summary><p>Always. Before starting we sign an agreement that defines the scope, timeline, price and delivery terms. It protects both of us and prevents misunderstandings down the road.</p></details>
+          <details><summary>What if I need changes after delivery?</summary><p>Minor changes within the original scope are free if you request them within the first 7 days. After that, or for major changes of direction, we price them separately, always with a clear quote first.</p></details>
+          <details><summary>What time zone do you work in?</summary><p>I'm in Bogotá, Colombia: UTC-5, no daylight saving. I usually reply between 8 a.m. and 8 p.m. Colombian time, and I'm flexible when we need to schedule a call across time zones.</p></details>
+          <details><summary>What happens if you can't continue mid-project?</summary><p>It's covered by contract: I work in milestones with partial deliveries, so you always own what you've already paid for, source files included. Everything is documented in writing so anyone could pick the project up without starting over. To date, it has never been needed.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACTO ═══ -->
+    <section class="hm-block" id="contacto" aria-labelledby="hmContact">
+      <span id="contacto-form" aria-hidden="true"></span>
+      <div class="hm-wrap hm-contact">
+        <div class="hm-contact__lead">
+          <h2 class="hm-h2" id="hmContact">Let's talk about your project</h2>
+          <p>Tell me what you need and I'll get back to you within 24 hours with next steps.</p>
+          <a class="hm-btn hm-btn--gold" href="https://wa.me/573024457653?text=Hi%20Alexander%21%20I%20saw%20your%20portfolio%20and%20I%27d%20like%20a%20quote%20for%20a%20project.%20Can%20we%20talk%3F" target="_blank" rel="noopener noreferrer" id="whatsappFormLink"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Message me on WhatsApp</a>
+          <dl class="hm-facts">
+            <div><dt>Email</dt><dd><a href="mailto:hosoyalexander@gmail.com">hosoyalexander@gmail.com</a></dd></div>
+            <div><dt>Call</dt><dd><a href="https://calendly.com/hosoyalexander/30min" target="_blank" rel="noopener noreferrer" id="calendlyBtn">Book 20 minutes</a></dd></div>
+            <div><dt>Languages</dt><dd>Spanish and English</dd></div>
+            <div><dt>Based in</dt><dd>Bogotá, working with any country</dd></div>
+          </dl>
+        </div>
+        <form class="hm-form contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="c7415f2c-287b-4376-bbdb-4c243d24a959">
+          <input type="hidden" name="subject" value="New message from your portfolio — alexandercaro.com (EN)">
+          <input type="hidden" name="from_name" value="Portafolio Alexander Caro">
+          <input type="hidden" name="redirect" value="false">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <div class="hm-field"><label for="cf-nombre">Name</label><input class="form-input" type="text" id="cf-nombre" name="nombre" autocomplete="name" placeholder="Your name" required></div>
+          <div class="hm-field"><label for="cf-contacto">Email or WhatsApp</label><input class="form-input" type="text" id="cf-contacto" name="contacto" autocomplete="email" placeholder="you@email.com or +1 555…" required></div>
+          <div class="hm-field"><label for="cf-servicio">What you need</label><select class="form-input" id="cf-servicio" name="servicio" required><option value="" disabled selected>Choose one</option><option value="Visual identity">Visual identity</option><option value="Web design and development">Web design and development</option><option value="Content and social media">Content and social media</option><option value="Product photography">Product photography</option><option value="Meta or Google ads">Meta or Google ads</option><option value="Several of these">Several of these</option><option value="I'm not sure yet">I'm not sure yet</option></select></div>
+          <div class="hm-field"><label for="cf-presupuesto">Approximate budget</label><select class="form-input" id="cf-presupuesto" name="presupuesto" required><option value="" disabled selected>Choose a range</option><option value="Under 500 USD">Under 500 USD</option><option value="500 to 1,000 USD">500 to 1,000 USD</option><option value="1,000 to 2,500 USD">1,000 to 2,500 USD</option><option value="2,500 to 5,000 USD">2,500 to 5,000 USD</option><option value="Over 5,000 USD">Over 5,000 USD</option><option value="Not sure yet">Not sure yet</option></select></div>
+          <div class="hm-field hm-field--full"><label for="cf-empresa">Company (optional)</label><input class="form-input" type="text" id="cf-empresa" name="empresa" autocomplete="organization"></div>
+          <div class="hm-field hm-field--full"><label for="cf-mensaje">Tell me about the project</label><textarea class="form-input" id="cf-mensaje" name="mensaje" rows="5" placeholder="What you want to achieve, your timeline and any references you like." required></textarea></div>
+          <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+          <div class="hm-form__foot">
+            <button type="submit" class="hm-btn hm-btn--gold" id="contactSubmitBtn"><span class="btn-text">Send message</span></button>
+            <small>I reply within 24 hours.</small>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="hm-peek" id="hmPeek" aria-hidden="true"></div>
 <footer class="footer" id="site-footer">
 <div class="container">
 <div class="footer__top">
@@ -1320,47 +438,7 @@ to bottom,transparent 0px,transparent 3px,rgba(205,183,142,0.015) 3px,rgba(205,1
 </div>
 </div>
 </footer>
-<!-- Hero: GSAP/ScrollTrigger drive all hero animations (idle float,
-       rise+blur parallax on scroll, reveal on load). Native scroll —
-       no smooth-scroll library. Loaded homepage-only — see /hero.js.
-       defer: el parser HTML no se bloquea — scripts se ejecutan en orden
-       tras DOMContentLoaded. hero.js depende de gsap+ST que van primero. -->
-<!-- PERF: GSAP + ScrollTrigger (~110KB) ya no bloquean la carga.
-       Se inyectan cuando la página terminó de pintar (load + idle), o antes
-       si el usuario interactúa. El hero ya se anima con CSS puro, así que
-       nada visible depende de que estos scripts lleguen rápido.
-       Esto saca ~340ms de TBT y ~237ms de reprocesamiento del arranque. -->
-  <script>
-  (function () {
-    var cargado = false;
-    function cargarGSAP() {
-      if (cargado) return; cargado = true;
-      var urls = [
-        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',
-        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js',
-        '/hero.js'
-      ];
-      (function siguiente(i) {
-        if (i >= urls.length) return;
-        var s = document.createElement('script');
-        s.src = urls[i];
-        s.async = false;
-        s.onload = function () { siguiente(i + 1); };
-        s.onerror = function () { siguiente(i + 1); };
-        document.body.appendChild(s);
-      })(0);
-    }
-    function programar() {
-      if ('requestIdleCallback' in window) requestIdleCallback(cargarGSAP, { timeout: 2000 });
-      else setTimeout(cargarGSAP, 600);
-    }
-    if (document.readyState === 'complete') programar();
-    else window.addEventListener('load', programar, { once: true });
-    ['pointerdown', 'touchstart', 'wheel', 'keydown'].forEach(function (e) {
-      window.addEventListener(e, cargarGSAP, { once: true, passive: true });
-    });
-  })();
-  </script>
+<script defer src="/js/inicio.js"></script>
 <script defer="" src="/analytics.js"></script>
 <script defer="" src="/nav.js"></script>
 <script defer="" src="/i18n.js"></script>
