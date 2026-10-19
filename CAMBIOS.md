@@ -1,3 +1,9 @@
+# IMÁGENES PARA COMPARTIR Y ARTÍCULOS DE PRECIOS: 19 oct 2026
+
+- Cada caso y cada artículo tiene su propia imagen para compartir (1200×630): etiqueta, título en Fraunces, tu nombre y la portada del proyecto. Es la que sale al pegar el enlace en LinkedIn, WhatsApp o X. Se crea sola en cada build (`scripts/lib/og.mjs`, fuente en `scripts/fonts/`). Si la portada de Cloudinary no se puede descargar en ese momento, sale con una franja del color del proyecto y se vuelve a intentar en el siguiente build.
+- Dos artículos nuevos, en español e inglés: «Cuánto cuesta un logo en Colombia» y «Cuánto cuesta una página web en Colombia en 2026», con tus precios reales (identidad desde USD 500, Web Express USD 800, Plan mensual USD 600).
+- Los filtros de /trabajo/ ya existían y se pueden compartir con enlace, por ejemplo `alexandercaro.com/trabajo/#dental`.
+
 # RESEÑAS DE WORKANA: 19 oct 2026
 
 - Bloque de reseñas con tu calificación (5,0 de 5, 9 calificaciones, 4 clientes que repitieron), 4 reseñas y el enlace a tu perfil de Workana. Sale en el inicio (Sobre mí), en Servicios y en el CV, en español y en inglés (marcadas como traducidas). En el PDF del CV no sale.

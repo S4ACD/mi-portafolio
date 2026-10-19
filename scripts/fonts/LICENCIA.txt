@@ -1,0 +1,3 @@
+Fraunces (Undercase Type, publicada en Google Fonts)
+Licencia: SIL Open Font License 1.1, https://openfontlicense.org
+Se usa solo para dibujar el texto de las imágenes para compartir (scripts/lib/og.mjs).

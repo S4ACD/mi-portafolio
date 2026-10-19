@@ -16,6 +16,7 @@ import { casePage } from './lib/render-case.mjs';
 import { updateSitemap, updateLlms } from './lib/seo.mjs';
 import { loadArticles, buildArticles, sitemapArticles, llmsArticles } from './lib/articles.mjs';
 import { loadReviews, reviewsBlock } from './lib/reviews.mjs';
+import { createOgMaker } from './lib/og.mjs';
 import { BuildError, numberWord } from './lib/util.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -77,6 +78,7 @@ async function main() {
   copySite(ROOT, OUT);
 
   const images = createImagePipeline({ root: ROOT, outDir: OUT, cacheDir: CACHE });
+  const og = createOgMaker({ root: ROOT, outDir: OUT, cacheDir: CACHE });
 
   // Imagen de portada de cada proyecto, en el tamaño de tarjeta.
   const cardImgs = new Map();
@@ -139,6 +141,7 @@ async function main() {
         images,
         footer: footerOf(lang),
         slugToImg: (q) => cardImgs.get(q.slug) || null,
+        og,
       });
       const dir = path.join(OUT, lang === 'en' ? 'en' : '', 'trabajo', p.slug);
       fs.mkdirSync(dir, { recursive: true });
@@ -149,7 +152,7 @@ async function main() {
   log(`✓ Páginas de caso generadas: ${pages}`);
 
   // 2b. Artículos (páginas, índice y RSS)
-  const artPages = await buildArticles({ out: OUT, articles, images, footerOf, projects: content });
+  const artPages = await buildArticles({ out: OUT, articles, images, footerOf, projects: content, ogMaker: og });
   log(`✓ Páginas de artículos generadas: ${artPages}`);
 
   // 3. SEO: sitemap y llms.txt
@@ -177,6 +180,7 @@ async function main() {
 
   const st = images.stats();
   log(`✓ Imágenes: ${st.processed} nuevas, ${st.fromCache} desde caché`);
+  log(`✓ Imágenes para compartir: ${og.summary()}`);
   log(`✓ Listo en ${((Date.now() - t0) / 1000).toFixed(1)} s → dist/`);
 }
 

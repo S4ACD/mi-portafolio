@@ -1,0 +1,250 @@
+es:
+  titulo: 'Cuánto cuesta una página web en Colombia en 2026: precios reales y qué incluir'
+  publicado: true
+  fecha: '2026-10-19'
+  resumen: 'Una página web puede costar desde una suscripción mensual hasta varios miles de dólares. Te explico los tipos de sitio, los costos que se pagan cada año, lo barato que sale caro y cuánto cuesta mi paquete de 5 páginas en 14 días.'
+  portada:
+    imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220149/Despu%C3%A9s_iulu8r.png
+    alt: Página de inicio de la tienda de Orbidental después del rediseño
+  etiquetas:
+  - Precios
+  - Diseño web
+  - SEO
+  relacionado: orbidental
+  claves:
+  - 'El precio de una página web depende de cuatro cosas: el tipo de sitio, el número de páginas, quién pone el contenido y qué tan rápido y bien posicionado debe quedar.'
+  - 'Hay dos tipos de costos: el proyecto (se paga una vez) y lo recurrente (dominio, hosting, licencias y mantenimiento).'
+  - Mi paquete Web Express cuesta USD 800 por un sitio de hasta 5 páginas, hecho a medida y entregado en 14 días, con pago 50/50.
+  - Lo barato sale caro cuando el sitio queda lento, no aparece en Google o no puedes moverlo de proveedor.
+  - El dominio y los accesos deben quedar a tu nombre desde el primer día.
+  seo:
+    titulo: Cuánto cuesta una página web en Colombia en 2026
+    descripcion: 'Precios de una página web en Colombia por tipo de sitio, costos anuales (dominio, hosting, mantenimiento), qué incluir y un paquete real de USD 800.'
+    palabra_clave: cuánto cuesta una página web
+  cuerpo: |-
+    **¿Cuánto cuesta una página web en Colombia?** Si lo buscas en Google vas a encontrar desde planes de unos pocos dólares al mes hasta cotizaciones de varios millones de pesos. Las dos cosas pueden ser ciertas, porque «página web» puede ser una plantilla que armas tú en un fin de semana o una tienda con miles de productos programada a medida.
+
+    En este artículo te explico cuánto cuesta una página web según lo que necesitas, qué costos se pagan una sola vez y cuáles se repiten cada año, lo barato que sale caro y cuánto cobro yo. Uso mis precios reales y casos de clientes, no cifras inventadas del mercado.
+
+    ## Las cuatro preguntas que definen el precio
+
+    Antes de pedir cotizaciones, responde esto. Con estas respuestas, cualquier proveedor serio te puede dar un precio cerrado:
+
+    1. **¿Qué tipo de sitio necesitas?** Una página de presentación, un sitio de empresa, una tienda en línea o una plataforma con funciones a medida.
+    2. **¿Cuántas páginas?** Inicio, servicios, sobre nosotros, contacto… cada página suma diseño y desarrollo.
+    3. **¿Quién pone el contenido?** Textos, fotos y logo. Si no los tienes, hay que crearlos y eso se cotiza aparte.
+    4. **¿Qué tan importante es que te encuentren en Google?** Un sitio rápido y con buena base técnica toma más trabajo que uno que solo «se ve bien».
+
+    ## Los tipos de página web y lo que cuestan
+
+    | Tipo de sitio | Para quién | Qué esperar en precio |
+    | --- | --- | --- |
+    | Constructor con plantilla (lo armas tú) | Quien está empezando y tiene tiempo | Suscripción mensual o anual de la plataforma |
+    | Landing page (una sola página) | Una campaña, un producto o un evento | El proyecto más pequeño de un diseñador |
+    | Sitio de empresa (hasta 5 páginas) | Negocios y profesionales independientes | Mi paquete Web Express: USD 800 |
+    | Tienda en línea | Quien vende productos en línea | Proyecto aparte, según catálogo e integraciones |
+    | Sitio o plataforma a medida | Comparadores, catálogos grandes, funciones especiales | Se cotiza según el alcance |
+
+    ### Constructor con plantilla
+
+    Es la opción más económica al inicio. Pagas la plataforma y armas el sitio tú. Funciona si tienes tiempo y buen ojo, pero el resultado se parece al de miles de negocios que usan la misma plantilla, y muchas veces queda lento porque carga código que tu página no necesita.
+
+    ### Sitio de empresa de hasta 5 páginas
+
+    Es lo que más piden los negocios y los profesionales independientes. Mi paquete [Web Express](/servicios/web-express/) cuesta **USD 800, precio cerrado**:
+
+    - Diseño a medida, sin plantillas ni constructores lentos.
+    - Hasta 5 páginas: inicio, servicios, sobre ti, contacto y una extra.
+    - SEO técnico: estructura, metadatos, datos estructurados y sitemap.
+    - Velocidad como estándar: mis dos últimos proyectos web marcaron 97 y 99 en PageSpeed.
+    - Lanzamiento y 30 días de soporte.
+    - Entrega en 14 días desde que recibo tu contenido, con pago 50 % al inicio y 50 % contra entrega.
+
+    Si necesitas más páginas, cada una se cotiza antes de empezar, normalmente entre USD 80 y 120 según su complejidad.
+
+    ### Tienda en línea
+
+    Una tienda tiene catálogo, carrito, pagos, envíos e inventario, y por eso se cotiza como proyecto aparte. El precio depende sobre todo del número de productos, de si hay que migrarlos desde otra plataforma y de las integraciones (pasarela de pago, facturación, inventario).
+
+    En [Orbidental](/trabajo/orbidental/) reconstruí una tienda con **más de 3.000 productos** sin el constructor que la hacía lenta. La migración tomó mes y medio cuidando cada dirección, cada texto y cada señal técnica, y el PageSpeed pasó de 40 a 97. Lo cuento en [por qué tu tienda en línea carga lento](/articulos/por-que-tu-tienda-en-linea-carga-lento/).
+
+    ### Sitio o plataforma a medida
+
+    Cuando necesitas funciones que no traen las plantillas, como filtros, comparadores, cuestionarios o un catálogo que se alimenta de una base de datos, el sitio se programa a medida. [MotoFaro](/trabajo/motofaro/), un comparador de accesorios para moto que construí en Next.js, es un ejemplo: cada producto tiene su propia página indexable y el sitio marca 99 en PageSpeed de escritorio.
+
+    ## Los costos que se pagan cada año
+
+    El precio del proyecto no es lo único. Pregunta siempre por estos costos recurrentes:
+
+    - **Dominio** (tunegocio.com o .co): se renueva cada año y el precio cambia según la extensión.
+    - **Hosting**: el servidor donde vive tu sitio. Varía según el tráfico y el tipo de sitio.
+    - **Licencias**: algunos temas, plugins o constructores cobran cada año.
+    - **Correo corporativo**: si quieres cuentas como hola@tunegocio.com.
+    - **Mantenimiento y cambios**: actualizaciones, seguridad, nuevas secciones, contenido. Para eso tengo el [Plan mensual](/servicios/plan-mensual/) de USD 600 al mes, sin permanencia.
+
+    ## Lo barato que sale caro
+
+    Un sitio barato puede salir muy caro si pasa alguna de estas cosas:
+
+    - **Queda lento.** En un estudio que Google encargó a 55 y Deloitte, mejorar la velocidad móvil apenas 0,1 segundos subió la conversión de tiendas en línea un 8,4 % ([web.dev](https://web.dev/case-studies/milliseconds-make-millions)). Un sitio lento pierde ventas todos los días.
+    - **No aparece en Google.** Sin una base técnica, el sitio existe pero nadie lo encuentra. Hoy también importa que te entiendan las respuestas de IA; lo explico en [cómo aparecer en ChatGPT y en Google](/articulos/como-aparecer-en-chatgpt-y-google/).
+    - **No es tuyo.** Si el dominio, el hosting o los accesos quedan a nombre del proveedor, cambiar de proveedor se vuelve un problema.
+    - **Hay cobros sorpresa.** Una cotización sin alcance escrito termina con «extras» a mitad de proyecto.
+
+    ## Qué debe incluir cualquier cotización
+
+    Pide que la cotización diga por escrito:
+
+    1. El número de páginas y qué lleva cada una.
+    2. Si el diseño es a medida o una plantilla.
+    3. Qué incluye en SEO técnico y velocidad.
+    4. Cuántas rondas de cambios hay.
+    5. La fecha de entrega y desde cuándo corre.
+    6. La forma de pago.
+    7. Qué pasa después de la entrega: soporte, capacitación y accesos.
+    8. Que el dominio y las cuentas quedan a tu nombre.
+
+    ## ¿Cuánto debería invertir mi negocio?
+
+    Si estás empezando y no vendes en línea, un sitio de pocas páginas, rápido y bien hecho es suficiente: se trata de que el cliente que te busca encuentre algo serio. Si ya tienes ventas en redes y quieres que Google te traiga clientes, invierte en velocidad y SEO técnico desde el principio. Y si vendes productos en línea, la tienda es una herramienta de ventas, así que mídela por lo que vende, no por lo que cuesta.
+
+    Si quieres saber cuánto costaría tu sitio, escríbeme y en menos de 24 horas te confirmo alcance, fecha y precio. También puedes ver todos mis [servicios de diseño web](/servicios/diseno-web/).
+  preguntas:
+  - pregunta: ¿Cuánto cuesta una página web en Colombia en 2026?
+    respuesta: Depende del tipo de sitio. Un constructor con plantilla se paga como suscripción, un sitio de empresa de hasta 5 páginas hecho a medida cuesta USD 800 en mi paquete Web Express, y las tiendas en línea y los sitios a medida se cotizan según el alcance.
+  - pregunta: ¿Qué costos tiene una página web cada año?
+    respuesta: El dominio, el hosting, las licencias de temas o plugins si las hay, el correo corporativo y el mantenimiento o los cambios que necesites.
+  - pregunta: ¿Cuánto se demora hacer una página web?
+    respuesta: Un sitio de hasta 5 páginas puede estar listo en 14 días desde que se recibe el contenido completo. Una tienda o un sitio a medida toma más, según el alcance.
+  - pregunta: ¿Es mejor una plantilla o una página web a medida?
+    respuesta: Una plantilla sirve para empezar con poco presupuesto. Un sitio a medida se diferencia de la competencia, carga más rápido y tiene una mejor base técnica para Google.
+  - pregunta: ¿A nombre de quién debe quedar el dominio?
+    respuesta: A tu nombre. El dominio, el hosting y los accesos deben ser tuyos desde el primer día, para que puedas cambiar de proveedor cuando quieras.
+  - pregunta: ¿Cómo se paga una página web?
+    respuesta: En mi caso, 50 % al inicio para reservar la fecha y 50 % contra entrega. Desde el exterior se puede pagar en dólares por transferencia internacional, Wise o PayPal.
+  cta:
+    titulo: ¿Cuánto costaría tu sitio?
+    texto: Cuéntame qué necesitas y en menos de 24 horas te confirmo alcance, fecha y precio cerrado.
+en:
+  titulo: 'How much does a website cost in Colombia in 2026? Real prices and what to include'
+  resumen: "A website can cost anything from a monthly subscription to several thousand dollars. Here are the types of site, the costs you pay every year, the cheap options that end up expensive and what my 5-page, 14-day package costs."
+  portada:
+    alt: Orbidental's online store home page after the redesign
+  etiquetas:
+  - Pricing
+  - Web design
+  - SEO
+  claves:
+  - 'The price of a website depends on four things: the type of site, the number of pages, who provides the content and how fast and well-ranked it needs to be.'
+  - 'There are two kinds of cost: the project (paid once) and the recurring costs (domain, hosting, licenses and maintenance).'
+  - My Web Express package costs USD 800 for a custom site of up to 5 pages, delivered in 14 days, paid 50/50.
+  - Cheap turns expensive when the site is slow, doesn't show up on Google or can't be moved to another provider.
+  - The domain and all accounts should be in your name from day one.
+  seo:
+    titulo: How much does a website cost in Colombia in 2026?
+    descripcion: 'Website prices in Colombia by type of site, yearly costs (domain, hosting, maintenance), what a quote should include and a real USD 800 package.'
+    palabra_clave: how much does a website cost
+  cuerpo: |-
+    **How much does a website cost in Colombia?** If you search on Google you'll find everything from plans costing a few dollars a month to quotes for several million pesos. Both can be true, because "website" can mean a template you put together yourself over a weekend or an online store with thousands of products custom-built from scratch.
+
+    In this article I explain what a website costs depending on what you need, which costs you pay once and which repeat every year, the cheap options that end up expensive and what I charge. I use my real prices and client cases, not made-up market figures.
+
+    ## The four questions that set the price
+
+    Before asking for quotes, answer these. With these answers, any serious provider can give you a fixed price:
+
+    1. **What type of site do you need?** A simple presentation page, a business website, an online store or a platform with custom features.
+    2. **How many pages?** Home, services, about, contact… every page adds design and development.
+    3. **Who provides the content?** Text, photos and logo. If you don't have them, they need to be created, and that's quoted separately.
+    4. **How important is it to be found on Google?** A fast site with a solid technical foundation takes more work than one that only "looks good".
+
+    ## Types of website and what they cost
+
+    | Type of site | Who it's for | What to expect on price |
+    | --- | --- | --- |
+    | Template builder (you build it) | People starting out who have time | A monthly or yearly platform subscription |
+    | Landing page (a single page) | A campaign, a product or an event | A designer's smallest project |
+    | Business website (up to 5 pages) | Businesses and independent professionals | My Web Express package: USD 800 |
+    | Online store | Anyone selling products online | A separate project, depending on catalog and integrations |
+    | Custom site or platform | Comparison sites, large catalogs, special features | Quoted according to scope |
+
+    ### Template builder
+
+    It's the cheapest option at the start. You pay for the platform and build the site yourself. It works if you have time and a good eye, but the result looks like thousands of other businesses using the same template, and it's often slow because it loads code your page doesn't need.
+
+    ### Business website of up to 5 pages
+
+    This is what businesses and independent professionals ask for most. My [Web Express](/en/servicios/web-express/) package costs **USD 800, fixed price**:
+
+    - Custom design, with no templates or slow page builders.
+    - Up to 5 pages: home, services, about you, contact and one extra.
+    - Technical SEO: structure, metadata, structured data and a sitemap.
+    - Speed as standard: my last two web projects scored 97 and 99 on PageSpeed.
+    - Launch plus 30 days of support.
+    - Delivery in 14 days from when I receive your content, paid 50% upfront and 50% on delivery.
+
+    If you need more pages, each one is quoted before we start, usually between USD 80 and 120 depending on complexity.
+
+    ### Online store
+
+    A store has a catalog, cart, payments, shipping and inventory, which is why it's quoted as a separate project. The price depends mainly on the number of products, whether they need to be migrated from another platform and the integrations (payment gateway, invoicing, inventory).
+
+    At [Orbidental](/en/trabajo/orbidental/) I rebuilt a store with **more than 3,000 products** without the page builder that was slowing it down. The migration took six weeks, taking care of every URL, every piece of text and every technical signal, and PageSpeed went from 40 to 97. I tell the story in [why your online store loads slowly](/en/articulos/por-que-tu-tienda-en-linea-carga-lento/).
+
+    ### Custom site or platform
+
+    When you need features templates don't offer, like filters, comparison tools, quizzes or a catalog fed from a database, the site is custom-built. [MotoFaro](/en/trabajo/motofaro/), a motorcycle accessories comparison site I built in Next.js, is an example: every product has its own indexable page and the site scores 99 on desktop PageSpeed.
+
+    ## The costs you pay every year
+
+    The project price isn't the only cost. Always ask about these recurring costs:
+
+    - **Domain** (yourbusiness.com or .co): renewed every year, with prices that vary by extension.
+    - **Hosting**: the server where your site lives. It varies with traffic and type of site.
+    - **Licenses**: some themes, plugins or builders charge yearly.
+    - **Business email**: if you want addresses like hello@yourbusiness.com.
+    - **Maintenance and changes**: updates, security, new sections, content. That's what my [Monthly Plan](/en/servicios/plan-mensual/) is for, at USD 600 a month with no long-term contract.
+
+    ## Cheap options that end up expensive
+
+    A cheap site can become very expensive if any of these happen:
+
+    - **It's slow.** In a study Google commissioned from 55 and Deloitte, improving mobile speed by just 0.1 seconds raised retail conversion by 8.4% ([web.dev](https://web.dev/case-studies/milliseconds-make-millions)). A slow site loses sales every day.
+    - **It doesn't show up on Google.** Without a technical foundation, the site exists but nobody finds it. Today it also matters that AI answers understand you; I explain it in [how to show up in ChatGPT and Google](/en/articulos/como-aparecer-en-chatgpt-y-google/).
+    - **It isn't yours.** If the domain, hosting or accounts are in the provider's name, switching providers becomes a problem.
+    - **There are surprise charges.** A quote without a written scope ends with "extras" halfway through the project.
+
+    ## What any quote should include
+
+    Ask for the quote to state in writing:
+
+    1. The number of pages and what each one contains.
+    2. Whether the design is custom or a template.
+    3. What's included in technical SEO and speed.
+    4. How many revision rounds there are.
+    5. The delivery date and when the clock starts.
+    6. The payment terms.
+    7. What happens after delivery: support, training and access.
+    8. That the domain and accounts are in your name.
+
+    ## How much should my business invest?
+
+    If you're starting out and don't sell online, a small, fast, well-made site is enough: the point is that customers looking for you find something serious. If you already sell through social media and want Google to bring you customers, invest in speed and technical SEO from the start. And if you sell products online, the store is a sales tool, so measure it by what it sells, not by what it costs.
+
+    If you want to know what your site would cost, message me and within 24 hours I'll confirm scope, deadline and price. You can also see all my [web design services](/en/servicios/diseno-web/).
+  preguntas:
+  - pregunta: How much does a website cost in Colombia in 2026?
+    respuesta: It depends on the type of site. A template builder is paid as a subscription, a custom business website of up to 5 pages costs USD 800 with my Web Express package, and online stores and custom sites are quoted according to scope.
+  - pregunta: What does a website cost every year?
+    respuesta: The domain, hosting, theme or plugin licenses if any, business email, and the maintenance or changes you need.
+  - pregunta: How long does it take to build a website?
+    respuesta: A site of up to 5 pages can be ready in 14 days from when the full content is received. A store or a custom site takes longer, depending on scope.
+  - pregunta: Is a template or a custom website better?
+    respuesta: A template works for starting on a small budget. A custom site stands out from competitors, loads faster and has a better technical foundation for Google.
+  - pregunta: Whose name should the domain be in?
+    respuesta: Yours. The domain, hosting and accounts should belong to you from day one, so you can change providers whenever you want.
+  - pregunta: How do I pay for a website?
+    respuesta: In my case, 50% upfront to book the date and 50% on delivery. From abroad you can pay in dollars by international transfer, Wise or PayPal.
+  cta:
+    titulo: What would your site cost?
+    texto: Tell me what you need and within 24 hours I'll confirm scope, deadline and a fixed price.

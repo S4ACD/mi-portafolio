@@ -251,7 +251,7 @@ const listItem = (a, lang, img) => {
           </li>`;
 };
 
-export async function buildArticles({ out, articles, images, footerOf, projects }) {
+export async function buildArticles({ out, articles, images, footerOf, projects, ogMaker }) {
   let pages = 0;
   const covers = new Map();
   for (const a of articles) {
@@ -272,7 +272,11 @@ export async function buildArticles({ out, articles, images, footerOf, projects 
       const esUrl = articleUrl(a.slug, 'es', true);
       const enUrl = a.hasEn ? articleUrl(a.slug, 'en', true) : '';
       const cover = covers.get(a.slug);
-      const og = cover ? (cover.kind === 'local' ? SITE + cover.url(1200) : cover.url(1200)) : OG_DEFAULT;
+      const rel0 = d.relacionado ? projects.bySlug.get(d.relacionado) : null;
+      const shareImg = ogMaker
+        ? await ogMaker.make({ kind: 'article', lang, slug: a.slug, title: d.titulo, cover: a.es.portada?.imagen || '', color: rel0?.color })
+        : '';
+      const og = shareImg || (cover ? (cover.kind === 'local' ? SITE + cover.url(1200) : cover.url(1200)) : OG_DEFAULT);
       const title = d.seo?.titulo || `${plain(d.titulo)} | Alexander Caro`;
       const desc = plain(d.seo?.descripcion || d.resumen || '');
       const { html: body, toc } = await bodyHtml(d.cuerpo, { images, slug: a.slug });

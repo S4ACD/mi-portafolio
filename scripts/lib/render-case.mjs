@@ -78,7 +78,7 @@ export function onColor(hex) {
 
 const md = (s) => marked.parse(String(s ?? ''), { async: false, gfm: true, breaks: false });
 
-export async function casePage({ p, lang, next, images, footer, slugToImg }) {
+export async function casePage({ p, lang, next, images, footer, slugToImg, og }) {
   const d = p[lang];
   const c = d.caso || {};
   const t = T[lang];
@@ -100,7 +100,11 @@ export async function casePage({ p, lang, next, images, footer, slugToImg }) {
   const pad = c.portada_ajuste === 'completa';
   if (cover && (pad || cover.kind === 'cloudinary' || (cover.width && cover.height > cover.width * 0.85)))
     cover = await images.get(coverSrc, { slug: p.slug, widths: W.full, frame: { ratio: 1.6, fit: pad ? 'contain' : 'cover', bg: brand } });
-  const ogImage = cover ? (cover.kind === 'local' ? SITE + cover.url(1200) : cover.url(1200)) : '';
+  const coverOg = cover ? (cover.kind === 'local' ? SITE + cover.url(1200) : cover.url(1200)) : '';
+  const shareImg = og
+    ? await og.make({ kind: 'case', lang, slug: p.slug, title: d.nombre, sub: d.resumen, cover: p.portada.estilo === 'foto' || c.portada ? coverSrc : '', color: brand })
+    : '';
+  const ogImage = shareImg || coverOg;
 
   /* ── Bloques ── */
   const blocks = [];
