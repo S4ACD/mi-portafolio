@@ -1,3 +1,13 @@
+# ARTÍCULOS, 404, PRIVACIDAD Y LIMPIEZA: 19 oct 2026
+
+- Cuatro artículos nuevos en español e inglés, de más de 6.000 caracteres cada uno: lanzar una marca en redes (DiaDent), qué incluye un manual de marca (ONCES y Fueggo), logo en Canva vs. sistema de marca (Rebel Street) y cómo aparecer en ChatGPT y en Google (SEO + GEO).
+- El primer artículo (tienda lenta) se amplió a más de 6.000 caracteres.
+- Los artículos ahora tienen recuadro «Lo más importante», índice, preguntas frecuentes (con datos estructurados FAQPage), palabra clave y datos del autor. Campos nuevos en el panel: «Lo más importante», «Preguntas frecuentes» y «SEO → Búsqueda principal».
+- Página 404 nueva con el diseño del sitio (se ve en inglés si la dirección empieza por /en/).
+- Política de privacidad con el diseño nuevo. Se corrigió: el sitio sí usa Google Analytics 4, y el formulario pide «correo o WhatsApp».
+- `robots.txt`: el panel `/admin/` queda bloqueado también para los robots de IA.
+- Se borraron 47 archivos que ya no se usaban: las páginas hechas a mano de los 10 casos antiguos (ahora salen de la plantilla), sus `style.css` y `script.js`, `hero.js`, `cv/style.css`, `cv/script.js`, `sobre-mi/style.css`, `sobre-mi/script.js`, `js/dental-media.js` y `css/dental-media.css`. Se dejó `trabajo/pulse-digital/site/`.
+
 # CV: PDF a prueba de filtros (ATS), 19 oct 2026
 
 - El PDF del CV (y lo que sale al imprimir /cv/) ahora va en una sola columna, con letra Arial, títulos de sección estándar y el contacto dentro del texto, para que los portales de empleo lo lean bien. Sigue en 2 hojas.

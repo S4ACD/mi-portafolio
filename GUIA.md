@@ -61,6 +61,15 @@ Lo subes desde **alexandercaro.com/admin**, sin tocar código.
 
 Para guardar un borrador sin publicarlo, apaga **Publicado**.
 
+Para que el artículo posicione mejor en Google y en las respuestas de IA:
+
+- **Lo más importante**: 3 a 5 frases cortas con la idea central. Salen en un recuadro al inicio.
+- **Preguntas frecuentes**: 4 a 6 preguntas como las haría tu cliente, con respuestas directas. Salen al final y Google las lee como datos estructurados.
+- **SEO → Búsqueda principal**: la frase que la gente busca (por ejemplo «manual de marca»). Úsala en el título, en el primer párrafo y en algún subtítulo.
+- **SEO → Título** de máximo 60 caracteres y **Descripción** de unos 150.
+- Con 3 o más subtítulos (H2) se arma solo el índice «En este artículo».
+- Enlaza a uno o dos casos (`/trabajo/...`) y a un servicio (`/servicios/...`).
+
 ## 3. Ordenar
 
 **Orden de proyectos** (en el panel) tiene una lista por página: inicio, /trabajo/, CV portafolio y CV sector dental. Arrastra para reordenar.

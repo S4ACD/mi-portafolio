@@ -1,0 +1,246 @@
+es:
+  titulo: 'Cómo aparecer en ChatGPT y en Google: SEO y GEO explicados sin humo'
+  publicado: true
+  fecha: '2026-10-19'
+  resumen: 'Cada vez más clientes le preguntan a ChatGPT o leen la respuesta de IA de Google antes de hacer clic. Te explico qué dicen Google y OpenAI sobre cómo aparecer, qué es el GEO y qué revisar hoy en tu sitio, sin trucos ni promesas.'
+  portada:
+    imagen: https://res.cloudinary.com/dg2wnq6ao/image/upload/v1783086186/Metricas-motofaro_p3nm90.webp
+    alt: Métricas de PageSpeed y SEO técnico de MotoFaro
+  etiquetas:
+  - SEO
+  - GEO
+  - Inteligencia artificial
+  relacionado: motofaro
+  claves:
+  - Google dice que no hay requisitos extra para aparecer en AI Overviews o en el Modo IA. La página debe estar indexada y poder mostrarse con fragmento en la Búsqueda.
+  - Para aparecer en las búsquedas de ChatGPT, tu sitio no debe bloquear a OAI-SearchBot en el robots.txt. GPTBot es otro robot, que se usa para entrenamiento.
+  - El GEO no reemplaza al SEO. Se apoya en lo mismo, que es contenido útil en texto, buena estructura, velocidad y datos claros sobre tu negocio.
+  - No necesitas archivos especiales como llms.txt para Google. Puedes tenerlo, pero no es un requisito.
+  - El tráfico que llega desde las funciones de IA de Google se cuenta en el informe «Web» de Search Console.
+  seo:
+    titulo: 'Cómo aparecer en ChatGPT y Google: guía de SEO y GEO'
+    descripcion: 'Qué dicen Google y OpenAI sobre cómo aparecer en AI Overviews y en ChatGPT, qué es el GEO, qué revisar en robots.txt y una lista de 10 pasos para tu sitio.'
+    palabra_clave: aparecer en ChatGPT
+  cuerpo: |-
+    Hace dos años la pregunta era «¿cómo salgo primero en Google?». Hoy muchos clientes también preguntan **cómo aparecer en ChatGPT**, porque sus clientes ya no solo buscan: le preguntan a una inteligencia artificial cuál es el mejor odontólogo cerca, qué casco comprar o quién diseña logos en Bogotá. Y en Google, muchas búsquedas empiezan con un resumen generado por IA antes de los enlaces.
+
+    Alrededor de esto hay mucho humo: cursos con «trucos secretos», archivos mágicos y promesas de aparecer en ChatGPT en una semana. En este artículo te cuento lo que dicen las fuentes oficiales, Google y OpenAI, qué es el GEO y qué puedes revisar hoy mismo en tu sitio.
+
+    ## SEO y GEO: qué es cada uno
+
+    El **SEO** (*Search Engine Optimization*) es el trabajo para que tu sitio aparezca en buscadores como Google o Bing. El **GEO** (*Generative Engine Optimization*) es el mismo objetivo aplicado a los motores que generan respuestas, como ChatGPT, Gemini, Perplexity o las AI Overviews de Google, para que te mencionen o te citen como fuente.
+
+    La buena noticia es que no son dos mundos separados. El GEO se apoya casi por completo en un buen SEO. Si Google no puede leer bien tu sitio, es muy difícil que una IA lo entienda mejor.
+
+    ## Qué dice Google sobre aparecer en AI Overviews y el Modo IA
+
+    Google lo explica en su documentación oficial sobre [las funciones de IA y tu sitio web](https://developers.google.com/search/docs/appearance/ai-features). Los puntos más importantes son estos:
+
+    - **No hay requisitos adicionales.** Google dice textualmente que no hay requisitos extra ni optimizaciones especiales para aparecer en AI Overviews o en el Modo IA.
+    - **La página debe estar indexada** y ser apta para mostrarse con un fragmento (*snippet*) en la Búsqueda de Google.
+    - **No hacen falta archivos especiales** de IA ni marcado especial de datos estructurados para aparecer en estas funciones.
+    - **Las buenas prácticas son las de siempre**: permitir el rastreo, enlazar internamente tus páginas, ofrecer una buena experiencia, tener el contenido importante en texto y que los datos estructurados coincidan con lo que se ve en la página.
+    - **El tráfico se mide en Search Console**, dentro del informe de rendimiento de tipo «Web».
+
+    En otras palabras, para Google el GEO es SEO bien hecho. Nadie tiene un atajo secreto.
+
+    ## Qué dice OpenAI sobre aparecer en ChatGPT
+
+    OpenAI publica la lista de [sus robots y para qué sirve cada uno](https://developers.openai.com/api/docs/bots). Hay dos que conviene conocer:
+
+    | Robot | Para qué sirve | Qué hacer |
+    | --- | --- | --- |
+    | OAI-SearchBot | Encontrar y mostrar sitios en las respuestas de búsqueda de ChatGPT | Permitirlo en tu robots.txt si quieres aparecer |
+    | GPTBot | Rastrear contenido que puede usarse para entrenar modelos | Decisión tuya: permitirlo o bloquearlo |
+
+    Son independientes: puedes bloquear GPTBot para que tu contenido no se use en entrenamiento y permitir OAI-SearchBot para aparecer en las búsquedas. OpenAI indica que, después de cambiar tu robots.txt, los sistemas tardan alrededor de 24 horas en ajustarse.
+
+    Esto es lo primero que reviso en una auditoría: muchos sitios bloquean a todos los robots de IA «por si acaso», a veces sin saberlo, por una configuración del hosting o de un plugin de seguridad.
+
+    ## Cómo revisar tu robots.txt en dos minutos
+
+    1. Abre en tu navegador `tusitio.com/robots.txt`.
+    2. Busca líneas que digan `User-agent: OAI-SearchBot` o `User-agent: *` seguidas de `Disallow: /`. Si aparecen, estás bloqueando el acceso.
+    3. Si no hay ninguna regla para OAI-SearchBot y la regla general permite el acceso, está bien.
+
+    En mi propio sitio dejo permitidos a OAI-SearchBot, GPTBot, ClaudeBot, PerplexityBot y los robots de Google y Bing. Lo único que bloqueo es el panel de administración.
+
+    ## Lo que ayuda a que una IA te entienda y te cite
+
+    Más allá de dejar entrar a los robots, las IA citan páginas que responden bien una pregunta. Esto es lo que más ayuda, según lo que veo en los sitios que audito:
+
+    - **Respuestas directas en texto.** Si alguien pregunta «¿cuánto cuesta una limpieza dental en Medellín?», la página que responde con un rango claro en el primer párrafo tiene ventaja sobre la que esconde el dato en una imagen.
+    - **Una página por tema.** Una página de servicio por cada servicio, no todo mezclado en una sola.
+    - **Datos verificables sobre tu negocio**: nombre, ciudad, horarios, precios o rangos, años de experiencia, casos reales con cifras.
+    - **Preguntas frecuentes reales**, escritas como las haría tu cliente.
+    - **Datos estructurados coherentes** con lo que se ve en la página: organización, servicios, artículos y preguntas frecuentes.
+    - **Velocidad.** Una página que tarda en cargar pierde visitas y señales. Lo explico en [por qué tu tienda en línea carga lento](/articulos/por-que-tu-tienda-en-linea-carga-lento/).
+    - **Menciones fuera de tu sitio**: perfiles de Google Business, directorios del sector, prensa y reseñas. Las IA cruzan fuentes.
+
+    ## ¿Y el archivo llms.txt?
+
+    El llms.txt es una propuesta para ofrecer a los modelos de lenguaje un resumen de tu sitio en texto plano. Yo lo uso en mi web porque es fácil de mantener y no hace daño. Pero hay que ser claro: **Google no lo exige** y su documentación dice que no se necesitan archivos especiales para aparecer en sus funciones de IA. Si alguien te vende el llms.txt como la solución para aparecer en ChatGPT, desconfía.
+
+    ## Dos ejemplos de mi trabajo
+
+    En [MotoFaro](/trabajo/motofaro/), un comparador de accesorios para moto que construí en Next.js, el SEO fue la arquitectura desde el primer día: cada producto y cada comparación tiene su propia página indexable, con datos estructurados y contenido en texto. Resultado medido con PageSpeed Insights: **99 en escritorio y 100 en SEO técnico**.
+
+    En [Orbidental](/trabajo/orbidental/), una tienda con más de 3.000 productos, el trabajo fue reconstruir la tienda sin perder posicionamiento: el PageSpeed pasó de 40 a 97 y las Métricas web esenciales pasaron de «No aprobado» a «Aprobado» en el informe de Google.
+
+    ## Cómo medir si apareces en la IA
+
+    - **Search Console**: el tráfico de AI Overviews y el Modo IA está incluido en el informe de rendimiento «Web». Mira qué consultas largas, tipo pregunta, te traen visitas.
+    - **Analítica web**: revisa las visitas que llegan desde chatgpt.com, perplexity.ai y otros asistentes. Muchas herramientas ya las muestran como referencias.
+    - **Prueba manual**: pregúntale a ChatGPT, Gemini y Perplexity lo que preguntaría tu cliente, y anota si te mencionan, a quién citan y con qué fuente.
+
+    ## Checklist de 10 pasos para hoy
+
+    1. Verifica que tu sitio está en Search Console y que tus páginas importantes están indexadas.
+    2. Revisa tu robots.txt y permite a OAI-SearchBot si quieres aparecer en ChatGPT.
+    3. Asegúrate de que tus páginas pueden mostrarse con fragmento (sin `nosnippet` por error).
+    4. Escribe en texto los datos clave: qué haces, dónde, para quién y desde cuánto.
+    5. Crea una página por servicio.
+    6. Agrega preguntas frecuentes reales con respuestas directas.
+    7. Revisa que los datos estructurados coincidan con lo visible.
+    8. Mide la velocidad móvil en PageSpeed Insights.
+    9. Completa tu perfil de Google Business y los directorios de tu sector.
+    10. Pregunta a dos o tres IA por tu categoría cada mes y anota los resultados.
+
+    Si quieres saber cómo te ven hoy Google y ChatGPT, mi [auditoría SEO + GEO](/servicios/auditoria-seo-geo/) revisa la parte técnica y el contenido de tu sitio, prueba tu visibilidad en ChatGPT y en las AI Overviews y te entrega un plan priorizado a 90 días, con video y una llamada de 45 minutos. Cuesta USD 400 y la entrego en 10 días hábiles.
+  preguntas:
+  - pregunta: ¿Qué es el GEO?
+    respuesta: GEO significa Generative Engine Optimization. Es el trabajo para que los motores que generan respuestas, como ChatGPT, Gemini, Perplexity o las AI Overviews de Google, mencionen o citen tu negocio. Se apoya casi por completo en un buen SEO.
+  - pregunta: ¿Cómo hago para que ChatGPT recomiende mi negocio?
+    respuesta: Nadie puede garantizarlo, pero puedes mejorar tus posibilidades. Permite a OAI-SearchBot en tu robots.txt, publica en texto información clara y verificable sobre tu negocio, crea una página por servicio con preguntas frecuentes reales y consigue menciones en otras fuentes confiables.
+  - pregunta: ¿Necesito algo especial para aparecer en las AI Overviews de Google?
+    respuesta: No. Google dice que no hay requisitos adicionales. La página debe estar indexada y poder mostrarse con fragmento en la Búsqueda, y aplican las mismas buenas prácticas de SEO de siempre.
+  - pregunta: ¿Debo bloquear a GPTBot?
+    respuesta: Es una decisión tuya. GPTBot rastrea contenido que puede usarse para entrenar modelos, y es independiente de OAI-SearchBot, que es el que permite aparecer en las búsquedas de ChatGPT. Puedes bloquear uno y permitir el otro.
+  - pregunta: ¿El llms.txt sirve para aparecer en ChatGPT?
+    respuesta: Es una propuesta opcional y no hace daño tenerlo, pero no es un requisito. Google indica que no hacen falta archivos especiales para aparecer en sus funciones de IA, así que no lo trates como una solución mágica.
+  - pregunta: ¿Cómo sé si recibo visitas desde la IA?
+    respuesta: En Search Console, el tráfico de las funciones de IA de Google se cuenta dentro del informe de rendimiento «Web». En tu analítica, revisa las visitas que llegan desde chatgpt.com, perplexity.ai y otros asistentes.
+  cta:
+    titulo: ¿Quieres saber si la IA te recomienda?
+    texto: Envíame la dirección de tu sitio y te digo qué revisaría primero para que Google y ChatGPT te encuentren.
+en:
+  titulo: 'How to show up in ChatGPT and Google: SEO and GEO explained without the hype'
+  resumen: "More and more customers ask ChatGPT or read Google's AI answer before clicking. Here's what Google and OpenAI actually say about showing up, what GEO is and what to check on your site today, with no tricks and no promises."
+  portada:
+    alt: MotoFaro PageSpeed and technical SEO metrics
+  etiquetas:
+  - SEO
+  - GEO
+  - Artificial intelligence
+  claves:
+  - Google says there are no extra requirements to appear in AI Overviews or AI Mode. The page must be indexed and eligible to be shown with a snippet in Search.
+  - To show up in ChatGPT search, your site must not block OAI-SearchBot in robots.txt. GPTBot is a different crawler, used for training.
+  - GEO doesn't replace SEO. It relies on the same things, which are useful text content, good structure, speed and clear facts about your business.
+  - You don't need special files like llms.txt for Google. You can have one, but it isn't required.
+  - Traffic from Google's AI features is counted in the "Web" report in Search Console.
+  seo:
+    titulo: 'How to show up in ChatGPT and Google: SEO and GEO guide'
+    descripcion: "What Google and OpenAI say about showing up in AI Overviews and ChatGPT, what GEO is, what to check in robots.txt and a 10-step checklist for your website."
+    palabra_clave: show up in ChatGPT
+  cuerpo: |-
+    Two years ago the question was "how do I rank first on Google?". Today many clients also ask **how to show up in ChatGPT**, because their customers don't just search anymore: they ask an AI who the best dentist nearby is, which helmet to buy or who designs logos in Bogotá. And on Google, many searches now start with an AI-generated summary before the links.
+
+    There's a lot of hype around this: courses with "secret tricks", magic files and promises to get you into ChatGPT in a week. In this article I go through what the official sources, Google and OpenAI, actually say, what GEO is and what you can check on your site today.
+
+    ## SEO and GEO: what each one is
+
+    **SEO** (Search Engine Optimization) is the work of getting your site to appear in search engines like Google or Bing. **GEO** (Generative Engine Optimization) is the same goal applied to engines that generate answers, such as ChatGPT, Gemini, Perplexity or Google's AI Overviews, so they mention you or cite you as a source.
+
+    The good news is that they aren't two separate worlds. GEO relies almost entirely on good SEO. If Google can't read your site properly, it's very hard for an AI to understand it any better.
+
+    ## What Google says about appearing in AI Overviews and AI Mode
+
+    Google explains it in its official documentation on [AI features and your website](https://developers.google.com/search/docs/appearance/ai-features). These are the key points:
+
+    - **There are no additional requirements.** Google says, in so many words, that there are no extra requirements or special optimizations needed to appear in AI Overviews or AI Mode.
+    - **The page must be indexed** and eligible to be shown with a snippet in Google Search.
+    - **No special files are needed**, whether AI text files or special structured data markup, to appear in these features.
+    - **Best practices are the usual ones**: allow crawling, link your pages internally, offer a good page experience, keep important content in text and make sure structured data matches what's visible on the page.
+    - **Traffic is measured in Search Console**, inside the "Web" performance report.
+
+    In other words, to Google, GEO is SEO done right. Nobody has a secret shortcut.
+
+    ## What OpenAI says about appearing in ChatGPT
+
+    OpenAI publishes the list of [its crawlers and what each one does](https://developers.openai.com/api/docs/bots). Two of them are worth knowing:
+
+    | Crawler | What it's for | What to do |
+    | --- | --- | --- |
+    | OAI-SearchBot | Finding and surfacing websites in ChatGPT's search answers | Allow it in your robots.txt if you want to appear |
+    | GPTBot | Crawling content that may be used to train models | Your call: allow it or block it |
+
+    They're independent: you can block GPTBot so your content isn't used for training and still allow OAI-SearchBot to appear in search. OpenAI notes that after you change your robots.txt, it takes about 24 hours for its systems to adjust.
+
+    This is the first thing I check in an audit: many sites block every AI crawler "just in case", sometimes without knowing it, because of a hosting setting or a security plugin.
+
+    ## How to check your robots.txt in two minutes
+
+    1. Open `yoursite.com/robots.txt` in your browser.
+    2. Look for lines that say `User-agent: OAI-SearchBot` or `User-agent: *` followed by `Disallow: /`. If they're there, you're blocking access.
+    3. If there's no rule for OAI-SearchBot and the general rule allows access, you're fine.
+
+    On my own site I allow OAI-SearchBot, GPTBot, ClaudeBot, PerplexityBot and the Google and Bing crawlers. The only thing I block is the admin panel.
+
+    ## What helps an AI understand and cite you
+
+    Beyond letting the crawlers in, AIs cite pages that answer a question well. This is what helps most, based on what I see in the sites I audit:
+
+    - **Direct answers in text.** If someone asks "how much does a dental cleaning cost in Medellín?", the page that answers with a clear range in its first paragraph has an edge over the one that hides the figure in an image.
+    - **One page per topic.** A service page for each service, not everything mixed into one.
+    - **Verifiable facts about your business**: name, city, hours, prices or ranges, years of experience, real cases with numbers.
+    - **Real frequently asked questions**, written the way your customers would ask them.
+    - **Structured data that matches** what's visible on the page: organization, services, articles and FAQs.
+    - **Speed.** A slow page loses visits and signals. I explain it in [why your online store loads slowly](/en/articulos/por-que-tu-tienda-en-linea-carga-lento/).
+    - **Mentions outside your site**: Google Business profiles, industry directories, press and reviews. AIs cross-check sources.
+
+    ## What about llms.txt?
+
+    llms.txt is a proposal for giving language models a plain-text summary of your site. I use it on my website because it's easy to maintain and does no harm. But let's be clear: **Google doesn't require it**, and its documentation says no special files are needed to appear in its AI features. If someone sells you llms.txt as the way to show up in ChatGPT, be skeptical.
+
+    ## Two examples from my work
+
+    For [MotoFaro](/en/trabajo/motofaro/), a motorcycle accessories comparison site I built in Next.js, SEO was the architecture from day one: every product and every comparison has its own indexable page, with structured data and text content. Results measured with PageSpeed Insights: **99 on desktop and 100 for technical SEO**.
+
+    For [Orbidental](/en/trabajo/orbidental/), a store with more than 3,000 products, the job was rebuilding the store without losing rankings: PageSpeed went from 40 to 97, and Core Web Vitals went from "Failed" to "Passed" in Google's report.
+
+    ## How to measure whether you show up in AI
+
+    - **Search Console**: traffic from AI Overviews and AI Mode is included in the "Web" performance report. Look at which long, question-style queries bring you visits.
+    - **Web analytics**: check visits coming from chatgpt.com, perplexity.ai and other assistants. Many tools already show them as referrals.
+    - **Manual testing**: ask ChatGPT, Gemini and Perplexity what your customers would ask, and note whether they mention you, who they cite and which source they use.
+
+    ## A 10-step checklist for today
+
+    1. Make sure your site is in Search Console and your important pages are indexed.
+    2. Check your robots.txt and allow OAI-SearchBot if you want to appear in ChatGPT.
+    3. Make sure your pages can be shown with a snippet (no accidental `nosnippet`).
+    4. Put your key facts in text: what you do, where, for whom and since when.
+    5. Create one page per service.
+    6. Add real FAQs with direct answers.
+    7. Check that your structured data matches what's visible.
+    8. Test your mobile speed on PageSpeed Insights.
+    9. Complete your Google Business profile and your industry's directories.
+    10. Ask two or three AIs about your category every month and write down the results.
+
+    If you want to know how Google and ChatGPT see you today, my [SEO + GEO audit](/en/servicios/auditoria-seo-geo/) reviews your site's technical setup and content, tests your visibility in ChatGPT and AI Overviews, and gives you a prioritized 90-day plan, with a video walkthrough and a 45-minute call. It costs USD 400 and is delivered in 10 business days.
+  preguntas:
+  - pregunta: What is GEO?
+    respuesta: GEO stands for Generative Engine Optimization. It's the work of getting answer engines like ChatGPT, Gemini, Perplexity or Google's AI Overviews to mention or cite your business. It relies almost entirely on good SEO.
+  - pregunta: How do I get ChatGPT to recommend my business?
+    respuesta: Nobody can guarantee it, but you can improve your chances. Allow OAI-SearchBot in your robots.txt, publish clear, verifiable information about your business in text, create one page per service with real FAQs and earn mentions on other trustworthy sources.
+  - pregunta: Do I need anything special to appear in Google's AI Overviews?
+    respuesta: No. Google says there are no additional requirements. The page must be indexed and eligible to be shown with a snippet in Search, and the same SEO best practices apply.
+  - pregunta: Should I block GPTBot?
+    respuesta: That's your decision. GPTBot crawls content that may be used to train models, and it's independent from OAI-SearchBot, which is the one that lets you appear in ChatGPT search. You can block one and allow the other.
+  - pregunta: Does llms.txt help me show up in ChatGPT?
+    respuesta: It's an optional proposal and having one does no harm, but it isn't required. Google states that no special files are needed to appear in its AI features, so don't treat it as a magic fix.
+  - pregunta: How do I know if I'm getting visits from AI?
+    respuesta: In Search Console, traffic from Google's AI features is counted inside the "Web" performance report. In your analytics, check visits coming from chatgpt.com, perplexity.ai and other assistants.
+  cta:
+    titulo: Want to know if AI recommends you?
+    texto: Send me your website address and I'll tell you what I'd check first so Google and ChatGPT can find you.

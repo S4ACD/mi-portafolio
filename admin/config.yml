@@ -492,6 +492,12 @@ collections:
         widget: list
         required: false
         i18n: true
+      - name: claves
+        label: Lo más importante (opcional)
+        hint: 3 a 5 frases cortas con las ideas clave. Salen en un recuadro al inicio y ayudan a Google y a las IA a resumir el artículo.
+        widget: list
+        required: false
+        i18n: true
       - name: cuerpo
         label: Texto del artículo
         hint: Usa títulos (H2) para separar las partes. Puedes insertar imágenes; se optimizan solas.
@@ -517,6 +523,17 @@ collections:
         fields:
           - { name: titulo, label: Título para Google (máx. 60 caracteres), required: false, i18n: true }
           - { name: descripcion, label: Descripción para Google (máx. 155 caracteres), widget: text, required: false, i18n: true }
+          - { name: palabra_clave, label: Búsqueda principal, hint: 'La frase que quieres que la gente busque para encontrarte. Úsala en el título, el resumen y un subtítulo.', required: false, i18n: true }
+      - name: preguntas
+        label: Preguntas frecuentes (opcional)
+        hint: Preguntas que la gente hace en Google sobre el tema. Salen al final y se marcan para buscadores.
+        widget: list
+        required: false
+        i18n: true
+        summary: '{{pregunta}}'
+        fields:
+          - { name: pregunta, label: Pregunta, required: true, i18n: true }
+          - { name: respuesta, label: Respuesta, widget: text, required: true, i18n: true }
       - name: cta
         label: Cierre del artículo (opcional)
         hint: Si lo dejas vacío se usa el cierre general.

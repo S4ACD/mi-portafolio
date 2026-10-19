@@ -9,9 +9,16 @@ es:
   - SEO
   - E-commerce
   relacionado: orbidental
+  claves:
+  - Una mejora de solo 0,1 segundos en la velocidad móvil subió la conversión de tiendas en línea un 8,4 % en un estudio encargado por Google.
+  - Mide siempre en la pestaña Celular de PageSpeed Insights. Las métricas que importan son LCP, INP y CLS.
+  - 'Las causas más comunes son cuatro: un constructor visual pesado, imágenes sin optimizar, demasiados plugins y un hosting sin caché.'
+  - Si el peso viene de la base del sitio, conviene rehacer. Si viene de imágenes o plugins, se puede arreglar.
+  - La tienda de Orbidental pasó de 14 segundos a unos 2 segundos y de PageSpeed 40 a 97.
   seo:
-    titulo: Por qué tu tienda en línea carga lento (y cuánto te cuesta) | Alexander Caro
+    titulo: 'Por qué tu tienda en línea carga lento y cuánto te cuesta'
     descripcion: Cómo medir la velocidad de tu tienda en línea, las 4 causas más comunes de lentitud y el caso real de un e-commerce que pasó de 14 segundos a PageSpeed 97.
+    palabra_clave: tienda en línea lenta
   cuerpo: |-
     Cuando empecé a trabajar con Orbidental, una distribuidora de insumos dentales con más de 3.000 productos en línea, su tienda tardaba **14 segundos** en abrir en un celular. Catorce segundos es una eternidad: la mayoría de la gente cierra la pestaña mucho antes de ver el primer precio.
 
@@ -70,6 +77,19 @@ es:
 
     En los dos casos, lo primero es medir. Sin números, cualquier cambio es una apuesta.
 
+    ## Errores comunes al intentar acelerar una tienda
+
+    Cuando una tienda en línea está lenta, lo primero que mucha gente hace es instalar otro plugin. A veces ayuda un poco, pero estos errores son muy frecuentes:
+
+    - **Sumar un plugin de velocidad encima de otro.** Dos sistemas de caché o de optimización pueden pelearse entre sí y romper el sitio.
+    - **Medir solo en escritorio.** La versión de computador casi siempre sale mejor. Tus clientes compran desde el celular.
+    - **Comprimir las fotos hasta que se ven mal.** El objetivo es servir el tamaño correcto y un formato moderno como WebP o AVIF, no arruinar la foto del producto.
+    - **Cambiar direcciones (URL) sin redirecciones.** Si rehaces la tienda y las páginas cambian de dirección sin redirigir las antiguas, Google pierde el rastro y el tráfico cae.
+
+    ## Velocidad, SEO y búsquedas con IA
+
+    La velocidad también pesa en cómo te encuentran. Google recomienda ofrecer una buena experiencia de página, y una tienda lenta pierde visitas antes de que el cliente vea un producto. Con las respuestas de IA pasa algo parecido: necesitan leer tu contenido en texto y que tu sitio responda bien. Te lo explico en [cómo aparecer en ChatGPT y en Google](/articulos/como-aparecer-en-chatgpt-y-google/).
+
     ## Para empezar hoy
 
     - Mide tu tienda en PageSpeed Insights, en la pestaña Celular.
@@ -78,7 +98,18 @@ es:
     - Haz la lista de plugins y scripts instalados y quita los que nadie usa.
     - Si las Métricas web esenciales no aparecen como aprobadas, ya tienes una razón concreta para actuar.
 
-    Si quieres, envíame la dirección de tu tienda y te digo qué haría yo primero.
+    Si quieres, envíame la dirección de tu tienda y te digo qué haría yo primero. También puedes ver cómo trabajo el [diseño y desarrollo web](/servicios/diseno-web/) o pedir una [auditoría SEO + GEO](/servicios/auditoria-seo-geo/) para medir todo el sitio.
+  preguntas:
+  - pregunta: ¿Cuánto debe tardar en cargar una tienda en línea?
+    respuesta: Google considera bueno que lo más importante de la pantalla aparezca en 2,5 segundos o menos (LCP), que la página responda en 200 milisegundos o menos (INP) y que el contenido casi no salte mientras carga (CLS de 0,1 o menos).
+  - pregunta: ¿Cómo mido la velocidad de mi tienda?
+    respuesta: Entra a PageSpeed Insights, pega la dirección de tu tienda y mira la pestaña Celular. Revisa también el recuadro de Métricas web esenciales, que muestra datos de visitas reales.
+  - pregunta: ¿La velocidad afecta el SEO?
+    respuesta: Sí. Google tiene en cuenta la experiencia de página, y una tienda lenta pierde visitas y ventas antes de que el cliente vea los productos.
+  - pregunta: ¿Un plugin de velocidad soluciona el problema?
+    respuesta: Ayuda cuando el problema es la caché o las imágenes. Si el peso viene de un constructor visual o de la plantilla, el plugin solo pone un parche y el límite de velocidad sigue siendo bajo.
+  - pregunta: ¿Rehacer la tienda hace perder posicionamiento en Google?
+    respuesta: Puede pasar si se cambian las direcciones sin redirecciones o se pierden textos y datos técnicos. Con una migración cuidadosa, como la de los más de 3.000 productos de Orbidental, el posicionamiento se mantiene.
 en:
   titulo: Why your online store loads slowly and what it's costing you
   resumen: "Orbidental's online store took 14 seconds to open. Here's how to check whether yours has the same problem, what usually causes it and what I did to take it from 40 to 97 on PageSpeed."
@@ -86,9 +117,16 @@ en:
   - Web speed
   - SEO
   - E-commerce
+  claves:
+  - Improving mobile speed by just 0.1 seconds raised retail conversion by 8.4% in a study commissioned by Google.
+  - Always measure on the Mobile tab in PageSpeed Insights. The metrics that matter are LCP, INP and CLS.
+  - 'The four most common causes are a heavy page builder, unoptimized images, too many plugins and hosting without caching.'
+  - If the weight comes from the site's foundation, rebuild it. If it comes from images or plugins, it can be fixed.
+  - Orbidental's store went from 14 seconds to about 2 seconds, and from PageSpeed 40 to 97.
   seo:
-    titulo: Why your online store loads slowly (and what it costs you) | Alexander Caro
-    descripcion: How to measure your online store's speed, the 4 most common causes of a slow site, and the real case of an e-commerce site that went from 14 seconds to PageSpeed 97.
+    titulo: 'Why your online store loads slowly (and what it costs)'
+    descripcion: 'How to measure your online store’s speed, the 4 most common causes of a slow site and a real case that went from 14 seconds to PageSpeed 97.'
+    palabra_clave: slow online store
   cuerpo: |-
     When I started working with Orbidental, a dental supply distributor with more than 3,000 products online, its store took **14 seconds** to open on a phone. Fourteen seconds is an eternity: most people close the tab long before they see the first price.
 
@@ -147,6 +185,19 @@ en:
 
     Either way, the first step is to measure. Without numbers, any change is a guess.
 
+    ## Common mistakes when trying to speed up a store
+
+    When an online store is slow, the first thing many people do is install another plugin. Sometimes it helps a little, but these mistakes are very common:
+
+    - **Stacking one speed plugin on top of another.** Two caching or optimization systems can conflict with each other and break the site.
+    - **Only measuring on desktop.** The desktop version almost always scores better. Your customers buy from their phones.
+    - **Compressing photos until they look bad.** The goal is to serve the right size and a modern format like WebP or AVIF, not to ruin the product photo.
+    - **Changing addresses (URLs) without redirects.** If you rebuild the store and pages move to new addresses without redirecting the old ones, Google loses track and traffic drops.
+
+    ## Speed, SEO and AI search
+
+    Speed also affects how people find you. Google recommends offering a good page experience, and a slow store loses visits before customers see a single product. AI answers work in a similar way: they need to read your content as text and need your site to respond well. I explain it in [how to show up in ChatGPT and Google](/en/articulos/como-aparecer-en-chatgpt-y-google/).
+
     ## To start today
 
     - Test your store on PageSpeed Insights, on the Mobile tab.
@@ -155,4 +206,15 @@ en:
     - List the plugins and scripts you have installed and remove the ones nobody uses.
     - If Core Web Vitals don't show as passed, you already have a concrete reason to act.
 
-    If you'd like, send me your store's address and I'll tell you what I would do first.
+    If you'd like, send me your store's address and I'll tell you what I would do first. You can also see how I handle [web design and development](/en/servicios/diseno-web/) or book an [SEO + GEO audit](/en/servicios/auditoria-seo-geo/) to measure the whole site.
+  preguntas:
+  - pregunta: How fast should an online store load?
+    respuesta: Google considers it good when the most important part of the screen appears in 2.5 seconds or less (LCP), the page responds in 200 milliseconds or less (INP) and the content barely shifts while loading (CLS of 0.1 or less).
+  - pregunta: How do I measure my store's speed?
+    respuesta: Go to PageSpeed Insights, paste your store's address and look at the Mobile tab. Also check the Core Web Vitals box, which shows data from real visits.
+  - pregunta: Does speed affect SEO?
+    respuesta: Yes. Google takes page experience into account, and a slow store loses visits and sales before customers see the products.
+  - pregunta: Will a speed plugin fix the problem?
+    respuesta: It helps when the problem is caching or images. If the weight comes from a page builder or the theme, the plugin is just a patch and the speed ceiling stays low.
+  - pregunta: Will rebuilding my store hurt my Google rankings?
+    respuesta: It can if addresses change without redirects or if text and technical signals get lost. With a careful migration, like the one for Orbidental's 3,000+ products, rankings hold.

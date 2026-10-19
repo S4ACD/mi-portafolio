@@ -5,47 +5,62 @@ Disallow: /admin/
 # ── Motores de respuesta / IA — allow explícito (GEO) ──
 User-agent: GPTBot
 Allow: /
+Disallow: /admin/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /admin/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /admin/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /admin/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /admin/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /admin/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin/
 
 User-agent: Applebot
 Allow: /
+Disallow: /admin/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /admin/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
 
 User-agent: CCBot
 Allow: /
+Disallow: /admin/
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /admin/
 
 User-agent: meta-externalagent
 Allow: /
+Disallow: /admin/
 
 Sitemap: https://alexandercaro.com/sitemap.xml

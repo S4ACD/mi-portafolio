@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de privacidad — Alexander Caro</title>
+  <title>Política de privacidad | Alexander Caro</title>
   <meta name="description" content="Política de privacidad del sitio web de Alexander Caro. Información sobre el tratamiento de datos personales recolectados a través del formulario de contacto." />
   <meta name="robots" content="noindex, follow" />
   <link rel="preload" as="image" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/h_56,w_140,c_fit,q_auto,f_auto/v1781101946/Logo-en-el-nav_ubnip9.webp" fetchpriority="high">
@@ -15,100 +15,37 @@
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" /></noscript>
 
   <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/css/inicio.css" />
+  <link rel="stylesheet" href="/css/articulos.css" />
   <style>
-    .privacy-hero {
-      padding: 120px 0 60px;
-      border-bottom: 1px solid var(--border);
-    }
-    .privacy-hero .eyebrow { margin-bottom: 16px; }
-    .privacy-hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      color: var(--text);
-      margin: 0 0 16px;
-    }
-    .privacy-hero__meta {
-      font-size: 0.85rem;
-      color: var(--text-faint);
-    }
-    .privacy-body {
-      padding: 64px 0 96px;
-      max-width: 720px;
-    }
-    .privacy-body h2 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin: 48px 0 12px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .privacy-body h2:first-child { margin-top: 0; }
-    .privacy-body p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin: 0 0 16px;
-    }
-    .privacy-body ul {
-      margin: 0 0 16px;
-      padding-left: 20px;
-    }
-    .privacy-body ul li {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 6px;
-    }
-    .privacy-body a {
-      color: var(--cyan);
-      text-decoration: none;
-    }
-    .privacy-body a:hover { text-decoration: underline; }
-    .privacy-tag {
-      display: inline-block;
-      background: var(--cyan-dim);
-      color: var(--cyan);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-bottom: 6px;
-    }
-    .privacy-contact-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      margin-top: 48px;
-    }
-    .privacy-contact-card p { margin: 0; }
-    .privacy-contact-card p + p { margin-top: 8px; }
+    .pv .ar-prose h2 { font-size: clamp(1.4rem, 2.2vw, 1.75rem); }
+    .pv .ar-prose h2:first-child { margin-top: 0; }
+    .pv-card { margin: 2.6em 0 0; }
+    .pv-card p { margin: 0; color: var(--hm-ink); }
+    .pv-card p + p { margin-top: 8px; color: var(--hm-ink-2); }
+    .pv-body { padding-bottom: clamp(72px, 9vw, 128px); }
   </style>
 </head>
-<body>
+<body class="hm-page">
 
   <!-- nav.js lo inyecta automáticamente -->
 
-  <main>
-    <section class="privacy-hero">
-      <div class="container">
-        <p class="eyebrow" data-i18n="pp.eyebrow">LEGAL</p>
-        <h1 class="privacy-hero__title" data-i18n="pp.title">Política de privacidad</h1>
-        <p class="privacy-hero__meta" data-i18n="pp.meta">Última actualización: junio de 2026 · Responsable: Alexander Caro</p>
+  <main class="ar pv hm">
+    <header class="ar-top">
+      <div class="hm-wrap ar-col">
+        <p class="ar-crumb"><a href="/" data-i18n="nav.home">Inicio</a></p>
+        <h1 class="ar-title" data-i18n="pp.title">Política de privacidad</h1>
+        <p class="ar-lead" data-i18n="pp.lead">Qué datos recibo cuando me escribes desde este sitio, para qué los uso y cómo puedes pedir que los borre.</p>
+        <p class="ar-meta" data-i18n="pp.meta">Última actualización: octubre de 2026 · Responsable: Alexander Caro</p>
       </div>
-    </section>
+    </header>
 
-    <div class="container">
-      <div class="privacy-body">
-
+    <div class="hm-wrap ar-col pv-body">
+      <div class="ar-prose">
         <h2 data-i18n="pp.s1.h">1. Quién es el responsable</h2>
         <p data-i18n="pp.s1.p">El responsable del tratamiento de los datos personales recolectados a través de este sitio web es:</p>
         <ul>
@@ -123,7 +60,7 @@
         <ul>
           <li data-i18n="pp.s2.li1">Nombre</li>
           <li data-i18n="pp.s2.li2">Nombre de la empresa (opcional)</li>
-          <li data-i18n="pp.s2.li3">Correo electrónico</li>
+          <li data-i18n="pp.s2.li3">Correo electrónico o WhatsApp</li>
           <li data-i18n="pp.s2.li4">Servicio de interés</li>
           <li data-i18n="pp.s2.li5">Presupuesto aproximado</li>
           <li data-i18n="pp.s2.li6">Mensaje libre</li>
@@ -149,7 +86,7 @@
         <p data-i18n="pp.s5.p2">Si no llegamos a trabajar juntos, elimino tu información cuando ya no sea necesaria para responder tu consulta.</p>
 
         <h2 data-i18n="pp.s6.h">6. Cookies</h2>
-        <p data-i18n="pp.s6.p">Este sitio no usa cookies propias de seguimiento ni herramientas de analítica como Google Analytics. Vercel puede establecer cookies técnicas mínimas necesarias para el funcionamiento del servidor. Estas cookies no identifican usuarios individualmente ni se usan con fines publicitarios.</p>
+        <p data-i18n="pp.s6.p">Este sitio usa Google Analytics 4 para medir de forma agregada cuántas personas lo visitan y qué páginas ven. Google Analytics usa sus propias cookies de medición; no las uso con fines publicitarios ni para identificarte personalmente. Vercel también puede establecer cookies técnicas mínimas necesarias para el funcionamiento del servidor. Puedes bloquear o borrar las cookies desde la configuración de tu navegador.</p>
 
         <h2 data-i18n="pp.s7.h">7. Tus derechos</h2>
         <p data-i18n="pp.s7.p">Tienes derecho a:</p>
@@ -167,7 +104,7 @@
         <h2 data-i18n="pp.s9.h">9. Cambios en esta política</h2>
         <p data-i18n="pp.s9.p">Si modifico esta política de forma relevante, actualizaré la fecha de "última actualización" en la parte superior de esta página. Te recomiendo revisarla ocasionalmente si tienes alguna consulta activa.</p>
 
-        <div class="privacy-contact-card">
+        <div class="ar-keys pv-card">
           <p data-i18n="pp.contact.q">¿Tienes alguna pregunta sobre el uso de tus datos?</p>
           <p data-i18n="pp.contact.a">Escríbeme a <a href="mailto:hosoyalexander@gmail.com">hosoyalexander@gmail.com</a> — te respondo en menos de 24 horas.</p>
         </div>
@@ -202,8 +139,9 @@
   </footer>
 
 
+
   <script defer src="/analytics.js"></script>
-  <script src="/nav.js"></script>
-  <script src="/i18n.js"></script>
+  <script src="/nav.js" defer></script>
+  <script src="/i18n.js" defer></script>
 </body>
 </html>

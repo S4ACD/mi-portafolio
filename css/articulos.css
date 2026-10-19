@@ -117,3 +117,29 @@
 .ar-cta .hm-wrap { display: grid; gap: 20px; justify-items: start; }
 .ar-cta .hm-h2 { font-size: clamp(2.4rem, 5vw, 4.25rem); line-height: 0.98; }
 .ar-cta p { margin: 0; color: var(--hm-ink-2); font-size: 1.0625rem; line-height: 1.6; max-width: 48ch; }
+
+/* Lo más importante (resumen para lectores y buscadores) */
+.ar-keys {
+  margin: 0 0 clamp(28px, 3vw, 40px); padding: 22px 24px;
+  border: 1px solid rgba(205, 183, 142, 0.35); border-radius: 8px;
+  background: linear-gradient(180deg, rgba(205, 183, 142, 0.08), rgba(205, 183, 142, 0)), var(--hm-surface);
+}
+.ar-keys h2, .ar-toc h2 {
+  margin: 0 0 12px; font: 500 0.9375rem/1.4 var(--hm-text); text-transform: none; letter-spacing: 0; color: var(--hm-gold);
+}
+.ar-keys ul { margin: 0; padding: 0 0 0 1.1em; list-style: disc; display: grid; gap: 8px; font-size: 1rem; line-height: 1.6; color: var(--hm-ink); }
+.ar-keys li::marker { color: var(--hm-gold); }
+
+/* Índice del artículo */
+.ar-toc { margin: 0 0 clamp(40px, 5vw, 56px); padding: 0 0 20px; border-bottom: 1px solid var(--hm-line); }
+.ar-toc h2 { color: var(--hm-ink-3); }
+.ar-toc ol { margin: 0; padding: 0 0 0 1.3em; list-style: decimal; display: grid; gap: 6px; font-size: 0.9375rem; line-height: 1.5; }
+.ar-toc li::marker { color: var(--hm-ink-3); font-variant-numeric: tabular-nums; }
+.ar-toc a { color: var(--hm-ink-2); text-decoration: none; }
+.ar-toc a:hover { color: var(--hm-gold); text-decoration: underline; text-underline-offset: 3px; }
+.ar-prose h2[id], .ar-faq h2 { scroll-margin-top: 96px; }
+
+/* Preguntas frecuentes */
+.ar-faq { margin-top: 2.6em; padding-top: 0.4em; border-top: 1px solid var(--hm-line); }
+.ar-faq h3 { font-size: 1.25rem; margin: 1.6em 0 0.4em; }
+.ar-faq p { margin: 0; }

@@ -23,6 +23,9 @@ const T = {
     related: 'El caso detrás de este artículo',
     seeCase: 'Ver el caso completo',
     more: 'Más artículos',
+    keys: 'Lo más importante',
+    toc: 'En este artículo',
+    faq: 'Preguntas frecuentes',
     ctaTitle: '¿Quieres que revise tu caso?',
     ctaText: 'Cuéntame qué necesitas y te respondo en menos de 24 horas con lo que yo haría primero.',
     ctaWa: 'Escríbeme por WhatsApp',
@@ -44,6 +47,9 @@ const T = {
     related: 'The case behind this article',
     seeCase: 'See the full case',
     more: 'More articles',
+    keys: 'Key takeaways',
+    toc: 'In this article',
+    faq: 'Frequently asked questions',
     ctaTitle: 'Want me to look at your case?',
     ctaText: "Tell me what you need and I'll reply within 24 hours with what I would do first.",
     ctaWa: 'Message me on WhatsApp',
@@ -130,13 +136,41 @@ async function bodyHtml(md, { images, slug }) {
   );
   // Tablas con desplazamiento propio en pantallas angostas
   html = html.replace(/<table>/g, '<div class="ar-table"><table>').replace(/<\/table>/g, '</table></div>');
-  return html;
+  // Cada H2 lleva un ancla para el índice y para enlazar directo a una parte
+  const toc = [];
+  const used = new Set();
+  html = html.replace(/<h2>([\s\S]*?)<\/h2>/g, (m, inner) => {
+    const text = inner.replace(/<[^>]+>/g, '').trim();
+    let id = anchor(text);
+    while (used.has(id)) id += '-2';
+    used.add(id);
+    toc.push({ id, text });
+    return `<h2 id="${id}">${inner}</h2>`;
+  });
+  return { html, toc };
 }
+
+const anchor = (s) =>
+  String(s)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/&[a-z]+;/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 60) || 'parte';
 
 const FONTS =
   'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap';
 const FAVICON = 'https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp';
 const PORTRAIT = 'https://res.cloudinary.com/dg2wnq6ao/image/upload/w_120,h_120,c_fill,g_north,q_auto,f_auto/v1781396255/Escultura_de_Alexander_ykbpww.png';
+const AUTHOR = {
+  '@type': 'Person',
+  name: 'Alexander Caro',
+  url: SITE,
+  jobTitle: 'Diseñador UX/UI, diseñador gráfico y desarrollador web',
+  sameAs: ['https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/', 'https://www.behance.net/alexandercaro', 'https://www.instagram.com/alexander_caro7/'],
+};
 const OG_DEFAULT = 'https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781396255/Escultura_de_Alexander_ykbpww.png';
 
 const head = ({ lang, title, desc, url, esUrl, enUrl, og, type, schema }) => `<!DOCTYPE html>
@@ -241,7 +275,9 @@ export async function buildArticles({ out, articles, images, footerOf, projects 
       const og = cover ? (cover.kind === 'local' ? SITE + cover.url(1200) : cover.url(1200)) : OG_DEFAULT;
       const title = d.seo?.titulo || `${plain(d.titulo)} | Alexander Caro`;
       const desc = plain(d.seo?.descripcion || d.resumen || '');
-      const body = await bodyHtml(d.cuerpo, { images, slug: a.slug });
+      const { html: body, toc } = await bodyHtml(d.cuerpo, { images, slug: a.slug });
+      const faqs = (d.preguntas || []).filter((q) => q && q.pregunta && q.respuesta);
+      const keys = (d.claves || []).filter(Boolean);
       const rel = d.relacionado ? projects.bySlug.get(d.relacionado) : null;
       const relImg = rel ? await images.get(rel.portada.imagen, { slug: rel.slug, widths: [640, 960] }) : null;
       const others = list.filter((x) => x !== a).slice(0, 3);
@@ -267,10 +303,19 @@ export async function buildArticles({ out, articles, images, footerOf, projects 
             dateModified: day(a.es.actualizado) || a.fecha,
             image: og,
             wordCount: words(d.cuerpo),
-            keywords: (d.etiquetas || []).join(', '),
-            author: { '@type': 'Person', name: 'Alexander Caro', url: SITE },
-            publisher: { '@type': 'Person', name: 'Alexander Caro', url: SITE },
+            keywords: [d.seo?.palabra_clave, ...(d.etiquetas || [])].filter(Boolean).join(', '),
+            ...(d.etiquetas?.length ? { articleSection: d.etiquetas[0] } : {}),
+            isPartOf: { '@type': 'Blog', name: t.feed, url: indexUrl(lang, true) },
+            author: AUTHOR,
+            publisher: AUTHOR,
+            ...(rel ? { about: { '@type': 'CreativeWork', name: plain(rel[lang].nombre), url: projectUrl(rel.slug, lang, true) } } : {}),
           },
+          ...(faqs.length
+            ? [{
+                '@type': 'FAQPage',
+                mainEntity: faqs.map((q) => ({ '@type': 'Question', name: plain(q.pregunta), acceptedAnswer: { '@type': 'Answer', text: plain(q.respuesta) } })),
+              }]
+            : []),
         ],
       };
       const html =
@@ -288,8 +333,15 @@ export async function buildArticles({ out, articles, images, footerOf, projects 
       </header>
       ${cover ? `<div class="hm-wrap"><figure class="ar-cover">${pictureHtml(cover, { alt: plain(d.portada?.alt || ''), sizes: '(max-width: 1440px) calc(100vw - 2 * clamp(20px, 4vw, 56px)), 1328px', attrs: ' fetchpriority="high" decoding="async"' })}</figure></div>` : ''}
       <div class="hm-wrap ar-col">
+        ${keys.length ? `<aside class="ar-keys" aria-label="${attr(t.keys)}"><h2>${t.keys}</h2><ul>${keys.map((k) => `<li>${inline(k)}</li>`).join('')}</ul></aside>` : ''}
+        ${toc.length >= 3 ? `<nav class="ar-toc" aria-label="${attr(t.toc)}"><h2>${t.toc}</h2><ol>${toc.map((x) => `<li><a href="#${x.id}">${esc(x.text)}</a></li>`).join('')}${faqs.length ? `<li><a href="#preguntas-frecuentes">${t.faq}</a></li>` : ''}</ol></nav>` : ''}
         <div class="ar-prose">
 ${body}
+${faqs.length ? `
+          <section class="ar-faq">
+            <h2 id="preguntas-frecuentes">${t.faq}</h2>
+            ${faqs.map((q) => `<h3>${inline(q.pregunta)}</h3>\n            <p>${inline(q.respuesta)}</p>`).join('\n            ')}
+          </section>` : ''}
         </div>
         <aside class="ar-author">
           <img src="${PORTRAIT}" alt="" width="60" height="60" loading="lazy" decoding="async">

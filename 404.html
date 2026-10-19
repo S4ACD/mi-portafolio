@@ -3,31 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 — Página no encontrada | Alexander Caro</title>
+  <title>Página no encontrada | Alexander Caro</title>
   <meta name="robots" content="noindex, follow" />
+  <link rel="icon" type="image/webp" href="https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_512/v1781101945/Favicon_jsl63r.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
   <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/css/inicio.css" />
   <style>
-    .nf { min-height: 100svh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; }
-    .nf__inner { max-width: 560px; }
-    .nf__code { font-family: var(--font-display); font-size: clamp(5rem, 18vw, 9rem); font-weight: 700; line-height: 1; color: var(--hv2-gold); opacity: .9; }
-    .nf__title { font-family: var(--font-display); font-size: clamp(1.3rem, 4vw, 1.8rem); color: var(--text); margin: 10px 0 8px; }
-    .nf__sub { color: var(--text-muted); line-height: 1.6; margin-bottom: 26px; }
-    .nf__links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .nf { min-height: 100svh; display: grid; align-items: center; padding: calc(72px + 48px) 0 72px; }
+    .nf .hm-wrap { display: grid; gap: clamp(28px, 4vw, 48px); grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: end; }
+    .nf__code {
+      grid-column: 1 / span 7; margin: 0; font-family: var(--hm-display); font-weight: 300;
+      font-size: clamp(8rem, 26vw, 20rem); line-height: 0.8; letter-spacing: -0.06em; color: var(--hm-ink);
+    }
+    .nf__code em { font-style: italic; color: var(--hm-gold); }
+    .nf__text { grid-column: 8 / span 5; display: grid; gap: 18px; justify-items: start; }
+    .nf__title { margin: 0; font-family: var(--hm-display); font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.08; letter-spacing: -0.02em; text-transform: none; color: var(--hm-ink); }
+    .nf__sub { margin: 0; color: var(--hm-ink-2); font-size: 1.0625rem; line-height: 1.6; max-width: 40ch; }
+    .nf__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .nf__links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--hm-line); margin: 0; padding: 0; list-style: none; }
+    .nf__links a { display: block; padding: 22px 16px 22px 0; text-decoration: none; color: var(--hm-ink); font-family: var(--hm-display); font-size: 1.35rem; transition: color .2s ease; }
+    .nf__links a span { display: block; margin-top: 4px; font: 400 0.875rem/1.5 var(--hm-text); color: var(--hm-ink-3); }
+    .nf__links a:hover { color: var(--hm-gold); }
+    @media (max-width: 860px) {
+      .nf__code, .nf__text { grid-column: 1 / -1; }
+      .nf__links { grid-template-columns: 1fr 1fr; }
+    }
   </style>
 </head>
-<body>
-  <main class="nf">
-    <div class="nf__inner">
-      <div class="nf__code">404</div>
-      <h1 class="nf__title">Esta página se perdió en el vacío<span class="hero__dot">.</span></h1>
-      <p class="nf__sub">La URL no existe o cambió de lugar. Lo importante sigue aquí abajo. / This page doesn't exist — everything important is one click away.</p>
-      <div class="nf__links">
-        <a href="/" class="btn btn--gold">Ir al inicio</a>
-        <a href="/trabajo/" class="btn btn--ghost">Ver proyectos</a>
-        <a href="/#contacto-form" class="btn btn--ghost">Contacto</a>
+<body class="hm-page">
+  <main class="nf hm">
+    <div class="hm-wrap">
+      <p class="nf__code" aria-hidden="true">4<em>0</em>4</p>
+      <div class="nf__text">
+        <h1 class="nf__title" data-t="title">Esta página no existe o cambió de lugar</h1>
+        <p class="nf__sub" data-t="sub">Puede que el enlace esté mal escrito o que la página se haya movido. Desde aquí puedes seguir por lo más importante.</p>
+        <div class="nf__actions">
+          <a class="hm-btn hm-btn--gold" href="/" data-t="home" data-href="/">Ir al inicio</a>
+          <a class="hm-btn hm-btn--ghost" href="/#contacto" data-t="contact" data-href="/#contacto">Escríbeme</a>
+        </div>
       </div>
+      <ul class="nf__links">
+        <li><a href="/trabajo/" data-href="/trabajo/"><b data-t="l1">Trabajo</b><span data-t="l1s">Casos con resultados</span></a></li>
+        <li><a href="/servicios/" data-href="/servicios/"><b data-t="l2">Servicios</b><span data-t="l2s">Qué hago y cuánto cuesta</span></a></li>
+        <li><a href="/articulos/" data-href="/articulos/"><b data-t="l3">Artículos</b><span data-t="l3s">Guías de marca, web y SEO</span></a></li>
+        <li><a href="/cv/" data-href="/cv/"><b data-t="l4">Hoja de vida</b><span data-t="l4s">Experiencia y PDF</span></a></li>
+      </ul>
     </div>
   </main>
+  <script>
+    (function () {
+      if (!/^\/en(\/|$)/.test(location.pathname)) return;
+      var T = {
+        title: 'This page doesn’t exist or has moved',
+        sub: 'The link may be mistyped or the page may have moved. You can pick up from the most important places here.',
+        home: 'Go to the home page', contact: 'Get in touch',
+        l1: 'Work', l1s: 'Case studies with results',
+        l2: 'Services', l2s: 'What I do and what it costs',
+        l3: 'Articles', l3s: 'Guides on brand, web and SEO',
+        l4: 'Résumé', l4s: 'Experience and PDF'
+      };
+      document.documentElement.lang = 'en';
+      document.title = 'Page not found | Alexander Caro';
+      document.querySelectorAll('[data-t]').forEach(function (el) { if (T[el.dataset.t]) el.textContent = T[el.dataset.t]; });
+      document.querySelectorAll('[data-href]').forEach(function (a) { a.setAttribute('href', '/en' + a.dataset.href); });
+    })();
+  </script>
   <script defer src="/analytics.js"></script>
 </body>
 </html>
