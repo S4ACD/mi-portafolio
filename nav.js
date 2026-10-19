@@ -10,6 +10,7 @@
     const isServicios = path.includes('/servicios');
     const isSobreMi   = path.includes('/sobre-mi');
     const isTrabajo   = path.includes('/trabajo');
+    const isArticulos = path.includes('/articulos');
     const isHome      = path === '/' || path === '/index.html';
 
     const existingNav = document.getElementById('nav');
@@ -28,6 +29,7 @@
             <li><a href="${base}/"${isHome ? ' class="nav__link--active"' : ''} data-i18n="nav.home">Inicio</a></li>
             <li><a href="${base}/trabajo/"${isTrabajo ? ' class="nav__link--active"' : ''} data-i18n="nav.work">Trabajo</a></li>
             <li><a href="${base}/servicios/"${isServicios ? ' class="nav__link--active"' : ''} data-i18n="nav.services">Servicios</a></li>
+            <li><a href="${base}/articulos/"${isArticulos ? ' class="nav__link--active"' : ''} data-i18n="nav.articles">Artículos</a></li>
             <li><a href="${base}/sobre-mi/"${isSobreMi ? ' class="nav__link--active"' : ''} data-i18n="nav.about">Sobre mí</a></li>
           </ul>
           <button id="langToggle" class="nav__lang" aria-label="Switch to English" data-current="es">EN</button>
@@ -40,6 +42,7 @@
           <a href="${base}/" class="nav__drawer-link${isHome ? ' nav__link--active' : ''}" data-i18n="nav.home">Inicio</a>
           <a href="${base}/trabajo/" class="nav__drawer-link${isTrabajo ? ' nav__link--active' : ''}" data-i18n="nav.work">Trabajo</a>
           <a href="${base}/servicios/" class="nav__drawer-link${isServicios ? ' nav__link--active' : ''}" data-i18n="nav.services">Servicios</a>
+          <a href="${base}/articulos/" class="nav__drawer-link${isArticulos ? ' nav__link--active' : ''}" data-i18n="nav.articles">Artículos</a>
           <a href="${base}/sobre-mi/" class="nav__drawer-link${isSobreMi ? ' nav__link--active' : ''}" data-i18n="nav.about">Sobre mí</a>
           <button id="langToggle-drawer" class="nav__lang nav__lang--drawer" aria-label="Switch to English" data-current="es">EN</button>
           <a href="${base}/#contacto" class="nav__cta" data-i18n="nav.cta">Hablemos</a>

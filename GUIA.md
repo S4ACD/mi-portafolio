@@ -51,6 +51,16 @@ Lo subes desde **alexandercaro.com/admin**, sin tocar código.
 
 ---
 
+## 2b. Publicar un artículo
+
+1. En el panel: **Artículos → New**.
+2. Llena **Título**, **Fecha**, **Resumen** y el **Texto del artículo**. Separa las partes con títulos (H2) y, si quieres, inserta imágenes: se optimizan solas.
+3. Opcional: **Imagen de portada**, **Temas**, **Proyecto relacionado** (sale al final como «El caso detrás de este artículo») y **SEO**.
+4. Si llenas la pestaña **EN** (título y texto), el artículo también sale en inglés en `/en/articulos/`. Si no, solo se publica en español.
+5. **Save**. En 1 o 2 minutos está en `alexandercaro.com/articulos/`, en el sitemap y en el feed RSS (`/articulos/feed.xml`).
+
+Para guardar un borrador sin publicarlo, apaga **Publicado**.
+
 ## 3. Ordenar
 
 **Orden de proyectos** (en el panel) tiene una lista por página: inicio, /trabajo/, CV portafolio y CV sector dental. Arrastra para reordenar.

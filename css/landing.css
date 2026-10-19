@@ -336,3 +336,29 @@
 
 /* FAQ — respuestas largas en móvil */
 .svc-faq-item[aria-expanded="true"] .svc-faq-item__a { max-height: 460px; }
+
+/* ═══════════════════════════════════════════════════════════════
+   Ajuste v3: las páginas de cada servicio y de cada ciudad hablan el
+   mismo idioma visual que el inicio, Servicios y el CV nuevos:
+   botones y etiquetas en minúscula, títulos sin cursiva dorada.
+═══════════════════════════════════════════════════════════════ */
+.btn, .btn--lg, .btn--gold, .btn--ghost {
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+.eyebrow, .incluye-item__tag {
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(244, 239, 230, 0.66);
+}
+.incluye-item__tag { font-size: 0.8125rem; color: var(--hv2-gold); }
+.srv-hero__accent { font-style: normal; color: inherit; }
+.srv-hero__title, .section__title { text-transform: none; letter-spacing: -0.03em; font-weight: 300; }
+.section__title .hero__dot, .srv-hero__title .hero__dot { color: inherit; }
+body { animation: none; }

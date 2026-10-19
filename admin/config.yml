@@ -425,6 +425,109 @@ collections:
             required: false
             i18n: true
 
+  # ─────────────────────────────── ARTÍCULOS ───────────────────────────────
+  - name: articulos
+    label: Artículos
+    label_singular: Artículo
+    description: >-
+      Cada artículo se publica en alexandercaro.com/articulos/. Si llenas la
+      pestaña EN (título y texto), también sale en inglés en /en/articulos/.
+    icon: article
+    folder: /content/articulos
+    extension: yml
+    format: yaml
+    create: true
+    delete: true
+    i18n: true
+    identifier_field: titulo
+    slug: '{{slug}}'
+    summary: '{{titulo}} ({{fecha}})'
+    sortable_fields: [fecha, titulo]
+    preview_path: articulos/{{slug}}/
+    media_folder: /uploads/articulos
+    public_folder: /uploads/articulos
+    fields:
+      - name: titulo
+        label: Título
+        hint: También define la URL. Escríbelo como una pregunta o una promesa clara.
+        required: [es]
+        i18n: true
+      - name: publicado
+        label: Publicado
+        hint: Apágalo para guardar un borrador sin que salga en el sitio.
+        widget: boolean
+        default: true
+        i18n: duplicate
+      - name: fecha
+        label: Fecha de publicación
+        widget: datetime
+        type: date
+        format: YYYY-MM-DD
+        required: [es]
+        i18n: duplicate
+      - name: actualizado
+        label: Fecha de actualización (opcional)
+        widget: datetime
+        type: date
+        format: YYYY-MM-DD
+        required: false
+        i18n: duplicate
+      - name: resumen
+        label: Resumen
+        hint: Una o dos frases. Sale bajo el título y en la lista de artículos.
+        widget: text
+        required: [es]
+        i18n: true
+      - name: portada
+        label: Imagen de portada (opcional)
+        widget: object
+        required: false
+        i18n: true
+        fields:
+          - { name: imagen, label: Imagen, widget: image, required: false, i18n: duplicate }
+          - { name: alt, label: Descripción de la imagen, required: false, i18n: true }
+      - name: etiquetas
+        label: Temas
+        hint: Ej. Velocidad web, SEO, Branding.
+        widget: list
+        required: false
+        i18n: true
+      - name: cuerpo
+        label: Texto del artículo
+        hint: Usa títulos (H2) para separar las partes. Puedes insertar imágenes; se optimizan solas.
+        widget: markdown
+        required: [es]
+        i18n: true
+      - name: relacionado
+        label: Proyecto relacionado (opcional)
+        hint: Se muestra al final como «El caso detrás de este artículo».
+        widget: relation
+        collection: proyectos
+        value_field: '{{slug}}'
+        search_fields: [nombre]
+        display_fields: [nombre]
+        required: false
+        i18n: duplicate
+      - name: seo
+        label: SEO
+        widget: object
+        required: false
+        collapsed: true
+        i18n: true
+        fields:
+          - { name: titulo, label: Título para Google (máx. 60 caracteres), required: false, i18n: true }
+          - { name: descripcion, label: Descripción para Google (máx. 155 caracteres), widget: text, required: false, i18n: true }
+      - name: cta
+        label: Cierre del artículo (opcional)
+        hint: Si lo dejas vacío se usa el cierre general.
+        widget: object
+        required: false
+        collapsed: true
+        i18n: true
+        fields:
+          - { name: titulo, label: Pregunta o título, required: false, i18n: true }
+          - { name: texto, label: Texto, widget: text, required: false, i18n: true }
+
   # ─────────────────────────────── ORDEN ───────────────────────────────
   - name: ajustes
     label: Orden de proyectos

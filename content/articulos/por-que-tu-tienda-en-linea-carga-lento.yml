@@ -1,0 +1,158 @@
+# Primer artículo. Se edita desde el panel: Artículos → este artículo.
+es:
+  titulo: Por qué tu tienda en línea carga lento y cuánto te está costando
+  publicado: true
+  fecha: '2026-10-19'
+  resumen: La tienda de Orbidental tardaba 14 segundos en abrir. Te cuento cómo medir si la tuya tiene el mismo problema, qué suele causarlo y qué hice para llevarla de 40 a 97 en PageSpeed.
+  etiquetas:
+  - Velocidad web
+  - SEO
+  - E-commerce
+  relacionado: orbidental
+  seo:
+    titulo: Por qué tu tienda en línea carga lento (y cuánto te cuesta) | Alexander Caro
+    descripcion: Cómo medir la velocidad de tu tienda en línea, las 4 causas más comunes de lentitud y el caso real de un e-commerce que pasó de 14 segundos a PageSpeed 97.
+  cuerpo: |-
+    Cuando empecé a trabajar con Orbidental, una distribuidora de insumos dentales con más de 3.000 productos en línea, su tienda tardaba **14 segundos** en abrir en un celular. Catorce segundos es una eternidad: la mayoría de la gente cierra la pestaña mucho antes de ver el primer precio.
+
+    Lo peor es que nadie lo notaba desde la oficina. En un computador con buen internet el sitio se veía "normal". El problema aparecía donde están los clientes: en el celular, con datos, en la calle.
+
+    ## Cada décima de segundo cuenta
+
+    No es una exageración. En un estudio que Google encargó a 55 y Deloitte, una mejora de apenas **0,1 segundos** en la velocidad móvil subió la conversión de las tiendas en línea un **8,4 %**, y lo que gastaba cada cliente un **9,2 %** ([web.dev, «Milliseconds make millions»](https://web.dev/case-studies/milliseconds-make-millions)).
+
+    Si una décima mueve las ventas así, imagina lo que hacen diez segundos de más. Y hay un costo que no se ve: Google mide la experiencia de tus visitantes y la tiene en cuenta para decidir a quién muestra primero.
+
+    ## Cómo saber si tu sitio es lento
+
+    No necesitas saber de programación. Haz esto hoy:
+
+    1. Entra a [PageSpeed Insights](https://pagespeed.web.dev/) y pega la dirección de tu tienda.
+    2. Mira la pestaña **Celular**, no la de escritorio. Ahí es donde se pierde la mayoría de clientes.
+    3. Busca el recuadro de **Métricas web esenciales** (Core Web Vitals). Si dice «No aprobado», Google ya está viendo un problema real en las visitas de tu sitio.
+    4. Abre tu tienda en tu propio celular, con datos y fuera de casa. Cuenta los segundos hasta que puedes tocar un producto.
+
+    Estos son los tres números que Google considera buenos ([web.dev, «Web Vitals»](https://web.dev/articles/vitals)):
+
+    | Métrica | Qué mide | Bueno |
+    | --- | --- | --- |
+    | LCP | Cuánto tarda en aparecer lo más importante de la pantalla | 2,5 segundos o menos |
+    | INP | Cuánto tarda la página en responder cuando tocas algo | 200 milisegundos o menos |
+    | CLS | Cuánto «salta» el contenido mientras carga | 0,1 o menos |
+
+    ## Las cuatro causas más comunes
+
+    En casi todas las tiendas lentas que reviso aparece al menos una de estas:
+
+    - **Un constructor visual pesado.** Herramientas como Divi, Elementor o similares son cómodas para armar páginas sin programar, pero cargan mucho código que tu página no usa. En Orbidental eran más de un megabyte de código sobrante en cada visita.
+    - **Imágenes sin optimizar.** Fotos de producto de varios megas, en formatos viejos y del mismo tamaño para el celular que para una pantalla gigante.
+    - **Demasiados plugins y scripts de terceros.** Chats, pixeles, sliders y ventanas emergentes que se suman uno a uno hasta que la página no puede con todo.
+    - **Un hosting o una configuración que no ayuda.** Sin caché, sin compresión y con un servidor lejos de tus clientes.
+
+    ## Lo que hice en Orbidental
+
+    El problema de Orbidental no se arreglaba con un plugin de velocidad: el peso estaba en el propio constructor. Así que reconstruí la tienda en código limpio sobre WordPress, sin Divi.
+
+    Durante mes y medio migré los más de 3.000 productos cuidando cada dirección (URL), cada texto y cada señal técnica. Esa parte es la que más miedo da, y con razón: un error ahí y se caen meses de posicionamiento en Google. También optimicé las imágenes para que cada celular reciba el tamaño y el formato que necesita, y rehice el diseño para que se viera tan serio como la empresa.
+
+    > En un mes, el reporte de Google pasó de «No aprobado» a «Aprobado», y el PageSpeed subió de 40 a 97.
+
+    ![Historial de Métricas web esenciales de Orbidental en Google Search Console](https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220149/Core_web_vitals_sumart_vttkmm.png "Historial de Métricas web esenciales de Orbidental en Google Search Console: la mejora se sostiene mes a mes.")
+
+    Hoy la tienda abre en unos 2 segundos en el celular, tiene 96 en accesibilidad y 100 en SEO técnico, y el historial de Google muestra que la mejora se mantiene. Además, el tráfico aumentó.
+
+    ## ¿Arreglar o rehacer?
+
+    No siempre hay que empezar de cero. Mi regla es sencilla:
+
+    - **Se puede arreglar** si el sitio está bien construido y el problema son imágenes pesadas, plugins de más o falta de caché. Ahí unas semanas de ajustes bien hechos cambian los números.
+    - **Conviene rehacer** si el peso viene de la base, como un constructor visual o una plantilla que carga todo en todas las páginas. Puedes ponerle parches, pero el techo de velocidad sigue siendo bajo.
+
+    En los dos casos, lo primero es medir. Sin números, cualquier cambio es una apuesta.
+
+    ## Para empezar hoy
+
+    - Mide tu tienda en PageSpeed Insights, en la pestaña Celular.
+    - Abre tu sitio desde tu celular con datos y cuenta los segundos.
+    - Revisa el peso de las fotos de tus productos más vistos.
+    - Haz la lista de plugins y scripts instalados y quita los que nadie usa.
+    - Si las Métricas web esenciales no aparecen como aprobadas, ya tienes una razón concreta para actuar.
+
+    Si quieres, envíame la dirección de tu tienda y te digo qué haría yo primero.
+en:
+  titulo: Why your online store loads slowly and what it's costing you
+  resumen: "Orbidental's online store took 14 seconds to open. Here's how to check whether yours has the same problem, what usually causes it and what I did to take it from 40 to 97 on PageSpeed."
+  etiquetas:
+  - Web speed
+  - SEO
+  - E-commerce
+  seo:
+    titulo: Why your online store loads slowly (and what it costs you) | Alexander Caro
+    descripcion: How to measure your online store's speed, the 4 most common causes of a slow site, and the real case of an e-commerce site that went from 14 seconds to PageSpeed 97.
+  cuerpo: |-
+    When I started working with Orbidental, a dental supply distributor with more than 3,000 products online, its store took **14 seconds** to open on a phone. Fourteen seconds is an eternity: most people close the tab long before they see the first price.
+
+    The worst part is that nobody noticed it from the office. On a computer with good internet the site looked "fine". The problem showed up where the customers are: on their phones, on mobile data, out on the street.
+
+    ## Every tenth of a second counts
+
+    This isn't an exaggeration. In a study Google commissioned from 55 and Deloitte, improving mobile speed by just **0.1 seconds** raised conversion on retail sites by **8.4%**, and how much each customer spent by **9.2%** ([web.dev, "Milliseconds make millions"](https://web.dev/case-studies/milliseconds-make-millions)).
+
+    If a tenth of a second moves sales like that, imagine what ten extra seconds do. And there's a hidden cost too: Google measures your visitors' experience and takes it into account when deciding who to show first.
+
+    ## How to tell if your site is slow
+
+    You don't need to know how to code. Do this today:
+
+    1. Go to [PageSpeed Insights](https://pagespeed.web.dev/) and paste your store's address.
+    2. Look at the **Mobile** tab, not desktop. That's where most customers are lost.
+    3. Find the **Core Web Vitals** box. If it says "Failed", Google is already seeing a real problem in your site's visits.
+    4. Open your store on your own phone, on mobile data and away from home. Count the seconds until you can tap a product.
+
+    These are the three numbers Google considers good ([web.dev, "Web Vitals"](https://web.dev/articles/vitals)):
+
+    | Metric | What it measures | Good |
+    | --- | --- | --- |
+    | LCP | How long the most important part of the screen takes to appear | 2.5 seconds or less |
+    | INP | How long the page takes to respond when you tap something | 200 milliseconds or less |
+    | CLS | How much the content "jumps" while it loads | 0.1 or less |
+
+    ## The four most common causes
+
+    Almost every slow store I review has at least one of these:
+
+    - **A heavy page builder.** Tools like Divi or Elementor make it easy to build pages without code, but they load a lot of code your page doesn't use. At Orbidental it was more than a megabyte of unused code on every visit.
+    - **Unoptimized images.** Product photos weighing several megabytes, in old formats, and the same size for a phone as for a giant screen.
+    - **Too many plugins and third-party scripts.** Chats, pixels, sliders and pop-ups that add up one by one until the page can't handle them all.
+    - **Hosting or settings that don't help.** No caching, no compression and a server far from your customers.
+
+    ## What I did at Orbidental
+
+    Orbidental's problem couldn't be fixed with a speed plugin: the weight was in the page builder itself. So I rebuilt the store in clean code on WordPress, without Divi.
+
+    Over six weeks I migrated more than 3,000 products, taking care of every address (URL), every piece of text and every technical signal. That's the scary part, and for good reason: one mistake there and months of Google rankings disappear. I also optimized the images so each phone gets the size and format it needs, and redesigned the store so it looked as serious as the company.
+
+    > Within a month, Google's report went from "Failed" to "Passed", and PageSpeed went from 40 to 97.
+
+    ![Orbidental Core Web Vitals history in Google Search Console](https://res.cloudinary.com/dg2wnq6ao/image/upload/v1782220149/Core_web_vitals_sumart_vttkmm.png "Orbidental's Core Web Vitals history in Google Search Console: the improvement holds month after month.")
+
+    Today the store opens in about 2 seconds on a phone, scores 96 for accessibility and 100 for technical SEO, and Google's history shows the improvement is holding. Traffic went up too.
+
+    ## Fix it or rebuild it?
+
+    You don't always have to start from scratch. My rule is simple:
+
+    - **It can be fixed** if the site is well built and the problem is heavy images, too many plugins or no caching. A few weeks of careful work can change the numbers.
+    - **It's better to rebuild** if the weight comes from the foundation, like a page builder or a theme that loads everything on every page. You can patch it, but the speed ceiling stays low.
+
+    Either way, the first step is to measure. Without numbers, any change is a guess.
+
+    ## To start today
+
+    - Test your store on PageSpeed Insights, on the Mobile tab.
+    - Open your site on your phone with mobile data and count the seconds.
+    - Check the file size of the photos for your most-viewed products.
+    - List the plugins and scripts you have installed and remove the ones nobody uses.
+    - If Core Web Vitals don't show as passed, you already have a concrete reason to act.
+
+    If you'd like, send me your store's address and I'll tell you what I would do first.

@@ -14,6 +14,7 @@ import { workPage, workItemList, CARD_WIDTHS } from './lib/render-work.mjs';
 import { homeWork, homeMore, cvCards, cvMore, cvList } from './lib/render-home.mjs';
 import { casePage } from './lib/render-case.mjs';
 import { updateSitemap, updateLlms } from './lib/seo.mjs';
+import { loadArticles, buildArticles, sitemapArticles, llmsArticles } from './lib/articles.mjs';
 import { BuildError, numberWord } from './lib/util.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -58,6 +59,8 @@ const MARKER = /<!--\s*@auto:([a-z0-9-]+)(?::[^>]*?)?\s*-->[\s\S]*?<!--\s*\/@aut
 async function main() {
   const content = loadContent(ROOT);
   log(`✓ Contenido: ${content.published.length} proyectos publicados (${content.all.length} en total)`);
+  const articles = loadArticles(ROOT);
+  log(`✓ Artículos: ${articles.length} publicados`);
   if (CHECK_ONLY) return;
 
   // Un proyecto con página automática reemplaza la página hecha a mano que
@@ -142,9 +145,15 @@ async function main() {
   }
   log(`✓ Páginas de caso generadas: ${pages}`);
 
+  // 2b. Artículos (páginas, índice y RSS)
+  const artPages = await buildArticles({ out: OUT, articles, images, footerOf, projects: content });
+  log(`✓ Páginas de artículos generadas: ${artPages}`);
+
   // 3. SEO: sitemap y llms.txt
   updateSitemap(OUT, content);
   updateLlms(OUT, content);
+  sitemapArticles(OUT, articles);
+  llmsArticles(OUT, articles);
 
   // 4. Verificación final
   const problems = [];

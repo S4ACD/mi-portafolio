@@ -34,6 +34,11 @@ Lista generada automáticamente desde el portafolio. Los marcados como concepto 
 <!-- @auto:llms-es -->
 <!-- /@auto:llms-es -->
 
+## Artículos
+
+<!-- @auto:llms-articulos-es -->
+<!-- /@auto:llms-articulos-es -->
+
 ## Contacto
 
 - Email: hosoyalexander@gmail.com
@@ -64,6 +69,11 @@ Generated automatically from the portfolio. Projects marked as own concept had n
 
 <!-- @auto:llms-en -->
 <!-- /@auto:llms-en -->
+
+## Articles
+
+<!-- @auto:llms-articulos-en -->
+<!-- /@auto:llms-articulos-en -->
 
 ## Contact
 

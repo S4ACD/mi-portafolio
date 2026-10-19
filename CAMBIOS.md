@@ -1,3 +1,12 @@
+# SERVICIOS, SOBRE MÍ Y ARTÍCULOS: 19 oct 2026
+
+- /servicios/ y /sobre-mi/ (ES y EN) con el diseño nuevo: paquetes con precio en tarjetas, disciplinas con proyectos de ejemplo, historia en cuatro partes y certificaciones. Sobre mí ya tiene imagen para compartir en redes.
+- Las páginas de cada servicio y de Miami, Houston y Los Ángeles se ajustan al estilo nuevo (botones y etiquetas sin mayúsculas) desde `css/landing.css`.
+- Sección de artículos: `/articulos/` y `/en/articulos/`, una página por artículo, feed RSS, datos estructurados (BlogPosting), sitemap y `llms.txt`. Se publican desde el panel (colección «Artículos», archivos en `content/articulos/`, imágenes en `uploads/articulos/`).
+- «Artículos» en el menú del sitio.
+- Primer artículo: «Por qué tu tienda en línea carga lento y cuánto te está costando», sobre el caso Orbidental.
+- Estilos en `css/paginas.css` y `css/articulos.css`; el build de artículos vive en `scripts/lib/articles.mjs`.
+
 # CV v3: hoja de vida rediseñada, 16 oct 2026
 
 - /cv/ y /en/cv/ con el diseño nuevo, en el orden en que lee un reclutador: datos y contacto, resultados, experiencia, habilidades, sector dental, proyectos, formación, certificaciones.
