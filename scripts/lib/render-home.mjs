@@ -84,6 +84,6 @@ export const cvList = (list, lang) =>
     .map((p) => {
       const d = p[lang];
       const tags = (d.disciplinas || []).join(', ');
-      return `<li><b>${esc(d.nombre)}</b>${tags ? ` · ${esc(tags)}` : ''}<span class="cv-pl-sum">. ${inline(d.resumen)}</span></li>`;
+      return `<li><b>${esc(d.nombre)}</b>${tags ? `<span class="cv-pl-tags"> · ${esc(tags)}</span>` : ''}<span class="cv-pl-sum">. ${inline(d.resumen)}</span></li>`;
     })
     .join('');

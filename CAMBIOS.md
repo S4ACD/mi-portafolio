@@ -1,3 +1,9 @@
+# CV: PDF a prueba de filtros (ATS), 19 oct 2026
+
+- El PDF del CV (y lo que sale al imprimir /cv/) ahora va en una sola columna, con letra Arial, títulos de sección estándar y el contacto dentro del texto, para que los portales de empleo lo lean bien. Sigue en 2 hojas.
+- Nueva sección «Logros destacados» al inicio del PDF; los proyectos secundarios van en una sola línea.
+- Los PDF incluyen título, autor, tema y palabras clave.
+
 # SERVICIOS, SOBRE MÍ Y ARTÍCULOS: 19 oct 2026
 
 - /servicios/ y /sobre-mi/ (ES y EN) con el diseño nuevo: paquetes con precio en tarjetas, disciplinas con proyectos de ejemplo, historia en cuatro partes y certificaciones. Sobre mí ya tiene imagen para compartir en redes.
