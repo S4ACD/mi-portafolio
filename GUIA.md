@@ -70,6 +70,13 @@ Para que el artículo posicione mejor en Google y en las respuestas de IA:
 - Con 3 o más subtítulos (H2) se arma solo el índice «En este artículo».
 - Enlaza a uno o dos casos (`/trabajo/...`) y a un servicio (`/servicios/...`).
 
+## 2c. Sumar una reseña nueva
+
+1. En el panel: **Reseñas → Reseñas de Workana**.
+2. Actualiza el **número de calificaciones** (y el promedio o los clientes que repitieron, si cambian).
+3. Si la reseña nueva es buena, agrégala a la lista con **Add** y quita una vieja: con 4 se ve mejor. Copia las palabras exactas del cliente y escribe el nombre con inicial (ej.: «Evelyn B.»).
+4. **Save**. Sale en el inicio, en Servicios y en el CV.
+
 ## 3. Ordenar
 
 **Orden de proyectos** (en el panel) tiene una lista por página: inicio, /trabajo/, CV portafolio y CV sector dental. Arrastra para reordenar.

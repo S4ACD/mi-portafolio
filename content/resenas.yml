@@ -1,0 +1,28 @@
+# Reseñas de clientes en Workana. Se editan desde el panel: Reseñas.
+# Copia las palabras exactas del cliente (puedes recortar con «…»).
+perfil: https://www.workana.com/freelancer/71014ec17ae8f774a7adea45c48b478b
+calificacion: '5,0'
+total: 9
+repiten: 4
+items:
+  - texto: Buen precio, buena calidad, buen tiempo y gran paciencia… el trabajo de Alexander habla por sí solo, 100% recomendado de mi parte.
+    texto_en: Good price, good quality, good timing and great patience… Alexander's work speaks for itself, 100% recommended from me.
+    nombre: Cliente en Workana
+    nombre_en: Workana client
+    proyecto: Tabla con íconos de ingredientes y utensilios · me contrató 2 veces
+    proyecto_en: Ingredient and utensil icon chart · hired me twice
+  - texto: Buena comunicación, me entregó lo que necesitaba y deseaba. Lo recomiendo ampliamente.
+    texto_en: Good communication, he delivered what I needed and wanted. I highly recommend him.
+    nombre: Evelyn B.
+    proyecto: Vectorización del logotipo Plakoza y archivos maestros
+    proyecto_en: Vectorized Plakoza logo and master files
+  - texto: Excelente persona, trabajo impecable, recomendado 100%.
+    texto_en: Excellent person, flawless work, 100% recommended.
+    nombre: Andrés P.
+    proyecto: Edición y corrección profesional de imágenes · me contrató 2 veces
+    proyecto_en: Professional image editing and retouching · hired me twice
+  - texto: Todo excelente y en término.
+    texto_en: Everything excellent and on time.
+    nombre: Sergio A.
+    proyecto: Video institucional urgente para un evento de IA
+    proyecto_en: Rush corporate video for an AI event

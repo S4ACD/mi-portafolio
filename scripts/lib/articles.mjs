@@ -169,7 +169,7 @@ const AUTHOR = {
   name: 'Alexander Caro',
   url: SITE,
   jobTitle: 'Diseñador UX/UI, diseñador gráfico y desarrollador web',
-  sameAs: ['https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/', 'https://www.behance.net/alexandercaro', 'https://www.instagram.com/alexander_caro7/'],
+  sameAs: ['https://www.linkedin.com/in/sneider-alexander-de-la-cuadra-caro/', 'https://www.behance.net/alexandercaro', 'https://www.instagram.com/alexander_caro7/', 'https://www.workana.com/freelancer/71014ec17ae8f774a7adea45c48b478b'],
 };
 const OG_DEFAULT = 'https://res.cloudinary.com/dg2wnq6ao/image/upload/q_auto,f_auto,w_1200/v1781396255/Escultura_de_Alexander_ykbpww.png';
 

@@ -15,6 +15,7 @@ import { homeWork, homeMore, cvCards, cvMore, cvList } from './lib/render-home.m
 import { casePage } from './lib/render-case.mjs';
 import { updateSitemap, updateLlms } from './lib/seo.mjs';
 import { loadArticles, buildArticles, sitemapArticles, llmsArticles } from './lib/articles.mjs';
+import { loadReviews, reviewsBlock } from './lib/reviews.mjs';
 import { BuildError, numberWord } from './lib/util.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -60,6 +61,7 @@ async function main() {
   const content = loadContent(ROOT);
   log(`✓ Contenido: ${content.published.length} proyectos publicados (${content.all.length} en total)`);
   const articles = loadArticles(ROOT);
+  const reviews = loadReviews(ROOT);
   log(`✓ Artículos: ${articles.length} publicados`);
   if (CHECK_ONLY) return;
 
@@ -102,6 +104,7 @@ async function main() {
     'cv-dental-n': (lang) => numberWord(lists.cv_dental.length, lang),
     'cv-mas': (lang) => cvMore(lists.trabajo.length, lang),
     'cv-lista': (lang) => cvList([...lists.cv_dental, ...lists.cv], lang),
+    resenas: (lang) => reviewsBlock(reviews, lang),
   };
 
   // 1. Zonas marcadas en las páginas existentes

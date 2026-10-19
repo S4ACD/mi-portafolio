@@ -545,6 +545,34 @@ collections:
           - { name: titulo, label: Pregunta o título, required: false, i18n: true }
           - { name: texto, label: Texto, widget: text, required: false, i18n: true }
 
+  # ────────────────────────────── RESEÑAS ──────────────────────────────
+  - name: resenas
+    label: Reseñas
+    icon: star
+    files:
+      - name: workana
+        label: Reseñas de Workana
+        description: >-
+          Salen en el inicio (Sobre mí), en Servicios y en el CV. Copia las
+          palabras exactas del cliente; puedes recortar con «…».
+        file: /content/resenas.yml
+        fields:
+          - { name: perfil, label: Enlace a tu perfil de Workana }
+          - { name: calificacion, label: 'Calificación promedio (ej.: 5,0)' }
+          - { name: total, label: Número de calificaciones, widget: number, value_type: int }
+          - { name: repiten, label: Clientes que te contrataron más de una vez, widget: number, value_type: int, required: false }
+          - name: items
+            label: Reseñas que se muestran (4 se ven mejor)
+            widget: list
+            summary: '{{fields.nombre}}: {{fields.texto}}'
+            fields:
+              - { name: texto, label: Lo que dijo (español), widget: text }
+              - { name: texto_en, label: Traducción al inglés, widget: text, required: false }
+              - { name: nombre, label: 'Nombre (ej.: Evelyn B.)' }
+              - { name: nombre_en, label: Nombre en inglés (solo si cambia), required: false }
+              - { name: proyecto, label: Proyecto, required: false }
+              - { name: proyecto_en, label: Proyecto en inglés, required: false }
+
   # ─────────────────────────────── ORDEN ───────────────────────────────
   - name: ajustes
     label: Orden de proyectos

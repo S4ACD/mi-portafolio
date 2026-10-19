@@ -1,3 +1,9 @@
+# RESEÑAS DE WORKANA: 19 oct 2026
+
+- Bloque de reseñas con tu calificación (5,0 de 5, 9 calificaciones, 4 clientes que repitieron), 4 reseñas y el enlace a tu perfil de Workana. Sale en el inicio (Sobre mí), en Servicios y en el CV, en español y en inglés (marcadas como traducidas). En el PDF del CV no sale.
+- Se editan desde el panel: **Reseñas → Reseñas de Workana** (archivo `content/resenas.yml`).
+- Tu perfil de Workana se suma a los datos de Google (sameAs) en todas las páginas y artículos.
+
 # ARTÍCULOS, 404, PRIVACIDAD Y LIMPIEZA: 19 oct 2026
 
 - Cuatro artículos nuevos en español e inglés, de más de 6.000 caracteres cada uno: lanzar una marca en redes (DiaDent), qué incluye un manual de marca (ONCES y Fueggo), logo en Canva vs. sistema de marca (Rebel Street) y cómo aparecer en ChatGPT y en Google (SEO + GEO).
